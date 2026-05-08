@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About · Haps Club</title>
+<meta name="description" content="Haps Club is a curated weekly guide to what's actually worth doing in Los Angeles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #292f71;
+  --navy-deep: #1a1f4d;
+  --navy-tint: #EEF0F8;
+  --navy-soft: rgba(41, 47, 113, 0.08);
+  --accent: #FF6B47;
+  --accent-deep: #E54D2B;
+  --accent-tint: #FFF1ED;
+  --bg: #FAFAF7;
+  --surface: #FFFFFF;
+  --surface-2: #F4F3EE;
+  --line: rgba(15, 17, 23, 0.10);
+  --ink: #0F1117;
+  --ink-2: #3A3D47;
+  --ink-3: #6B6F7A;
+  --ink-4: #9CA0AB;
+  --hairline: rgba(15, 17, 23, 0.08);
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --serif: 'Instrument Serif', 'New York', 'Times New Roman', serif;
+  --container: 580px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+*:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+html, body {
+  background: var(--bg); color: var(--ink); font-family: var(--sans);
+  font-size: 16px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}
+body { padding-bottom: 4rem; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 250, 247, 0.78);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 0.5px solid var(--hairline);
+}
+.topbar-inner {
+  max-width: var(--container); margin: 0 auto;
+  padding: 12px 20px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.topbar-logo { height: 32px; width: auto; color: var(--navy); display: block; }
+.topbar-form {
+  display: flex; align-items: center; gap: 0;
+  background: white;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.topbar-form:focus-within { border-color: var(--navy); box-shadow: 0 0 0 3px var(--navy-tint); }
+.topbar-form input {
+  border: none; background: transparent;
+  padding: 8px 12px 8px 16px;
+  font-family: inherit; font-size: 13px; color: var(--ink);
+  width: 220px; outline: none;
+}
+.topbar-form input::placeholder { color: var(--ink-4); }
+.topbar-form button {
+  border: none; background: var(--navy); color: white;
+  padding: 8px 14px; font-family: inherit; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.2px; cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex; align-items: center; gap: 4px;
+}
+.topbar-form button:hover { background: var(--navy-deep); }
+.topbar-form button svg { width: 14px; height: 14px; }
+.topbar-form-status { font-size: 12px; color: var(--accent-deep); font-weight: 500; white-space: nowrap; }
+@media (max-width: 640px) {
+  .topbar-form input { width: 130px; padding: 8px 8px 8px 12px; font-size: 13px; }
+  .topbar-form button { padding: 8px 10px; }
+  .topbar-form button span { display: none; }
+}
+@media (max-width: 420px) {
+  .topbar-form input { width: 100px; }
+}
+
+.about-hero { padding: 56px 24px 32px 24px; text-align: left; max-width: 720px; margin: 0 auto; }
+.about-eyebrow {
+  font-family: 'Instrument Serif', Georgia, serif; font-style: italic;
+  font-size: 16px; color: var(--accent-deep);
+  margin: 0 0 12px 0; letter-spacing: 0.2px;
+}
+.about-title {
+  font-size: 44px; font-weight: 700; letter-spacing: -0.03em;
+  line-height: 1.05; color: var(--navy-deep); margin: 0 0 20px 0;
+}
+.about-lede {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 22px; line-height: 1.45; color: var(--ink); margin: 0;
+}
+.about-section { max-width: 720px; margin: 0 auto; padding: 28px 24px; }
+.about-section h2 {
+  font-size: 22px; font-weight: 700; color: var(--navy-deep);
+  letter-spacing: -0.02em; margin: 0 0 14px 0;
+}
+.about-section p {
+  font-size: 16px; line-height: 1.65; color: var(--ink-2); margin: 0 0 16px 0;
+}
+.about-section p:last-child { margin-bottom: 0; }
+.about-section p strong { color: var(--ink); font-weight: 600; }
+.about-divider { max-width: 720px; margin: 8px auto; border: none; border-top: 1px solid var(--line); }
+
+.tip-section { background: var(--surface-2); padding: 48px 24px; margin: 32px 0 0 0; }
+.tip-inner { max-width: 560px; margin: 0 auto; }
+.tip-eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 1.6px;
+  text-transform: uppercase; color: var(--accent-deep); margin: 0 0 10px 0;
+}
+.tip-title { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; color: var(--navy-deep); margin: 0 0 8px 0; }
+.tip-sub { font-size: 15px; color: var(--ink-3); line-height: 1.55; margin: 0 0 24px 0; }
+.tip-form { display: flex; flex-direction: column; gap: 14px; }
+.tip-row { display: flex; flex-direction: column; gap: 6px; }
+.tip-row label { font-size: 12px; font-weight: 600; letter-spacing: 0.3px; color: var(--ink-2); text-transform: uppercase; }
+.tip-row input, .tip-row textarea, .tip-row select {
+  background: white; border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px; font-family: inherit; font-size: 15px; color: var(--ink);
+  width: 100%; transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.tip-row input:focus, .tip-row textarea:focus, .tip-row select:focus {
+  outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px var(--navy-tint);
+}
+.tip-row textarea { min-height: 130px; resize: vertical; }
+.tip-submit {
+  margin-top: 6px; background: var(--navy); color: white; border: none;
+  border-radius: 999px; padding: 13px 24px; font-family: inherit;
+  font-size: 15px; font-weight: 600; cursor: pointer;
+  transition: background 0.2s ease; align-self: flex-start;
+}
+.tip-submit:hover { background: var(--navy-deep); }
+.tip-submit:disabled { opacity: 0.6; cursor: progress; }
+.tip-status { font-size: 14px; margin-top: 12px; padding: 10px 14px; border-radius: 8px; display: none; }
+.tip-status.success { display: block; background: rgba(16, 191, 122, 0.1); color: #0c905c; border: 1px solid rgba(16, 191, 122, 0.3); }
+.tip-status.error { display: block; background: rgba(242, 100, 59, 0.1); color: #c4310f; border: 1px solid rgba(242, 100, 59, 0.3); }
+
+.footer { max-width: var(--container); margin: 32px auto 0; padding: 24px 20px; text-align: center; }
+.footer-links { display: flex; justify-content: center; gap: 18px; margin-bottom: 14px; flex-wrap: wrap; }
+.footer-links a { font-size: 13px; color: var(--navy); font-weight: 500; padding: 4px 2px; opacity: 0.75; transition: color 0.2s ease; }
+.footer-links a:hover { color: var(--accent); opacity: 1; }
+.footer-credit { font-size: 12px; color: var(--ink-4); }
+
+@media (max-width: 600px) {
+  .about-title { font-size: 36px; }
+  .about-lede { font-size: 19px; }
+  .about-section h2 { font-size: 20px; }
+}
+</style>
+<!-- Kit (ConvertKit) signup sticky bar — same as homepage -->
+<script async data-uid="10133043b1" src="https://hapsclub.kit.com/10133043b1/index.js"></script>
+<!-- EmailJS SDK for tip / contact form -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<nav class="topbar" aria-label="Primary">
+  <div class="topbar-inner">
+    <a href="/" aria-label="Haps Club home">
+      <svg class="topbar-logo" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M325.07,348.57c1.12,0,2.23.07,3.31.19-3.45-1.45-7.15-2.19-10.19-1.46-5.61,1.27-36.72,9.18-79.82,16.07,20.91-78.8,51.26-159.38,80.07-211.65,3.06-5.61-12.75-18.87-14.03-12.5-27.8,55.34-62.73,144.84-85.94,227.21-26.27,3.83-55.34,7.14-85.17,8.42,21.17-86.45,56.36-168.56,63.75-188.7,2.04-5.61-10.97-23.46-14.28-16.07-6.63,14.79-43.61,107.1-66.56,198.39-16.83-12.75-34.94-20.91-52.79-22.7-6.63-.51-13.77.76-13.77,10.2,0,19.64,20.15,30.35,53.04,31.62h8.93c-10.71,47.43-17.09,93.33-12.24,125.97,2.04,13.26,21.68,19.89,20.4,11.22-5.87-36.98-1.02-82.62,8.67-128.01,47.18,49.47,61.97,123.68,62.99,140.25,0,.12.02.24.03.36,7.24,1.99,14.11,4.66,20.61,8.02-2.78-43.95,7.24-106.85,23.73-171.84,24.15-3.3,47.59-6.42,66.69-8.75,7.19-9.61,15.02-16.24,22.55-16.24Z"/><path d="M191.49,537.38c-10.49-2.88-21.75-4.33-33.8-4.33-21.76,0-41.23,4.86-58.4,14.56-17.18,9.71-30.56,23.25-40.16,40.64-9.6,17.39-14.4,37.17-14.4,59.36s4.8,41.92,14.4,59.2c9.6,17.28,22.98,30.78,40.16,40.48,17.17,9.71,36.64,14.56,58.4,14.56,26.67,0,49.49-6.98,68.48-20.96,18.98-13.97,31.68-33.12,38.08-57.44h-60.16c-4.48,9.39-10.83,16.54-19.04,21.44-8.21,4.91-17.55,7.36-28,7.36-16.85,0-30.51-5.87-40.96-17.6-10.46-11.73-15.68-27.41-15.68-47.04s5.22-35.31,15.68-47.04c10.45-11.73,24.10-17.6,40.96-17.6,10.45,0,19.79,2.46,28,7.36,8.21,4.91,14.56,12.05,19.04,21.44h60.16c-6.4-24.32-19.1-43.52-38.08-57.6-4.47-3.32-9.17-6.23-14.07-8.77Z"/><polygon points="352.56 535.61 297.84 535.61 297.84 760.24 424.24 760.24 424.24 718 352.56 718 352.56 535.61"/><path d="M582.96,670c0,13.44-3.41,23.79-10.24,31.04-6.83,7.25-16.64,10.88-29.44,10.88s-22.51-3.62-29.12-10.88c-6.61-7.25-9.92-17.6-9.92-31.04v-134.4h-54.72v134.08c0,20.05,4.05,37.07,12.16,51.04,8.11,13.97,19.15,24.43,33.12,31.36,13.97,6.94,29.81,10.4,47.52,10.4s33.76-3.52,48.16-10.56c14.4-7.04,25.87-17.49,34.4-31.36,8.53-13.87,12.8-30.83,12.8-50.88v-131.39c-18,15.93-38.48,29.1-54.72,33.42v98.28Z"/><path d="M843.44,664.4c-7.9-10.13-18.35-16.58-31.36-19.36,11.52-3.41,20.75-9.49,27.68-18.24,6.93-8.74,10.4-19.73,10.4-32.96,0-17.92-6.46-32.1-19.36-42.56-12.91-10.45-30.77-15.68-53.6-15.68h-101.12v224.64h104.64c23.46,0,41.76-5.49,54.88-16.48,13.12-10.98,19.68-25.86,19.68-44.64,0-13.01-3.95-24.58-11.84-34.72ZM730.79,579.44h35.84c8.96,0,15.84,2.03,20.64,6.08,4.8,4.05,7.2,9.92,7.2,17.6s-2.4,13.5-7.2,17.44c-4.8,3.95-11.68,5.92-20.64,5.92h-35.84v-47.04ZM792.4,709.84c-5.02,4.16-12.11,6.24-21.28,6.24h-40.32v-49.6h39.68c9.17,0,16.37,2.24,21.6,6.72,5.23,4.48,7.84,10.67,7.84,18.56s-2.51,13.92-7.52,18.08Z"/></svg>
+    </a>
+    <form class="topbar-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
+      <input type="email" name="email_address" placeholder="Subscribe — your@email.com" required aria-label="Email address">
+      <button type="submit" aria-label="Subscribe">
+        <span>Subscribe</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </form>
+  </div>
+</nav>
+
+<header class="about-hero">
+  <p class="about-eyebrow">About Haps Club</p>
+  <h1 class="about-title">A weekly guide to LA<br>that respects your time.</h1>
+  <p class="about-lede">Haps Club is a short, curated email and homepage of what's actually worth doing in Los Angeles this week — written by someone who actually goes.</p>
+</header>
+
+<hr class="about-divider">
+
+<section class="about-section">
+  <h2>What you get</h2>
+  <p>Every Friday morning, one email lands in your inbox. It tells you <strong>what's on tonight</strong>, <strong>what to plan for the weekend</strong>, and <strong>a few things worth blocking off your calendar</strong> further out. No top-ten lists, no SEO bait, no "37 things to do this weekend in LA." Just a handful of picks I've vetted, with the address, the time, and a direct link to the venue.</p>
+  <p>The website is the same content, kept up-to-date so you can land here midweek and still find your night. Cards link straight to the source — no aggregators, no review sites — so you're one tap away from booking, not three.</p>
+</section>
+
+<hr class="about-divider">
+
+<section class="about-section">
+  <h2>How I pick</h2>
+  <p>I live in LA. I go to the things. The bar I'm sending you to is a bar I've sat at; the patio I'm telling you to book is one I've eaten on. Where a venue is too new for me to have visited, I'll say so plainly and tell you what's known.</p>
+  <p>I don't take payment for placement. The only sponsored content is clearly labeled "Sponsored," appears at the bottom of the email, and never crosses into the picks. If you're a venue or event hoping to be featured, the only way in is to be good — and the way to tell me is below.</p>
+</section>
+
+<hr class="about-divider">
+
+<section class="about-section">
+  <h2>What this isn't</h2>
+  <p>This isn't a comprehensive listings site — Time Out exists, the LA Times exists, you have Google. This is the opposite: a small, opinionated edit. If a Friday email has six things in it, it's because six things are worth your Friday.</p>
+  <p>It's also not a social club, a paid membership, or anything that requires you to buy a ticket. It's a free email. The "Become a member" framing on the homepage is just our way of saying: sign up, you're in.</p>
+</section>
+
+<section class="tip-section" id="tip">
+  <div class="tip-inner">
+    <p class="tip-eyebrow">Submit a tip · Say hello</p>
+    <h2 class="tip-title">Heard about something good?</h2>
+    <p class="tip-sub">A new restaurant, a one-night-only event, a venue worth knowing about — or just a question for me. The form goes straight to my inbox.</p>
+
+    <form class="tip-form" id="tipForm">
+      <div class="tip-row">
+        <label for="tip-name">Your name</label>
+        <input type="text" id="tip-name" name="from_name" required>
+      </div>
+      <div class="tip-row">
+        <label for="tip-email">Your email</label>
+        <input type="email" id="tip-email" name="reply_to" required>
+      </div>
+      <div class="tip-row">
+        <label for="tip-type">What is this?</label>
+        <select id="tip-type" name="message_type" required>
+          <option value="Tip">A tip — something I should know about</option>
+          <option value="Question">A question for the editor</option>
+          <option value="Feedback">Feedback on the newsletter or site</option>
+          <option value="Partnership">Partnership / sponsorship inquiry</option>
+          <option value="Other">Something else</option>
+        </select>
+      </div>
+      <div class="tip-row">
+        <label for="tip-message">Tell me about it</label>
+        <textarea id="tip-message" name="message" placeholder="The venue, the date, why it matters — whatever you've got." required></textarea>
+      </div>
+      <button type="submit" class="tip-submit" id="tipSubmit">Send</button>
+      <div class="tip-status" id="tipStatus"></div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="/about.html">About</a>
+    <a href="#tip">Submit a tip</a>
+    <a href="mailto:michael@haps.club">Contact</a>
+    <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <div class="footer-credit">
+    <span>© 2026 Haps Club · Made by hand in LA</span>
+  </div>
+</footer>
+
+<script>
+// Topbar subscribe inline confirmation
+(function() {
+  var form = document.querySelector('.topbar-form');
+  if (!form) return;
+  form.addEventListener('submit', function() {
+    var input = form.querySelector('input[type="email"]');
+    var button = form.querySelector('button');
+    if (!input || !button) return;
+    var email = input.value.trim();
+    if (!email) return;
+    setTimeout(function() {
+      form.innerHTML = '<span class="topbar-form-status" role="status">✓ Check ' + email + ' to confirm</span>';
+      form.style.cursor = 'default';
+    }, 100);
+  });
+})();
+
+// EmailJS tip / contact form
+// Replace the three placeholders with your actual EmailJS values from
+// https://dashboard.emailjs.com/admin/account
+// https://dashboard.emailjs.com/admin (Email Services)
+// https://dashboard.emailjs.com/admin/templates
+const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+
+(function() {
+  if (window.emailjs && EMAILJS_PUBLIC_KEY && !EMAILJS_PUBLIC_KEY.startsWith("YOUR_")) {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  }
+  const form = document.getElementById("tipForm");
+  const submit = document.getElementById("tipSubmit");
+  const status = document.getElementById("tipStatus");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    status.className = "tip-status";
+    status.textContent = "";
+
+    if (!window.emailjs || EMAILJS_PUBLIC_KEY.startsWith("YOUR_")) {
+      status.className = "tip-status error";
+      status.textContent = "Form not yet configured. Check back soon, or email michael@haps.club directly.";
+      return;
+    }
+
+    submit.disabled = true;
+    const original = submit.textContent;
+    submit.textContent = "Sending…";
+
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+      .then(function() {
+        status.className = "tip-status success";
+        status.textContent = "Got it. Thanks for the tip — I'll read every word.";
+        form.reset();
+      }, function(error) {
+        status.className = "tip-status error";
+        status.textContent = "Something went wrong. Try emailing michael@haps.club directly.";
+        console.error("EmailJS error:", error);
+      })
+      .finally(function() {
+        submit.disabled = false;
+        submit.textContent = original;
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
