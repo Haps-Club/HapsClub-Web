@@ -187,6 +187,61 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 .subscribe-form button svg { width: 16px; height: 16px; }
 .subscribe-fineprint { font-size: 12px; color: rgba(255, 255, 255, 0.55); position: relative; }
 
+/* ============ Sponsor block (Blackbird) ============ */
+.sponsor {
+  max-width: var(--container);
+  margin: 32px auto 0;
+  padding: 0 20px;
+}
+.sponsor-card {
+  background: #0a0a0a;
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.sponsor-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.sponsor-eyebrow strong { color: #fff; font-weight: 600; }
+.sponsor-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.sponsor-body {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 18px;
+}
+.sponsor-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: #0a0a0a;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  transition: transform 0.2s ease, background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.sponsor-cta:hover { transform: translateY(-1px); background: #f0f0f0; }
+.sponsor-cta:active { transform: scale(0.98); }
+.sponsor-cta svg { width: 13px; height: 13px; }
+
 .footer { max-width: var(--container); margin: 32px auto 0; padding: 24px 20px; text-align: center; }
 .footer-links { display: flex; justify-content: center; gap: 18px; margin-bottom: 14px; flex-wrap: wrap; }
 .footer-links a { font-size: 13px; color: var(--navy); font-weight: 500; padding: 4px 2px; transition: color 0.2s ease; opacity: 0.75; }
@@ -205,6 +260,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   .card-featured .card-title { font-size: 19px; }
   .subscribe { padding: 26px 20px; border-radius: var(--radius-md); }
   .btn-action { font-size: 12px; padding: 6px 10px; }
+  .sponsor-card { padding: 20px; border-radius: var(--radius-md); }
+  .sponsor-title { font-size: 22px; }
 }
 </style>
 <script async data-uid="10133043b1" src="https://hapsclub.kit.com/10133043b1/index.js"></script>
@@ -214,7 +271,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 <nav class="topbar" aria-label="Primary">
   <div class="topbar-inner">
     <a href="/" aria-label="Haps Club home" class="topbar-logo-link">
-      <img class="topbar-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg" alt="Haps Club">
+      <img class="topbar-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=2" alt="Haps Club">
     </a>
     <form class="topbar-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
       <input type="email" name="email_address" placeholder="your@email.com" required aria-label="Email address">
@@ -227,7 +284,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 </nav>
 
 <header class="hero">
-  <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg" alt="Haps Club">
+  <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=2" alt="Haps Club">
   <div class="hero-eyebrow">
     <span class="live-dot" aria-hidden="true"></span>
     <span id="todayDate">Friday, May 8</span>
@@ -555,6 +612,18 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   </section>
 
 </main>
+
+<section class="sponsor">
+  <div class="sponsor-card">
+    <p class="sponsor-eyebrow">Sponsored · <strong>Blackbird</strong></p>
+    <h2 class="sponsor-title">Get rewarded for eating out</h2>
+    <p class="sponsor-body">Blackbird is the loyalty app we use at a growing list of LA's better restaurants — tap your phone at the table, earn $FLY tokens, redeem for credit. Sign up with our link and get 2,000 $FLY (worth $20) on your first visit. Pays for itself before MDW.</p>
+    <a href="https://app.blackbird.xyz/r/bb-igyo61" class="sponsor-cta" target="_blank" rel="noopener">
+      Claim your $20
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="footer-links">
