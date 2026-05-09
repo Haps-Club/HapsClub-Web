@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>About · Haps Club</title>
-<meta name="description" content="Haps Club is a curated weekly guide to what's actually worth doing in Los Angeles.">
+<meta name="description" content="Haps Club is a daily-curated guide to what's actually worth doing in Los Angeles, with a weekly email every Friday.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -205,6 +205,34 @@ button { font-family: inherit; }
 .sponsor-cta:active { transform: scale(0.98); }
 .sponsor-cta svg { width: 13px; height: 13px; }
 
+.bio { max-width: var(--container); margin: 32px auto 0; padding: 0 20px; }
+.bio-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 22px 22px 20px 22px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.bio-text { flex: 1; min-width: 0; }
+.bio-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
+  text-transform: uppercase; color: var(--accent-deep); margin: 0 0 6px 0;
+}
+.bio-name {
+  font-family: var(--serif); font-size: 22px; line-height: 1.15;
+  letter-spacing: -0.01em; color: var(--navy-deep); margin: 0 0 6px 0;
+}
+.bio-body { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin: 0 0 10px 0; }
+.bio-link {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 13px; font-weight: 600; color: var(--navy);
+  transition: color 0.2s ease;
+}
+.bio-link:hover { color: var(--accent); }
+.bio-link svg { width: 13px; height: 13px; }
+
 .footer { max-width: var(--container); margin: 32px auto 0; padding: 24px 20px; text-align: center; }
 .footer-links { display: flex; justify-content: center; gap: 18px; margin-bottom: 14px; flex-wrap: wrap; }
 .footer-links a { font-size: 13px; color: var(--navy); font-weight: 500; padding: 4px 2px; opacity: 0.75; transition: color 0.2s ease; }
@@ -242,16 +270,17 @@ button { font-family: inherit; }
 
 <header class="about-hero">
   <p class="about-eyebrow">About Haps Club</p>
-  <h1 class="about-title">A weekly guide to LA<br>that respects your time.</h1>
-  <p class="about-lede">Haps Club is a short, curated email and homepage of what's actually worth doing in Los Angeles this week — written by someone who actually goes.</p>
+  <h1 class="about-title">A daily guide to LA<br>that respects your time.</h1>
+  <p class="about-lede">Haps Club is a short, curated homepage of what's actually worth doing in Los Angeles right now — updated daily, with a weekly email on Fridays. Written by someone who actually goes.</p>
 </header>
 
 <hr class="about-divider">
 
 <section class="about-section">
   <h2>What you get</h2>
-  <p>Every Friday morning, one email lands in your inbox. It tells you <strong>what's on tonight</strong>, <strong>what to plan for the weekend</strong>, and <strong>a few things worth blocking off your calendar</strong> further out. No top-ten lists, no SEO bait, no "37 things to do this weekend in LA." Just a handful of picks I've vetted, with the address, the time, and a direct link to the venue.</p>
-  <p>The website is the same content, kept up-to-date so you can land here midweek and still find your night. Cards link straight to the source — no aggregators, no review sites — so you're one tap away from booking, not three.</p>
+  <p>The website is updated <strong>every day</strong> — fresh picks for what's on tonight, what to plan for the weekend, and a few things worth blocking off your calendar further out. Land here midweek and you'll find your night.</p>
+  <p>Once a week, on Friday morning, the best of the week's picks land in your inbox as a single short email. No top-ten lists, no SEO bait, no "37 things to do this weekend in LA." Just a handful I've vetted, with the address, the time, and a direct link to the venue.</p>
+  <p>Cards link straight to the source — no aggregators, no review sites — so you're one tap away from booking, not three.</p>
 </section>
 
 <hr class="about-divider">
@@ -266,8 +295,8 @@ button { font-family: inherit; }
 
 <section class="about-section">
   <h2>What this isn't</h2>
-  <p>This isn't a comprehensive listings site — Time Out exists, the LA Times exists, you have Google. This is the opposite: a small, opinionated edit. If a Friday email has six things in it, it's because six things are worth your Friday.</p>
-  <p>It's also not a social club, a paid membership, or anything that requires you to buy a ticket. It's a free email. The "Become a member" framing on the homepage is just our way of saying: sign up, you're in.</p>
+  <p>This isn't a comprehensive listings site — Time Out exists, the LA Times exists, you have Google. This is the opposite: a small, opinionated edit. If today's homepage has six things on it, it's because six things are worth your night.</p>
+  <p>It's also not a social club, a paid membership, or anything that requires you to buy a ticket. It's a free email and a free site. The "Become a member" framing on the homepage is just our way of saying: sign up, you're in.</p>
 </section>
 
 <section class="tip-section" id="tip">
@@ -314,6 +343,20 @@ button { font-family: inherit; }
       Claim your $20
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
+  </div>
+</section>
+
+<section class="bio">
+  <div class="bio-card">
+    <div class="bio-text">
+      <p class="bio-eyebrow">Who's behind this</p>
+      <h2 class="bio-name">Michael Abraham</h2>
+      <p class="bio-body">LA-based realtor, longtime local. I spend my weeks at the openings, the dinners, and the venues I send you to — Haps Club is the shortlist of what's actually worth your time.</p>
+      <a href="https://www.instagram.com/michaelabraham.realtor/" class="bio-link" target="_blank" rel="noopener">
+        @michaelabraham.realtor
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
