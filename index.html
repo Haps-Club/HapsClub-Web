@@ -16,74 +16,45 @@
   --navy: #292f71;
   --navy-deep: #1a1f4d;
   --navy-tint: #EEF0F8;
-  --navy-soft: rgba(41, 47, 113, 0.08);
-
   --accent: #FF6B47;
   --accent-deep: #E54D2B;
   --accent-tint: #FFF1ED;
-
   --bg: #FAFAF7;
   --surface: #FFFFFF;
   --surface-soft: #F4F3EE;
-
   --ink: #0F1117;
   --ink-2: #3A3D47;
   --ink-3: #6B6F7A;
   --ink-4: #9CA0AB;
   --ink-5: #D7D9DE;
-
   --hairline: rgba(15, 17, 23, 0.08);
-
-  --sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --serif: 'Instrument Serif', 'New York', 'Times New Roman', serif;
-
-  --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 22px;
-
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-
   --container: 580px;
 }
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
 *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-
 html, body {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  letter-spacing: -0.011em;
-  min-height: 100%;
+  background: var(--bg); color: var(--ink); font-family: var(--sans);
+  font-size: 16px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em; min-height: 100%;
 }
-
-body {
-  position: relative;
-  padding-bottom: 4rem;
-  min-height: 100vh;
-}
-
+body { position: relative; padding-bottom: 4rem; min-height: 100vh; overflow-x: hidden; }
 body::before {
-  content: '';
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  height: 360px;
-  background:
-    radial-gradient(ellipse at top left, rgba(41, 47, 113, 0.08) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(255, 107, 71, 0.04) 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
+  content: ''; position: fixed; top: 0; left: 0; right: 0; height: 360px;
+  background: radial-gradient(ellipse at top left, rgba(41, 47, 113, 0.08) 0%, transparent 55%),
+              linear-gradient(180deg, rgba(255, 107, 71, 0.04) 0%, transparent 100%);
+  pointer-events: none; z-index: 0;
 }
-
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; }
 
+/* ============ TOPBAR (fixed mobile overflow) ============ */
 .topbar {
   position: sticky; top: 0; z-index: 50;
   background: rgba(250, 250, 247, 0.78);
@@ -93,62 +64,57 @@ button { font-family: inherit; }
 }
 .topbar-inner {
   max-width: var(--container); margin: 0 auto;
-  padding: 12px 20px;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 12px 16px;
+  display: flex; align-items: center; gap: 12px;
 }
-.topbar-logo { height: 32px; width: auto; color: var(--navy); display: block; }
+.topbar-logo-link { flex-shrink: 0; display: block; }
+.topbar-logo { height: 28px; width: auto; color: var(--navy); display: block; }
+
 .topbar-form {
-  display: flex; align-items: center; gap: 0;
+  display: flex; align-items: center;
+  flex: 1; min-width: 0;
   background: white;
   border: 1px solid var(--hairline);
   border-radius: 999px;
-  padding: 0;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  height: 36px;
 }
 .topbar-form:focus-within {
   border-color: var(--navy);
   box-shadow: 0 0 0 3px var(--navy-tint);
 }
 .topbar-form input {
-  border: none;
-  background: transparent;
-  padding: 8px 12px 8px 16px;
-  font-family: inherit;
-  font-size: 13px;
-  color: var(--ink);
-  width: 220px;
-  outline: none;
+  flex: 1; min-width: 0;
+  border: none; background: transparent;
+  padding: 0 10px 0 14px;
+  font-family: inherit; font-size: 13px; color: var(--ink);
+  outline: none; height: 100%;
 }
 .topbar-form input::placeholder { color: var(--ink-4); }
 .topbar-form button {
-  border: none;
-  background: var(--navy);
-  color: white;
-  padding: 8px 14px;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  flex-shrink: 0;
+  border: none; background: var(--navy); color: white;
+  padding: 0 14px; height: 100%;
+  font-family: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
   cursor: pointer;
   transition: background 0.2s ease;
-  display: flex; align-items: center; gap: 4px;
+  display: flex; align-items: center; gap: 5px;
 }
 .topbar-form button:hover { background: var(--navy-deep); }
-.topbar-form button svg { width: 14px; height: 14px; }
+.topbar-form button svg { width: 13px; height: 13px; }
 .topbar-form-status {
-  font-size: 12px;
-  color: var(--accent-deep);
-  font-weight: 500;
-  white-space: nowrap;
+  font-size: 12px; color: var(--accent-deep); font-weight: 500;
+  white-space: nowrap; padding: 0 14px;
+  overflow: hidden; text-overflow: ellipsis;
 }
-@media (max-width: 640px) {
-  .topbar-form input { width: 130px; padding: 8px 8px 8px 12px; font-size: 13px; }
-  .topbar-form button { padding: 8px 10px; }
+
+@media (max-width: 480px) {
+  .topbar-inner { padding: 10px 14px; gap: 10px; }
+  .topbar-logo { height: 24px; }
   .topbar-form button span { display: none; }
-}
-@media (max-width: 420px) {
-  .topbar-form input { width: 100px; }
+  .topbar-form button { padding: 0 12px; }
+  .topbar-form input { padding: 0 8px 0 12px; }
 }
 
 .hero {
@@ -158,10 +124,7 @@ button { font-family: inherit; }
 }
 .hero-logo {
   height: clamp(80px, 18vw, 110px);
-  width: auto;
-  color: var(--navy);
-  display: block;
-  margin-bottom: 28px;
+  width: auto; color: var(--navy); display: block; margin-bottom: 28px;
 }
 .hero-eyebrow {
   display: flex; align-items: center; gap: 8px;
@@ -175,8 +138,8 @@ button { font-family: inherit; }
   animation: pulse 2.4s ease-out infinite;
 }
 @keyframes pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(255, 107, 71, 0.45); }
-  70%  { box-shadow: 0 0 0 8px rgba(255, 107, 71, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(255, 107, 71, 0.45); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 107, 71, 0); }
   100% { box-shadow: 0 0 0 0 rgba(255, 107, 71, 0); }
 }
 .hero-title {
@@ -225,16 +188,12 @@ a.card { cursor: pointer; }
   border-color: var(--ink-5);
 }
 a.card:active { transform: scale(0.99); transition-duration: 0.15s; }
-
 .card-featured {
   background: linear-gradient(180deg, var(--accent-tint) 0%, var(--surface) 70%);
   border-color: rgba(255, 107, 71, 0.18);
   padding: 22px 20px;
 }
-
-.card-header {
-  display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
-}
+.card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .card-icon {
   width: 30px; height: 30px;
   border-radius: 9px;
@@ -247,7 +206,6 @@ a.card:active { transform: scale(0.99); transition-duration: 0.15s; }
 .card-icon-culture  { background: var(--navy-tint); color: var(--navy); }
 .card-icon-event    { background: var(--navy-tint); color: var(--navy); }
 .card-icon-outdoors { background: var(--accent-tint); color: var(--accent-deep); }
-
 .card-meta {
   display: flex; justify-content: space-between; align-items: baseline;
   flex: 1; min-width: 0; gap: 8px;
@@ -258,7 +216,6 @@ a.card:active { transform: scale(0.99); transition-duration: 0.15s; }
 }
 .card-source-accent { color: var(--accent-deep); }
 .card-time { font-size: 12px; color: var(--ink-4); font-weight: 500; flex-shrink: 0; }
-
 .card-title {
   font-size: 17px; font-weight: 600;
   letter-spacing: -0.018em; line-height: 1.28;
@@ -268,26 +225,17 @@ a.card:active { transform: scale(0.99); transition-duration: 0.15s; }
   font-size: 21px; line-height: 1.2; letter-spacing: -0.025em;
   color: var(--navy-deep);
 }
-.card-body {
-  font-size: 14.5px; line-height: 1.5;
-  color: var(--ink-3); margin-bottom: 16px;
-}
-
-.card-actions {
-  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-}
+.card-body { font-size: 14.5px; line-height: 1.5; color: var(--ink-3); margin-bottom: 16px; }
+.card-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .card-tags { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; min-width: 0; }
 .tag {
   display: inline-block; padding: 4px 10px;
   background: var(--surface-soft);
   border-radius: 100px;
-  font-size: 11.5px; font-weight: 600;
-  color: var(--ink-2);
+  font-size: 11.5px; font-weight: 600; color: var(--ink-2);
 }
 .tag-accent { background: var(--accent); color: white; }
-.tag-rsvp   { background: var(--navy); color: white; }
 .tag-navy   { background: var(--navy-tint); color: var(--navy); }
-
 .card-button-row { display: flex; gap: 8px; flex-shrink: 0; }
 .btn-action {
   display: inline-flex; align-items: center; justify-content: center; gap: 5px;
@@ -313,7 +261,6 @@ a.card:active { transform: scale(0.99); transition-duration: 0.15s; }
 .btn-action-primary:hover { background: var(--navy-deep); border-color: var(--navy-deep); }
 .btn-action-accent { background: var(--accent); color: white; border-color: var(--accent); }
 .btn-action-accent:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
-
 a.card-compact {
   display: grid;
   grid-template-columns: auto 1fr auto;
@@ -339,8 +286,7 @@ a.card-compact {
 a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px); }
 
 .toast {
-  position: fixed;
-  bottom: 24px; left: 50%;
+  position: fixed; bottom: 24px; left: 50%;
   transform: translateX(-50%) translateY(80px);
   background: var(--navy-deep); color: white;
   padding: 12px 18px;
@@ -351,13 +297,9 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   z-index: 200;
   opacity: 0;
   transition: transform 0.5s var(--ease-spring), opacity 0.3s ease;
-  pointer-events: none;
-  max-width: 90vw;
+  pointer-events: none; max-width: 90vw;
 }
-.toast.is-visible {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
-}
+.toast.is-visible { transform: translateX(-50%) translateY(0); opacity: 1; }
 .toast svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
 
 .subscribe {
@@ -370,8 +312,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 }
 .subscribe::before {
   content: '';
-  position: absolute;
-  top: -40%; right: -20%;
+  position: absolute; top: -40%; right: -20%;
   width: 280px; height: 280px;
   background: radial-gradient(circle, rgba(255, 107, 71, 0.35) 0%, transparent 70%);
   pointer-events: none;
@@ -418,12 +359,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   transition: transform 0.2s var(--ease-spring), background 0.2s ease;
 }
 .subscribe-form button:hover { transform: scale(1.06); background: var(--accent-deep); }
-.subscribe-form button:active { transform: scale(0.94); }
 .subscribe-form button svg { width: 16px; height: 16px; }
-.subscribe-form button:disabled { background: white; color: var(--navy); cursor: default; }
-.subscribe-fineprint {
-  font-size: 12px; color: rgba(255, 255, 255, 0.55); position: relative;
-}
+.subscribe-fineprint { font-size: 12px; color: rgba(255, 255, 255, 0.55); position: relative; }
 
 .footer {
   max-width: var(--container);
@@ -442,33 +379,16 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   opacity: 0.75;
 }
 .footer-links a:hover { color: var(--accent); opacity: 1; }
-.footer-credit {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  font-size: 12px; color: var(--ink-4);
-}
-.footer-mark {
-  height: 16px; width: auto;
-  color: var(--navy); opacity: 0.5;
-}
+.footer-credit { font-size: 12px; color: var(--ink-4); }
 
 .card { animation: slideIn 0.6s var(--ease-out) backwards; }
-.stack-group:nth-child(1) .card:nth-child(2) { animation-delay: 0.06s; }
-.stack-group:nth-child(1) .card:nth-child(3) { animation-delay: 0.12s; }
-.stack-group:nth-child(2) .card:nth-child(2) { animation-delay: 0.18s; }
-.stack-group:nth-child(2) .card:nth-child(3) { animation-delay: 0.24s; }
-.stack-group:nth-child(3) .card:nth-child(2) { animation-delay: 0.30s; }
-.stack-group:nth-child(3) .card:nth-child(3) { animation-delay: 0.36s; }
-.stack-group:nth-child(3) .card:nth-child(4) { animation-delay: 0.42s; }
-
 @keyframes slideIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
-
 @media (max-width: 380px) {
   .hero { padding: 28px 18px 22px; }
   .stack { padding: 8px 14px 0; }
@@ -480,18 +400,17 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   .btn-action { font-size: 12px; padding: 6px 10px; }
 }
 </style>
-<!-- Kit (ConvertKit) signup sticky bar — renders at top of page after 3s timer -->
 <script async data-uid="10133043b1" src="https://hapsclub.kit.com/10133043b1/index.js"></script>
 </head>
 <body>
 
 <nav class="topbar" aria-label="Primary">
   <div class="topbar-inner">
-    <a href="/" aria-label="Haps Club home">
-      <svg class="topbar-logo"  viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M325.07,348.57c1.12,0,2.23.07,3.31.19-3.45-1.45-7.15-2.19-10.19-1.46-5.61,1.27-36.72,9.18-79.82,16.07,20.91-78.8,51.26-159.38,80.07-211.65,3.06-5.61-12.75-18.87-14.03-12.5-27.8,55.34-62.73,144.84-85.94,227.21-26.27,3.83-55.34,7.14-85.17,8.42,21.17-86.45,56.36-168.56,63.75-188.7,2.04-5.61-10.97-23.46-14.28-16.07-6.63,14.79-43.61,107.1-66.56,198.39-16.83-12.75-34.94-20.91-52.79-22.7-6.63-.51-13.77.76-13.77,10.2,0,19.64,20.15,30.35,53.04,31.62h8.93c-10.71,47.43-17.09,93.33-12.24,125.97,2.04,13.26,21.68,19.89,20.4,11.22-5.87-36.98-1.02-82.62,8.67-128.01,47.18,49.47,61.97,123.68,62.99,140.25,0,.12.02.24.03.36,7.24,1.99,14.11,4.66,20.61,8.02-2.78-43.95,7.24-106.85,23.73-171.84,24.15-3.3,47.59-6.42,66.69-8.75,7.19-9.61,15.02-16.24,22.55-16.24ZM99.14,375.34c-16.06-.25-35.7-5.35-35.7-11.48s5.61-5.86,10.46-4.08c10.71,4.08,20.66,9.44,29.58,15.56h-4.34ZM194.51,481.68c-10.46-34.68-32.13-70.13-58.4-96.14,21.93-2.04,50.49-5.61,79.56-9.44-10.46,38.51-18.11,75.23-21.17,105.57Z"/> <path d="M364.59,475.05c-1.27,0-4.84-.76-4.84-5.35,0-19.89,28.82-98.69,28.82-107.87,0-6.89-7.65-11.48-11.22-11.48s-7.14,4.08-15.81,15.05c-8.67,10.97-57.89,72.68-69.87,72.68-.77,0-2.81-.25-2.81-3.06,0-27.54,36.72-73.19,50.75-73.19,5.61,0,11.48,10.2,14.54,5.87,1.91-2.86-9.82-17.13-25.76-18.94,8.69,3.65,15.76,11.83,6.64,12.56-7.88.63-19.13,1.87-32.5,3.49-15.46,20.67-27.94,55.13-27.94,67.14,0,8.93,8.67,16.83,13.77,16.83,17.34,0,57.38-59.16,83.64-83.39-9.44,31.11-26.78,72.68-26.78,94.35,0,9.43,10.46,23.21,23.72,23.21,9.18,0,25.76-18.62,44.12-39.27,11.21-12.73,22.96-26.38,32.85-37.95,1.81-5.45,3.56-10.49,5.27-15.22-25.78,29.49-72.71,84.54-86.57,84.54Z"/> <path d="M328.38,348.76c-1.09-.12-2.19-.19-3.31-.19-7.53,0-15.36,6.63-22.55,16.24,13.37-1.63,24.63-2.86,32.5-3.49,9.13-.73,2.05-8.91-6.64-12.56Z"/> <path d="M656.76,346.54c-5.93,3.26-57.31,35.95-91.99,57.62,9.95-23.46,16.58-48.45,16.58-69.87,0-18.11-11.99-25.76-21.67-25.76-45.65,0-121.64,207.83-133.88,248.89,31.37-149.43,58.4-199.16,58.91-205.53.51-6.38-9.69-12.24-13-11.22-3.06,1.02-10.2,14.79-13.52,21.93-.51,1.27-.25,2.81.25,3.83l.25.51c.51,1.28.51,2.29,0,3.57-2.41,6.22-4.91,12.76-7.53,20.01,6.95-7.95,12.37-14.04,15.18-16.69,3.57-3.31,5.1,1.79,3.32,3.83-.59.73-10.48,12.54-23.77,28.09-12.14,36.57-26.72,91.72-45.6,198.35-6.89,39.53,4.08,43.86,13.77,43.86,6.12,0,4.59-39.78,13.01-69.87,29.33-106.08,102.26-261.38,136.94-261.38,3.57,0,5.1,2.55,4.84,8.16-1.28,29.58-11.99,64.01-25.76,93.08-35.96,23.97-68.85,48.96-68.85,62.73,0,6.38,10.71,11.48,20.4,11.48,3.57,0,8.42-.51,13.26-3.83,15.56-11.48,36.21-40.04,51.77-72.68,24.81-16.37,50.03-30.81,66.45-39.84,5.96-5.98,12.02-11,16.76-14.73-2.14-1.17,15.21-15.25,13.88-14.53ZM491.58,483.47c-7.65.26-5.1-4.08-1.78-8.67,9.94-13.77,27.03-28.82,46.67-43.1-15.81,29.84-33.66,51.51-44.88,51.77Z"/> <path d="M466.34,373.81c-2.81,2.65-8.23,8.75-15.18,16.69-1.71,4.73-3.46,9.77-5.27,15.22,13.28-15.56,23.18-27.36,23.77-28.09,1.79-2.04.25-7.14-3.32-3.83Z"/> <path d="M680.53,475.31c0-13.26-4.33-22.18-18.36-29.58,35.7-26.01,71.91-47.94,93.33-55.08,1.53-.51-.77-5.36-2.55-4.85-21.93,7.4-60.69,29.84-98.69,56.61-3.06-1.27-6.38-2.55-9.95-3.57-14.28-4.34-31.11-6.38-31.11-15.3,0-21.68,55.34-65.54,79.05-73.95,6.38-2.29,1.27-14.54-5.61-14.54-5.87,0-20.52,5.5-31.11,12.24-5.61,3.57-4.66,4.47-6.14,5.89-1.09,1.06-2.76,1.01-5.1,5.04-1.33-.11-3.75.85-2.98,2.59-2.73,1.31-6.97,5.98-10.26,7.76-2.24,1.17.85.38-4.95,7.21-11.76,11.79-23.1,27.29-23.1,43.92,0,14.03,17.6,25.25,30.6,29.33,2.8.76,5.61,1.53,8.16,2.04-48.71,35.7-92.82,76.5-92.82,98.69,0,9.69,6.12,23.46,23.71,23.46,3.16,0,6.62-.53,10.29-1.51v-10.99c-4.98,2.13-9.81,3.56-14.37,4.08-7.91,1.02-11.47-4.33-11.47-9.18,0-21.17,45.65-64.77,94.86-102.26,9.44,1.79,16.07,3.57,16.07,8.92,0,16.32-22.27,49.13-48.61,73.3h18.25v2.69c23.55-20.85,42.85-46.41,42.85-62.99Z"/> <path d="M191.49,537.38c-10.49-2.88-21.75-4.33-33.8-4.33-21.76,0-41.23,4.86-58.4,14.56-17.18,9.71-30.56,23.25-40.16,40.64-9.6,17.39-14.4,37.17-14.4,59.36s4.8,41.92,14.4,59.2c9.6,17.28,22.98,30.78,40.16,40.48,17.17,9.71,36.64,14.56,58.4,14.56,26.67,0,49.49-6.98,68.48-20.96,18.98-13.97,31.68-33.12,38.08-57.44h-60.16c-4.48,9.39-10.83,16.54-19.04,21.44-8.21,4.91-17.55,7.36-28,7.36-16.85,0-30.51-5.87-40.96-17.6-10.46-11.73-15.68-27.41-15.68-47.04s5.22-35.31,15.68-47.04c10.45-11.73,24.1-17.6,40.96-17.6,10.45,0,19.79,2.46,28,7.36,8.21,4.91,14.56,12.05,19.04,21.44h60.16c-6.4-24.32-19.1-43.52-38.08-57.6-4.47-3.32-9.17-6.23-14.07-8.77.14,2.27.31,4.5.52,6.66,1.27,12.9-20.05.2-21.13-14.69Z"/> <path d="M212.62,552.06c-.21-2.16-.38-4.4-.52-6.66-6.5-3.36-13.36-6.04-20.61-8.02,1.09,14.89,22.4,27.59,21.13,14.69Z"/> <polygon points="352.56 535.61 297.84 535.61 297.84 760.24 424.24 760.24 424.24 718 352.56 718 352.56 535.61"/> <path d="M582.96,670c0,13.44-3.41,23.79-10.24,31.04-6.83,7.25-16.64,10.88-29.44,10.88s-22.51-3.62-29.12-10.88c-6.61-7.25-9.92-17.6-9.92-31.04v-134.4h-54.72v134.08c0,20.05,4.05,37.07,12.16,51.04,8.11,13.97,19.15,24.43,33.12,31.36,13.97,6.94,29.81,10.4,47.52,10.4s33.76-3.52,48.16-10.56c14.4-7.04,25.87-17.49,34.4-31.36,8.53-13.87,12.8-30.83,12.8-50.88v-131.39c-18,15.93-38.48,29.1-54.72,33.42v98.28Z"/> <path d="M619.43,535.61c-11.89,10.91-24.6,20.04-36.47,25.12v10.99c16.24-4.32,36.72-17.49,54.72-33.42v-2.69h-18.25Z"/> <path d="M843.44,664.4c-7.9-10.13-18.35-16.58-31.36-19.36,11.52-3.41,20.75-9.49,27.68-18.24,6.93-8.74,10.4-19.73,10.4-32.96,0-17.92-6.46-32.1-19.36-42.56-12.91-10.45-30.77-15.68-53.6-15.68h-101.12v224.64h104.64c23.46,0,41.76-5.49,54.88-16.48,13.12-10.98,19.68-25.86,19.68-44.64,0-13.01-3.95-24.58-11.84-34.72ZM730.79,579.44h35.84c8.96,0,15.84,2.03,20.64,6.08,4.8,4.05,7.2,9.92,7.2,17.6s-2.4,13.5-7.2,17.44c-4.8,3.95-11.68,5.92-20.64,5.92h-35.84v-47.04ZM792.4,709.84c-5.02,4.16-12.11,6.24-21.28,6.24h-40.32v-49.6h39.68c9.17,0,16.37,2.24,21.6,6.72,5.23,4.48,7.84,10.67,7.84,18.56s-2.51,13.92-7.52,18.08Z"/></svg>
+    <a href="/" aria-label="Haps Club home" class="topbar-logo-link">
+      <svg class="topbar-logo" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M325.07,348.57c1.12,0,2.23.07,3.31.19-3.45-1.45-7.15-2.19-10.19-1.46-5.61,1.27-36.72,9.18-79.82,16.07,20.91-78.8,51.26-159.38,80.07-211.65,3.06-5.61-12.75-18.87-14.03-12.5-27.8,55.34-62.73,144.84-85.94,227.21-26.27,3.83-55.34,7.14-85.17,8.42,21.17-86.45,56.36-168.56,63.75-188.7,2.04-5.61-10.97-23.46-14.28-16.07-6.63,14.79-43.61,107.1-66.56,198.39-16.83-12.75-34.94-20.91-52.79-22.7-6.63-.51-13.77.76-13.77,10.2,0,19.64,20.15,30.35,53.04,31.62h8.93c-10.71,47.43-17.09,93.33-12.24,125.97,2.04,13.26,21.68,19.89,20.4,11.22-5.87-36.98-1.02-82.62,8.67-128.01,47.18,49.47,61.97,123.68,62.99,140.25,0,.12.02.24.03.36,7.24,1.99,14.11,4.66,20.61,8.02-2.78-43.95,7.24-106.85,23.73-171.84,24.15-3.3,47.59-6.42,66.69-8.75,7.19-9.61,15.02-16.24,22.55-16.24Z"/><path d="M191.49,537.38c-10.49-2.88-21.75-4.33-33.8-4.33-21.76,0-41.23,4.86-58.4,14.56-17.18,9.71-30.56,23.25-40.16,40.64-9.6,17.39-14.4,37.17-14.4,59.36s4.8,41.92,14.4,59.2c9.6,17.28,22.98,30.78,40.16,40.48,17.17,9.71,36.64,14.56,58.4,14.56,26.67,0,49.49-6.98,68.48-20.96,18.98-13.97,31.68-33.12,38.08-57.44h-60.16c-4.48,9.39-10.83,16.54-19.04,21.44-8.21,4.91-17.55,7.36-28,7.36-16.85,0-30.51-5.87-40.96-17.6-10.46-11.73-15.68-27.41-15.68-47.04s5.22-35.31,15.68-47.04c10.45-11.73,24.10-17.6,40.96-17.6,10.45,0,19.79,2.46,28,7.36,8.21,4.91,14.56,12.05,19.04,21.44h60.16c-6.4-24.32-19.1-43.52-38.08-57.6-4.47-3.32-9.17-6.23-14.07-8.77Z"/><polygon points="352.56 535.61 297.84 535.61 297.84 760.24 424.24 760.24 424.24 718 352.56 718 352.56 535.61"/><path d="M582.96,670c0,13.44-3.41,23.79-10.24,31.04-6.83,7.25-16.64,10.88-29.44,10.88s-22.51-3.62-29.12-10.88c-6.61-7.25-9.92-17.6-9.92-31.04v-134.4h-54.72v134.08c0,20.05,4.05,37.07,12.16,51.04,8.11,13.97,19.15,24.43,33.12,31.36,13.97,6.94,29.81,10.4,47.52,10.4s33.76-3.52,48.16-10.56c14.4-7.04,25.87-17.49,34.4-31.36,8.53-13.87,12.8-30.83,12.8-50.88v-131.39c-18,15.93-38.48,29.1-54.72,33.42v98.28Z"/><path d="M843.44,664.4c-7.9-10.13-18.35-16.58-31.36-19.36,11.52-3.41,20.75-9.49,27.68-18.24,6.93-8.74,10.4-19.73,10.4-32.96,0-17.92-6.46-32.1-19.36-42.56-12.91-10.45-30.77-15.68-53.6-15.68h-101.12v224.64h104.64c23.46,0,41.76-5.49,54.88-16.48,13.12-10.98,19.68-25.86,19.68-44.64,0-13.01-3.95-24.58-11.84-34.72ZM730.79,579.44h35.84c8.96,0,15.84,2.03,20.64,6.08,4.8,4.05,7.2,9.92,7.2,17.6s-2.4,13.5-7.2,17.44c-4.8,3.95-11.68,5.92-20.64,5.92h-35.84v-47.04ZM792.4,709.84c-5.02,4.16-12.11,6.24-21.28,6.24h-40.32v-49.6h39.68c9.17,0,16.37,2.24,21.6,6.72,5.23,4.48,7.84,10.67,7.84,18.56s-2.51,13.92-7.52,18.08Z"/></svg>
     </a>
     <form class="topbar-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
-      <input type="email" name="email_address" placeholder="Subscribe — your@email.com" required aria-label="Email address">
+      <input type="email" name="email_address" placeholder="your@email.com" required aria-label="Email address">
       <button type="submit" aria-label="Subscribe">
         <span>Subscribe</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -501,7 +420,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 </nav>
 
 <header class="hero">
-  <svg class="hero-logo"  aria-label="Haps Club" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M325.07,348.57c1.12,0,2.23.07,3.31.19-3.45-1.45-7.15-2.19-10.19-1.46-5.61,1.27-36.72,9.18-79.82,16.07,20.91-78.8,51.26-159.38,80.07-211.65,3.06-5.61-12.75-18.87-14.03-12.5-27.8,55.34-62.73,144.84-85.94,227.21-26.27,3.83-55.34,7.14-85.17,8.42,21.17-86.45,56.36-168.56,63.75-188.7,2.04-5.61-10.97-23.46-14.28-16.07-6.63,14.79-43.61,107.1-66.56,198.39-16.83-12.75-34.94-20.91-52.79-22.7-6.63-.51-13.77.76-13.77,10.2,0,19.64,20.15,30.35,53.04,31.62h8.93c-10.71,47.43-17.09,93.33-12.24,125.97,2.04,13.26,21.68,19.89,20.4,11.22-5.87-36.98-1.02-82.62,8.67-128.01,47.18,49.47,61.97,123.68,62.99,140.25,0,.12.02.24.03.36,7.24,1.99,14.11,4.66,20.61,8.02-2.78-43.95,7.24-106.85,23.73-171.84,24.15-3.3,47.59-6.42,66.69-8.75,7.19-9.61,15.02-16.24,22.55-16.24ZM99.14,375.34c-16.06-.25-35.7-5.35-35.7-11.48s5.61-5.86,10.46-4.08c10.71,4.08,20.66,9.44,29.58,15.56h-4.34ZM194.51,481.68c-10.46-34.68-32.13-70.13-58.4-96.14,21.93-2.04,50.49-5.61,79.56-9.44-10.46,38.51-18.11,75.23-21.17,105.57Z"/> <path d="M364.59,475.05c-1.27,0-4.84-.76-4.84-5.35,0-19.89,28.82-98.69,28.82-107.87,0-6.89-7.65-11.48-11.22-11.48s-7.14,4.08-15.81,15.05c-8.67,10.97-57.89,72.68-69.87,72.68-.77,0-2.81-.25-2.81-3.06,0-27.54,36.72-73.19,50.75-73.19,5.61,0,11.48,10.2,14.54,5.87,1.91-2.86-9.82-17.13-25.76-18.94,8.69,3.65,15.76,11.83,6.64,12.56-7.88.63-19.13,1.87-32.5,3.49-15.46,20.67-27.94,55.13-27.94,67.14,0,8.93,8.67,16.83,13.77,16.83,17.34,0,57.38-59.16,83.64-83.39-9.44,31.11-26.78,72.68-26.78,94.35,0,9.43,10.46,23.21,23.72,23.21,9.18,0,25.76-18.62,44.12-39.27,11.21-12.73,22.96-26.38,32.85-37.95,1.81-5.45,3.56-10.49,5.27-15.22-25.78,29.49-72.71,84.54-86.57,84.54Z"/> <path d="M328.38,348.76c-1.09-.12-2.19-.19-3.31-.19-7.53,0-15.36,6.63-22.55,16.24,13.37-1.63,24.63-2.86,32.5-3.49,9.13-.73,2.05-8.91-6.64-12.56Z"/> <path d="M656.76,346.54c-5.93,3.26-57.31,35.95-91.99,57.62,9.95-23.46,16.58-48.45,16.58-69.87,0-18.11-11.99-25.76-21.67-25.76-45.65,0-121.64,207.83-133.88,248.89,31.37-149.43,58.4-199.16,58.91-205.53.51-6.38-9.69-12.24-13-11.22-3.06,1.02-10.2,14.79-13.52,21.93-.51,1.27-.25,2.81.25,3.83l.25.51c.51,1.28.51,2.29,0,3.57-2.41,6.22-4.91,12.76-7.53,20.01,6.95-7.95,12.37-14.04,15.18-16.69,3.57-3.31,5.1,1.79,3.32,3.83-.59.73-10.48,12.54-23.77,28.09-12.14,36.57-26.72,91.72-45.6,198.35-6.89,39.53,4.08,43.86,13.77,43.86,6.12,0,4.59-39.78,13.01-69.87,29.33-106.08,102.26-261.38,136.94-261.38,3.57,0,5.1,2.55,4.84,8.16-1.28,29.58-11.99,64.01-25.76,93.08-35.96,23.97-68.85,48.96-68.85,62.73,0,6.38,10.71,11.48,20.4,11.48,3.57,0,8.42-.51,13.26-3.83,15.56-11.48,36.21-40.04,51.77-72.68,24.81-16.37,50.03-30.81,66.45-39.84,5.96-5.98,12.02-11,16.76-14.73-2.14-1.17,15.21-15.25,13.88-14.53ZM491.58,483.47c-7.65.26-5.1-4.08-1.78-8.67,9.94-13.77,27.03-28.82,46.67-43.1-15.81,29.84-33.66,51.51-44.88,51.77Z"/> <path d="M466.34,373.81c-2.81,2.65-8.23,8.75-15.18,16.69-1.71,4.73-3.46,9.77-5.27,15.22,13.28-15.56,23.18-27.36,23.77-28.09,1.79-2.04.25-7.14-3.32-3.83Z"/> <path d="M680.53,475.31c0-13.26-4.33-22.18-18.36-29.58,35.7-26.01,71.91-47.94,93.33-55.08,1.53-.51-.77-5.36-2.55-4.85-21.93,7.4-60.69,29.84-98.69,56.61-3.06-1.27-6.38-2.55-9.95-3.57-14.28-4.34-31.11-6.38-31.11-15.3,0-21.68,55.34-65.54,79.05-73.95,6.38-2.29,1.27-14.54-5.61-14.54-5.87,0-20.52,5.5-31.11,12.24-5.61,3.57-4.66,4.47-6.14,5.89-1.09,1.06-2.76,1.01-5.1,5.04-1.33-.11-3.75.85-2.98,2.59-2.73,1.31-6.97,5.98-10.26,7.76-2.24,1.17.85.38-4.95,7.21-11.76,11.79-23.1,27.29-23.1,43.92,0,14.03,17.6,25.25,30.6,29.33,2.8.76,5.61,1.53,8.16,2.04-48.71,35.7-92.82,76.5-92.82,98.69,0,9.69,6.12,23.46,23.71,23.46,3.16,0,6.62-.53,10.29-1.51v-10.99c-4.98,2.13-9.81,3.56-14.37,4.08-7.91,1.02-11.47-4.33-11.47-9.18,0-21.17,45.65-64.77,94.86-102.26,9.44,1.79,16.07,3.57,16.07,8.92,0,16.32-22.27,49.13-48.61,73.3h18.25v2.69c23.55-20.85,42.85-46.41,42.85-62.99Z"/> <path d="M191.49,537.38c-10.49-2.88-21.75-4.33-33.8-4.33-21.76,0-41.23,4.86-58.4,14.56-17.18,9.71-30.56,23.25-40.16,40.64-9.6,17.39-14.4,37.17-14.4,59.36s4.8,41.92,14.4,59.2c9.6,17.28,22.98,30.78,40.16,40.48,17.17,9.71,36.64,14.56,58.4,14.56,26.67,0,49.49-6.98,68.48-20.96,18.98-13.97,31.68-33.12,38.08-57.44h-60.16c-4.48,9.39-10.83,16.54-19.04,21.44-8.21,4.91-17.55,7.36-28,7.36-16.85,0-30.51-5.87-40.96-17.6-10.46-11.73-15.68-27.41-15.68-47.04s5.22-35.31,15.68-47.04c10.45-11.73,24.10-17.6,40.96-17.6,10.45,0,19.79,2.46,28,7.36,8.21,4.91,14.56,12.05,19.04,21.44h60.16c-6.4-24.32-19.1-43.52-38.08-57.6-4.47-3.32-9.17-6.23-14.07-8.77.14,2.27.31,4.5.52,6.66,1.27,12.9-20.05.2-21.13-14.69Z"/> <path d="M212.62,552.06c-.21-2.16-.38-4.4-.52-6.66-6.5-3.36-13.36-6.04-20.61-8.02,1.09,14.89,22.4,27.59,21.13,14.69Z"/> <polygon points="352.56 535.61 297.84 535.61 297.84 760.24 424.24 760.24 424.24 718 352.56 718 352.56 535.61"/> <path d="M582.96,670c0,13.44-3.41,23.79-10.24,31.04-6.83,7.25-16.64,10.88-29.44,10.88s-22.51-3.62-29.12-10.88c-6.61-7.25-9.92-17.6-9.92-31.04v-134.4h-54.72v134.08c0,20.05,4.05,37.07,12.16,51.04,8.11,13.97,19.15,24.43,33.12,31.36,13.97,6.94,29.81,10.4,47.52,10.4s33.76-3.52,48.16-10.56c14.4-7.04,25.87-17.49,34.4-31.36,8.53-13.87,12.8-30.83,12.8-50.88v-131.39c-18,15.93-38.48,29.1-54.72,33.42v98.28Z"/> <path d="M619.43,535.61c-11.89,10.91-24.6,20.04-36.47,25.12v10.99c16.24-4.32,36.72-17.49,54.72-33.42v-2.69h-18.25Z"/> <path d="M843.44,664.4c-7.9-10.13-18.35-16.58-31.36-19.36,11.52-3.41,20.75-9.49,27.68-18.24,6.93-8.74,10.4-19.73,10.4-32.96,0-17.92-6.46-32.1-19.36-42.56-12.91-10.45-30.77-15.68-53.6-15.68h-101.12v224.64h104.64c23.46,0,41.76-5.49,54.88-16.48,13.12-10.98,19.68-25.86,19.68-44.64,0-13.01-3.95-24.58-11.84-34.72ZM730.79,579.44h35.84c8.96,0,15.84,2.03,20.64,6.08,4.8,4.05,7.2,9.92,7.2,17.6s-2.4,13.5-7.2,17.44c-4.8,3.95-11.68,5.92-20.64,5.92h-35.84v-47.04ZM792.4,709.84c-5.02,4.16-12.11,6.24-21.28,6.24h-40.32v-49.6h39.68c9.17,0,16.37,2.24,21.6,6.72,5.23,4.48,7.84,10.67,7.84,18.56s-2.51,13.92-7.52,18.08Z"/></svg>
+  <svg class="hero-logo" aria-label="Haps Club" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M325.07,348.57c1.12,0,2.23.07,3.31.19-3.45-1.45-7.15-2.19-10.19-1.46-5.61,1.27-36.72,9.18-79.82,16.07,20.91-78.8,51.26-159.38,80.07-211.65,3.06-5.61-12.75-18.87-14.03-12.5-27.8,55.34-62.73,144.84-85.94,227.21-26.27,3.83-55.34,7.14-85.17,8.42,21.17-86.45,56.36-168.56,63.75-188.7,2.04-5.61-10.97-23.46-14.28-16.07-6.63,14.79-43.61,107.1-66.56,198.39-16.83-12.75-34.94-20.91-52.79-22.7-6.63-.51-13.77.76-13.77,10.2,0,19.64,20.15,30.35,53.04,31.62h8.93c-10.71,47.43-17.09,93.33-12.24,125.97,2.04,13.26,21.68,19.89,20.4,11.22-5.87-36.98-1.02-82.62,8.67-128.01,47.18,49.47,61.97,123.68,62.99,140.25,0,.12.02.24.03.36,7.24,1.99,14.11,4.66,20.61,8.02-2.78-43.95,7.24-106.85,23.73-171.84,24.15-3.3,47.59-6.42,66.69-8.75,7.19-9.61,15.02-16.24,22.55-16.24Z"/><path d="M191.49,537.38c-10.49-2.88-21.75-4.33-33.8-4.33-21.76,0-41.23,4.86-58.4,14.56-17.18,9.71-30.56,23.25-40.16,40.64-9.6,17.39-14.4,37.17-14.4,59.36s4.8,41.92,14.4,59.2c9.6,17.28,22.98,30.78,40.16,40.48,17.17,9.71,36.64,14.56,58.4,14.56,26.67,0,49.49-6.98,68.48-20.96,18.98-13.97,31.68-33.12,38.08-57.44h-60.16c-4.48,9.39-10.83,16.54-19.04,21.44-8.21,4.91-17.55,7.36-28,7.36-16.85,0-30.51-5.87-40.96-17.6-10.46-11.73-15.68-27.41-15.68-47.04s5.22-35.31,15.68-47.04c10.45-11.73,24.10-17.6,40.96-17.6,10.45,0,19.79,2.46,28,7.36,8.21,4.91,14.56,12.05,19.04,21.44h60.16c-6.4-24.32-19.1-43.52-38.08-57.6-4.47-3.32-9.17-6.23-14.07-8.77Z"/><polygon points="352.56 535.61 297.84 535.61 297.84 760.24 424.24 760.24 424.24 718 352.56 718 352.56 535.61"/><path d="M582.96,670c0,13.44-3.41,23.79-10.24,31.04-6.83,7.25-16.64,10.88-29.44,10.88s-22.51-3.62-29.12-10.88c-6.61-7.25-9.92-17.6-9.92-31.04v-134.4h-54.72v134.08c0,20.05,4.05,37.07,12.16,51.04,8.11,13.97,19.15,24.43,33.12,31.36,13.97,6.94,29.81,10.4,47.52,10.4s33.76-3.52,48.16-10.56c14.4-7.04,25.87-17.49,34.4-31.36,8.53-13.87,12.8-30.83,12.8-50.88v-131.39c-18,15.93-38.48,29.1-54.72,33.42v98.28Z"/><path d="M843.44,664.4c-7.9-10.13-18.35-16.58-31.36-19.36,11.52-3.41,20.75-9.49,27.68-18.24,6.93-8.74,10.4-19.73,10.4-32.96,0-17.92-6.46-32.1-19.36-42.56-12.91-10.45-30.77-15.68-53.6-15.68h-101.12v224.64h104.64c23.46,0,41.76-5.49,54.88-16.48,13.12-10.98,19.68-25.86,19.68-44.64,0-13.01-3.95-24.58-11.84-34.72ZM730.79,579.44h35.84c8.96,0,15.84,2.03,20.64,6.08,4.8,4.05,7.2,9.92,7.2,17.6s-2.4,13.5-7.2,17.44c-4.8,3.95-11.68,5.92-20.64,5.92h-35.84v-47.04ZM792.4,709.84c-5.02,4.16-12.11,6.24-21.28,6.24h-40.32v-49.6h39.68c9.17,0,16.37,2.24,21.6,6.72,5.23,4.48,7.84,10.67,7.84,18.56s-2.51,13.92-7.52,18.08Z"/></svg>
   <div class="hero-eyebrow">
     <span class="live-dot" aria-hidden="true"></span>
     <span id="todayDate">Friday, May 8</span>
@@ -517,7 +436,6 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       <span class="group-label">Today · The Pick</span>
       <span class="group-count">1 pick</span>
     </div>
-
     <article class="card card-featured"
       data-event-title="Penmar Sunset Sessions"
       data-event-start="2026-05-08T17:30:00-07:00"
@@ -560,14 +478,13 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       <span class="group-label">This week</span>
       <span class="group-count">2 picks</span>
     </div>
-
     <article class="card"
       data-event-title="Bootloose Line Dancing at Desert 5 Spot"
       data-event-start="2026-05-09T19:00:00-07:00"
       data-event-end="2026-05-09T21:30:00-07:00"
       data-event-location="Desert 5 Spot, 1607 N Cahuenga Blvd, Hollywood, CA"
       data-event-url="https://www.desertfivespot.com/shindigs-la"
-      data-event-desc="Beginner classes Wed and Fri at 7, 8, and 9pm; intermediate open dancing Saturdays 7–9:30pm. Boots in, athletic shorts out. The Desert 5 Band plays after.">
+      data-event-desc="Beginner classes Wed and Fri at 7, 8, and 9pm; intermediate open dancing Saturdays 7–9:30pm.">
       <div class="card-header">
         <div class="card-icon card-icon-event" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
@@ -596,14 +513,13 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         </div>
       </div>
     </article>
-
     <article class="card"
       data-event-title="Buy a hotel pool day with ResortPass"
       data-event-start="2026-05-09T11:00:00-07:00"
       data-event-end="2026-05-09T18:00:00-07:00"
       data-event-location="Various LA hotels"
       data-event-url="https://www.resortpass.com/cities/Los-Angeles-4"
-      data-event-desc="Day passes to LA hotel pool decks — Hollywood Roosevelt, Hotel Per La, Terranea. Towel service, food, sometimes a cabana, no room booking required.">
+      data-event-desc="Day passes to LA hotel pool decks — Hollywood Roosevelt, Hotel Per La, Terranea.">
       <div class="card-header">
         <div class="card-icon card-icon-outdoors" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg>
@@ -614,7 +530,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         </div>
       </div>
       <h3 class="card-title">Buy a hotel pool day</h3>
-      <p class="card-body">ResortPass sells day passes to LA hotel pool decks — Hollywood Roosevelt for the Hockney mural, Hotel Per La for skyline views, Terranea for cliffside Pacific. The closest LA gets to a Palm Springs daycation.</p>
+      <p class="card-body">ResortPass sells day passes to LA hotel pool decks — Hollywood Roosevelt for the Hockney mural, Hotel Per La for skyline views, Terranea for cliffside Pacific.</p>
       <div class="card-actions">
         <div class="card-tags">
           <span class="tag tag-navy">Citywide</span>
@@ -635,14 +551,13 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       <span class="group-label">Memorial Day Weekend · two weeks out</span>
       <span class="group-count">3 picks</span>
     </div>
-
     <article class="card"
       data-event-title="Burrito + El Matador Beach"
       data-event-start="2026-05-23T11:00:00-07:00"
       data-event-end="2026-05-23T15:00:00-07:00"
       data-event-location="El Matador State Beach, Malibu, CA"
       data-event-url="https://www.parks.ca.gov/?page_id=623"
-      data-event-desc="Pick up a burrito from Lily's in Malibu, drive ten more minutes north, walk down the cliff stairs at El Matador, eat at the picnic tables while the sea stacks turn gold. Get there before noon for parking.">
+      data-event-desc="Pick up a burrito from Lily's in Malibu, drive ten more minutes north, walk down the cliff stairs at El Matador.">
       <div class="card-header">
         <div class="card-icon card-icon-outdoors" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
@@ -671,14 +586,13 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         </div>
       </div>
     </article>
-
     <article class="card"
       data-event-title="Long Patio Lunch — MDW Sunday"
       data-event-start="2026-05-24T13:00:00-07:00"
       data-event-end="2026-05-24T16:00:00-07:00"
       data-event-location="Petit Trois le Valley or Gjelina"
       data-event-url="https://www.gjelina.com"
-      data-event-desc="Petit Trois le Valley in Sherman Oaks for the burger and a bottle of rosé, or Gjelina's back patio in Venice. Book this week — Sunday MDW reservations vanish.">
+      data-event-desc="Petit Trois le Valley in Sherman Oaks for the burger and a bottle of rosé, or Gjelina's back patio in Venice.">
       <div class="card-header">
         <div class="card-icon card-icon-food" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></svg>
@@ -707,14 +621,13 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         </div>
       </div>
     </article>
-
     <article class="card"
       data-event-title="Memorial Day pool day"
       data-event-start="2026-05-25T11:00:00-07:00"
       data-event-end="2026-05-25T18:00:00-07:00"
       data-event-location="LA hotel pool"
       data-event-url="https://www.resortpass.com/cities/Los-Angeles-4"
-      data-event-desc="ResortPass for a hotel pool, or claim a spot at a friend's. The win on Memorial Day is doing nothing well — slow coffee, a paperback, no driving.">
+      data-event-desc="ResortPass for a hotel pool, or claim a spot at a friend's.">
       <div class="card-header">
         <div class="card-icon card-icon-outdoors" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg>
@@ -750,7 +663,6 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       <span class="group-label">Mark your calendar</span>
       <span class="group-count">7 picks</span>
     </div>
-
     <a href="https://picala.com" class="card card-compact" target="_blank" rel="noopener">
       <div class="card-icon card-icon-food card-icon-sm" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></svg>
@@ -759,11 +671,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         <h3>Picala — Spanish-California tapas, just opened in West Adams</h3>
         <span class="card-compact-meta">West Adams · Open Sun–Thu 5–9, Fri–Sat 5–10</span>
       </div>
-      <span class="card-compact-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
+      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
     </a>
-
     <a href="https://www.redcat.org/events" class="card card-compact" target="_blank" rel="noopener">
       <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
@@ -772,11 +681,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         <h3>Jodie Landau: Performance of Self at REDCAT</h3>
         <span class="card-compact-meta">DTLA · Fri May 29 &amp; Sat May 30, 8pm · $35</span>
       </div>
-      <span class="card-compact-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
+      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
     </a>
-
     <a href="https://la.surfrider.org/events" class="card card-compact" target="_blank" rel="noopener">
       <div class="card-icon card-icon-outdoors card-icon-sm" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/></svg>
@@ -785,11 +691,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         <h3>Surfrider LA Beach Cleanup</h3>
         <span class="card-compact-meta">Sun May 31 · 9–11am · Free, all ages</span>
       </div>
-      <span class="card-compact-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
+      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
     </a>
-
     <a href="https://thelastdivefilm.com/showings" class="card card-compact" target="_blank" rel="noopener">
       <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 9l6 3-6 3z" fill="currentColor"/></svg>
@@ -798,11 +701,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         <h3>The Last Dive screening at Patagonia Santa Monica</h3>
         <span class="card-compact-meta">Thu Jun 11 · 6:30–9pm · Free, RSVP</span>
       </div>
-      <span class="card-compact-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
+      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
     </a>
-
     <a href="https://www.eventbrite.com/e/the-dinner-table-wine-tasting-at-the-wine-station-dtla-tickets-1986142571898" class="card card-compact" target="_blank" rel="noopener">
       <div class="card-icon card-icon-event card-icon-sm" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v6a4 4 0 0 0 8 0V2M12 12v8M8 22h8"/></svg>
@@ -811,11 +711,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         <h3>The Dinner Table wine tasting at The Wine Station</h3>
         <span class="card-compact-meta">DTLA · Thu Jun 18, 8–10pm · Four flights, ~25 people</span>
       </div>
-      <span class="card-compact-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
+      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
     </a>
-
     <a href="https://www.makcenter.org" class="card card-compact" target="_blank" rel="noopener">
       <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-7h6v7"/></svg>
@@ -824,11 +721,8 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         <h3>The Schindler House — modernist hideaway in West Hollywood</h3>
         <span class="card-compact-meta">West Hollywood · $7 · Open weekly</span>
       </div>
-      <span class="card-compact-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
+      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
     </a>
-
     <a href="https://lucasmuseum.org" class="card card-compact" target="_blank" rel="noopener">
       <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
@@ -837,23 +731,20 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
         <h3>Lucas Museum of Narrative Art opens</h3>
         <span class="card-compact-meta">Exposition Park · Tue Sept 22 · Star Wars in Motion inaugural exhibit</span>
       </div>
-      <span class="card-compact-arrow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-      </span>
+      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
     </a>
   </section>
 
   <section class="subscribe">
     <p class="subscribe-eyebrow">Become a member</p>
     <h2 class="subscribe-title">One email,<br>every Friday morning.</h2>
-    <!-- Posts directly to Kit (ConvertKit) form 9421017 — same list as the sticky bar -->
     <form class="subscribe-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
       <input type="email" name="email_address" id="email" placeholder="you@somewhere.com" required aria-label="Email address">
       <button type="submit" aria-label="Subscribe">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
     </form>
-    <p class="subscribe-fineprint" id="signupNote">Free · Every Friday morning · Unsubscribe anytime</p>
+    <p class="subscribe-fineprint">Free · Every Friday morning · Unsubscribe anytime</p>
   </section>
 
 </main>
@@ -881,10 +772,10 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   var greetingEl = document.getElementById('timeOfDay');
   if (greetingEl) {
     var hh = now.getHours();
-    if (hh < 5)       greetingEl.textContent = 'evening';
+    if (hh < 5) greetingEl.textContent = 'evening';
     else if (hh < 12) greetingEl.textContent = 'morning';
     else if (hh < 17) greetingEl.textContent = 'afternoon';
-    else              greetingEl.textContent = 'evening';
+    else greetingEl.textContent = 'evening';
   }
   var dateEl = document.getElementById('todayDate');
   if (dateEl) {
@@ -892,24 +783,20 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
   }
 })();
 
-// ============ Topbar subscribe inline confirmation ============
 (function() {
   var form = document.querySelector('.topbar-form');
   if (!form) return;
   form.addEventListener('submit', function() {
     var input = form.querySelector('input[type="email"]');
-    var button = form.querySelector('button');
-    if (!input || !button) return;
+    if (!input) return;
     var email = input.value.trim();
     if (!email) return;
     setTimeout(function() {
       form.innerHTML = '<span class="topbar-form-status" role="status">✓ Check ' + email + ' to confirm</span>';
-      form.style.cursor = 'default';
     }, 100);
   });
 })();
 
-// ============ Add to Google Calendar ============
 function pad(n) { return n < 10 ? '0' + n : '' + n; }
 function toGCalDate(isoString) {
   var d = new Date(isoString);
@@ -920,7 +807,7 @@ function buildGCalUrl(event) {
   var dates = toGCalDate(event.start) + '/' + toGCalDate(event.end);
   var details = event.desc;
   if (event.url) details += '\n\nMore info: ' + event.url;
-  details += '\n\nFrom Haps Club — your weekly LA dispatch. https://www.haps.club';
+  details += '\n\nFrom Haps Club. https://www.haps.club';
   var params = new URLSearchParams({ action: 'TEMPLATE', text: prefixedTitle, dates: dates, details: details, location: event.location, trp: 'false' });
   return 'https://calendar.google.com/calendar/render?' + params.toString();
 }
