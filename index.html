@@ -36,15 +36,17 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --container: 580px;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; min-width: 0; }
 *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 html, body {
   background: var(--bg); color: var(--ink); font-family: var(--sans);
   font-size: 16px; line-height: 1.5;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -0.011em; min-height: 100%;
+  letter-spacing: -0.011em;
+  width: 100%; max-width: 100%;
+  overflow-x: hidden;
 }
-body { position: relative; padding-bottom: 4rem; min-height: 100vh; overflow-x: hidden; }
+body { position: relative; padding-bottom: 4rem; min-height: 100vh; }
 body::before {
   content: ''; position: fixed; top: 0; left: 0; right: 0; height: 360px;
   background: radial-gradient(ellipse at top left, rgba(41, 47, 113, 0.08) 0%, transparent 55%),
@@ -54,40 +56,42 @@ body::before {
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; }
 
-/* ============ TOPBAR (fixed mobile overflow) ============ */
+/* ============ TOPBAR — locked to viewport ============ */
 .topbar {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(250, 250, 247, 0.78);
+  width: 100%;
+  background: rgba(250, 250, 247, 0.85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 0.5px solid var(--hairline);
 }
 .topbar-inner {
   max-width: var(--container); margin: 0 auto;
-  padding: 12px 16px;
-  display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px;
+  display: flex; align-items: center; gap: 10px;
+  width: 100%;
 }
 .topbar-logo-link { flex-shrink: 0; display: block; }
-.topbar-logo { height: 28px; width: auto; color: var(--navy); display: block; }
+.topbar-logo { height: 26px; width: auto; color: var(--navy); display: block; }
 
 .topbar-form {
   display: flex; align-items: center;
-  flex: 1; min-width: 0;
+  flex: 1 1 auto; min-width: 0;
   background: white;
-  border: 1px solid var(--hairline);
+  border: 1px solid var(--ink-5);
   border-radius: 999px;
   overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   height: 36px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .topbar-form:focus-within {
   border-color: var(--navy);
   box-shadow: 0 0 0 3px var(--navy-tint);
 }
 .topbar-form input {
-  flex: 1; min-width: 0;
+  flex: 1 1 auto; min-width: 0; width: 100%;
   border: none; background: transparent;
-  padding: 0 10px 0 14px;
+  padding: 0 8px 0 14px;
   font-family: inherit; font-size: 13px; color: var(--ink);
   outline: none; height: 100%;
 }
@@ -96,7 +100,7 @@ button { font-family: inherit; }
   flex-shrink: 0;
   border: none; background: var(--navy); color: white;
   padding: 0 14px; height: 100%;
-  font-family: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+  font-family: inherit; font-size: 13px; font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
   display: flex; align-items: center; gap: 5px;
@@ -106,15 +110,16 @@ button { font-family: inherit; }
 .topbar-form-status {
   font-size: 12px; color: var(--accent-deep); font-weight: 500;
   white-space: nowrap; padding: 0 14px;
-  overflow: hidden; text-overflow: ellipsis;
+  overflow: hidden; text-overflow: ellipsis; min-width: 0;
 }
 
-@media (max-width: 480px) {
-  .topbar-inner { padding: 10px 14px; gap: 10px; }
-  .topbar-logo { height: 24px; }
+/* On phones: show only the arrow icon, drop the "Subscribe" word */
+@media (max-width: 520px) {
+  .topbar-inner { padding: 9px 14px; gap: 8px; }
+  .topbar-logo { height: 22px; }
+  .topbar-form button { padding: 0; width: 36px; justify-content: center; gap: 0; }
   .topbar-form button span { display: none; }
-  .topbar-form button { padding: 0 12px; }
-  .topbar-form input { padding: 0 8px 0 12px; }
+  .topbar-form input { padding: 0 6px 0 12px; }
 }
 
 .hero {
@@ -420,7 +425,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 </nav>
 
 <header class="hero">
-  <svg class="hero-logo" aria-label="Haps Club" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M325.07,348.57c1.12,0,2.23.07,3.31.19-3.45-1.45-7.15-2.19-10.19-1.46-5.61,1.27-36.72,9.18-79.82,16.07,20.91-78.8,51.26-159.38,80.07-211.65,3.06-5.61-12.75-18.87-14.03-12.5-27.8,55.34-62.73,144.84-85.94,227.21-26.27,3.83-55.34,7.14-85.17,8.42,21.17-86.45,56.36-168.56,63.75-188.7,2.04-5.61-10.97-23.46-14.28-16.07-6.63,14.79-43.61,107.1-66.56,198.39-16.83-12.75-34.94-20.91-52.79-22.7-6.63-.51-13.77.76-13.77,10.2,0,19.64,20.15,30.35,53.04,31.62h8.93c-10.71,47.43-17.09,93.33-12.24,125.97,2.04,13.26,21.68,19.89,20.4,11.22-5.87-36.98-1.02-82.62,8.67-128.01,47.18,49.47,61.97,123.68,62.99,140.25,0,.12.02.24.03.36,7.24,1.99,14.11,4.66,20.61,8.02-2.78-43.95,7.24-106.85,23.73-171.84,24.15-3.3,47.59-6.42,66.69-8.75,7.19-9.61,15.02-16.24,22.55-16.24Z"/><path d="M191.49,537.38c-10.49-2.88-21.75-4.33-33.8-4.33-21.76,0-41.23,4.86-58.4,14.56-17.18,9.71-30.56,23.25-40.16,40.64-9.6,17.39-14.4,37.17-14.4,59.36s4.8,41.92,14.4,59.2c9.6,17.28,22.98,30.78,40.16,40.48,17.17,9.71,36.64,14.56,58.4,14.56,26.67,0,49.49-6.98,68.48-20.96,18.98-13.97,31.68-33.12,38.08-57.44h-60.16c-4.48,9.39-10.83,16.54-19.04,21.44-8.21,4.91-17.55,7.36-28,7.36-16.85,0-30.51-5.87-40.96-17.6-10.46-11.73-15.68-27.41-15.68-47.04s5.22-35.31,15.68-47.04c10.45-11.73,24.10-17.6,40.96-17.6,10.45,0,19.79,2.46,28,7.36,8.21,4.91,14.56,12.05,19.04,21.44h60.16c-6.4-24.32-19.1-43.52-38.08-57.6-4.47-3.32-9.17-6.23-14.07-8.77Z"/><polygon points="352.56 535.61 297.84 535.61 297.84 760.24 424.24 760.24 424.24 718 352.56 718 352.56 535.61"/><path d="M582.96,670c0,13.44-3.41,23.79-10.24,31.04-6.83,7.25-16.64,10.88-29.44,10.88s-22.51-3.62-29.12-10.88c-6.61-7.25-9.92-17.6-9.92-31.04v-134.4h-54.72v134.08c0,20.05,4.05,37.07,12.16,51.04,8.11,13.97,19.15,24.43,33.12,31.36,13.97,6.94,29.81,10.4,47.52,10.4s33.76-3.52,48.16-10.56c14.4-7.04,25.87-17.49,34.4-31.36,8.53-13.87,12.8-30.83,12.8-50.88v-131.39c-18,15.93-38.48,29.1-54.72,33.42v98.28Z"/><path d="M843.44,664.4c-7.9-10.13-18.35-16.58-31.36-19.36,11.52-3.41,20.75-9.49,27.68-18.24,6.93-8.74,10.4-19.73,10.4-32.96,0-17.92-6.46-32.1-19.36-42.56-12.91-10.45-30.77-15.68-53.6-15.68h-101.12v224.64h104.64c23.46,0,41.76-5.49,54.88-16.48,13.12-10.98,19.68-25.86,19.68-44.64,0-13.01-3.95-24.58-11.84-34.72ZM730.79,579.44h35.84c8.96,0,15.84,2.03,20.64,6.08,4.8,4.05,7.2,9.92,7.2,17.6s-2.4,13.5-7.2,17.44c-4.8,3.95-11.68,5.92-20.64,5.92h-35.84v-47.04ZM792.4,709.84c-5.02,4.16-12.11,6.24-21.28,6.24h-40.32v-49.6h39.68c9.17,0,16.37,2.24,21.6,6.72,5.23,4.48,7.84,10.67,7.84,18.56s-2.51,13.92-7.52,18.08Z"/></svg>
+  <svg class="hero-logo" aria-label="Haps Club" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M325.07,348.57c1.12,0,2.23.07,3.31.19-3.45-1.45-7.15-2.19-10.19-1.46-5.61,1.27-36.72,9.18-79.82,16.07,20.91-78.8,51.26-159.38,80.07-211.65Z"/><path d="M191.49,537.38c-10.49-2.88-21.75-4.33-33.8-4.33-21.76,0-41.23,4.86-58.4,14.56-17.18,9.71-30.56,23.25-40.16,40.64-9.6,17.39-14.4,37.17-14.4,59.36s4.8,41.92,14.4,59.2c9.6,17.28,22.98,30.78,40.16,40.48,17.17,9.71,36.64,14.56,58.4,14.56,26.67,0,49.49-6.98,68.48-20.96,18.98-13.97,31.68-33.12,38.08-57.44h-60.16c-4.48,9.39-10.83,16.54-19.04,21.44-8.21,4.91-17.55,7.36-28,7.36-16.85,0-30.51-5.87-40.96-17.6-10.46-11.73-15.68-27.41-15.68-47.04s5.22-35.31,15.68-47.04c10.45-11.73,24.10-17.6,40.96-17.6,10.45,0,19.79,2.46,28,7.36,8.21,4.91,14.56,12.05,19.04,21.44h60.16c-6.4-24.32-19.1-43.52-38.08-57.6-4.47-3.32-9.17-6.23-14.07-8.77Z"/><polygon points="352.56 535.61 297.84 535.61 297.84 760.24 424.24 760.24 424.24 718 352.56 718 352.56 535.61"/><path d="M582.96,670c0,13.44-3.41,23.79-10.24,31.04-6.83,7.25-16.64,10.88-29.44,10.88s-22.51-3.62-29.12-10.88c-6.61-7.25-9.92-17.6-9.92-31.04v-134.4h-54.72v134.08c0,20.05,4.05,37.07,12.16,51.04,8.11,13.97,19.15,24.43,33.12,31.36,13.97,6.94,29.81,10.4,47.52,10.4s33.76-3.52,48.16-10.56c14.4-7.04,25.87-17.49,34.4-31.36,8.53-13.87,12.8-30.83,12.8-50.88v-131.39c-18,15.93-38.48,29.1-54.72,33.42v98.28Z"/><path d="M843.44,664.4c-7.9-10.13-18.35-16.58-31.36-19.36,11.52-3.41,20.75-9.49,27.68-18.24,6.93-8.74,10.4-19.73,10.4-32.96,0-17.92-6.46-32.1-19.36-42.56-12.91-10.45-30.77-15.68-53.6-15.68h-101.12v224.64h104.64c23.46,0,41.76-5.49,54.88-16.48,13.12-10.98,19.68-25.86,19.68-44.64,0-13.01-3.95-24.58-11.84-34.72ZM730.79,579.44h35.84c8.96,0,15.84,2.03,20.64,6.08,4.8,4.05,7.2,9.92,7.2,17.6s-2.4,13.5-7.2,17.44c-4.8,3.95-11.68,5.92-20.64,5.92h-35.84v-47.04ZM792.4,709.84c-5.02,4.16-12.11,6.24-21.28,6.24h-40.32v-49.6h39.68c9.17,0,16.37,2.24,21.6,6.72,5.23,4.48,7.84,10.67,7.84,18.56s-2.51,13.92-7.52,18.08Z"/></svg>
   <div class="hero-eyebrow">
     <span class="live-dot" aria-hidden="true"></span>
     <span id="todayDate">Friday, May 8</span>
@@ -442,7 +447,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       data-event-end="2026-05-08T21:00:00-07:00"
       data-event-location="The Penmar, 1233 Rose Ave, Venice, CA"
       data-event-url="https://tickets.thepenmar.com"
-      data-event-desc="Live music on the Penmar lawn every Friday from 5:30 to 9pm — beer and wine, food from the kitchen, blankets on the green, silent disco at the end of the night.">
+      data-event-desc="Live music on the Penmar lawn every Friday from 5:30 to 9pm.">
       <div class="card-header">
         <div class="card-icon card-icon-featured" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="4"/><path d="M12 3v3M5.6 6.6l1.8 1.8M18.4 6.6l-1.8 1.8M2 20h20"/></svg>
@@ -484,7 +489,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       data-event-end="2026-05-09T21:30:00-07:00"
       data-event-location="Desert 5 Spot, 1607 N Cahuenga Blvd, Hollywood, CA"
       data-event-url="https://www.desertfivespot.com/shindigs-la"
-      data-event-desc="Beginner classes Wed and Fri at 7, 8, and 9pm; intermediate open dancing Saturdays 7–9:30pm.">
+      data-event-desc="Beginner classes Wed and Fri at 7, 8, and 9pm.">
       <div class="card-header">
         <div class="card-icon card-icon-event" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
@@ -519,7 +524,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       data-event-end="2026-05-09T18:00:00-07:00"
       data-event-location="Various LA hotels"
       data-event-url="https://www.resortpass.com/cities/Los-Angeles-4"
-      data-event-desc="Day passes to LA hotel pool decks — Hollywood Roosevelt, Hotel Per La, Terranea.">
+      data-event-desc="Day passes to LA hotel pool decks.">
       <div class="card-header">
         <div class="card-icon card-icon-outdoors" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg>
@@ -548,7 +553,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 
   <section class="stack-group">
     <div class="group-header">
-      <span class="group-label">Memorial Day Weekend · two weeks out</span>
+      <span class="group-label">Memorial Day Weekend</span>
       <span class="group-count">3 picks</span>
     </div>
     <article class="card"
@@ -557,7 +562,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       data-event-end="2026-05-23T15:00:00-07:00"
       data-event-location="El Matador State Beach, Malibu, CA"
       data-event-url="https://www.parks.ca.gov/?page_id=623"
-      data-event-desc="Pick up a burrito from Lily's in Malibu, drive ten more minutes north, walk down the cliff stairs at El Matador.">
+      data-event-desc="Burrito + El Matador Beach.">
       <div class="card-header">
         <div class="card-icon card-icon-outdoors" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
@@ -592,7 +597,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       data-event-end="2026-05-24T16:00:00-07:00"
       data-event-location="Petit Trois le Valley or Gjelina"
       data-event-url="https://www.gjelina.com"
-      data-event-desc="Petit Trois le Valley in Sherman Oaks for the burger and a bottle of rosé, or Gjelina's back patio in Venice.">
+      data-event-desc="Long patio lunch.">
       <div class="card-header">
         <div class="card-icon card-icon-food" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></svg>
@@ -627,7 +632,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       data-event-end="2026-05-25T18:00:00-07:00"
       data-event-location="LA hotel pool"
       data-event-url="https://www.resortpass.com/cities/Los-Angeles-4"
-      data-event-desc="ResortPass for a hotel pool, or claim a spot at a friend's.">
+      data-event-desc="Memorial Day pool day.">
       <div class="card-header">
         <div class="card-icon card-icon-outdoors" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg>
@@ -737,7 +742,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 
   <section class="subscribe">
     <p class="subscribe-eyebrow">Become a member</p>
-    <h2 class="subscribe-title">One email,<br>everything in Los Angeles.</h2>
+    <h2 class="subscribe-title">One email,<br>every Friday morning.</h2>
     <form class="subscribe-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
       <input type="email" name="email_address" id="email" placeholder="you@somewhere.com" required aria-label="Email address">
       <button type="submit" aria-label="Subscribe">
