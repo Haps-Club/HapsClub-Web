@@ -110,8 +110,8 @@ button { font-family: inherit; }
   .topbar-form input { padding: 0 6px 0 12px; }
 }
 
-.hero { position: relative; z-index: 5; max-width: var(--container); margin: 0 auto; padding: 36px 24px 28px; }
-.hero-logo { height: clamp(120px, 26vw, 180px); width: auto; display: block; margin-bottom: 28px; }
+.hero { position: relative; z-index: 5; max-width: var(--container); margin: 0 auto; padding: 24px 24px 16px; }
+.hero-logo { height: clamp(120px, 26vw, 180px); width: auto; display: block; margin: -8% 0 8px -3%; }
 .hero-eyebrow { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.01em; margin-bottom: 14px; text-transform: uppercase; }
 .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(255, 107, 71, 0.5); animation: pulse 2.4s ease-out infinite; }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 71, 0.45); } 70% { box-shadow: 0 0 0 8px rgba(255, 107, 71, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 71, 0); } }
@@ -187,7 +187,6 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 .subscribe-form button svg { width: 16px; height: 16px; }
 .subscribe-fineprint { font-size: 12px; color: rgba(255, 255, 255, 0.55); position: relative; }
 
-/* ============ Sponsor block (Blackbird) ============ */
 .sponsor {
   max-width: var(--container);
   margin: 32px auto 0;
@@ -252,7 +251,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 @keyframes slideIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
 @media (max-width: 380px) {
-  .hero { padding: 28px 18px 22px; }
+  .hero { padding: 18px 18px 12px; }
   .stack { padding: 8px 14px 0; }
   .card { padding: 16px; }
   .card-featured { padding: 18px; }
@@ -271,7 +270,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 <nav class="topbar" aria-label="Primary">
   <div class="topbar-inner">
     <a href="/" aria-label="Haps Club home" class="topbar-logo-link">
-      <img class="topbar-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=3" alt="Haps Club">
+      <img class="topbar-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club">
     </a>
     <form class="topbar-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
       <input type="email" name="email_address" placeholder="your@email.com" required aria-label="Email address">
@@ -284,7 +283,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
 </nav>
 
 <header class="hero">
-  <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=3" alt="Haps Club">
+  <img class="hero-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club">
   <div class="hero-eyebrow">
     <span class="live-dot" aria-hidden="true"></span>
     <span id="todayDate">Saturday, May 9</span>
@@ -301,414 +300,77 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
       <span class="group-label">Today · The Pick</span>
       <span class="group-count">1 pick</span>
     </div>
-    <article class="card card-featured"
-      data-event-title="Bootloose Line Dancing at Desert 5 Spot"
-      data-event-start="2026-05-09T19:00:00-07:00"
-      data-event-end="2026-05-09T21:30:00-07:00"
-      data-event-location="Desert 5 Spot, 1607 N Cahuenga Blvd, Hollywood, CA"
-      data-event-url="https://www.desertfivespot.com/shindigs-la"
-      data-event-desc="Intermediate line dancing Saturdays 7–9:30pm on the rooftop.">
-      <div class="card-header">
-        <div class="card-icon card-icon-featured" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source card-source-accent">Editor's pick · Tonight</span>
-          <span class="card-time">7pm</span>
-        </div>
-      </div>
+    <article class="card card-featured" data-event-title="Bootloose Line Dancing at Desert 5 Spot" data-event-start="2026-05-09T19:00:00-07:00" data-event-end="2026-05-09T21:30:00-07:00" data-event-location="Desert 5 Spot, 1607 N Cahuenga Blvd, Hollywood, CA" data-event-url="https://www.desertfivespot.com/shindigs-la" data-event-desc="Intermediate line dancing Saturdays 7–9:30pm on the rooftop.">
+      <div class="card-header"><div class="card-icon card-icon-featured" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div class="card-meta"><span class="card-source card-source-accent">Editor's pick · Tonight</span><span class="card-time">7pm</span></div></div>
       <h3 class="card-title">A line-dancing rooftop in Hollywood</h3>
       <p class="card-body">Bootloose Line Dancing at Desert 5 Spot — intermediate open dancing Saturdays 7–9:30. Boots in, athletic shorts out. The most fun you can have on a Hollywood rooftop without a bottle service minimum.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-accent">Tonight</span>
-          <span class="tag tag-navy">Hollywood</span>
-          <span class="tag">Free entry</span>
-        </div>
-        <div class="card-button-row">
-          <button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
-            Add
-          </button>
-          <a class="btn-action btn-action-accent" href="https://www.desertfivespot.com/shindigs-la" target="_blank" rel="noopener">
-            Details
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-accent">Tonight</span><span class="tag tag-navy">Hollywood</span><span class="tag">Free entry</span></div><div class="card-button-row"><button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>Add</button><a class="btn-action btn-action-accent" href="https://www.desertfivespot.com/shindigs-la" target="_blank" rel="noopener">Details<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
   </section>
 
   <section class="stack-group">
-    <div class="group-header">
-      <span class="group-label">This week</span>
-      <span class="group-count">4 picks</span>
-    </div>
-    <article class="card"
-      data-event-title="Buy a hotel pool day with ResortPass"
-      data-event-start="2026-05-09T11:00:00-07:00"
-      data-event-end="2026-05-09T18:00:00-07:00"
-      data-event-location="Various LA hotels"
-      data-event-url="https://www.resortpass.com/cities/Los-Angeles-4"
-      data-event-desc="Day passes to LA hotel pool decks.">
-      <div class="card-header">
-        <div class="card-icon card-icon-outdoors" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source">Summer hack</span>
-          <span class="card-time">All weekend</span>
-        </div>
-      </div>
+    <div class="group-header"><span class="group-label">This week</span><span class="group-count">4 picks</span></div>
+    <article class="card" data-event-title="Buy a hotel pool day with ResortPass" data-event-start="2026-05-09T11:00:00-07:00" data-event-end="2026-05-09T18:00:00-07:00" data-event-location="Various LA hotels" data-event-url="https://www.resortpass.com/cities/Los-Angeles-4" data-event-desc="Day passes to LA hotel pool decks.">
+      <div class="card-header"><div class="card-icon card-icon-outdoors" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg></div><div class="card-meta"><span class="card-source">Summer hack</span><span class="card-time">All weekend</span></div></div>
       <h3 class="card-title">Buy a hotel pool day</h3>
       <p class="card-body">ResortPass sells day passes to LA hotel pool decks — Hollywood Roosevelt for the Hockney mural, Hotel Per La for skyline views, Terranea for cliffside Pacific.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-navy">Citywide</span>
-          <span class="tag">Day pass</span>
-        </div>
-        <div class="card-button-row">
-          <a class="btn-action btn-action-primary" href="https://www.resortpass.com/cities/Los-Angeles-4" target="_blank" rel="noopener">
-            Browse passes
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-navy">Citywide</span><span class="tag">Day pass</span></div><div class="card-button-row"><a class="btn-action btn-action-primary" href="https://www.resortpass.com/cities/Los-Angeles-4" target="_blank" rel="noopener">Browse passes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
-    <article class="card"
-      data-event-title="Honor Your Feelings Fest"
-      data-event-start="2026-05-10T12:00:00-07:00"
-      data-event-end="2026-05-10T18:00:00-07:00"
-      data-event-location="Isamu Noguchi Plaza, JACCC, 244 S. San Pedro St, Los Angeles, CA 90012"
-      data-event-url="https://jaccc.org/events/honor-your-feelings-fest-2026/"
-      data-event-desc="Free all-ages community festival celebrating AAPI Heritage Month and Mental Health Awareness Month in Little Tokyo.">
-      <div class="card-header">
-        <div class="card-icon card-icon-culture" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source">Community · Tomorrow</span>
-          <span class="card-time">12–6pm</span>
-        </div>
-      </div>
+    <article class="card" data-event-title="Honor Your Feelings Fest" data-event-start="2026-05-10T12:00:00-07:00" data-event-end="2026-05-10T18:00:00-07:00" data-event-location="Isamu Noguchi Plaza, JACCC, 244 S. San Pedro St, Los Angeles, CA 90012" data-event-url="https://jaccc.org/events/honor-your-feelings-fest-2026/" data-event-desc="Free all-ages community festival celebrating AAPI Heritage Month and Mental Health Awareness Month in Little Tokyo.">
+      <div class="card-header"><div class="card-icon card-icon-culture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="card-meta"><span class="card-source">Community · Tomorrow</span><span class="card-time">12–6pm</span></div></div>
       <h3 class="card-title">Honor Your Feelings Fest at JACCC</h3>
       <p class="card-body">A free, all-ages outdoor festival in Little Tokyo — wellness workshops, live music, interactive art, and community resources in Isamu Noguchi Plaza. Celebrating AAPI Heritage Month and Mental Health Awareness Month together.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-navy">Little Tokyo</span>
-          <span class="tag">Free · All ages</span>
-        </div>
-        <div class="card-button-row">
-          <button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
-            Add
-          </button>
-          <a class="btn-action btn-action-primary" href="https://jaccc.org/events/honor-your-feelings-fest-2026/" target="_blank" rel="noopener">
-            RSVP free
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-navy">Little Tokyo</span><span class="tag">Free · All ages</span></div><div class="card-button-row"><button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>Add</button><a class="btn-action btn-action-primary" href="https://jaccc.org/events/honor-your-feelings-fest-2026/" target="_blank" rel="noopener">RSVP free<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
-    <article class="card"
-      data-event-title="Past | Present | Future: A Conversation Between Museum Directors"
-      data-event-start="2026-05-14T18:30:00-07:00"
-      data-event-end="2026-05-14T21:00:00-07:00"
-      data-event-location="Getty Villa, 17985 Pacific Coast Highway, Pacific Palisades, CA 90272"
-      data-event-url="https://www.getty.edu/calendar/past-present-future/"
-      data-event-desc="Getty director Timothy Potts hosts British Museum director Nicholas Cullinan for a talk on global cultural partnerships and how today's museums reckon with the past.">
-      <div class="card-header">
-        <div class="card-icon card-icon-culture" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-7h6v7"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source">Getty Villa · Thu May 14</span>
-          <span class="card-time">6:30pm</span>
-        </div>
-      </div>
+    <article class="card" data-event-title="Past | Present | Future: A Conversation Between Museum Directors" data-event-start="2026-05-14T18:30:00-07:00" data-event-end="2026-05-14T21:00:00-07:00" data-event-location="Getty Villa, 17985 Pacific Coast Highway, Pacific Palisades, CA 90272" data-event-url="https://www.getty.edu/calendar/past-present-future/" data-event-desc="Getty director Timothy Potts hosts British Museum director Nicholas Cullinan for a talk on global cultural partnerships and how today's museums reckon with the past.">
+      <div class="card-header"><div class="card-icon card-icon-culture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-7h6v7"/></svg></div><div class="card-meta"><span class="card-source">Getty Villa · Thu May 14</span><span class="card-time">6:30pm</span></div></div>
       <h3 class="card-title">Two museum directors on heritage, politics, and the future at Getty Villa</h3>
       <p class="card-body">Getty's Timothy Potts hosts British Museum director Nicholas Cullinan for a conversation on global cultural partnerships and how museums reckon with the past. Free, limited tickets, complimentary parking. Reception follows.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-navy">Pacific Palisades</span>
-          <span class="tag">Free · RSVP</span>
-        </div>
-        <div class="card-button-row">
-          <button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
-            Add
-          </button>
-          <a class="btn-action btn-action-primary" href="https://www.getty.edu/calendar/past-present-future/" target="_blank" rel="noopener">
-            Reserve free
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-navy">Pacific Palisades</span><span class="tag">Free · RSVP</span></div><div class="card-button-row"><button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>Add</button><a class="btn-action btn-action-primary" href="https://www.getty.edu/calendar/past-present-future/" target="_blank" rel="noopener">Reserve free<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
-    <article class="card"
-      data-event-title="Sensory Morning at The Broad"
-      data-event-start="2026-05-17T09:00:00-07:00"
-      data-event-end="2026-05-17T10:00:00-07:00"
-      data-event-location="The Broad, 221 S. Grand Avenue, Los Angeles, CA 90012"
-      data-event-url="https://www.thebroad.org/events/sensory-morning-broad-16"
-      data-event-desc="The Broad opens early for a low-stimulation visit with adjusted lighting, sensory touch objects, noise-canceling headphones, and free early access to the Kusama Infinity Mirrored Room.">
-      <div class="card-header">
-        <div class="card-icon card-icon-culture" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source">The Broad · Sun May 17</span>
-          <span class="card-time">9–10am</span>
-        </div>
-      </div>
+    <article class="card" data-event-title="Sensory Morning at The Broad" data-event-start="2026-05-17T09:00:00-07:00" data-event-end="2026-05-17T10:00:00-07:00" data-event-location="The Broad, 221 S. Grand Avenue, Los Angeles, CA 90012" data-event-url="https://www.thebroad.org/events/sensory-morning-broad-16" data-event-desc="The Broad opens early for a low-stimulation visit with adjusted lighting, sensory touch objects, noise-canceling headphones, and free early access to the Kusama Infinity Mirrored Room.">
+      <div class="card-header"><div class="card-icon card-icon-culture" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="card-meta"><span class="card-source">The Broad · Sun May 17</span><span class="card-time">9–10am</span></div></div>
       <h3 class="card-title">Sensory Morning at The Broad — early access, reduced stimulation</h3>
       <p class="card-body">The Broad opens an hour early Sunday for a low-stimulation visit: adjusted lighting, sensory objects, noise-canceling headphones, and the Kusama Infinity Mirrored Room before the crowds. Free with reservation.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-navy">DTLA</span>
-          <span class="tag">Free · Reserve</span>
-        </div>
-        <div class="card-button-row">
-          <button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
-            Add
-          </button>
-          <a class="btn-action btn-action-primary" href="https://www.thebroad.org/events/sensory-morning-broad-16" target="_blank" rel="noopener">
-            Reserve free
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-navy">DTLA</span><span class="tag">Free · Reserve</span></div><div class="card-button-row"><button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>Add</button><a class="btn-action btn-action-primary" href="https://www.thebroad.org/events/sensory-morning-broad-16" target="_blank" rel="noopener">Reserve free<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
   </section>
 
   <section class="stack-group">
-    <div class="group-header">
-      <span class="group-label">Memorial Day Weekend</span>
-      <span class="group-count">3 picks</span>
-    </div>
-    <article class="card"
-      data-event-title="Burrito + El Matador Beach"
-      data-event-start="2026-05-23T11:00:00-07:00"
-      data-event-end="2026-05-23T15:00:00-07:00"
-      data-event-location="El Matador State Beach, Malibu, CA"
-      data-event-url="https://www.parks.ca.gov/?page_id=623"
-      data-event-desc="Burrito + El Matador Beach.">
-      <div class="card-header">
-        <div class="card-icon card-icon-outdoors" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source">MDW · Saturday May 23</span>
-          <span class="card-time">Sat</span>
-        </div>
-      </div>
+    <div class="group-header"><span class="group-label">Memorial Day Weekend</span><span class="group-count">3 picks</span></div>
+    <article class="card" data-event-title="Burrito + El Matador Beach" data-event-start="2026-05-23T11:00:00-07:00" data-event-end="2026-05-23T15:00:00-07:00" data-event-location="El Matador State Beach, Malibu, CA" data-event-url="https://www.parks.ca.gov/?page_id=623" data-event-desc="Burrito + El Matador Beach.">
+      <div class="card-header"><div class="card-icon card-icon-outdoors" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg></div><div class="card-meta"><span class="card-source">MDW · Saturday May 23</span><span class="card-time">Sat</span></div></div>
       <h3 class="card-title">Burrito + El Matador Beach</h3>
       <p class="card-body">Pick up a burrito from Lily's in Malibu, drive ten more minutes north, walk down the cliff stairs at El Matador, eat while the sea stacks turn gold. Before noon for parking.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-navy">Malibu</span>
-          <span class="tag">Free</span>
-        </div>
-        <div class="card-button-row">
-          <button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
-            Add
-          </button>
-          <a class="btn-action btn-action-primary" href="https://www.parks.ca.gov/?page_id=623" target="_blank" rel="noopener">
-            Park info
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-navy">Malibu</span><span class="tag">Free</span></div><div class="card-button-row"><button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>Add</button><a class="btn-action btn-action-primary" href="https://www.parks.ca.gov/?page_id=623" target="_blank" rel="noopener">Park info<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
-    <article class="card"
-      data-event-title="Long Patio Lunch — MDW Sunday"
-      data-event-start="2026-05-24T13:00:00-07:00"
-      data-event-end="2026-05-24T16:00:00-07:00"
-      data-event-location="Petit Trois le Valley or Gjelina"
-      data-event-url="https://www.gjelina.com"
-      data-event-desc="Long patio lunch.">
-      <div class="card-header">
-        <div class="card-icon card-icon-food" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source">MDW · Sunday May 24</span>
-          <span class="card-time">Sun</span>
-        </div>
-      </div>
+    <article class="card" data-event-title="Long Patio Lunch — MDW Sunday" data-event-start="2026-05-24T13:00:00-07:00" data-event-end="2026-05-24T16:00:00-07:00" data-event-location="Petit Trois le Valley or Gjelina" data-event-url="https://www.gjelina.com" data-event-desc="Long patio lunch.">
+      <div class="card-header"><div class="card-icon card-icon-food" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></svg></div><div class="card-meta"><span class="card-source">MDW · Sunday May 24</span><span class="card-time">Sun</span></div></div>
       <h3 class="card-title">A long patio lunch that earns it</h3>
       <p class="card-body">Petit Trois le Valley for the burger and a bottle of rosé, or Gjelina's back patio for the original. Book this week — Sunday MDW reservations vanish.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-navy">Venice / Sherman Oaks</span>
-          <span class="tag">Reserve now</span>
-        </div>
-        <div class="card-button-row">
-          <button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
-            Add
-          </button>
-          <a class="btn-action btn-action-primary" href="https://www.gjelina.com" target="_blank" rel="noopener">
-            Gjelina
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-navy">Venice / Sherman Oaks</span><span class="tag">Reserve now</span></div><div class="card-button-row"><button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>Add</button><a class="btn-action btn-action-primary" href="https://www.gjelina.com" target="_blank" rel="noopener">Gjelina<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
-    <article class="card"
-      data-event-title="Memorial Day pool day"
-      data-event-start="2026-05-25T11:00:00-07:00"
-      data-event-end="2026-05-25T18:00:00-07:00"
-      data-event-location="LA hotel pool"
-      data-event-url="https://www.resortpass.com/cities/Los-Angeles-4"
-      data-event-desc="Memorial Day pool day.">
-      <div class="card-header">
-        <div class="card-icon card-icon-outdoors" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg>
-        </div>
-        <div class="card-meta">
-          <span class="card-source">MDW · Monday May 25</span>
-          <span class="card-time">Mon</span>
-        </div>
-      </div>
+    <article class="card" data-event-title="Memorial Day pool day" data-event-start="2026-05-25T11:00:00-07:00" data-event-end="2026-05-25T18:00:00-07:00" data-event-location="LA hotel pool" data-event-url="https://www.resortpass.com/cities/Los-Angeles-4" data-event-desc="Memorial Day pool day.">
+      <div class="card-header"><div class="card-icon card-icon-outdoors" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/><path d="M2 19q4-4 8 0t8 0 4 0"/></svg></div><div class="card-meta"><span class="card-source">MDW · Monday May 25</span><span class="card-time">Mon</span></div></div>
       <h3 class="card-title">Memorial Day: pool, slow morning, don't drive</h3>
       <p class="card-body">Book a ResortPass or claim a spot at a friend's. The win on Memorial Day is doing nothing well — slow coffee, a paperback, no driving. The 405 will not reward your ambition.</p>
-      <div class="card-actions">
-        <div class="card-tags">
-          <span class="tag tag-navy">Anywhere with shade</span>
-          <span class="tag">Memorial Day</span>
-        </div>
-        <div class="card-button-row">
-          <button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>
-            Add
-          </button>
-          <a class="btn-action btn-action-primary" href="https://www.resortpass.com/cities/Los-Angeles-4" target="_blank" rel="noopener">
-            Book a pool
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
-          </a>
-        </div>
-      </div>
+      <div class="card-actions"><div class="card-tags"><span class="tag tag-navy">Anywhere with shade</span><span class="tag">Memorial Day</span></div><div class="card-button-row"><button class="btn-action" data-action="add-to-calendar" aria-label="Add to Google Calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M12 14v4M10 16h4"/></svg>Add</button><a class="btn-action btn-action-primary" href="https://www.resortpass.com/cities/Los-Angeles-4" target="_blank" rel="noopener">Book a pool<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div></div>
     </article>
   </section>
 
   <section class="stack-group">
-    <div class="group-header">
-      <span class="group-label">Mark your calendar</span>
-      <span class="group-count">11 picks</span>
-    </div>
-    <a href="https://www.marcianoartfoundation.org" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>Magdalena Suarez Frimkess: Ninety-Six and Pissed at Marciano Art Foundation</h3>
-        <span class="card-compact-meta">Mid-Wilshire · Open now · Free with reservation</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://picala.com" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-food card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>Picala — Spanish-California tapas, just opened in West Adams</h3>
-        <span class="card-compact-meta">West Adams · Open Sun–Thu 5–9, Fri–Sat 5–10</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://www.thebroad.org/art/special-exhibitions/yoko-ono-music-mind" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>Yoko Ono: Music of the Mind at The Broad</h3>
-        <span class="card-compact-meta">DTLA · Opens Sat May 23 · Free (timed tickets released May 27)</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://www.redcat.org/events" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>Jodie Landau: Performance of Self at REDCAT</h3>
-        <span class="card-compact-meta">DTLA · Fri May 29 &amp; Sat May 30, 8pm · $35</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://la.surfrider.org/events" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-outdoors card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>Surfrider LA Beach Cleanup</h3>
-        <span class="card-compact-meta">Sun May 31 · 9–11am · Free, all ages</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://www.kcrw.com/summer-nights" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-event card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>KCRW Summer Nights — 18 free outdoor parties across LA</h3>
-        <span class="card-compact-meta">Citywide · First show Sat Jun 6 · Free · Jun–Sept</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://thelastdivefilm.com/showings" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 9l6 3-6 3z" fill="currentColor"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>The Last Dive screening at Patagonia Santa Monica</h3>
-        <span class="card-compact-meta">Thu Jun 11 · 6:30–9pm · Free, RSVP</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://griffithobservatoryfoundation.org" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>ABOVE Night Gallery: The Stars of the Summer at Griffith Observatory</h3>
-        <span class="card-compact-meta">Los Feliz · Mon Jun 15, Jul 27 &amp; Aug 31 · 6:30–9:30pm · $45–50</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://www.eventbrite.com/e/the-dinner-table-wine-tasting-at-the-wine-station-dtla-tickets-1986142571898" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-event card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v6a4 4 0 0 0 8 0V2M12 12v8M8 22h8"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>The Dinner Table wine tasting at The Wine Station</h3>
-        <span class="card-compact-meta">DTLA · Thu Jun 18, 8–10pm · Four flights, ~25 people</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://www.makcenter.org" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-7h6v7"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>The Schindler House — modernist hideaway in West Hollywood</h3>
-        <span class="card-compact-meta">West Hollywood · $7 · Open weekly</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
-    <a href="https://lucasmuseum.org" class="card card-compact" target="_blank" rel="noopener">
-      <div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>
-      </div>
-      <div class="card-compact-body">
-        <h3>Lucas Museum of Narrative Art opens</h3>
-        <span class="card-compact-meta">Exposition Park · Tue Sept 22 · Star Wars in Motion inaugural exhibit</span>
-      </div>
-      <span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span>
-    </a>
+    <div class="group-header"><span class="group-label">Mark your calendar</span><span class="group-count">11 picks</span></div>
+    <a href="https://www.marcianoartfoundation.org" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div><div class="card-compact-body"><h3>Magdalena Suarez Frimkess: Ninety-Six and Pissed at Marciano Art Foundation</h3><span class="card-compact-meta">Mid-Wilshire · Open now · Free with reservation</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://picala.com" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-food card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></svg></div><div class="card-compact-body"><h3>Picala — Spanish-California tapas, just opened in West Adams</h3><span class="card-compact-meta">West Adams · Open Sun–Thu 5–9, Fri–Sat 5–10</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://www.thebroad.org/art/special-exhibitions/yoko-ono-music-mind" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div class="card-compact-body"><h3>Yoko Ono: Music of the Mind at The Broad</h3><span class="card-compact-meta">DTLA · Opens Sat May 23 · Free (timed tickets released May 27)</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://www.redcat.org/events" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div class="card-compact-body"><h3>Jodie Landau: Performance of Self at REDCAT</h3><span class="card-compact-meta">DTLA · Fri May 29 &amp; Sat May 30, 8pm · $35</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://la.surfrider.org/events" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-outdoors card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/></svg></div><div class="card-compact-body"><h3>Surfrider LA Beach Cleanup</h3><span class="card-compact-meta">Sun May 31 · 9–11am · Free, all ages</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://www.kcrw.com/summer-nights" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-event card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div class="card-compact-body"><h3>KCRW Summer Nights — 18 free outdoor parties across LA</h3><span class="card-compact-meta">Citywide · First show Sat Jun 6 · Free · Jun–Sept</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://thelastdivefilm.com/showings" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M9 9l6 3-6 3z" fill="currentColor"/></svg></div><div class="card-compact-body"><h3>The Last Dive screening at Patagonia Santa Monica</h3><span class="card-compact-meta">Thu Jun 11 · 6:30–9pm · Free, RSVP</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://griffithobservatoryfoundation.org" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="card-compact-body"><h3>ABOVE Night Gallery: The Stars of the Summer at Griffith Observatory</h3><span class="card-compact-meta">Los Feliz · Mon Jun 15, Jul 27 &amp; Aug 31 · 6:30–9:30pm · $45–50</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://www.eventbrite.com/e/the-dinner-table-wine-tasting-at-the-wine-station-dtla-tickets-1986142571898" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-event card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v6a4 4 0 0 0 8 0V2M12 12v8M8 22h8"/></svg></div><div class="card-compact-body"><h3>The Dinner Table wine tasting at The Wine Station</h3><span class="card-compact-meta">DTLA · Thu Jun 18, 8–10pm · Four flights, ~25 people</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://www.makcenter.org" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-7h6v7"/></svg></div><div class="card-compact-body"><h3>The Schindler House — modernist hideaway in West Hollywood</h3><span class="card-compact-meta">West Hollywood · $7 · Open weekly</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
+    <a href="https://lucasmuseum.org" class="card card-compact" target="_blank" rel="noopener"><div class="card-icon card-icon-culture card-icon-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></div><div class="card-compact-body"><h3>Lucas Museum of Narrative Art opens</h3><span class="card-compact-meta">Exposition Park · Tue Sept 22 · Star Wars in Motion inaugural exhibit</span></div><span class="card-compact-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></span></a>
   </section>
 
   <section class="subscribe">
@@ -716,9 +378,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
     <h2 class="subscribe-title">One email,<br>everything in Los Angeles.</h2>
     <form class="subscribe-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
       <input type="email" name="email_address" id="email" placeholder="you@somewhere.com" required aria-label="Email address">
-      <button type="submit" aria-label="Subscribe">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
+      <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
     </form>
     <p class="subscribe-fineprint">Free · Every Tuesday morning · Unsubscribe anytime</p>
   </section>
@@ -730,10 +390,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
     <p class="sponsor-eyebrow">Sponsored · <strong>Blackbird</strong></p>
     <h2 class="sponsor-title">Get rewarded for eating out</h2>
     <p class="sponsor-body">Blackbird is the loyalty app we use at a growing list of LA's better restaurants — tap your phone at the table, earn $FLY tokens, redeem for credit. Sign up with our link and get 2,000 $FLY (worth $20) on your first visit. Pays for itself before MDW.</p>
-    <a href="https://app.blackbird.xyz/r/bb-igyo61" class="sponsor-cta" target="_blank" rel="noopener">
-      Claim your $20
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <a href="https://app.blackbird.xyz/r/bb-igyo61" class="sponsor-cta" target="_blank" rel="noopener">Claim your $20<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   </div>
 </section>
 
@@ -744,9 +401,7 @@ a.card-compact:hover .card-compact-arrow { opacity: 1; transform: translateX(2px
     <a href="mailto:michael@haps.club">Contact</a>
     <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
   </div>
-  <div class="footer-credit">
-    <span>© 2026 Haps Club · Made by hand in LA</span>
-  </div>
+  <div class="footer-credit"><span>© 2026 Haps Club · Made by hand in LA</span></div>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite">
