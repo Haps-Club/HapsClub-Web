@@ -1,0 +1,6 @@
+anthropic&gt;=0.40.0
+beautifulsoup4&gt;=4.12.0
+google-api-python-client&gt;=2.140.0
+google-auth&gt;=2.34.0
+python-dateutil&gt;=2.9.0
+requests&gt;=2.32.0
