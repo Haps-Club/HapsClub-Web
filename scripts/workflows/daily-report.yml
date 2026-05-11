@@ -1,0 +1,55 @@
+name: Daily Haps Club report
+
+on:
+  schedule:
+    # 16:00 UTC = 9am Pacific (PDT, summer). 8am during PST (winter).
+    - cron: "0 16 * * *"
+  workflow_dispatch:
+    inputs:
+      skip_inbox:
+        description: "Skip inbox scan (just prune + report current state)"
+        type: boolean
+        default: false
+      skip_email:
+        description: "Don't send the email (issue still gets created)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: daily-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run daily report
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_TOKEN_JSON: ${{ secrets.GMAIL_TOKEN_JSON }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NOTIFY_EMAIL: michael@haps.club
+          EVERGREEN_CAP: ${{ vars.EVERGREEN_CAP || '30' }}
+          SKIP_INBOX: ${{ inputs.skip_inbox }}
+          SKIP_EMAIL: ${{ inputs.skip_email }}
+        run: python scripts/daily_report.py
