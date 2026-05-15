@@ -1,20 +1,17 @@
 """
 Deploy a file to main from a GitHub issue.
 
-Triggered by issues with title `deploy: <path>` (e.g. `deploy: index.html`).
-The issue body must contain a fenced code block (```...```) with the new file content.
+Issue title: `deploy: <path>` (e.g. `deploy: index.html`)
+Issue body: a single base64-encoded blob of the new file content, optionally
+surrounded by anything else. The script finds the longest run of valid base64
+characters and decodes that.
 
-What this does:
-1. Parse target path from issue title
-2. Extract file content from issue body's code fence
-3. Write file, commit to main, push
-4. Close issue, comment "Deployed ✅"
-
-Only one author is trusted: the repo owner. (Issue authors are the user who opened
-the issue, so this prevents random people from triggering deploys.)
+Why base64? GitHub's issue form sanitizes/strips raw HTML and Markdown. Base64
+is opaque to that sanitizer — it survives the round trip intact.
 """
 from __future__ import annotations
 
+import base64
 import os
 import re
 import subprocess
@@ -32,10 +29,8 @@ ISSUE_BODY = os.environ.get("ISSUE_BODY", "") or ""
 ISSUE_AUTHOR = os.environ.get("ISSUE_AUTHOR", "")
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-
-# Allowlist: only these GitHub usernames can trigger deploys.
-# Add yourself here. (Issue author must be one of these.)
 ALLOWED_AUTHORS = {"Hilex2030"}
+ALLOWED_FILES = {"index.html", "about.html"}
 
 
 def log(msg: str) -> None:
@@ -56,8 +51,8 @@ def gh_api(method: str, path: str, body: dict | None = None) -> dict:
             text = resp.read().decode()
             return json.loads(text) if text else {}
     except urllib.error.HTTPError as e:
-        body = e.read().decode()
-        raise RuntimeError(f"GitHub {method} {path}: {e.code} {body}")
+        err = e.read().decode()
+        raise RuntimeError(f"GitHub {method} {path}: {e.code} {err}")
 
 
 def comment(text: str) -> None:
@@ -73,28 +68,61 @@ def close_issue() -> None:
 def fail(msg: str) -> int:
     log(f"FAIL: {msg}")
     try:
-        comment(f"❌ Deploy failed: {msg}\n\nFix the issue body and edit (don't open a new issue).")
+        comment(
+            f"❌ Deploy failed: {msg}\n\n"
+            f"Edit the issue body to fix (do not open a new issue) — the workflow re-runs on edit."
+        )
     except Exception as e:
         log(f"could not comment: {e}")
     return 1
 
 
 def parse_target_path(title: str) -> str | None:
-    # Title format: "deploy: <path>"
     m = re.match(r"^deploy:\s*(.+?)\s*$", title)
     return m.group(1) if m else None
 
 
-def extract_content(body: str) -> str | None:
+def extract_base64(body: str) -> bytes | None:
     """
-    Pull the first fenced code block from the issue body.
-    Accepts ```html, ```, etc. Ignores any leading/trailing whitespace.
+    Find the longest contiguous run of base64-safe characters in the body and
+    try to decode it.
+
+    The decoded bytes may be (a) plain UTF-8 text, or (b) gzip-compressed text.
+    We try both — gzip is preferred for HTML payloads since it shrinks ~70%
+    and lets large files fit under GitHub's 65,536-char issue body limit.
+
+    Strategy: collapse all whitespace, find runs of base64 chars at least
+    100 chars long, decode the longest, then try gunzip; fall back to raw bytes.
     """
-    # Match ```optional_lang\n...content...\n```
-    m = re.search(r"```[a-zA-Z0-9_-]*\r?\n(.*?)\r?\n```", body, re.DOTALL)
-    if not m:
+    import gzip
+
+    stripped = re.sub(r"\s+", "", body)
+    runs = re.findall(r"[A-Za-z0-9+/=]{100,}", stripped)
+    if not runs:
         return None
-    return m.group(1)
+    runs.sort(key=len, reverse=True)
+    for candidate in runs[:5]:
+        candidate = candidate.rstrip("=")
+        pad = (-len(candidate)) % 4
+        try:
+            raw = base64.b64decode(candidate + "=" * pad, validate=True)
+        except ValueError:
+            continue
+        # Try gunzip first (gzip magic bytes 1f 8b)
+        if raw[:2] == b"\x1f\x8b":
+            try:
+                decompressed = gzip.decompress(raw)
+                decompressed.decode("utf-8", errors="strict")  # sanity check
+                return decompressed
+            except (OSError, UnicodeDecodeError):
+                pass
+        # Otherwise try raw UTF-8
+        try:
+            raw.decode("utf-8", errors="strict")
+            return raw
+        except UnicodeDecodeError:
+            continue
+    return None
 
 
 def git(*args: str) -> str:
@@ -117,60 +145,60 @@ def main() -> int:
 
     target = parse_target_path(ISSUE_TITLE)
     if not target:
-        return fail("Title must look like `deploy: <path>` (e.g. `deploy: index.html`).")
+        return fail("Title must be `deploy: <path>` (e.g. `deploy: index.html`).")
 
-    # Safety: only allow specific files / extensions, no path traversal
     if ".." in target or target.startswith("/"):
         return fail(f"Refusing to deploy to `{target}` (no `..` or absolute paths).")
-    if not re.match(r"^[A-Za-z0-9._/\-]+$", target):
-        return fail(f"Path `{target}` contains disallowed characters.")
-    allowed_files = {"index.html", "about.html"}
-    if target not in allowed_files:
+    if target not in ALLOWED_FILES:
         return fail(
-            f"Path `{target}` is not in the deploy allowlist: "
-            f"{', '.join(sorted(allowed_files))}."
+            f"`{target}` is not in the allowlist: {', '.join(sorted(ALLOWED_FILES))}."
         )
 
-    content = extract_content(ISSUE_BODY)
-    if content is None:
+    decoded = extract_base64(ISSUE_BODY)
+    if decoded is None:
         return fail(
-            "Couldn't find a fenced code block in the issue body. "
-            "Paste the new file content inside ```` ``` ```` fences."
+            "Couldn't find a base64-encoded blob in the issue body.\n\n"
+            "Paste the file content as a single base64-encoded string. "
+            "Gzip first if the file is large (over ~45KB):\n"
+            "```\n"
+            "# Plain (works for small files):\n"
+            "base64 -i index.html | pbcopy\n\n"
+            "# Compressed (for large files):\n"
+            "gzip -c index.html | base64 | pbcopy\n"
+            "```\n"
+            "The bot auto-detects gzip vs plain. Whitespace and surrounding text are OK."
         )
-    if len(content) < 100:
-        return fail(f"Content is only {len(content)} bytes. Looks truncated.")
-    if len(content) > 500_000:
-        return fail(f"Content is {len(content)} bytes — over 500KB limit.")
+    if len(decoded) < 100:
+        return fail(f"Decoded content is only {len(decoded)} bytes. Looks truncated.")
+    if len(decoded) > 500_000:
+        return fail(f"Decoded content is {len(decoded)} bytes — over 500KB limit.")
 
-    # Write file
+    text = decoded.decode("utf-8")
     target_path = REPO_ROOT / target
-    target_path.write_text(content, encoding="utf-8")
-    log(f"wrote {len(content)} bytes to {target}")
+    target_path.write_text(text, encoding="utf-8")
+    log(f"wrote {len(text)} chars to {target}")
 
-    # Commit and push
     git("config", "user.name", "haps-deploy-bot")
     git("config", "user.email", "bot@haps.club")
     git("add", target)
-    # If nothing changed, the commit will fail — handle that
     status = subprocess.run(
         ["git", "diff", "--cached", "--quiet"], cwd=REPO_ROOT
     )
     if status.returncode == 0:
-        log("no changes to commit")
-        comment(f"ℹ️ `{target}` was identical to current `main`. No commit made.")
+        log("no changes")
+        comment(f"ℹ️ `{target}` is identical to current `main`. No commit made.")
         close_issue()
         return 0
 
     git("commit", "-m", f"Deploy {target} from issue #{ISSUE_NUMBER}")
     git("push", "origin", "HEAD:main")
-    log("pushed to main")
+    log("pushed")
 
-    # Get short SHA for confirmation
     sha = git("rev-parse", "--short", "HEAD")
     comment(
         f"✅ Deployed `{target}` to `main` as `{sha}`.\n\n"
         f"Live at https://haps.club within ~60 seconds.\n"
-        f"Diff: https://github.com/{GH_REPO}/commit/{sha}"
+        f"Commit: https://github.com/{GH_REPO}/commit/{sha}"
     )
     close_issue()
     return 0
