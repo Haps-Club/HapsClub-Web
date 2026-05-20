@@ -238,11 +238,7 @@ document.getElementById('allCount').textContent=PICKS.length;
 (function(){var f=document.querySelector('.topbar-form');if(!f)return;f.addEventListener('submit',function(){var i=f.querySelector('input[type=email]');if(!i)return;var e=i.value.trim();if(!e)return;setTimeout(function(){f.innerHTML='<span class="topbar-form-status" role="status">✓ Check '+e+' to confirm</span>';},100);});})();
 function pad(n){return n<10?'0'+n:''+n;}
 function toGCalDate(iso){var d=new Date(iso);return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+'Z';}
-function buildGCalUrl(ev,link){var t='Haps Club: '+ev.title;var dates=toGCalDate(ev.start)+'/'+toGCalDate(ev.end);var details=ev.desc;if(link)details+='
-
-More info: '+link;details+='
-
-From Haps Club. https://www.haps.club';var p=new URLSearchParams({action:'TEMPLATE',text:t,dates:dates,details:details,location:ev.location,trp:'false'});return'https://calendar.google.com/calendar/render?'+p.toString();}
+function buildGCalUrl(ev,link){var t='Haps Club: '+ev.title;var dates=toGCalDate(ev.start)+'/'+toGCalDate(ev.end);var details=ev.desc;if(link)details+='\n\nMore info: '+link;details+='\n\nFrom Haps Club. https://www.haps.club';var p=new URLSearchParams({action:'TEMPLATE',text:t,dates:dates,details:details,location:ev.location,trp:'false'});return'https://calendar.google.com/calendar/render?'+p.toString();}
 var toastEl=document.getElementById('toast'),toastTextEl=document.getElementById('toastText'),toastTimer=null;
 function showToast(m){toastTextEl.textContent=m;toastEl.classList.add('is-visible');clearTimeout(toastTimer);toastTimer=setTimeout(function(){toastEl.classList.remove('is-visible');},2400);}
 function bindCal(){document.querySelectorAll('[data-cal]').forEach(function(btn){btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var p=PICKS[+btn.dataset.cal];if(!p||!p.ev)return;window.open(buildGCalUrl(p.ev,p.link),'_blank','noopener');showToast('Opening Google Calendar…');});});}
