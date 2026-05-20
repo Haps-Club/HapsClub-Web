@@ -1,1 +1,254 @@
-__PLACEHOLDER__
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Haps Club — This Week in LA</title>
+<meta name="description" content="A weekly glance at what's worth doing in Los Angeles. Hand-picked recommendations from Haps Club.">
+<meta name="theme-color" content="#FAFAF7">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RKY63MK7ND"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RKY63MK7ND');</script>
+<style>
+:root{--navy:#292f71;--navy-deep:#1a1f4d;--navy-tint:#EEF0F8;--accent:#FF6B47;--accent-deep:#E54D2B;--accent-tint:#FFF1ED;--bg:#FAFAF7;--surface:#FFFFFF;--surface-soft:#F4F3EE;--ink:#0F1117;--ink-2:#3A3D47;--ink-3:#6B6F7A;--ink-4:#9CA0AB;--ink-5:#D7D9DE;--hairline:rgba(15,17,23,0.08);--food:#E8843C;--food-tint:#FCF1E7;--culture:#7B5CD6;--culture-tint:#F2EEFB;--outdoors:#3A9D6E;--outdoors-tint:#E8F5EE;--sans:'Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;--serif:'Instrument Serif','New York',serif;--radius-lg:22px;--ease-out:cubic-bezier(0.16,1,0.3,1);--ease-spring:cubic-bezier(0.34,1.56,0.64,1);--container:600px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+*:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px;}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;letter-spacing:-0.011em;overflow-x:hidden;}
+body{position:relative;padding-bottom:4rem;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0 0 auto 0;height:380px;background:radial-gradient(ellipse at top left,rgba(41,47,113,0.08) 0%,transparent 55%),linear-gradient(180deg,rgba(255,107,71,0.04) 0%,transparent 100%);pointer-events:none;z-index:0;}
+a{color:inherit;text-decoration:none;}button{font-family:inherit;}
+svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.topbar{position:sticky;top:0;z-index:50;width:100%;background:rgba(250,250,247,0.82);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:0.5px solid var(--hairline);}
+.topbar-inner{max-width:var(--container);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px;}
+.topbar-logo-link{flex-shrink:0;display:block;}.topbar-logo-img{height:36px;width:auto;display:block;}
+.topbar-form{display:flex;align-items:center;flex:1 1 auto;min-width:0;background:#fff;border:1px solid var(--ink-5);border-radius:999px;overflow:hidden;height:36px;transition:border-color .2s,box-shadow .2s;}
+.topbar-form:focus-within{border-color:var(--navy);box-shadow:0 0 0 3px var(--navy-tint);}
+.topbar-form input{flex:1;min-width:0;border:none;background:transparent;padding:0 8px 0 14px;font-family:inherit;font-size:13px;outline:none;height:100%;}
+.topbar-form input::placeholder{color:var(--ink-4);}
+.topbar-form button{flex-shrink:0;border:none;background:var(--navy);color:#fff;padding:0 14px;height:100%;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s;display:flex;align-items:center;gap:5px;}
+.topbar-form button:hover{background:var(--navy-deep);}.topbar-form button svg{width:13px;height:13px;}
+.topbar-form-status{font-size:12px;color:var(--accent-deep);font-weight:500;white-space:nowrap;padding:0 14px;overflow:hidden;text-overflow:ellipsis;}
+@media(max-width:520px){.topbar-logo-img{height:28px;}.topbar-form button span{display:none;}.topbar-form button{width:36px;padding:0;justify-content:center;}}
+.hero{position:relative;z-index:5;max-width:var(--container);margin:0 auto;padding:24px 22px 14px;}
+.hero-logo{height:clamp(120px,26vw,180px);width:auto;display:block;margin:-8px 0 8px -3%;}
+.hero-eyebrow{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:var(--accent);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:12px;}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2.4s ease-out infinite;}
+.hero-eyebrow .updated{margin-left:auto;font-weight:500;font-size:11.5px;color:var(--ink-4);text-transform:none;letter-spacing:0;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,107,71,.45);}70%{box-shadow:0 0 0 8px rgba(255,107,71,0);}100%{box-shadow:0 0 0 0 rgba(255,107,71,0);}}
+.hero-title{font-family:var(--serif);font-size:clamp(2.3rem,8.5vw,3.1rem);font-weight:400;line-height:1.0;letter-spacing:-0.025em;color:var(--navy);margin-bottom:12px;}
+.hero-soft{font-style:italic;color:var(--ink-3);}.hero-meta{font-size:14px;color:var(--ink-3);font-weight:500;}.hero-meta strong{color:var(--navy);font-weight:600;}
+.controls{position:sticky;top:57px;z-index:40;background:linear-gradient(180deg,var(--bg) 70%,rgba(250,250,247,0));padding-top:8px;}
+.controls-inner{max-width:var(--container);margin:0 auto;padding:0 22px;}
+.lens-label{font-size:11.5px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:var(--ink-4);margin:0 2px 8px;}
+.segmented{display:flex;background:var(--surface-soft);border:0.5px solid var(--hairline);border-radius:13px;padding:3px;gap:2px;position:relative;}
+.seg-btn{flex:1;border:none;background:transparent;font-size:13.5px;font-weight:600;letter-spacing:-0.01em;color:var(--ink-3);padding:9px 6px;border-radius:10px;cursor:pointer;position:relative;z-index:2;transition:color .25s var(--ease-out);-webkit-tap-highlight-color:transparent;}
+.seg-btn.is-active{color:var(--navy);}
+.seg-pill{position:absolute;top:3px;bottom:3px;border-radius:10px;background:var(--surface);box-shadow:0 1px 4px rgba(15,17,23,.08),0 0 0 0.5px rgba(15,17,23,.04);z-index:1;transition:transform .35s var(--ease-spring),width .35s var(--ease-spring);}
+.filter-scroll{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:12px 22px 14px;margin:0 -22px;scroll-padding-left:22px;}
+.filter-scroll::-webkit-scrollbar{display:none;}
+.filter-chip{flex-shrink:0;font-size:12.5px;font-weight:600;letter-spacing:-0.005em;padding:7px 13px;height:32px;border-radius:100px;background:var(--navy-tint);color:var(--navy);border:0.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,transform .15s;white-space:nowrap;-webkit-tap-highlight-color:transparent;display:inline-flex;align-items:center;gap:5px;}
+.filter-chip:active{transform:scale(.95);}.filter-chip.is-active{background:var(--accent);color:#fff;}
+.filter-chip-count{font-size:11px;opacity:.65;font-weight:600;}
+.stack{position:relative;z-index:5;max-width:var(--container);margin:0 auto;padding:4px 22px 0;}
+.group{margin-bottom:30px;}.group-header{display:flex;align-items:center;gap:10px;padding:0 2px 12px;margin-bottom:12px;border-bottom:0.5px solid var(--hairline);}
+.group-dot{width:24px;height:24px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.group-dot svg{width:14px;height:14px;}
+.group-icon-food{background:var(--food-tint);color:var(--food);}.group-icon-culture{background:var(--culture-tint);color:var(--culture);}.group-icon-outdoors{background:var(--outdoors-tint);color:var(--outdoors);}.group-icon-neutral{background:var(--navy-tint);color:var(--navy);}
+.group-label{font-size:14px;font-weight:700;letter-spacing:-0.01em;color:var(--ink);}.group-count{font-size:12.5px;color:var(--ink-4);font-weight:500;margin-left:auto;}
+.card{display:block;background:var(--surface);border:0.5px solid var(--hairline);border-radius:var(--radius-lg);padding:17px;margin-bottom:9px;transition:transform .4s var(--ease-out),box-shadow .3s,border-color .2s;position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent;}
+a.card{cursor:pointer;}.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,17,23,.06),0 2px 6px rgba(15,17,23,.04);border-color:var(--ink-5);}
+a.card:active{transform:scale(.99);transition-duration:.15s;}
+.card-featured{background:linear-gradient(180deg,var(--accent-tint) 0%,var(--surface) 65%);border-color:rgba(255,107,71,.18);padding:20px 18px;}
+.card-head{display:flex;align-items:center;gap:9px;margin-bottom:11px;}
+.card-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.card-icon svg{width:15px;height:15px;}
+.ci-food{background:var(--food-tint);color:var(--food);}.ci-culture{background:var(--culture-tint);color:var(--culture);}.ci-outdoors{background:var(--outdoors-tint);color:var(--outdoors);}
+.card-kicker{display:flex;flex-direction:column;min-width:0;}
+.card-source{font-size:12px;font-weight:600;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.card-source-accent{color:var(--accent-deep);}
+.card-when{margin-left:auto;flex-shrink:0;font-size:11px;font-weight:700;letter-spacing:0.02em;text-transform:uppercase;color:var(--accent-deep);background:var(--accent-tint);padding:4px 9px;border-radius:7px;}
+.card-title{font-size:17px;font-weight:700;line-height:1.25;letter-spacing:-0.018em;color:var(--ink);margin-bottom:7px;}
+.card-featured .card-title{font-family:var(--serif);font-weight:400;font-size:23px;letter-spacing:-0.02em;line-height:1.1;}
+.card-body{font-size:14px;color:var(--ink-3);line-height:1.5;margin-bottom:13px;}
+.card-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.card-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.tag{font-size:11.5px;font-weight:600;color:var(--ink-3);background:var(--surface-soft);padding:4px 9px;border-radius:7px;}
+.tag-navy{background:var(--navy-tint);color:var(--navy);}
+.tag-loc{display:inline-flex;align-items:center;gap:4px;}.tag-loc svg{width:10px;height:10px;}
+.card-btns{display:flex;gap:7px;}
+.btn-action{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;color:var(--navy);background:var(--navy-tint);border:none;padding:7px 12px;border-radius:9px;cursor:pointer;transition:background .2s,transform .15s;-webkit-tap-highlight-color:transparent;}
+.btn-action:active{transform:scale(.96);}.btn-action svg{width:13px;height:13px;}
+.btn-action-primary{background:var(--navy);color:#fff;}.btn-action-primary:hover{background:var(--navy-deep);}
+.card-compact{display:flex;align-items:center;gap:13px;padding:13px 17px;}
+.card-compact .card-icon{width:32px;height:32px;border-radius:9px;}
+.card-compact-body{flex:1;min-width:0;}
+.card-compact h3{font-size:14.5px;font-weight:650;line-height:1.25;letter-spacing:-0.012em;margin-bottom:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.card-compact-meta{font-size:12px;color:var(--ink-4);font-weight:500;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.card-compact-arrow{flex-shrink:0;color:var(--ink-5);}.card-compact-arrow svg{width:16px;height:16px;}
+.card-compact:hover .card-compact-arrow{color:var(--accent);}
+.empty{display:none;text-align:center;padding:34px 20px;color:var(--ink-3);font-size:14.5px;background:var(--surface);border:0.5px solid var(--hairline);border-radius:var(--radius-lg);margin-bottom:30px;}
+.empty.is-visible{display:block;}.empty strong{color:var(--navy);}
+.sponsor{max-width:var(--container);margin:8px auto 0;padding:8px 22px 0;}
+.sponsor-card{background:var(--surface-soft);border:0.5px solid var(--hairline);border-radius:var(--radius-lg);padding:22px 20px;}
+.sponsor-eyebrow{font-size:11.5px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink-4);margin-bottom:9px;}
+.sponsor-eyebrow strong{color:var(--ink-2);font-weight:700;}
+.sponsor-title{font-family:var(--serif);font-size:24px;line-height:1.08;letter-spacing:-0.02em;color:var(--navy);margin-bottom:9px;}
+.sponsor-body{font-size:14px;color:var(--ink-3);line-height:1.5;margin-bottom:15px;}
+.sponsor-cta{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:#fff;background:var(--ink);padding:11px 18px;border-radius:11px;transition:transform .15s;}
+.sponsor-cta:active{transform:scale(.97);}.sponsor-cta svg{width:14px;height:14px;}
+.subscribe{max-width:var(--container);margin:8px auto 0;padding:30px 22px;text-align:center;}
+.sub-card{background:var(--navy);border-radius:var(--radius-lg);padding:30px 24px;color:#fff;}
+.sub-eyebrow{font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:8px;}
+.sub-title{font-family:var(--serif);font-size:26px;line-height:1.08;margin-bottom:18px;}
+.sub-form{display:flex;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;overflow:hidden;height:46px;max-width:340px;margin:0 auto;}
+.sub-form input{flex:1;border:none;background:transparent;color:#fff;padding:0 18px;font-size:14px;outline:none;}
+.sub-form input::placeholder{color:rgba(255,255,255,.5);}
+.sub-form button{border:none;background:var(--accent);color:#fff;padding:0 16px;cursor:pointer;display:flex;align-items:center;}
+.sub-form button svg{width:16px;height:16px;}.sub-fine{font-size:12px;color:rgba(255,255,255,.55);margin-top:13px;}
+footer{max-width:var(--container);margin:0 auto;padding:28px 22px;text-align:center;}
+.footer-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}
+.footer-links a{font-size:13px;color:var(--ink-3);font-weight:500;}.footer-links a:hover{color:var(--navy);}
+.footer-credit{font-size:12px;color:var(--ink-4);}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:11px 18px;border-radius:12px;font-size:13.5px;font-weight:500;display:flex;align-items:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s var(--ease-spring);z-index:100;box-shadow:0 8px 30px rgba(0,0,0,.25);}
+.toast.is-visible{opacity:1;transform:translateX(-50%) translateY(0);}.toast svg{width:15px;height:15px;color:var(--accent);}
+</style>
+</head>
+<body>
+<nav class="topbar" aria-label="Primary">
+<div class="topbar-inner">
+<a href="/" aria-label="Haps Club home" class="topbar-logo-link"><img class="topbar-logo-img" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club"></a>
+<form class="topbar-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
+<input type="email" name="email_address" placeholder="your@email.com" required aria-label="Email address">
+<button type="submit" aria-label="Subscribe"><span>Subscribe</span><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+</form>
+</div>
+</nav>
+<header class="hero">
+<img class="hero-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club">
+<div class="hero-eyebrow"><span class="live-dot"></span><span id="todayDate">Wednesday, May 20</span><span class="updated">Updated this morning</span></div>
+<h1 class="hero-title">Welcome.<br><span class="hero-soft">Here's what's good.</span></h1>
+<p class="hero-meta"><strong>Los Angeles</strong> · Memorial Day weekend ahead · Latin Sounds returns to LACMA</p>
+</header>
+<div class="controls">
+<div class="controls-inner">
+<p class="lens-label">Browse by</p>
+<div class="segmented" id="segmented">
+<span class="seg-pill" id="segPill"></span>
+<button class="seg-btn is-active" data-lens="interest">Interest</button>
+<button class="seg-btn" data-lens="neighborhood">Neighborhood</button>
+<button class="seg-btn" data-lens="time">When</button>
+</div>
+<div class="filter-scroll" id="filterScroll">
+<button class="filter-chip is-active" data-filter="all">All <span class="filter-chip-count" id="allCount"></span></button>
+<button class="filter-chip" data-filter="this-week">This week</button>
+<button class="filter-chip" data-filter="food">Food</button>
+<button class="filter-chip" data-filter="culture">Culture</button>
+<button class="filter-chip" data-filter="outdoors">Outdoors</button>
+<button class="filter-chip" data-filter="date">Date</button>
+<button class="filter-chip" data-filter="free">Free</button>
+</div>
+</div>
+</div>
+<main class="stack" id="stack"></main>
+<div class="empty" id="empty"><strong id="emptyLabel">Nothing</strong> matches that filter. Try clearing it.</div>
+<section class="sponsor">
+<div class="sponsor-card">
+<p class="sponsor-eyebrow">Sponsored · <strong>Blackbird</strong></p>
+<h2 class="sponsor-title">Get rewarded for eating out</h2>
+<p class="sponsor-body">Blackbird is the loyalty app we use at a growing list of LA's better restaurants — tap your phone at the table, earn $FLY tokens, redeem for credit. Sign up with our link and get 2,000 $FLY (worth $20) on your first visit.</p>
+<a href="https://app.blackbird.xyz/r/bb-igyo61" class="sponsor-cta" target="_blank" rel="noopener">Claim your $20<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+</div>
+</section>
+<section class="subscribe">
+<div class="sub-card">
+<p class="sub-eyebrow">Become a member</p>
+<h2 class="sub-title">One email,<br>everything in LA.</h2>
+<form class="sub-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
+<input type="email" name="email_address" placeholder="you@somewhere.com" required aria-label="Email address">
+<button type="submit" aria-label="Subscribe"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+</form>
+<p class="sub-fine">Free · Every Tuesday morning · Unsubscribe anytime</p>
+</div>
+</section>
+<footer>
+<div class="footer-links">
+<a href="/about.html">About</a><a href="/about.html#tip">Submit a tip</a>
+<a href="mailto:michael@haps.club">Contact</a>
+<a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
+<a href="https://chat.whatsapp.com/CrQFCLOZjYm5eBqsU1vcA5?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<div class="footer-credit">© 2026 Haps Club · Made by hand in LA</div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span id="toastText">Opening Google Calendar…</span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-food" viewBox="0 0 24 24"><path d="M3 11h18M5 11v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9M9 7c0-2 1.5-4 3-4s3 2 3 4"/></symbol>
+<symbol id="i-culture" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+<symbol id="i-outdoors" viewBox="0 0 24 24"><path d="M2 9q4-4 8 0t8 0 4 0"/><path d="M2 14q4-4 8 0t8 0 4 0"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+<symbol id="i-ext" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+</defs></svg>
+<script>
+const PICKS=[
+{title:"Latin Sounds returns to LACMA — Son Mayor on the lawn",body:"The free Saturday-evening series is back for summer. Vintage and contemporary Cuban son from the Ortiz brothers, 5–7pm on Hancock Park's grass. Bring a blanket and a picnic; Tacos 1986 is the truck. Free, no ticket.",interest:"culture",side:"Westside",time:"weekend",featured:true,source:"LACMA · Sat May 23 · Free",when:"Sat",tags:["free","date"],loc:"Mid-Wilshire",link:"https://www.lacma.org/event/latin-sounds-son-mayor-2026",ev:{title:"Latin Sounds: Son Mayor at LACMA",start:"2026-05-23T17:00:00-07:00",end:"2026-05-23T19:00:00-07:00",location:"Hancock Park, LACMA, 5905 Wilshire Blvd, Los Angeles, CA 90036",desc:"Free outdoor Latin music series with Son Mayor. Bring a blanket. Tacos 1986 on site."}},
+{title:"Marc Maron works out new material at Largo",body:"Maron treats the Coronet like a workshop — building the next hour live, riffing, keeping what lands. 280 seats; tickets tend to vanish within a day.",interest:"culture",side:"Westside",time:"this-week",source:"Largo · Tonight 8pm",when:"Tonight",tags:["date"],loc:"West Hollywood",link:"https://wl.eventim.us/event/marc-maron-stand-up-show/688822?afflky=LargoAtTheCoronet",ev:{title:"Marc Maron Stand-Up at Largo",start:"2026-05-19T20:00:00-07:00",end:"2026-05-19T22:00:00-07:00",location:"Largo at the Coronet, 366 N La Cienega Blvd, Los Angeles, CA 90048",desc:"Marc Maron working out new material at his home room."}},
+{title:"Jazz at LACMA: Tierney Sutton",body:"The free Friday-evening jazz series at the Smidt Welcome Plaza. Vocalist Tierney Sutton — multiple Grammy nominations. Get there early.",interest:"culture",side:"Westside",time:"this-week",source:"LACMA · Fri May 29 · Free",when:"Fri",tags:["free","date"],loc:"Mid-Wilshire",link:"https://www.lacma.org/programs/music",ev:{title:"Jazz at LACMA: Tierney Sutton",start:"2026-05-29T18:00:00-07:00",end:"2026-05-29T20:00:00-07:00",location:"Smidt Welcome Plaza, LACMA, 5905 Wilshire Blvd, Los Angeles, CA 90036",desc:"Free outdoor jazz at LACMA with Tierney Sutton, 6-8pm."}},
+{title:"Topanga Days — three days of music in the canyon",body:"The 51st year of the canyon's Memorial Day fair: two stages, Canned Heat and Long Beach Dub Allstars headlining, artisans, food, beer and wine, a pie-eating contest, and the gloriously DIY Monday parade.",interest:"culture",side:"Westside",time:"weekend",source:"Topanga · May 23–25 · $32–75",when:"Sat–Mon",tags:["date"],loc:"Topanga",link:"https://topangadays.com/tickets/",ev:{title:"Topanga Days Country Fair",start:"2026-05-23T10:00:00-07:00",end:"2026-05-25T19:00:00-07:00",location:"Topanga Community Center, 1440 N Topanga Canyon Blvd, Topanga, CA 90290",desc:"Three-day Memorial Day music and arts fair. $32-75."}},
+{title:"Burrito + El Matador Beach at golden hour",body:"Pick up a burrito from Lily's in Malibu, drive ten more minutes north, walk down the cliff stairs at El Matador, and eat while the sea stacks turn gold. Get there before noon for parking.",interest:"outdoors",side:"Westside",time:"weekend",source:"Malibu · Sat May 23",when:"Sat",tags:["free","date"],loc:"Malibu",link:"https://www.parks.ca.gov/?page_id=623",ev:{title:"Burrito + El Matador Beach",start:"2026-05-23T11:00:00-07:00",end:"2026-05-23T15:00:00-07:00",location:"El Matador State Beach, Malibu, CA",desc:"Lily's burrito, then the cliff stairs at El Matador. Before noon for parking."}},
+{title:"A long patio lunch that earns it — Gjelina",body:"Petit Trois le Valley for the burger and a bottle of rosé, or Gjelina's back patio for the original. Book this week — Sunday Memorial Day reservations vanish.",interest:"food",side:"Westside",time:"weekend",source:"Venice · Sun May 24",when:"Sun",tags:["date"],loc:"Venice",link:"https://www.gjelina.com",ev:{title:"Long Patio Lunch – MDW Sunday",start:"2026-05-24T13:00:00-07:00",end:"2026-05-24T16:00:00-07:00",location:"Gjelina, 1429 Abbot Kinney Blvd, Venice, CA 90291",desc:"Gjelina's back patio or Petit Trois le Valley. Book ahead."}},
+{title:"Memorial Day: pool, slow morning, don't drive",body:"Book a ResortPass or claim a spot at a friend's. The win on Memorial Day is doing nothing well — slow coffee, a paperback, no driving. The 405 will not reward your ambition.",interest:"outdoors",side:"Westside",time:"weekend",source:"Anywhere · Mon May 25",when:"Mon",tags:[],loc:"Anywhere with shade",link:"https://www.resortpass.com/cities/Los-Angeles-4"},
+{title:"Yoko Ono: Music of the Mind at The Broad",body:"A major survey of six decades of Ono's conceptual work. Free, opens Saturday; timed tickets release May 27.",interest:"culture",side:"DTLA",time:"later",source:"The Broad · Opens May 23 · Free",tags:["free"],loc:"DTLA",link:"https://www.thebroad.org/art/special-exhibitions/yoko-ono-music-mind"},
+{title:"Bright Eyes plays two albums in full at the Hollywood Bowl",body:"Wide Awake, It's Morning and Digital Ash in a Digital Urn, start to finish. The Moldy Peaches open.",interest:"culture",side:"Westside",time:"later",source:"Hollywood Bowl · Sat May 23, 7pm",tags:["date"],loc:"Hollywood",link:"https://www.hollywoodbowl.com/events/performances/4272/2026-05-23/bright-eyes-21-years-of-wide-awake-digital-ash"},
+{title:"Magdalena Suarez Frimkess at Marciano Art Foundation",body:"Ninety-Six and Pissed — a career-spanning look at the ceramicist's wry, intricate work. Free with reservation.",interest:"culture",side:"Westside",time:"later",source:"Mid-Wilshire · Open now · Free",tags:["free"],loc:"Mid-Wilshire",link:"https://www.marcianoartfoundation.org"},
+{title:"tierra at Craft Contemporary — earth, land, ancestry",body:"The Clay Biennial returns with 14 Latinx, Indigenous and Black artists. Opens Sat May 31.",interest:"culture",side:"Westside",time:"later",source:"Mid-Wilshire · Opens May 31",tags:[],loc:"Mid-Wilshire",link:"https://www.craftcontemporary.org"},
+{title:"Jodie Landau: Performance of Self at REDCAT",body:"The composer-performer stages a genre-blurring solo work. Two nights only.",interest:"culture",side:"DTLA",time:"later",source:"REDCAT · May 29 & 30, 8pm · $35",tags:[],loc:"DTLA",link:"https://www.redcat.org/events"},
+{title:"Andrew Holecek at Unlikely Collaborators — lucid dreaming",body:"A talk on dreams, consciousness, and the mind at the edge of sleep. Free, RSVP required.",interest:"culture",side:"Westside",time:"later",source:"Santa Monica · Thu Jun 4 · Free",tags:["free","date"],loc:"Santa Monica",link:"https://www.salons.unlikelycollaborators.com"},
+{title:"The Last Dive screening at Patagonia Santa Monica",body:"A documentary night at the Patagonia store. Free with RSVP.",interest:"culture",side:"Westside",time:"later",source:"Santa Monica · Thu Jun 11 · Free",tags:["free"],loc:"Santa Monica",link:"https://thelastdivefilm.com/showings"},
+{title:"ABOVE Night Gallery at Griffith Observatory",body:"After-hours access to Stars of the Summer, with the telescopes and the skyline. Several summer dates.",interest:"culture",side:"Eastside",time:"later",source:"Los Feliz · Jun 15 · $45–50",tags:["date"],loc:"Los Feliz",link:"https://griffithobservatoryfoundation.org"},
+{title:"Sports Raves: Multiform at The Broad",body:"An anti-competitive World Cup happening: KCRW DJs, Lucha VaVOOM, Pony Sweat. Late June, $25.",interest:"culture",side:"DTLA",time:"later",source:"The Broad · Jun 20–28 · $25",tags:[],loc:"DTLA",link:"https://www.thebroad.org/sports-raves-multiform"},
+{title:"Yoko Only at The Broad — a one-night supergroup",body:"Yo La Tengo, Nels Cline, Sleater-Kinney and more, for one night honoring Ono. Aug 8.",interest:"culture",side:"DTLA",time:"later",source:"The Broad · Sat Aug 8 · $65",tags:["date"],loc:"DTLA",link:"https://www.thebroad.org/yoko-only"},
+{title:"KCRW Summer Nights — 18 free outdoor parties",body:"The station's free summer dance series spreads across the city, June through September. First show Jun 6.",interest:"culture",side:"DTLA",time:"later",source:"Citywide · From Jun 6 · Free",tags:["free","date"],loc:"Citywide",link:"https://www.kcrw.com/summer-nights"},
+{title:"Lucas Museum of Narrative Art opens",body:"The long-awaited Exposition Park museum opens with Star Wars in Motion as its inaugural exhibit. Sept 22.",interest:"culture",side:"DTLA",time:"later",source:"Exposition Park · Sept 22",tags:[],loc:"Exposition Park",link:"https://lucasmuseum.org"},
+{title:"The Schindler House — a modernist hideaway",body:"Rudolph Schindler's 1922 house and studio, still one of LA's quietest architectural pleasures. $7, open weekly.",interest:"culture",side:"Westside",time:"later",source:"West Hollywood · $7 · Open weekly",tags:[],loc:"West Hollywood",link:"https://www.makcenter.org"},
+{title:"Pino's Sandwiches — Florence schiacciata in Los Feliz",body:"14 sandwiches plus the LA-only Ganzo. Open 10:30am–8pm daily.",interest:"food",side:"Eastside",time:"later",source:"Los Feliz · Open daily",tags:[],loc:"Los Feliz",link:"https://pinossandwichesla.com"},
+{title:"Vandell — Los Feliz's most-talked-about cocktail bar",body:"27 drinks, vintage spirits, the Smoked Tomato. Resy a week out.",interest:"food",side:"Eastside",time:"later",source:"Los Feliz · Cocktails",tags:["date"],loc:"Los Feliz",link:"https://www.vandellbar.com"},
+{title:"Picala — Spanish-California tapas in West Adams",body:"Just opened. Open Sun–Thu 5–9, Fri–Sat 5–10.",interest:"food",side:"DTLA",time:"later",source:"West Adams · New",tags:["date"],loc:"West Adams",link:"https://picala.com"},
+{title:"Ceviche Project — Silver Lake's one-man mariscos counter",body:"One chef, cumbia on vinyl, excellent micheladas.",interest:"food",side:"Eastside",time:"later",source:"Silver Lake",tags:["date"],loc:"Silver Lake",link:"https://www.cevicheproject.com"},
+{title:"Tower Bar at Sunset Tower — the date that always works",body:"Old Hollywood under rose lights. Oysters, martinis, and a piano. Jacket-friendly; no phones at the table.",interest:"food",side:"Westside",time:"later",source:"West Hollywood · Date night",tags:["date"],loc:"West Hollywood",link:"https://www.sunsettowerhotel.com/restaurants-and-bar/tower-bar"},
+{title:"Penmar Wine Mixer — afternoon on the Venice golf course",body:"Wine, sun, and nine holes' worth of people-watching. Sat Jun 6, 3pm. 1233 Rose Ave.",interest:"food",side:"Westside",time:"later",source:"Venice · Sat Jun 6, 3pm",tags:["date"],loc:"Venice",link:"https://tickets.thepenmar.com/e/penmar-wine-mixer"},
+{title:"The Dinner Table wine tasting at The Wine Station",body:"Four flights, about 25 people, in DTLA. Thu Jun 18, 8–10pm.",interest:"food",side:"DTLA",time:"later",source:"DTLA · Thu Jun 18, 8pm",tags:["date"],loc:"DTLA",link:"https://www.eventbrite.com/e/the-dinner-table-wine-tasting-at-the-wine-station-dtla-tickets-1986142571898"},
+{title:"Echo Park swan boats at sunset",body:"$13/hr. The LED night-ride after dark is the move — lotus beds, the downtown skyline, the fountain. Reservations required.",interest:"outdoors",side:"Eastside",time:"later",source:"Echo Park · $13/hr",tags:["date"],loc:"Echo Park",link:"https://wheelfunrentals.com/ca/los-angeles/echo-park/"},
+{title:"Surfrider LA Beach Cleanup",body:"Free, all ages, an easy morning of doing some good by the water. Sun May 31, 9–11am.",interest:"outdoors",side:"Westside",time:"later",source:"Santa Monica · Sun May 31 · Free",tags:["free"],loc:"Santa Monica",link:"https://la.surfrider.org/events"}
+];
+const LENSES={interest:{order:["food","culture","outdoors"],label:{food:"Food & Drink",culture:"Culture & Music",outdoors:"Outdoors & Free"},icon:{food:"food",culture:"culture",outdoors:"outdoors"},iconClass:{food:"group-icon-food",culture:"group-icon-culture",outdoors:"group-icon-outdoors"},key:p=>p.interest},neighborhood:{order:["Eastside","Westside","DTLA"],label:{Eastside:"Eastside",Westside:"Westside & WeHo",DTLA:"Downtown & Central"},icon:{Eastside:"pin",Westside:"pin",DTLA:"pin"},iconClass:{Eastside:"group-icon-neutral",Westside:"group-icon-neutral",DTLA:"group-icon-neutral"},key:p=>p.side},time:{order:["this-week","weekend","later"],label:{"this-week":"This Week","weekend":"Memorial Day Weekend","later":"Mark Your Calendar"},icon:{"this-week":"cal",weekend:"cal",later:"cal"},iconClass:{"this-week":"group-icon-neutral",weekend:"group-icon-neutral",later:"group-icon-neutral"},key:p=>p.time}};
+let currentLens="interest",currentFilter="all";
+PICKS.forEach((p,i)=>p._id=i);
+function matchesFilter(p,f){if(f==="all")return true;if(f==="this-week")return p.time==="this-week"||p.time==="weekend";if(f==="food"||f==="culture"||f==="outdoors")return p.interest===f;return(p.tags||[]).includes(f);}
+function iconUse(n){return'<svg><use href="#i-'+n+'"/></svg>';}
+function cardFull(p){const ci=p.interest==="food"?"ci-food":p.interest==="culture"?"ci-culture":"ci-outdoors";const tags=(p.tags||[]).map(t=>'<span class="tag tag-navy">'+(t==="free"?"Free":t==="date"?"Date":t)+'</span>').join("");const cal=p.ev?'<button class="btn-action" data-cal="'+p._id+'" aria-label="Add to Google Calendar">'+iconUse("cal")+'Add</button>':'';return'<a href="'+p.link+'" target="_blank" rel="noopener" class="card'+(p.featured?' card-featured':'')+'" data-tags="'+(p.tags||[]).join(' ')+'"><div class="card-head"><div class="card-icon '+ci+'">'+iconUse(p.interest)+'</div><div class="card-kicker"><span class="card-source'+(p.featured?' card-source-accent':'')+'">'+p.source+'</span></div>'+(p.when?'<span class="card-when">'+p.when+'</span>':'')+'</div><h3 class="card-title">'+p.title+'</h3><p class="card-body">'+p.body+'</p><div class="card-actions"><div class="card-tags"><span class="tag tag-loc">'+iconUse("pin")+p.loc+'</span>'+tags+'</div><div class="card-btns">'+cal+'<span class="btn-action btn-action-primary">Details'+iconUse("ext")+'</span></div></div></a>';}
+function cardCompact(p){const ci=p.interest==="food"?"ci-food":p.interest==="culture"?"ci-culture":"ci-outdoors";return'<a href="'+p.link+'" target="_blank" rel="noopener" class="card card-compact" data-tags="'+(p.tags||[]).join(' ')+'"><div class="card-icon '+ci+'">'+iconUse(p.interest)+'</div><div class="card-compact-body"><h3>'+p.title+'</h3><span class="card-compact-meta">'+p.loc+' · '+p.source+'</span></div><span class="card-compact-arrow">'+iconUse("arrow")+'</span></a>';}
+function render(){const lens=LENSES[currentLens],stack=document.getElementById("stack");const visible=PICKS.filter(p=>matchesFilter(p,currentFilter));const empty=document.getElementById("empty");if(!visible.length){stack.innerHTML="";empty.classList.add("is-visible");document.getElementById("emptyLabel").textContent=document.querySelector(".filter-chip.is-active").textContent.trim();return;}empty.classList.remove("is-visible");let html="";lens.order.forEach(b=>{const items=visible.filter(p=>lens.key(p)===b);if(!items.length)return;const feat=items.filter(p=>p.featured),big=items.filter(p=>!p.featured&&(p.when||p.time==="this-week"||p.time==="weekend")),small=items.filter(p=>!p.featured&&!(p.when||p.time==="this-week"||p.time==="weekend"));html+='<section class="group"><div class="group-header"><div class="group-dot '+lens.iconClass[b]+'">'+iconUse(lens.icon[b])+'</div><span class="group-label">'+lens.label[b]+'</span><span class="group-count">'+items.length+' pick'+(items.length>1?'s':'')+'</span></div>'+feat.map(cardFull).join("")+big.map(cardFull).join("")+small.map(cardCompact).join("")+'</section>';});stack.innerHTML=html;bindCal();}
+function positionPill(){const a=document.querySelector(".seg-btn.is-active"),pill=document.getElementById("segPill");pill.style.width=a.offsetWidth+"px";pill.style.transform="translateX("+a.offsetLeft+"px)";}
+document.querySelectorAll(".seg-btn").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".seg-btn").forEach(x=>x.classList.remove("is-active"));b.classList.add("is-active");currentLens=b.dataset.lens;positionPill();render();}));
+document.querySelectorAll(".filter-chip").forEach(c=>c.addEventListener("click",()=>{document.querySelectorAll(".filter-chip").forEach(x=>x.classList.remove("is-active"));c.classList.add("is-active");currentFilter=c.dataset.filter;render();}));
+(function(){var d=new Date();var el=document.getElementById('todayDate');if(el)el.textContent=d.toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});})();
+document.getElementById('allCount').textContent=PICKS.length;
+(function(){var f=document.querySelector('.topbar-form');if(!f)return;f.addEventListener('submit',function(){var i=f.querySelector('input[type=email]');if(!i)return;var e=i.value.trim();if(!e)return;setTimeout(function(){f.innerHTML='<span class="topbar-form-status" role="status">✓ Check '+e+' to confirm</span>';},100);});})();
+function pad(n){return n<10?'0'+n:''+n;}
+function toGCalDate(iso){var d=new Date(iso);return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+'Z';}
+function buildGCalUrl(ev,link){var t='Haps Club: '+ev.title;var dates=toGCalDate(ev.start)+'/'+toGCalDate(ev.end);var details=ev.desc;if(link)details+='
+
+More info: '+link;details+='
+
+From Haps Club. https://www.haps.club';var p=new URLSearchParams({action:'TEMPLATE',text:t,dates:dates,details:details,location:ev.location,trp:'false'});return'https://calendar.google.com/calendar/render?'+p.toString();}
+var toastEl=document.getElementById('toast'),toastTextEl=document.getElementById('toastText'),toastTimer=null;
+function showToast(m){toastTextEl.textContent=m;toastEl.classList.add('is-visible');clearTimeout(toastTimer);toastTimer=setTimeout(function(){toastEl.classList.remove('is-visible');},2400);}
+function bindCal(){document.querySelectorAll('[data-cal]').forEach(function(btn){btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var p=PICKS[+btn.dataset.cal];if(!p||!p.ev)return;window.open(buildGCalUrl(p.ev,p.link),'_blank','noopener');showToast('Opening Google Calendar…');});});}
+window.addEventListener("resize",positionPill);
+positionPill();render();
+</script>
+</body>
+</html>
