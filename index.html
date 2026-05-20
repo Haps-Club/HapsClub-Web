@@ -248,7 +248,13 @@ function showToast(m){toastTextEl.textContent=m;toastEl.classList.add('is-visibl
 function bindCal(){document.querySelectorAll('[data-cal]').forEach(function(btn){btn.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();var p=PICKS[+btn.dataset.cal];if(!p||!p.ev)return;window.open(buildGCalUrl(p.ev,p.link),'_blank','noopener');showToast('Opening Google Calendar…');});});}
 function positionPill(){var a=document.querySelector(".seg-btn.is-active"),pill=document.getElementById("segPill");if(!a||!pill)return;pill.style.width=a.offsetWidth+"px";pill.style.transform="translateX("+a.offsetLeft+"px)";}
 window.addEventListener("resize",positionPill);
-document.addEventListener("DOMContentLoaded",function(){positionPill();render();});
+document.addEventListener("DOMContentLoaded",function(){
+try{positionPill();}catch(e){}
+render();
+});
+window.addEventListener("load",function(){
+try{positionPill();}catch(e){}
+});
 </script>
 </body>
 </html>
