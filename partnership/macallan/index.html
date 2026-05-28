@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>An Afternoon at The Macallan Villa · The Macallan × Compass × Haps Club</title>
+<meta name="description" content="A Sunday estate tour through Bel-Air's finest open houses, culminating at The Macallan Villa for a private tasting, a dinner by Chef Chris Sayegh, and an afterparty. By invitation only.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0a0807;
+  --ink:#1a1612;
+  --ink-2:#3a342d;
+  --cream:#f5ede0;
+  --cream-2:#eee3d0;
+  --bone:#e9dcc5;
+  --amber:#b5763a;
+  --amber-light:#d4a373;
+  --whisper:rgba(255,250,243,.55);
+  --line:rgba(255,250,243,.12);
+  --line-dark:rgba(26,22,18,.14);
+  --display:'Playfair Display', Georgia, serif;
+  --sans:'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:var(--sans);
+  font-weight:300;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+em{font-style:italic}
+
+/* ============ NAV ============ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:18px 32px;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .4s ease, padding .4s ease, border-color .4s ease;
+  border-bottom:1px solid transparent;
+}
+#nav.on{
+  background:rgba(10,8,7,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding:14px 32px;
+  border-bottom-color:var(--line);
+}
+.nav-left{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cream);font-weight:500;
+}
+.nav-x{color:var(--amber-light);font-family:var(--display);font-style:italic;font-size:14px;}
+.nav-cta{
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cream);font-weight:500;
+  padding:10px 22px;
+  border:1px solid var(--line);
+  border-radius:100px;
+  transition:all .3s ease;
+}
+.nav-cta:hover{background:var(--cream);color:var(--black);border-color:var(--cream)}
+@media (max-width:680px){
+  #nav{padding:14px 18px}
+  .nav-left{font-size:9.5px;gap:8px}
+  .nav-cta{font-size:9.5px;padding:8px 14px}
+  .nav-haps{display:none}
+}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;align-items:flex-end;
+  overflow:hidden;
+  padding:0 32px 80px;
+  color:var(--cream);
+}
+.hero-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  z-index:0;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(10,8,7,.42) 0%,
+    rgba(10,8,7,.18) 30%,
+    rgba(10,8,7,.34) 65%,
+    rgba(10,8,7,.88) 100%);
+  z-index:1;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1280px;margin:0 auto;
+}
+.hero-badges{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--sans);
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cream);font-weight:500;
+  margin-bottom:32px;
+  opacity:.92;
+}
+.hero-badge-sep{color:var(--amber-light);font-family:var(--display);font-style:italic;font-size:14px;font-weight:400;}
+.hero h1{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(46px,7.4vw,108px);
+  line-height:.96;
+  letter-spacing:-0.018em;
+  margin-bottom:32px;
+  max-width:14ch;
+}
+.hero h1 em{
+  font-style:italic;
+  font-weight:500;
+  color:var(--cream);
+  display:block;
+}
+.hero-sub{
+  font-family:var(--sans);
+  font-size:clamp(15px,1.3vw,18px);
+  font-weight:300;
+  line-height:1.55;
+  color:rgba(245,237,224,.85);
+  max-width:54ch;
+  margin-bottom:48px;
+}
+.hero-meta{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:28px;
+  max-width:760px;
+  padding-top:32px;
+  border-top:1px solid var(--line);
+}
+.hero-meta-cell .lb{
+  font-family:var(--sans);
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:8px;
+}
+.hero-meta-cell .vl{
+  font-family:var(--display);
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:500;
+  letter-spacing:-0.005em;
+  color:var(--cream);
+}
+.scroll-hint{
+  position:absolute;
+  bottom:24px;right:32px;z-index:3;
+  font-family:var(--sans);
+  font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--whisper);
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  padding-bottom:32px;
+}
+.scroll-hint::after{
+  content:'';position:absolute;
+  bottom:0;left:50%;width:1px;height:24px;
+  background:var(--amber-light);
+  animation:scrollPulse 2.4s ease-in-out infinite;
+}
+@keyframes scrollPulse{
+  0%,100%{opacity:0;transform:translateY(-12px)}
+  50%{opacity:1;transform:translateY(0)}
+}
+@media (max-width:860px){
+  .hero{padding:0 20px 64px}
+  .hero-meta{grid-template-columns:repeat(2,1fr);gap:20px}
+  .scroll-hint{display:none}
+}
+
+/* ============ PARTNERSHIP BAR ============ */
+.pbar{
+  background:var(--black);
+  padding:32px 32px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.pbar-inner{
+  display:flex;align-items:center;justify-content:center;
+  gap:32px;
+  font-family:var(--display);
+  font-size:clamp(20px,2.2vw,30px);
+  font-weight:400;
+  color:var(--cream);
+  letter-spacing:-0.005em;
+}
+.pbar-name em{font-style:italic;color:var(--amber-light)}
+.pbar-x{
+  color:var(--amber);
+  font-family:var(--display);
+  font-style:italic;
+  font-size:.7em;
+  opacity:.7;
+}
+@media (max-width:680px){
+  .pbar{padding:24px 18px}
+  .pbar-inner{flex-direction:column;gap:8px;font-size:18px}
+}
+
+/* ============ SECTIONS ============ */
+.sec{padding:140px 32px;position:relative}
+.sec-black{background:var(--black);color:var(--cream)}
+.sec-cream{background:var(--cream);color:var(--ink)}
+.sec-cream .ey{color:var(--amber)}
+.sec-cream .lede{color:var(--ink-2)}
+.sec-cream .divider-rule{background:var(--line-dark)}
+.wrap{max-width:1280px;margin:0 auto}
+.wrap-wide{max-width:1440px;margin:0 auto}
+
+.ey{
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:24px;
+  display:inline-flex;align-items:center;gap:14px;
+}
+.ey::before{
+  content:'';width:32px;height:1px;background:var(--amber);
+}
+.section-heading{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(38px,5.4vw,82px);
+  line-height:1.02;
+  letter-spacing:-0.018em;
+  margin-bottom:36px;
+  max-width:18ch;
+}
+.section-heading em{font-style:italic;font-weight:500;color:var(--amber-light)}
+.sec-cream .section-heading em{color:var(--amber)}
+
+.lede{
+  font-family:var(--sans);
+  font-size:clamp(15px,1.18vw,18px);
+  line-height:1.65;
+  font-weight:300;
+  color:rgba(245,237,224,.78);
+  max-width:60ch;
+}
+
+@media (max-width:860px){
+  .sec{padding:88px 20px}
+}
+
+/* ============ DESTINATION SECTION ============ */
+.dest{
+  display:grid;
+  grid-template-columns:1fr 1.15fr;
+  gap:72px;
+  align-items:center;
+}
+.dest-copy{padding:32px 0}
+.dest-copy .section-heading{margin-bottom:28px}
+.dest-copy .lede{margin-bottom:24px}
+.dest-copy .lede strong{
+  color:var(--cream);font-weight:400;
+  font-family:var(--display);font-style:italic;font-size:1.08em;
+}
+.dest-rule{
+  width:48px;height:1px;background:var(--amber);
+  margin-bottom:28px;
+}
+.dest-figure{
+  position:relative;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  border-radius:2px;
+}
+.dest-figure img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 8s ease-out;
+}
+.dest-figure:hover img{transform:scale(1.04)}
+.dest-figure::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 60%,rgba(10,8,7,.55) 100%);
+  pointer-events:none;
+}
+.dest-caption{
+  position:absolute;left:24px;bottom:24px;z-index:2;
+  font-family:var(--sans);
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cream);font-weight:500;
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+}
+@media (max-width:860px){
+  .dest{grid-template-columns:1fr;gap:40px}
+  .dest-figure{aspect-ratio:3/4}
+}
+
+/* ============ VENUE SHOWCASE ============ */
+.venue-intro{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:80px;
+}
+.venue-intro .section-heading{margin-bottom:0;max-width:14ch}
+.venue-intro .lede{padding-bottom:14px}
+
+.venue-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-auto-rows:minmax(0,1fr);
+  gap:20px;
+}
+.vcell{
+  position:relative;
+  overflow:hidden;
+  border-radius:2px;
+  background:var(--ink);
+}
+.vcell img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 8s ease-out;
+}
+.vcell:hover img{transform:scale(1.05)}
+.vcell::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(10,8,7,.7) 100%);
+  pointer-events:none;
+  z-index:1;
+}
+.vcell .vcap{
+  position:absolute;left:24px;right:24px;bottom:22px;z-index:2;
+  display:flex;justify-content:space-between;align-items:flex-end;gap:16px;
+}
+.vcap-room{
+  font-family:var(--display);
+  font-size:clamp(22px,2.2vw,30px);
+  font-weight:500;
+  font-style:italic;
+  color:var(--cream);
+  letter-spacing:-0.005em;
+}
+.vcap-tag{
+  font-family:var(--sans);
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  text-align:right;
+  white-space:nowrap;
+}
+
+/* Layout: 12-col grid 
+   Row 1: Bar (wide left) + Lounge (tall right)
+   Row 2: Courtyard (tall left) + Deck (wide right) */
+.venue-grid{align-items:stretch}
+.v-bar{grid-column:span 7;aspect-ratio:16/10}
+.v-lounge{grid-column:span 5;aspect-ratio:5/6}
+.v-courtyard-tall{grid-column:span 5;aspect-ratio:5/6}
+.v-deck-wide{grid-column:span 7;aspect-ratio:16/10}
+
+@media (max-width:980px){
+  .venue-intro{grid-template-columns:1fr;gap:32px;align-items:start;margin-bottom:48px}
+  .venue-grid{grid-template-columns:1fr;gap:16px}
+  .v-bar,.v-lounge,.v-deck-wide,.v-courtyard-tall{
+    grid-column:span 1;aspect-ratio:4/3;margin-top:0;height:auto;
+  }
+  .vcell .vcap{left:18px;right:18px;bottom:18px}
+}
+
+/* ============ FEATURES STRIP ============ */
+.features-strip{
+  margin-top:96px;padding-top:64px;
+  border-top:1px solid var(--line);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:48px;
+}
+.feat .feat-no{
+  font-family:var(--display);
+  font-style:italic;
+  font-size:14px;
+  color:var(--amber);
+  margin-bottom:14px;
+  font-weight:400;
+}
+.feat-title{
+  font-family:var(--display);
+  font-size:22px;
+  font-weight:500;
+  letter-spacing:-0.005em;
+  margin-bottom:10px;
+  color:var(--cream);
+}
+.feat-body{
+  font-size:13.5px;
+  line-height:1.6;
+  font-weight:300;
+  color:rgba(245,237,224,.7);
+}
+@media (max-width:860px){
+  .features-strip{grid-template-columns:repeat(2,1fr);gap:32px;margin-top:48px}
+}
+@media (max-width:520px){
+  .features-strip{grid-template-columns:1fr}
+}
+
+/* ============ TIMELINE / THE DAY ============ */
+.day-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:72px;
+}
+.day-head .section-heading{margin-bottom:0;max-width:12ch}
+.day-head .lede{padding-bottom:8px;color:var(--ink-2)}
+
+.timeline{
+  position:relative;
+  padding-left:0;
+}
+.tl-row{
+  display:grid;
+  grid-template-columns:140px 56px 1fr;
+  gap:32px;
+  padding:36px 0;
+  border-bottom:1px solid var(--line-dark);
+  align-items:start;
+}
+.tl-row:last-child{border-bottom:none}
+.tl-time{
+  font-family:var(--display);
+  font-size:22px;
+  font-weight:500;
+  letter-spacing:-0.005em;
+  color:var(--ink);
+  font-variant-numeric:tabular-nums;
+}
+.tl-time-sub{
+  font-family:var(--sans);
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--amber);font-weight:500;
+  margin-top:4px;
+}
+.tl-dot{
+  position:relative;
+  width:56px;
+  display:flex;justify-content:center;
+}
+.tl-dot::before{
+  content:'';position:absolute;top:8px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--amber);
+  border:1px solid var(--ink);
+  z-index:2;
+}
+.tl-dot::after{
+  content:'';position:absolute;top:14px;left:50%;width:1px;
+  height:calc(100% + 36px);
+  background:var(--line-dark);
+  transform:translateX(-.5px);
+}
+.tl-row:last-child .tl-dot::after{display:none}
+.tl-content .tl-title{
+  font-family:var(--display);
+  font-size:clamp(22px,2vw,28px);
+  font-weight:500;
+  letter-spacing:-0.008em;
+  margin-bottom:10px;
+  color:var(--ink);
+}
+.tl-content .tl-title em{font-style:italic;color:var(--amber)}
+.tl-content .tl-detail{
+  font-family:var(--sans);
+  font-size:14.5px;
+  line-height:1.65;
+  font-weight:300;
+  color:var(--ink-2);
+  max-width:54ch;
+}
+@media (max-width:860px){
+  .day-head{grid-template-columns:1fr;gap:24px;margin-bottom:40px}
+  .tl-row{grid-template-columns:96px 40px 1fr;gap:18px;padding:28px 0}
+  .tl-time{font-size:17px}
+  .tl-content .tl-title{font-size:20px}
+  .tl-content .tl-detail{font-size:13.5px}
+}
+
+/* ============ DUAL FEATURE: BAR + DINNER ============ */
+.dual{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  margin-top:80px;
+}
+.dual-card{
+  position:relative;
+}
+.dual-figure{
+  position:relative;
+  aspect-ratio:4/5;
+  overflow:hidden;
+  margin-bottom:32px;
+  border-radius:2px;
+}
+.dual-figure img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 8s ease-out;
+}
+.dual-card:hover .dual-figure img{transform:scale(1.04)}
+.dual-figure::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 55%,rgba(10,8,7,.7) 100%);
+  pointer-events:none;
+}
+.dual-figure-cap{
+  position:absolute;left:24px;bottom:22px;z-index:2;
+  font-family:var(--sans);
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cream);font-weight:500;
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+}
+.dual-eyebrow{
+  font-family:var(--sans);
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:14px;
+}
+.dual-title{
+  font-family:var(--display);
+  font-size:clamp(30px,3vw,42px);
+  font-weight:500;
+  line-height:1.04;
+  letter-spacing:-0.018em;
+  margin-bottom:18px;
+  color:var(--cream);
+}
+.dual-title em{font-style:italic;color:var(--amber-light)}
+.dual-body{
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.65;
+  font-weight:300;
+  color:rgba(245,237,224,.78);
+}
+@media (max-width:860px){
+  .dual{grid-template-columns:1fr;gap:48px;margin-top:48px}
+  .dual-figure{aspect-ratio:3/4}
+}
+
+/* ============ HOSTS ============ */
+.hosts{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:48px;
+  margin-top:64px;
+}
+.host{
+  padding:48px 32px;
+  background:rgba(255,250,243,.03);
+  border:1px solid var(--line);
+  border-radius:2px;
+  text-align:center;
+  transition:all .4s ease;
+}
+.host:hover{
+  background:rgba(255,250,243,.05);
+  border-color:rgba(181,118,58,.4);
+}
+.host-mark{
+  font-family:var(--display);
+  font-style:italic;
+  font-size:32px;
+  font-weight:400;
+  color:var(--amber-light);
+  margin-bottom:20px;
+}
+.host-name{
+  font-family:var(--display);
+  font-size:24px;
+  font-weight:500;
+  letter-spacing:-0.005em;
+  margin-bottom:8px;
+  color:var(--cream);
+}
+.host-role{
+  font-family:var(--sans);
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:18px;
+}
+.host-body{
+  font-family:var(--sans);
+  font-size:13.5px;
+  line-height:1.65;
+  font-weight:300;
+  color:rgba(245,237,224,.7);
+}
+@media (max-width:860px){
+  .hosts{grid-template-columns:1fr;gap:24px}
+}
+
+/* ============ FULL-BLEED VENUE QUOTE ============ */
+.fbquote{
+  position:relative;
+  min-height:80vh;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  padding:120px 32px;
+  text-align:center;
+  color:var(--cream);
+}
+.fbquote-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:0;
+}
+.fbquote::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(10,8,7,.55),rgba(10,8,7,.55));
+}
+.fbquote-inner{position:relative;z-index:2;max-width:900px}
+.fbquote-ey{
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:32px;
+}
+.fbquote h2{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(36px,5vw,68px);
+  line-height:1.08;
+  letter-spacing:-0.018em;
+  color:var(--cream);
+  margin-bottom:36px;
+}
+.fbquote h2 em{font-style:italic;font-weight:500;color:var(--cream)}
+.fbquote-attr{
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(245,237,224,.8);font-weight:500;
+}
+
+/* ============ CTA HAPS ATTRIBUTION ============ */
+.cta-haps{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  margin-bottom:40px;
+}
+.cta-haps-label{
+  font-family:var(--sans);
+  font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+}
+.cta-haps-logo{
+  height:108px;
+  width:auto;
+  opacity:.96;
+  display:block;
+}
+@media (max-width:680px){
+  .cta-haps-logo{height:88px}
+}
+
+/* ============ CTA ============ */
+.cta{
+  text-align:center;
+  padding:160px 32px;
+  background:var(--black);
+  border-top:1px solid var(--line);
+}
+.cta-ey{
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:28px;
+}
+.cta h2{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(46px,6.4vw,96px);
+  line-height:1;
+  letter-spacing:-0.022em;
+  color:var(--cream);
+  margin-bottom:36px;
+}
+.cta h2 em{font-style:italic;font-weight:500;color:var(--amber-light)}
+.cta-lede{
+  font-family:var(--sans);
+  font-size:16px;font-weight:300;
+  line-height:1.6;
+  color:rgba(245,237,224,.7);
+  max-width:54ch;margin:0 auto 48px;
+}
+.cta-btn{
+  display:inline-block;
+  font-family:var(--sans);
+  font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--black);background:var(--cream);
+  padding:20px 48px;
+  border-radius:100px;
+  font-weight:600;
+  transition:all .3s ease;
+}
+.cta-btn:hover{
+  background:var(--amber);color:var(--cream);
+  transform:translateY(-2px);
+  box-shadow:0 12px 32px rgba(181,118,58,.32);
+}
+.cta-foot{
+  margin-top:48px;
+  font-family:var(--sans);
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--whisper);font-weight:500;
+}
+
+/* ============ FOOTER ============ */
+footer.page-foot{
+  background:var(--black);
+  padding:80px 32px 56px;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+.foot-mark{
+  font-family:var(--display);
+  font-size:18px;
+  font-weight:400;
+  color:var(--cream);
+  margin-bottom:18px;
+  letter-spacing:.005em;
+}
+.foot-mark em{font-style:italic;color:var(--amber-light)}
+.foot-fine{
+  font-family:var(--sans);
+  font-size:10.5px;
+  font-weight:400;
+  color:rgba(245,237,224,.42);
+  line-height:1.8;
+  max-width:680px;margin:0 auto;
+  letter-spacing:.01em;
+}
+.foot-divider{
+  width:48px;height:1px;background:var(--line);
+  margin:24px auto;
+}
+
+/* ============ FIRST POUR DIPTYCH ============ */
+.diptych{
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  gap:0;
+  background:var(--black);
+  aspect-ratio:16/5;
+}
+.dip-cell{
+  position:relative;
+  overflow:hidden;
+}
+.dip-cell img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 10s ease-out;
+}
+.dip-cell:nth-child(2) img{object-position:center 65%}
+.dip-cell:hover img{transform:scale(1.04)}
+.dip-cell::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,8,7,.15) 0%,rgba(10,8,7,.55) 100%);
+  pointer-events:none;
+  z-index:1;
+}
+.dip-overlay{
+  position:absolute;left:32px;right:32px;bottom:32px;z-index:2;
+}
+.dip-eyebrow{
+  font-family:var(--sans);
+  font-size:10px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:10px;
+}
+.dip-title{
+  font-family:var(--display);
+  font-size:clamp(24px,2.3vw,34px);
+  font-weight:500;
+  color:var(--cream);
+  letter-spacing:-0.008em;
+  font-style:italic;
+  text-shadow:0 1px 16px rgba(0,0,0,.4);
+}
+@media (max-width:860px){
+  .diptych{grid-template-columns:1fr;aspect-ratio:auto}
+  .dip-cell{aspect-ratio:4/3}
+  .dip-overlay{left:20px;right:20px;bottom:20px}
+}
+
+/* ============ PRESTIGE SPLIT ============ */
+.prestige{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+.prestige-fig{
+  position:relative;
+  aspect-ratio:3/4;
+  overflow:hidden;
+  border-radius:2px;
+  max-height:780px;
+}
+.prestige-fig img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform 10s ease-out;
+}
+.prestige:hover .prestige-fig img{transform:scale(1.03)}
+.prestige-fig::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 70%,rgba(10,8,7,.5) 100%);
+  pointer-events:none;
+}
+.prestige-fig .prestige-cap{
+  position:absolute;left:24px;bottom:22px;z-index:2;
+  font-family:var(--sans);
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cream);font-weight:500;
+  text-shadow:0 1px 8px rgba(0,0,0,.5);
+}
+.prestige-copy .section-heading{margin-bottom:24px}
+.prestige-stat{
+  font-family:var(--display);
+  font-size:clamp(20px,1.9vw,26px);
+  font-style:italic;
+  color:var(--amber-light);
+  font-weight:500;
+  letter-spacing:-0.005em;
+  margin-top:32px;padding-top:32px;
+  border-top:1px solid var(--line);
+  max-width:36ch;
+}
+@media (max-width:860px){
+  .prestige{grid-template-columns:1fr;gap:40px}
+  .prestige-fig{aspect-ratio:4/5;max-height:none}
+}
+
+/* ============ COCKTAIL FULL-BLEED ============ */
+.cocktail-bleed{
+  position:relative;
+  min-height:78vh;
+  display:flex;align-items:center;
+  overflow:hidden;
+  padding:120px 32px;
+  color:var(--cream);
+}
+.cocktail-bleed-img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:0;
+}
+.cocktail-bleed::after{
+  content:'';position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,
+    rgba(10,8,7,.78) 0%,
+    rgba(10,8,7,.55) 35%,
+    rgba(10,8,7,.18) 65%,
+    rgba(10,8,7,.1) 100%);
+}
+.cocktail-inner{
+  position:relative;z-index:2;
+  max-width:1280px;margin:0 auto;width:100%;
+}
+.cocktail-content{max-width:560px}
+.cocktail-eyebrow{
+  font-family:var(--sans);
+  font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:24px;
+  display:inline-flex;align-items:center;gap:14px;
+}
+.cocktail-eyebrow::before{
+  content:'';width:32px;height:1px;background:var(--amber);
+}
+.cocktail-title{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(38px,5vw,68px);
+  line-height:1.04;
+  letter-spacing:-0.018em;
+  color:var(--cream);
+  margin-bottom:28px;
+}
+.cocktail-title em{font-style:italic;font-weight:500;color:var(--amber-light)}
+.cocktail-body{
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  font-weight:300;
+  color:rgba(245,237,224,.85);
+  max-width:48ch;
+}
+.cocktail-spec{
+  display:flex;gap:48px;
+  margin-top:36px;padding-top:32px;
+  border-top:1px solid rgba(245,237,224,.18);
+}
+.cocktail-spec-cell{font-family:var(--sans)}
+.cocktail-spec-cell .lb{
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--amber-light);font-weight:500;
+  margin-bottom:6px;
+}
+.cocktail-spec-cell .vl{
+  font-family:var(--display);
+  font-size:18px;font-weight:500;
+  color:var(--cream);
+  font-style:italic;
+}
+@media (max-width:860px){
+  .cocktail-bleed{padding:80px 20px;min-height:auto}
+  .cocktail-bleed::after{background:linear-gradient(180deg,rgba(10,8,7,.55) 0%,rgba(10,8,7,.85) 100%)}
+  .cocktail-spec{gap:24px;flex-wrap:wrap}
+}
+
+/* ============ REVEAL ANIMATIONS ============ */
+.r{opacity:0;transform:translateY(24px);transition:opacity 1.2s ease,transform 1.2s ease}
+.r.in{opacity:1;transform:translateY(0)}
+.r.slow{transition-duration:1.6s}
+.r.d1{transition-delay:.15s}
+.r.d2{transition-delay:.3s}
+.r.d3{transition-delay:.45s}
+.r.d4{transition-delay:.6s}
+
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <div class="nav-left">
+    <span class="nav-name">The Macallan</span>
+    <span class="nav-x">×</span>
+    <span class="nav-name">Compass Beverly Hills</span>
+    <span class="nav-x nav-haps">×</span>
+    <span class="nav-name nav-haps">Haps Club</span>
+  </div>
+  <a href="#invitation" class="nav-cta">Request Invitation</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <img class="hero-img" src="v_deck.jpg" alt="The Macallan Villa exterior deck with sweeping Los Angeles views">
+  <div class="hero-inner">
+    <h1 class="r slow">An Afternoon at <em>The Macallan Villa.</em></h1>
+    <p class="hero-sub r slow d1">A Sunday estate tour through Bel-Air's finest open houses — hosted by the best agents in Beverly Hills, presented by Haps Club, and culminating at The Macallan Villa for a private tasting, a dinner by Chef Chris Sayegh, and a party you won't find anywhere&nbsp;else.</p>
+    <div class="hero-meta r slow d2">
+      <div class="hero-meta-cell"><div class="lb">Date</div><div class="vl">Sunday</div></div>
+      <div class="hero-meta-cell"><div class="lb">Start</div><div class="vl">2:00 PM</div></div>
+      <div class="hero-meta-cell"><div class="lb">Open Houses</div><div class="vl">4–5 Estates</div></div>
+      <div class="hero-meta-cell"><div class="lb">Finale</div><div class="vl">The Villa</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</header>
+
+<!-- ===== PARTNERSHIP BAR ===== -->
+<div class="pbar">
+  <div class="pbar-inner">
+    <span class="pbar-name">The <em>Macallan</em></span>
+    <span class="pbar-x">×</span>
+    <span class="pbar-name"><em>Compass</em> Beverly Hills</span>
+    <span class="pbar-x">×</span>
+    <span class="pbar-name"><em>Haps</em> Club</span>
+  </div>
+</div>
+
+<!-- ===== THE FIRST POUR DIPTYCH ===== -->
+<section class="diptych">
+  <figure class="dip-cell r">
+    <img src="p_pour.jpg" alt="The Macallan 15 Double Cask poured into a crystal glass under canopy">
+    <div class="dip-overlay">
+      <div class="dip-eyebrow">Pour 01 · The Welcome</div>
+      <div class="dip-title">Double Cask 15, on arrival.</div>
+    </div>
+  </figure>
+  <figure class="dip-cell r d1">
+    <img src="p_pool.jpg" alt="The Macallan Estate bottle resting at the edge of the Villa pool">
+    <div class="dip-overlay">
+      <div class="dip-eyebrow">The Estate · On the Deck</div>
+      <div class="dip-title">An edition for the address.</div>
+    </div>
+  </figure>
+</section>
+
+<!-- ===== SECTION 1: THE DESTINATION ===== -->
+<section class="sec sec-black">
+  <div class="wrap">
+    <div class="dest">
+      <div class="dest-copy">
+        <div class="ey r">The Destination</div>
+        <h2 class="section-heading r d1">Where the day <em>just begins.</em></h2>
+        <div class="dest-rule"></div>
+        <p class="lede r d2">Above the canyon. Past the gate. Through the courtyard and up the limestone steps. The Macallan Villa is not where the afternoon ends — <strong>it is where the night actually begins.</strong></p>
+        <p class="lede r d3" style="margin-top:18px;">Every estate visited points here. Every pour at every door, every drive between hilltops builds to one address — invite-only, never open to the public, and quiet for the rest of the year.</p>
+      </div>
+      <div class="dest-figure r slow d1">
+        <img src="v_courtyard.jpg" alt="The Macallan Villa courtyard with vine-covered columns">
+        <div class="dest-caption">The Villa · Courtyard Approach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: THE VENUE SHOWCASE ===== -->
+<section class="sec sec-black" style="padding-top:40px">
+  <div class="wrap-wide" style="padding:0 32px">
+    <div class="venue-intro">
+      <div>
+        <div class="ey r">The Venue</div>
+        <h2 class="section-heading r d1">Four rooms.<br><em>One afternoon.</em></h2>
+      </div>
+      <p class="lede r d2">The Macallan Villa is The Macallan's invitation-only Los Angeles brand home — a private residence in the hills, built around the bottlings, the views, and the people who appreciate both. Every room of the Villa opens for the afternoon. Every room has its own pour.</p>
+    </div>
+
+    <div class="venue-grid">
+      <figure class="vcell v-bar r">
+        <img src="v_bar.jpg" alt="The Macallan Villa main bar with oak slats and brass-clad base">
+        <figcaption class="vcap">
+          <span class="vcap-room">The Bar</span>
+          <span class="vcap-tag">Pour 01 · Welcome</span>
+        </figcaption>
+      </figure>
+      <figure class="vcell v-lounge r d1">
+        <img src="v_lounge.jpg" alt="The Macallan Villa lounge with full collection wall display">
+        <figcaption class="vcap">
+          <span class="vcap-room">The Lounge</span>
+          <span class="vcap-tag">The Full Collection</span>
+        </figcaption>
+      </figure>
+      <figure class="vcell v-deck-wide r d2">
+        <img src="v_deck.jpg" alt="The Macallan Villa exterior deck and pool with Los Angeles views">
+        <figcaption class="vcap">
+          <span class="vcap-room">The Deck</span>
+          <span class="vcap-tag">Sunset · Pour 03</span>
+        </figcaption>
+      </figure>
+      <figure class="vcell v-courtyard-tall r d3">
+        <img src="v_courtyard.jpg" alt="The Macallan Villa exterior courtyard with vine-covered columns">
+        <figcaption class="vcap">
+          <span class="vcap-room">The Courtyard</span>
+          <span class="vcap-tag">Arrival</span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="features-strip">
+      <div class="feat r">
+        <div class="feat-no">i.</div>
+        <div class="feat-title">Prestige Bottlings</div>
+        <div class="feat-body">From the everyday Sherry Oak to the rarest aged releases — the full Macallan range, poured in sequence by Private Client Relationship Managers.</div>
+      </div>
+      <div class="feat r d1">
+        <div class="feat-no">ii.</div>
+        <div class="feat-title">Culinary Menus</div>
+        <div class="feat-body">A multi-course dinner by Chef Chris Sayegh — sustainability-driven, plant-forward, paired to the pours.</div>
+      </div>
+      <div class="feat r d2">
+        <div class="feat-no">iii.</div>
+        <div class="feat-title">Cocktail Program</div>
+        <div class="feat-body">A signature program built around The Macallan — including the Villa's own Old Fashioned, served on the deck.</div>
+      </div>
+      <div class="feat r d3">
+        <div class="feat-no">iv.</div>
+        <div class="feat-title">Panoramic Views</div>
+        <div class="feat-body">From the deck, the Valley opens at your feet. From the lounge, the collection wall holds the room. The Villa is experienced through all five senses.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRESTIGE BOTTLINGS ===== -->
+<section class="sec sec-black">
+  <div class="wrap">
+    <div class="prestige">
+      <div class="prestige-copy">
+        <div class="ey r">Prestige Bottlings</div>
+        <h2 class="section-heading r d1">The rare ones, <em>poured in person.</em></h2>
+        <p class="lede r d2">The everyday range is the way in. The Lounge is where the <strong style="font-family:var(--display);font-style:italic;color:var(--cream);font-size:1.08em">rare</strong> ones come out — Sherry Oak verticals, limited Editions, Anniversary releases, and the kind of aged bottlings that don't appear on a list. Private Client Relationship Managers walk guests through them, glass by glass, the same way they would at the distillery.</p>
+        <div class="prestige-stat r d3">60 years in cask. White-gloved. One pour, one room, one afternoon.</div>
+      </div>
+      <figure class="prestige-fig r slow">
+        <img src="p_rare.jpg" alt="The Macallan 60 Years Old being handled with white gloves">
+        <div class="prestige-cap">The Macallan · 60 Years Old</div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL-BLEED VENUE QUOTE ===== -->
+<section class="fbquote">
+  <img class="fbquote-img" src="v_deck.jpg" alt="The Macallan Villa deck at golden hour">
+  <div class="fbquote-inner">
+    <div class="fbquote-ey r">200 Years Young</div>
+    <h2 class="r d1">"The Macallan Villa is where the brand lives in Los Angeles — <em>experienced through all five senses.</em>"</h2>
+    <div class="fbquote-attr r d2">The Macallan · Brand Home, Los Angeles</div>
+  </div>
+</section>
+
+<!-- ===== COCKTAIL PROGRAM FULL-BLEED ===== -->
+<section class="cocktail-bleed">
+  <img class="cocktail-bleed-img" src="p_cocktail.jpg" alt="The Macallan 12 Double Cask with a mint Old Fashioned at golden hour">
+  <div class="cocktail-inner">
+    <div class="cocktail-content">
+      <div class="cocktail-eyebrow r">The Cocktail Program</div>
+      <h2 class="cocktail-title r d1">An <em>Old Fashioned</em><br>built for the deck.</h2>
+      <p class="cocktail-body r d2">The Villa's signature cocktail program is built around The Macallan Double Cask 12 — designed in-house, sustainability-led, and served from late afternoon into the evening. Garden-grown mint, single block ice, and the Villa's own glassware. Same hands every time.</p>
+      <div class="cocktail-spec r d3">
+        <div class="cocktail-spec-cell">
+          <div class="lb">Base</div>
+          <div class="vl">Double Cask 12</div>
+        </div>
+        <div class="cocktail-spec-cell">
+          <div class="lb">Served</div>
+          <div class="vl">The Deck · Golden Hour</div>
+        </div>
+        <div class="cocktail-spec-cell">
+          <div class="lb">By</div>
+          <div class="vl">Villa Program</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE DAY ===== -->
+<section class="sec sec-cream">
+  <div class="wrap">
+    <div class="day-head">
+      <div>
+        <div class="ey r">The Day</div>
+        <h2 class="section-heading r d1">From hilltop<br>to <em>the Villa.</em></h2>
+      </div>
+      <p class="lede r d2">A curated arc, not a schedule. The afternoon moves between Bel-Air's most architecturally significant active listings — each one paired to the next Macallan pour — and lands at the Villa for the evening proper.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-row r">
+        <div class="tl-time">2:00 PM<div class="tl-time-sub">Arrival</div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">Bel-Air Open Houses <em>begin.</em></div>
+          <div class="tl-detail">Private walkthroughs of Compass's finest active listings — architectural landmarks, hilltop estates, gated properties. Hosted by the top-producing agents who represent them. Two hours, on foot and by car, through the neighborhoods that built modern Los Angeles.</div>
+        </div>
+      </div>
+      <div class="tl-row r d1">
+        <div class="tl-time">Throughout<div class="tl-time-sub">The Tour</div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">A pour at <em>every estate.</em></div>
+          <div class="tl-detail">At each stop, a curated tasting. The Macallan's range introduced in sequence — each expression paired to the character of the home it's poured in. Sherry Oak in the library. Double Cask on the loggia. Edition No. X in the kitchen of a Lloyd Wright restoration.</div>
+        </div>
+      </div>
+      <div class="tl-row r d2">
+        <div class="tl-time">4:00 PM<div class="tl-time-sub">Cocktail Hour</div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">Arrival at <em>The Macallan Villa.</em></div>
+          <div class="tl-detail">Through the courtyard. Welcome pour at the bar. The signature Old Fashioned program opens, the Lounge opens, and the collection wall reveals. One hour of cocktails and conversation before the table is set.</div>
+        </div>
+      </div>
+      <div class="tl-row r d3">
+        <div class="tl-time">5:00 PM<div class="tl-time-sub">Dinner</div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">A table by <em>Chef Chris Sayegh.</em></div>
+          <div class="tl-detail">A multi-course menu — plant-forward, sustainability-led, paired course by course to the pours. Designed with The Macallan's culinary program and built specifically for the Villa. Ninety minutes at the table.</div>
+        </div>
+      </div>
+      <div class="tl-row r d4">
+        <div class="tl-time">6:30 PM<div class="tl-time-sub">The Finale</div></div>
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <div class="tl-title">A party until <em>the night ends.</em></div>
+          <div class="tl-detail">The deck opens. The Old Fashioned program shifts into a late-night cocktail bar. The conversations that started in Bel-Air keep going — under the Valley lights, on the room that built it. No last call. The night ends when it ends.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DUAL FEATURE: THE CELLAR + THE TABLE ===== -->
+<section class="sec sec-black">
+  <div class="wrap-wide" style="padding:0 32px">
+    <div class="venue-intro" style="margin-bottom:0">
+      <div>
+        <div class="ey r">Inside the Villa</div>
+        <h2 class="section-heading r d1">The cellar.<br><em>The table.</em></h2>
+      </div>
+      <p class="lede r d2">Two programs run in parallel through the afternoon and into the evening — both designed in-house by The Macallan, both impossible to reproduce anywhere else in Los Angeles.</p>
+    </div>
+
+    <div class="dual">
+      <div class="dual-card r">
+        <div class="dual-figure">
+          <img src="p_lineup.jpg" alt="A Macallan tasting flight — 15, 18, 25, Sherry Oak, and Rare Cask">
+          <div class="dual-figure-cap">The Tasting Flight · 15 · 18 · 25 · Rare Cask</div>
+        </div>
+        <div class="dual-eyebrow">Tasting Program</div>
+        <h3 class="dual-title">Pours from the cask, <em>in sequence.</em></h3>
+        <p class="dual-body">The Macallan's Private Client Relationship Managers walk guests through the full range — from the Double Cask to the most prestigious aged releases. Side-by-side comparisons, cask conversations, and bottlings rarely seen outside the distillery. A program built around tasting, not drinking.</p>
+      </div>
+      <div class="dual-card r d2">
+        <div class="dual-figure">
+          <img src="p_dinner.jpg" alt="A Night On Earth First Light bottle at a multi-course dinner setting">
+          <div class="dual-figure-cap">The Table · A Night On Earth · First Light</div>
+        </div>
+        <div class="dual-eyebrow">Culinary Program</div>
+        <h3 class="dual-title">A table by <em>Chef Chris Sayegh.</em></h3>
+        <p class="dual-body">A multi-course dinner — sustainability-led, plant-forward, paired course by course to the pours. The Villa's culinary collaborator and the kitchen built for him. The meal is the centerpiece; the conversation is the result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOSTS ===== -->
+<section class="sec sec-black" style="padding-top:0">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:24px">
+      <div class="ey r" style="justify-content:center;display:inline-flex">The Hosts</div>
+    </div>
+    <h2 class="section-heading r d1" style="text-align:center;max-width:none;margin:0 auto 24px">A partnership of <em>three.</em></h2>
+    <p class="lede r d2" style="text-align:center;margin:0 auto 24px;color:rgba(245,237,224,.72)">Three hosts, one afternoon — each bringing the audience the other two can't reach on their own.</p>
+
+    <div class="hosts">
+      <div class="host r">
+        <div class="host-mark">M</div>
+        <div class="host-name">The Macallan</div>
+        <div class="host-role">Villa · Tasting · Dinner</div>
+        <div class="host-body">The Villa, the full range of bottlings, the Private Client Relationship Managers, the cocktail program, and Chef Sayegh's table.</div>
+      </div>
+      <div class="host r d1">
+        <div class="host-mark">C</div>
+        <div class="host-name">Compass Beverly Hills</div>
+        <div class="host-role">Bel-Air · The Estates · The Agents</div>
+        <div class="host-body">The estates, the open-house circuit, and the top-producing agents who define what luxury looks like in Los Angeles — hosted by AMRE Real Estate Group.</div>
+      </div>
+      <div class="host r d2">
+        <div class="host-mark">H</div>
+        <div class="host-name">Haps Club</div>
+        <div class="host-role">Curation · The Invite List</div>
+        <div class="host-body">The cultural curation engine for Los Angeles — every Haps Club guest is hand-vetted, and the invite list is built room by room, not blast by blast.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="invitation">
+  <div class="cta-haps r">
+    <div class="cta-haps-label">An invitation from</div>
+    <img class="cta-haps-logo" src="haps-club-white.svg" alt="Haps Club">
+  </div>
+  <h2 class="r d1">By invitation, <em>only.</em></h2>
+  <p class="cta-lede r d2">No public ticketing. No guest list at the door. A small, hand-vetted room — top agents, sophisticated clients, and the people who move quietly between them.</p>
+  <a href="mailto:michael@haps.club?subject=Request%20%E2%80%94%20An%20Afternoon%20at%20The%20Macallan%20Villa" class="cta-btn r d3">Begin the Conversation</a>
+  <div class="cta-foot r d4">Presented by Haps Club · Hosted by AMRE at Compass Beverly Hills · The Macallan</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="page-foot">
+  <div class="foot-mark">The Macallan <em>×</em> Compass Beverly Hills <em>×</em> Haps Club</div>
+  <div class="foot-divider"></div>
+  <p class="foot-fine"><span style="opacity:.7">Last updated May 27, 2026 at 1:08 PM PT</span><br><br>Confidential partnership proposal. Prepared by AMRE Real Estate Group at Compass Beverly Hills. Event details, timing, and estates are illustrative and subject to mutual planning. Photo credit: Courtesy of The Macallan. The Macallan and Haps Club marks are referenced for proposal context only and remain the property of their respective owners. Michael Abraham · DRE #02242095 · Ania De Pourbaix · DRE #01891438 · Compass · DRE #01991628.</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',window.scrollY>60),{passive:true});
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.12,rootMargin:'0px 0px -4% 0px'});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
