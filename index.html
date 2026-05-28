@@ -60,16 +60,17 @@ svg.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-
 .f.on{background:var(--navy);color:#fff;border-color:var(--navy)}.f.on .cdot{background:#fff}
 .f[data-f="food"]{--c:var(--food)}.f[data-f="culture"]{--c:var(--culture)}.f[data-f="outdoors"]{--c:var(--outdoors)}
 .f[data-f="music"]{--c:var(--music)}.f[data-f="date"]{--c:var(--date)}.f[data-f="free"]{--c:var(--free)}
+.f[data-f="coming-up"]{--c:#E69D2C}.f[data-f="evergreen"]{--c:#15803D}
 .f.on[data-f]:not([data-f="all"]){background:var(--c);border-color:var(--c)}
 
-.when-row{max-width:1080px;margin:0 auto;padding:0 18px 8px;display:flex;align-items:center;gap:10px}
-.seg{display:inline-flex;background:rgba(255,255,255,.6);border:1.5px solid var(--line);border-radius:999px;padding:3px;backdrop-filter:blur(8px)}
-.seg button{font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--mut);background:none;border:none;padding:8px 13px;border-radius:999px;cursor:pointer;transition:.2s var(--ease);white-space:nowrap;min-height:38px}
-.seg button.on{background:var(--navy);color:#fff}
+
+
+
+
 .shuffle{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--coral);background:rgba(255,255,255,.7);border:1.5px solid var(--coral);padding:9px 14px;border-radius:999px;cursor:pointer;transition:.2s;min-height:40px;backdrop-filter:blur(8px);white-space:nowrap}
 .shuffle:hover{background:var(--coral);color:#fff}.shuffle:active svg{transform:rotate(180deg)}.shuffle svg{transition:.4s}
 
-.count{max-width:1080px;margin:0 auto;padding:4px 20px 10px}
+.count{max-width:1080px;margin:0 auto;padding:4px 20px 14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
 .count .n{font-size:13px;font-weight:600;color:var(--mut)}.count .n b{color:var(--navy)}
 
 .grid{max-width:1080px;margin:0 auto;padding:6px 18px 40px;display:grid;gap:15px;grid-template-columns:1fr;grid-auto-flow:dense}
@@ -190,8 +191,8 @@ body.night .hero .sub,body.night .eyebrow,body.night .count .n{color:rgba(255,25
 body.night .count .n b{color:#fff}
 body.night .controls{background:linear-gradient(#0e0f20,rgba(14,15,32,.4))}
 body.night .f,body.night .seg,body.night .shuffle{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#fff}
-body.night .seg button{color:rgba(255,255,255,.6)}
-body.night .seg button.on,body.night .f.on{background:var(--coral);border-color:var(--coral);color:#fff}
+body.night 
+body.night .f.on{background:var(--coral);border-color:var(--coral);color:#fff}
 body.night .shuffle{color:#ff977c;border-color:#ff977c}
 body.night .tile{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 18px 40px -24px rgba(0,0,0,.7)}
 body.night .tile h3{color:#fff}body.night .tile p{color:rgba(255,255,255,.7)}
@@ -221,6 +222,7 @@ body.night .empty .big{color:#fff}
 <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 4.5C19 16.5 12 21 12 21Z"/></symbol>
 <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M16 3h5v5M21 3l-7 7M8 21H3v-5M3 21l7-7M16 21h5v-5M16 14l5 7M3 3l7 7"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 20s2-12 16-13c0 14-7 16-13 14"/><path d="M5 20l8-8"/></symbol>
 <symbol id="i-comp" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5Z"/></symbol>
 <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></symbol>
 <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4 7 7 0 1 0 20 14.5Z"/></symbol>
@@ -245,6 +247,8 @@ body.night .empty .big{color:#fff}
 <div class="controls">
   <div class="rail" id="rail">
     <button class="f on" data-f="all">All</button>
+    <button class="f" data-f="coming-up"><span class="cdot"></span><svg class="ic"><use href="#i-cal"/></svg>Coming up</button>
+    <button class="f" data-f="evergreen"><span class="cdot"></span><svg class="ic"><use href="#i-leaf"/></svg>Evergreen</button>
     <button class="f" data-f="food"><span class="cdot"></span><svg class="ic"><use href="#i-food"/></svg>Food</button>
     <button class="f" data-f="culture"><span class="cdot"></span><svg class="ic"><use href="#i-culture"/></svg>Culture</button>
     <button class="f" data-f="music"><span class="cdot"></span><svg class="ic"><use href="#i-music"/></svg>Music</button>
@@ -252,15 +256,8 @@ body.night .empty .big{color:#fff}
     <button class="f" data-f="date"><span class="cdot"></span><svg class="ic"><use href="#i-date"/></svg>Date</button>
     <button class="f" data-f="free"><span class="cdot"></span><svg class="ic"><use href="#i-free"/></svg>Free</button>
   </div>
-  <div class="when-row">
-    <div class="seg" id="seg">
-      <button data-w="all" class="on">Anytime</button>
-      <button data-w="weekend">This weekend</button>
-      <button data-w="upcoming">Upcoming</button>
-    </div>
-    <button class="shuffle" id="shuf"><svg class="ic"><use href="#i-shuffle"/></svg>Surprise</button>
-  </div>
-  <div class="count"><span class="n" id="countLabel"><b>7</b> picks this week</span></div>
+  <div class="count"><span class="n" id="countLabel"><b>7</b> picks this week</span>
+  <button class="shuffle" id="shuf"><svg class="ic"><use href="#i-shuffle"/></svg>Surprise</button></div>
 </div>
 
 <main class="grid" id="grid">
@@ -579,13 +576,12 @@ body.night .empty .big{color:#fff}
 const grid=document.getElementById('grid');
 const events=[...grid.querySelectorAll('.tile')].filter(t=>!t.classList.contains('always'));
 const fbtns=[...document.querySelectorAll('.f')];
-const segbtns=[...document.querySelectorAll('.seg button')];
 const countLabel=document.getElementById('countLabel');
 const empty=document.getElementById('empty'), emptyBig=empty.querySelector('.big'), emptyP=empty.querySelector('p');
 const sN=document.getElementById('savedN'), sPill=document.getElementById('savedPill');
 const tray=document.getElementById('tray'), trayDot=document.getElementById('trayDot'), traySub=document.getElementById('traySub');
 const toast=document.getElementById('toast');
-let currentCat='all', currentWhen='all', savedView=false;
+let currentFilter='all', savedView=false;
 
 /* ---- persistence (safe in sandboxed previews) ---- */
 const KEY='haps_saved_v1';
@@ -599,12 +595,10 @@ function render(){
   events.forEach(t=>{
     let match;
     if(savedView){ match=t.classList.contains('saved'); }
-    else {
-      const cats=(t.dataset.cat||'').split(' ');
-      const okCat=currentCat==='all'||cats.includes(currentCat);
-      const okWhen=currentWhen==='all'||t.dataset.when===currentWhen;
-      match=okCat&&okWhen;
-    }
+    else if(currentFilter==='all'){ match=true; }
+    else if(currentFilter==='coming-up'){ match=['weekend','upcoming'].includes(t.dataset.when); }
+    else if(currentFilter==='evergreen'){ match=t.dataset.when==='evergreen'; }
+    else { match=(t.dataset.cat||'').split(' ').includes(currentFilter); }
     t.classList.toggle('hide',!match);
     if(match){shown++;t.style.animation='none';void t.offsetWidth;t.style.animation='up .45s var(--ease)';}
   });
@@ -617,18 +611,13 @@ function render(){
 }
 
 fbtns.forEach(b=>b.addEventListener('click',()=>{
-  currentCat=b.dataset.f; savedView=false; sPill.classList.remove('active');
+  currentFilter=b.dataset.f; savedView=false; sPill.classList.remove('active');
   fbtns.forEach(x=>x.classList.toggle('on',x===b));
-  render();
-}));
-segbtns.forEach(b=>b.addEventListener('click',()=>{
-  currentWhen=b.dataset.w; savedView=false; sPill.classList.remove('active');
-  segbtns.forEach(x=>x.classList.toggle('on',x===b));
   render();
 }));
 sPill.addEventListener('click',()=>{
   savedView=!savedView; sPill.classList.toggle('active',savedView);
-  if(!savedView){fbtns.forEach(x=>x.classList.toggle('on',x.dataset.f===currentCat));}
+  if(!savedView){fbtns.forEach(x=>x.classList.toggle('on',x.dataset.f===currentFilter));}
   render();
 });
 
