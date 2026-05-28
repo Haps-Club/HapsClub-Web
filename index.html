@@ -265,6 +265,7 @@ body.night .empty .big{color:#fff}
 
 <main class="grid" id="grid">
 
+  <!-- LARGE / FEATURED: imminent (this Fri) -->
   <article class="tile feat t-music" data-cat="music free date" data-when="weekend"
     data-title="Jazz at LACMA: Tierney Sutton" data-start="20260529T180000" data-end="20260529T200000"
     data-loc="Smidt Welcome Plaza, LACMA, 5905 Wilshire Blvd, Los Angeles, CA"
@@ -284,27 +285,36 @@ body.night .empty .big{color:#fff}
     <h3>Jazz at LACMA: Tierney Sutton</h3>
     <p>The free Friday-evening jazz series at the Smidt Welcome Plaza. Vocalist Tierney Sutton — multiple Grammy nominations. Get there early.</p>
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Mid-Wilshire</span><span class="tag free">Free</span><span class="tag date">Date</span></div>
-    <div class="actions">
-      <button class="iconbtn save" title="Save" aria-label="Save"><svg class="ic"><use href="#i-heart"/></svg></button>
-      <button class="iconbtn add" title="Add to calendar" aria-label="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button>
-      <a class="iconbtn details" title="Details" aria-label="Details"><svg class="ic"><use href="#i-arrow"/></svg></a>
-    </div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <article class="tile t-culture" data-cat="culture date" data-when="weekend"
+  <!-- MEDIUM: this weekend -->
+  <article class="tile wide t-culture" data-cat="culture date" data-when="weekend"
     data-title="Cinespia: Mulholland Drive" data-loc="Hollywood Forever Cemetery, 6000 Santa Monica Blvd, Los Angeles, CA"
     data-details="Lynch under the stars. Gates around 7:15pm — bring a blanket. Check cinespia.org for the exact date. via Haps Club"
     data-link="https://cinespia.org" style="animation-delay:.05s">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">SAT</span></div>
     <h3>Cinespia: Mulholland Drive</h3>
-    <p>Lynch under the stars at Hollywood Forever. Bring a blanket and someone you want to pleasantly confuse.</p>
+    <p>Lynch under the stars at Hollywood Forever. Bring a blanket and someone you want to pleasantly confuse — gates open around 7:15.</p>
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</span><span class="tag paid">Ticketed</span><span class="tag date">Date</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <article class="tile awol t-date" data-cat="date" data-when="upcoming"
+  <!-- MEDIUM: this weekend (recurring) -->
+  <article class="tile wide t-food" data-cat="food free" data-when="weekend"
+    data-title="Smorgasburg LA — Sundays" data-loc="ROW DTLA, 777 S Alameda St, Los Angeles, CA"
+    data-details="Open-air food market every Sunday, 10am-4pm. Free entry. via Haps Club" data-link="https://www.smorgasburg.com/los-angeles" style="animation-delay:.1s">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">SUN</span></div>
+    <h3>Smorgasburg Sundays</h3>
+    <p>The open-air food market at ROW DTLA is in full swing every Sunday. Go hungry, leave broke, regret absolutely nothing.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>DTLA</span><span class="tag free">Free entry</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <!-- MEDIUM: upcoming, AWOL -->
+  <article class="tile wide awol t-date" data-cat="date" data-when="upcoming"
     data-title="Penmar Wine Mixer" data-start="20260606" data-loc="Penmar, Venice, CA"
-    data-details="AWOL pick — Westside wine mixer. Venice, June 6. via Haps Club" data-link="https://www.instagram.com/thehapsclub/" style="animation-delay:.1s">
+    data-details="AWOL pick - Westside wine mixer. Venice, June 6. via Haps Club" data-link="https://www.instagram.com/thehapsclub/" style="animation-delay:.15s">
     <div class="head"><span class="flag"><svg class="ic"><use href="#i-comp"/></svg>AWOL · West of Lincoln</span><span class="badge">JUN 6</span></div>
     <h3>Penmar Wine Mixer</h3>
     <p>Natural pours and a soft-launch crowd in Venice. For the subscribers who simply do not cross the 405, this one comes to you.</p>
@@ -312,49 +322,79 @@ body.night .empty .big{color:#fff}
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <article class="tile t-music wide" data-cat="music" data-when="upcoming"
+  <!-- SMALL: further out -->
+  <article class="tile t-music" data-cat="music" data-when="upcoming"
     data-title="Blue Note Jazz Festival" data-loc="Los Angeles, CA"
-    data-details="Multi-day jazz festival — stacked lineup. Confirm dates + lineup at bluenotejazzfestival.com. via Haps Club"
-    data-link="https://www.bluenotejazzfestival.com" style="animation-delay:.15s">
+    data-details="Multi-day jazz festival - stacked lineup. Confirm dates at bluenotejazzfestival.com. via Haps Club"
+    data-link="https://www.bluenotejazzfestival.com" style="animation-delay:.2s">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-music"/></svg>Festival</span><span class="badge">SUMMER</span></div>
     <h3>Blue Note Jazz Festival</h3>
-    <p>Multiple days, one hillside, and a lineup that fully justifies the rideshare surge. Day passes are worth grabbing early before the headliners sell the weekend out.</p>
+    <p>Multiple days, one hillside, a stacked lineup. Day passes worth grabbing early.</p>
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>LA</span><span class="tag paid">Ticketed</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
+  <!-- SMALL: further out -->
   <article class="tile t-music" data-cat="music outdoors" data-when="upcoming"
     data-title="Hollywood Bowl — Opening Night" data-loc="Hollywood Bowl, 2301 N Highland Ave, Los Angeles, CA"
-    data-details="Summer season opener under the shells. Confirm date + program at hollywoodbowl.com. via Haps Club"
-    data-link="https://www.hollywoodbowl.com" style="animation-delay:.2s">
+    data-details="Summer season opener under the shells. Confirm date at hollywoodbowl.com. via Haps Club"
+    data-link="https://www.hollywoodbowl.com" style="animation-delay:.25s">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-music"/></svg>Music</span><span class="badge">SOON</span></div>
     <h3>Hollywood Bowl — Opening Night</h3>
-    <p>The summer season kicks off under the shells. Picnic in the box seats and beat the stack-parking by arriving early.</p>
+    <p>Summer season kicks off under the shells. Picnic in the box seats; go early to beat stack-parking.</p>
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</span><span class="tag paid">Ticketed</span><span class="tag">Outdoors</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <article class="tile t-food" data-cat="food free" data-when="weekend"
-    data-title="Smorgasburg LA — Sundays" data-loc="ROW DTLA, 777 S Alameda St, Los Angeles, CA"
-    data-details="Open-air food market every Sunday, 10am–4pm. Free entry. via Haps Club" data-link="https://www.smorgasburg.com/los-angeles" style="animation-delay:.25s">
-    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">SUN</span></div>
-    <h3>Smorgasburg Sundays</h3>
-    <p>The open-air food market at ROW DTLA is in full swing. Go hungry, leave broke, regret absolutely nothing.</p>
-    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>DTLA</span><span class="tag free">Free entry</span></div>
-    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-  </article>
-
-  <article class="tile t-outdoors" data-cat="outdoors free" data-when="upcoming"
+  <!-- MEDIUM evergreen: Outdoors anchor -->
+  <article class="tile wide t-outdoors" data-cat="outdoors free" data-when="evergreen"
     data-title="Solstice Canyon, Malibu" data-loc="Solstice Canyon, Malibu, CA"
     data-details="Shaded creekside loop to a waterfall and the Roberts Ranch ruins. Easy, dog-friendly, year-round. via Haps Club"
     data-link="https://www.alltrails.com/trail/us/california/solstice-canyon-loop-trail" style="animation-delay:.3s">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-outdoors"/></svg>Outdoors</span><span class="badge">EVERGREEN</span></div>
     <h3>Solstice Canyon, Malibu</h3>
-    <p>A shaded creekside loop to a waterfall and the old Roberts Ranch ruins. Easy, dog-friendly, and gorgeous year-round — the reliable Westside reset.</p>
+    <p>A shaded creekside loop to a waterfall and the old Roberts Ranch ruins. Easy, dog-friendly, gorgeous year-round — the reliable Westside reset.</p>
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Malibu</span><span class="tag free">Free</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Trail info" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
+  <!-- SMALL evergreen hike -->
+  <article class="tile t-outdoors" data-cat="outdoors free" data-when="evergreen"
+    data-title="Runyon Canyon" data-loc="Runyon Canyon Park, Los Angeles, CA"
+    data-details="Quick city-view climb above Hollywood. Free, dog-friendly. via Haps Club"
+    data-link="https://www.alltrails.com/trail/us/california/runyon-canyon-loop" style="animation-delay:.35s">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-outdoors"/></svg>Outdoors</span><span class="badge">EVERGREEN</span></div>
+    <h3>Runyon Canyon</h3>
+    <p>The quick city-view climb above Hollywood. Free, dog-friendly, always there.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</span><span class="tag free">Free</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Trail info" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <!-- SMALL evergreen eats (swap for your go-tos) -->
+  <article class="tile t-food" data-cat="food" data-when="evergreen"
+    data-title="Gjelina" data-loc="1429 Abbot Kinney Blvd, Venice, CA"
+    data-details="Westside staple - wood-fired veg, pizzas, natural wine on Abbot Kinney. via Haps Club"
+    data-link="https://www.gjelina.com/" style="animation-delay:.4s">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
+    <h3>Gjelina</h3>
+    <p>The Abbot Kinney staple — wood-fired vegetables, pizzas, natural wine. Always a safe Westside yes.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <!-- SMALL evergreen eats -->
+  <article class="tile t-food" data-cat="food" data-when="evergreen"
+    data-title="Guelaguetza" data-loc="3014 W Olympic Blvd, Los Angeles, CA"
+    data-details="Landmark Oaxacan restaurant in Koreatown - mole, tlayudas, mezcal. via Haps Club"
+    data-link="https://www.google.com/maps/search/Guelaguetza+Restaurant+Los+Angeles" style="animation-delay:.45s">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
+    <h3>Guelaguetza</h3>
+    <p>The landmark Oaxacan spot in K-town — seven moles, tlayudas, a mezcal list. An LA institution.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Koreatown</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <!-- Newsletter -->
   <article class="tile mail wide always" id="join" data-cat="" data-when="all">
     <div class="head"><span class="cat" style="color:var(--navy);background:rgba(41,47,113,.08)">The Tuesday email</span></div>
     <h3>One email, everything in LA.</h3>
@@ -549,6 +589,7 @@ themeBtn.addEventListener('click',()=>setTheme(!document.body.classList.contains
   let savedList=load();
   if(savedList.length){ events.forEach(t=>{ if(savedList.includes(t.dataset.title)){ t.classList.add('saved'); t.querySelector('.save')?.classList.add('on'); } }); }
   updateTray();
+  countLabel.innerHTML='<b>'+events.length+'</b> picks this week';
   let theme='day'; try{theme=localStorage.getItem('haps_theme')||'day'}catch(e){}
   if(theme==='night') setTheme(true);
 })();
