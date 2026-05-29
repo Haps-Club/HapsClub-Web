@@ -215,6 +215,15 @@ button { font-family: inherit; }
   gap: 16px;
   align-items: flex-start;
 }
+.bio-photo {
+  display: block;
+  width: 160px; height: 160px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  margin: 0 0 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 30px -14px rgba(0,0,0,.22);
+}
 .bio-text { flex: 1; min-width: 0; }
 .bio-eyebrow {
   font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
@@ -347,6 +356,7 @@ button { font-family: inherit; }
 </section>
 
 <section class="bio">
+  <img class="bio-photo" src="/img/michael.jpg" alt="Michael Abraham, founder of Haps Club" width="160" height="160" loading="lazy">
   <div class="bio-card">
     <div class="bio-text">
       <p class="bio-eyebrow">Who's behind this</p>
