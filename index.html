@@ -61,7 +61,7 @@ svg.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-
 .f[data-f="food"]{--c:var(--food)}.f[data-f="culture"]{--c:var(--culture)}.f[data-f="outdoors"]{--c:var(--outdoors)}
 .f[data-f="music"]{--c:var(--music)}.f[data-f="date"]{--c:var(--date)}.f[data-f="free"]{--c:var(--free)}
 .f[data-f="coming-up"]{--c:#E69D2C}.f[data-f="evergreen"]{--c:#15803D}
-.f[data-f="westside"],.f[data-f="hollywood"],.f[data-f="midcity"],.f[data-f="downtown"],.f[data-f="eastside"]{--c:#5b6280}
+.f[data-f="westside"],.f[data-f="bhweho"],.f[data-f="hollywood"],.f[data-f="midcity"],.f[data-f="dtla"],.f[data-f="eastside"],.f[data-f="valley"],.f[data-f="southbay"]{--c:#5b6280}
 .rail-area{display:flex;gap:8px;overflow-x:auto;align-items:center;padding:2px 20px 4px;max-width:1080px;margin:6px auto 0;scrollbar-width:none}
 .rail-area::-webkit-scrollbar{display:none}
 .rail-area .rail-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);flex-shrink:0;padding-right:4px}
@@ -92,28 +92,32 @@ body.night .tag.area-tag:hover{background:color-mix(in srgb,var(--coral) 28%,tra
 .tile{position:relative;background:rgba(255,255,255,.66);backdrop-filter:blur(14px) saturate(1.2);
   border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:20px;overflow:hidden;
   box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 14px 34px -22px rgba(41,47,113,.4);
-  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .4s var(--ease);display:flex;flex-direction:column;min-height:182px;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .4s var(--ease);display:flex;flex-direction:column;min-height:220px;
   animation:up .5s var(--ease) backwards}
 @keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 .tile:hover{transform:translateY(-5px);box-shadow:0 1px 0 rgba(255,255,255,.8) inset,0 26px 50px -24px rgba(41,47,113,.5),0 0 0 1px color-mix(in srgb,var(--c,var(--navy)) 30%,transparent)}
 .tile.hide{display:none}
 .tile.flash{box-shadow:0 0 0 3px rgba(255,107,71,.55),0 26px 50px -24px rgba(41,47,113,.5)!important}
 .t-food{--c:var(--food)}.t-culture{--c:var(--culture)}.t-outdoors{--c:var(--outdoors)}.t-music{--c:var(--music)}.t-date{--c:var(--date)}.t-free{--c:var(--free)}
+.tile.rec{background:linear-gradient(160deg,rgba(255,107,71,.10) 0%,rgba(255,107,71,.05) 35%,rgba(255,255,255,.66) 75%);border-color:rgba(255,107,71,.22)}
+.tile.rec .cat{background:color-mix(in srgb,var(--coral) 22%,#fff);color:#c64a2a}
+body.night .tile.rec{background:linear-gradient(160deg,rgba(255,107,71,.18) 0%,rgba(255,107,71,.08) 40%,rgba(255,255,255,.06) 80%);border-color:rgba(255,107,71,.32)}
+body.night .tile.rec .cat{background:rgba(255,107,71,.28);color:#fff}
 
 .tile .head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;position:relative;z-index:2}
 .cat{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--c,var(--navy));background:color-mix(in srgb,var(--c,var(--navy)) 13%,#fff);padding:6px 11px;border-radius:999px}
 .cat svg{font-size:13px}
 .badge{flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.6px;color:var(--coral);background:color-mix(in srgb,var(--coral) 14%,#fff);padding:6px 10px;border-radius:10px}
 .tile h3{font-family:var(--serif);font-size:26px;font-weight:400;line-height:1.03;margin:13px 0 7px;position:relative;z-index:2}
-.tile p{font-size:13.5px;color:#5c576b;line-height:1.55;position:relative;z-index:2}
-.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;position:relative;z-index:2}
+.tile p{font-size:13.5px;color:#5c576b;line-height:1.55;position:relative;z-index:2;margin-bottom:0}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:14px;position:relative;z-index:2}
 .tag{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;padding:6px 10px;border-radius:9px;background:color-mix(in srgb,var(--paper) 70%,transparent);color:var(--navy)}
 .tag svg{font-size:12px;color:var(--mut)}
 .tag.free{background:color-mix(in srgb,var(--free) 15%,#fff);color:#0a7d72}
 .tag.paid{background:rgba(120,116,136,.12);color:#6b6578}
 .tag.date{background:color-mix(in srgb,var(--date) 13%,#fff);color:#c23072}
 
-.actions{margin-top:auto;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--line) 80%,transparent);display:flex;align-items:center;gap:9px;position:relative;z-index:2}
+.actions{margin-top:auto;padding-top:18px;border-top:1px solid color-mix(in srgb,var(--line) 80%,transparent);display:flex;align-items:center;gap:9px;position:relative;z-index:2}
 .iconbtn{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:rgba(255,255,255,.8);display:grid;place-items:center;cursor:pointer;transition:.22s var(--ease);flex:0 0 auto;color:var(--mut)}
 .iconbtn svg{font-size:18px;fill:none;transition:.2s}
 .iconbtn:hover{border-color:var(--coral);color:var(--coral);transform:translateY(-2px)}
@@ -273,10 +277,13 @@ body.night .empty .big{color:#fff}
   <div class="rail rail-area" id="railArea">
     <span class="rail-label">Areas</span>
     <button class="f f-area" data-f="westside"><svg class="ic"><use href="#i-pin"/></svg>Westside</button>
+    <button class="f f-area" data-f="bhweho"><svg class="ic"><use href="#i-pin"/></svg>BH / WeHo</button>
     <button class="f f-area" data-f="hollywood"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</button>
     <button class="f f-area" data-f="midcity"><svg class="ic"><use href="#i-pin"/></svg>Mid-City</button>
-    <button class="f f-area" data-f="downtown"><svg class="ic"><use href="#i-pin"/></svg>Downtown</button>
+    <button class="f f-area" data-f="dtla"><svg class="ic"><use href="#i-pin"/></svg>DTLA</button>
     <button class="f f-area" data-f="eastside"><svg class="ic"><use href="#i-pin"/></svg>Eastside</button>
+    <button class="f f-area" data-f="valley"><svg class="ic"><use href="#i-pin"/></svg>Valley</button>
+    <button class="f f-area" data-f="southbay"><svg class="ic"><use href="#i-pin"/></svg>South Bay</button>
   </div>
   <div class="count"><span class="n" id="countLabel"><b>7</b> picks this week</span>
   <button class="shuffle" id="shuf"><svg class="ic"><use href="#i-shuffle"/></svg>Surprise</button></div>
@@ -289,7 +296,7 @@ body.night .empty .big{color:#fff}
     data-title="Violinist Amelia Sze on 'Zhang Enli'" data-start="20260529T183000" data-end="20260529T200000"
     data-loc="Hauser &amp; Wirth West Hollywood, 8980 Santa Monica Blvd, West Hollywood, CA"
     data-details="Free standing-only violin performance inside the Zhang Enli exhibition. Performance 6:30-7pm; gallery reception til 8. RSVP via Eventbrite. via Haps Club"
-    data-link="https://www.hauserwirth.com/locations/los-angeles/" data-area="westside">
+    data-link="https://www.hauserwirth.com/locations/los-angeles/" data-area="bhweho">
     <div class="mesh"></div>
     <svg class="illo" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-linecap="round">
       <circle cx="140" cy="60" r="30" opacity=".5" stroke-width="2.5"/>
@@ -311,7 +318,7 @@ body.night .empty .big{color:#fff}
     data-title="Crimes, Conversation &amp; Cocktails with Rob Rosen"
     data-start="20260611T170000" data-end="20260611T190000"
     data-loc="PLANTA Marina Del Rey, 4625 Admiralty Way #104, Marina del Rey, CA 90292"
-    data-details="Friend of Haps. Waterfront happy hour with award-winning journalist Rob Rosen (creator of Reasonable Doubt; author of Crimes of Omission), hosted by Aloni Ford / Yacht Girls Book Club. Cocktails, vegan plates, live Q&A, signed books. 18+, free parking. via Haps Club"
+    data-details="Haps Rec. Waterfront happy hour with award-winning journalist Rob Rosen (creator of Reasonable Doubt; author of Crimes of Omission), hosted by Aloni Ford / Yacht Girls Book Club. Cocktails, vegan plates, live Q&A, signed books. 18+, free parking. via Haps Club"
     data-link="https://www.eventbrite.com/e/crimes-conversation-cocktails-with-rob-rosen-tickets-1990450047674?aff=oddtdtcreator&amp;keep_tld=true" data-area="westside">
     <div class="mesh"></div>
     <svg class="illo" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-linecap="round">
@@ -324,11 +331,11 @@ body.night .empty .big{color:#fff}
       <path d="M55 175 Q75 167 95 175 T135 175 T175 175" opacity=".22" stroke-width="2"/>
     </svg>
     <div class="head">
-      <span class="cat" style="background:rgba(255,107,71,.32);color:#fff"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span>
+      <span class="cat" style="background:rgba(255,107,71,.32);color:#fff"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span>
       <span class="badge">JUN 11</span>
     </div>
     <h3>Crimes, Conversation &amp; Cocktails with Rob Rosen</h3>
-    <p>A Haps friend on the marina: award-winning journalist Rob Rosen — creator of <em>Reasonable Doubt</em>, author of <em>Crimes of Omission</em> — in conversation at PLANTA, with cocktails, vegan plates, live Q&amp;A, and signed books.</p>
+    <p>A Haps Rec on the marina: award-winning journalist Rob Rosen — creator of <em>Reasonable Doubt</em>, author of <em>Crimes of Omission</em> — in conversation at PLANTA, with cocktails, vegan plates, live Q&amp;A, and signed books.</p>
     <div class="tags">
       <span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Marina del Rey</span>
       <span class="tag paid">Ticketed</span>
@@ -371,7 +378,7 @@ body.night .empty .big{color:#fff}
     data-title="DTLA Movie Night: Mamma Mia" data-start="20260530T173000" data-end="20260530T220000"
     data-loc="Grand Hope Park, Los Angeles, CA"
     data-details="Outdoor screening of Mamma Mia in DTLA. Picnic blankets, singalong moments, ABBA-fueled nostalgia. Ticketed. via Haps Club"
-    data-link="https://downtownla.com" style="animation-delay:.12s" data-area="downtown">
+    data-link="https://downtownla.com" style="animation-delay:.12s" data-area="dtla">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">SAT</span></div>
     <h3>DTLA Movie Night: Mamma Mia</h3>
     <p>Outdoor screening of Mamma Mia at Grand Hope Park &mdash; picnic blankets, singalong moments, ABBA-fueled nostalgia. Grab Greek beforehand from George's or Arda's.</p>
@@ -381,7 +388,7 @@ body.night .empty .big{color:#fff}
 
   <article class="tile wide t-food" data-cat="food free" data-when="weekend"
     data-title="Smorgasburg LA — Sundays" data-loc="ROW DTLA, 777 S Alameda St, Los Angeles, CA"
-    data-details="Open-air food market every Sunday, 10am-4pm. Free entry. via Haps Club" data-link="https://la.smorgasburg.com/" style="animation-delay:.1s" data-area="downtown">
+    data-details="Open-air food market every Sunday, 10am-4pm. Free entry. via Haps Club" data-link="https://la.smorgasburg.com/" style="animation-delay:.1s" data-area="dtla">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">SUN</span></div>
     <h3>Smorgasburg Sundays</h3>
     <p>The open-air food market at ROW DTLA is in full swing every Sunday. Go hungry, leave broke, regret absolutely nothing.</p>
@@ -509,7 +516,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food date" data-when="evergreen"
     data-title="Bavel" data-loc="500 Mateo St, Los Angeles, CA"
     data-details="Bestia-team Middle Eastern stunner in the Arts District. Reservation required. via Haps Club"
-    data-link="https://baveldtla.com/" style="animation-delay:.38s" data-area="downtown">
+    data-link="https://baveldtla.com/" style="animation-delay:.38s" data-area="dtla">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>Bavel</h3>
     <p>The Bestia team's Middle Eastern stunner in the Arts District. Book ahead — special-occasion energy on a regular night.</p>
@@ -552,73 +559,73 @@ body.night .empty .big{color:#fff}
 
   
 
-  <article class="tile wide t-culture" data-cat="culture date" data-when="weekend"
+  <article class="tile wide t-culture rec" data-cat="culture date" data-when="weekend"
   data-title="Wild Embodiment" data-start="20260529T180000" data-end="20260529T210000"
   data-loc="The KINN, Venice, CA"
   data-details="A friend hosting: an evening of art, movement and intuition. Light snacks and drinks. Code chaosmos13 for $35. via Haps Club"
   data-link="https://luma.com/WildEmbodiment" style="animation-delay:.18s" data-area="westside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">FRI · MAY 29</span></div>
+  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span><span class="badge">FRI · MAY 29</span></div>
   <h3>Wild Embodiment</h3>
-  <p>An evening of art, movement and intuition at The KINN — your friend Chao hosting. Light snacks, drinks, code <code style="background:color-mix(in srgb,var(--coral) 13%,#fff);color:#c64a2a;padding:1px 6px;border-radius:5px;font-family:ui-monospace,Menlo,monospace;font-size:12px">chaosmos13</code> drops it to $35.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span><span class="tag paid">Ticketed</span><span class="tag">via Chao</span></div>
+  <p>Chao's hosting an evening of art, movement and intuition at The KINN. Light snacks and drinks; code <code style="background:color-mix(in srgb,var(--coral) 13%,#fff);color:#c64a2a;padding:1px 6px;border-radius:5px;font-family:ui-monospace,Menlo,monospace;font-size:12px">chaosmos13</code> drops it to $35.</p>
+  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span><span class="tag paid">Ticketed</span></div>
   <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </article>
 
-  <article class="tile t-music" data-cat="music date" data-when="weekend"
+  <article class="tile t-music rec" data-cat="music date" data-when="weekend"
   data-title="Mendelssohn &amp; Saint-Saëns Piano Trios" data-start="20260529T190000" data-end="20260529T210000"
   data-loc="Steinway Showroom, Beverly Hills, CA"
   data-details="Intimate Groupmuse chamber concert in the Steinway showroom. Friend recommendation. via Haps Club"
-  data-link="https://www.groupmuse.com/events/16361-mendelssohn-saint-saens-piano-trios-with-ensemble132" style="animation-delay:.2s" data-area="westside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">FRI · MAY 29</span></div>
+  data-link="https://www.groupmuse.com/events/16361-mendelssohn-saint-saens-piano-trios-with-ensemble132" style="animation-delay:.2s" data-area="bhweho">
+  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span><span class="badge">FRI · MAY 29</span></div>
   <h3>Mendelssohn &amp; Saint-Saëns Piano Trios</h3>
-  <p>Intimate Groupmuse chamber concert in the Steinway showroom. A handful of Haps members already locked in — Geoff's pick.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Beverly Hills</span><span class="tag paid">Ticketed</span><span class="tag">via Geoff</span></div>
+  <p>Geoff's pick: an intimate Groupmuse chamber concert in the Steinway showroom, with a handful of Haps members already locked in.</p>
+  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Beverly Hills</span><span class="tag paid">Ticketed</span></div>
   <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </article>
 
-  <article class="tile t-outdoors" data-cat="outdoors date" data-when="weekend"
+  <article class="tile t-outdoors rec" data-cat="outdoors date" data-when="weekend"
   data-title="Full Blue Moon Rising Hike" data-start="20260531T193000" data-end="20260531T223000"
   data-loc="Elysian Park, Los Angeles, CA"
   data-details="Full-moon hike with live music in the Elysian hills. Friend recommendation. via Haps Club"
   data-link="https://www.eventbrite.com/e/full-blue-moon-rising-experience-may-tickets-1989962888568" style="animation-delay:.22s" data-area="eastside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">SUN · MAY 31</span></div>
+  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span><span class="badge">SUN · MAY 31</span></div>
   <h3>Full Blue Moon Rising Hike</h3>
-  <p>A full-moon hike with live music up in the Elysian hills. Stefanie went a few months back and called it magical — going again this Sunday.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Elysian Park</span><span class="tag paid">Ticketed</span><span class="tag">via Stefanie</span></div>
+  <p>Stefanie's going again this Sunday — a full-moon hike with live music up in the Elysian hills. She called it magical the first time around.</p>
+  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Elysian Park</span><span class="tag paid">Ticketed</span></div>
   <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </article>
 
-  <article class="tile t-music" data-cat="music date" data-when="upcoming"
+  <article class="tile t-music rec" data-cat="music date" data-when="upcoming"
   data-title="MindTravel Silent Piano Concert" data-start="20260606T193000" data-end="20260606T220000"
   data-loc="Elysian Park, Los Angeles, CA"
   data-details="Murray Hidary's silent piano under the stars at Elysian Park. Group discount via Barrett's affiliate link. via Haps Club"
   data-link="https://www.eventbrite.com/e/mindtravel-june-live-to-headphones-silent-piano-concert-in-los-angeles-tickets-1988282409209?aff=barrett" style="animation-delay:.24s" data-area="eastside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">SAT · JUN 6</span></div>
+  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span><span class="badge">SAT · JUN 6</span></div>
   <h3>MindTravel Silent Piano</h3>
-  <p>Murray Hidary's silent piano under the stars at Elysian Park, near Dodger Stadium. Bring headphones and a blanket — Barrett's discount link.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Elysian Park</span><span class="tag paid">Ticketed</span><span class="tag">via Barrett</span></div>
+  <p>Barrett shared the group discount link for Murray Hidary's silent piano under the stars at Elysian Park, near Dodger Stadium. Bring headphones and a blanket.</p>
+  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Elysian Park</span><span class="tag paid">Ticketed</span></div>
   <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </article>
 
-  <article class="tile t-food" data-cat="food date" data-when="evergreen"
+  <article class="tile t-food rec" data-cat="food date" data-when="evergreen"
   data-title="Twentieth Street Garden" data-loc="Santa Monica, CA"
   data-details="Santa Monica backyard supper club — Argentine asados, garden dinners. Sells out every time. via Haps Club"
   data-link="https://www.twentiethstreetgarden.com/upcomingevents" style="animation-delay:.26s" data-area="westside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">SUPPER CLUB</span></div>
+  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span><span class="badge">SUPPER CLUB</span></div>
   <h3>Twentieth Street Garden</h3>
-  <p>The Santa Monica backyard supper club — Argentine asados, garden dinners, the works. Sells out fast every time; watch the upcoming events page.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Santa Monica</span><span class="tag paid">Ticketed</span><span class="tag">via Jenn</span></div>
+  <p>Jenn's pick: the Santa Monica backyard supper club — Argentine asados, garden dinners, the works. Sells out fast every time; watch the upcoming events page.</p>
+  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Santa Monica</span><span class="tag paid">Ticketed</span></div>
   <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </article>
 
-  <article class="tile t-food" data-cat="food" data-when="evergreen"
+  <article class="tile t-food rec" data-cat="food" data-when="evergreen"
   data-title="Teddy's Hot House" data-loc="1915 Lincoln Blvd, Venice, CA"
   data-details="Venice neighborhood favorite at 1915 Lincoln Blvd — easy, good, no-fuss. via Haps Club"
   data-link="https://maps.apple.com/?address=1915%20Lincoln%20Blvd,%20Venice,%20CA%2090291&q=Teddy%E2%80%99s%20Hot%20House" style="animation-delay:.28s" data-area="westside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">GO-TO</span></div>
+  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span><span class="badge">GO-TO</span></div>
   <h3>Teddy's Hot House</h3>
-  <p>The Venice neighborhood spot Francisco keeps coming back to — 1915 Lincoln Blvd. Easy, good, no-fuss dinner on the Westside.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span><span class="tag">$$</span><span class="tag">via Francisco</span></div>
+  <p>Francisco's Venice go-to at 1915 Lincoln Blvd — easy, good, no-fuss dinner on the Westside.</p>
+  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span><span class="tag">$$</span></div>
   <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
 </article>
 
@@ -634,7 +641,7 @@ body.night .empty .big{color:#fff}
 
 </main>
 
-<div class="empty" id="empty"><div class="big">Nothing matches that filter.</div><p style="margin-top:8px">Try another color, or clear it.</p></div>
+<div class="empty" id="empty"><div class="big">Nothing here yet.</div><p style="margin-top:8px">No picks match that filter — try another, or hit All to reset.</p></div>
 
 <section class="sponsor-strip"><div class="inner">
   <div>
@@ -706,7 +713,7 @@ function render(){
     else if(currentFilter==='all'){ match=true; }
     else if(currentFilter==='coming-up'){ match=['weekend','upcoming'].includes(t.dataset.when); }
     else if(currentFilter==='evergreen'){ match=t.dataset.when==='evergreen'; }
-    else if(['westside','hollywood','midcity','downtown','eastside'].includes(currentFilter)){ match=t.dataset.area===currentFilter; }
+    else if(['westside','bhweho','hollywood','midcity','dtla','eastside','valley','southbay'].includes(currentFilter)){ match=t.dataset.area===currentFilter; }
     else { match=(t.dataset.cat||'').split(' ').includes(currentFilter); }
     t.classList.toggle('hide',!match);
     if(match){shown++;t.style.animation='none';void t.offsetWidth;t.style.animation='up .45s var(--ease)';}
