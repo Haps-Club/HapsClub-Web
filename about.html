@@ -7,309 +7,197 @@
 <meta name="description" content="Haps Club is a daily-curated guide to what's actually worth doing in Los Angeles, with a weekly email digest.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy: #292f71;
-  --navy-deep: #1a1f4d;
-  --navy-tint: #EEF0F8;
-  --accent: #FF6B47;
-  --accent-deep: #E54D2B;
-  --accent-tint: #FFF1ED;
-  --bg: #FAFAF7;
-  --surface: #FFFFFF;
-  --surface-2: #F4F3EE;
-  --line: rgba(15, 17, 23, 0.10);
-  --ink: #0F1117;
-  --ink-2: #3A3D47;
-  --ink-3: #6B6F7A;
-  --ink-4: #9CA0AB;
-  --ink-5: #D7D9DE;
-  --hairline: rgba(15, 17, 23, 0.08);
-  --sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  --serif: 'Instrument Serif', 'New York', 'Times New Roman', serif;
-  --radius-md: 16px;
-  --radius-lg: 22px;
-  --container: 580px;
+:root{
+  --navy:#292f71; --navy-deep:#181c4e; --coral:#FF6B47;
+  --cream:#FAF7F0; --paper:#F1EADC; --line:#E7DFCF; --ink:#1c1e30; --mut:#7a7488;
+  --r:22px; --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-*:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-html, body {
-  background: var(--bg); color: var(--ink); font-family: var(--sans);
-  font-size: 16px; line-height: 1.5;
-  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-  letter-spacing: -0.011em;
-}
-body { padding-bottom: 4rem; overflow-x: hidden; }
-a { color: inherit; text-decoration: none; }
-button { font-family: inherit; }
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--cream);color:var(--navy);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:-.011em;min-height:100vh;transition:background .4s var(--ease),color .4s var(--ease)}
+body{padding-bottom:48px;overflow-x:hidden;position:relative;
+  background:
+    radial-gradient(80% 50% at 80% -10%,rgba(255,107,71,.10),transparent 60%),
+    radial-gradient(60% 40% at 0% 100%,rgba(124,92,255,.10),transparent 60%),
+    var(--cream)}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font-family:inherit}
+*:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:6px}
 
-.topbar {
-  position: sticky; top: 0; z-index: 50;
-  background: rgba(250, 250, 247, 0.78);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 0.5px solid var(--hairline);
-}
-.topbar-inner {
-  max-width: var(--container); margin: 0 auto;
-  padding: 12px 16px;
-  display: flex; align-items: center; gap: 12px;
-}
-.topbar-logo-link { flex-shrink: 0; display: block; }
-.topbar-logo { height: 28px; width: auto; display: block; }
-.topbar-form {
-  display: flex; align-items: center;
-  flex: 1; min-width: 0;
-  background: white;
-  border: 1px solid var(--hairline);
-  border-radius: 999px;
-  overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  height: 36px;
-}
-.topbar-form:focus-within { border-color: var(--navy); box-shadow: 0 0 0 3px var(--navy-tint); }
-.topbar-form input {
-  flex: 1; min-width: 0;
-  border: none; background: transparent;
-  padding: 0 10px 0 14px;
-  font-family: inherit; font-size: 13px; color: var(--ink);
-  outline: none; height: 100%;
-}
-.topbar-form input::placeholder { color: var(--ink-4); }
-.topbar-form button {
-  flex-shrink: 0;
-  border: none; background: var(--navy); color: white;
-  padding: 0 14px; height: 100%;
-  font-family: inherit; font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
-  cursor: pointer; transition: background 0.2s ease;
-  display: flex; align-items: center; gap: 5px;
-}
-.topbar-form button:hover { background: var(--navy-deep); }
-.topbar-form button svg { width: 13px; height: 13px; }
-.topbar-form-status { font-size: 12px; color: var(--accent-deep); font-weight: 500; white-space: nowrap; padding: 0 14px; overflow: hidden; text-overflow: ellipsis; }
-@media (max-width: 480px) {
-  .topbar-inner { padding: 10px 14px; gap: 10px; }
-  .topbar-logo { height: 24px; }
-  .topbar-form button span { display: none; }
-  .topbar-form button { padding: 0 12px; }
-  .topbar-form input { padding: 0 8px 0 12px; }
-}
+/* ========== Header ========== */
+.bar{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.78);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid rgba(41,47,113,.08)}
+.bar-in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:12px}
+.logo{flex-shrink:0;display:block}
+.logo img{height:44px;width:auto;display:block}
+.bar-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.pillbtn{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--navy);background:rgba(255,255,255,.7);border:1px solid var(--line);padding:9px 13px;border-radius:999px;min-height:42px;backdrop-filter:blur(8px);cursor:pointer;transition:.2s var(--ease)}
+.pillbtn:hover{border-color:var(--coral)}
+.theme-btn svg{font-size:17px;color:var(--navy)}
+.sub-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#fff;background:var(--navy);padding:11px 16px;border-radius:999px;transition:.2s var(--ease)}
+.sub-btn:hover{background:var(--navy-deep);transform:translateY(-1px)}
 
-.about-hero { padding: 56px 20px 32px 20px; text-align: left; max-width: var(--container); margin: 0 auto; }
-.about-eyebrow {
-  font-family: 'Instrument Serif', Georgia, serif; font-style: italic;
-  font-size: 16px; color: var(--accent-deep);
-  margin: 0 0 12px 0; letter-spacing: 0.2px;
-}
-.about-title {
-  font-size: 44px; font-weight: 700; letter-spacing: -0.03em;
-  line-height: 1.05; color: var(--navy-deep); margin: 0 0 20px 0;
-}
-.about-lede {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: 22px; line-height: 1.45; color: var(--ink); margin: 0;
-}
-.about-section { max-width: var(--container); margin: 0 auto; padding: 28px 20px; }
-.about-section h2 {
-  font-size: 22px; font-weight: 700; color: var(--navy-deep);
-  letter-spacing: -0.02em; margin: 0 0 14px 0;
-}
-.about-section p {
-  font-size: 16px; line-height: 1.65; color: var(--ink-2); margin: 0 0 16px 0;
-}
-.about-section p:last-child { margin-bottom: 0; }
-.about-section p strong { color: var(--ink); font-weight: 600; }
-.about-divider { max-width: var(--container); margin: 8px auto; border: none; border-top: 1px solid var(--line); }
+/* ========== Hero ========== */
+.hero{max-width:1080px;margin:0 auto;padding:56px 20px 24px;text-align:left}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+.eyebrow svg{font-size:14px;fill:none;stroke:currentColor;stroke-width:2}
+.hero h1{font-family:var(--serif);font-size:clamp(40px,7vw,72px);font-weight:400;line-height:1;letter-spacing:-.025em;color:var(--navy);margin:0 0 20px}
+.hero h1 em{font-style:italic;color:var(--coral)}
+.hero .sub{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);line-height:1.4;color:var(--ink);max-width:680px}
 
-.tip-section { background: var(--surface-2); padding: 48px 20px; margin: 32px 0 0 0; }
-.tip-inner { max-width: var(--container); margin: 0 auto; }
-.tip-eyebrow {
-  font-size: 12px; font-weight: 700; letter-spacing: 1.6px;
-  text-transform: uppercase; color: var(--accent-deep); margin: 0 0 10px 0;
-}
-.tip-title { font-size: 28px; font-weight: 700; letter-spacing: -0.025em; color: var(--navy-deep); margin: 0 0 8px 0; }
-.tip-sub { font-size: 15px; color: var(--ink-3); line-height: 1.55; margin: 0 0 24px 0; }
-.tip-form { display: flex; flex-direction: column; gap: 14px; }
-.tip-row { display: flex; flex-direction: column; gap: 6px; }
-.tip-row label { font-size: 12px; font-weight: 600; letter-spacing: 0.3px; color: var(--ink-2); text-transform: uppercase; }
-.tip-row input, .tip-row textarea, .tip-row select {
-  background: white; border: 1px solid var(--line); border-radius: 10px;
-  padding: 12px 14px; font-family: inherit; font-size: 15px; color: var(--ink);
-  width: 100%; transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.tip-row input:focus, .tip-row textarea:focus, .tip-row select:focus {
-  outline: none; border-color: var(--navy); box-shadow: 0 0 0 3px var(--navy-tint);
-}
-.tip-row textarea { min-height: 130px; resize: vertical; }
-.tip-submit {
-  margin-top: 6px; background: var(--navy); color: white; border: none;
-  border-radius: 999px; padding: 13px 24px; font-family: inherit;
-  font-size: 15px; font-weight: 600; cursor: pointer;
-  transition: background 0.2s ease; align-self: flex-start;
-}
-.tip-submit:hover { background: var(--navy-deep); }
-.tip-submit:disabled { opacity: 0.6; cursor: progress; }
-.tip-status { font-size: 14px; margin-top: 12px; padding: 10px 14px; border-radius: 8px; display: none; }
-.tip-status.success { display: block; background: rgba(16, 191, 122, 0.1); color: #0c905c; border: 1px solid rgba(16, 191, 122, 0.3); }
-.tip-status.error { display: block; background: rgba(242, 100, 59, 0.1); color: #c4310f; border: 1px solid rgba(242, 100, 59, 0.3); }
+/* ========== Content cards (glass) ========== */
+.about-wrap{max-width:1080px;margin:24px auto 0;padding:0 20px;display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:780px){.about-wrap{grid-template-columns:1fr 1fr}}
+.card{position:relative;background:rgba(255,255,255,.66);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:26px 26px 24px;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 14px 34px -22px rgba(41,47,113,.4)}
+.card .cat{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--navy);background:color-mix(in srgb,var(--navy) 10%,#fff);padding:6px 11px;border-radius:999px;margin-bottom:14px}
+.card h2{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.1;letter-spacing:-.015em;color:var(--navy);margin:0 0 12px}
+.card p{font-size:15px;line-height:1.6;color:var(--ink);margin:0 0 12px}
+.card p:last-child{margin-bottom:0}
+.card p strong{font-weight:600;color:var(--navy)}
+.card em.coral{font-style:normal;color:var(--coral);font-weight:600}
 
-/* ============ Sponsor block (Blackbird) ============ */
-.sponsor {
-  max-width: var(--container);
-  margin: 32px auto 0;
-  padding: 0 20px;
-}
-.sponsor-card {
-  background: #0a0a0a;
-  color: #fff;
-  border-radius: var(--radius-lg);
-  padding: 24px;
-}
-.sponsor-eyebrow {
-  font-size: 11px;
-  font-weight: 600;
-  color: #999;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.sponsor-eyebrow strong { color: #fff; font-weight: 600; }
-.sponsor-title {
-  font-family: var(--serif);
-  font-size: 26px;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 12px;
-  color: #fff;
-}
-.sponsor-body {
-  font-size: 14.5px;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.78);
-  margin-bottom: 18px;
-}
-.sponsor-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #fff;
-  color: #0a0a0a;
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-.sponsor-cta:hover { transform: translateY(-1px); background: #f0f0f0; }
-.sponsor-cta:active { transform: scale(0.98); }
-.sponsor-cta svg { width: 13px; height: 13px; }
+/* ========== Bio card with photo on the LEFT ========== */
+.bio{max-width:1080px;margin:24px auto 0;padding:0 20px}
+.bio-card{position:relative;background:rgba(255,255,255,.66);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:26px;display:flex;gap:26px;align-items:flex-start;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 14px 34px -22px rgba(41,47,113,.4)}
+.bio-photo{flex-shrink:0;display:block;width:180px;height:180px;border-radius:18px;object-fit:cover;border:1px solid var(--line);box-shadow:0 14px 30px -14px rgba(0,0,0,.25)}
+.bio-text{flex:1;min-width:0}
+.bio-eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--coral);margin:0 0 8px;display:inline-block}
+.bio-name{font-family:var(--serif);font-size:34px;font-weight:400;line-height:1.05;letter-spacing:-.015em;color:var(--navy);margin:0 0 10px}
+.bio-body{font-size:15px;line-height:1.6;color:var(--ink);margin:0 0 14px}
+.bio-link{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:600;color:var(--navy);transition:color .2s ease}
+.bio-link:hover{color:var(--coral)}
+.bio-link svg{width:13px;height:13px}
+@media(max-width:560px){.bio-card{flex-direction:column;gap:18px}.bio-photo{width:140px;height:140px}.bio-name{font-size:28px}}
 
-.bio { max-width: var(--container); margin: 32px auto 0; padding: 0 20px; }
-.bio-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  padding: 22px 22px 20px 22px;
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-.bio-photo {
-  display: block;
-  width: 160px; height: 160px;
-  border-radius: var(--radius-lg);
-  object-fit: cover;
-  margin: 0 0 16px;
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 30px -14px rgba(0,0,0,.22);
-}
-.bio-text { flex: 1; min-width: 0; }
-.bio-eyebrow {
-  font-size: 11px; font-weight: 700; letter-spacing: 1.4px;
-  text-transform: uppercase; color: var(--accent-deep); margin: 0 0 6px 0;
-}
-.bio-name {
-  font-family: var(--serif); font-size: 22px; line-height: 1.15;
-  letter-spacing: -0.01em; color: var(--navy-deep); margin: 0 0 6px 0;
-}
-.bio-body { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin: 0 0 10px 0; }
-.bio-link {
-  display: inline-flex; align-items: center; gap: 5px;
-  font-size: 13px; font-weight: 600; color: var(--navy);
-  transition: color 0.2s ease;
-}
-.bio-link:hover { color: var(--accent); }
-.bio-link svg { width: 13px; height: 13px; }
+/* ========== Tip form ========== */
+.tip{max-width:1080px;margin:32px auto 0;padding:0 20px}
+.tip-card{background:linear-gradient(155deg,rgba(41,47,113,.96),rgba(24,28,78,.96));color:#fff;border-radius:var(--r);padding:32px 28px;position:relative;overflow:hidden}
+.tip-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,107,71,.45),transparent 50%),radial-gradient(circle at 10% 90%,rgba(124,92,255,.4),transparent 48%);pointer-events:none}
+.tip-card>*{position:relative;z-index:2}
+.tip-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin:0 0 8px}
+.tip-title{font-family:var(--serif);font-size:34px;font-weight:400;line-height:1.05;letter-spacing:-.015em;color:#fff;margin:0 0 6px}
+.tip-sub{font-size:14.5px;color:rgba(255,255,255,.78);line-height:1.55;margin:0 0 22px;max-width:560px}
+.tip-form{display:flex;flex-direction:column;gap:12px;max-width:560px}
+.tip-row{display:flex;flex-direction:column;gap:5px}
+.tip-row label{font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.7);text-transform:uppercase}
+.tip-row input,.tip-row textarea,.tip-row select{background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 14px;font-size:15px;color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s}
+.tip-row input:focus,.tip-row textarea:focus,.tip-row select:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 3px rgba(255,107,71,.32)}
+.tip-row textarea{min-height:120px;resize:vertical;font-family:inherit}
+.tip-submit{margin-top:4px;background:var(--coral);color:#fff;border:none;border-radius:999px;padding:13px 26px;font-size:14px;font-weight:700;cursor:pointer;transition:.2s var(--ease);align-self:flex-start;letter-spacing:.02em}
+.tip-submit:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(255,107,71,.6)}
+.tip-submit:disabled{opacity:.6;cursor:progress}
+.tip-status{font-size:13.5px;margin-top:10px;padding:10px 14px;border-radius:10px;display:none}
+.tip-status.success{display:block;background:rgba(15,181,166,.18);color:#d6fffa;border:1px solid rgba(15,181,166,.35)}
+.tip-status.error{display:block;background:rgba(255,107,71,.18);color:#fff;border:1px solid rgba(255,107,71,.4)}
 
-.footer { max-width: var(--container); margin: 32px auto 0; padding: 24px 20px; text-align: center; }
-.footer-links { display: flex; justify-content: center; gap: 18px; margin-bottom: 14px; flex-wrap: wrap; }
-.footer-links a { font-size: 13px; color: var(--navy); font-weight: 500; padding: 4px 2px; opacity: 0.75; transition: color 0.2s ease; }
-.footer-links a:hover { color: var(--accent); opacity: 1; }
-.footer-credit { font-size: 12px; color: var(--ink-4); }
+/* ========== Sponsor strip (matches home) ========== */
+.sponsor-strip{max-width:1080px;margin:32px auto 0;padding:0 20px}
+.sponsor-strip .inner{background:#0a0a0a;color:#fff;border-radius:var(--r);padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.sponsor-strip .cat{display:inline-block;font-size:11px;font-weight:600;color:#aaa;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
+.sponsor-strip h3{font-family:var(--serif);font-size:28px;line-height:1.12;letter-spacing:-.015em;margin:0 0 10px;color:#fff;font-weight:400}
+.sponsor-strip p{font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.78);max-width:560px;margin:0}
+.sponsor-strip .cta{flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#0a0a0a;padding:13px 22px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s var(--ease);text-decoration:none}
+.sponsor-strip .cta:hover{transform:translateY(-1px);background:#f0f0f0}
+.sponsor-strip .cta svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5}
+@media(max-width:600px){.sponsor-strip .inner{flex-direction:column;align-items:flex-start;padding:22px;border-radius:18px}}
 
-@media (max-width: 600px) {
-  .about-title { font-size: 36px; }
-  .about-lede { font-size: 19px; }
-  .about-section h2 { font-size: 20px; }
-  .about-hero { padding: 40px 20px 24px 20px; }
-  .sponsor-card { padding: 20px; border-radius: var(--radius-md); }
-  .sponsor-title { font-size: 22px; }
-}
+/* ========== Footer ========== */
+footer{max-width:1080px;margin:42px auto 0;padding:24px 20px;text-align:center}
+footer a{font-size:13px;color:var(--navy);font-weight:500;opacity:.75;padding:4px 8px;transition:.2s}
+footer a:hover{color:var(--coral);opacity:1}
+footer .made{display:block;font-size:12px;color:var(--mut);margin-top:12px}
+
+/* ========== Night mode (shared with home via localStorage) ========== */
+body.night{background:linear-gradient(180deg,#0d1024 0%,#1a1d3d 100%);color:#fff}
+body.night .bar{background:rgba(13,16,36,.78);border-bottom-color:rgba(255,255,255,.08)}
+body.night .pillbtn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff}
+body.night .pillbtn svg{color:#fff}
+body.night .hero h1,body.night .hero .sub{color:#fff}
+body.night .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+body.night .card h2{color:#fff}
+body.night .card p{color:rgba(255,255,255,.78)}
+body.night .card p strong{color:#fff}
+body.night .card .cat{background:rgba(255,255,255,.12);color:#fff}
+body.night .bio-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+body.night .bio-name{color:#fff}
+body.night .bio-body{color:rgba(255,255,255,.78)}
+body.night .bio-link{color:#fff}
+body.night footer a{color:rgba(255,255,255,.7)}
+body.night footer .made{color:rgba(255,255,255,.4)}
+
 </style>
-<script async data-uid="10133043b1" src="https://hapsclub.kit.com/10133043b1/index.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
-<nav class="topbar" aria-label="Primary">
-  <div class="topbar-inner">
-    <a href="/" aria-label="Haps Club home" class="topbar-logo-link">
-      <img class="topbar-logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=2" alt="Haps Club">
-    </a>
-    <form class="topbar-form" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
-      <input type="email" name="email_address" placeholder="your@email.com" required aria-label="Email address">
-      <button type="submit" aria-label="Subscribe">
-        <span>Subscribe</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-    </form>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 7 7 0 1 0 20 14.5Z"/></symbol>
+</defs></svg>
+
+<header class="bar"><div class="bar-in">
+  <a class="logo" href="https://haps.club"><img src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club"></a>
+  <div class="bar-right">
+    <button class="pillbtn theme-btn" id="themeBtn" title="Night mode" aria-label="Toggle night mode"><svg width="17" height="17"><use href="#i-moon" id="themeIcon"/></svg></button>
+    <a class="sub-btn" href="https://haps.club/#join">Subscribe</a>
   </div>
-</nav>
+</div></header>
 
-<header class="about-hero">
-  <p class="about-eyebrow">About Haps Club</p>
-  <h1 class="about-title">A daily guide to LA<br>that respects your time.</h1>
-  <p class="about-lede">Haps Club is a short, curated homepage of what's actually worth doing in Los Angeles right now — updated daily, with a weekly email digest. Written by someone who actually goes.</p>
-</header>
-
-<hr class="about-divider">
-
-<section class="about-section">
-  <h2>What you get</h2>
-  <p>The site is updated <strong>every day</strong> — fresh picks for what's on tonight, what to plan for the weekend, and a few things worth blocking off your calendar further out. Land here any day of the week and you'll find your night.</p>
-  <p>Once a week, the best of the week's picks land in your inbox as a single short email. No top-ten lists, no SEO bait, no "37 things to do this weekend in LA." Just a handful I've vetted, with the address, the time, and a direct link to the venue.</p>
-  <p>Whether you find a pick on the site or in the email, cards link straight to the source — no aggregators, no review sites — so you're one tap away from booking, not three.</p>
+<section class="hero">
+  <span class="eyebrow"><svg width="14" height="14"><use href="#i-pin"/></svg> About Haps Club</span>
+  <h1>A daily guide to LA<br>that <em>respects</em> your time.</h1>
+  <p class="sub">Haps Club is a short, curated homepage of what's actually worth doing in Los Angeles right now — updated daily, with a weekly email digest. Written by someone who actually goes.</p>
 </section>
 
-<hr class="about-divider">
+<section class="about-wrap">
+  <article class="card">
+    <span class="cat">What you get</span>
+    <h2>One short list, every day.</h2>
+    <p>The site is updated <strong>every day</strong> — fresh picks for what's on tonight, what to plan for the weekend, and a few things worth blocking off your calendar further out. Land here any day of the week and you'll find your night.</p>
+    <p>Once a week, the best of the picks land in your inbox as a single short email. No top-ten lists, no SEO bait, no "37 things to do this weekend in LA." Just a handful I've vetted, with the address, the time, and a direct link to the venue.</p>
+  </article>
 
-<section class="about-section">
-  <h2>How I pick</h2>
-  <p>I live in LA. I go to the things. The bar I'm sending you to is a bar I've sat at; the patio I'm telling you to book is one I've eaten on. Where a venue is too new for me to have visited, I'll say so plainly and tell you what's known.</p>
-  <p>I don't take payment for placement. The only sponsored content is clearly labeled "Sponsored," appears at the bottom of the email, and never crosses into the picks. If you're a venue or event hoping to be featured, the only way in is to be good — and the way to tell me is below.</p>
+  <article class="card">
+    <span class="cat">How I pick</span>
+    <h2>I live here. I go to the things.</h2>
+    <p>The bar I'm sending you to is one I've sat at; the patio I'm telling you to book is one I've eaten on. Where a venue is too new for me to have visited, I'll say so plainly and tell you what's known.</p>
+    <p>I don't take payment for placement. The only sponsored content is clearly labeled "Sponsored," appears at the bottom, and never crosses into the picks. The way to be featured is to be good — the way to tell me is below.</p>
+  </article>
+
+  <article class="card">
+    <span class="cat">What this isn't</span>
+    <h2>Not a listings site. Not paid.</h2>
+    <p>This isn't a comprehensive listings site — Time Out exists, the LA Times exists, you have Google. This is the opposite: a small, opinionated edit. If today's homepage has six things on it, it's because six things are worth your night.</p>
+    <p>It's also not a social club, a paid membership, or anything that requires a ticket. It's a free email and a free site. "Become a member" is just our way of saying: sign up, you're in.</p>
+  </article>
+
+  <article class="card">
+    <span class="cat">Friends of Haps</span>
+    <h2>A small WhatsApp circle of locals.</h2>
+    <p>Some picks come from a small group of LA-based friends who share what they're going to. When you see a card with a coral <em class="coral">Friend of Haps</em> tag, it's coming from one of them. Want in? Use the form below and say so — we add a few new members each month.</p>
+  </article>
 </section>
 
-<hr class="about-divider">
-
-<section class="about-section">
-  <h2>What this isn't</h2>
-  <p>This isn't a comprehensive listings site — Time Out exists, the LA Times exists, you have Google. This is the opposite: a small, opinionated edit. If today's homepage has six things on it, it's because six things are worth your night.</p>
-  <p>It's also not a social club, a paid membership, or anything that requires you to buy a ticket. It's a free email and a free site. The "Become a member" framing on the homepage is just our way of saying: sign up, you're in.</p>
+<section class="bio">
+  <div class="bio-card">
+    <img class="bio-photo" src="/img/michael.jpg" alt="Michael Abraham, founder of Haps Club" width="180" height="180" loading="lazy">
+    <div class="bio-text">
+      <p class="bio-eyebrow">Who's behind this</p>
+      <h2 class="bio-name">Michael Abraham</h2>
+      <p class="bio-body">LA-based realtor, longtime local. I spend my weeks at the openings, the dinners, and the venues I send you to — Haps Club is the shortlist of what's actually worth your time. Hit me up if you've got a tip, a venue, or a question.</p>
+      <a href="https://www.instagram.com/michaelabraham.realtor/" class="bio-link" target="_blank" rel="noopener">
+        @michaelabraham.realtor
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
 </section>
 
-<section class="tip-section" id="tip">
-  <div class="tip-inner">
+<section class="tip" id="tip">
+  <div class="tip-card">
     <p class="tip-eyebrow">Submit a tip · Say hello</p>
     <h2 class="tip-title">Heard about something good?</h2>
     <p class="tip-sub">A new restaurant, a one-night-only event, a venue worth knowing about — or just a question for me. The form goes straight to my inbox.</p>
@@ -329,6 +217,7 @@ button { font-family: inherit; }
           <option value="Tip">A tip — something I should know about</option>
           <option value="Question">A question for the editor</option>
           <option value="Feedback">Feedback on the newsletter or site</option>
+          <option value="Friend">Interested in joining Friends of Haps</option>
           <option value="Partnership">Partnership / sponsorship inquiry</option>
           <option value="Other">Something else</option>
         </select>
@@ -343,105 +232,65 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<section class="sponsor">
-  <div class="sponsor-card">
-    <p class="sponsor-eyebrow">Sponsored · <strong>Blackbird</strong></p>
-    <h2 class="sponsor-title">Get rewarded for eating out</h2>
-    <p class="sponsor-body">Blackbird is the loyalty app we use at a growing list of LA's better restaurants — tap your phone at the table, earn $FLY tokens, redeem for credit. Sign up with our link and get 2,000 $FLY (worth $20) on your first visit. Pays for itself before MDW.</p>
-    <a href="https://app.blackbird.xyz/r/bb-igyo61" class="sponsor-cta" target="_blank" rel="noopener">
-      Claim your $20
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+<section class="sponsor-strip"><div class="inner">
+  <div>
+    <span class="cat">Sponsored · Blackbird</span>
+    <h3>Get rewarded for eating out</h3>
+    <p>The loyalty app we use at a growing list of LA's better restaurants — tap your phone at the table, earn $FLY, redeem for credit. Sign up with our link and get 2,000 $FLY (worth $20) on your first visit.</p>
   </div>
-</section>
+  <a class="cta" href="https://app.blackbird.xyz/r/bb-igyo61" target="_blank" rel="noopener">Claim your $20 <svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a>
+</div></section>
 
-<section class="bio">
-  <img class="bio-photo" src="/img/michael.jpg" alt="Michael Abraham, founder of Haps Club" width="160" height="160" loading="lazy">
-  <div class="bio-card">
-    <div class="bio-text">
-      <p class="bio-eyebrow">Who's behind this</p>
-      <h2 class="bio-name">Michael Abraham</h2>
-      <p class="bio-body">LA-based realtor, longtime local. I spend my weeks at the openings, the dinners, and the venues I send you to — Haps Club is the shortlist of what's actually worth your time.</p>
-      <a href="https://www.instagram.com/michaelabraham.realtor/" class="bio-link" target="_blank" rel="noopener">
-        @michaelabraham.realtor
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="footer-links">
-    <a href="/about.html">About</a>
-    <a href="#tip">Submit a tip</a>
-    <a href="mailto:michael@haps.club">Contact</a>
-    <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
-  </div>
-  <div class="footer-credit">
-    <span>© 2026 Haps Club · Made by hand in LA</span>
-  </div>
+<footer>
+  <a href="/about.html">About</a>
+  <a href="#tip">Submit a tip</a>
+  <a href="mailto:michael@haps.club">Contact</a>
+  <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://chat.whatsapp.com/CrQFCLOZjYm5eBqsU1vcA5?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>
+  <span class="made">© 2026 Haps Club · Made by hand in LA</span>
 </footer>
 
 <script>
-(function() {
-  var form = document.querySelector('.topbar-form');
-  if (!form) return;
-  form.addEventListener('submit', function() {
-    var input = form.querySelector('input[type="email"]');
-    if (!input) return;
-    var email = input.value.trim();
-    if (!email) return;
-    setTimeout(function() {
-      form.innerHTML = '<span class="topbar-form-status" role="status">✓ Check ' + email + ' to confirm</span>';
-      form.style.cursor = 'default';
-    }, 100);
+// Shared night mode with home page (same localStorage key)
+(function(){
+  const KEY='haps_theme', root=document.body;
+  const themeBtn=document.getElementById('themeBtn'), themeIcon=document.getElementById('themeIcon');
+  function apply(mode){
+    if(mode==='night'){root.classList.add('night');themeIcon.setAttribute('href','#i-sun');}
+    else{root.classList.remove('night');themeIcon.setAttribute('href','#i-moon');}
+  }
+  try{apply(localStorage.getItem(KEY)||'day');}catch(e){apply('day');}
+  themeBtn.addEventListener('click',()=>{
+    const next=root.classList.contains('night')?'day':'night';
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    apply(next);
   });
 })();
 
+// Tip form (EmailJS)
 const EMAILJS_PUBLIC_KEY  = "yWt3TMJ6ysOrH3vH1";
 const EMAILJS_SERVICE_ID  = "service_r16vi4q";
 const EMAILJS_TEMPLATE_ID = "template_3uwwsgq";
-
-(function() {
-  if (window.emailjs && EMAILJS_PUBLIC_KEY && !EMAILJS_PUBLIC_KEY.startsWith("YOUR_")) {
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+(function(){
+  if(window.emailjs && EMAILJS_PUBLIC_KEY && !EMAILJS_PUBLIC_KEY.startsWith("YOUR_")){
+    emailjs.init({publicKey:EMAILJS_PUBLIC_KEY});
   }
-  const form = document.getElementById("tipForm");
-  const submit = document.getElementById("tipSubmit");
-  const status = document.getElementById("tipStatus");
-
-  form.addEventListener("submit", function(e) {
+  const form=document.getElementById("tipForm"), submit=document.getElementById("tipSubmit"), status=document.getElementById("tipStatus");
+  form.addEventListener("submit",function(e){
     e.preventDefault();
-    status.className = "tip-status";
-    status.textContent = "";
-
-    if (!window.emailjs || EMAILJS_PUBLIC_KEY.startsWith("YOUR_")) {
-      status.className = "tip-status error";
-      status.textContent = "Form not yet configured. Email michael@haps.club directly and I'll get back to you.";
+    status.className="tip-status"; status.textContent="";
+    if(!window.emailjs || EMAILJS_PUBLIC_KEY.startsWith("YOUR_")){
+      status.className="tip-status error";
+      status.textContent="Form not yet configured. Email michael@haps.club directly and I'll get back to you.";
       return;
     }
-
-    submit.disabled = true;
-    const original = submit.textContent;
-    submit.textContent = "Sending…";
-
-    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
-      .then(function() {
-        status.className = "tip-status success";
-        status.textContent = "Got it. Thanks for the tip — I'll read every word.";
-        form.reset();
-      }, function(error) {
-        status.className = "tip-status error";
-        status.textContent = "Something went wrong. Try emailing michael@haps.club directly.";
-        console.error("EmailJS error:", error);
-      })
-      .finally(function() {
-        submit.disabled = false;
-        submit.textContent = original;
-      });
+    submit.disabled=true; const original=submit.textContent; submit.textContent="Sending…";
+    emailjs.sendForm(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,form)
+      .then(()=>{status.className="tip-status success";status.textContent="Got it. Thanks for the tip — I'll read every word.";form.reset();},
+            err=>{status.className="tip-status error";status.textContent="Something went wrong. Try emailing michael@haps.club directly.";console.error("EmailJS error:",err);})
+      .finally(()=>{submit.disabled=false;submit.textContent=original;});
   });
 })();
 </script>
-
 </body>
 </html>

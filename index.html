@@ -61,6 +61,18 @@ svg.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-
 .f[data-f="food"]{--c:var(--food)}.f[data-f="culture"]{--c:var(--culture)}.f[data-f="outdoors"]{--c:var(--outdoors)}
 .f[data-f="music"]{--c:var(--music)}.f[data-f="date"]{--c:var(--date)}.f[data-f="free"]{--c:var(--free)}
 .f[data-f="coming-up"]{--c:#E69D2C}.f[data-f="evergreen"]{--c:#15803D}
+.f[data-f="westside"],.f[data-f="hollywood"],.f[data-f="midcity"],.f[data-f="downtown"],.f[data-f="eastside"]{--c:#5b6280}
+.rail-area{display:flex;gap:8px;overflow-x:auto;align-items:center;padding:2px 20px 4px;max-width:1080px;margin:6px auto 0;scrollbar-width:none}
+.rail-area::-webkit-scrollbar{display:none}
+.rail-area .rail-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);flex-shrink:0;padding-right:4px}
+.f-area{font-size:12px;padding:7px 12px;min-height:34px}
+.f-area svg{font-size:12px;opacity:.7}
+.f-area.on svg{opacity:1}
+.tag.area-tag{cursor:pointer;border:0;font-family:inherit;transition:.2s var(--ease)}
+.tag.area-tag:hover{background:color-mix(in srgb,var(--coral) 22%,#fff);color:var(--coral);transform:translateY(-1px)}
+.tag.area-tag:hover svg{color:var(--coral)}
+body.night .rail-area .rail-label{color:rgba(255,255,255,.55)}
+body.night .tag.area-tag:hover{background:color-mix(in srgb,var(--coral) 28%,transparent);color:#fff}
 .f.on[data-f]:not([data-f="all"]){background:var(--c);border-color:var(--c)}
 
 
@@ -258,6 +270,14 @@ body.night .empty .big{color:#fff}
     <button class="f" data-f="date"><span class="cdot"></span><svg class="ic"><use href="#i-date"/></svg>Date</button>
     <button class="f" data-f="free"><span class="cdot"></span><svg class="ic"><use href="#i-free"/></svg>Free</button>
   </div>
+  <div class="rail rail-area" id="railArea">
+    <span class="rail-label">Areas</span>
+    <button class="f f-area" data-f="westside"><svg class="ic"><use href="#i-pin"/></svg>Westside</button>
+    <button class="f f-area" data-f="hollywood"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</button>
+    <button class="f f-area" data-f="midcity"><svg class="ic"><use href="#i-pin"/></svg>Mid-City</button>
+    <button class="f f-area" data-f="downtown"><svg class="ic"><use href="#i-pin"/></svg>Downtown</button>
+    <button class="f f-area" data-f="eastside"><svg class="ic"><use href="#i-pin"/></svg>Eastside</button>
+  </div>
   <div class="count"><span class="n" id="countLabel"><b>7</b> picks this week</span>
   <button class="shuffle" id="shuf"><svg class="ic"><use href="#i-shuffle"/></svg>Surprise</button></div>
 </div>
@@ -269,7 +289,7 @@ body.night .empty .big{color:#fff}
     data-title="Violinist Amelia Sze on 'Zhang Enli'" data-start="20260529T183000" data-end="20260529T200000"
     data-loc="Hauser &amp; Wirth West Hollywood, 8980 Santa Monica Blvd, West Hollywood, CA"
     data-details="Free standing-only violin performance inside the Zhang Enli exhibition. Performance 6:30-7pm; gallery reception til 8. RSVP via Eventbrite. via Haps Club"
-    data-link="https://www.hauserwirth.com/locations/los-angeles/">
+    data-link="https://www.hauserwirth.com/locations/los-angeles/" data-area="westside">
     <div class="mesh"></div>
     <svg class="illo" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-linecap="round">
       <circle cx="140" cy="60" r="30" opacity=".5" stroke-width="2.5"/>
@@ -292,7 +312,7 @@ body.night .empty .big{color:#fff}
     data-start="20260611T170000" data-end="20260611T190000"
     data-loc="PLANTA Marina Del Rey, 4625 Admiralty Way #104, Marina del Rey, CA 90292"
     data-details="Friend of Haps. Waterfront happy hour with award-winning journalist Rob Rosen (creator of Reasonable Doubt; author of Crimes of Omission), hosted by Aloni Ford / Yacht Girls Book Club. Cocktails, vegan plates, live Q&A, signed books. 18+, free parking. via Haps Club"
-    data-link="https://www.eventbrite.com/e/crimes-conversation-cocktails-with-rob-rosen-tickets-1990450047674?aff=oddtdtcreator&amp;keep_tld=true">
+    data-link="https://www.eventbrite.com/e/crimes-conversation-cocktails-with-rob-rosen-tickets-1990450047674?aff=oddtdtcreator&amp;keep_tld=true" data-area="westside">
     <div class="mesh"></div>
     <svg class="illo" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-linecap="round">
       <path d="M88 50 L152 50 L120 96 Z" opacity=".55" stroke-width="2.5"/>
@@ -326,7 +346,7 @@ body.night .empty .big{color:#fff}
   <article class="tile wide t-culture" data-cat="culture date" data-when="weekend"
     data-title="Cinespia: Mulholland Drive" data-loc="Hollywood Forever Cemetery, 6000 Santa Monica Blvd, Los Angeles, CA"
     data-details="Lynch under the stars. Gates around 7:15pm — bring a blanket. Check cinespia.org for the exact date. via Haps Club"
-    data-link="https://cinespia.org" style="animation-delay:.05s">
+    data-link="https://cinespia.org" style="animation-delay:.05s" data-area="hollywood">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">SAT</span></div>
     <h3>Cinespia: Mulholland Drive</h3>
     <p>Lynch under the stars at Hollywood Forever. Bring a blanket and someone you want to pleasantly confuse — gates open around 7:15.</p>
@@ -339,7 +359,7 @@ body.night .empty .big{color:#fff}
     data-title="Azar Lawrence at The World Stage" data-start="20260529T200000" data-end="20260529T230000"
     data-loc="The World Stage, 4321 Degnan Blvd, Los Angeles, CA 90008"
     data-details="Coltrane-lineage saxophonist Azar Lawrence and his band TALE. Doors 8pm, show 8:30pm. $20 cash at the door. via Haps Club"
-    data-link="https://www.theworldstage.org" style="animation-delay:.07s">
+    data-link="https://www.theworldstage.org" style="animation-delay:.07s" data-area="midcity">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-music"/></svg>Music</span><span class="badge">FRI</span></div>
     <h3>Azar Lawrence at The World Stage</h3>
     <p>Coltrane-lineage saxophonist Azar Lawrence with The Azar Lawrence Experience at the Leimert Park jazz institution. Doors 8, show 8:30, cash only at the door.</p>
@@ -351,7 +371,7 @@ body.night .empty .big{color:#fff}
     data-title="DTLA Movie Night: Mamma Mia" data-start="20260530T173000" data-end="20260530T220000"
     data-loc="Grand Hope Park, Los Angeles, CA"
     data-details="Outdoor screening of Mamma Mia in DTLA. Picnic blankets, singalong moments, ABBA-fueled nostalgia. Ticketed. via Haps Club"
-    data-link="https://downtownla.com" style="animation-delay:.12s">
+    data-link="https://downtownla.com" style="animation-delay:.12s" data-area="downtown">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">SAT</span></div>
     <h3>DTLA Movie Night: Mamma Mia</h3>
     <p>Outdoor screening of Mamma Mia at Grand Hope Park &mdash; picnic blankets, singalong moments, ABBA-fueled nostalgia. Grab Greek beforehand from George's or Arda's.</p>
@@ -361,7 +381,7 @@ body.night .empty .big{color:#fff}
 
   <article class="tile wide t-food" data-cat="food free" data-when="weekend"
     data-title="Smorgasburg LA — Sundays" data-loc="ROW DTLA, 777 S Alameda St, Los Angeles, CA"
-    data-details="Open-air food market every Sunday, 10am-4pm. Free entry. via Haps Club" data-link="https://la.smorgasburg.com/" style="animation-delay:.1s">
+    data-details="Open-air food market every Sunday, 10am-4pm. Free entry. via Haps Club" data-link="https://la.smorgasburg.com/" style="animation-delay:.1s" data-area="downtown">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">SUN</span></div>
     <h3>Smorgasburg Sundays</h3>
     <p>The open-air food market at ROW DTLA is in full swing every Sunday. Go hungry, leave broke, regret absolutely nothing.</p>
@@ -372,7 +392,7 @@ body.night .empty .big{color:#fff}
   <!-- MEDIUM: upcoming, AWOL -->
   <article class="tile wide awol t-date" data-cat="date" data-when="upcoming"
     data-title="Penmar Wine Mixer" data-start="20260606" data-loc="Penmar, Venice, CA"
-    data-details="AWOL pick - Westside wine mixer. Venice, June 6. via Haps Club" data-link="https://www.instagram.com/thehapsclub/" style="animation-delay:.15s">
+    data-details="AWOL pick - Westside wine mixer. Venice, June 6. via Haps Club" data-link="https://www.instagram.com/thehapsclub/" style="animation-delay:.15s" data-area="westside">
     <div class="head"><span class="flag"><svg class="ic"><use href="#i-comp"/></svg>AWOL · West of Lincoln</span><span class="badge">JUN 6</span></div>
     <h3>Penmar Wine Mixer</h3>
     <p>Natural pours and a soft-launch crowd in Venice. For the subscribers who simply do not cross the 405, this one comes to you.</p>
@@ -384,7 +404,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-music" data-cat="music" data-when="upcoming"
     data-title="Blue Note Jazz Festival" data-loc="Los Angeles, CA"
     data-details="Multi-day jazz festival - stacked lineup. Confirm dates at bluenotejazzfestival.com. via Haps Club"
-    data-link="https://www.bluenotejazzfestival.com" style="animation-delay:.2s">
+    data-link="https://www.bluenotejazzfestival.com" style="animation-delay:.2s" data-area="citywide">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-music"/></svg>Festival</span><span class="badge">SUMMER</span></div>
     <h3>Blue Note Jazz Festival</h3>
     <p>Multiple days, one hillside, a stacked lineup. Day passes worth grabbing early.</p>
@@ -396,7 +416,7 @@ body.night .empty .big{color:#fff}
   <article class="tile wide t-music" data-cat="music outdoors" data-when="weekend"
     data-title="Hollywood Bowl — Opening Night" data-loc="Hollywood Bowl, 2301 N Highland Ave, Los Angeles, CA"
     data-details="Summer season opener under the shells. Confirm date at hollywoodbowl.com. via Haps Club"
-    data-link="https://www.hollywoodbowl.com" style="animation-delay:.25s">
+    data-link="https://www.hollywoodbowl.com" style="animation-delay:.25s" data-area="hollywood">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-music"/></svg>Music</span><span class="badge">OPENS</span></div>
     <h3>Hollywood Bowl — Opening Night</h3>
     <p>Summer season kicks off under the shells. Picnic in the box seats; go early to beat stack-parking.</p>
@@ -408,7 +428,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-outdoors" data-cat="outdoors free" data-when="evergreen"
     data-title="Solstice Canyon, Malibu" data-loc="Solstice Canyon, Malibu, CA"
     data-details="Shaded creekside loop to a waterfall and the Roberts Ranch ruins. Easy, dog-friendly, year-round. via Haps Club"
-    data-link="https://www.alltrails.com/trail/us/california/solstice-canyon-loop-trail" style="animation-delay:.3s">
+    data-link="https://www.alltrails.com/trail/us/california/solstice-canyon-loop-trail" style="animation-delay:.3s" data-area="westside">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-outdoors"/></svg>Outdoors</span><span class="badge">EVERGREEN</span></div>
     <h3>Solstice Canyon, Malibu</h3>
     <p>A shaded creekside loop to a waterfall and the old Roberts Ranch ruins. Easy, dog-friendly, gorgeous year-round — the reliable Westside reset.</p>
@@ -420,7 +440,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-outdoors" data-cat="outdoors free" data-when="evergreen"
     data-title="Runyon Canyon" data-loc="Runyon Canyon Park, Los Angeles, CA"
     data-details="Quick city-view climb above Hollywood. Free, dog-friendly. via Haps Club"
-    data-link="https://www.alltrails.com/parks/us/california/runyon-canyon-park" style="animation-delay:.35s">
+    data-link="https://www.alltrails.com/parks/us/california/runyon-canyon-park" style="animation-delay:.35s" data-area="hollywood">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-outdoors"/></svg>Outdoors</span><span class="badge">EVERGREEN</span></div>
     <h3>Runyon Canyon</h3>
     <p>The quick city-view climb above Hollywood. Free, dog-friendly, always there.</p>
@@ -432,7 +452,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food" data-when="evergreen"
     data-title="Gjelina" data-loc="1429 Abbot Kinney Blvd, Venice, CA"
     data-details="Westside staple - wood-fired veg, pizzas, natural wine on Abbot Kinney. via Haps Club"
-    data-link="https://www.gjelina.com/" style="animation-delay:.4s">
+    data-link="https://www.gjelina.com/" style="animation-delay:.4s" data-area="westside">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>Gjelina</h3>
     <p>The Abbot Kinney staple — wood-fired vegetables, pizzas, natural wine. Always a safe Westside yes.</p>
@@ -444,7 +464,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food" data-when="evergreen"
     data-title="Guelaguetza" data-loc="3014 W Olympic Blvd, Los Angeles, CA"
     data-details="Landmark Oaxacan restaurant in Koreatown - mole, tlayudas, mezcal. via Haps Club"
-    data-link="https://www.google.com/maps/search/Guelaguetza+Restaurant+Los+Angeles" style="animation-delay:.45s">
+    data-link="https://www.google.com/maps/search/Guelaguetza+Restaurant+Los+Angeles" style="animation-delay:.45s" data-area="midcity">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>Guelaguetza</h3>
     <p>The landmark Oaxacan spot in K-town — seven moles, tlayudas, a mezcal list. An LA institution.</p>
@@ -456,7 +476,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food" data-when="evergreen"
     data-title="Mh Zh" data-loc="3536 W Sunset Blvd, Los Angeles, CA"
     data-details="Echo Park Levantine — chef-driven, no reservations, lines for a reason. via Haps Club"
-    data-link="https://www.instagram.com/mh.zh/" style="animation-delay:.32s">
+    data-link="https://www.instagram.com/mh.zh/" style="animation-delay:.32s" data-area="eastside">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>Mh Zh</h3>
     <p>Chef-driven Levantine on Sunset. No reservations, lines for a reason — Echo Park's tightest patio dinner.</p>
@@ -467,7 +487,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food" data-when="evergreen"
     data-title="All Time" data-loc="2040 Hillhurst Ave, Los Angeles, CA"
     data-details="All-day Los Feliz favorite. Breakfast burrito, lunch sandwiches, dinner pastas. via Haps Club"
-    data-link="https://www.alltimelosangeles.com/" style="animation-delay:.34s">
+    data-link="https://www.alltimelosangeles.com/" style="animation-delay:.34s" data-area="eastside">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>All Time</h3>
     <p>The Los Feliz all-day staple — breakfast burrito in the morning, sandwiches at noon, pastas at night. Always works.</p>
@@ -478,7 +498,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food" data-when="evergreen"
     data-title="Tacos 1986" data-loc="Multiple locations, Los Angeles"
     data-details="Tijuana-style taqueria with the cult adobada. Cheap, fast, perfect. via Haps Club"
-    data-link="https://www.tacos1986.com/" style="animation-delay:.36s">
+    data-link="https://www.tacos1986.com/" style="animation-delay:.36s" data-area="citywide">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>Tacos 1986</h3>
     <p>Tijuana-style taqueria, multiple locations, the cult adobada. Cheap, fast, the easiest yes for a Tuesday.</p>
@@ -489,7 +509,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food date" data-when="evergreen"
     data-title="Bavel" data-loc="500 Mateo St, Los Angeles, CA"
     data-details="Bestia-team Middle Eastern stunner in the Arts District. Reservation required. via Haps Club"
-    data-link="https://baveldtla.com/" style="animation-delay:.38s">
+    data-link="https://baveldtla.com/" style="animation-delay:.38s" data-area="downtown">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>Bavel</h3>
     <p>The Bestia team's Middle Eastern stunner in the Arts District. Book ahead — special-occasion energy on a regular night.</p>
@@ -500,7 +520,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food" data-when="evergreen"
     data-title="Phorage" data-loc="3300 Overland Ave, Los Angeles, CA"
     data-details="Westside Vietnamese - fresh, fast, great lunchtime pho. via Haps Club"
-    data-link="https://www.phoragela.com/" style="animation-delay:.4s">
+    data-link="https://www.phoragela.com/" style="animation-delay:.4s" data-area="westside">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">GO-TO</span></div>
     <h3>Phorage</h3>
     <p>Westside Vietnamese on Overland — fresh, fast, the lunchtime pho fix when you don't want to cross town.</p>
@@ -511,7 +531,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-culture" data-cat="culture free" data-when="evergreen"
     data-title="Skylight Books" data-loc="1818 N Vermont Ave, Los Angeles, CA"
     data-details="Los Feliz indie bookstore with a tree growing through the floor. Author events, the best browse. via Haps Club"
-    data-link="https://www.skylightbooks.com/" style="animation-delay:.42s">
+    data-link="https://www.skylightbooks.com/" style="animation-delay:.42s" data-area="eastside">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">EVERGREEN</span></div>
     <h3>Skylight Books</h3>
     <p>The Los Feliz indie with a tree growing through the floor. Author events on weeknights; the best browse-and-coffee on a Sunday.</p>
@@ -522,7 +542,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-outdoors" data-cat="outdoors free" data-when="evergreen"
     data-title="Escondido Falls" data-loc="Escondido Falls Trailhead, Malibu, CA"
     data-details="Three-tier waterfall hike in Malibu - moderate, especially gorgeous after rain. via Haps Club"
-    data-link="https://www.alltrails.com/trail/us/california/escondido-falls-trail" style="animation-delay:.44s">
+    data-link="https://www.alltrails.com/trail/us/california/escondido-falls-trail" style="animation-delay:.44s" data-area="westside">
     <div class="head"><span class="cat"><svg class="ic"><use href="#i-outdoors"/></svg>Outdoors</span><span class="badge">EVERGREEN</span></div>
     <h3>Escondido Falls</h3>
     <p>Three-tier waterfall hike in Malibu — moderate, peak after a rain. Pack water and start early; parking is roadside.</p>
@@ -536,7 +556,7 @@ body.night .empty .big{color:#fff}
   data-title="Wild Embodiment" data-start="20260529T180000" data-end="20260529T210000"
   data-loc="The KINN, Venice, CA"
   data-details="A friend hosting: an evening of art, movement and intuition. Light snacks and drinks. Code chaosmos13 for $35. via Haps Club"
-  data-link="https://luma.com/WildEmbodiment" style="animation-delay:.18s">
+  data-link="https://luma.com/WildEmbodiment" style="animation-delay:.18s" data-area="westside">
   <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">FRI · MAY 29</span></div>
   <h3>Wild Embodiment</h3>
   <p>An evening of art, movement and intuition at The KINN — your friend Chao hosting. Light snacks, drinks, code <code style="background:color-mix(in srgb,var(--coral) 13%,#fff);color:#c64a2a;padding:1px 6px;border-radius:5px;font-family:ui-monospace,Menlo,monospace;font-size:12px">chaosmos13</code> drops it to $35.</p>
@@ -548,7 +568,7 @@ body.night .empty .big{color:#fff}
   data-title="Mendelssohn &amp; Saint-Saëns Piano Trios" data-start="20260529T190000" data-end="20260529T210000"
   data-loc="Steinway Showroom, Beverly Hills, CA"
   data-details="Intimate Groupmuse chamber concert in the Steinway showroom. Friend recommendation. via Haps Club"
-  data-link="https://www.groupmuse.com/events/16361-mendelssohn-saint-saens-piano-trios-with-ensemble132" style="animation-delay:.2s">
+  data-link="https://www.groupmuse.com/events/16361-mendelssohn-saint-saens-piano-trios-with-ensemble132" style="animation-delay:.2s" data-area="westside">
   <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">FRI · MAY 29</span></div>
   <h3>Mendelssohn &amp; Saint-Saëns Piano Trios</h3>
   <p>Intimate Groupmuse chamber concert in the Steinway showroom. A handful of Haps members already locked in — Geoff's pick.</p>
@@ -560,7 +580,7 @@ body.night .empty .big{color:#fff}
   data-title="Full Blue Moon Rising Hike" data-start="20260531T193000" data-end="20260531T223000"
   data-loc="Elysian Park, Los Angeles, CA"
   data-details="Full-moon hike with live music in the Elysian hills. Friend recommendation. via Haps Club"
-  data-link="https://www.eventbrite.com/e/full-blue-moon-rising-experience-may-tickets-1989962888568" style="animation-delay:.22s">
+  data-link="https://www.eventbrite.com/e/full-blue-moon-rising-experience-may-tickets-1989962888568" style="animation-delay:.22s" data-area="eastside">
   <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">SUN · MAY 31</span></div>
   <h3>Full Blue Moon Rising Hike</h3>
   <p>A full-moon hike with live music up in the Elysian hills. Stefanie went a few months back and called it magical — going again this Sunday.</p>
@@ -572,7 +592,7 @@ body.night .empty .big{color:#fff}
   data-title="MindTravel Silent Piano Concert" data-start="20260606T193000" data-end="20260606T220000"
   data-loc="Elysian Park, Los Angeles, CA"
   data-details="Murray Hidary's silent piano under the stars at Elysian Park. Group discount via Barrett's affiliate link. via Haps Club"
-  data-link="https://www.eventbrite.com/e/mindtravel-june-live-to-headphones-silent-piano-concert-in-los-angeles-tickets-1988282409209?aff=barrett" style="animation-delay:.24s">
+  data-link="https://www.eventbrite.com/e/mindtravel-june-live-to-headphones-silent-piano-concert-in-los-angeles-tickets-1988282409209?aff=barrett" style="animation-delay:.24s" data-area="eastside">
   <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">SAT · JUN 6</span></div>
   <h3>MindTravel Silent Piano</h3>
   <p>Murray Hidary's silent piano under the stars at Elysian Park, near Dodger Stadium. Bring headphones and a blanket — Barrett's discount link.</p>
@@ -583,7 +603,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food date" data-when="evergreen"
   data-title="Twentieth Street Garden" data-loc="Santa Monica, CA"
   data-details="Santa Monica backyard supper club — Argentine asados, garden dinners. Sells out every time. via Haps Club"
-  data-link="https://www.twentiethstreetgarden.com/upcomingevents" style="animation-delay:.26s">
+  data-link="https://www.twentiethstreetgarden.com/upcomingevents" style="animation-delay:.26s" data-area="westside">
   <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">SUPPER CLUB</span></div>
   <h3>Twentieth Street Garden</h3>
   <p>The Santa Monica backyard supper club — Argentine asados, garden dinners, the works. Sells out fast every time; watch the upcoming events page.</p>
@@ -594,7 +614,7 @@ body.night .empty .big{color:#fff}
   <article class="tile t-food" data-cat="food" data-when="evergreen"
   data-title="Teddy's Hot House" data-loc="1915 Lincoln Blvd, Venice, CA"
   data-details="Venice neighborhood favorite at 1915 Lincoln Blvd — easy, good, no-fuss. via Haps Club"
-  data-link="https://maps.apple.com/?address=1915%20Lincoln%20Blvd,%20Venice,%20CA%2090291&q=Teddy%E2%80%99s%20Hot%20House" style="animation-delay:.28s">
+  data-link="https://maps.apple.com/?address=1915%20Lincoln%20Blvd,%20Venice,%20CA%2090291&q=Teddy%E2%80%99s%20Hot%20House" style="animation-delay:.28s" data-area="westside">
   <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Friend of Haps</span><span class="badge">GO-TO</span></div>
   <h3>Teddy's Hot House</h3>
   <p>The Venice neighborhood spot Francisco keeps coming back to — 1915 Lincoln Blvd. Easy, good, no-fuss dinner on the Westside.</p>
@@ -649,6 +669,20 @@ body.night .empty .big{color:#fff}
 <script>
 const grid=document.getElementById('grid');
 const events=[...grid.querySelectorAll('.tile')].filter(t=>!t.classList.contains('always'));
+// Decorate location pin tags as clickable area triggers
+events.forEach(t=>{
+  if(!t.dataset.area||t.dataset.area==='citywide')return;
+  const tag=[...t.querySelectorAll('.tag')].find(el=>el.querySelector('use[href="#i-pin"]'));
+  if(tag){tag.classList.add('area-tag');tag.dataset.areaTrigger=t.dataset.area;}
+});
+// Click delegation: location pin → trigger area filter chip
+grid.addEventListener('click',e=>{
+  const tag=e.target.closest('.tag.area-tag');
+  if(!tag)return;
+  e.preventDefault();e.stopPropagation();
+  const chip=document.querySelector(`.f[data-f="${tag.dataset.areaTrigger}"]`);
+  if(chip){chip.click();window.scrollTo({top:0,behavior:'smooth'});}
+});
 const fbtns=[...document.querySelectorAll('.f')];
 const countLabel=document.getElementById('countLabel');
 const empty=document.getElementById('empty'), emptyBig=empty.querySelector('.big'), emptyP=empty.querySelector('p');
@@ -672,6 +706,7 @@ function render(){
     else if(currentFilter==='all'){ match=true; }
     else if(currentFilter==='coming-up'){ match=['weekend','upcoming'].includes(t.dataset.when); }
     else if(currentFilter==='evergreen'){ match=t.dataset.when==='evergreen'; }
+    else if(['westside','hollywood','midcity','downtown','eastside'].includes(currentFilter)){ match=t.dataset.area===currentFilter; }
     else { match=(t.dataset.cat||'').split(' ').includes(currentFilter); }
     t.classList.toggle('hide',!match);
     if(match){shown++;t.style.animation='none';void t.offsetWidth;t.style.animation='up .45s var(--ease)';}
