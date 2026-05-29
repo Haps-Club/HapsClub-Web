@@ -61,7 +61,7 @@ svg.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-
 .f[data-f="food"]{--c:var(--food)}.f[data-f="culture"]{--c:var(--culture)}.f[data-f="outdoors"]{--c:var(--outdoors)}
 .f[data-f="music"]{--c:var(--music)}.f[data-f="date"]{--c:var(--date)}.f[data-f="free"]{--c:var(--free)}
 .f[data-f="coming-up"]{--c:#E69D2C}.f[data-f="evergreen"]{--c:#15803D}
-.f[data-f="westside"],.f[data-f="bhweho"],.f[data-f="hollywood"],.f[data-f="midcity"],.f[data-f="dtla"],.f[data-f="eastside"],.f[data-f="valley"],.f[data-f="southbay"]{--c:#5b6280}
+.f[data-f="westside"],.f[data-f="bh"],.f[data-f="weho"],.f[data-f="hollywood"],.f[data-f="midcity"],.f[data-f="dtla"],.f[data-f="eastside"]{--c:#5b6280}
 .rail-area{display:flex;gap:8px;overflow-x:auto;align-items:center;padding:2px 20px 4px;max-width:1080px;margin:6px auto 0;scrollbar-width:none}
 .rail-area::-webkit-scrollbar{display:none}
 .rail-area .rail-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);flex-shrink:0;padding-right:4px}
@@ -277,13 +277,12 @@ body.night .empty .big{color:#fff}
   <div class="rail rail-area" id="railArea">
     <span class="rail-label">Areas</span>
     <button class="f f-area" data-f="westside"><svg class="ic"><use href="#i-pin"/></svg>Westside</button>
-    <button class="f f-area" data-f="bhweho"><svg class="ic"><use href="#i-pin"/></svg>BH / WeHo</button>
+    <button class="f f-area" data-f="bh"><svg class="ic"><use href="#i-pin"/></svg>Beverly Hills</button>
+    <button class="f f-area" data-f="weho"><svg class="ic"><use href="#i-pin"/></svg>West Hollywood</button>
     <button class="f f-area" data-f="hollywood"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</button>
     <button class="f f-area" data-f="midcity"><svg class="ic"><use href="#i-pin"/></svg>Mid-City</button>
     <button class="f f-area" data-f="dtla"><svg class="ic"><use href="#i-pin"/></svg>DTLA</button>
     <button class="f f-area" data-f="eastside"><svg class="ic"><use href="#i-pin"/></svg>Eastside</button>
-    <button class="f f-area" data-f="valley"><svg class="ic"><use href="#i-pin"/></svg>Valley</button>
-    <button class="f f-area" data-f="southbay"><svg class="ic"><use href="#i-pin"/></svg>South Bay</button>
   </div>
   <div class="count"><span class="n" id="countLabel"><b>7</b> picks this week</span>
   <button class="shuffle" id="shuf"><svg class="ic"><use href="#i-shuffle"/></svg>Surprise</button></div>
@@ -296,7 +295,7 @@ body.night .empty .big{color:#fff}
     data-title="Violinist Amelia Sze on 'Zhang Enli'" data-start="20260529T183000" data-end="20260529T200000"
     data-loc="Hauser &amp; Wirth West Hollywood, 8980 Santa Monica Blvd, West Hollywood, CA"
     data-details="Free standing-only violin performance inside the Zhang Enli exhibition. Performance 6:30-7pm; gallery reception til 8. RSVP via Eventbrite. via Haps Club"
-    data-link="https://www.hauserwirth.com/locations/los-angeles/" data-area="bhweho">
+    data-link="https://www.hauserwirth.com/locations/los-angeles/" data-area="weho">
     <div class="mesh"></div>
     <svg class="illo" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-linecap="round">
       <circle cx="140" cy="60" r="30" opacity=".5" stroke-width="2.5"/>
@@ -575,7 +574,7 @@ body.night .empty .big{color:#fff}
   data-title="Mendelssohn &amp; Saint-Saëns Piano Trios" data-start="20260529T190000" data-end="20260529T210000"
   data-loc="Steinway Showroom, Beverly Hills, CA"
   data-details="Intimate Groupmuse chamber concert in the Steinway showroom. Friend recommendation. via Haps Club"
-  data-link="https://www.groupmuse.com/events/16361-mendelssohn-saint-saens-piano-trios-with-ensemble132" style="animation-delay:.2s" data-area="bhweho">
+  data-link="https://www.groupmuse.com/events/16361-mendelssohn-saint-saens-piano-trios-with-ensemble132" style="animation-delay:.2s" data-area="bh">
   <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps Rec</span><span class="badge">FRI · MAY 29</span></div>
   <h3>Mendelssohn &amp; Saint-Saëns Piano Trios</h3>
   <p>Geoff's pick: an intimate Groupmuse chamber concert in the Steinway showroom, with a handful of Haps members already locked in.</p>
@@ -713,7 +712,7 @@ function render(){
     else if(currentFilter==='all'){ match=true; }
     else if(currentFilter==='coming-up'){ match=['weekend','upcoming'].includes(t.dataset.when); }
     else if(currentFilter==='evergreen'){ match=t.dataset.when==='evergreen'; }
-    else if(['westside','bhweho','hollywood','midcity','dtla','eastside','valley','southbay'].includes(currentFilter)){ match=t.dataset.area===currentFilter; }
+    else if(['westside','bh','weho','hollywood','midcity','dtla','eastside'].includes(currentFilter)){ match=t.dataset.area===currentFilter; }
     else { match=(t.dataset.cat||'').split(' ').includes(currentFilter); }
     t.classList.toggle('hide',!match);
     if(match){shown++;t.style.animation='none';void t.offsetWidth;t.style.animation='up .45s var(--ease)';}
