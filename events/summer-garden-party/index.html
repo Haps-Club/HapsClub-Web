@@ -528,56 +528,79 @@
 <!-- VENUE — illustrated map -->
 <section class="venue">
   <div class="venue-inner">
-    <!-- SVG illustrated map -->
+    <!-- SVG illustrated map — SoCal overview -->
     <div class="venue-map-wrap">
-      <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:#EDE9DF;">
-        <!-- Background -->
-        <rect width="500" height="500" fill="#EDE9DF"/>
-        <!-- Street grid -->
-        <!-- Horizontal streets -->
-        <rect x="0" y="80" width="500" height="36" fill="#D8D3C6"/>
-        <rect x="0" y="200" width="500" height="28" fill="#D8D3C6"/>
-        <rect x="0" y="300" width="500" height="28" fill="#D8D3C6"/>
-        <rect x="0" y="400" width="500" height="28" fill="#D8D3C6"/>
-        <!-- Vertical streets -->
-        <rect x="80" y="0" width="32" height="500" fill="#D8D3C6"/>
-        <rect x="200" y="0" width="24" height="500" fill="#D8D3C6"/>
-        <rect x="340" y="0" width="32" height="500" fill="#D8D3C6"/>
-        <rect x="440" y="0" width="24" height="500" fill="#D8D3C6"/>
-        <!-- Street labels -->
-        <text x="250" y="72" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#8C8478" letter-spacing="2" font-weight="400">W 20TH ST</text>
-        <text x="250" y="193" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1.5">W 21ST ST</text>
-        <text x="250" y="293" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1.5">W 22ND ST</text>
-        <text x="75" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1" transform="rotate(-90 75 260)">GRAMERCY PL</text>
-        <text x="196" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1" transform="rotate(-90 196 260)">HOOVER ST</text>
-        <text x="336" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1" transform="rotate(-90 336 260)">CATALINA ST</text>
-        <!-- City blocks -->
-        <rect x="112" y="116" width="88" height="84" fill="#E8E3D8" rx="2"/>
-        <rect x="224" y="116" width="116" height="84" fill="#E8E3D8" rx="2"/>
-        <rect x="372" y="116" width="68" height="84" fill="#E8E3D8" rx="2"/>
-        <rect x="112" y="228" width="88" height="72" fill="#E8E3D8" rx="2"/>
-        <rect x="224" y="228" width="116" height="72" fill="#E8E3D8" rx="2"/>
-        <rect x="372" y="228" width="68" height="72" fill="#E8E3D8" rx="2"/>
-        <rect x="112" y="328" width="88" height="72" fill="#E8E3D8" rx="2"/>
-        <rect x="224" y="328" width="116" height="72" fill="#E8E3D8" rx="2"/>
-        <!-- Highlighted property block -->
-        <rect x="224" y="116" width="116" height="84" fill="#C8D4A8" rx="2"/>
-        <!-- Property detail -->
-        <rect x="236" y="128" width="52" height="36" fill="#A8B88C" rx="2" opacity=".7"/>
-        <!-- Garden patch (green) -->
-        <rect x="236" y="152" width="92" height="36" fill="#8FAE68" rx="2" opacity=".5"/>
-        <!-- North indicator -->
-        <circle cx="460" cy="460" r="18" fill="white" opacity=".8"/>
-        <text x="460" y="466" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="16" fill="#1A1E3C" font-weight="700">N</text>
-        <!-- Pin -->
-        <circle cx="282" cy="148" r="14" fill="#9DC81A" opacity=".25"/>
-        <circle cx="282" cy="148" r="8" fill="#9DC81A"/>
-        <circle cx="282" cy="148" r="4" fill="white"/>
-        <!-- Pin label -->
-        <rect x="196" y="86" width="172" height="22" fill="#1A1E3C" rx="2"/>
-        <text x="282" y="101" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#9DC81A" letter-spacing="1.5">TWENTIETH STREET GARDEN</text>
-        <!-- Dotted line connecting label to pin -->
-        <line x1="282" y1="108" x2="282" y2="140" stroke="#9DC81A" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <svg viewBox="0 0 560 560" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:#E2DDD5;">
+
+        <rect width="560" height="560" fill="#E2DDD5"/>
+
+        <!-- Pacific Ocean -->
+        <path d="M0 0 L0 560 L155 560 Q115 470 100 370 Q86 270 95 170 Q104 90 145 35 L0 0Z" fill="#C0D0E0" opacity=".55"/>
+        <path d="M20 140 Q58 133 80 145" stroke="#A8C0D4" stroke-width="1" opacity=".35" fill="none"/>
+        <path d="M12 240 Q52 232 78 246" stroke="#A8C0D4" stroke-width="1" opacity=".3" fill="none"/>
+        <path d="M18 350 Q56 342 84 358" stroke="#A8C0D4" stroke-width="1" opacity=".25" fill="none"/>
+        <text x="54" y="470" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#7A9AB4" letter-spacing="1.2" opacity=".65" transform="rotate(-90 54 470)">PACIFIC OCEAN</text>
+
+        <!-- Coastline -->
+        <path d="M112 28 C118 90 122 160 112 230 C102 300 96 360 98 420 C100 470 110 510 120 548" stroke="#9CB0C4" stroke-width="2" fill="none" opacity=".55"/>
+
+        <!-- Mojave / desert (east) -->
+        <path d="M375 0 L560 0 L560 320 Q495 298 435 275 Q395 258 365 242 Q348 195 358 130 Q368 72 375 0Z" fill="#D4C9B0" opacity=".45"/>
+        <circle cx="455" cy="105" r="3" fill="#C4B898" opacity=".4"/>
+        <circle cx="495" cy="160" r="2" fill="#C4B898" opacity=".35"/>
+        <circle cx="432" cy="210" r="3" fill="#C4B898" opacity=".3"/>
+        <text x="482" y="140" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#9C8E78" letter-spacing="1.2" opacity=".55">MOJAVE</text>
+
+        <!-- Mountain range — San Gabriels -->
+        <path d="M268 78 L295 50 L324 68 L355 38 L392 62 L426 40 L462 58 L488 43 L512 56 L512 88 L268 88Z" fill="#C4BAA8" opacity=".6"/>
+        <path d="M268 88 Q340 73 408 76 Q462 78 512 88" stroke="#ACA498" stroke-width="1.5" fill="none" opacity=".4"/>
+        <path d="M326 68 L336 56 L346 66" stroke="rgba(255,255,255,.5)" stroke-width="1.5" fill="none"/>
+        <path d="M388 60 L398 46 L408 59" stroke="rgba(255,255,255,.4)" stroke-width="1.5" fill="none"/>
+
+        <!-- San Fernando Valley -->
+        <ellipse cx="228" cy="128" rx="68" ry="32" fill="#D4D0C4" opacity=".35"/>
+
+        <!-- LA Metro blob -->
+        <path d="M116 198 C128 178 168 168 208 170 C248 172 286 177 316 192 C346 206 355 230 347 256 C339 282 314 304 285 314 C256 324 222 322 194 312 C166 302 140 282 127 258 C114 234 108 218 116 198Z" fill="#CCC7BC" opacity=".55"/>
+
+        <!-- 110 freeway -->
+        <path d="M228 170 C230 218 232 266 230 315" stroke="#B0A898" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+        <rect x="216" y="182" width="24" height="14" rx="2" fill="#A8A098" opacity=".7"/>
+        <text x="228" y="193" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" font-weight="700" fill="white" letter-spacing=".5">110</text>
+
+        <!-- 10 freeway -->
+        <path d="M118 250 C158 248 198 248 238 249 C278 250 318 248 355 246" stroke="#B0A898" stroke-width="3" stroke-linecap="round" opacity=".45"/>
+        <rect x="328" y="238" width="22" height="14" rx="2" fill="#A8A098" opacity=".7"/>
+        <text x="339" y="249" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" font-weight="700" fill="white" letter-spacing=".5">10</text>
+
+        <!-- Reference city dots -->
+        <circle cx="218" cy="495" r="5" fill="#9C9488" opacity=".55"/>
+        <text x="230" y="499" font-family="'DM Mono',monospace" font-size="8" fill="#8C8478" opacity=".65" letter-spacing=".8">SAN DIEGO</text>
+
+        <circle cx="118" cy="98" r="4" fill="#9C9488" opacity=".5"/>
+        <text x="130" y="102" font-family="'DM Mono',monospace" font-size="7" fill="#8C8478" opacity=".6">S. BARBARA</text>
+
+        <circle cx="425" cy="315" r="4" fill="#9C9488" opacity=".5"/>
+        <text x="436" y="319" font-family="'DM Mono',monospace" font-size="7" fill="#8C8478" opacity=".6">PALM SPRINGS</text>
+
+        <!-- VENUE PIN -->
+        <circle cx="222" cy="268" r="34" fill="none" stroke="#9DC81A" stroke-width="1" opacity=".18"/>
+        <circle cx="222" cy="268" r="22" fill="none" stroke="#9DC81A" stroke-width="1.2" opacity=".35"/>
+        <circle cx="222" cy="268" r="11" fill="rgba(157,200,26,.2)"/>
+        <circle cx="222" cy="268" r="7" fill="#9DC81A"/>
+        <circle cx="222" cy="268" r="3.5" fill="white"/>
+
+        <rect x="126" y="214" width="192" height="40" rx="4" fill="#1A1E3C"/>
+        <polygon points="214,254 230,254 222,264" fill="#1A1E3C"/>
+        <text x="222" y="231" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8.5" fill="#9DC81A" letter-spacing="1.4">TWENTIETH ST GARDEN</text>
+        <text x="222" y="245" text-anchor="middle" font-family="'DM Mono',monospace" font-size="7.5" fill="rgba(245,241,234,.5)" letter-spacing=".8">WEST ADAMS · LOS ANGELES</text>
+
+        <!-- Compass -->
+        <circle cx="516" cy="516" r="20" fill="white" opacity=".85"/>
+        <circle cx="516" cy="516" r="20" fill="none" stroke="#D4CFC3" stroke-width="1"/>
+        <text x="516" y="522" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="16" font-weight="900" fill="#1A1E3C">N</text>
+        <line x1="516" y1="500" x2="516" y2="507" stroke="#9DC81A" stroke-width="2"/>
+
       </svg>
     </div>
 
@@ -596,27 +619,29 @@
     </div>
   </div>
 
-<!-- VENUE VIDEO + CAPTION -->
-<section style="background:var(--white); padding:0 48px 80px;">
-  <div style="max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.25fr 0.85fr; gap:80px; align-items:start;">
-    <!-- Video2 on left -->
+<!-- A SPACE THAT LOVES A PARTY -->
+<section class="intro" style="background:var(--sage);">
+  <div class="intro-inner">
     <div>
-      <div style="position:relative; overflow:hidden; border-radius:0; aspect-ratio:9/16; max-width:360px;">
-        <video style="width:100%; height:100%; object-fit:cover; display:block;" autoplay muted loop playsinline>
-          <source src="https://res.cloudinary.com/dimlqawuh/video/upload/v1780153532/haps-club-events/haps-garden-party-video2.mp4" type="video/mp4">
-        </video>
-        <!-- Corner accent -->
-        <div style="position:absolute; bottom:-1px; left:-1px; width:32px; height:32px; border-bottom:3px solid var(--lime); border-left:3px solid var(--lime); z-index:2;"></div>
+      <p class="lbl">A neighborhood gem</p>
+      <span class="intro-title">A SPACE THAT</span>
+      <span class="intro-title accent">LOVES A PARTY</span>
+      <div class="intro-body">
+        <p><strong>Twentieth Street Garden</strong> has hosted some of the best evenings in West Adams. It&rsquo;s the kind of place that turns strangers into friends &mdash; every single time.</p>
+        <p>Come for the garden. Stay for the people.</p>
       </div>
     </div>
-    <!-- Caption on right -->
-    <div style="padding-top:48px;">
-      <p class="lbl">A neighborhood gem</p>
-      <h3 style="font-size:clamp(40px,5vw,68px); font-weight:900; text-transform:uppercase; line-height:.9; color:var(--black); letter-spacing:-.01em; margin-bottom:24px;">A SPACE THAT<br>LOVES A <span style="color:var(--lime-dk);">PARTY</span></h3>
-      <p style="font-size:17px; font-weight:300; line-height:1.8; color:var(--mid); max-width:380px;">Twentieth Street Garden has hosted some of the best evenings in West Adams. It&rsquo;s the kind of place that turns strangers into friends &mdash; every time.</p>
+    <div class="iphone-wrap">
+      <div class="iphone-frame">
+        <video class="iphone-video" autoplay muted loop playsinline>
+          <source src="https://res.cloudinary.com/dimlqawuh/video/upload/v1780153532/haps-club-events/haps-garden-party-video2.mp4" type="video/mp4">
+        </video>
+        <div class="iphone-home"></div>
+      </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- HOSTS — names link to Instagram -->
