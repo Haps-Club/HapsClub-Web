@@ -41,7 +41,7 @@
 
   /* ── NAV ── */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:58px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
-  .nav-logo img { height:40px; width:auto; display:block; filter:brightness(0) saturate(100%) invert(16%) sepia(50%) saturate(800%) hue-rotate(200deg) brightness(0.7); opacity:1; }
+  .nav-logo img { height:40px; width:auto; display:block; filter:none; opacity:1; }
   .nav-center { font-size:13px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
   .nav-right { display:flex; align-items:center; gap:28px; }
   .nav-link { font-size:12px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
@@ -228,11 +228,11 @@
   .mi-desc { font-family:'DM Mono',monospace; font-size:11px; color:var(--mid); letter-spacing:.04em; }
 
   /* ── VENUE — Map illustration ── */
-  .venue { background:var(--white); padding:120px 48px; position:relative; overflow:hidden; }
+  .venue { background:var(--white); padding:120px 48px 160px; position:relative; overflow:hidden; }
   .venue-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:0.9fr 1fr; gap:72px; align-items:start; }
 
   /* SVG illustrated map */
-  .venue-map-wrap { position:relative; overflow:hidden; min-height:320px; align-self:stretch; }
+  .venue-map-wrap { position:relative; overflow:hidden; align-self:stretch; border-radius:0; }
   .venue-map-wrap::after { display:none; }
 
   .venue-title { font-size:clamp(52px,6.5vw,90px); font-weight:900; text-transform:uppercase; line-height:.9; color:var(--black); margin-bottom:2px; }
@@ -275,7 +275,7 @@
 
   /* ── FOOTER ── */
   footer { background:var(--navy); padding:36px 48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid rgba(255,255,255,.06); }
-  footer a img { height:38px; width:auto; filter:none; opacity:.65; transition:opacity .2s; }
+  footer a img { height:38px; width:auto; filter:none; opacity:.7; transition:opacity .2s; }
   footer a:hover img { opacity:.85; }
   .f-links { display:flex; gap:28px; list-style:none; }
   .f-links a { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.28); text-decoration:none; transition:color .2s; }
@@ -316,12 +316,12 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="https://haps.club">
-    <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club">
+    <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club">
   </a>
   <span class="nav-center">Summer Garden Party &mdash; June 20</span>
   <div class="nav-right">
     <a href="https://haps.club" class="nav-link">haps.club</a>
-    <a href="https://lu.ma/hapsclub" class="nav-cta" target="_blank" rel="noopener">Get Tickets</a>
+    <a href="https://luma.com/TheHapsClub" class="nav-cta" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 </nav>
 
@@ -359,7 +359,7 @@
       <div class="hero-meta-item"><p class="h-label">Time</p><p class="h-val">5:00 &ndash; 9:00 PM</p></div>
       <div class="hero-meta-item"><p class="h-label">Venue</p><p class="h-val">Twentieth Street Garden</p></div>
       <div class="hero-cta-wrap">
-        <a href="https://lu.ma/hapsclub" class="hero-cta" target="_blank" rel="noopener">
+        <a href="https://luma.com/TheHapsClub" class="hero-cta" target="_blank" rel="noopener">
           Reserve Your Place
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -402,10 +402,10 @@
     </div>
 
     <div>
-      <a href="https://haps.club" style="display:inline-block;margin-bottom:28px;">
+      <a href="https://haps.club" style="display:inline-block;margin-bottom:32px;width:100%;max-width:280px;">
         <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-white-svg.svg"
              alt="Haps Club"
-             style="height:64px;width:auto;filter:brightness(0) saturate(100%) invert(16%) sepia(50%) saturate(800%) hue-rotate(200deg) brightness(0.7);opacity:1;">
+             style="height:auto;width:100%;max-width:280px;filter:none;opacity:1;display:block;">
       </a>
       <p class="lbl">About the evening</p>
       <span class="intro-title">AN EVENING</span>
@@ -537,7 +537,7 @@
     <div class="venue-map-wrap">
       <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177199/haps-club-events/haps-garden-party-map.jpg"
            alt="Map showing Jefferson Park / West Adams area of Los Angeles"
-           style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
+           style="width:100%;height:100%;min-height:400px;object-fit:cover;object-position:center;display:block;">
     </div>
 
     <div>
@@ -649,7 +649,7 @@
       Saturday, June 20 &nbsp;&middot;&nbsp; 5:00 &ndash; 9:00 PM<br>
       One Dish &amp; One Drink Included &nbsp;&middot;&nbsp; Open Air Garden
     </p>
-    <a href="https://lu.ma/hapsclub" class="cta-btn" target="_blank" rel="noopener">
+    <a href="https://luma.com/TheHapsClub" class="cta-btn" target="_blank" rel="noopener">
       Reserve Your Place
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
@@ -658,7 +658,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club"></a>
+  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club"></a>
   <ul class="f-links">
     <li><a href="https://haps.club">haps.club</a></li>
     <li><a href="https://instagram.com/thehapsclub">@thehapsclub</a></li>
