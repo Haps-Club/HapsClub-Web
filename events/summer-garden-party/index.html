@@ -12,7 +12,7 @@
     --parchment: #F5F1EA;
     --cream:     #EDE9DF;
     --white:     #FFFFFF;
-    --sage:      #E6EBD8;
+    --sage:      #DCE8C8;
     --blush:     #F4E8E2;
     --lime:      #9DC81A;
     --lime-lt:   #B8E030;
@@ -41,7 +41,7 @@
 
   /* ── NAV ── */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:58px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
-  .nav-logo img { height:22px; filter:brightness(0); opacity:.82; }
+  .nav-logo img { height:38px; width:38px; object-fit:contain; filter:none; opacity:.92; }
   .nav-center { font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--mid); }
   .nav-right { display:flex; align-items:center; gap:28px; }
   .nav-link { font-size:10px; font-weight:400; letter-spacing:.16em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
@@ -53,30 +53,30 @@
   .hero { height:100vh; min-height:700px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
   .hero-img {
     position:absolute; inset:0;
-    background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780152999/haps-club-events/haps-garden-party-banner.jpg');
+    background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173732/haps-club-events/haps-garden-party-banner2.jpg');
     background-size:cover; background-position:center 40%;
   }
-  .hero-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,rgba(245,241,234,0) 0%,rgba(245,241,234,.04) 35%,rgba(245,241,234,.52) 66%,rgba(245,241,234,.97) 100%); }
+  .hero-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,rgba(26,30,60,.12) 0%,rgba(26,30,60,.18) 35%,rgba(26,30,60,.55) 66%,rgba(26,30,60,.96) 100%); }
 
   /* Botanical top right */
   .hero-botanical { position:absolute; top:72px; right:40px; width:clamp(160px,18vw,280px); opacity:.35; pointer-events:none; z-index:2; }
 
   .hero-inner { position:relative; z-index:2; padding:0 48px 52px; }
-  .hero-presented { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--mid); margin-bottom:12px; display:flex; align-items:center; gap:14px; }
+  .hero-presented { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:rgba(245,241,234,.6); margin-bottom:12px; display:flex; align-items:center; gap:14px; }
   .hero-presented::before { content:''; width:28px; height:1px; background:var(--lime); flex-shrink:0; }
 
   /* Hero title — tight, no extra gaps */
   .hero-title { display:block; line-height:.88; margin-bottom:0; }
-  .ht { font-size:clamp(88px,16.5vw,210px); font-weight:900; text-transform:uppercase; color:var(--black); letter-spacing:-.01em; display:block; line-height:.88; }
+  .ht { font-size:clamp(88px,16.5vw,210px); font-weight:900; text-transform:uppercase; color:var(--parchment); letter-spacing:-.01em; display:block; line-height:.88; }
   .ht.lime { color:var(--lime); }
-  .ht.outline { -webkit-text-stroke:1.5px var(--black); color:transparent; opacity:.18; }
+  .ht.outline { -webkit-text-stroke:1.5px rgba(245,241,234,.5); color:transparent; opacity:1; }
 
-  .hero-rule { width:100%; height:1px; background:var(--rule-dk); margin:30px 0; }
+  .hero-rule { width:100%; height:1px; background:rgba(245,241,234,.25); margin:30px 0; }
   .hero-meta { display:flex; align-items:center; flex-wrap:wrap; gap:0; }
   .hero-meta-item { padding-right:36px; margin-right:36px; border-right:1px solid var(--rule-dk); }
   .hero-meta-item:last-of-type { border-right:none; padding-right:0; margin-right:0; }
-  .h-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--mid); margin-bottom:5px; }
-  .h-val { font-size:15px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--black); }
+  .h-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:rgba(245,241,234,.5); margin-bottom:5px; }
+  .h-val { font-size:15px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--parchment); }
   .hero-cta-wrap { margin-left:auto; }
   .hero-cta { display:inline-flex; align-items:center; gap:14px; background:var(--lime); color:var(--black); font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; padding:18px 40px; text-decoration:none; transition:background .2s,transform .18s; white-space:nowrap; box-shadow:0 4px 24px rgba(157,200,26,.28); }
   .hero-cta:hover { background:var(--lime-dk); color:#fff; transform:translateY(-2px); }
@@ -153,7 +153,7 @@
   }
 
   /* Intro text side */
-  .intro-title { font-size:clamp(56px,7.5vw,100px); font-weight:900; line-height:.9; text-transform:uppercase; color:var(--black); margin-bottom:28px; letter-spacing:-.01em; display:block; }
+  .intro-title { font-size:clamp(56px,7.5vw,100px); font-weight:900; line-height:.88; text-transform:uppercase; color:var(--black); margin-bottom:4px; letter-spacing:-.01em; display:block; }
   .intro-title .accent { color:var(--lime-dk); display:block; }
   .intro-body { font-size:18px; font-weight:300; line-height:1.78; color:var(--mid); max-width:460px; }
   .intro-body p+p { margin-top:1.35em; }
@@ -275,7 +275,7 @@
 
   /* ── FOOTER ── */
   footer { background:var(--navy); padding:36px 48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid rgba(255,255,255,.06); }
-  footer a img { height:20px; filter:brightness(0) invert(1); opacity:.4; transition:opacity .2s; }
+  footer a img { height:36px; width:36px; object-fit:contain; filter:none; opacity:.6; transition:opacity .2s; }
   footer a:hover img { opacity:.85; }
   .f-links { display:flex; gap:28px; list-style:none; }
   .f-links a { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.28); text-decoration:none; transition:color .2s; }
@@ -316,7 +316,7 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="https://haps.club">
-    <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="Haps Club">
+    <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780173728/haps-club-events/haps-club-logo-white-square.png" alt="Haps Club">
   </a>
   <span class="nav-center">Summer Garden Party &mdash; June 10</span>
   <div class="nav-right">
@@ -395,7 +395,7 @@
     <div class="iphone-wrap">
       <div class="iphone-frame">
         <video class="iphone-video" autoplay muted loop playsinline>
-          <source src="https://res.cloudinary.com/dimlqawuh/video/upload/v1780153532/haps-club-events/haps-garden-party-video2.mp4" type="video/mp4">
+          <source src="https://res.cloudinary.com/dimlqawuh/video/upload/v1780153054/haps-club-events/haps-garden-party-feature-video.mp4" type="video/mp4">
         </video>
         <div class="iphone-home"></div>
       </div>
@@ -450,6 +450,9 @@
     <div class="simg"><div class="simg-bg sg3"></div><div class="simg-cap">Made fresh</div></div>
     <div class="simg"><div class="simg-bg sg4"></div><div class="simg-cap">Garden cocktails</div></div>
     <div class="simg"><div class="simg-bg sg5"></div><div class="simg-cap">The crowd</div></div>
+    <div class="simg" style="width:clamp(160px,20vw,300px); height:clamp(280px,44vw,600px); margin-top:50px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173736/haps-club-events/haps-garden-party-6976.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">Through the vines</div></div>
+    <div class="simg" style="width:clamp(220px,26vw,380px); height:clamp(280px,44vw,600px); margin-top:20px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173740/haps-club-events/haps-garden-party-6998.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">The bar setup</div></div>
+    <div class="simg" style="width:clamp(200px,28vw,420px); height:clamp(280px,44vw,600px); margin-top:80px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173744/haps-club-events/haps-garden-party-6986.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">Evening crowd</div></div>
   </div>
 </section>
 
@@ -592,7 +595,29 @@
       <a href="https://www.google.com/maps/search/?api=1&query=2267+W+20th+St+Los+Angeles" class="venue-link" target="_blank" rel="noopener">Open in Maps &rarr;</a>
     </div>
   </div>
+
+<!-- VENUE VIDEO + CAPTION -->
+<section style="background:var(--white); padding:0 48px 80px;">
+  <div style="max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.25fr 0.85fr; gap:80px; align-items:start;">
+    <!-- Video2 on left -->
+    <div>
+      <div style="position:relative; overflow:hidden; border-radius:0; aspect-ratio:9/16; max-width:360px;">
+        <video style="width:100%; height:100%; object-fit:cover; display:block;" autoplay muted loop playsinline>
+          <source src="https://res.cloudinary.com/dimlqawuh/video/upload/v1780153532/haps-club-events/haps-garden-party-video2.mp4" type="video/mp4">
+        </video>
+        <!-- Corner accent -->
+        <div style="position:absolute; bottom:-1px; left:-1px; width:32px; height:32px; border-bottom:3px solid var(--lime); border-left:3px solid var(--lime); z-index:2;"></div>
+      </div>
+    </div>
+    <!-- Caption on right -->
+    <div style="padding-top:48px;">
+      <p class="lbl">A neighborhood gem</p>
+      <h3 style="font-size:clamp(40px,5vw,68px); font-weight:900; text-transform:uppercase; line-height:.9; color:var(--black); letter-spacing:-.01em; margin-bottom:24px;">A SPACE THAT<br>LOVES A <span style="color:var(--lime-dk);">PARTY</span></h3>
+      <p style="font-size:17px; font-weight:300; line-height:1.8; color:var(--mid); max-width:380px;">Twentieth Street Garden has hosted some of the best evenings in West Adams. It&rsquo;s the kind of place that turns strangers into friends &mdash; every time.</p>
+    </div>
+  </div>
 </section>
+
 
 <!-- HOSTS — names link to Instagram -->
 <section class="hosts">
@@ -674,7 +699,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="https://haps.club"><img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="Haps Club"></a>
+  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780173728/haps-club-events/haps-club-logo-white-square.png" alt="Haps Club"></a>
   <ul class="f-links">
     <li><a href="https://haps.club">haps.club</a></li>
     <li><a href="https://instagram.com/thehapsclub">@thehapsclub</a></li>
