@@ -41,12 +41,12 @@
 
   /* ── NAV ── */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:58px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
-  .nav-logo img { height:38px; width:38px; object-fit:contain; filter:none; opacity:.92; }
-  .nav-center { font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--mid); }
+  .nav-logo img { height:38px; width:auto; object-fit:contain; filter:none; opacity:.9; background:transparent; }
+  .nav-center { font-size:13px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
   .nav-right { display:flex; align-items:center; gap:28px; }
-  .nav-link { font-size:10px; font-weight:400; letter-spacing:.16em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
+  .nav-link { font-size:12px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
   .nav-link:hover { color:var(--black); }
-  .nav-cta { font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; background:var(--black); color:var(--parchment); padding:10px 22px; text-decoration:none; transition:background .2s,color .2s; }
+  .nav-cta { font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; background:var(--black); color:var(--parchment); padding:10px 24px; text-decoration:none; transition:background .2s,color .2s; }
   .nav-cta:hover { background:var(--lime); color:var(--black); }
 
   /* ── HERO ── */
@@ -155,7 +155,7 @@
   /* Intro text side */
   .intro-title { font-size:clamp(56px,7.5vw,100px); font-weight:900; line-height:.88; text-transform:uppercase; color:var(--black); margin-bottom:4px; letter-spacing:-.01em; display:block; }
   .intro-title .accent { color:var(--lime-dk); display:block; }
-  .intro-body { font-size:18px; font-weight:300; line-height:1.78; color:var(--mid); max-width:460px; }
+  .intro-body { font-size:20px; font-weight:300; line-height:1.75; color:var(--mid); max-width:480px; }
   .intro-body p+p { margin-top:1.35em; }
   .intro-body strong { font-weight:500; color:var(--black); }
 
@@ -406,9 +406,9 @@
       <span class="intro-title">AN EVENING</span>
       <span class="intro-title accent">IN THE GARDEN</span>
       <div class="intro-body">
-        <p><strong>Twentieth Street Garden and Haps Club</strong> come together for a summer evening in one of West Adams' most quietly magnetic spaces &mdash; a lush open-air backyard in full June bloom.</p>
-        <p>Your ticket includes a dish from <strong>Tacos Como En El D.F.</strong> and a seasonal cocktail crafted with ingredients grown right here in the garden.</p>
-        <p>Good people, great food, live music. Come as you are.</p>
+        <p><strong>Twentieth Street Garden and Haps Club</strong> come together for a summer evening in one of West Adams&rsquo; most quietly magnetic spaces &mdash; a lush open-air backyard in full June bloom.</p>
+        <p>Your ticket includes a dish from <strong>Tacos Como En El D.F.</strong> and a seasonal cocktail made with ingredients grown right here in the garden.</p>
+        <p>Good people, great food, live music &mdash; come as&nbsp;you are.</p>
       </div>
     </div>
   </div>
@@ -528,89 +528,24 @@
 <!-- VENUE — illustrated map -->
 <section class="venue">
   <div class="venue-inner">
-    <!-- SVG illustrated map — SoCal overview -->
+    <!-- Photo map -->
     <div class="venue-map-wrap">
-      <svg viewBox="0 0 560 560" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:#E2DDD5;">
-
-        <rect width="560" height="560" fill="#E2DDD5"/>
-
-        <!-- Pacific Ocean -->
-        <path d="M0 0 L0 560 L155 560 Q115 470 100 370 Q86 270 95 170 Q104 90 145 35 L0 0Z" fill="#C0D0E0" opacity=".55"/>
-        <path d="M20 140 Q58 133 80 145" stroke="#A8C0D4" stroke-width="1" opacity=".35" fill="none"/>
-        <path d="M12 240 Q52 232 78 246" stroke="#A8C0D4" stroke-width="1" opacity=".3" fill="none"/>
-        <path d="M18 350 Q56 342 84 358" stroke="#A8C0D4" stroke-width="1" opacity=".25" fill="none"/>
-        <text x="54" y="470" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#7A9AB4" letter-spacing="1.2" opacity=".65" transform="rotate(-90 54 470)">PACIFIC OCEAN</text>
-
-        <!-- Coastline -->
-        <path d="M112 28 C118 90 122 160 112 230 C102 300 96 360 98 420 C100 470 110 510 120 548" stroke="#9CB0C4" stroke-width="2" fill="none" opacity=".55"/>
-
-        <!-- Mojave / desert (east) -->
-        <path d="M375 0 L560 0 L560 320 Q495 298 435 275 Q395 258 365 242 Q348 195 358 130 Q368 72 375 0Z" fill="#D4C9B0" opacity=".45"/>
-        <circle cx="455" cy="105" r="3" fill="#C4B898" opacity=".4"/>
-        <circle cx="495" cy="160" r="2" fill="#C4B898" opacity=".35"/>
-        <circle cx="432" cy="210" r="3" fill="#C4B898" opacity=".3"/>
-        <text x="482" y="140" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#9C8E78" letter-spacing="1.2" opacity=".55">MOJAVE</text>
-
-        <!-- Mountain range — San Gabriels -->
-        <path d="M268 78 L295 50 L324 68 L355 38 L392 62 L426 40 L462 58 L488 43 L512 56 L512 88 L268 88Z" fill="#C4BAA8" opacity=".6"/>
-        <path d="M268 88 Q340 73 408 76 Q462 78 512 88" stroke="#ACA498" stroke-width="1.5" fill="none" opacity=".4"/>
-        <path d="M326 68 L336 56 L346 66" stroke="rgba(255,255,255,.5)" stroke-width="1.5" fill="none"/>
-        <path d="M388 60 L398 46 L408 59" stroke="rgba(255,255,255,.4)" stroke-width="1.5" fill="none"/>
-
-        <!-- San Fernando Valley -->
-        <ellipse cx="228" cy="128" rx="68" ry="32" fill="#D4D0C4" opacity=".35"/>
-
-        <!-- LA Metro blob -->
-        <path d="M116 198 C128 178 168 168 208 170 C248 172 286 177 316 192 C346 206 355 230 347 256 C339 282 314 304 285 314 C256 324 222 322 194 312 C166 302 140 282 127 258 C114 234 108 218 116 198Z" fill="#CCC7BC" opacity=".55"/>
-
-        <!-- 110 freeway -->
-        <path d="M228 170 C230 218 232 266 230 315" stroke="#B0A898" stroke-width="3" stroke-linecap="round" opacity=".45"/>
-        <rect x="216" y="182" width="24" height="14" rx="2" fill="#A8A098" opacity=".7"/>
-        <text x="228" y="193" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" font-weight="700" fill="white" letter-spacing=".5">110</text>
-
-        <!-- 10 freeway -->
-        <path d="M118 250 C158 248 198 248 238 249 C278 250 318 248 355 246" stroke="#B0A898" stroke-width="3" stroke-linecap="round" opacity=".45"/>
-        <rect x="328" y="238" width="22" height="14" rx="2" fill="#A8A098" opacity=".7"/>
-        <text x="339" y="249" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="9" font-weight="700" fill="white" letter-spacing=".5">10</text>
-
-        <!-- Reference city dots -->
-        <circle cx="218" cy="495" r="5" fill="#9C9488" opacity=".55"/>
-        <text x="230" y="499" font-family="'DM Mono',monospace" font-size="8" fill="#8C8478" opacity=".65" letter-spacing=".8">SAN DIEGO</text>
-
-        <circle cx="118" cy="98" r="4" fill="#9C9488" opacity=".5"/>
-        <text x="130" y="102" font-family="'DM Mono',monospace" font-size="7" fill="#8C8478" opacity=".6">S. BARBARA</text>
-
-        <circle cx="425" cy="315" r="4" fill="#9C9488" opacity=".5"/>
-        <text x="436" y="319" font-family="'DM Mono',monospace" font-size="7" fill="#8C8478" opacity=".6">PALM SPRINGS</text>
-
-        <!-- VENUE PIN -->
-        <circle cx="222" cy="268" r="34" fill="none" stroke="#9DC81A" stroke-width="1" opacity=".18"/>
-        <circle cx="222" cy="268" r="22" fill="none" stroke="#9DC81A" stroke-width="1.2" opacity=".35"/>
-        <circle cx="222" cy="268" r="11" fill="rgba(157,200,26,.2)"/>
-        <circle cx="222" cy="268" r="7" fill="#9DC81A"/>
-        <circle cx="222" cy="268" r="3.5" fill="white"/>
-
-        <rect x="126" y="214" width="192" height="40" rx="4" fill="#1A1E3C"/>
-        <polygon points="214,254 230,254 222,264" fill="#1A1E3C"/>
-        <text x="222" y="231" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8.5" fill="#9DC81A" letter-spacing="1.4">TWENTIETH ST GARDEN</text>
-        <text x="222" y="245" text-anchor="middle" font-family="'DM Mono',monospace" font-size="7.5" fill="rgba(245,241,234,.5)" letter-spacing=".8">WEST ADAMS · LOS ANGELES</text>
-
-        <!-- Compass -->
-        <circle cx="516" cy="516" r="20" fill="white" opacity=".85"/>
-        <circle cx="516" cy="516" r="20" fill="none" stroke="#D4CFC3" stroke-width="1"/>
-        <text x="516" y="522" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="16" font-weight="900" fill="#1A1E3C">N</text>
-        <line x1="516" y1="500" x2="516" y2="507" stroke="#9DC81A" stroke-width="2"/>
-
-      </svg>
+      <div style="width:100%;height:100%;overflow:hidden;position:relative;">
+        <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780173732/haps-club-events/haps-garden-party-banner2.jpg"
+             alt="Twentieth Street Garden"
+             style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(.9) contrast(1.04);">
+        <!-- Lime corner accent -->
+        <div style="position:absolute;top:-1px;right:-1px;width:40px;height:40px;border-top:3px solid var(--lime);border-right:3px solid var(--lime);z-index:2;pointer-events:none;"></div>
+      </div>
     </div>
 
     <div>
       <p class="lbl">Venue</p>
       <h2 class="venue-title">TWENTIETH</h2>
       <p class="venue-title-sub">Street Garden</p>
-      <p class="venue-body">A privately tended open-air garden tucked behind a home in West Adams. String lights, summer blooms, and the kind of space that makes you want to stay all night.</p>
+      <p class="venue-body">Twentieth Street Garden is a backyard gathering space in Los Angeles. They host seasonal dinners, intimate concerts, and neighborhood socials &mdash; a welcoming spot to share good food, music, and community.</p>
       <div class="venue-deets">
-        <div class="vr"><span class="vdt">Location</span><span class="vdd">West Adams, between Hoover St &amp; Catalina St, one block south of Washington Blvd &mdash; near USC</span></div>
+        <div class="vr"><span class="vdt">Area</span><span class="vdd">West Adams &mdash; between Catalina St &amp; Harvard Blvd, about two blocks south of Washington Blvd. Near USC.</span></div>
         <div class="vr"><span class="vdt">Parking</span><span class="vdd">Street parking on W 20th St</span></div>
         <div class="vr"><span class="vdt">Entry</span><span class="vdd">Up the driveway on the right &mdash; garden is behind the house</span></div>
         <div class="vr"><span class="vdt">Dress</span><span class="vdd">Outside &mdash; dress for a warm June evening</span></div>
@@ -627,8 +562,7 @@
       <span class="intro-title">A SPACE THAT</span>
       <span class="intro-title accent">LOVES A PARTY</span>
       <div class="intro-body">
-        <p><strong>Twentieth Street Garden</strong> has hosted some of the best evenings in West Adams. It&rsquo;s the kind of place that turns strangers into friends &mdash; every single time.</p>
-        <p>Come for the garden. Stay for the people.</p>
+        <p><strong>Twentieth Street Garden</strong> is a backyard gathering space in Los Angeles. They host seasonal dinners, intimate concerts, and neighborhood socials &mdash; a welcoming spot to share good food, music, and community.</p>
       </div>
     </div>
     <div class="iphone-wrap">
