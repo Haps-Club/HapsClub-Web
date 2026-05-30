@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Summer Garden Party · Haps Club · June 10</title>
+<title>Summer Garden Party · Haps Club · June 20</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,900&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@
 
   /* ── NAV ── */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:58px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
-  .nav-logo img { height:38px; width:auto; object-fit:contain; filter:none; opacity:.9; background:transparent; }
+  .nav-logo img { height:40px; width:auto; display:block; filter:none; opacity:.92; }
   .nav-center { font-size:13px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
   .nav-right { display:flex; align-items:center; gap:28px; }
   .nav-link { font-size:12px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
@@ -153,8 +153,8 @@
   }
 
   /* Intro text side */
-  .intro-title { font-size:clamp(56px,7.5vw,100px); font-weight:900; line-height:.88; text-transform:uppercase; color:var(--black); margin-bottom:4px; letter-spacing:-.01em; display:block; }
-  .intro-title .accent { color:var(--lime-dk); display:block; }
+  .intro-title { font-size:clamp(56px,7.5vw,100px); font-weight:900; line-height:.88; text-transform:uppercase; color:var(--black); margin-bottom:0; letter-spacing:-.01em; display:block; }
+  .intro-title .accent { color:var(--lime-dk); display:block; margin-bottom:24px; }
   .intro-body { font-size:20px; font-weight:300; line-height:1.75; color:var(--mid); max-width:480px; }
   .intro-body p+p { margin-top:1.35em; }
   .intro-body strong { font-weight:500; color:var(--black); }
@@ -232,12 +232,12 @@
   .venue-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.25fr 0.85fr; gap:80px; align-items:center; }
 
   /* SVG illustrated map */
-  .venue-map-wrap { position:relative; aspect-ratio:1; overflow:hidden; min-height:420px; }
-  .venue-map-wrap::after { content:''; position:absolute; z-index:2; top:-1px; right:-1px; width:40px; height:40px; border-top:3px solid var(--lime); border-right:3px solid var(--lime); }
+  .venue-map-wrap { position:relative; overflow:hidden; min-height:320px; align-self:stretch; }
+  .venue-map-wrap::after { display:none; }
 
   .venue-title { font-size:clamp(52px,6.5vw,90px); font-weight:900; text-transform:uppercase; line-height:.9; color:var(--black); margin-bottom:2px; }
   .venue-title-sub { font-size:clamp(44px,5.5vw,76px); font-weight:300; text-transform:uppercase; line-height:.9; color:var(--black); margin-bottom:36px; }
-  .venue-body { font-size:18px; font-weight:300; line-height:1.75; color:var(--mid); max-width:440px; margin-bottom:32px; }
+  .venue-body { font-size:20px; font-weight:300; line-height:1.75; color:var(--mid); max-width:440px; margin-bottom:32px; }
   .venue-deets { border-left:3px solid var(--lime); padding-left:20px; display:flex; flex-direction:column; gap:12px; margin-bottom:36px; }
   .vr { display:flex; gap:18px; }
   .vdt { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:rgba(17,17,16,.3); min-width:64px; padding-top:3px; }
@@ -275,7 +275,7 @@
 
   /* ── FOOTER ── */
   footer { background:var(--navy); padding:36px 48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid rgba(255,255,255,.06); }
-  footer a img { height:36px; width:36px; object-fit:contain; filter:none; opacity:.6; transition:opacity .2s; }
+  footer a img { height:38px; width:auto; filter:none; opacity:.65; transition:opacity .2s; }
   footer a:hover img { opacity:.85; }
   .f-links { display:flex; gap:28px; list-style:none; }
   .f-links a { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.28); text-decoration:none; transition:color .2s; }
@@ -316,9 +316,9 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="https://haps.club">
-    <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780173728/haps-club-events/haps-club-logo-white-square.png" alt="Haps Club">
+    <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-white-svg.svg" alt="Haps Club">
   </a>
-  <span class="nav-center">Summer Garden Party &mdash; June 10</span>
+  <span class="nav-center">Summer Garden Party &mdash; June 20</span>
   <div class="nav-right">
     <a href="https://haps.club" class="nav-link">haps.club</a>
     <a href="https://lu.ma/hapsclub" class="nav-cta" target="_blank" rel="noopener">Get Tickets</a>
@@ -355,7 +355,7 @@
     <span class="ht">PARTY</span>
     <div class="hero-rule"></div>
     <div class="hero-meta">
-      <div class="hero-meta-item"><p class="h-label">Date</p><p class="h-val">Tuesday, June 10</p></div>
+      <div class="hero-meta-item"><p class="h-label">Date</p><p class="h-val">Saturday, June 20</p></div>
       <div class="hero-meta-item"><p class="h-label">Time</p><p class="h-val">5:00 &ndash; 9:00 PM</p></div>
       <div class="hero-meta-item"><p class="h-label">Venue</p><p class="h-val">Twentieth Street Garden</p></div>
       <div class="hero-cta-wrap">
@@ -372,14 +372,14 @@
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <div class="marquee-item">Summer Garden Party <span class="m-dot"></span></div>
-    <div class="marquee-item">June 10 <span class="m-dot"></span></div>
+    <div class="marquee-item">June 20 <span class="m-dot"></span></div>
     <div class="marquee-item">West Adams, LA <span class="m-dot"></span></div>
     <div class="marquee-item">Tacos &middot; Burritos &middot; Quesadillas <span class="m-dot"></span></div>
     <div class="marquee-item">Seasonal Garden Cocktails <span class="m-dot"></span></div>
     <div class="marquee-item">Haps Club <span class="m-dot"></span></div>
     <div class="marquee-item">5&ndash;9 PM <span class="m-dot"></span></div>
     <div class="marquee-item">Summer Garden Party <span class="m-dot"></span></div>
-    <div class="marquee-item">June 10 <span class="m-dot"></span></div>
+    <div class="marquee-item">June 20 <span class="m-dot"></span></div>
     <div class="marquee-item">West Adams, LA <span class="m-dot"></span></div>
     <div class="marquee-item">Tacos &middot; Burritos &middot; Quesadillas <span class="m-dot"></span></div>
     <div class="marquee-item">Seasonal Garden Cocktails <span class="m-dot"></span></div>
@@ -431,7 +431,7 @@
 <!-- DETAILS BAND -->
 <section class="details">
   <div class="details-inner">
-    <div class="det"><div class="det-num">01</div><div class="det-lbl">Date</div><div class="det-val">Tuesday June 10</div></div>
+    <div class="det"><div class="det-num">01</div><div class="det-lbl">Date</div><div class="det-val">Saturday, June 20</div></div>
     <div class="det"><div class="det-num">02</div><div class="det-lbl">Hours</div><div class="det-val">5:00 PM &ndash; 9:00 PM</div><div class="det-sub">Doors open at 5</div></div>
     <div class="det"><div class="det-num">03</div><div class="det-lbl">Location</div><div class="det-val">Twentieth Street Garden</div><div class="det-sub">2267 W 20th St &middot; West Adams</div></div>
     <div class="det"><div class="det-num">04</div><div class="det-lbl">Setting</div><div class="det-val">Open Air Backyard</div><div class="det-sub">Dress for a warm June evening</div></div>
@@ -528,22 +528,18 @@
 <!-- VENUE — illustrated map -->
 <section class="venue">
   <div class="venue-inner">
-    <!-- Photo map -->
+    <!-- Map image -->
     <div class="venue-map-wrap">
-      <div style="width:100%;height:100%;overflow:hidden;position:relative;">
-        <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780173732/haps-club-events/haps-garden-party-banner2.jpg"
-             alt="Twentieth Street Garden"
-             style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(.9) contrast(1.04);">
-        <!-- Lime corner accent -->
-        <div style="position:absolute;top:-1px;right:-1px;width:40px;height:40px;border-top:3px solid var(--lime);border-right:3px solid var(--lime);z-index:2;pointer-events:none;"></div>
-      </div>
+      <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177199/haps-club-events/haps-garden-party-map.jpg"
+           alt="Map showing Jefferson Park / West Adams area of Los Angeles"
+           style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
     </div>
 
     <div>
       <p class="lbl">Venue</p>
       <h2 class="venue-title">TWENTIETH</h2>
       <p class="venue-title-sub">Street Garden</p>
-      <p class="venue-body">Twentieth Street Garden is a backyard gathering space in Los Angeles. They host seasonal dinners, intimate concerts, and neighborhood socials &mdash; a welcoming spot to share good food, music, and community.</p>
+      <p class="venue-body">Twentieth Street Garden is a backyard gathering space in Los Angeles. They host seasonal dinners, intimate concerts, and neighborhood socials &mdash; a welcoming spot to share good food, music, and community in West Adams.</p>
       <div class="venue-deets">
         <div class="vr"><span class="vdt">Area</span><span class="vdd">West Adams &mdash; between Catalina St &amp; Harvard Blvd, about two blocks south of Washington Blvd. Near USC.</span></div>
         <div class="vr"><span class="vdt">Parking</span><span class="vdd">Street parking on W 20th St</span></div>
@@ -560,9 +556,9 @@
     <div>
       <p class="lbl">A neighborhood gem</p>
       <span class="intro-title">A SPACE THAT</span>
-      <span class="intro-title accent">LOVES A PARTY</span>
+      <span class="intro-title" style="color:var(--lime-dk);">LOVES A PARTY</span>
       <div class="intro-body">
-        <p><strong>Twentieth Street Garden</strong> is a backyard gathering space in Los Angeles. They host seasonal dinners, intimate concerts, and neighborhood socials &mdash; a welcoming spot to share good food, music, and community.</p>
+        <p><strong>Twentieth Street Garden</strong> has hosted some of the best evenings in West Adams. It&rsquo;s the kind of place that turns strangers into friends &mdash; every single time. Come for the garden, stay for the people.</p>
       </div>
     </div>
     <div class="iphone-wrap">
@@ -642,11 +638,11 @@
   </svg>
 
   <div class="cta-inner">
-    <p class="cta-eyebrow">West Adams &middot; Los Angeles &middot; June 10</p>
+    <p class="cta-eyebrow">West Adams &middot; Los Angeles &middot; June 20</p>
     <!-- JOIN US on one line, no break -->
     <h2 class="cta-title">JOIN <span class="accent">US</span></h2>
     <p class="cta-meta">
-      Tuesday, June 10 &nbsp;&middot;&nbsp; 5:00 &ndash; 9:00 PM<br>
+      Saturday, June 20 &nbsp;&middot;&nbsp; 5:00 &ndash; 9:00 PM<br>
       One Dish &amp; One Drink Included &nbsp;&middot;&nbsp; Open Air Garden
     </p>
     <a href="https://lu.ma/hapsclub" class="cta-btn" target="_blank" rel="noopener">
@@ -658,7 +654,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780173728/haps-club-events/haps-club-logo-white-square.png" alt="Haps Club"></a>
+  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-white-svg.svg" alt="Haps Club"></a>
   <ul class="f-links">
     <li><a href="https://haps.club">haps.club</a></li>
     <li><a href="https://instagram.com/thehapsclub">@thehapsclub</a></li>
