@@ -40,8 +40,8 @@
   .cursor.big { width:44px; height:44px; }
 
   /* ── NAV ── */
-  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:58px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
-  .nav-logo img { height:40px; width:auto; display:block; filter:none; opacity:1; }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:68px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
+  .nav-logo img { height:52px; width:auto; display:block; filter:none; opacity:1; }
   .nav-center { font-size:13px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
   .nav-right { display:flex; align-items:center; gap:28px; }
   .nav-link { font-size:12px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
@@ -232,7 +232,7 @@
   .venue-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:0.9fr 1fr; gap:72px; align-items:start; }
 
   /* SVG illustrated map */
-  .venue-map-wrap { position:relative; overflow:hidden; align-self:stretch; border-radius:0; }
+  .venue-map-wrap { position:relative; overflow:hidden; align-self:stretch; border-radius:0; padding-bottom:30px; }
   .venue-map-wrap::after { display:none; }
 
   .venue-title { font-size:clamp(52px,6.5vw,90px); font-weight:900; text-transform:uppercase; line-height:.9; color:var(--black); margin-bottom:2px; }
@@ -274,13 +274,13 @@
   .cta-btn:hover { background:var(--lime-lt); transform:translateY(-3px); }
 
   /* ── FOOTER ── */
-  footer { background:var(--navy); padding:36px 48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid rgba(255,255,255,.06); }
-  footer a img { height:38px; width:auto; filter:none; opacity:.7; transition:opacity .2s; }
-  footer a:hover img { opacity:.85; }
+  footer { background:var(--white); padding:36px 48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid var(--rule); }
+  footer a img { height:38px; width:auto; filter:none; opacity:.9; transition:opacity .2s; }
+  footer a:hover img { opacity:1; }
   .f-links { display:flex; gap:28px; list-style:none; }
-  .f-links a { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.28); text-decoration:none; transition:color .2s; }
-  .f-links a:hover { color:var(--lime); }
-  .f-copy { font-family:'DM Mono',monospace; font-size:10px; color:rgba(255,255,255,.14); letter-spacing:.06em; }
+  .f-links a { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
+  .f-links a:hover { color:var(--lime-dk); }
+  .f-copy { font-family:'DM Mono',monospace; font-size:10px; color:var(--mid); letter-spacing:.06em; }
 
   /* ── RESPONSIVE ── */
   @media (max-width:1060px) {
@@ -403,7 +403,7 @@
 
     <div>
       <a href="https://haps.club" style="display:inline-block;margin-bottom:32px;width:100%;max-width:280px;">
-        <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-white-svg.svg"
+        <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg"
              alt="Haps Club"
              style="height:auto;width:100%;max-width:280px;filter:none;opacity:1;display:block;">
       </a>
@@ -537,7 +537,7 @@
     <div class="venue-map-wrap">
       <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177199/haps-club-events/haps-garden-party-map.jpg"
            alt="Map showing Jefferson Park / West Adams area of Los Angeles"
-           style="width:100%;height:100%;min-height:400px;object-fit:cover;object-position:center;display:block;">
+           style="width:100%;height:calc(100% - 30px);min-height:400px;object-fit:cover;object-position:center;display:block;">
     </div>
 
     <div>
@@ -658,7 +658,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club"></a>
+  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club" style="height:38px;width:auto;filter:none;opacity:.9;"></a>
   <ul class="f-links">
     <li><a href="https://haps.club">haps.club</a></li>
     <li><a href="https://instagram.com/thehapsclub">@thehapsclub</a></li>
