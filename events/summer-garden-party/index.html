@@ -6,602 +6,306 @@
 <title>Summer Garden Party · Haps Club · June 10</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;700;900&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,900&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --parchment: #F6F2EB;
-    --cream:     #EDE9E0;
+    --parchment: #F5F1EA;
+    --cream:     #EDE9DF;
     --white:     #FFFFFF;
-    --sage:      #E8EDE0;
-    --blush:     #F5EAE4;
+    --sage:      #E6EBD8;
+    --blush:     #F4E8E2;
     --lime:      #9DC81A;
     --lime-lt:   #B8E030;
     --lime-dk:   #6E9410;
     --terra:     #C4583A;
-    --navy:      #1C2040;
+    --navy:      #1A1E3C;
     --black:     #111110;
-    --mid:       #706860;
-    --rule:      #D8D3C8;
-    --rule-dk:   #B8B0A4;
+    --mid:       #6E6658;
+    --rule:      #D4CFC3;
+    --rule-dk:   #B8B0A3;
   }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
   body {
-    font-family: 'Barlow Condensed', sans-serif;
-    background: var(--parchment);
-    color: var(--black);
-    overflow-x: hidden;
-    cursor: none;
+    font-family:'Barlow Condensed',sans-serif;
+    background:var(--parchment);
+    color:var(--black);
+    overflow-x:hidden;
+    cursor:none;
   }
 
   /* ── CURSOR ── */
-  .cursor {
-    position: fixed; width: 10px; height: 10px;
-    background: var(--lime); border-radius: 50%;
-    pointer-events: none; z-index: 9999;
-    transform: translate(-50%,-50%);
-    transition: width .22s, height .22s;
-    mix-blend-mode: multiply;
-  }
-  .cursor.big { width: 44px; height: 44px; }
+  .cursor { position:fixed; width:10px; height:10px; background:var(--lime); border-radius:50%; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:width .22s,height .22s; mix-blend-mode:multiply; }
+  .cursor.big { width:44px; height:44px; }
 
   /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 48px; height: 60px;
-    background: rgba(246,242,235,.94);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--rule);
-  }
-  .nav-logo img { height: 22px; filter: brightness(0); opacity: .82; }
-  .nav-center {
-    font-size: 11px; font-weight: 500;
-    letter-spacing: .2em; text-transform: uppercase; color: var(--mid);
-  }
-  .nav-right { display: flex; align-items: center; gap: 28px; }
-  .nav-link {
-    font-size: 10px; font-weight: 400; letter-spacing: .16em;
-    text-transform: uppercase; color: var(--mid);
-    text-decoration: none; transition: color .2s;
-  }
-  .nav-link:hover { color: var(--black); }
-  .nav-cta {
-    font-size: 10px; font-weight: 700; letter-spacing: .16em;
-    text-transform: uppercase; background: var(--black);
-    color: var(--parchment); padding: 10px 22px;
-    text-decoration: none; transition: background .2s, color .2s;
-  }
-  .nav-cta:hover { background: var(--lime); color: var(--black); }
+  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:58px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
+  .nav-logo img { height:22px; filter:brightness(0); opacity:.82; }
+  .nav-center { font-size:11px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--mid); }
+  .nav-right { display:flex; align-items:center; gap:28px; }
+  .nav-link { font-size:10px; font-weight:400; letter-spacing:.16em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
+  .nav-link:hover { color:var(--black); }
+  .nav-cta { font-size:10px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; background:var(--black); color:var(--parchment); padding:10px 22px; text-decoration:none; transition:background .2s,color .2s; }
+  .nav-cta:hover { background:var(--lime); color:var(--black); }
 
   /* ── HERO ── */
-  .hero {
-    height: 100vh; min-height: 700px;
-    position: relative; overflow: hidden;
-    background: var(--cream);
-    display: flex; flex-direction: column; justify-content: flex-end;
-  }
+  .hero { height:100vh; min-height:700px; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; }
   .hero-img {
-    position: absolute; inset: 0;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/ed1cf56a-9ce6-484a-a769-7e24d584c7d7/DSCF0440+copy.jpg');
-    background-size: cover; background-position: center 55%;
-    opacity: .82;
+    position:absolute; inset:0;
+    background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780152999/haps-club-events/haps-garden-party-banner.jpg');
+    background-size:cover; background-position:center 40%;
   }
-  /* Softer gradient — warm parchment at bottom, not black */
-  .hero-img::after {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(246,242,235,0)   0%,
-      rgba(246,242,235,.05) 35%,
-      rgba(246,242,235,.55) 68%,
-      rgba(246,242,235,.97) 100%
-    );
-  }
+  .hero-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,rgba(245,241,234,0) 0%,rgba(245,241,234,.04) 35%,rgba(245,241,234,.52) 66%,rgba(245,241,234,.97) 100%); }
 
-  /* Illustration — top right corner */
-  .hero-illus {
-    position: absolute; top: 80px; right: 48px;
-    width: clamp(180px, 20vw, 300px);
-    opacity: .55; pointer-events: none; z-index: 2;
-  }
+  /* Botanical top right */
+  .hero-botanical { position:absolute; top:72px; right:40px; width:clamp(160px,18vw,280px); opacity:.35; pointer-events:none; z-index:2; }
 
-  .hero-inner {
-    position: relative; z-index: 2;
-    padding: 0 48px 52px;
-  }
-  .hero-presented {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
-    color: var(--mid); margin-bottom: 14px;
-    display: flex; align-items: center; gap: 14px;
-  }
-  .hero-presented::before {
-    content: ''; width: 28px; height: 1px;
-    background: var(--lime); flex-shrink: 0;
-  }
-  .hero-title {
-    font-size: clamp(80px, 16vw, 210px);
-    font-weight: 900; line-height: .88;
-    color: var(--black); letter-spacing: -.01em;
-    text-transform: uppercase; display: block; max-width: 16ch;
-  }
-  .hero-title .accent { color: var(--lime); }
+  .hero-inner { position:relative; z-index:2; padding:0 48px 52px; }
+  .hero-presented { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--mid); margin-bottom:12px; display:flex; align-items:center; gap:14px; }
+  .hero-presented::before { content:''; width:28px; height:1px; background:var(--lime); flex-shrink:0; }
 
-  .hero-rule { width: 100%; height: 1px; background: var(--rule-dk); margin: 32px 0; }
+  /* Hero title — tight, no extra gaps */
+  .hero-title { display:block; line-height:.88; margin-bottom:0; }
+  .ht { font-size:clamp(88px,16.5vw,210px); font-weight:900; text-transform:uppercase; color:var(--black); letter-spacing:-.01em; display:block; line-height:.88; }
+  .ht.lime { color:var(--lime); }
+  .ht.outline { -webkit-text-stroke:1.5px var(--black); color:transparent; opacity:.18; }
 
-  .hero-meta {
-    display: flex; align-items: center;
-    gap: 0; flex-wrap: wrap;
-  }
-  .hero-meta-item {
-    padding-right: 36px; margin-right: 36px;
-    border-right: 1px solid var(--rule-dk);
-  }
-  .hero-meta-item:last-of-type { border-right: none; padding-right: 0; margin-right: 0; }
-  .h-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px; letter-spacing: .16em; text-transform: uppercase;
-    color: var(--mid); margin-bottom: 5px;
-  }
-  .h-val {
-    font-size: 15px; font-weight: 600;
-    letter-spacing: .06em; text-transform: uppercase; color: var(--black);
-  }
-  .hero-cta-wrap { margin-left: auto; }
-  .hero-cta {
-    display: inline-flex; align-items: center; gap: 14px;
-    background: var(--lime); color: var(--black);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: .2em; text-transform: uppercase;
-    padding: 18px 40px; text-decoration: none;
-    transition: background .2s, transform .18s;
-    white-space: nowrap;
-    box-shadow: 0 4px 24px rgba(157,200,26,.3);
-  }
-  .hero-cta:hover { background: var(--lime-dk); color: #fff; transform: translateY(-2px); }
+  .hero-rule { width:100%; height:1px; background:var(--rule-dk); margin:30px 0; }
+  .hero-meta { display:flex; align-items:center; flex-wrap:wrap; gap:0; }
+  .hero-meta-item { padding-right:36px; margin-right:36px; border-right:1px solid var(--rule-dk); }
+  .hero-meta-item:last-of-type { border-right:none; padding-right:0; margin-right:0; }
+  .h-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--mid); margin-bottom:5px; }
+  .h-val { font-size:15px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--black); }
+  .hero-cta-wrap { margin-left:auto; }
+  .hero-cta { display:inline-flex; align-items:center; gap:14px; background:var(--lime); color:var(--black); font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; padding:18px 40px; text-decoration:none; transition:background .2s,transform .18s; white-space:nowrap; box-shadow:0 4px 24px rgba(157,200,26,.28); }
+  .hero-cta:hover { background:var(--lime-dk); color:#fff; transform:translateY(-2px); }
 
   /* ── MARQUEE ── */
-  .marquee {
-    background: var(--navy);
-    overflow: hidden; padding: 13px 0; white-space: nowrap;
-  }
-  .marquee-track { display: inline-flex; animation: scroll 24s linear infinite; }
-  .marquee-item {
-    font-size: 18px; font-weight: 700;
-    letter-spacing: .1em; text-transform: uppercase;
-    color: var(--parchment); padding: 0 28px;
-    display: flex; align-items: center; gap: 28px;
-  }
-  .m-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--lime); flex-shrink: 0; }
-  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee { background:var(--navy); overflow:hidden; padding:13px 0; white-space:nowrap; }
+  .marquee-track { display:inline-flex; animation:scroll 24s linear infinite; }
+  .marquee-item { font-size:18px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--parchment); padding:0 28px; display:flex; align-items:center; gap:28px; }
+  .m-dot { width:5px; height:5px; border-radius:50%; background:var(--lime); flex-shrink:0; }
+  @keyframes scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
-  /* ── SHARED ── */
-  .label {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px; letter-spacing: .22em; text-transform: uppercase;
-    color: var(--lime-dk); margin-bottom: 18px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .label::before {
-    content: ''; width: 24px; height: 1px;
-    background: var(--lime); display: block; flex-shrink: 0;
-  }
+  /* ── SHARED LABEL ── */
+  .lbl { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--lime-dk); margin-bottom:18px; display:flex; align-items:center; gap:12px; }
+  .lbl::before { content:''; width:24px; height:1px; background:var(--lime); display:block; flex-shrink:0; }
 
   /* ── INTRO ── */
-  .intro {
-    background: var(--white);
-    padding: 120px 48px; position: relative; overflow: hidden;
+  .intro { background:var(--white); padding:120px 48px; position:relative; overflow:hidden; }
+  .intro-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+
+  /* iPhone video frame */
+  .iphone-wrap {
+    position:relative;
+    width:100%; max-width:340px;
+    margin:0 auto;
   }
-  .intro-inner {
-    max-width: 1280px; margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 80px; align-items: center;
+  .iphone-frame {
+    position:relative;
+    border-radius:44px;
+    overflow:hidden;
+    background:#111;
+    box-shadow:
+      0 0 0 2px #C8C8CC,
+      0 0 0 4px #1C1C1E,
+      0 24px 80px rgba(0,0,0,.35),
+      inset 0 0 0 1px rgba(255,255,255,.08);
+    aspect-ratio:9/19.5;
+  }
+  /* Notch */
+  .iphone-frame::before {
+    content:'';
+    position:absolute;
+    top:12px; left:50%;
+    transform:translateX(-50%);
+    width:120px; height:30px;
+    background:#111;
+    border-radius:0 0 20px 20px;
+    z-index:10;
+  }
+  /* Side buttons illusion */
+  .iphone-frame::after {
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:44px;
+    background:linear-gradient(135deg,rgba(255,255,255,.06) 0%,transparent 60%);
+    pointer-events:none;
+    z-index:5;
+  }
+  .iphone-video {
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    border-radius:44px;
+  }
+  /* Home indicator */
+  .iphone-home {
+    position:absolute;
+    bottom:8px; left:50%;
+    transform:translateX(-50%);
+    width:130px; height:4px;
+    background:rgba(255,255,255,.25);
+    border-radius:3px;
+    z-index:10;
   }
 
-  /* Photo */
-  .intro-photo { position: relative; overflow: hidden; aspect-ratio: 3/4; }
-  .intro-photo-img {
-    width: 100%; height: 100%;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260891-MVIA9WQ3D4DL3PZFF626/DSCF0575.JPG');
-    background-size: cover; background-position: center;
-    transition: transform .7s cubic-bezier(.25,.46,.45,.94);
-  }
-  .intro-photo:hover .intro-photo-img { transform: scale(1.04); }
-  .intro-photo::before {
-    content: ''; position: absolute; z-index: 2;
-    top: -1px; left: -1px; width: 40px; height: 40px;
-    border-top: 3px solid var(--lime); border-left: 3px solid var(--lime);
-  }
-  .intro-photo::after {
-    content: ''; position: absolute; z-index: 2;
-    bottom: -1px; right: -1px; width: 40px; height: 40px;
-    border-bottom: 3px solid var(--lime); border-right: 3px solid var(--lime);
-  }
-  .intro-tag {
-    position: absolute; bottom: 28px; left: 0; z-index: 3;
-    background: var(--lime); color: var(--black);
-    font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
-    padding: 10px 22px;
-  }
+  /* Intro text side */
+  .intro-title { font-size:clamp(56px,7.5vw,100px); font-weight:900; line-height:.9; text-transform:uppercase; color:var(--black); margin-bottom:28px; letter-spacing:-.01em; display:block; }
+  .intro-title .accent { color:var(--lime-dk); display:block; }
+  .intro-body { font-size:18px; font-weight:300; line-height:1.78; color:var(--mid); max-width:460px; }
+  .intro-body p+p { margin-top:1.35em; }
+  .intro-body strong { font-weight:500; color:var(--black); }
 
-  /* Text */
-  .intro-title {
-    font-size: clamp(56px, 7.5vw, 100px); font-weight: 900;
-    line-height: .9; text-transform: uppercase; color: var(--black);
-    margin-bottom: 28px; letter-spacing: -.01em;
-  }
-  .intro-title .accent { color: var(--lime-dk); display: block; }
-  .intro-body {
-    font-size: 19px; font-weight: 300; line-height: 1.75; color: var(--mid);
-    max-width: 460px;
-  }
-  .intro-body p + p { margin-top: 1.35em; }
-  .intro-body strong { font-weight: 500; color: var(--black); }
-
-  /* Illustration floating right side */
-  .intro-illus {
-    position: absolute; right: 24px; bottom: 60px;
-    width: clamp(120px, 14vw, 200px);
-    opacity: .18; pointer-events: none;
-  }
+  /* Cocktail illustration */
+  .intro-illus { position:absolute; right:24px; bottom:48px; width:clamp(100px,12vw,170px); opacity:.2; pointer-events:none; }
 
   /* ── DETAILS BAND ── */
-  .details { background: var(--sage); padding: 0 48px; }
-  .details-inner {
-    max-width: 1280px; margin: 0 auto;
-    display: grid; grid-template-columns: repeat(4,1fr);
-    border-top: 1px solid var(--rule-dk);
-    border-bottom: 1px solid var(--rule-dk);
-  }
-  .det {
-    padding: 52px 36px; border-right: 1px solid var(--rule-dk);
-    transition: background .25s; position: relative; overflow: hidden;
-  }
-  .det:last-child { border-right: none; }
-  .det:hover { background: var(--white); }
-  .det:hover .det-num { color: var(--lime); }
-  .det-num {
-    font-size: 56px; font-weight: 900; line-height: 1;
-    color: var(--rule-dk); margin-bottom: 16px; transition: color .3s;
-    letter-spacing: .02em;
-  }
-  .det-lbl {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
-    color: var(--mid); margin-bottom: 8px;
-  }
-  .det-val { font-size: 18px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--black); line-height: 1.25; }
-  .det-sub {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px; color: var(--mid); margin-top: 6px;
-  }
+  .details { background:var(--sage); padding:0 48px; }
+  .details-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--rule-dk); border-bottom:1px solid var(--rule-dk); }
+  .det { padding:52px 32px; border-right:1px solid var(--rule-dk); transition:background .25s; }
+  .det:last-child { border-right:none; }
+  .det:hover { background:var(--white); }
+  .det:hover .det-num { color:var(--lime); }
+  .det-num { font-size:56px; font-weight:900; line-height:1; color:var(--rule-dk); margin-bottom:16px; transition:color .3s; }
+  .det-lbl { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); margin-bottom:8px; }
+  .det-val { font-size:18px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:var(--black); line-height:1.25; }
+  .det-sub { font-family:'DM Mono',monospace; font-size:10px; color:var(--mid); margin-top:6px; }
+
+  /* ── GALLERY STRIP ── */
+  .gallery { background:var(--parchment); padding:80px 0; overflow:hidden; }
+  .gallery-header { padding:0 48px; margin-bottom:36px; display:flex; align-items:baseline; justify-content:space-between; }
+  .gallery-ttl { font-size:clamp(36px,5vw,60px); font-weight:900; text-transform:uppercase; letter-spacing:.02em; color:var(--black); }
+  .gallery-hint { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); }
+
+  .gallery-track { display:flex; gap:3px; padding:0 48px; overflow-x:auto; scrollbar-width:none; scroll-snap-type:x mandatory; }
+  .gallery-track::-webkit-scrollbar { display:none; }
+  .simg { flex-shrink:0; scroll-snap-align:start; overflow:hidden; position:relative; }
+  .simg:nth-child(1) { width:clamp(220px,32vw,480px); height:clamp(280px,44vw,600px); }
+  .simg:nth-child(2) { width:clamp(160px,20vw,300px); height:clamp(280px,44vw,600px); margin-top:60px; }
+  .simg:nth-child(3) { width:clamp(220px,26vw,380px); height:clamp(280px,44vw,600px); }
+  .simg:nth-child(4) { width:clamp(160px,20vw,300px); height:clamp(280px,44vw,600px); margin-top:90px; }
+  .simg:nth-child(5) { width:clamp(200px,28vw,420px); height:clamp(280px,44vw,600px); margin-top:30px; }
+  .simg-bg { width:100%; height:100%; background-size:cover; background-position:center; transition:transform .5s; filter:saturate(.9) contrast(1.06); }
+  .simg:hover .simg-bg { transform:scale(1.04); filter:saturate(1) contrast(1.04); }
+  /* Real event photos — daytime only */
+  .sg1 { background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780153024/haps-club-events/haps-garden-party-crowd-flowers.jpg'); background-position:center top; }
+  .sg2 { background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780153028/haps-club-events/haps-garden-party-taco-plates.jpg'); background-position:center; }
+  .sg3 { background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780153020/haps-club-events/haps-garden-party-tacos-closeup.jpg'); background-position:center; }
+  .sg4 { background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780153016/haps-club-events/haps-garden-party-cocktail-pour.jpg'); background-position:center; }
+  .sg5 { background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780153040/haps-club-events/haps-garden-party-three-women.jpg'); background-position:center top; }
+  .simg-cap { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(to top,rgba(17,17,16,.7) 0%,transparent 100%); padding:28px 16px 13px; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:rgba(245,241,234,.7); opacity:0; transition:opacity .3s; }
+  .simg:hover .simg-cap { opacity:1; }
 
   /* ── MENU ── */
-  .menu { background: var(--blush); padding: 120px 48px; position: relative; overflow: hidden; }
+  .menu { background:var(--blush); padding:120px 48px; position:relative; overflow:hidden; }
+  .menu-wm { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; overflow:hidden; }
+  .menu-wm span { font-size:clamp(160px,28vw,400px); font-weight:900; text-transform:uppercase; letter-spacing:.02em; color:transparent; -webkit-text-stroke:1px rgba(196,88,58,.07); white-space:nowrap; user-select:none; }
+  .menu-illus-taco { position:absolute; right:-10px; bottom:60px; width:clamp(140px,14vw,220px); opacity:.16; pointer-events:none; }
+  .menu-illus-plant { position:absolute; left:-20px; top:80px; width:clamp(100px,10vw,160px); opacity:.18; pointer-events:none; transform:rotate(-15deg); }
+  .menu-inner { max-width:1280px; margin:0 auto; position:relative; z-index:2; }
+  .menu-title { font-size:clamp(60px,8.5vw,112px); font-weight:900; line-height:.88; text-transform:uppercase; color:var(--black); margin-bottom:4px; }
+  .menu-title .accent { color:var(--terra); display:block; }
+  .menu-header { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:end; margin-bottom:64px; padding-bottom:40px; border-bottom:2px solid var(--rule-dk); }
+  .menu-note { font-size:18px; font-weight:300; line-height:1.75; color:var(--mid); align-self:end; }
+  .menu-note strong { font-weight:500; color:var(--black); }
+  .menu-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--rule-dk); }
+  .menu-card { background:var(--blush); padding:52px 40px; position:relative; overflow:hidden; transition:background .25s; border-right:1px solid var(--rule-dk); }
+  .menu-card:last-child { border-right:none; }
+  .menu-card:hover { background:var(--white); }
+  .menu-card:hover .mbar { height:100%; }
+  .mbar { position:absolute; top:0; left:0; width:3px; height:0; background:var(--terra); transition:height .4s ease; }
+  .menu-card-num { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:rgba(17,17,16,.25); margin-bottom:24px; }
+  .menu-card h3 { font-size:32px; font-weight:900; text-transform:uppercase; letter-spacing:.02em; color:var(--black); margin-bottom:28px; line-height:.95; }
+  .menu-card:nth-child(2) h3 { color:var(--terra); }
+  .menu-items { list-style:none; display:flex; flex-direction:column; }
+  .menu-items li { display:flex; flex-direction:column; gap:3px; padding:14px 0; border-bottom:1px solid var(--rule); }
+  .menu-items li:first-child { padding-top:0; }
+  .menu-items li:last-child { border-bottom:none; padding-bottom:0; }
+  .mi-name { font-size:20px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; color:var(--black); }
+  .mi-desc { font-family:'DM Mono',monospace; font-size:11px; color:var(--mid); letter-spacing:.04em; }
 
-  /* Big watermark */
-  .menu-wm {
-    position: absolute; inset: 0; display: flex;
-    align-items: center; justify-content: center;
-    pointer-events: none; overflow: hidden;
-  }
-  .menu-wm span {
-    font-size: clamp(160px,28vw,400px); font-weight: 900;
-    text-transform: uppercase; letter-spacing: .02em;
-    color: transparent; -webkit-text-stroke: 1px rgba(196,88,58,.07);
-    white-space: nowrap; user-select: none;
-  }
+  /* ── VENUE — Map illustration ── */
+  .venue { background:var(--white); padding:120px 48px; position:relative; overflow:hidden; }
+  .venue-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.1fr 1fr; gap:80px; align-items:center; }
 
-  .menu-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+  /* SVG illustrated map */
+  .venue-map-wrap { position:relative; aspect-ratio:1; overflow:hidden; }
+  .venue-map-wrap::after { content:''; position:absolute; z-index:2; top:-1px; right:-1px; width:40px; height:40px; border-top:3px solid var(--lime); border-right:3px solid var(--lime); }
 
-  .menu-header {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 60px; align-items: end; margin-bottom: 64px;
-    padding-bottom: 44px; border-bottom: 2px solid var(--rule-dk);
-  }
-  .menu-title {
-    font-size: clamp(60px, 8vw, 108px); font-weight: 900;
-    line-height: .88; text-transform: uppercase; color: var(--black);
-    letter-spacing: -.01em;
-  }
-  .menu-title .accent { color: var(--terra); display: block; }
-  .menu-note {
-    font-size: 18px; font-weight: 300; line-height: 1.75;
-    color: var(--mid); align-self: end;
-  }
-  .menu-note strong { font-weight: 500; color: var(--black); }
-
-  .menu-grid {
-    display: grid; grid-template-columns: repeat(3,1fr);
-    gap: 0; border: 1px solid var(--rule-dk);
-    background: var(--rule-dk); /* gap fill */
-  }
-  .menu-card {
-    background: var(--blush); padding: 52px 40px;
-    position: relative; overflow: hidden; transition: background .25s;
-    border-right: 1px solid var(--rule-dk);
-  }
-  .menu-card:last-child { border-right: none; }
-  .menu-card:hover { background: var(--white); }
-  .menu-card:hover .mbar { height: 100%; }
-  .mbar {
-    position: absolute; top: 0; left: 0;
-    width: 3px; height: 0; background: var(--terra);
-    transition: height .4s ease;
-  }
-  .menu-card-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
-    color: rgba(17,17,16,.25); margin-bottom: 26px;
-  }
-  .menu-card h3 {
-    font-size: 34px; font-weight: 900; text-transform: uppercase;
-    letter-spacing: .02em; color: var(--black);
-    margin-bottom: 28px; line-height: .95;
-  }
-  .menu-card:nth-child(2) h3 { color: var(--terra); }
-  .menu-items { list-style: none; display: flex; flex-direction: column; gap: 0; }
-  .menu-items li {
-    display: flex; flex-direction: column; gap: 3px;
-    padding: 16px 0; border-bottom: 1px solid var(--rule);
-  }
-  .menu-items li:first-child { padding-top: 0; }
-  .menu-items li:last-child { border-bottom: none; padding-bottom: 0; }
-  .mi-name {
-    font-size: 20px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: .04em; color: var(--black);
-  }
-  .mi-desc {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px; color: var(--mid); letter-spacing: .04em;
-  }
-
-  /* Menu illustration */
-  .menu-illus {
-    position: absolute; right: -20px; top: 50%;
-    transform: translateY(-50%);
-    width: clamp(140px, 16vw, 220px);
-    opacity: .14; pointer-events: none;
-  }
-
-  /* ── GALLERY ── */
-  .gallery { background: var(--cream); padding: 80px 0; overflow: hidden; }
-  .gallery-header {
-    padding: 0 48px; margin-bottom: 36px;
-    display: flex; align-items: baseline; justify-content: space-between;
-  }
-  .gallery-ttl {
-    font-size: clamp(36px, 5vw, 60px); font-weight: 900;
-    text-transform: uppercase; color: var(--black); letter-spacing: .02em;
-  }
-  .gallery-hint {
-    font-family: 'DM Mono', monospace; font-size: 10px;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--mid);
-  }
-  .gallery-track {
-    display: flex; gap: 3px; padding: 0 48px;
-    overflow-x: auto; scrollbar-width: none; scroll-snap-type: x mandatory;
-  }
-  .gallery-track::-webkit-scrollbar { display: none; }
-  .gi { flex-shrink: 0; scroll-snap-align: start; position: relative; overflow: hidden; }
-  .gi:nth-child(1) { width: clamp(220px,34vw,500px); height: clamp(280px,44vw,600px); }
-  .gi:nth-child(2) { width: clamp(160px,22vw,320px); height: clamp(280px,44vw,600px); margin-top: 60px; }
-  .gi:nth-child(3) { width: clamp(220px,28vw,420px); height: clamp(280px,44vw,600px); }
-  .gi:nth-child(4) { width: clamp(160px,22vw,320px); height: clamp(280px,44vw,600px); margin-top: 100px; }
-  .gi:nth-child(5) { width: clamp(200px,30vw,440px); height: clamp(280px,44vw,600px); margin-top: 30px; }
-  .g-bg {
-    width: 100%; height: 100%; background-size: cover; background-position: center;
-    transition: transform .5s; filter: saturate(.88) contrast(1.08);
-  }
-  .gi:hover .g-bg { transform: scale(1.04); filter: saturate(1) contrast(1.04); }
-  .gb1 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260805-TWCTXZTNC5N3GONGT5S5/DSCF0703.JPG'); }
-  .gb2 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/5f8fe2f9-4726-44ef-8056-f9295a0e6d31/DSCF0519.JPG'); }
-  .gb3 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548261002-T98N3EZI2UV344XGOQ2P/DSCF0858.JPG'); }
-  .gb4 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260859-JH0QN9XUQCPQSFGAPW03/DSCF0412.JPG'); }
-  .gb5 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/6b8168f9-04f6-4853-9cb9-f9776437e87e/DSCF0363-copy.jpg'); }
-  .g-cap {
-    position: absolute; bottom: 0; left: 0; right: 0;
-    background: linear-gradient(to top, rgba(17,17,16,.7) 0%, transparent 100%);
-    padding: 32px 18px 14px;
-    font-family: 'DM Mono', monospace; font-size: 9px;
-    letter-spacing: .16em; text-transform: uppercase; color: rgba(246,242,235,.7);
-    opacity: 0; transition: opacity .3s;
-  }
-  .gi:hover .g-cap { opacity: 1; }
-
-  /* ── VENUE ── */
-  .venue { background: var(--white); padding: 120px 48px; }
-  .venue-inner {
-    max-width: 1280px; margin: 0 auto;
-    display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center;
-  }
-  .venue-map { position: relative; aspect-ratio: 1; overflow: hidden; }
-  .venue-map::after {
-    content: ''; position: absolute; z-index: 2;
-    top: -1px; right: -1px; width: 40px; height: 40px;
-    border-top: 3px solid var(--lime); border-right: 3px solid var(--lime);
-  }
-  .venue-map-img {
-    width: 100%; height: 100%;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260757-4BRK2PVR2JECD4XM5W89/DSCF0558.JPG');
-    background-size: cover; background-position: center;
-    filter: saturate(.6) contrast(1.1);
-  }
-  .vpin {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%,-50%); z-index: 2;
-    display: flex; flex-direction: column; align-items: center;
-  }
-  .vpin-dot {
-    width: 18px; height: 18px; border-radius: 50%;
-    background: var(--lime); border: 3px solid #fff;
-    box-shadow: 0 0 0 5px rgba(157,200,26,.25), 0 0 22px rgba(157,200,26,.4);
-  }
-  .vpin-line { width: 2px; height: 38px; background: var(--lime); }
-  .vpin-label {
-    background: var(--navy); color: var(--lime-lt);
-    font-family: 'DM Mono', monospace; font-size: 9px;
-    letter-spacing: .14em; text-transform: uppercase; padding: 7px 14px; white-space: nowrap;
-  }
-  .venue-title {
-    font-size: clamp(52px, 6.5vw, 90px); font-weight: 900;
-    text-transform: uppercase; line-height: .9; color: var(--black); margin-bottom: 2px;
-  }
-  .venue-title-sub {
-    font-size: clamp(44px, 5.5vw, 76px); font-weight: 300;
-    text-transform: uppercase; line-height: .9; color: var(--black); margin-bottom: 36px;
-  }
-  .venue-body {
-    font-size: 18px; font-weight: 300; line-height: 1.75;
-    color: var(--mid); max-width: 440px; margin-bottom: 32px;
-  }
-  .venue-deets {
-    border-left: 3px solid var(--lime); padding-left: 20px;
-    display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px;
-  }
-  .vr { display: flex; gap: 18px; }
-  .vdt {
-    font-family: 'DM Mono', monospace; font-size: 9px;
-    letter-spacing: .16em; text-transform: uppercase;
-    color: rgba(17,17,16,.3); min-width: 64px; padding-top: 3px;
-  }
-  .vdd { font-size: 15px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; color: var(--black); line-height: 1.35; }
-  .venue-link {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
-    color: var(--black); text-decoration: none;
-    border-bottom: 2px solid var(--black); padding-bottom: 3px;
-    transition: color .2s, border-color .2s;
-  }
-  .venue-link:hover { color: var(--lime-dk); border-color: var(--lime-dk); }
+  .venue-title { font-size:clamp(52px,6.5vw,90px); font-weight:900; text-transform:uppercase; line-height:.9; color:var(--black); margin-bottom:2px; }
+  .venue-title-sub { font-size:clamp(44px,5.5vw,76px); font-weight:300; text-transform:uppercase; line-height:.9; color:var(--black); margin-bottom:36px; }
+  .venue-body { font-size:18px; font-weight:300; line-height:1.75; color:var(--mid); max-width:440px; margin-bottom:32px; }
+  .venue-deets { border-left:3px solid var(--lime); padding-left:20px; display:flex; flex-direction:column; gap:12px; margin-bottom:36px; }
+  .vr { display:flex; gap:18px; }
+  .vdt { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:rgba(17,17,16,.3); min-width:64px; padding-top:3px; }
+  .vdd { font-size:15px; font-weight:500; text-transform:uppercase; letter-spacing:.04em; color:var(--black); line-height:1.35; }
+  .venue-link { display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--black); text-decoration:none; border-bottom:2px solid var(--black); padding-bottom:3px; transition:color .2s,border-color .2s; }
+  .venue-link:hover { color:var(--lime-dk); border-color:var(--lime-dk); }
 
   /* ── HOSTS ── */
-  .hosts {
-    background: var(--sage); padding: 60px 48px;
-    border-top: 1px solid var(--rule-dk); border-bottom: 1px solid var(--rule-dk);
-  }
-  .hosts-inner {
-    max-width: 1280px; margin: 0 auto;
-    display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
-  }
-  .hosts-lbl {
-    font-family: 'DM Mono', monospace; font-size: 9px;
-    letter-spacing: .22em; text-transform: uppercase; color: var(--mid); flex-shrink: 0;
-  }
-  .hosts-pipe { width: 1px; height: 28px; background: var(--rule-dk); flex-shrink: 0; }
-  .hosts-list { display: flex; flex-wrap: wrap; gap: 8px; }
-  .host {
-    display: flex; align-items: center; gap: 10px;
-    padding: 9px 18px 9px 9px;
-    border: 1px solid var(--rule-dk); background: var(--white);
-    transition: border-color .2s, box-shadow .2s;
-  }
-  .host:hover { border-color: var(--lime); box-shadow: 0 2px 12px rgba(157,200,26,.15); }
-  .host-av {
-    width: 28px; height: 28px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'DM Mono', monospace; font-size: 10px; color: #fff; flex-shrink: 0;
-  }
-  .host-nm { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .hosts { background:var(--sage); padding:60px 48px; border-top:1px solid var(--rule-dk); border-bottom:1px solid var(--rule-dk); }
+  .hosts-inner { max-width:1280px; margin:0 auto; display:flex; align-items:center; gap:40px; flex-wrap:wrap; }
+  .hosts-lbl { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--mid); flex-shrink:0; }
+  .hosts-pipe { width:1px; height:28px; background:var(--rule-dk); flex-shrink:0; }
+  .hosts-list { display:flex; flex-wrap:wrap; gap:8px; }
+  .host { display:flex; align-items:center; gap:10px; padding:9px 18px 9px 9px; border:1px solid var(--rule-dk); background:var(--white); text-decoration:none; transition:border-color .2s,box-shadow .2s; }
+  .host:hover { border-color:var(--lime); box-shadow:0 2px 12px rgba(157,200,26,.15); }
+  .host-av { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'DM Mono',monospace; font-size:10px; color:#fff; flex-shrink:0; }
+  .host-nm { font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--black); }
 
   /* ── CTA ── */
-  .cta {
-    background: var(--navy);
-    padding: 150px 48px; text-align: center; position: relative; overflow: hidden;
-  }
-  .cta-wm {
-    position: absolute; inset: 0; display: flex;
-    align-items: center; justify-content: center;
-    pointer-events: none; overflow: hidden;
-  }
-  .cta-wm span {
-    font-size: clamp(180px,34vw,520px); font-weight: 900; text-transform: uppercase;
-    color: transparent; -webkit-text-stroke: 1px rgba(157,200,26,.08);
-    white-space: nowrap; user-select: none;
-  }
-
-  /* Illustration bottom corners */
-  .cta-illus-l, .cta-illus-r {
-    position: absolute; bottom: 0;
-    width: clamp(160px,18vw,260px); opacity: .28; pointer-events: none;
-  }
-  .cta-illus-l { left: -20px; transform-origin: bottom left; }
-  .cta-illus-r { right: -20px; transform: scaleX(-1); transform-origin: bottom right; }
-
-  .cta-inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
-  .cta-eyebrow {
-    font-family: 'DM Mono', monospace; font-size: 10px;
-    letter-spacing: .24em; text-transform: uppercase; color: var(--lime);
-    margin-bottom: 26px; display: flex; align-items: center; justify-content: center; gap: 18px;
-  }
-  .cta-eyebrow::before, .cta-eyebrow::after {
-    content: ''; display: block; width: 36px; height: 1px; background: var(--lime);
-  }
-  .cta-title {
-    font-size: clamp(80px, 14vw, 188px); font-weight: 900;
-    text-transform: uppercase; line-height: .88; color: var(--parchment); letter-spacing: -.01em;
-  }
-  .cta-title .accent { color: var(--lime); display: block; }
-  .cta-meta {
-    font-family: 'DM Mono', monospace; font-size: 11px;
-    letter-spacing: .16em; text-transform: uppercase;
-    color: rgba(246,242,235,.32); margin: 40px 0 52px; line-height: 2.4;
-  }
-  .cta-btn {
-    display: inline-flex; align-items: center; gap: 16px;
-    background: var(--lime); color: var(--black);
-    font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
-    padding: 22px 60px; text-decoration: none;
-    transition: background .2s, transform .2s;
-    box-shadow: 0 8px 32px rgba(157,200,26,.22);
-  }
-  .cta-btn:hover { background: var(--lime-lt); transform: translateY(-3px); }
+  .cta { background:var(--navy); padding:150px 48px; text-align:center; position:relative; overflow:hidden; }
+  .cta-wm { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; pointer-events:none; overflow:hidden; }
+  .cta-wm span { font-size:clamp(180px,32vw,500px); font-weight:900; text-transform:uppercase; color:transparent; -webkit-text-stroke:1px rgba(157,200,26,.08); white-space:nowrap; user-select:none; }
+  .cta-bot-l,.cta-bot-r { position:absolute; bottom:-10px; width:clamp(160px,18vw,260px); opacity:.3; pointer-events:none; }
+  .cta-bot-l { left:-20px; }
+  .cta-bot-r { right:-20px; transform:scaleX(-1); }
+  .cta-inner { position:relative; z-index:2; max-width:900px; margin:0 auto; }
+  .cta-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--lime); margin-bottom:26px; display:flex; align-items:center; justify-content:center; gap:18px; }
+  .cta-eyebrow::before,.cta-eyebrow::after { content:''; display:block; width:36px; height:1px; background:var(--lime); }
+  /* JOIN US on one line — no break */
+  .cta-title { font-size:clamp(80px,14vw,188px); font-weight:900; text-transform:uppercase; line-height:.88; color:var(--parchment); letter-spacing:-.01em; white-space:nowrap; }
+  .cta-title .accent { color:var(--lime); }
+  .cta-meta { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(245,241,234,.3); margin:40px 0 52px; line-height:2.4; }
+  .cta-btn { display:inline-flex; align-items:center; gap:16px; background:var(--lime); color:var(--black); font-size:12px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; padding:22px 60px; text-decoration:none; transition:background .2s,transform .2s; box-shadow:0 8px 32px rgba(157,200,26,.22); }
+  .cta-btn:hover { background:var(--lime-lt); transform:translateY(-3px); }
 
   /* ── FOOTER ── */
-  footer {
-    background: var(--navy); padding: 36px 48px;
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 20px;
-    border-top: 1px solid rgba(255,255,255,.06);
-  }
-  footer a img { height: 20px; filter: brightness(0) invert(1); opacity: .4; transition: opacity .2s; }
-  footer a:hover img { opacity: .85; }
-  .f-links { display: flex; gap: 28px; list-style: none; }
-  .f-links a {
-    font-family: 'DM Mono', monospace; font-size: 10px;
-    letter-spacing: .12em; text-transform: uppercase;
-    color: rgba(255,255,255,.28); text-decoration: none; transition: color .2s;
-  }
-  .f-links a:hover { color: var(--lime); }
-  .f-copy { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(255,255,255,.14); letter-spacing: .06em; }
+  footer { background:var(--navy); padding:36px 48px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px; border-top:1px solid rgba(255,255,255,.06); }
+  footer a img { height:20px; filter:brightness(0) invert(1); opacity:.4; transition:opacity .2s; }
+  footer a:hover img { opacity:.85; }
+  .f-links { display:flex; gap:28px; list-style:none; }
+  .f-links a { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.28); text-decoration:none; transition:color .2s; }
+  .f-links a:hover { color:var(--lime); }
+  .f-copy { font-family:'DM Mono',monospace; font-size:10px; color:rgba(255,255,255,.14); letter-spacing:.06em; }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 1060px) {
-    .intro-inner, .venue-inner { grid-template-columns: 1fr; gap: 48px; }
-    .menu-grid { grid-template-columns: 1fr; }
-    .menu-card { border-right: none; border-bottom: 1px solid var(--rule-dk); }
-    .menu-card:last-child { border-bottom: none; }
-    .details-inner { grid-template-columns: 1fr 1fr; }
-    .menu-header { grid-template-columns: 1fr; }
-    .menu-illus { display: none; }
+  @media (max-width:1060px) {
+    .intro-inner,.venue-inner { grid-template-columns:1fr; gap:48px; }
+    .menu-grid { grid-template-columns:1fr; }
+    .menu-card { border-right:none; border-bottom:1px solid var(--rule-dk); }
+    .menu-card:last-child { border-bottom:none; }
+    .details-inner { grid-template-columns:1fr 1fr; }
+    .menu-header { grid-template-columns:1fr; }
+    .menu-illus-taco,.menu-illus-plant { display:none; }
+    .iphone-wrap { max-width:260px; }
   }
-  @media (max-width: 700px) {
-    nav { padding: 0 20px; }
-    .nav-center { display: none; }
-    .hero-inner { padding: 0 20px 44px; }
-    .intro, .menu, .venue, .cta { padding: 80px 20px; }
-    .details { padding: 0 20px; }
-    .hosts { padding: 48px 20px; }
-    .gallery-header, .gallery-track { padding: 0 20px; }
-    footer { flex-direction: column; align-items: flex-start; padding: 28px 20px; }
-    .hero-meta { flex-direction: column; gap: 14px; }
-    .hero-meta-item { border-right: none; padding-right: 0; margin-right: 0; }
-    .hero-cta-wrap { margin-left: 0; }
-    .nav-link { display: none; }
-    .details-inner { grid-template-columns: 1fr 1fr; }
-    body { cursor: auto; } .cursor { display: none; }
+  @media (max-width:700px) {
+    nav { padding:0 20px; } .nav-center,.nav-link { display:none; }
+    .hero-inner { padding:0 20px 44px; }
+    .intro,.menu,.venue,.cta { padding:80px 20px; }
+    .details { padding:0 20px; }
+    .hosts { padding:48px 20px; }
+    .gallery-header,.gallery-track { padding:0 20px; }
+    footer { flex-direction:column; align-items:flex-start; padding:28px 20px; }
+    .hero-meta { flex-direction:column; gap:14px; }
+    .hero-meta-item { border-right:none; padding-right:0; margin-right:0; }
+    .hero-cta-wrap { margin-left:0; }
+    body { cursor:auto; } .cursor { display:none; }
+    .cta-title { font-size:clamp(60px,14vw,120px); }
   }
 </style>
 </head>
@@ -621,74 +325,39 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO — banner.jpg -->
 <section class="hero">
   <div class="hero-img"></div>
 
-  <!-- Top-right botanical illustration — loose single stem with blooms -->
-  <svg class="hero-illus" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g stroke="#1C2040" stroke-linecap="round" stroke-linejoin="round">
-      <!-- Main stem -->
-      <path d="M150 410 C148 340 145 270 150 200 C154 132 158 80 153 18" stroke-width="2.2"/>
-      <!-- Left branches -->
-      <path d="M148 330 C118 308 85 308 58 324" stroke-width="1.8"/>
-      <path d="M149 260 C118 238 86 240 60 255" stroke-width="1.8"/>
-      <path d="M150 200 C125 180 96 182 74 196" stroke-width="1.6"/>
-      <!-- Right branches -->
-      <path d="M152 310 C182 288 212 292 234 308" stroke-width="1.8"/>
-      <path d="M151 248 C184 226 214 228 236 244" stroke-width="1.8"/>
-      <path d="M152 192 C180 174 206 176 224 190" stroke-width="1.6"/>
-      <!-- Leaves left -->
-      <path d="M55 322 C28 302 18 274 34 256 C50 238 78 252 88 274 C98 296 86 316 55 322Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
-      <path d="M57 253 C30 233 22 206 38 190 C54 174 80 190 88 212 C96 234 86 252 57 253Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
-      <path d="M236 306 C262 286 272 258 258 240 C244 224 218 238 208 260 C198 282 208 302 236 306Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
-      <path d="M238 242 C264 222 272 196 258 180 C244 166 218 178 208 200 C198 222 210 240 238 242Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
-      <!-- Central bloom -->
-      <circle cx="153" cy="18" r="24" stroke-width="1.5" fill="rgba(28,32,64,.03)"/>
-      <circle cx="153" cy="18" r="14" stroke-width="1.5"/>
-      <circle cx="153" cy="18" r="6" stroke-width="1.5"/>
-      <ellipse cx="153" cy="-4" rx="8" ry="13" stroke-width="1.2"/>
-      <ellipse cx="153" cy="40" rx="8" ry="13" stroke-width="1.2"/>
-      <ellipse cx="131" cy="18" rx="13" ry="8" stroke-width="1.2"/>
-      <ellipse cx="175" cy="18" rx="13" ry="8" stroke-width="1.2"/>
-      <ellipse cx="137" cy="2" rx="8" ry="13" stroke-width="1.2" transform="rotate(-45 137 2)"/>
-      <ellipse cx="169" cy="2" rx="8" ry="13" stroke-width="1.2" transform="rotate(45 169 2)"/>
-      <ellipse cx="137" cy="34" rx="8" ry="13" stroke-width="1.2" transform="rotate(45 137 34)"/>
-      <ellipse cx="169" cy="34" rx="8" ry="13" stroke-width="1.2" transform="rotate(-45 169 34)"/>
-      <!-- Side blooms -->
-      <circle cx="74" cy="195" r="14" stroke-width="1.2" fill="rgba(28,32,64,.03)"/>
-      <circle cx="74" cy="195" r="7" stroke-width="1.2"/>
-      <circle cx="226" cy="192" r="14" stroke-width="1.2" fill="rgba(28,32,64,.03)"/>
-      <circle cx="226" cy="192" r="7" stroke-width="1.2"/>
-      <!-- Small buds -->
-      <ellipse cx="112" cy="155" rx="5" ry="9" stroke-width="1.1" transform="rotate(-28 112 155)"/>
-      <ellipse cx="192" cy="153" rx="5" ry="9" stroke-width="1.1" transform="rotate(28 192 153)"/>
-      <ellipse cx="72" cy="218" rx="4" ry="8" stroke-width="1.1" transform="rotate(-35 72 218)"/>
-      <ellipse cx="232" cy="216" rx="4" ry="8" stroke-width="1.1" transform="rotate(35 232 216)"/>
+  <svg class="hero-botanical" viewBox="0 0 280 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#1A1E3C" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M140 388 C138 320 135 255 140 188 C144 124 148 76 143 16" stroke-width="2.2"/>
+      <path d="M138 318 C110 298 80 298 55 312" stroke-width="1.8"/>
+      <path d="M139 252 C110 232 82 234 58 248" stroke-width="1.8"/>
+      <path d="M141 296 C170 276 198 278 220 294" stroke-width="1.8"/>
+      <path d="M141 238 C168 220 194 222 212 236" stroke-width="1.8"/>
+      <path d="M51 310 C26 292 17 266 32 249 C47 233 74 247 83 268 C92 289 80 308 51 310Z" stroke-width="1.4" fill="rgba(26,30,60,.04)"/>
+      <path d="M222 292 C246 274 255 248 240 231 C226 216 200 230 191 251 C182 272 194 290 222 292Z" stroke-width="1.4" fill="rgba(26,30,60,.04)"/>
+      <circle cx="143" cy="16" r="22" stroke-width="1.5" fill="rgba(26,30,60,.03)"/>
+      <circle cx="143" cy="16" r="12" stroke-width="1.4"/>
+      <circle cx="143" cy="16" r="5" stroke-width="1.4"/>
+      <ellipse cx="143" cy="-5" rx="7" ry="12" stroke-width="1.1"/>
+      <ellipse cx="143" cy="37" rx="7" ry="12" stroke-width="1.1"/>
+      <ellipse cx="122" cy="16" rx="12" ry="7" stroke-width="1.1"/>
+      <ellipse cx="164" cy="16" rx="12" ry="7" stroke-width="1.1"/>
     </g>
   </svg>
 
   <div class="hero-inner">
     <p class="hero-presented">Presented by Haps Club &amp; Twentieth Street Garden</p>
-    <h1 class="hero-title">
-      SUMMER<br>
-      <span class="accent">GARDEN</span><br>
-      PARTY
-    </h1>
+    <span class="ht">SUMMER</span>
+    <span class="ht lime">GARDEN</span>
+    <span class="ht">PARTY</span>
     <div class="hero-rule"></div>
     <div class="hero-meta">
-      <div class="hero-meta-item">
-        <p class="h-label">Date</p>
-        <p class="h-val">Tuesday, June 10</p>
-      </div>
-      <div class="hero-meta-item">
-        <p class="h-label">Time</p>
-        <p class="h-val">5:00 &ndash; 9:00 PM</p>
-      </div>
-      <div class="hero-meta-item">
-        <p class="h-label">Venue</p>
-        <p class="h-val">Twentieth Street Garden</p>
-      </div>
+      <div class="hero-meta-item"><p class="h-label">Date</p><p class="h-val">Tuesday, June 10</p></div>
+      <div class="hero-meta-item"><p class="h-label">Time</p><p class="h-val">5:00 &ndash; 9:00 PM</p></div>
+      <div class="hero-meta-item"><p class="h-label">Venue</p><p class="h-val">Twentieth Street Garden</p></div>
       <div class="hero-cta-wrap">
         <a href="https://lu.ma/hapsclub" class="hero-cta" target="_blank" rel="noopener">
           Reserve Your Place
@@ -719,20 +388,23 @@
   </div>
 </div>
 
-<!-- INTRO -->
+<!-- INTRO — iPhone video + text -->
 <section class="intro">
   <div class="intro-inner">
-    <div class="intro-photo">
-      <div class="intro-photo-img"></div>
-      <div class="intro-tag">West Adams in Bloom</div>
+    <!-- iPhone video frame -->
+    <div class="iphone-wrap">
+      <div class="iphone-frame">
+        <video class="iphone-video" autoplay muted loop playsinline>
+          <source src="https://res.cloudinary.com/dimlqawuh/video/upload/v1780153054/haps-club-events/haps-garden-party-feature-video.mp4" type="video/mp4">
+        </video>
+        <div class="iphone-home"></div>
+      </div>
     </div>
+
     <div>
-      <p class="label">About the evening</p>
-      <h2 class="intro-title">
-        AN EVENING<br>
-        <span class="accent">IN THE</span><br>
-        GARDEN
-      </h2>
+      <p class="lbl">About the evening</p>
+      <span class="intro-title">AN EVENING</span>
+      <span class="intro-title accent">IN THE GARDEN</span>
       <div class="intro-body">
         <p><strong>Twentieth Street Garden and Haps Club</strong> come together for a summer evening in one of West Adams' most quietly magnetic spaces &mdash; a lush open-air backyard in full June bloom.</p>
         <p>Your ticket includes a dish from <strong>Tacos Como En El D.F.</strong> and a seasonal cocktail crafted with ingredients grown right here in the garden.</p>
@@ -741,26 +413,17 @@
     </div>
   </div>
 
-  <!-- Cocktail glass illustration, bottom right -->
-  <svg class="intro-illus" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g stroke="#1C2040" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
-      <!-- Glass bowl -->
-      <path d="M30 20 L170 20 L112 110 L112 220 L88 220 L88 110 Z"/>
-      <!-- Stem base -->
-      <line x1="60" y1="220" x2="140" y2="220"/>
-      <!-- Liquid fill line -->
-      <path d="M48 55 Q100 45 152 55" stroke-width="1.2" opacity=".5"/>
-      <!-- Garnish stick -->
-      <line x1="130" y1="18" x2="160" y2="8" stroke="#9DC81A" stroke-width="2"/>
-      <!-- Cherry -->
-      <circle cx="163" cy="6" r="7" stroke="#C4583A" stroke-width="1.8"/>
-      <!-- Bubbles -->
-      <circle cx="85" cy="75" r="4" stroke-width="1.2" opacity=".5"/>
-      <circle cx="100" cy="60" r="3" stroke-width="1.2" opacity=".4"/>
-      <circle cx="112" cy="80" r="3.5" stroke-width="1.2" opacity=".45"/>
-      <!-- Condensation lines outside -->
-      <path d="M145 50 Q148 60 145 70" stroke-width="1" opacity=".3"/>
-      <path d="M155 60 Q158 70 155 80" stroke-width="1" opacity=".25"/>
+  <!-- Cocktail glass illustration -->
+  <svg class="intro-illus" viewBox="0 0 180 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#1A1E3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+      <path d="M24 16 L156 16 L104 102 L104 208 L76 208 Z"/>
+      <line x1="52" y1="208" x2="128" y2="208"/>
+      <path d="M42 48 Q90 38 138 48" stroke-width="1.2" opacity=".5"/>
+      <line x1="122" y1="14" x2="150" y2="4" stroke="#9DC81A" stroke-width="2.2"/>
+      <circle cx="154" cy="3" r="7" stroke="#C4583A" stroke-width="1.8"/>
+      <circle cx="78" cy="70" r="4" stroke-width="1.2" opacity=".45"/>
+      <circle cx="92" cy="56" r="3" stroke-width="1.2" opacity=".35"/>
+      <circle cx="104" cy="75" r="3.5" stroke-width="1.2" opacity=".4"/>
     </g>
   </svg>
 </section>
@@ -768,29 +431,25 @@
 <!-- DETAILS BAND -->
 <section class="details">
   <div class="details-inner">
-    <div class="det">
-      <div class="det-num">01</div>
-      <div class="det-lbl">Date</div>
-      <div class="det-val">Tuesday<br>June 10</div>
-    </div>
-    <div class="det">
-      <div class="det-num">02</div>
-      <div class="det-lbl">Hours</div>
-      <div class="det-val">5:00 PM<br>&ndash; 9:00 PM</div>
-      <div class="det-sub">Doors open at 5</div>
-    </div>
-    <div class="det">
-      <div class="det-num">03</div>
-      <div class="det-lbl">Location</div>
-      <div class="det-val">Twentieth<br>Street Garden</div>
-      <div class="det-sub">2267 W 20th St &middot; West Adams</div>
-    </div>
-    <div class="det">
-      <div class="det-num">04</div>
-      <div class="det-lbl">Setting</div>
-      <div class="det-val">Open Air<br>Backyard</div>
-      <div class="det-sub">Dress for a warm June evening</div>
-    </div>
+    <div class="det"><div class="det-num">01</div><div class="det-lbl">Date</div><div class="det-val">Tuesday June 10</div></div>
+    <div class="det"><div class="det-num">02</div><div class="det-lbl">Hours</div><div class="det-val">5:00 PM &ndash; 9:00 PM</div><div class="det-sub">Doors open at 5</div></div>
+    <div class="det"><div class="det-num">03</div><div class="det-lbl">Location</div><div class="det-val">Twentieth Street Garden</div><div class="det-sub">2267 W 20th St &middot; West Adams</div></div>
+    <div class="det"><div class="det-num">04</div><div class="det-lbl">Setting</div><div class="det-val">Open Air Backyard</div><div class="det-sub">Dress for a warm June evening</div></div>
+  </div>
+</section>
+
+<!-- GALLERY — daytime photos only -->
+<section class="gallery">
+  <div class="gallery-header">
+    <h2 class="gallery-ttl">The Vibe</h2>
+    <span class="gallery-hint">Scroll &rarr;</span>
+  </div>
+  <div class="gallery-track">
+    <div class="simg"><div class="simg-bg sg1"></div><div class="simg-cap">Good company</div></div>
+    <div class="simg"><div class="simg-bg sg2"></div><div class="simg-cap">Tacos Como En El D.F.</div></div>
+    <div class="simg"><div class="simg-bg sg3"></div><div class="simg-cap">Made fresh</div></div>
+    <div class="simg"><div class="simg-bg sg4"></div><div class="simg-cap">Garden cocktails</div></div>
+    <div class="simg"><div class="simg-bg sg5"></div><div class="simg-cap">The crowd</div></div>
   </div>
 </section>
 
@@ -798,33 +457,32 @@
 <section class="menu">
   <div class="menu-wm" aria-hidden="true"><span>MENU</span></div>
 
-  <!-- Taco illustration, right edge -->
-  <svg class="menu-illus" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g stroke="#1C2040" stroke-linecap="round" stroke-linejoin="round">
-      <!-- Taco shell -->
-      <path d="M20 200 Q30 80 110 40 Q190 80 200 200" stroke-width="2.2" fill="rgba(28,32,64,.03)"/>
-      <!-- Shell curve fold -->
+  <svg class="menu-illus-taco" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#1A1E3C" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 200 Q30 80 110 40 Q190 80 200 200" stroke-width="2.2" fill="rgba(26,30,60,.03)"/>
       <path d="M40 200 Q50 110 110 80 Q170 110 180 200" stroke-width="1.5" opacity=".4"/>
-      <!-- Fillings — lettuce -->
-      <path d="M55 160 Q65 130 80 125 Q95 120 110 122 Q125 120 140 125 Q155 130 165 160" stroke-width="1.5" fill="rgba(28,32,64,.04)"/>
-      <!-- Tomato -->
+      <path d="M55 160 Q65 130 80 125 Q95 120 110 122 Q125 120 140 125 Q155 130 165 160" stroke-width="1.5" fill="rgba(26,30,60,.04)"/>
       <circle cx="90" cy="140" r="12" stroke-width="1.4" fill="rgba(196,88,58,.06)"/>
       <circle cx="130" cy="138" r="10" stroke-width="1.4" fill="rgba(196,88,58,.06)"/>
-      <!-- Cheese squiggle -->
-      <path d="M70 155 Q82 148 94 155 Q106 162 118 155 Q130 148 142 155" stroke-width="1.2" stroke="#9DC81A" opacity=".7"/>
-      <!-- Herbs on top -->
+      <path d="M70 155 Q82 148 94 155 Q106 162 118 155 Q130 148 142 155" stroke-width="1.2" stroke="#9DC81A" opacity=".8"/>
       <path d="M100 118 C100 118 92 100 98 90 C104 82 108 90 108 90 C108 90 112 78 118 82 C124 86 120 96 120 96 C120 96 128 88 132 94 C136 100 128 110 128 110" stroke-width="1.2" opacity=".5"/>
+    </g>
+  </svg>
+
+  <svg class="menu-illus-plant" viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#1A1E3C" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="80" y1="190" x2="80" y2="40" stroke-width="2"/>
+      <path d="M80 130 C80 130 40 110 20 80 C40 60 74 80 80 130Z" stroke-width="1.5" fill="rgba(26,30,60,.05)"/>
+      <path d="M80 100 C80 100 120 80 140 50 C120 30 86 50 80 100Z" stroke-width="1.5" fill="rgba(26,30,60,.05)"/>
+      <path d="M80 70 C80 70 56 50 60 28 C72 30 82 48 80 70Z" stroke-width="1.4" fill="rgba(26,30,60,.04)"/>
     </g>
   </svg>
 
   <div class="menu-inner">
     <div class="menu-header">
       <div>
-        <p class="label">One dish + one drink included</p>
-        <h2 class="menu-title">
-          FOOD &amp;<br>
-          <span class="accent">DRINKS</span>
-        </h2>
+        <p class="lbl">One dish + one drink included</p>
+        <h2 class="menu-title">FOOD &amp;<br><span class="accent">DRINKS</span></h2>
       </div>
       <p class="menu-note">Everything is made fresh. Choose your dish from <strong>Tacos Como En El D.F.</strong> and your drink from Twentieth Street Garden's seasonal cocktail menu &mdash; made with ingredients grown on site.</p>
     </div>
@@ -835,134 +493,133 @@
         <p class="menu-card-num">01 &mdash; Your Dish</p>
         <h3>Pick One</h3>
         <ul class="menu-items">
-          <li>
-            <span class="mi-name">Tacos</span>
-            <span class="mi-desc">Three per plate &mdash; made to order</span>
-          </li>
-          <li>
-            <span class="mi-name">Burrito</span>
-            <span class="mi-desc">Stuffed and wrapped &mdash; the full thing</span>
-          </li>
-          <li>
-            <span class="mi-name">Quesadilla</span>
-            <span class="mi-desc">Crispy, cheesy, perfectly done</span>
-          </li>
+          <li><span class="mi-name">Tacos</span><span class="mi-desc">Three per plate &mdash; made to order</span></li>
+          <li><span class="mi-name">Burrito</span><span class="mi-desc">Stuffed and wrapped &mdash; the full thing</span></li>
+          <li><span class="mi-name">Quesadilla</span><span class="mi-desc">Crispy, cheesy, perfectly done</span></li>
         </ul>
       </div>
-
       <div class="menu-card">
         <div class="mbar"></div>
         <p class="menu-card-num">02 &mdash; Your Drink</p>
         <h3>Seasonal Bar</h3>
         <ul class="menu-items">
-          <li>
-            <span class="mi-name">Craft Cocktails</span>
-            <span class="mi-desc">Rotating seasonal menu &mdash; garden ingredients</span>
-          </li>
-          <li>
-            <span class="mi-name">Garden Mocktails</span>
-            <span class="mi-desc">Zero-proof, all flavor &mdash; no compromise</span>
-          </li>
-          <li>
-            <span class="mi-name">Agave &amp; Wine</span>
-            <span class="mi-desc">Available for purchase all evening</span>
-          </li>
+          <li><span class="mi-name">Craft Cocktails</span><span class="mi-desc">Rotating seasonal menu &mdash; garden ingredients</span></li>
+          <li><span class="mi-name">Garden Mocktails</span><span class="mi-desc">Zero-proof, all flavor &mdash; no compromise</span></li>
+          <li><span class="mi-name">Agave &amp; Wine</span><span class="mi-desc">Available for purchase all evening</span></li>
         </ul>
       </div>
-
       <div class="menu-card">
         <div class="mbar"></div>
         <p class="menu-card-num">03 &mdash; The Garden</p>
         <h3>The Setting</h3>
         <ul class="menu-items">
-          <li>
-            <span class="mi-name">Open Air Backyard</span>
-            <span class="mi-desc">String lights, summer blooms &mdash; West Adams</span>
-          </li>
-          <li>
-            <span class="mi-name">Live Music</span>
-            <span class="mi-desc">Playing across the garden, 5 to 9 PM</span>
-          </li>
-          <li>
-            <span class="mi-name">Good Company</span>
-            <span class="mi-desc">Neighbors, new faces &mdash; the Haps Club crowd</span>
-          </li>
+          <li><span class="mi-name">Open Air Backyard</span><span class="mi-desc">String lights, summer blooms &mdash; West Adams</span></li>
+          <li><span class="mi-name">Live Music</span><span class="mi-desc">Playing across the garden, 5 to 9 PM</span></li>
+          <li><span class="mi-name">Good Company</span><span class="mi-desc">Neighbors, new faces &mdash; the Haps Club crowd</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery">
-  <div class="gallery-header">
-    <h2 class="gallery-ttl">The Vibe</h2>
-    <span class="gallery-hint">Scroll &rarr;</span>
-  </div>
-  <div class="gallery-track">
-    <div class="gi"><div class="g-bg gb1"></div><div class="g-cap">Garden setting</div></div>
-    <div class="gi"><div class="g-bg gb2"></div><div class="g-cap">Craft cocktails</div></div>
-    <div class="gi"><div class="g-bg gb3"></div><div class="g-cap">Good food</div></div>
-    <div class="gi"><div class="g-bg gb4"></div><div class="g-cap">Natural light</div></div>
-    <div class="gi"><div class="g-bg gb5"></div><div class="g-cap">Good company</div></div>
-  </div>
-</section>
-
-<!-- VENUE -->
+<!-- VENUE — illustrated map -->
 <section class="venue">
   <div class="venue-inner">
-    <div class="venue-map">
-      <div class="venue-map-img"></div>
-      <div class="vpin">
-        <div class="vpin-dot"></div>
-        <div class="vpin-line"></div>
-        <div class="vpin-label">Twentieth Street Garden</div>
-      </div>
+    <!-- SVG illustrated map -->
+    <div class="venue-map-wrap">
+      <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:#EDE9DF;">
+        <!-- Background -->
+        <rect width="500" height="500" fill="#EDE9DF"/>
+        <!-- Street grid -->
+        <!-- Horizontal streets -->
+        <rect x="0" y="80" width="500" height="36" fill="#D8D3C6"/>
+        <rect x="0" y="200" width="500" height="28" fill="#D8D3C6"/>
+        <rect x="0" y="300" width="500" height="28" fill="#D8D3C6"/>
+        <rect x="0" y="400" width="500" height="28" fill="#D8D3C6"/>
+        <!-- Vertical streets -->
+        <rect x="80" y="0" width="32" height="500" fill="#D8D3C6"/>
+        <rect x="200" y="0" width="24" height="500" fill="#D8D3C6"/>
+        <rect x="340" y="0" width="32" height="500" fill="#D8D3C6"/>
+        <rect x="440" y="0" width="24" height="500" fill="#D8D3C6"/>
+        <!-- Street labels -->
+        <text x="250" y="72" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#8C8478" letter-spacing="2" font-weight="400">W 20TH ST</text>
+        <text x="250" y="193" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1.5">W 21ST ST</text>
+        <text x="250" y="293" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1.5">W 22ND ST</text>
+        <text x="75" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1" transform="rotate(-90 75 260)">GRAMERCY PL</text>
+        <text x="196" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1" transform="rotate(-90 196 260)">HOOVER ST</text>
+        <text x="336" y="260" text-anchor="middle" font-family="'DM Mono',monospace" font-size="8" fill="#9C9488" letter-spacing="1" transform="rotate(-90 336 260)">CATALINA ST</text>
+        <!-- City blocks -->
+        <rect x="112" y="116" width="88" height="84" fill="#E8E3D8" rx="2"/>
+        <rect x="224" y="116" width="116" height="84" fill="#E8E3D8" rx="2"/>
+        <rect x="372" y="116" width="68" height="84" fill="#E8E3D8" rx="2"/>
+        <rect x="112" y="228" width="88" height="72" fill="#E8E3D8" rx="2"/>
+        <rect x="224" y="228" width="116" height="72" fill="#E8E3D8" rx="2"/>
+        <rect x="372" y="228" width="68" height="72" fill="#E8E3D8" rx="2"/>
+        <rect x="112" y="328" width="88" height="72" fill="#E8E3D8" rx="2"/>
+        <rect x="224" y="328" width="116" height="72" fill="#E8E3D8" rx="2"/>
+        <!-- Highlighted property block -->
+        <rect x="224" y="116" width="116" height="84" fill="#C8D4A8" rx="2"/>
+        <!-- Property detail -->
+        <rect x="236" y="128" width="52" height="36" fill="#A8B88C" rx="2" opacity=".7"/>
+        <!-- Garden patch (green) -->
+        <rect x="236" y="152" width="92" height="36" fill="#8FAE68" rx="2" opacity=".5"/>
+        <!-- North indicator -->
+        <circle cx="460" cy="460" r="18" fill="white" opacity=".8"/>
+        <text x="460" y="466" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-size="16" fill="#1A1E3C" font-weight="700">N</text>
+        <!-- Pin -->
+        <circle cx="282" cy="148" r="14" fill="#9DC81A" opacity=".25"/>
+        <circle cx="282" cy="148" r="8" fill="#9DC81A"/>
+        <circle cx="282" cy="148" r="4" fill="white"/>
+        <!-- Pin label -->
+        <rect x="196" y="86" width="172" height="22" fill="#1A1E3C" rx="2"/>
+        <text x="282" y="101" text-anchor="middle" font-family="'DM Mono',monospace" font-size="9" fill="#9DC81A" letter-spacing="1.5">TWENTIETH STREET GARDEN</text>
+        <!-- Dotted line connecting label to pin -->
+        <line x1="282" y1="108" x2="282" y2="140" stroke="#9DC81A" stroke-width="1.5" stroke-dasharray="3,2"/>
+      </svg>
     </div>
+
     <div>
-      <p class="label">Venue</p>
+      <p class="lbl">Venue</p>
       <h2 class="venue-title">TWENTIETH</h2>
       <p class="venue-title-sub">Street Garden</p>
       <p class="venue-body">A privately tended open-air garden tucked behind a home in West Adams. String lights, summer blooms, and the kind of space that makes you want to stay all night.</p>
       <div class="venue-deets">
-        <div class="vr">
-          <span class="vdt">Address</span>
-          <span class="vdd">2267 W 20th St<br>Los Angeles, CA 90018</span>
-        </div>
-        <div class="vr">
-          <span class="vdt">Parking</span>
-          <span class="vdd">Street parking on W 20th St</span>
-        </div>
-        <div class="vr">
-          <span class="vdt">Entry</span>
-          <span class="vdd">Up the driveway on the right &mdash; garden is behind the house</span>
-        </div>
-        <div class="vr">
-          <span class="vdt">Dress</span>
-          <span class="vdd">Outside &mdash; dress for a warm June evening</span>
-        </div>
+        <div class="vr"><span class="vdt">Address</span><span class="vdd">2267 W 20th St, Los Angeles CA 90018</span></div>
+        <div class="vr"><span class="vdt">Parking</span><span class="vdd">Street parking on W 20th St</span></div>
+        <div class="vr"><span class="vdt">Entry</span><span class="vdd">Up the driveway on the right &mdash; garden is behind the house</span></div>
+        <div class="vr"><span class="vdt">Dress</span><span class="vdd">Outside &mdash; dress for a warm June evening</span></div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=2267+W+20th+St+Los+Angeles" class="venue-link" target="_blank" rel="noopener">
-        Open in Maps &rarr;
-      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=2267+W+20th+St+Los+Angeles" class="venue-link" target="_blank" rel="noopener">Open in Maps &rarr;</a>
     </div>
   </div>
 </section>
 
-<!-- HOSTS -->
+<!-- HOSTS — names link to Instagram -->
 <section class="hosts">
   <div class="hosts-inner">
     <span class="hosts-lbl">Hosted by</span>
     <div class="hosts-pipe"></div>
     <div class="hosts-list">
-      <div class="host"><div class="host-av" style="background:#C4583A;">MA</div><span class="host-nm">Michael Abraham</span></div>
-      <div class="host"><div class="host-av" style="background:#5C7A52;">JP</div><span class="host-nm">Jacob Perlmutter</span></div>
-      <div class="host"><div class="host-av" style="background:#1C2040;">JB</div><span class="host-nm">Jimmy Barnes</span></div>
-      <div class="host"><div class="host-av" style="background:#7FA318;">JZ</div><span class="host-nm">Jenn Zelmer</span></div>
-      <div class="host">
-        <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="" style="height:28px;width:28px;object-fit:contain;background:#1C2040;border-radius:50%;padding:4px;">
+      <a href="https://instagram.com/michaelabraham" class="host" target="_blank" rel="noopener">
+        <div class="host-av" style="background:#C4583A;">MA</div>
+        <span class="host-nm">Michael Abraham</span>
+      </a>
+      <a href="https://instagram.com/jacobperlmutter" class="host" target="_blank" rel="noopener">
+        <div class="host-av" style="background:#5C7A52;">JP</div>
+        <span class="host-nm">Jacob Perlmutter</span>
+      </a>
+      <a href="https://instagram.com/jimmybarnes" class="host" target="_blank" rel="noopener">
+        <div class="host-av" style="background:#1A1E3C;">JB</div>
+        <span class="host-nm">Jimmy Barnes</span>
+      </a>
+      <a href="https://instagram.com/jennzelmer" class="host" target="_blank" rel="noopener">
+        <div class="host-av" style="background:#7FA318;">JZ</div>
+        <span class="host-nm">Jenn Zelmer</span>
+      </a>
+      <a href="https://instagram.com/thehapsclub" class="host" target="_blank" rel="noopener">
+        <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="" style="height:28px;width:28px;object-fit:contain;background:#1A1E3C;border-radius:50%;padding:4px;">
         <span class="host-nm">Haps Club</span>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -971,50 +628,39 @@
 <section class="cta">
   <div class="cta-wm" aria-hidden="true"><span>JUNE 10</span></div>
 
-  <!-- Corner botanicals in lime on navy -->
-  <svg class="cta-illus-l" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg class="cta-bot-l" viewBox="0 0 260 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g stroke="#9DC81A" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M130 310 C128 252 125 196 130 140 C134 88 137 52 133 10" stroke-width="2"/>
-      <path d="M128 260 C100 240 70 240 46 254" stroke-width="1.6"/>
-      <path d="M129 200 C100 180 72 182 50 196" stroke-width="1.6"/>
-      <path d="M131 250 C160 230 188 232 208 248" stroke-width="1.6"/>
-      <path d="M131 194 C158 174 184 176 202 190" stroke-width="1.6"/>
-      <path d="M42 250 C16 232 8 206 24 190 C40 174 66 188 74 210 C82 232 70 248 42 250Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
-      <path d="M210 244 C236 226 244 200 230 184 C216 168 190 182 182 204 C174 226 186 242 210 244Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
-      <circle cx="133" cy="10" r="20" stroke-width="1.4" fill="rgba(157,200,26,.06)"/>
-      <circle cx="133" cy="10" r="11" stroke-width="1.4"/>
-      <circle cx="133" cy="10" r="5" stroke-width="1.4"/>
-      <ellipse cx="133" cy="-8" rx="7" ry="11" stroke-width="1.1"/>
-      <ellipse cx="133" cy="28" rx="7" ry="11" stroke-width="1.1"/>
-      <ellipse cx="115" cy="10" rx="11" ry="7" stroke-width="1.1"/>
-      <ellipse cx="151" cy="10" rx="11" ry="7" stroke-width="1.1"/>
+      <path d="M130 290 C128 234 126 180 130 126 C133 76 136 46 132 8" stroke-width="2"/>
+      <path d="M128 240 C102 222 74 222 50 236" stroke-width="1.6"/>
+      <path d="M129 184 C102 166 76 168 54 182" stroke-width="1.6"/>
+      <path d="M131 228 C158 210 184 212 204 226" stroke-width="1.6"/>
+      <path d="M131 178 C156 162 180 164 198 178" stroke-width="1.6"/>
+      <path d="M46 234 C22 218 14 194 28 178 C42 163 68 176 76 197 C84 218 72 232 46 234Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <path d="M206 224 C230 208 238 184 224 168 C210 154 186 166 178 187 C170 208 182 224 206 224Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <circle cx="132" cy="8" r="18" stroke-width="1.4" fill="rgba(157,200,26,.06)"/>
+      <circle cx="132" cy="8" r="10" stroke-width="1.3"/>
+      <circle cx="132" cy="8" r="4" stroke-width="1.3"/>
     </g>
   </svg>
-  <svg class="cta-illus-r" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg class="cta-bot-r" viewBox="0 0 260 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <g stroke="#9DC81A" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M130 310 C128 252 125 196 130 140 C134 88 137 52 133 10" stroke-width="2"/>
-      <path d="M128 260 C100 240 70 240 46 254" stroke-width="1.6"/>
-      <path d="M129 200 C100 180 72 182 50 196" stroke-width="1.6"/>
-      <path d="M131 250 C160 230 188 232 208 248" stroke-width="1.6"/>
-      <path d="M131 194 C158 174 184 176 202 190" stroke-width="1.6"/>
-      <path d="M42 250 C16 232 8 206 24 190 C40 174 66 188 74 210 C82 232 70 248 42 250Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
-      <path d="M210 244 C236 226 244 200 230 184 C216 168 190 182 182 204 C174 226 186 242 210 244Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
-      <circle cx="133" cy="10" r="20" stroke-width="1.4" fill="rgba(157,200,26,.06)"/>
-      <circle cx="133" cy="10" r="11" stroke-width="1.4"/>
-      <circle cx="133" cy="10" r="5" stroke-width="1.4"/>
-      <ellipse cx="133" cy="-8" rx="7" ry="11" stroke-width="1.1"/>
-      <ellipse cx="133" cy="28" rx="7" ry="11" stroke-width="1.1"/>
-      <ellipse cx="115" cy="10" rx="11" ry="7" stroke-width="1.1"/>
-      <ellipse cx="151" cy="10" rx="11" ry="7" stroke-width="1.1"/>
+      <path d="M130 290 C128 234 126 180 130 126 C133 76 136 46 132 8" stroke-width="2"/>
+      <path d="M128 240 C102 222 74 222 50 236" stroke-width="1.6"/>
+      <path d="M129 184 C102 166 76 168 54 182" stroke-width="1.6"/>
+      <path d="M131 228 C158 210 184 212 204 226" stroke-width="1.6"/>
+      <path d="M131 178 C156 162 180 164 198 178" stroke-width="1.6"/>
+      <path d="M46 234 C22 218 14 194 28 178 C42 163 68 176 76 197 C84 218 72 232 46 234Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <path d="M206 224 C230 208 238 184 224 168 C210 154 186 166 178 187 C170 208 182 224 206 224Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <circle cx="132" cy="8" r="18" stroke-width="1.4" fill="rgba(157,200,26,.06)"/>
+      <circle cx="132" cy="8" r="10" stroke-width="1.3"/>
+      <circle cx="132" cy="8" r="4" stroke-width="1.3"/>
     </g>
   </svg>
 
   <div class="cta-inner">
     <p class="cta-eyebrow">West Adams &middot; Los Angeles &middot; June 10</p>
-    <h2 class="cta-title">
-      JOIN<br>
-      <span class="accent">US</span>
-    </h2>
+    <!-- JOIN US on one line, no break -->
+    <h2 class="cta-title">JOIN <span class="accent">US</span></h2>
     <p class="cta-meta">
       Tuesday, June 10 &nbsp;&middot;&nbsp; 5:00 &ndash; 9:00 PM<br>
       One Dish &amp; One Drink Included &nbsp;&middot;&nbsp; Open Air Garden
