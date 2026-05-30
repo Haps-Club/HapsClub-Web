@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer Garden Party · Haps Club · June 10</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;1,300;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #E8F4FF;
+    --white: #FFFFFF;
+    --grass: #4CAF74;
+    --grass-lt: #7DD39A;
+    --sun: #FFD84D;
+    --coral: #FF6B5B;
+    --blush: #FFB5A3;
+    --lavender: #C4B5F7;
+    --navy: #2C3370;
+    --text: #1A1A2E;
+    --muted: #6B7096;
+    --peach: #FFE8E0;
+    --mint: #D4F4E4;
+    --lemon: #FFFACC;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(160deg, #E8F4FF 0%, #F0FAF5 40%, #FFFACC 80%, #FFE8E0 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  /* Floating SVG blobs */
+  .hero-blobs {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.18;
+    animation: float 8s ease-in-out infinite;
+  }
+  .blob-1 { width: 380px; height: 380px; background: var(--sun); top: -80px; right: -100px; animation-delay: 0s; }
+  .blob-2 { width: 260px; height: 260px; background: var(--grass); bottom: 40px; left: -60px; animation-delay: -3s; }
+  .blob-3 { width: 200px; height: 200px; background: var(--lavender); top: 30%; right: 8%; animation-delay: -5s; }
+  .blob-4 { width: 150px; height: 150px; background: var(--coral); bottom: 20%; left: 12%; animation-delay: -2s; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-18px) scale(1.04); }
+  }
+
+  /* Scattered petals */
+  .petals {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .petal {
+    position: absolute;
+    width: 14px;
+    height: 20px;
+    border-radius: 50% 50% 50% 0;
+    opacity: 0.35;
+    animation: drift 12s ease-in-out infinite;
+  }
+  .petal:nth-child(1)  { background: #FF9EAE; top: 10%; left: 15%; animation-delay: 0s; transform: rotate(20deg); }
+  .petal:nth-child(2)  { background: var(--lavender); top: 25%; left: 70%; animation-delay: -2s; transform: rotate(-40deg); }
+  .petal:nth-child(3)  { background: var(--sun); top: 60%; left: 5%; animation-delay: -4s; transform: rotate(60deg); }
+  .petal:nth-child(4)  { background: var(--blush); top: 75%; left: 85%; animation-delay: -6s; transform: rotate(-20deg); }
+  .petal:nth-child(5)  { background: var(--grass-lt); top: 40%; left: 90%; animation-delay: -8s; transform: rotate(45deg); }
+  .petal:nth-child(6)  { background: #FFC8A0; top: 85%; left: 35%; animation-delay: -1s; transform: rotate(-60deg); }
+  .petal:nth-child(7)  { background: var(--lavender); top: 5%; left: 50%; animation-delay: -3s; transform: rotate(10deg); }
+  .petal:nth-child(8)  { background: var(--blush); top: 55%; left: 55%; animation-delay: -7s; transform: rotate(-30deg); }
+
+  @keyframes drift {
+    0%, 100% { transform: translateY(0) rotate(20deg); }
+    33% { transform: translateY(-12px) rotate(28deg); }
+    66% { transform: translateY(8px) rotate(14deg); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grass);
+    background: var(--mint);
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(52px, 10vw, 100px);
+    line-height: 1.0;
+    color: var(--navy);
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--coral);
+    font-weight: 300;
+  }
+
+  /* Big illustrated sun */
+  .hero-sun {
+    width: clamp(90px, 16vw, 140px);
+    height: clamp(90px, 16vw, 140px);
+    margin: 32px auto;
+    position: relative;
+    z-index: 2;
+    animation: spin-slow 30s linear infinite;
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-date {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(20px, 4vw, 30px);
+    color: var(--text);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 8px;
+  }
+
+  .hero-date strong {
+    font-weight: 600;
+    color: var(--grass);
+  }
+
+  .hero-location {
+    font-size: 14px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 44px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--coral);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 16px 36px;
+    border-radius: 100px;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 8px 24px rgba(255,107,91,0.35);
+  }
+  .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(255,107,91,0.4); }
+
+  .hero-cta svg { flex-shrink: 0; }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 2;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  /* ── WHAT'S INCLUDED ── */
+  .includes {
+    background: var(--white);
+    padding: 96px 24px;
+    text-align: center;
+  }
+
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grass);
+    margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(34px, 6vw, 56px);
+    line-height: 1.1;
+    color: var(--navy);
+    max-width: 560px;
+    margin: 0 auto 60px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--coral);
+    font-weight: 300;
+  }
+
+  .includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .include-card {
+    background: var(--white);
+    border: 1.5px solid #EEEEF5;
+    border-radius: 24px;
+    padding: 36px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  }
+
+  .include-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(44,51,112,0.1);
+    border-color: transparent;
+  }
+
+  .include-card:nth-child(1) { background: var(--lemon); }
+  .include-card:nth-child(2) { background: var(--mint); }
+  .include-card:nth-child(3) { background: var(--peach); }
+  .include-card:nth-child(4) { background: #EEE8FF; }
+
+  .include-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .include-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--navy);
+    text-align: center;
+  }
+
+  .include-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* ── EVENT DETAILS STRIP ── */
+  .details-strip {
+    background: var(--navy);
+    padding: 72px 24px;
+  }
+
+  .details-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+  }
+
+  .detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .detail-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .detail-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+  }
+
+  .detail-value {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .detail-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+
+  /* ── ABOUT ── */
+  .about {
+    padding: 96px 24px;
+    background: linear-gradient(135deg, var(--lemon) 0%, #fff 50%, var(--peach) 100%);
+  }
+
+  .about-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-text {
+    font-size: clamp(18px, 2.5vw, 22px);
+    line-height: 1.75;
+    color: var(--text);
+    font-weight: 300;
+  }
+
+  .about-text strong {
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  /* Garden illustration */
+  .garden-scene {
+    width: 100%;
+    max-width: 700px;
+    margin: 56px auto 0;
+    display: block;
+  }
+
+  /* ── HOST INFO ── */
+  .hosts {
+    background: var(--white);
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .hosts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 800px;
+    margin: 40px auto 0;
+  }
+
+  .host-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--sky);
+    border-radius: 100px;
+    padding: 10px 20px 10px 10px;
+  }
+
+  .host-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .host-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--navy);
+  }
+
+  /* ── REGISTER CTA ── */
+  .register {
+    background: linear-gradient(135deg, var(--grass) 0%, #3A9D62 100%);
+    padding: 100px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .register::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+  }
+
+  .register-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(38px, 7vw, 72px);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.05;
+    max-width: 700px;
+    margin: 0 auto 24px;
+    position: relative;
+  }
+
+  .register-title em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--sun);
+  }
+
+  .register-sub {
+    font-size: 16px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  .register-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--sun);
+    color: var(--navy);
+    font-weight: 600;
+    font-size: 17px;
+    padding: 18px 44px;
+    border-radius: 100px;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .register-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.25); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--navy);
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 16px;
+  }
+
+  .footer-logo img {
+    height: 36px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: #fff; }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .hero-title { font-size: 52px; }
+    .includes-grid { grid-template-columns: 1fr 1fr; }
+    .details-inner { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 400px) {
+    .includes-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+  </div>
+  <div class="petals">
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+    <div class="petal"></div><div class="petal"></div>
+  </div>
+
+  <p class="hero-eyebrow">Haps Club · West Adams, LA</p>
+
+  <h1 class="hero-title">Summer<br><em>Garden Party</em></h1>
+
+  <!-- Illustrated sun -->
+  <svg class="hero-sun" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- Rays -->
+    <g stroke="#FFD84D" stroke-width="4" stroke-linecap="round">
+      <line x1="70" y1="6" x2="70" y2="20"/>
+      <line x1="70" y1="120" x2="70" y2="134"/>
+      <line x1="6" y1="70" x2="20" y2="70"/>
+      <line x1="120" y1="70" x2="134" y2="70"/>
+      <line x1="24.7" y1="24.7" x2="34.3" y2="34.3"/>
+      <line x1="105.7" y1="105.7" x2="115.3" y2="115.3"/>
+      <line x1="24.7" y1="115.3" x2="34.3" y2="105.7"/>
+      <line x1="105.7" y1="34.3" x2="115.3" y2="24.7"/>
+      <line x1="46" y1="11" x2="50" y2="24"/>
+      <line x1="90" y1="116" x2="94" y2="129"/>
+      <line x1="11" y1="46" x2="24" y2="50"/>
+      <line x1="116" y1="90" x2="129" y2="94"/>
+      <line x1="11" y1="94" x2="24" y2="90"/>
+      <line x1="116" y1="50" x2="129" y2="46"/>
+      <line x1="46" y1="129" x2="50" y2="116"/>
+      <line x1="90" y1="11" x2="94" y2="24"/>
+    </g>
+    <!-- Circle -->
+    <circle cx="70" cy="70" r="36" fill="#FFD84D"/>
+    <circle cx="70" cy="70" r="28" fill="#FFEB7A"/>
+    <!-- Smiley face -->
+    <circle cx="60" cy="65" r="4" fill="#E8A000"/>
+    <circle cx="80" cy="65" r="4" fill="#E8A000"/>
+    <path d="M60 78 Q70 88 80 78" stroke="#E8A000" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <p class="hero-date"><strong>Tuesday, June 10</strong> · 5:00 – 9:00 PM</p>
+  <p class="hero-location">Twentieth Street Garden · 2267 W 20th St · West Adams, Los Angeles</p>
+
+  <a href="https://lu.ma/hapsclub" class="hero-cta" target="_blank" rel="noopener">
+    Get Your Ticket
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+
+  <div class="scroll-hint">
+    <span>Explore</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- ── WHAT'S INCLUDED ── -->
+<section class="includes">
+  <p class="section-eyebrow">Your ticket includes</p>
+  <h2 class="section-title">Everything you need for a <em>perfect summer evening</em></h2>
+
+  <div class="includes-grid">
+    <div class="include-card">
+      <!-- Cocktail icon -->
+      <svg class="include-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 10 L52 10 L36 32 L36 52 L28 52 L28 32 Z" fill="#FFD84D" stroke="#E8A000" stroke-width="2" stroke-linejoin="round"/>
+        <line x1="22" y1="52" x2="42" y2="52" stroke="#E8A000" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="20" cy="20" r="4" fill="#FF9EAE" opacity="0.7"/>
+        <circle cx="44" cy="18" r="3" fill="#C4B5F7" opacity="0.7"/>
+      </svg>
+      <h3>Welcome Drink</h3>
+      <p>One drink of your choice — craft cocktails, mocktails, and agave pours made with garden-grown ingredients.</p>
+    </div>
+
+    <div class="include-card">
+      <!-- Taco icon -->
+      <svg class="include-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 42 Q32 8 56 42 Z" fill="#F9C74F" stroke="#E8A000" stroke-width="2" stroke-linejoin="round"/>
+        <ellipse cx="32" cy="42" rx="24" ry="5" fill="#F8961E" opacity="0.6"/>
+        <circle cx="24" cy="34" r="4" fill="#4CAF74"/>
+        <circle cx="32" cy="30" r="4" fill="#FF6B5B"/>
+        <circle cx="40" cy="34" r="4" fill="#F9C74F"/>
+      </svg>
+      <h3>Tacos Trio</h3>
+      <p>A plate of three tacos from the beloved Tacos Como En El D.F. taco truck — a true West Adams neighborhood staple.</p>
+    </div>
+
+    <div class="include-card">
+      <!-- Music icon -->
+      <svg class="include-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="20" cy="48" r="8" fill="#C4B5F7" stroke="#9C86E8" stroke-width="2"/>
+        <circle cx="44" cy="44" r="8" fill="#C4B5F7" stroke="#9C86E8" stroke-width="2"/>
+        <line x1="28" y1="48" x2="28" y2="18" stroke="#9C86E8" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="52" y1="44" x2="52" y2="14" stroke="#9C86E8" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M28 18 L52 14" stroke="#9C86E8" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M32 24 L48 20" stroke="#9C86E8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+      <h3>Live Music</h3>
+      <p>An easygoing soundtrack setting the mood across the garden all evening long.</p>
+    </div>
+
+    <div class="include-card">
+      <!-- Flower icon -->
+      <svg class="include-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="8" fill="#FFD84D"/>
+        <ellipse cx="32" cy="16" rx="7" ry="10" fill="#FF9EAE" opacity="0.85"/>
+        <ellipse cx="32" cy="48" rx="7" ry="10" fill="#FF9EAE" opacity="0.85"/>
+        <ellipse cx="16" cy="32" rx="10" ry="7" fill="#C4B5F7" opacity="0.85"/>
+        <ellipse cx="48" cy="32" rx="10" ry="7" fill="#C4B5F7" opacity="0.85"/>
+        <ellipse cx="20.7" cy="20.7" rx="7" ry="10" fill="#7DD39A" opacity="0.75" transform="rotate(-45 20.7 20.7)"/>
+        <ellipse cx="43.3" cy="43.3" rx="7" ry="10" fill="#7DD39A" opacity="0.75" transform="rotate(-45 43.3 43.3)"/>
+        <ellipse cx="43.3" cy="20.7" rx="7" ry="10" fill="#FFB5A3" opacity="0.75" transform="rotate(45 43.3 20.7)"/>
+        <ellipse cx="20.7" cy="43.3" rx="7" ry="10" fill="#FFB5A3" opacity="0.75" transform="rotate(45 20.7 43.3)"/>
+      </svg>
+      <h3>The Garden</h3>
+      <p>A lush open-air backyard in full summer bloom — the most beautiful setting in West Adams.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── DETAILS STRIP ── -->
+<section class="details-strip">
+  <div class="details-inner">
+    <div class="detail-item">
+      <div class="detail-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <span class="detail-label">Date</span>
+      <span class="detail-value">Tuesday<br>June 10</span>
+    </div>
+    <div class="detail-item">
+      <div class="detail-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <span class="detail-label">Time</span>
+      <span class="detail-value">5:00 PM<br>– 9:00 PM</span>
+    </div>
+    <div class="detail-item">
+      <div class="detail-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <span class="detail-label">Location</span>
+      <span class="detail-value">Twentieth<br>Street Garden</span>
+      <span class="detail-sub">2267 W 20th St</span>
+    </div>
+    <div class="detail-item">
+      <div class="detail-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <span class="detail-label">Vibe</span>
+      <span class="detail-value">Open Air<br>Backyard</span>
+      <span class="detail-sub">West Adams, LA</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section class="about">
+  <div class="about-inner">
+    <p class="section-eyebrow">About the evening</p>
+    <h2 class="section-title" style="margin-bottom:40px;">The <em>garden</em> is in full summer bloom</h2>
+
+    <p class="about-text">
+      <strong>Twentieth Street Garden and Haps Club</strong> are back together for a Summer Garden Party in West Adams — set in the same lush open-air backyard you loved in May, now dressed for June.
+      <br><br>
+      Your ticket includes a welcome drink and a plate of three tacos from <strong>Tacos Como En El D.F.</strong>, the beloved neighborhood truck. Craft cocktails and garden-fresh mocktails will be flowing all night.
+      <br><br>
+      Come for the neighbors, the new faces, the music, and the kind of easy summer evening that only happens when the setting is just right.
+    </p>
+
+    <!-- Garden scene illustration -->
+    <svg class="garden-scene" viewBox="0 0 700 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Sky gradient bg -->
+      <rect width="700" height="280" fill="url(#skyGrad)" rx="24"/>
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#E8F4FF"/>
+          <stop offset="100%" stop-color="#D4F4E4"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Ground -->
+      <ellipse cx="350" cy="270" rx="380" ry="30" fill="#7DD39A" opacity="0.4"/>
+      <rect x="0" y="230" width="700" height="60" fill="#4CAF74" rx="0"/>
+      <rect x="0" y="248" width="700" height="32" fill="#3A9D62"/>
+
+      <!-- Grass tufts -->
+      <g fill="#3A9D62">
+        <path d="M80 230 Q85 210 90 230"/>
+        <path d="M90 230 Q95 215 100 230"/>
+        <path d="M200 230 Q205 212 210 230"/>
+        <path d="M400 230 Q406 218 412 230"/>
+        <path d="M560 230 Q566 210 572 230"/>
+        <path d="M620 230 Q625 215 630 230"/>
+      </g>
+
+      <!-- Far trees (left) -->
+      <g>
+        <rect x="50" y="140" width="12" height="90" fill="#5C4033" rx="4"/>
+        <ellipse cx="56" cy="130" rx="32" ry="40" fill="#4CAF74"/>
+        <ellipse cx="56" cy="118" rx="22" ry="28" fill="#7DD39A"/>
+      </g>
+      <g>
+        <rect x="108" y="155" width="10" height="75" fill="#5C4033" rx="4"/>
+        <ellipse cx="113" cy="145" rx="26" ry="32" fill="#3A9D62"/>
+        <ellipse cx="113" cy="133" rx="18" ry="22" fill="#4CAF74"/>
+      </g>
+
+      <!-- Far trees (right) -->
+      <g>
+        <rect x="580" y="145" width="12" height="85" fill="#5C4033" rx="4"/>
+        <ellipse cx="586" cy="133" rx="30" ry="38" fill="#4CAF74"/>
+        <ellipse cx="586" cy="120" rx="20" ry="26" fill="#7DD39A"/>
+      </g>
+      <g>
+        <rect x="635" y="158" width="10" height="72" fill="#5C4033" rx="4"/>
+        <ellipse cx="640" cy="148" rx="24" ry="30" fill="#3A9D62"/>
+      </g>
+
+      <!-- String lights across top -->
+      <path d="M60 60 Q175 80 290 60 Q405 40 520 60 Q610 75 660 60" stroke="#FFD84D" stroke-width="2" fill="none" stroke-dasharray="1,1"/>
+      <!-- Bulbs -->
+      <g fill="#FFD84D">
+        <circle cx="60" cy="60" r="5"/>
+        <circle cx="120" cy="68" r="5"/>
+        <circle cx="180" cy="62" r="5"/>
+        <circle cx="240" cy="58" r="5"/>
+        <circle cx="300" cy="54" r="5"/>
+        <circle cx="360" cy="52" r="5"/>
+        <circle cx="420" cy="56" r="5"/>
+        <circle cx="480" cy="58" r="5"/>
+        <circle cx="540" cy="60" r="5"/>
+        <circle cx="600" cy="64" r="5"/>
+        <circle cx="650" cy="60" r="5"/>
+      </g>
+      <!-- Bulb glows -->
+      <g fill="#FFD84D" opacity="0.3">
+        <circle cx="60" cy="60" r="12"/>
+        <circle cx="180" cy="62" r="12"/>
+        <circle cx="300" cy="54" r="12"/>
+        <circle cx="420" cy="56" r="12"/>
+        <circle cx="540" cy="60" r="12"/>
+        <circle cx="650" cy="60" r="12"/>
+      </g>
+
+      <!-- Table center -->
+      <rect x="280" y="190" width="140" height="8" fill="#D4A76A" rx="4"/>
+      <rect x="300" y="198" width="12" height="36" fill="#B8864A" rx="3"/>
+      <rect x="388" y="198" width="12" height="36" fill="#B8864A" rx="3"/>
+
+      <!-- Items on table -->
+      <!-- Glasses -->
+      <path d="M330 190 L326 168 L334 168 Z" fill="#A8D8EA" opacity="0.8"/>
+      <line x1="330" y1="190" x2="330" y2="195" stroke="#A8D8EA" stroke-width="2"/>
+      <ellipse cx="330" cy="195" rx="6" ry="2" fill="#A8D8EA" opacity="0.5"/>
+
+      <path d="M350 190 L346 165 L354 165 Z" fill="#FF9EAE" opacity="0.8"/>
+      <line x1="350" y1="190" x2="350" y2="195" stroke="#FF9EAE" stroke-width="2"/>
+      <ellipse cx="350" cy="195" rx="6" ry="2" fill="#FF9EAE" opacity="0.5"/>
+
+      <path d="M370 190 L366 170 L374 170 Z" fill="#C4B5F7" opacity="0.8"/>
+      <line x1="370" y1="190" x2="370" y2="195" stroke="#C4B5F7" stroke-width="2"/>
+
+      <!-- Flower vase on table -->
+      <rect x="315" y="175" width="10" height="15" fill="#A8D8EA" rx="2"/>
+      <circle cx="320" cy="170" r="6" fill="#FF9EAE"/>
+      <circle cx="316" cy="167" r="5" fill="#FFD84D"/>
+      <circle cx="324" cy="167" r="5" fill="#C4B5F7"/>
+
+      <!-- People silhouettes (simple) -->
+      <!-- Person 1 -->
+      <circle cx="200" cy="180" r="12" fill="#292f71" opacity="0.5"/>
+      <path d="M188 230 Q200 200 212 230" fill="#292f71" opacity="0.4"/>
+
+      <!-- Person 2 -->
+      <circle cx="490" cy="178" r="12" fill="#292f71" opacity="0.5"/>
+      <path d="M478 230 Q490 200 502 230" fill="#292f71" opacity="0.4"/>
+
+      <!-- Person 3 -->
+      <circle cx="240" cy="185" r="11" fill="#FF6B5B" opacity="0.4"/>
+      <path d="M229 230 Q240 204 251 230" fill="#FF6B5B" opacity="0.35"/>
+
+      <!-- Person 4 -->
+      <circle cx="455" cy="182" r="11" fill="#4CAF74" opacity="0.4"/>
+      <path d="M444 230 Q455 202 466 230" fill="#4CAF74" opacity="0.35"/>
+
+      <!-- Flowers in foreground -->
+      <g>
+        <!-- Left flowers -->
+        <line x1="140" y1="230" x2="140" y2="200" stroke="#3A9D62" stroke-width="2.5"/>
+        <circle cx="140" cy="196" r="7" fill="#FF9EAE"/>
+        <circle cx="136" cy="192" r="6" fill="#FFD84D"/>
+        <circle cx="145" cy="193" r="5" fill="#C4B5F7"/>
+
+        <line x1="158" y1="230" x2="158" y2="208" stroke="#3A9D62" stroke-width="2"/>
+        <circle cx="158" cy="204" r="6" fill="#FFB5A3"/>
+
+        <!-- Right flowers -->
+        <line x1="545" y1="230" x2="545" y2="202" stroke="#3A9D62" stroke-width="2.5"/>
+        <circle cx="545" cy="197" r="7" fill="#FFD84D"/>
+        <circle cx="540" cy="193" r="5" fill="#FF9EAE"/>
+        <circle cx="550" cy="194" r="6" fill="#7DD39A"/>
+
+        <line x1="530" y1="230" x2="530" y2="210" stroke="#3A9D62" stroke-width="2"/>
+        <circle cx="530" cy="206" r="5" fill="#C4B5F7"/>
+      </g>
+
+      <!-- Small floating petals/sparkles -->
+      <g opacity="0.6">
+        <path d="M160 120 Q163 113 166 120 Q163 127 160 120Z" fill="#FF9EAE"/>
+        <path d="M500 100 Q503 93 506 100 Q503 107 500 100Z" fill="#C4B5F7"/>
+        <path d="M380 90 Q383 83 386 90 Q383 97 380 90Z" fill="#FFD84D"/>
+        <circle cx="260" cy="110" r="3" fill="#FFB5A3"/>
+        <circle cx="440" cy="95" r="3" fill="#7DD39A"/>
+      </g>
+
+      <!-- Haps Club branding band -->
+      <rect x="0" y="248" width="700" height="32" fill="#2C3370" opacity="0"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ── HOSTED BY ── -->
+<section class="hosts">
+  <p class="section-eyebrow">Hosted by</p>
+  <h2 class="section-title" style="font-size:clamp(28px,5vw,42px); margin-bottom:0;">The people behind <em>Haps Club</em></h2>
+  <div class="hosts-grid">
+    <div class="host-pill">
+      <div class="host-avatar" style="background:#FF6B5B;">MA</div>
+      <span class="host-name">Michael Abraham</span>
+    </div>
+    <div class="host-pill">
+      <div class="host-avatar" style="background:#4CAF74;">JP</div>
+      <span class="host-name">Jacob Perlmutter</span>
+    </div>
+    <div class="host-pill">
+      <div class="host-avatar" style="background:#C4B5F7; color:#5B4FCF;">JB</div>
+      <span class="host-name">Jimmy Barnes</span>
+    </div>
+    <div class="host-pill">
+      <div class="host-avatar" style="background:#FFD84D; color:#B8860B;">JZ</div>
+      <span class="host-name">Jenn Zelmer</span>
+    </div>
+    <div class="host-pill">
+      <div class="host-avatar" style="background:#292f71;">
+        <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="Haps Club" style="height:20px; width:auto; object-fit:contain;">
+      </div>
+      <span class="host-name">Haps Club</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── REGISTER CTA ── -->
+<section class="register">
+  <h2 class="register-title">Join us in the<br><em>garden</em></h2>
+  <p class="register-sub">Tuesday June 10 · 5–9 PM · West Adams, LA · Drinks & Tacos Included</p>
+  <a href="https://lu.ma/hapsclub" class="register-btn" target="_blank" rel="noopener">
+    Get Your Ticket
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="footer-logo">
+    <a href="https://haps.club">
+      <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="Haps Club" style="height:32px;">
+    </a>
+  </div>
+  <ul class="footer-links">
+    <li><a href="https://haps.club" target="_blank">haps.club</a></li>
+    <li><a href="https://instagram.com/thehapsclub" target="_blank">@thehapsclub</a></li>
+    <li><a href="https://www.twentiethstreetgarden.com" target="_blank">Twentieth Street Garden</a></li>
+  </ul>
+  <p class="footer-copy">© 2025 Haps Club · Los Angeles</p>
+</footer>
+
+</body>
+</html>
