@@ -41,7 +41,7 @@
 
   /* ── NAV ── */
   nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:0 48px; height:58px; background:rgba(245,241,234,.94); backdrop-filter:blur(14px); border-bottom:1px solid var(--rule); }
-  .nav-logo img { height:40px; width:auto; display:block; filter:none; opacity:.92; }
+  .nav-logo img { height:40px; width:auto; display:block; filter:brightness(0) saturate(100%) invert(16%) sepia(50%) saturate(800%) hue-rotate(200deg) brightness(0.7); opacity:1; }
   .nav-center { font-size:13px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); }
   .nav-right { display:flex; align-items:center; gap:28px; }
   .nav-link { font-size:12px; font-weight:400; letter-spacing:.14em; text-transform:uppercase; color:var(--mid); text-decoration:none; transition:color .2s; }
@@ -209,7 +209,7 @@
   .menu-title { font-size:clamp(60px,8.5vw,112px); font-weight:900; line-height:.88; text-transform:uppercase; color:var(--black); margin-bottom:4px; }
   .menu-title .accent { color:var(--terra); display:block; }
   .menu-header { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:end; margin-bottom:64px; padding-bottom:40px; border-bottom:2px solid var(--rule-dk); }
-  .menu-note { font-size:18px; font-weight:300; line-height:1.75; color:var(--mid); align-self:end; }
+  .menu-note { font-size:21px; font-weight:300; line-height:1.72; color:var(--mid); align-self:start; max-width:460px; }
   .menu-note strong { font-weight:500; color:var(--black); }
   .menu-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--rule-dk); }
   .menu-card { background:var(--blush); padding:52px 40px; position:relative; overflow:hidden; transition:background .25s; border-right:1px solid var(--rule-dk); }
@@ -229,7 +229,7 @@
 
   /* ── VENUE — Map illustration ── */
   .venue { background:var(--white); padding:120px 48px; position:relative; overflow:hidden; }
-  .venue-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1.25fr 0.85fr; gap:80px; align-items:center; }
+  .venue-inner { max-width:1280px; margin:0 auto; display:grid; grid-template-columns:0.9fr 1fr; gap:72px; align-items:start; }
 
   /* SVG illustrated map */
   .venue-map-wrap { position:relative; overflow:hidden; min-height:320px; align-self:stretch; }
@@ -316,7 +316,7 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="https://haps.club">
-    <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-white-svg.svg" alt="Haps Club">
+    <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club">
   </a>
   <span class="nav-center">Summer Garden Party &mdash; June 20</span>
   <div class="nav-right">
@@ -402,9 +402,14 @@
     </div>
 
     <div>
+      <a href="https://haps.club" style="display:inline-block;margin-bottom:28px;">
+        <img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-white-svg.svg"
+             alt="Haps Club"
+             style="height:64px;width:auto;filter:brightness(0) saturate(100%) invert(16%) sepia(50%) saturate(800%) hue-rotate(200deg) brightness(0.7);opacity:1;">
+      </a>
       <p class="lbl">About the evening</p>
       <span class="intro-title">AN EVENING</span>
-      <span class="intro-title accent">IN THE GARDEN</span>
+      <span class="intro-title" style="margin-bottom:24px;"><span style="color:var(--black);">IN THE </span><span style="color:var(--lime-dk);">GARDEN</span></span>
       <div class="intro-body">
         <p><strong>Twentieth Street Garden and Haps Club</strong> come together for a summer evening in one of West Adams&rsquo; most quietly magnetic spaces &mdash; a lush open-air backyard in full June bloom.</p>
         <p>Your ticket includes a dish from <strong>Tacos Como En El D.F.</strong> and a seasonal cocktail made with ingredients grown right here in the garden.</p>
@@ -445,14 +450,14 @@
     <span class="gallery-hint">Scroll &rarr;</span>
   </div>
   <div class="gallery-track">
-    <div class="simg"><div class="simg-bg sg1"></div><div class="simg-cap">Good company</div></div>
-    <div class="simg"><div class="simg-bg sg2"></div><div class="simg-cap">Tacos Como En El D.F.</div></div>
-    <div class="simg"><div class="simg-bg sg3"></div><div class="simg-cap">Made fresh</div></div>
-    <div class="simg"><div class="simg-bg sg4"></div><div class="simg-cap">Garden cocktails</div></div>
-    <div class="simg"><div class="simg-bg sg5"></div><div class="simg-cap">The crowd</div></div>
-    <div class="simg" style="width:clamp(160px,20vw,300px); height:clamp(280px,44vw,600px); margin-top:50px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173736/haps-club-events/haps-garden-party-6976.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">Through the vines</div></div>
-    <div class="simg" style="width:clamp(220px,26vw,380px); height:clamp(280px,44vw,600px); margin-top:20px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173740/haps-club-events/haps-garden-party-6998.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">The bar setup</div></div>
-    <div class="simg" style="width:clamp(200px,28vw,420px); height:clamp(280px,44vw,600px); margin-top:80px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173744/haps-club-events/haps-garden-party-6986.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">Evening crowd</div></div>
+    <div class="simg" style="width:clamp(220px,32vw,480px); height:clamp(280px,44vw,600px);"><div class="simg-bg sg1"></div><div class="simg-cap">Good company</div></div>
+    <div class="simg" style="width:clamp(160px,20vw,300px); height:clamp(280px,44vw,600px); margin-top:60px;"><div class="simg-bg sg2"></div><div class="simg-cap">Tacos Como En El D.F.</div></div>
+    <div class="simg" style="width:clamp(220px,26vw,380px); height:clamp(280px,44vw,600px);"><div class="simg-bg sg5"></div><div class="simg-cap">The crowd</div></div>
+    <div class="simg" style="width:clamp(160px,20vw,300px); height:clamp(280px,44vw,600px); margin-top:90px;"><div class="simg-bg sg3"></div><div class="simg-cap">Made fresh</div></div>
+    <div class="simg" style="width:clamp(200px,28vw,420px); height:clamp(280px,44vw,600px); margin-top:30px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173736/haps-club-events/haps-garden-party-6976.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">Through the vines</div></div>
+    <div class="simg" style="width:clamp(160px,20vw,300px); height:clamp(280px,44vw,600px); margin-top:70px;"><div class="simg-bg sg4"></div><div class="simg-cap">Garden cocktails</div></div>
+    <div class="simg" style="width:clamp(220px,26vw,380px); height:clamp(280px,44vw,600px); margin-top:50px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173744/haps-club-events/haps-garden-party-6986.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">Evening crowd</div></div>
+    <div class="simg" style="width:clamp(180px,22vw,320px); height:clamp(280px,44vw,600px); margin-top:100px;"><div class="simg-bg" style="background-image:url('https://res.cloudinary.com/dimlqawuh/image/upload/v1780173740/haps-club-events/haps-garden-party-6998.jpg'); background-size:cover; background-position:center; width:100%; height:100%; transition:transform .5s; filter:saturate(.9) contrast(1.06);"></div><div class="simg-cap">At the bar</div></div>
   </div>
 </section>
 
@@ -546,7 +551,6 @@
         <div class="vr"><span class="vdt">Entry</span><span class="vdd">Up the driveway on the right &mdash; garden is behind the house</span></div>
         <div class="vr"><span class="vdt">Dress</span><span class="vdd">Outside &mdash; dress for a warm June evening</span></div>
       </div>
-      <a href="https://www.google.com/maps/search/?api=1&query=2267+W+20th+St+Los+Angeles" class="venue-link" target="_blank" rel="noopener">Open in Maps &rarr;</a>
     </div>
   </div>
 
@@ -654,7 +658,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-white-svg.svg" alt="Haps Club"></a>
+  <a href="https://haps.club"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177202/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club"></a>
   <ul class="f-links">
     <li><a href="https://haps.club">haps.club</a></li>
     <li><a href="https://instagram.com/thehapsclub">@thehapsclub</a></li>
