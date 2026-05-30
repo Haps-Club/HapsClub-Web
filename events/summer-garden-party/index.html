@@ -6,1072 +6,602 @@
 <title>Summer Garden Party · Haps Club · June 10</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;600;700&family=DM+Mono:wght@300;400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;700;900&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --black:   #0E110D;
-    --black2:  #161A14;
-    --lime:    #C8F53A;
-    --lime-dk: #9DC42B;
-    --off-w:   #F0EDE6;
-    --terra:   #B5614A;
-    --terra-lt:#D4856E;
-    --sand:    #C4B99A;
-    --muted:   #6B7260;
-    --rule:    #2A2E26;
+    --parchment: #F6F2EB;
+    --cream:     #EDE9E0;
+    --white:     #FFFFFF;
+    --sage:      #E8EDE0;
+    --blush:     #F5EAE4;
+    --lime:      #9DC81A;
+    --lime-lt:   #B8E030;
+    --lime-dk:   #6E9410;
+    --terra:     #C4583A;
+    --navy:      #1C2040;
+    --black:     #111110;
+    --mid:       #706860;
+    --rule:      #D8D3C8;
+    --rule-dk:   #B8B0A4;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-
   body {
-    font-family: 'Syne', sans-serif;
-    background: var(--black);
-    color: var(--off-w);
+    font-family: 'Barlow Condensed', sans-serif;
+    background: var(--parchment);
+    color: var(--black);
     overflow-x: hidden;
     cursor: none;
   }
 
-  /* Custom cursor */
+  /* ── CURSOR ── */
   .cursor {
-    position: fixed;
-    width: 10px; height: 10px;
-    background: var(--lime);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
-    mix-blend-mode: difference;
+    position: fixed; width: 10px; height: 10px;
+    background: var(--lime); border-radius: 50%;
+    pointer-events: none; z-index: 9999;
+    transform: translate(-50%,-50%);
+    transition: width .22s, height .22s;
+    mix-blend-mode: multiply;
   }
-  .cursor.big { width: 40px; height: 40px; }
+  .cursor.big { width: 44px; height: 44px; }
 
   /* ── NAV ── */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    mix-blend-mode: normal;
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 48px; height: 60px;
+    background: rgba(246,242,235,.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--rule);
   }
-
-  nav::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(14,17,13,0.9) 0%, transparent 100%);
-    pointer-events: none;
+  .nav-logo img { height: 22px; filter: brightness(0); opacity: .82; }
+  .nav-center {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: .2em; text-transform: uppercase; color: var(--mid);
   }
-
-  .nav-logo {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-  }
-
-  .nav-logo img { height: 24px; opacity: 0.9; }
-
-  .nav-right {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
+  .nav-right { display: flex; align-items: center; gap: 28px; }
   .nav-link {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(240,237,230,0.5);
-    text-decoration: none;
-    transition: color 0.2s;
+    font-size: 10px; font-weight: 400; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--mid);
+    text-decoration: none; transition: color .2s;
   }
-  .nav-link:hover { color: var(--lime); }
-
+  .nav-link:hover { color: var(--black); }
   .nav-cta {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--black);
-    background: var(--lime);
-    padding: 9px 20px;
-    text-decoration: none;
-    transition: background 0.2s;
+    font-size: 10px; font-weight: 700; letter-spacing: .16em;
+    text-transform: uppercase; background: var(--black);
+    color: var(--parchment); padding: 10px 22px;
+    text-decoration: none; transition: background .2s, color .2s;
   }
-  .nav-cta:hover { background: #fff; }
+  .nav-cta:hover { background: var(--lime); color: var(--black); }
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh;
-    background: var(--black);
-    display: grid;
-    grid-template-rows: 1fr;
-    position: relative;
-    overflow: hidden;
+    height: 100vh; min-height: 700px;
+    position: relative; overflow: hidden;
+    background: var(--cream);
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/ed1cf56a-9ce6-484a-a769-7e24d584c7d7/DSCF0440+copy.jpg');
+    background-size: cover; background-position: center 55%;
+    opacity: .82;
+  }
+  /* Softer gradient — warm parchment at bottom, not black */
+  .hero-img::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(246,242,235,0)   0%,
+      rgba(246,242,235,.05) 35%,
+      rgba(246,242,235,.55) 68%,
+      rgba(246,242,235,.97) 100%
+    );
   }
 
-  /* Background photo (placeholder) */
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, #1A2E14 0%, #0E110D 40%, #1C1408 100%);
-  }
-
-  .hero-bg-img {
-    position: absolute;
-    inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1600&q=80');
-    background-size: cover;
-    background-position: center 60%;
-    opacity: 0.28;
-    mix-blend-mode: luminosity;
-  }
-
-  /* Noise grain */
-  .hero-grain {
-    position: absolute;
-    inset: 0;
-    opacity: 0.04;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1;
+  /* Illustration — top right corner */
+  .hero-illus {
+    position: absolute; top: 80px; right: 48px;
+    width: clamp(180px, 20vw, 300px);
+    opacity: .55; pointer-events: none; z-index: 2;
   }
 
   .hero-inner {
-    position: relative;
-    z-index: 2;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 48px 64px;
+    position: relative; z-index: 2;
+    padding: 0 48px 52px;
   }
-
-  .hero-eyebrow {
+  .hero-presented {
     font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--lime);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
+    font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--mid); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 14px;
   }
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: var(--lime);
+  .hero-presented::before {
+    content: ''; width: 28px; height: 1px;
+    background: var(--lime); flex-shrink: 0;
   }
+  .hero-title {
+    font-size: clamp(80px, 16vw, 210px);
+    font-weight: 900; line-height: .88;
+    color: var(--black); letter-spacing: -.01em;
+    text-transform: uppercase; display: block; max-width: 16ch;
+  }
+  .hero-title .accent { color: var(--lime); }
 
-  .hero-title-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 48px;
-  }
+  .hero-rule { width: 100%; height: 1px; background: var(--rule-dk); margin: 32px 0; }
 
-  .hero-t1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(100px, 18vw, 220px);
-    line-height: 0.88;
-    color: var(--off-w);
-    letter-spacing: 0.01em;
+  .hero-meta {
+    display: flex; align-items: center;
+    gap: 0; flex-wrap: wrap;
   }
-
-  .hero-t2 {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 700;
-    font-size: clamp(64px, 11vw, 138px);
-    line-height: 1.0;
-    color: var(--lime);
-    margin-left: clamp(20px, 4vw, 80px);
-    margin-top: -10px;
-  }
-
-  .hero-t3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(100px, 18vw, 220px);
-    line-height: 0.88;
-    color: var(--off-w);
-    letter-spacing: 0.01em;
-    -webkit-text-stroke: 1px rgba(240,237,230,0.3);
-    color: transparent;
-  }
-
-  .hero-meta-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding-top: 32px;
-    border-top: 1px solid var(--rule);
-  }
-
-  .hero-meta-left {
-    display: flex;
-    gap: 36px;
-    flex-wrap: wrap;
-  }
-
   .hero-meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    padding-right: 36px; margin-right: 36px;
+    border-right: 1px solid var(--rule-dk);
   }
-
-  .hero-meta-label {
+  .hero-meta-item:last-of-type { border-right: none; padding-right: 0; margin-right: 0; }
+  .h-label {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
+    font-size: 9px; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--mid); margin-bottom: 5px;
   }
-
-  .hero-meta-val {
-    font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--off-w);
+  .h-val {
+    font-size: 15px; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--black);
   }
-
+  .hero-cta-wrap { margin-left: auto; }
   .hero-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--lime);
-    color: var(--black);
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    padding: 16px 32px;
-    text-decoration: none;
-    font-weight: 400;
-    transition: background 0.2s, transform 0.2s;
+    display: inline-flex; align-items: center; gap: 14px;
+    background: var(--lime); color: var(--black);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: .2em; text-transform: uppercase;
+    padding: 18px 40px; text-decoration: none;
+    transition: background .2s, transform .18s;
     white-space: nowrap;
+    box-shadow: 0 4px 24px rgba(157,200,26,.3);
   }
-  .hero-cta:hover { background: #fff; transform: translateY(-2px); }
+  .hero-cta:hover { background: var(--lime-dk); color: #fff; transform: translateY(-2px); }
 
-  /* Hand-drawn illustrations overlaid */
-  .illus-hero-tr {
-    position: absolute;
-    top: 80px; right: 40px;
-    width: clamp(160px, 22vw, 320px);
-    opacity: 0.55;
-    z-index: 2;
-    pointer-events: none;
+  /* ── MARQUEE ── */
+  .marquee {
+    background: var(--navy);
+    overflow: hidden; padding: 13px 0; white-space: nowrap;
   }
-
-  .illus-hero-bl {
-    position: absolute;
-    bottom: 160px; left: 20px;
-    width: clamp(80px, 10vw, 140px);
-    opacity: 0.3;
-    z-index: 2;
-    pointer-events: none;
-    transform: rotate(-15deg);
-  }
-
-  /* ── MARQUEE STRIP ── */
-  .marquee-strip {
-    background: var(--lime);
-    color: var(--black);
-    overflow: hidden;
-    padding: 14px 0;
-    white-space: nowrap;
-  }
-
-  .marquee-inner {
-    display: inline-flex;
-    animation: marquee 18s linear infinite;
-    gap: 0;
-  }
-
+  .marquee-track { display: inline-flex; animation: scroll 24s linear infinite; }
   .marquee-item {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 0.08em;
-    padding: 0 32px;
-    display: flex;
-    align-items: center;
-    gap: 32px;
+    font-size: 18px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: var(--parchment); padding: 0 28px;
+    display: flex; align-items: center; gap: 28px;
   }
+  .m-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--lime); flex-shrink: 0; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  .marquee-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--black);
-    opacity: 0.4;
-    flex-shrink: 0;
-  }
-
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  /* ── ABOUT ── */
-  .about {
-    background: var(--black2);
-    padding: 120px 48px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .about-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-
-  .about-photo {
-    position: relative;
-    aspect-ratio: 3/4;
-    overflow: hidden;
-  }
-
-  .about-photo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: #1E2A1A;
-    background-image: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80');
-    background-size: cover;
-    background-position: center;
-    display: block;
-    filter: grayscale(20%) contrast(1.05);
-  }
-
-  .about-photo-tag {
-    position: absolute;
-    bottom: 24px;
-    left: -20px;
-    background: var(--lime);
-    color: var(--black);
-    font-family: 'Dancing Script', cursive;
-    font-size: 22px;
-    font-weight: 600;
-    padding: 10px 24px;
-    white-space: nowrap;
-  }
-
-  .about-photo-corner {
-    position: absolute;
-    top: -1px; left: -1px;
-    width: 40px; height: 40px;
-    border-top: 2px solid var(--lime);
-    border-left: 2px solid var(--lime);
-  }
-
-  .about-text { }
-
-  .section-label {
+  /* ── SHARED ── */
+  .label {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--lime);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    font-size: 9px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--lime-dk); margin-bottom: 18px;
+    display: flex; align-items: center; gap: 12px;
   }
-  .section-label::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 1px;
-    background: var(--lime);
+  .label::before {
+    content: ''; width: 24px; height: 1px;
+    background: var(--lime); display: block; flex-shrink: 0;
   }
 
-  .about-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(52px, 6vw, 80px);
-    line-height: 0.95;
-    color: var(--off-w);
-    margin-bottom: 12px;
-    letter-spacing: 0.02em;
+  /* ── INTRO ── */
+  .intro {
+    background: var(--white);
+    padding: 120px 48px; position: relative; overflow: hidden;
+  }
+  .intro-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center;
   }
 
-  .about-title-script {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    font-size: clamp(44px, 5vw, 68px);
-    color: var(--terra-lt);
-    line-height: 1.1;
-    display: block;
-    margin-bottom: 36px;
+  /* Photo */
+  .intro-photo { position: relative; overflow: hidden; aspect-ratio: 3/4; }
+  .intro-photo-img {
+    width: 100%; height: 100%;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260891-MVIA9WQ3D4DL3PZFF626/DSCF0575.JPG');
+    background-size: cover; background-position: center;
+    transition: transform .7s cubic-bezier(.25,.46,.45,.94);
+  }
+  .intro-photo:hover .intro-photo-img { transform: scale(1.04); }
+  .intro-photo::before {
+    content: ''; position: absolute; z-index: 2;
+    top: -1px; left: -1px; width: 40px; height: 40px;
+    border-top: 3px solid var(--lime); border-left: 3px solid var(--lime);
+  }
+  .intro-photo::after {
+    content: ''; position: absolute; z-index: 2;
+    bottom: -1px; right: -1px; width: 40px; height: 40px;
+    border-bottom: 3px solid var(--lime); border-right: 3px solid var(--lime);
+  }
+  .intro-tag {
+    position: absolute; bottom: 28px; left: 0; z-index: 3;
+    background: var(--lime); color: var(--black);
+    font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+    padding: 10px 22px;
   }
 
-  .about-body {
-    font-size: 16px;
-    line-height: 1.85;
-    color: var(--sand);
-    font-weight: 300;
+  /* Text */
+  .intro-title {
+    font-size: clamp(56px, 7.5vw, 100px); font-weight: 900;
+    line-height: .9; text-transform: uppercase; color: var(--black);
+    margin-bottom: 28px; letter-spacing: -.01em;
+  }
+  .intro-title .accent { color: var(--lime-dk); display: block; }
+  .intro-body {
+    font-size: 19px; font-weight: 300; line-height: 1.75; color: var(--mid);
     max-width: 460px;
   }
-  .about-body p + p { margin-top: 1.3em; }
-  .about-body strong { font-weight: 500; color: var(--off-w); }
+  .intro-body p + p { margin-top: 1.35em; }
+  .intro-body strong { font-weight: 500; color: var(--black); }
 
-  .about-illus {
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 200px;
-    opacity: 0.12;
-    pointer-events: none;
+  /* Illustration floating right side */
+  .intro-illus {
+    position: absolute; right: 24px; bottom: 60px;
+    width: clamp(120px, 14vw, 200px);
+    opacity: .18; pointer-events: none;
   }
 
-  /* ── DETAILS ── */
-  .details {
-    background: var(--black);
-    padding: 0 48px;
-  }
-
+  /* ── DETAILS BAND ── */
+  .details { background: var(--sage); padding: 0 48px; }
   .details-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
+    max-width: 1280px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4,1fr);
+    border-top: 1px solid var(--rule-dk);
+    border-bottom: 1px solid var(--rule-dk);
   }
-
-  .detail-col {
-    padding: 56px 40px;
-    border-right: 1px solid var(--rule);
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s;
+  .det {
+    padding: 52px 36px; border-right: 1px solid var(--rule-dk);
+    transition: background .25s; position: relative; overflow: hidden;
   }
-  .detail-col:last-child { border-right: none; }
-  .detail-col:hover { background: rgba(200,245,58,0.04); }
-  .detail-col:hover .detail-num { color: var(--lime); }
-
-  .detail-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 56px;
-    line-height: 1;
-    color: var(--rule);
-    margin-bottom: 20px;
-    transition: color 0.3s;
+  .det:last-child { border-right: none; }
+  .det:hover { background: var(--white); }
+  .det:hover .det-num { color: var(--lime); }
+  .det-num {
+    font-size: 56px; font-weight: 900; line-height: 1;
+    color: var(--rule-dk); margin-bottom: 16px; transition: color .3s;
+    letter-spacing: .02em;
   }
-
-  .detail-label {
+  .det-lbl {
     font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
+    font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--mid); margin-bottom: 8px;
   }
-
-  .detail-val {
-    font-family: 'Syne', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--off-w);
-    line-height: 1.3;
-  }
-
-  .detail-sub {
-    font-size: 12px;
-    color: var(--muted);
-    margin-top: 6px;
+  .det-val { font-size: 18px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--black); line-height: 1.25; }
+  .det-sub {
     font-family: 'DM Mono', monospace;
-    letter-spacing: 0.05em;
+    font-size: 10px; color: var(--mid); margin-top: 6px;
   }
 
-  /* ── INCLUDES ── */
-  .includes {
-    background: var(--black2);
-    padding: 120px 48px;
-    position: relative;
-    overflow: hidden;
+  /* ── MENU ── */
+  .menu { background: var(--blush); padding: 120px 48px; position: relative; overflow: hidden; }
+
+  /* Big watermark */
+  .menu-wm {
+    position: absolute; inset: 0; display: flex;
+    align-items: center; justify-content: center;
+    pointer-events: none; overflow: hidden;
+  }
+  .menu-wm span {
+    font-size: clamp(160px,28vw,400px); font-weight: 900;
+    text-transform: uppercase; letter-spacing: .02em;
+    color: transparent; -webkit-text-stroke: 1px rgba(196,88,58,.07);
+    white-space: nowrap; user-select: none;
   }
 
-  .includes-inner {
-    max-width: 1200px;
-    margin: 0 auto;
+  .menu-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 2; }
+
+  .menu-header {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: end; margin-bottom: 64px;
+    padding-bottom: 44px; border-bottom: 2px solid var(--rule-dk);
+  }
+  .menu-title {
+    font-size: clamp(60px, 8vw, 108px); font-weight: 900;
+    line-height: .88; text-transform: uppercase; color: var(--black);
+    letter-spacing: -.01em;
+  }
+  .menu-title .accent { color: var(--terra); display: block; }
+  .menu-note {
+    font-size: 18px; font-weight: 300; line-height: 1.75;
+    color: var(--mid); align-self: end;
+  }
+  .menu-note strong { font-weight: 500; color: var(--black); }
+
+  .menu-grid {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 0; border: 1px solid var(--rule-dk);
+    background: var(--rule-dk); /* gap fill */
+  }
+  .menu-card {
+    background: var(--blush); padding: 52px 40px;
+    position: relative; overflow: hidden; transition: background .25s;
+    border-right: 1px solid var(--rule-dk);
+  }
+  .menu-card:last-child { border-right: none; }
+  .menu-card:hover { background: var(--white); }
+  .menu-card:hover .mbar { height: 100%; }
+  .mbar {
+    position: absolute; top: 0; left: 0;
+    width: 3px; height: 0; background: var(--terra);
+    transition: height .4s ease;
+  }
+  .menu-card-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+    color: rgba(17,17,16,.25); margin-bottom: 26px;
+  }
+  .menu-card h3 {
+    font-size: 34px; font-weight: 900; text-transform: uppercase;
+    letter-spacing: .02em; color: var(--black);
+    margin-bottom: 28px; line-height: .95;
+  }
+  .menu-card:nth-child(2) h3 { color: var(--terra); }
+  .menu-items { list-style: none; display: flex; flex-direction: column; gap: 0; }
+  .menu-items li {
+    display: flex; flex-direction: column; gap: 3px;
+    padding: 16px 0; border-bottom: 1px solid var(--rule);
+  }
+  .menu-items li:first-child { padding-top: 0; }
+  .menu-items li:last-child { border-bottom: none; padding-bottom: 0; }
+  .mi-name {
+    font-size: 20px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--black);
+  }
+  .mi-desc {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; color: var(--mid); letter-spacing: .04em;
   }
 
-  .includes-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: end;
-    margin-bottom: 72px;
+  /* Menu illustration */
+  .menu-illus {
+    position: absolute; right: -20px; top: 50%;
+    transform: translateY(-50%);
+    width: clamp(140px, 16vw, 220px);
+    opacity: .14; pointer-events: none;
   }
 
-  .includes-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(52px, 7vw, 88px);
-    line-height: 0.92;
-    color: var(--off-w);
+  /* ── GALLERY ── */
+  .gallery { background: var(--cream); padding: 80px 0; overflow: hidden; }
+  .gallery-header {
+    padding: 0 48px; margin-bottom: 36px;
+    display: flex; align-items: baseline; justify-content: space-between;
   }
-
-  .includes-title-script {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    font-size: clamp(44px, 6vw, 78px);
-    color: var(--lime);
-    display: block;
-    line-height: 1.05;
+  .gallery-ttl {
+    font-size: clamp(36px, 5vw, 60px); font-weight: 900;
+    text-transform: uppercase; color: var(--black); letter-spacing: .02em;
   }
-
-  .includes-sub {
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--sand);
-    font-weight: 300;
-    align-self: end;
+  .gallery-hint {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--mid);
   }
-
-  .includes-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-  }
-
-  .inc-card {
-    background: #131610;
-    padding: 44px 32px;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .inc-card:hover { background: #1A1E17; }
-  .inc-card:hover .inc-accent-bar { width: 100%; }
-
-  .inc-accent-bar {
-    position: absolute;
-    top: 0; left: 0;
-    height: 2px;
-    width: 0;
-    background: var(--lime);
-    transition: width 0.4s ease;
-  }
-
-  .inc-num {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    color: var(--muted);
-    margin-bottom: 28px;
-  }
-
-  .inc-illus {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 24px;
-    flex-shrink: 0;
-  }
-
-  .inc-card h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    letter-spacing: 0.04em;
-    color: var(--off-w);
-    margin-bottom: 12px;
-    line-height: 1;
-  }
-
-  .inc-card p {
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--muted);
-    font-weight: 300;
-    margin-top: auto;
-    flex-grow: 1;
-  }
-
-  /* Rotated label card accent */
-  .inc-card:nth-child(2) h3 { color: var(--lime); }
-  .inc-card:nth-child(4) h3 { color: var(--terra-lt); }
-
-  /* Decorative large illustration */
-  .includes-illus-bg {
-    position: absolute;
-    right: -60px;
-    bottom: -40px;
-    width: 380px;
-    opacity: 0.05;
-    pointer-events: none;
-    transform: rotate(12deg);
-  }
-
-  /* ── GALLERY STRIP ── */
-  .gallery {
-    background: var(--black);
-    padding: 80px 0;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .gallery-label {
-    padding: 0 48px;
-    margin-bottom: 40px;
-  }
-
   .gallery-track {
-    display: flex;
-    gap: 16px;
-    padding: 0 48px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    scroll-snap-type: x mandatory;
+    display: flex; gap: 3px; padding: 0 48px;
+    overflow-x: auto; scrollbar-width: none; scroll-snap-type: x mandatory;
   }
   .gallery-track::-webkit-scrollbar { display: none; }
-
-  .gallery-item {
-    flex-shrink: 0;
-    scroll-snap-align: start;
-    position: relative;
-    overflow: hidden;
+  .gi { flex-shrink: 0; scroll-snap-align: start; position: relative; overflow: hidden; }
+  .gi:nth-child(1) { width: clamp(220px,34vw,500px); height: clamp(280px,44vw,600px); }
+  .gi:nth-child(2) { width: clamp(160px,22vw,320px); height: clamp(280px,44vw,600px); margin-top: 60px; }
+  .gi:nth-child(3) { width: clamp(220px,28vw,420px); height: clamp(280px,44vw,600px); }
+  .gi:nth-child(4) { width: clamp(160px,22vw,320px); height: clamp(280px,44vw,600px); margin-top: 100px; }
+  .gi:nth-child(5) { width: clamp(200px,30vw,440px); height: clamp(280px,44vw,600px); margin-top: 30px; }
+  .g-bg {
+    width: 100%; height: 100%; background-size: cover; background-position: center;
+    transition: transform .5s; filter: saturate(.88) contrast(1.08);
   }
-
-  .gallery-item:nth-child(1) { width: clamp(200px, 32vw, 460px); height: clamp(260px, 40vw, 560px); }
-  .gallery-item:nth-child(2) { width: clamp(160px, 22vw, 320px); height: clamp(260px, 40vw, 560px); margin-top: 48px; }
-  .gallery-item:nth-child(3) { width: clamp(220px, 28vw, 400px); height: clamp(260px, 40vw, 560px); }
-  .gallery-item:nth-child(4) { width: clamp(160px, 22vw, 320px); height: clamp(260px, 40vw, 560px); margin-top: 80px; }
-  .gallery-item:nth-child(5) { width: clamp(200px, 30vw, 440px); height: clamp(260px, 40vw, 560px); margin-top: 24px; }
-
-  .gallery-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: grayscale(30%) contrast(1.1);
-    transition: filter 0.4s, transform 0.5s;
+  .gi:hover .g-bg { transform: scale(1.04); filter: saturate(1) contrast(1.04); }
+  .gb1 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260805-TWCTXZTNC5N3GONGT5S5/DSCF0703.JPG'); }
+  .gb2 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/5f8fe2f9-4726-44ef-8056-f9295a0e6d31/DSCF0519.JPG'); }
+  .gb3 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548261002-T98N3EZI2UV344XGOQ2P/DSCF0858.JPG'); }
+  .gb4 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260859-JH0QN9XUQCPQSFGAPW03/DSCF0412.JPG'); }
+  .gb5 { background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/6b8168f9-04f6-4853-9cb9-f9776437e87e/DSCF0363-copy.jpg'); }
+  .g-cap {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(17,17,16,.7) 0%, transparent 100%);
+    padding: 32px 18px 14px;
+    font-family: 'DM Mono', monospace; font-size: 9px;
+    letter-spacing: .16em; text-transform: uppercase; color: rgba(246,242,235,.7);
+    opacity: 0; transition: opacity .3s;
   }
-  .gallery-item:hover .gallery-img { filter: grayscale(0%) contrast(1.05); transform: scale(1.03); }
-
-  .gallery-img-1 { background-image: url('https://images.unsplash.com/photo-1470753937643-efeb931202a9?w=600&q=75'); background-size: cover; background-position: center; }
-  .gallery-img-2 { background-image: url('https://images.unsplash.com/photo-1543353071-087092ec393a?w=500&q=75'); background-size: cover; background-position: center; }
-  .gallery-img-3 { background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=75'); background-size: cover; background-position: center; }
-  .gallery-img-4 { background-image: url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=500&q=75'); background-size: cover; background-position: center; }
-  .gallery-img-5 { background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=600&q=75'); background-size: cover; background-position: center; }
-
-  .gallery-caption {
-    position: absolute;
-    bottom: 16px; left: 16px;
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(240,237,230,0.5);
-    background: rgba(14,17,13,0.6);
-    padding: 5px 10px;
-    backdrop-filter: blur(4px);
-  }
+  .gi:hover .g-cap { opacity: 1; }
 
   /* ── VENUE ── */
-  .venue {
-    background: var(--black2);
-    padding: 120px 48px;
-    position: relative;
-    overflow: hidden;
-  }
-
+  .venue { background: var(--white); padding: 120px 48px; }
   .venue-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    max-width: 1280px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center;
   }
-
-  .venue-text { }
-
-  .venue-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(60px, 7.5vw, 100px);
-    line-height: 0.92;
-    color: var(--off-w);
-    margin-bottom: 6px;
+  .venue-map { position: relative; aspect-ratio: 1; overflow: hidden; }
+  .venue-map::after {
+    content: ''; position: absolute; z-index: 2;
+    top: -1px; right: -1px; width: 40px; height: 40px;
+    border-top: 3px solid var(--lime); border-right: 3px solid var(--lime);
   }
-
-  .venue-title-script {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;
-    font-size: clamp(50px, 6vw, 82px);
-    color: var(--terra-lt);
-    display: block;
-    line-height: 1.0;
-    margin-bottom: 40px;
-  }
-
-  .venue-body {
-    font-size: 15px;
-    line-height: 1.85;
-    color: var(--sand);
-    font-weight: 300;
-    max-width: 460px;
-    margin-bottom: 40px;
-  }
-
-  .venue-detail-row {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 40px;
-    padding-left: 16px;
-    border-left: 2px solid var(--rule);
-  }
-
-  .venue-detail-item {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-
-  .venue-detail-dt {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding-top: 3px;
-    min-width: 80px;
-  }
-
-  .venue-detail-dd {
-    font-size: 14px;
-    color: var(--off-w);
-    font-weight: 300;
-  }
-
-  .venue-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--lime);
-    text-decoration: none;
-    border-bottom: 1px solid rgba(200,245,58,0.3);
-    padding-bottom: 3px;
-    transition: border-color 0.2s;
-  }
-  .venue-link:hover { border-color: var(--lime); }
-
-  .venue-map {
-    position: relative;
-    aspect-ratio: 1;
-    background: #131610;
-    overflow: hidden;
-  }
-
   .venue-map-img {
-    width: 100%;
-    height: 100%;
-    background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80');
-    background-size: cover;
-    background-position: center;
-    filter: grayscale(60%) sepia(20%) contrast(1.1);
-    opacity: 0.6;
+    width: 100%; height: 100%;
+    background-image: url('https://images.squarespace-cdn.com/content/v1/68efd59b1171bd00d1e57c38/1760548260757-4BRK2PVR2JECD4XM5W89/DSCF0558.JPG');
+    background-size: cover; background-position: center;
+    filter: saturate(.6) contrast(1.1);
   }
-
-  .venue-map-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(14,17,13,0.3) 0%, transparent 100%);
+  .vpin {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%); z-index: 2;
+    display: flex; flex-direction: column; align-items: center;
   }
-
-  .venue-map-pin {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
+  .vpin-dot {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--lime); border: 3px solid #fff;
+    box-shadow: 0 0 0 5px rgba(157,200,26,.25), 0 0 22px rgba(157,200,26,.4);
   }
-
-  .venue-map-pin-dot {
-    width: 16px; height: 16px;
-    background: var(--lime);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(200,245,58,0.2), 0 0 0 12px rgba(200,245,58,0.08);
+  .vpin-line { width: 2px; height: 38px; background: var(--lime); }
+  .vpin-label {
+    background: var(--navy); color: var(--lime-lt);
+    font-family: 'DM Mono', monospace; font-size: 9px;
+    letter-spacing: .14em; text-transform: uppercase; padding: 7px 14px; white-space: nowrap;
   }
-
-  .venue-map-pin-line {
-    width: 1px; height: 40px;
-    background: var(--lime);
+  .venue-title {
+    font-size: clamp(52px, 6.5vw, 90px); font-weight: 900;
+    text-transform: uppercase; line-height: .9; color: var(--black); margin-bottom: 2px;
   }
-
-  .venue-map-pin-label {
-    background: var(--lime);
-    color: var(--black);
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 5px 12px;
-    white-space: nowrap;
+  .venue-title-sub {
+    font-size: clamp(44px, 5.5vw, 76px); font-weight: 300;
+    text-transform: uppercase; line-height: .9; color: var(--black); margin-bottom: 36px;
   }
-
-  .venue-corner-illus {
-    position: absolute;
-    bottom: -30px;
-    right: -30px;
-    width: 160px;
-    opacity: 0.5;
-    pointer-events: none;
+  .venue-body {
+    font-size: 18px; font-weight: 300; line-height: 1.75;
+    color: var(--mid); max-width: 440px; margin-bottom: 32px;
   }
+  .venue-deets {
+    border-left: 3px solid var(--lime); padding-left: 20px;
+    display: flex; flex-direction: column; gap: 12px; margin-bottom: 36px;
+  }
+  .vr { display: flex; gap: 18px; }
+  .vdt {
+    font-family: 'DM Mono', monospace; font-size: 9px;
+    letter-spacing: .16em; text-transform: uppercase;
+    color: rgba(17,17,16,.3); min-width: 64px; padding-top: 3px;
+  }
+  .vdd { font-size: 15px; font-weight: 500; text-transform: uppercase; letter-spacing: .04em; color: var(--black); line-height: 1.35; }
+  .venue-link {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--black); text-decoration: none;
+    border-bottom: 2px solid var(--black); padding-bottom: 3px;
+    transition: color .2s, border-color .2s;
+  }
+  .venue-link:hover { color: var(--lime-dk); border-color: var(--lime-dk); }
 
   /* ── HOSTS ── */
   .hosts {
-    background: var(--black);
-    padding: 80px 48px;
-    border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
+    background: var(--sage); padding: 60px 48px;
+    border-top: 1px solid var(--rule-dk); border-bottom: 1px solid var(--rule-dk);
   }
-
   .hosts-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    flex-wrap: wrap;
+    max-width: 1280px; margin: 0 auto;
+    display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
   }
-
-  .hosts-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-    flex-shrink: 0;
+  .hosts-lbl {
+    font-family: 'DM Mono', monospace; font-size: 9px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--mid); flex-shrink: 0;
   }
-
-  .hosts-divider {
-    width: 1px; height: 32px;
-    background: var(--rule);
-    flex-shrink: 0;
+  .hosts-pipe { width: 1px; height: 28px; background: var(--rule-dk); flex-shrink: 0; }
+  .hosts-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .host {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 18px 9px 9px;
+    border: 1px solid var(--rule-dk); background: var(--white);
+    transition: border-color .2s, box-shadow .2s;
   }
-
-  .hosts-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .host-tag {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    padding: 9px 16px 9px 9px;
-    border: 1px solid var(--rule);
-    transition: border-color 0.2s;
-  }
-  .host-tag:hover { border-color: var(--lime); }
-
+  .host:hover { border-color: var(--lime); box-shadow: 0 2px 12px rgba(157,200,26,.15); }
   .host-av {
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    font-family: 'DM Mono', monospace;
-    font-weight: 400;
-    color: var(--black);
-    flex-shrink: 0;
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'DM Mono', monospace; font-size: 10px; color: #fff; flex-shrink: 0;
+  }
+  .host-nm { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+
+  /* ── CTA ── */
+  .cta {
+    background: var(--navy);
+    padding: 150px 48px; text-align: center; position: relative; overflow: hidden;
+  }
+  .cta-wm {
+    position: absolute; inset: 0; display: flex;
+    align-items: center; justify-content: center;
+    pointer-events: none; overflow: hidden;
+  }
+  .cta-wm span {
+    font-size: clamp(180px,34vw,520px); font-weight: 900; text-transform: uppercase;
+    color: transparent; -webkit-text-stroke: 1px rgba(157,200,26,.08);
+    white-space: nowrap; user-select: none;
   }
 
-  .host-nm {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--off-w);
-    letter-spacing: 0.03em;
+  /* Illustration bottom corners */
+  .cta-illus-l, .cta-illus-r {
+    position: absolute; bottom: 0;
+    width: clamp(160px,18vw,260px); opacity: .28; pointer-events: none;
   }
+  .cta-illus-l { left: -20px; transform-origin: bottom left; }
+  .cta-illus-r { right: -20px; transform: scaleX(-1); transform-origin: bottom right; }
 
-  /* ── CTA CLOSE ── */
-  .cta-close {
-    background: var(--black2);
-    padding: 140px 48px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+  .cta-inner { position: relative; z-index: 2; max-width: 900px; margin: 0 auto; }
+  .cta-eyebrow {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: .24em; text-transform: uppercase; color: var(--lime);
+    margin-bottom: 26px; display: flex; align-items: center; justify-content: center; gap: 18px;
   }
-
-  /* Large background type watermark */
-  .cta-watermark {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    overflow: hidden;
+  .cta-eyebrow::before, .cta-eyebrow::after {
+    content: ''; display: block; width: 36px; height: 1px; background: var(--lime);
   }
-
-  .cta-watermark span {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(180px, 32vw, 480px);
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(200,245,58,0.06);
-    line-height: 1;
-    white-space: nowrap;
-    user-select: none;
-  }
-
-  .cta-inner {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .cta-mono {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--lime);
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-  }
-  .cta-mono::before, .cta-mono::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 1px;
-    background: var(--lime);
-  }
-
   .cta-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(72px, 12vw, 160px);
-    line-height: 0.9;
-    color: var(--off-w);
+    font-size: clamp(80px, 14vw, 188px); font-weight: 900;
+    text-transform: uppercase; line-height: .88; color: var(--parchment); letter-spacing: -.01em;
   }
-
-  .cta-script {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 700;
-    font-size: clamp(60px, 10vw, 138px);
-    color: var(--lime);
-    display: block;
-    line-height: 1.0;
-    margin-top: -10px;
+  .cta-title .accent { color: var(--lime); display: block; }
+  .cta-meta {
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    letter-spacing: .16em; text-transform: uppercase;
+    color: rgba(246,242,235,.32); margin: 40px 0 52px; line-height: 2.4;
   }
-
-  .cta-details {
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    color: var(--muted);
-    margin: 40px 0 52px;
-    line-height: 2;
-    text-transform: uppercase;
-  }
-
   .cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    background: var(--lime);
-    color: var(--black);
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    padding: 20px 56px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
+    display: inline-flex; align-items: center; gap: 16px;
+    background: var(--lime); color: var(--black);
+    font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
+    padding: 22px 60px; text-decoration: none;
+    transition: background .2s, transform .2s;
+    box-shadow: 0 8px 32px rgba(157,200,26,.22);
   }
-  .cta-btn:hover { background: #fff; transform: translateY(-3px); }
+  .cta-btn:hover { background: var(--lime-lt); transform: translateY(-3px); }
 
   /* ── FOOTER ── */
   footer {
-    background: var(--black);
-    padding: 40px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    border-top: 1px solid var(--rule);
+    background: var(--navy); padding: 36px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 20px;
+    border-top: 1px solid rgba(255,255,255,.06);
   }
-
-  footer img { height: 24px; opacity: 0.5; }
-  footer img:hover { opacity: 0.9; }
-
-  .footer-links {
-    display: flex; gap: 28px; list-style: none;
+  footer a img { height: 20px; filter: brightness(0) invert(1); opacity: .4; transition: opacity .2s; }
+  footer a:hover img { opacity: .85; }
+  .f-links { display: flex; gap: 28px; list-style: none; }
+  .f-links a {
+    font-family: 'DM Mono', monospace; font-size: 10px;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: rgba(255,255,255,.28); text-decoration: none; transition: color .2s;
   }
-  .footer-links a {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: var(--lime); }
-
-  .footer-copy {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: #2A2E26;
-    letter-spacing: 0.06em;
-  }
+  .f-links a:hover { color: var(--lime); }
+  .f-copy { font-family: 'DM Mono', monospace; font-size: 10px; color: rgba(255,255,255,.14); letter-spacing: .06em; }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 1000px) {
-    .about-inner, .venue-inner { grid-template-columns: 1fr; gap: 48px; }
-    .includes-header { grid-template-columns: 1fr; }
-    .includes-grid { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 1060px) {
+    .intro-inner, .venue-inner { grid-template-columns: 1fr; gap: 48px; }
+    .menu-grid { grid-template-columns: 1fr; }
+    .menu-card { border-right: none; border-bottom: 1px solid var(--rule-dk); }
+    .menu-card:last-child { border-bottom: none; }
     .details-inner { grid-template-columns: 1fr 1fr; }
+    .menu-header { grid-template-columns: 1fr; }
+    .menu-illus { display: none; }
   }
-
-  @media (max-width: 640px) {
-    nav { padding: 16px 20px; }
-    .hero-inner { padding: 0 20px 48px; }
-    .about, .includes, .venue, .cta-close { padding: 80px 20px; }
+  @media (max-width: 700px) {
+    nav { padding: 0 20px; }
+    .nav-center { display: none; }
+    .hero-inner { padding: 0 20px 44px; }
+    .intro, .menu, .venue, .cta { padding: 80px 20px; }
     .details { padding: 0 20px; }
-    .hosts { padding: 60px 20px; }
-    .gallery-label, .gallery-track { padding: 0 20px; }
-    footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
-    .includes-grid { grid-template-columns: 1fr; }
+    .hosts { padding: 48px 20px; }
+    .gallery-header, .gallery-track { padding: 0 20px; }
+    footer { flex-direction: column; align-items: flex-start; padding: 28px 20px; }
+    .hero-meta { flex-direction: column; gap: 14px; }
+    .hero-meta-item { border-right: none; padding-right: 0; margin-right: 0; }
+    .hero-cta-wrap { margin-left: 0; }
+    .nav-link { display: none; }
     .details-inner { grid-template-columns: 1fr 1fr; }
-    .hosts-divider { display: none; }
-    .nav-right .nav-link { display: none; }
-    body { cursor: auto; }
-    .cursor { display: none; }
+    body { cursor: auto; } .cursor { display: none; }
   }
 </style>
 </head>
@@ -1079,482 +609,443 @@
 
 <div class="cursor" id="cursor"></div>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav>
   <a class="nav-logo" href="https://haps.club">
     <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="Haps Club">
   </a>
+  <span class="nav-center">Summer Garden Party &mdash; June 10</span>
   <div class="nav-right">
     <a href="https://haps.club" class="nav-link">haps.club</a>
-    <a href="https://instagram.com/thehapsclub" class="nav-link">@thehapsclub</a>
     <a href="https://lu.ma/hapsclub" class="nav-cta" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg">
-    <div class="hero-bg-img"></div>
-  </div>
-  <div class="hero-grain"></div>
+  <div class="hero-img"></div>
 
-  <!-- Hand-drawn illustration: loose flower, top right -->
-  <svg class="illus-hero-tr" viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g stroke="#C8F53A" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Top-right botanical illustration — loose single stem with blooms -->
+  <svg class="hero-illus" viewBox="0 0 300 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#1C2040" stroke-linecap="round" stroke-linejoin="round">
       <!-- Main stem -->
-      <path d="M160 370 C158 320 155 270 162 210 C168 155 175 110 168 50" stroke-width="2.5"/>
+      <path d="M150 410 C148 340 145 270 150 200 C154 132 158 80 153 18" stroke-width="2.2"/>
       <!-- Left branches -->
-      <path d="M160 300 C130 278 95 272 65 285" stroke-width="2"/>
-      <path d="M163 235 C128 210 90 212 62 228" stroke-width="2"/>
-      <path d="M166 180 C138 158 106 160 82 174" stroke-width="1.8"/>
+      <path d="M148 330 C118 308 85 308 58 324" stroke-width="1.8"/>
+      <path d="M149 260 C118 238 86 240 60 255" stroke-width="1.8"/>
+      <path d="M150 200 C125 180 96 182 74 196" stroke-width="1.6"/>
       <!-- Right branches -->
-      <path d="M162 280 C195 258 228 262 252 278" stroke-width="2"/>
-      <path d="M164 218 C200 195 234 198 258 214" stroke-width="2"/>
-      <path d="M167 168 C198 148 228 150 248 164" stroke-width="1.8"/>
+      <path d="M152 310 C182 288 212 292 234 308" stroke-width="1.8"/>
+      <path d="M151 248 C184 226 214 228 236 244" stroke-width="1.8"/>
+      <path d="M152 192 C180 174 206 176 224 190" stroke-width="1.6"/>
       <!-- Leaves left -->
-      <path d="M63 285 C38 265 28 240 42 222 C56 206 84 218 94 238 C104 258 92 278 63 285Z" stroke-width="1.5" fill="rgba(200,245,58,0.06)"/>
-      <path d="M60 228 C35 208 26 183 40 166 C55 150 82 164 90 184 C98 205 88 224 60 228Z" stroke-width="1.5" fill="rgba(200,245,58,0.06)"/>
-      <!-- Leaves right -->
-      <path d="M254 276 C278 256 288 232 274 214 C260 198 232 212 222 232 C212 252 224 272 254 276Z" stroke-width="1.5" fill="rgba(200,245,58,0.06)"/>
-      <path d="M260 212 C284 192 292 168 278 152 C264 136 236 150 226 170 C216 192 228 210 260 212Z" stroke-width="1.5" fill="rgba(200,245,58,0.06)"/>
+      <path d="M55 322 C28 302 18 274 34 256 C50 238 78 252 88 274 C98 296 86 316 55 322Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
+      <path d="M57 253 C30 233 22 206 38 190 C54 174 80 190 88 212 C96 234 86 252 57 253Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
+      <path d="M236 306 C262 286 272 258 258 240 C244 224 218 238 208 260 C198 282 208 302 236 306Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
+      <path d="M238 242 C264 222 272 196 258 180 C244 166 218 178 208 200 C198 222 210 240 238 242Z" stroke-width="1.4" fill="rgba(28,32,64,.04)"/>
       <!-- Central bloom -->
-      <circle cx="168" cy="52" r="26" stroke-width="1.5" fill="rgba(200,245,58,0.04)"/>
-      <circle cx="168" cy="52" r="14" stroke-width="1.5" fill="rgba(200,245,58,0.08)"/>
-      <circle cx="168" cy="52" r="6" stroke-width="1.5" fill="rgba(200,245,58,0.2)"/>
-      <!-- Petals -->
-      <ellipse cx="168" cy="28" rx="8" ry="14" stroke-width="1.2" fill="rgba(200,245,58,0.05)"/>
-      <ellipse cx="168" cy="76" rx="8" ry="14" stroke-width="1.2" fill="rgba(200,245,58,0.05)"/>
-      <ellipse cx="144" cy="52" rx="14" ry="8" stroke-width="1.2" fill="rgba(200,245,58,0.05)"/>
-      <ellipse cx="192" cy="52" rx="14" ry="8" stroke-width="1.2" fill="rgba(200,245,58,0.05)"/>
-      <ellipse cx="150" cy="34" rx="8" ry="14" stroke-width="1.2" transform="rotate(-45 150 34)" fill="rgba(200,245,58,0.04)"/>
-      <ellipse cx="186" cy="34" rx="8" ry="14" stroke-width="1.2" transform="rotate(45 186 34)" fill="rgba(200,245,58,0.04)"/>
-      <ellipse cx="150" cy="70" rx="8" ry="14" stroke-width="1.2" transform="rotate(45 150 70)" fill="rgba(200,245,58,0.04)"/>
-      <ellipse cx="186" cy="70" rx="8" ry="14" stroke-width="1.2" transform="rotate(-45 186 70)" fill="rgba(200,245,58,0.04)"/>
-      <!-- Small side blooms -->
-      <circle cx="94" cy="162" r="14" stroke-width="1.2" fill="rgba(200,245,58,0.04)"/>
-      <circle cx="94" cy="162" r="7" stroke-width="1.2" fill="rgba(200,245,58,0.06)"/>
-      <circle cx="242" cy="160" r="14" stroke-width="1.2" fill="rgba(200,245,58,0.04)"/>
-      <circle cx="242" cy="160" r="7" stroke-width="1.2" fill="rgba(200,245,58,0.06)"/>
-      <!-- Buds -->
-      <ellipse cx="132" cy="136" rx="5" ry="9" stroke-width="1.2" transform="rotate(-30 132 136)"/>
-      <ellipse cx="204" cy="134" rx="5" ry="9" stroke-width="1.2" transform="rotate(30 204 134)"/>
-      <ellipse cx="78" cy="198" rx="4" ry="8" stroke-width="1.2" transform="rotate(-40 78 198)"/>
-      <ellipse cx="260" cy="196" rx="4" ry="8" stroke-width="1.2" transform="rotate(40 260 196)"/>
-      <!-- Tendrils -->
-      <path d="M140 100 C148 88 145 78 152 72" stroke-width="1" fill="none"/>
-      <path d="M196 98 C188 86 192 76 184 70" stroke-width="1" fill="none"/>
-    </g>
-  </svg>
-
-  <!-- Small wine glass sketch, bottom left -->
-  <svg class="illus-hero-bl" viewBox="0 0 140 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g stroke="#C8F53A" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
-      <path d="M30 20 L110 20 L78 80 L78 150 L62 150 L62 80 Z"/>
-      <line x1="48" y1="150" x2="92" y2="150"/>
-      <path d="M44 40 Q46 32 52 36"/>
-      <path d="M68 28 Q72 22 78 26"/>
-      <path d="M88 38 Q92 30 96 34"/>
+      <circle cx="153" cy="18" r="24" stroke-width="1.5" fill="rgba(28,32,64,.03)"/>
+      <circle cx="153" cy="18" r="14" stroke-width="1.5"/>
+      <circle cx="153" cy="18" r="6" stroke-width="1.5"/>
+      <ellipse cx="153" cy="-4" rx="8" ry="13" stroke-width="1.2"/>
+      <ellipse cx="153" cy="40" rx="8" ry="13" stroke-width="1.2"/>
+      <ellipse cx="131" cy="18" rx="13" ry="8" stroke-width="1.2"/>
+      <ellipse cx="175" cy="18" rx="13" ry="8" stroke-width="1.2"/>
+      <ellipse cx="137" cy="2" rx="8" ry="13" stroke-width="1.2" transform="rotate(-45 137 2)"/>
+      <ellipse cx="169" cy="2" rx="8" ry="13" stroke-width="1.2" transform="rotate(45 169 2)"/>
+      <ellipse cx="137" cy="34" rx="8" ry="13" stroke-width="1.2" transform="rotate(45 137 34)"/>
+      <ellipse cx="169" cy="34" rx="8" ry="13" stroke-width="1.2" transform="rotate(-45 169 34)"/>
+      <!-- Side blooms -->
+      <circle cx="74" cy="195" r="14" stroke-width="1.2" fill="rgba(28,32,64,.03)"/>
+      <circle cx="74" cy="195" r="7" stroke-width="1.2"/>
+      <circle cx="226" cy="192" r="14" stroke-width="1.2" fill="rgba(28,32,64,.03)"/>
+      <circle cx="226" cy="192" r="7" stroke-width="1.2"/>
+      <!-- Small buds -->
+      <ellipse cx="112" cy="155" rx="5" ry="9" stroke-width="1.1" transform="rotate(-28 112 155)"/>
+      <ellipse cx="192" cy="153" rx="5" ry="9" stroke-width="1.1" transform="rotate(28 192 153)"/>
+      <ellipse cx="72" cy="218" rx="4" ry="8" stroke-width="1.1" transform="rotate(-35 72 218)"/>
+      <ellipse cx="232" cy="216" rx="4" ry="8" stroke-width="1.1" transform="rotate(35 232 216)"/>
     </g>
   </svg>
 
   <div class="hero-inner">
-    <p class="hero-eyebrow">Haps Club · West Adams · Los Angeles</p>
-
-    <div class="hero-title-wrap">
-      <span class="hero-t1">SUMMER</span>
-      <span class="hero-t2">Garden Party</span>
-      <span class="hero-t3">JUNE 10</span>
-    </div>
-
-    <div class="hero-meta-row">
-      <div class="hero-meta-left">
-        <div class="hero-meta-item">
-          <span class="hero-meta-label">Date</span>
-          <span class="hero-meta-val">Tuesday, June 10</span>
-        </div>
-        <div class="hero-meta-item">
-          <span class="hero-meta-label">Time</span>
-          <span class="hero-meta-val">5:00 – 9:00 PM</span>
-        </div>
-        <div class="hero-meta-item">
-          <span class="hero-meta-label">Venue</span>
-          <span class="hero-meta-val">Twentieth Street Garden</span>
-        </div>
-        <div class="hero-meta-item">
-          <span class="hero-meta-label">Neighborhood</span>
-          <span class="hero-meta-val">West Adams, LA</span>
-        </div>
+    <p class="hero-presented">Presented by Haps Club &amp; Twentieth Street Garden</p>
+    <h1 class="hero-title">
+      SUMMER<br>
+      <span class="accent">GARDEN</span><br>
+      PARTY
+    </h1>
+    <div class="hero-rule"></div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <p class="h-label">Date</p>
+        <p class="h-val">Tuesday, June 10</p>
       </div>
-      <a href="https://lu.ma/hapsclub" class="hero-cta" target="_blank" rel="noopener">
-        Reserve Your Place
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <div class="hero-meta-item">
+        <p class="h-label">Time</p>
+        <p class="h-val">5:00 &ndash; 9:00 PM</p>
+      </div>
+      <div class="hero-meta-item">
+        <p class="h-label">Venue</p>
+        <p class="h-val">Twentieth Street Garden</p>
+      </div>
+      <div class="hero-cta-wrap">
+        <a href="https://lu.ma/hapsclub" class="hero-cta" target="_blank" rel="noopener">
+          Reserve Your Place
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ── MARQUEE ── -->
-<div class="marquee-strip" aria-hidden="true">
-  <div class="marquee-inner">
-    <div class="marquee-item">Summer Garden Party <span class="marquee-dot"></span></div>
-    <div class="marquee-item">June 10, 2025 <span class="marquee-dot"></span></div>
-    <div class="marquee-item">West Adams, LA <span class="marquee-dot"></span></div>
-    <div class="marquee-item">Drinks &amp; Tacos Included <span class="marquee-dot"></span></div>
-    <div class="marquee-item">Haps Club <span class="marquee-dot"></span></div>
-    <div class="marquee-item">Twentieth Street Garden <span class="marquee-dot"></span></div>
-    <div class="marquee-item">5–9 PM <span class="marquee-dot"></span></div>
-    <!-- duplicate for seamless loop -->
-    <div class="marquee-item">Summer Garden Party <span class="marquee-dot"></span></div>
-    <div class="marquee-item">June 10, 2025 <span class="marquee-dot"></span></div>
-    <div class="marquee-item">West Adams, LA <span class="marquee-dot"></span></div>
-    <div class="marquee-item">Drinks &amp; Tacos Included <span class="marquee-dot"></span></div>
-    <div class="marquee-item">Haps Club <span class="marquee-dot"></span></div>
-    <div class="marquee-item">Twentieth Street Garden <span class="marquee-dot"></span></div>
-    <div class="marquee-item">5–9 PM <span class="marquee-dot"></span></div>
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-item">Summer Garden Party <span class="m-dot"></span></div>
+    <div class="marquee-item">June 10 <span class="m-dot"></span></div>
+    <div class="marquee-item">West Adams, LA <span class="m-dot"></span></div>
+    <div class="marquee-item">Tacos &middot; Burritos &middot; Quesadillas <span class="m-dot"></span></div>
+    <div class="marquee-item">Seasonal Garden Cocktails <span class="m-dot"></span></div>
+    <div class="marquee-item">Haps Club <span class="m-dot"></span></div>
+    <div class="marquee-item">5&ndash;9 PM <span class="m-dot"></span></div>
+    <div class="marquee-item">Summer Garden Party <span class="m-dot"></span></div>
+    <div class="marquee-item">June 10 <span class="m-dot"></span></div>
+    <div class="marquee-item">West Adams, LA <span class="m-dot"></span></div>
+    <div class="marquee-item">Tacos &middot; Burritos &middot; Quesadillas <span class="m-dot"></span></div>
+    <div class="marquee-item">Seasonal Garden Cocktails <span class="m-dot"></span></div>
+    <div class="marquee-item">Haps Club <span class="m-dot"></span></div>
+    <div class="marquee-item">5&ndash;9 PM <span class="m-dot"></span></div>
   </div>
 </div>
 
-<!-- ── ABOUT ── -->
-<section class="about">
-  <div class="about-inner">
-    <div class="about-photo">
-      <div class="about-photo-img"></div>
-      <div class="about-photo-corner"></div>
-      <span class="about-photo-tag">West Adams in Bloom</span>
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="intro-photo">
+      <div class="intro-photo-img"></div>
+      <div class="intro-tag">West Adams in Bloom</div>
     </div>
-
-    <div class="about-text">
-      <p class="section-label">About the evening</p>
-      <h2 class="about-title">AN EVENING</h2>
-      <span class="about-title-script">in the garden</span>
-      <div class="about-body">
-        <p><strong>Twentieth Street Garden and Haps Club</strong> are throwing a summer party in one of West Adams' most quietly magnetic spaces — a lush open-air backyard in full June bloom.</p>
-        <p>Your ticket includes a welcome drink and three tacos from <strong>Tacos Como En El D.F.</strong>, the beloved neighborhood truck. Craft cocktails and garden-fresh mocktails all night, made with ingredients from the garden itself.</p>
-        <p>Come for the people, stay for the vibe. This one always feels different.</p>
+    <div>
+      <p class="label">About the evening</p>
+      <h2 class="intro-title">
+        AN EVENING<br>
+        <span class="accent">IN THE</span><br>
+        GARDEN
+      </h2>
+      <div class="intro-body">
+        <p><strong>Twentieth Street Garden and Haps Club</strong> come together for a summer evening in one of West Adams' most quietly magnetic spaces &mdash; a lush open-air backyard in full June bloom.</p>
+        <p>Your ticket includes a dish from <strong>Tacos Como En El D.F.</strong> and a seasonal cocktail crafted with ingredients grown right here in the garden.</p>
+        <p>Good people, great food, live music. Come as you are.</p>
       </div>
     </div>
   </div>
 
-  <!-- Large background botanical watermark -->
-  <svg class="about-illus" viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g stroke="#C8F53A" stroke-linecap="round" stroke-width="1">
-      <path d="M100 250 C98 200 96 155 100 110 C103 65 106 35 102 5"/>
-      <path d="M99 190 C74 170 48 170 25 182"/>
-      <path d="M100 140 C75 120 52 122 30 136"/>
-      <ellipse cx="22" cy="178" rx="20" ry="8" transform="rotate(-20 22 178)"/>
-      <ellipse cx="28" cy="132" rx="18" ry="7" transform="rotate(-28 28 132)"/>
-      <path d="M101 185 C126 165 152 168 172 182"/>
-      <path d="M101 138 C126 118 150 120 168 134"/>
-      <ellipse cx="174" cy="178" rx="20" ry="8" transform="rotate(20 174 178)"/>
-      <circle cx="102" cy="6" r="16"/>
-      <circle cx="102" cy="6" r="8"/>
-      <ellipse cx="102" cy="-8" rx="7" ry="11" transform="rotate(0 102 -8)"/>
-      <ellipse cx="102" cy="20" rx="7" ry="11"/>
-      <ellipse cx="88" cy="6" rx="11" ry="7"/>
-      <ellipse cx="116" cy="6" rx="11" ry="7"/>
+  <!-- Cocktail glass illustration, bottom right -->
+  <svg class="intro-illus" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#1C2040" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8">
+      <!-- Glass bowl -->
+      <path d="M30 20 L170 20 L112 110 L112 220 L88 220 L88 110 Z"/>
+      <!-- Stem base -->
+      <line x1="60" y1="220" x2="140" y2="220"/>
+      <!-- Liquid fill line -->
+      <path d="M48 55 Q100 45 152 55" stroke-width="1.2" opacity=".5"/>
+      <!-- Garnish stick -->
+      <line x1="130" y1="18" x2="160" y2="8" stroke="#9DC81A" stroke-width="2"/>
+      <!-- Cherry -->
+      <circle cx="163" cy="6" r="7" stroke="#C4583A" stroke-width="1.8"/>
+      <!-- Bubbles -->
+      <circle cx="85" cy="75" r="4" stroke-width="1.2" opacity=".5"/>
+      <circle cx="100" cy="60" r="3" stroke-width="1.2" opacity=".4"/>
+      <circle cx="112" cy="80" r="3.5" stroke-width="1.2" opacity=".45"/>
+      <!-- Condensation lines outside -->
+      <path d="M145 50 Q148 60 145 70" stroke-width="1" opacity=".3"/>
+      <path d="M155 60 Q158 70 155 80" stroke-width="1" opacity=".25"/>
     </g>
   </svg>
 </section>
 
-<!-- ── DETAILS ── -->
+<!-- DETAILS BAND -->
 <section class="details">
   <div class="details-inner">
-    <div class="detail-col">
-      <div class="detail-num">01</div>
-      <div class="detail-label">Date</div>
-      <div class="detail-val">Tuesday<br>June 10</div>
+    <div class="det">
+      <div class="det-num">01</div>
+      <div class="det-lbl">Date</div>
+      <div class="det-val">Tuesday<br>June 10</div>
     </div>
-    <div class="detail-col">
-      <div class="detail-num">02</div>
-      <div class="detail-label">Time</div>
-      <div class="detail-val">5:00 PM – 9:00 PM</div>
-      <div class="detail-sub">Doors open at 5</div>
+    <div class="det">
+      <div class="det-num">02</div>
+      <div class="det-lbl">Hours</div>
+      <div class="det-val">5:00 PM<br>&ndash; 9:00 PM</div>
+      <div class="det-sub">Doors open at 5</div>
     </div>
-    <div class="detail-col">
-      <div class="detail-num">03</div>
-      <div class="detail-label">Location</div>
-      <div class="detail-val">Twentieth Street Garden</div>
-      <div class="detail-sub">2267 W 20th St · West Adams</div>
+    <div class="det">
+      <div class="det-num">03</div>
+      <div class="det-lbl">Location</div>
+      <div class="det-val">Twentieth<br>Street Garden</div>
+      <div class="det-sub">2267 W 20th St &middot; West Adams</div>
     </div>
-    <div class="detail-col">
-      <div class="detail-num">04</div>
-      <div class="detail-label">Setting</div>
-      <div class="detail-val">Open Air Backyard</div>
-      <div class="detail-sub">Dress for a warm evening</div>
+    <div class="det">
+      <div class="det-num">04</div>
+      <div class="det-lbl">Setting</div>
+      <div class="det-val">Open Air<br>Backyard</div>
+      <div class="det-sub">Dress for a warm June evening</div>
     </div>
   </div>
 </section>
 
-<!-- ── INCLUDES ── -->
-<section class="includes">
-  <div class="includes-inner">
-    <div class="includes-header">
-      <div>
-        <p class="section-label">Your ticket includes</p>
-        <h2 class="includes-title">WHAT YOU<br>
-          <span class="includes-title-script">get</span>
-        </h2>
-      </div>
-      <p class="includes-sub">Every ticket covers a welcome drink of your choice, a plate of three tacos, and a full evening in one of LA's best outdoor spaces.</p>
-    </div>
+<!-- MENU -->
+<section class="menu">
+  <div class="menu-wm" aria-hidden="true"><span>MENU</span></div>
 
-    <div class="includes-grid">
-      <!-- Card 1 -->
-      <div class="inc-card">
-        <div class="inc-accent-bar"></div>
-        <span class="inc-num">— 01</span>
-        <!-- Hand-drawn cocktail glass -->
-        <svg class="inc-illus" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="#C8F53A" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-            <path d="M10 8 L50 8 L32 30 L32 50 L28 50 L28 30 Z"/>
-            <line x1="20" y1="50" x2="40" y2="50"/>
-            <path d="M16 16 Q18 11 22 14"/>
-            <path d="M28 10 Q31 6 35 9"/>
-            <path d="M38 15 Q41 10 45 13"/>
-            <circle cx="46" cy="18" r="4" stroke="#B5614A"/>
-            <path d="M46 14 L50 8" stroke="#B5614A"/>
-          </g>
-        </svg>
-        <h3>Welcome Drink</h3>
-        <p>One cocktail or mocktail of your choice, crafted from garden-grown ingredients by Twentieth Street Garden.</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="inc-card">
-        <div class="inc-accent-bar"></div>
-        <span class="inc-num">— 02</span>
-        <!-- Hand-drawn taco -->
-        <svg class="inc-illus" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="#C8F53A" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-            <path d="M8 42 Q14 12 30 10 Q46 12 52 42"/>
-            <path d="M14 42 Q16 28 24 26"/>
-            <path d="M46 42 Q44 28 36 26"/>
-            <ellipse cx="24" cy="38" rx="5" ry="5"/>
-            <ellipse cx="36" cy="34" rx="4" ry="4"/>
-            <path d="M28 30 Q32 26 38 28"/>
-            <line x1="8" y1="42" x2="52" y2="42"/>
-          </g>
-        </svg>
-        <h3>Tacos Trio</h3>
-        <p>A plate of three tacos from Tacos Como En El D.F. — the beloved West Adams neighborhood taco truck.</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="inc-card">
-        <div class="inc-accent-bar"></div>
-        <span class="inc-num">— 03</span>
-        <!-- Hand-drawn music note -->
-        <svg class="inc-illus" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="#C8F53A" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-            <circle cx="14" cy="46" r="7"/>
-            <circle cx="38" cy="42" r="7"/>
-            <line x1="21" y1="46" x2="21" y2="14"/>
-            <line x1="45" y1="42" x2="45" y2="10"/>
-            <path d="M21 14 L45 10"/>
-            <path d="M21 20 L45 16" stroke-width="1" opacity="0.5"/>
-          </g>
-        </svg>
-        <h3>Live Music</h3>
-        <p>An easygoing soundtrack curated for a warm summer evening in a garden full of good people.</p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="inc-card">
-        <div class="inc-accent-bar"></div>
-        <span class="inc-num">— 04</span>
-        <!-- Hand-drawn leaf/garden -->
-        <svg class="inc-illus" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="#C8F53A" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-            <path d="M30 52 C30 52 8 36 8 22 C8 12 18 6 30 10 C42 6 52 12 52 22 C52 36 30 52 30 52Z"/>
-            <path d="M30 10 L30 52" stroke-width="1"/>
-            <path d="M20 22 Q30 18 40 22" stroke-width="1"/>
-            <path d="M15 32 Q30 26 45 32" stroke-width="1"/>
-          </g>
-        </svg>
-        <h3>The Garden</h3>
-        <p>A lush, privately tended open-air backyard in full summer bloom. The most beautiful spot in West Adams.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Background large botanical -->
-  <svg class="includes-illus-bg" viewBox="0 0 380 460" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <g stroke="#C8F53A" stroke-linecap="round" stroke-width="1.5">
-      <path d="M190 440 C188 370 185 300 190 230 C194 165 198 110 192 40"/>
-      <path d="M188 360 C155 338 118 338 88 354"/>
-      <path d="M189 290 C155 268 120 270 92 286"/>
-      <path d="M191 230 C224 208 258 210 280 226"/>
-      <ellipse cx="80" cy="348" rx="34" ry="14" transform="rotate(-22 80 348)" fill="rgba(200,245,58,0.03)"/>
-      <ellipse cx="86" cy="280" rx="30" ry="12" transform="rotate(-28 86 280)" fill="rgba(200,245,58,0.03)"/>
-      <ellipse cx="282" cy="222" rx="32" ry="13" transform="rotate(20 282 222)" fill="rgba(200,245,58,0.03)"/>
-      <circle cx="192" cy="42" r="28" fill="rgba(200,245,58,0.03)"/>
-      <circle cx="192" cy="42" r="16" fill="rgba(200,245,58,0.04)"/>
+  <!-- Taco illustration, right edge -->
+  <svg class="menu-illus" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#1C2040" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Taco shell -->
+      <path d="M20 200 Q30 80 110 40 Q190 80 200 200" stroke-width="2.2" fill="rgba(28,32,64,.03)"/>
+      <!-- Shell curve fold -->
+      <path d="M40 200 Q50 110 110 80 Q170 110 180 200" stroke-width="1.5" opacity=".4"/>
+      <!-- Fillings — lettuce -->
+      <path d="M55 160 Q65 130 80 125 Q95 120 110 122 Q125 120 140 125 Q155 130 165 160" stroke-width="1.5" fill="rgba(28,32,64,.04)"/>
+      <!-- Tomato -->
+      <circle cx="90" cy="140" r="12" stroke-width="1.4" fill="rgba(196,88,58,.06)"/>
+      <circle cx="130" cy="138" r="10" stroke-width="1.4" fill="rgba(196,88,58,.06)"/>
+      <!-- Cheese squiggle -->
+      <path d="M70 155 Q82 148 94 155 Q106 162 118 155 Q130 148 142 155" stroke-width="1.2" stroke="#9DC81A" opacity=".7"/>
+      <!-- Herbs on top -->
+      <path d="M100 118 C100 118 92 100 98 90 C104 82 108 90 108 90 C108 90 112 78 118 82 C124 86 120 96 120 96 C120 96 128 88 132 94 C136 100 128 110 128 110" stroke-width="1.2" opacity=".5"/>
     </g>
   </svg>
+
+  <div class="menu-inner">
+    <div class="menu-header">
+      <div>
+        <p class="label">One dish + one drink included</p>
+        <h2 class="menu-title">
+          FOOD &amp;<br>
+          <span class="accent">DRINKS</span>
+        </h2>
+      </div>
+      <p class="menu-note">Everything is made fresh. Choose your dish from <strong>Tacos Como En El D.F.</strong> and your drink from Twentieth Street Garden's seasonal cocktail menu &mdash; made with ingredients grown on site.</p>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="mbar"></div>
+        <p class="menu-card-num">01 &mdash; Your Dish</p>
+        <h3>Pick One</h3>
+        <ul class="menu-items">
+          <li>
+            <span class="mi-name">Tacos</span>
+            <span class="mi-desc">Three per plate &mdash; made to order</span>
+          </li>
+          <li>
+            <span class="mi-name">Burrito</span>
+            <span class="mi-desc">Stuffed and wrapped &mdash; the full thing</span>
+          </li>
+          <li>
+            <span class="mi-name">Quesadilla</span>
+            <span class="mi-desc">Crispy, cheesy, perfectly done</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <div class="mbar"></div>
+        <p class="menu-card-num">02 &mdash; Your Drink</p>
+        <h3>Seasonal Bar</h3>
+        <ul class="menu-items">
+          <li>
+            <span class="mi-name">Craft Cocktails</span>
+            <span class="mi-desc">Rotating seasonal menu &mdash; garden ingredients</span>
+          </li>
+          <li>
+            <span class="mi-name">Garden Mocktails</span>
+            <span class="mi-desc">Zero-proof, all flavor &mdash; no compromise</span>
+          </li>
+          <li>
+            <span class="mi-name">Agave &amp; Wine</span>
+            <span class="mi-desc">Available for purchase all evening</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-card">
+        <div class="mbar"></div>
+        <p class="menu-card-num">03 &mdash; The Garden</p>
+        <h3>The Setting</h3>
+        <ul class="menu-items">
+          <li>
+            <span class="mi-name">Open Air Backyard</span>
+            <span class="mi-desc">String lights, summer blooms &mdash; West Adams</span>
+          </li>
+          <li>
+            <span class="mi-name">Live Music</span>
+            <span class="mi-desc">Playing across the garden, 5 to 9 PM</span>
+          </li>
+          <li>
+            <span class="mi-name">Good Company</span>
+            <span class="mi-desc">Neighbors, new faces &mdash; the Haps Club crowd</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ── GALLERY ── -->
+<!-- GALLERY -->
 <section class="gallery">
-  <div class="gallery-label">
-    <p class="section-label">The vibe</p>
+  <div class="gallery-header">
+    <h2 class="gallery-ttl">The Vibe</h2>
+    <span class="gallery-hint">Scroll &rarr;</span>
   </div>
   <div class="gallery-track">
-    <div class="gallery-item">
-      <div class="gallery-img gallery-img-1" style="width:100%;height:100%;"></div>
-      <span class="gallery-caption">Garden setting</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-img gallery-img-2" style="width:100%;height:100%;"></div>
-      <span class="gallery-caption">Craft cocktails</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-img gallery-img-3" style="width:100%;height:100%;"></div>
-      <span class="gallery-caption">Good food</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-img gallery-img-4" style="width:100%;height:100%;"></div>
-      <span class="gallery-caption">Natural light</span>
-    </div>
-    <div class="gallery-item">
-      <div class="gallery-img gallery-img-5" style="width:100%;height:100%;"></div>
-      <span class="gallery-caption">Great company</span>
-    </div>
+    <div class="gi"><div class="g-bg gb1"></div><div class="g-cap">Garden setting</div></div>
+    <div class="gi"><div class="g-bg gb2"></div><div class="g-cap">Craft cocktails</div></div>
+    <div class="gi"><div class="g-bg gb3"></div><div class="g-cap">Good food</div></div>
+    <div class="gi"><div class="g-bg gb4"></div><div class="g-cap">Natural light</div></div>
+    <div class="gi"><div class="g-bg gb5"></div><div class="g-cap">Good company</div></div>
   </div>
 </section>
 
-<!-- ── VENUE ── -->
+<!-- VENUE -->
 <section class="venue">
   <div class="venue-inner">
-    <div class="venue-text">
-      <p class="section-label">Venue</p>
-      <h2 class="venue-title">TWENTIETH</h2>
-      <span class="venue-title-script">Street Garden</span>
-
-      <p class="venue-body">A privately tended open-air garden in West Adams, tucked behind a home at 2267 W 20th Street. It's one of those spots you don't know exists until you're standing in it. String lights, summer blooms, the whole thing.</p>
-
-      <div class="venue-detail-row">
-        <div class="venue-detail-item">
-          <span class="venue-detail-dt">Address</span>
-          <span class="venue-detail-dd">2267 W 20th St, Los Angeles, CA 90018</span>
-        </div>
-        <div class="venue-detail-item">
-          <span class="venue-detail-dt">Parking</span>
-          <span class="venue-detail-dd">Street parking available on W 20th St</span>
-        </div>
-        <div class="venue-detail-item">
-          <span class="venue-detail-dt">Entry</span>
-          <span class="venue-detail-dd">Walk up the driveway on the right — garden is behind the house</span>
-        </div>
-        <div class="venue-detail-item">
-          <span class="venue-detail-dt">Dress</span>
-          <span class="venue-detail-dd">Outside — dress for a warm June evening</span>
-        </div>
-      </div>
-
-      <a href="https://www.google.com/maps/search/?api=1&query=2267+W+20th+St+Los+Angeles" class="venue-link" target="_blank" rel="noopener">
-        Open in Maps
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-      </a>
-    </div>
-
     <div class="venue-map">
       <div class="venue-map-img"></div>
-      <div class="venue-map-overlay"></div>
-      <div class="venue-map-pin">
-        <div class="venue-map-pin-dot"></div>
-        <div class="venue-map-pin-line"></div>
-        <div class="venue-map-pin-label">Twentieth Street Garden</div>
+      <div class="vpin">
+        <div class="vpin-dot"></div>
+        <div class="vpin-line"></div>
+        <div class="vpin-label">Twentieth Street Garden</div>
       </div>
-
-      <!-- Corner illustration -->
-      <svg class="venue-corner-illus" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g stroke="#C8F53A" stroke-linecap="round" stroke-width="1.2">
-          <path d="M80 150 C78 118 76 88 80 58 C83 30 85 15 82 2"/>
-          <path d="M79 120 C60 105 38 106 20 116"/>
-          <path d="M80 88 C100 73 122 76 138 90"/>
-          <ellipse cx="16" cy="112" rx="18" ry="7" transform="rotate(-20 16 112)" fill="rgba(200,245,58,0.05)"/>
-          <ellipse cx="140" cy="86" rx="16" ry="7" transform="rotate(15 140 86)" fill="rgba(200,245,58,0.05)"/>
-          <circle cx="82" cy="3" r="14"/>
-          <circle cx="82" cy="3" r="7"/>
-        </g>
-      </svg>
+    </div>
+    <div>
+      <p class="label">Venue</p>
+      <h2 class="venue-title">TWENTIETH</h2>
+      <p class="venue-title-sub">Street Garden</p>
+      <p class="venue-body">A privately tended open-air garden tucked behind a home in West Adams. String lights, summer blooms, and the kind of space that makes you want to stay all night.</p>
+      <div class="venue-deets">
+        <div class="vr">
+          <span class="vdt">Address</span>
+          <span class="vdd">2267 W 20th St<br>Los Angeles, CA 90018</span>
+        </div>
+        <div class="vr">
+          <span class="vdt">Parking</span>
+          <span class="vdd">Street parking on W 20th St</span>
+        </div>
+        <div class="vr">
+          <span class="vdt">Entry</span>
+          <span class="vdd">Up the driveway on the right &mdash; garden is behind the house</span>
+        </div>
+        <div class="vr">
+          <span class="vdt">Dress</span>
+          <span class="vdd">Outside &mdash; dress for a warm June evening</span>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps/search/?api=1&query=2267+W+20th+St+Los+Angeles" class="venue-link" target="_blank" rel="noopener">
+        Open in Maps &rarr;
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ── HOSTS ── -->
+<!-- HOSTS -->
 <section class="hosts">
   <div class="hosts-inner">
-    <span class="hosts-label">Hosted by</span>
-    <div class="hosts-divider"></div>
+    <span class="hosts-lbl">Hosted by</span>
+    <div class="hosts-pipe"></div>
     <div class="hosts-list">
-      <div class="host-tag">
-        <div class="host-av" style="background:#B5614A;">MA</div>
-        <span class="host-nm">Michael Abraham</span>
-      </div>
-      <div class="host-tag">
-        <div class="host-av" style="background:#7A8C72;">JP</div>
-        <span class="host-nm">Jacob Perlmutter</span>
-      </div>
-      <div class="host-tag">
-        <div class="host-av" style="background:#2C3370;">JB</div>
-        <span class="host-nm">Jimmy Barnes</span>
-      </div>
-      <div class="host-tag">
-        <div class="host-av" style="background:#9DC42B;">JZ</div>
-        <span class="host-nm">Jenn Zelmer</span>
-      </div>
-      <div class="host-tag" style="gap:6px;">
-        <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="" style="height:28px;width:28px;object-fit:contain;background:#2C3370;border-radius:50%;padding:4px;">
+      <div class="host"><div class="host-av" style="background:#C4583A;">MA</div><span class="host-nm">Michael Abraham</span></div>
+      <div class="host"><div class="host-av" style="background:#5C7A52;">JP</div><span class="host-nm">Jacob Perlmutter</span></div>
+      <div class="host"><div class="host-av" style="background:#1C2040;">JB</div><span class="host-nm">Jimmy Barnes</span></div>
+      <div class="host"><div class="host-av" style="background:#7FA318;">JZ</div><span class="host-nm">Jenn Zelmer</span></div>
+      <div class="host">
+        <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="" style="height:28px;width:28px;object-fit:contain;background:#1C2040;border-radius:50%;padding:4px;">
         <span class="host-nm">Haps Club</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── CTA CLOSE ── -->
-<section class="cta-close">
-  <div class="cta-watermark" aria-hidden="true">
-    <span>JUNE</span>
-  </div>
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-wm" aria-hidden="true"><span>JUNE 10</span></div>
+
+  <!-- Corner botanicals in lime on navy -->
+  <svg class="cta-illus-l" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#9DC81A" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M130 310 C128 252 125 196 130 140 C134 88 137 52 133 10" stroke-width="2"/>
+      <path d="M128 260 C100 240 70 240 46 254" stroke-width="1.6"/>
+      <path d="M129 200 C100 180 72 182 50 196" stroke-width="1.6"/>
+      <path d="M131 250 C160 230 188 232 208 248" stroke-width="1.6"/>
+      <path d="M131 194 C158 174 184 176 202 190" stroke-width="1.6"/>
+      <path d="M42 250 C16 232 8 206 24 190 C40 174 66 188 74 210 C82 232 70 248 42 250Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <path d="M210 244 C236 226 244 200 230 184 C216 168 190 182 182 204 C174 226 186 242 210 244Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <circle cx="133" cy="10" r="20" stroke-width="1.4" fill="rgba(157,200,26,.06)"/>
+      <circle cx="133" cy="10" r="11" stroke-width="1.4"/>
+      <circle cx="133" cy="10" r="5" stroke-width="1.4"/>
+      <ellipse cx="133" cy="-8" rx="7" ry="11" stroke-width="1.1"/>
+      <ellipse cx="133" cy="28" rx="7" ry="11" stroke-width="1.1"/>
+      <ellipse cx="115" cy="10" rx="11" ry="7" stroke-width="1.1"/>
+      <ellipse cx="151" cy="10" rx="11" ry="7" stroke-width="1.1"/>
+    </g>
+  </svg>
+  <svg class="cta-illus-r" viewBox="0 0 260 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#9DC81A" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M130 310 C128 252 125 196 130 140 C134 88 137 52 133 10" stroke-width="2"/>
+      <path d="M128 260 C100 240 70 240 46 254" stroke-width="1.6"/>
+      <path d="M129 200 C100 180 72 182 50 196" stroke-width="1.6"/>
+      <path d="M131 250 C160 230 188 232 208 248" stroke-width="1.6"/>
+      <path d="M131 194 C158 174 184 176 202 190" stroke-width="1.6"/>
+      <path d="M42 250 C16 232 8 206 24 190 C40 174 66 188 74 210 C82 232 70 248 42 250Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <path d="M210 244 C236 226 244 200 230 184 C216 168 190 182 182 204 C174 226 186 242 210 244Z" stroke-width="1.3" fill="rgba(157,200,26,.08)"/>
+      <circle cx="133" cy="10" r="20" stroke-width="1.4" fill="rgba(157,200,26,.06)"/>
+      <circle cx="133" cy="10" r="11" stroke-width="1.4"/>
+      <circle cx="133" cy="10" r="5" stroke-width="1.4"/>
+      <ellipse cx="133" cy="-8" rx="7" ry="11" stroke-width="1.1"/>
+      <ellipse cx="133" cy="28" rx="7" ry="11" stroke-width="1.1"/>
+      <ellipse cx="115" cy="10" rx="11" ry="7" stroke-width="1.1"/>
+      <ellipse cx="151" cy="10" rx="11" ry="7" stroke-width="1.1"/>
+    </g>
+  </svg>
+
   <div class="cta-inner">
-    <p class="cta-mono">June 10 · West Adams · LA</p>
-    <h2 class="cta-title">JOIN US</h2>
-    <span class="cta-script">this June</span>
-    <p class="cta-details">
-      Tuesday, June 10 &nbsp;·&nbsp; 5:00 – 9:00 PM<br>
-      Drinks &amp; Tacos Included &nbsp;·&nbsp; Open Air Garden
+    <p class="cta-eyebrow">West Adams &middot; Los Angeles &middot; June 10</p>
+    <h2 class="cta-title">
+      JOIN<br>
+      <span class="accent">US</span>
+    </h2>
+    <p class="cta-meta">
+      Tuesday, June 10 &nbsp;&middot;&nbsp; 5:00 &ndash; 9:00 PM<br>
+      One Dish &amp; One Drink Included &nbsp;&middot;&nbsp; Open Air Garden
     </p>
     <a href="https://lu.ma/hapsclub" class="cta-btn" target="_blank" rel="noopener">
       Reserve Your Place
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
-  <a href="https://haps.club">
-    <img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="Haps Club">
-  </a>
-  <ul class="footer-links">
+  <a href="https://haps.club"><img src="https://res.cloudinary.com/dmfdura1s/image/upload/v1777573162/haps-club-logo-white-on-navy.png" alt="Haps Club"></a>
+  <ul class="f-links">
     <li><a href="https://haps.club">haps.club</a></li>
     <li><a href="https://instagram.com/thehapsclub">@thehapsclub</a></li>
     <li><a href="https://www.twentiethstreetgarden.com">Twentieth Street Garden</a></li>
   </ul>
-  <p class="footer-copy">© 2025 Haps Club · Los Angeles</p>
+  <p class="f-copy">&copy; 2025 Haps Club &middot; Los Angeles</p>
 </footer>
 
 <script>
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
+  const cur = document.getElementById('cursor');
   document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+    cur.style.left = e.clientX + 'px';
+    cur.style.top  = e.clientY + 'px';
   });
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('big'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('big'));
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('mouseenter', () => cur.classList.add('big'));
+    el.addEventListener('mouseleave', () => cur.classList.remove('big'));
   });
 </script>
 </body>
