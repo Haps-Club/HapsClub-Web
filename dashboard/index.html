@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Haps Club</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#23201b; --ink-soft:#5c554b; --ink-faint:#8c8478;
+    --paper:#f6f1e6; --card:#fffdf7; --line:#e3dccb;
+    --coral:#df5d44; --coral-deep:#c44a33; --coral-tint:#fbe7df;
+    --green:#6f8b62; --green-tint:#e6ecdf;
+    --gold:#b08338; --blue:#3f5a73;
+    --shadow:0 1px 0 rgba(35,32,27,.04), 0 12px 30px -18px rgba(35,32,27,.35);
+    --r:14px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    font-family:'Hanken Grotesk',sans-serif; color:var(--ink);
+    background:var(--paper);
+    background-image:radial-gradient(1200px 600px at 80% -10%, #fff8ea 0%, transparent 60%),
+                     radial-gradient(900px 500px at -10% 110%, #f0ead9 0%, transparent 55%);
+    -webkit-font-smoothing:antialiased; min-height:100vh;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:26px 22px 80px}
+  .serif{font-family:'Playfair Display',serif}
+  button{font-family:inherit;cursor:pointer;border:none;background:none}
+  input{font-family:inherit}
+  .muted{color:var(--ink-soft)}
+
+  /* ---------- Lock screen ---------- */
+  #lock{position:fixed;inset:0;display:grid;place-items:center;padding:24px;z-index:50;
+    background:var(--paper);
+    background-image:radial-gradient(1000px 600px at 70% -10%, #fff8ea 0%, transparent 55%),
+                     radial-gradient(800px 500px at 0% 120%, #f0ead9 0%, transparent 55%);}
+  .lockcard{width:100%;max-width:380px;text-align:center;background:var(--card);border:1px solid var(--line);
+    border-radius:18px;box-shadow:0 30px 60px -30px rgba(35,32,27,.5);padding:38px 32px}
+  .lockcard .kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--coral-deep);font-weight:700}
+  .lockcard h1{font-family:'Playfair Display',serif;font-size:30px;margin:7px 0 4px;font-weight:700}
+  .lockcard p{font-size:13px;color:var(--ink-soft);margin:0 0 22px}
+  .lockcard input{width:100%;text-align:center;font-size:15px;letter-spacing:.04em;padding:13px 14px;
+    border:1.5px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);outline:none;transition:border-color .15s}
+  .lockcard input:focus{border-color:var(--coral)}
+  .lockcard input.err{border-color:var(--coral-deep);animation:shake .35s}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+  .lockcard button{margin-top:13px;width:100%;background:var(--coral);color:#fff;font-weight:700;font-size:14px;
+    letter-spacing:.04em;padding:13px;border-radius:11px;transition:background .15s}
+  .lockcard button:hover{background:var(--coral-deep)}
+  .lockerr{color:var(--coral-deep);font-size:12px;font-weight:600;height:16px;margin-top:11px}
+  .lockfoot{margin-top:20px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+
+  #app{display:none}
+
+  /* Masthead */
+  .mast{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:24px}
+  .brand{display:flex;flex-direction:column;gap:2px}
+  .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--coral-deep);font-weight:700}
+  .brand h1{font-size:30px;margin:0;font-weight:700;letter-spacing:-.01em}
+  .mast-r{display:flex;align-items:center;gap:12px}
+  .concept-tag{font-size:10px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);color:var(--ink-faint);border-radius:99px;padding:4px 10px}
+  .lockout{font-size:11px;color:var(--ink-faint);text-decoration:underline}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:26px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow)}
+  .stat .n{font-family:'Playfair Display',serif;font-size:30px;line-height:1;font-weight:600}
+  .stat .n small{font-size:14px;color:var(--ink-faint)}
+  .stat .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:7px}
+  .stat.live .n{color:var(--coral-deep)}
+
+  .section-h{display:flex;align-items:baseline;justify-content:space-between;margin:6px 2px 14px}
+  .section-h h2{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin:0}
+  .addbtn{font-size:12px;font-weight:600;color:var(--coral-deep);border:1px dashed var(--coral);border-radius:99px;padding:6px 13px;background:var(--coral-tint)}
+  .addbtn:hover{background:var(--coral);color:#fff}
+
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .ev{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);cursor:pointer;transition:transform .18s ease, box-shadow .18s ease;overflow:hidden}
+  .ev:hover{transform:translateY(-3px);box-shadow:0 22px 40px -22px rgba(35,32,27,.5)}
+  .ev .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+  .ev h3{font-family:'Playfair Display',serif;font-size:21px;margin:2px 0 2px;font-weight:600;line-height:1.1}
+  .ev .when{font-size:13px;color:var(--ink-soft);font-weight:500}
+  .ev .meta{display:flex;gap:14px;margin-top:13px;font-size:12px;color:var(--ink-faint)}
+  .ev .meta b{color:var(--ink);font-weight:600}
+  .badge{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:5px 9px;border-radius:99px;white-space:nowrap}
+  .b-live{background:var(--coral-tint);color:var(--coral-deep)}
+  .b-soon{background:#fbf0d6;color:var(--gold)}
+  .b-plan{background:#e9eef3;color:var(--blue)}
+  .b-done{background:var(--green-tint);color:var(--green)}
+  .pbar{height:7px;border-radius:99px;background:#ece6d7;margin-top:16px;overflow:hidden}
+  .pbar > span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--coral),var(--coral-deep));transition:width .5s cubic-bezier(.2,.7,.2,1)}
+  .pbar.done > span{background:linear-gradient(90deg,#8aa37e,var(--green))}
+  .pmeta{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-faint);margin-top:7px}
+  .corner{position:absolute;right:-26px;top:14px;transform:rotate(45deg);background:var(--coral);color:#fff;font-size:9px;letter-spacing:.15em;font-weight:700;padding:3px 30px}
+
+  .hidden{display:none}
+  .back{font-size:13px;font-weight:600;color:var(--ink-soft);display:inline-flex;align-items:center;gap:7px;margin-bottom:16px}
+  .back:hover{color:var(--coral-deep)}
+  .layerlabel{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:7px;margin-bottom:10px}
+  .layerlabel.pub{color:var(--blue)} .layerlabel.priv{color:var(--coral-deep)}
+  .layerlabel .dot{width:7px;height:7px;border-radius:99px;background:currentColor;display:inline-block}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:20px 22px;margin-bottom:18px}
+  .public{background:linear-gradient(180deg,#fffdf7, #fbf8f0);border-color:#dfe4e9}
+  .public .head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+  .public h2.title{font-family:'Playfair Display',serif;font-size:30px;margin:0 0 3px;font-weight:700;letter-spacing:-.01em}
+  .factgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+  .fact .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+  .fact .v{font-size:14px;font-weight:600;margin-top:4px}
+  .ext{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--blue);border:1px solid #cdd8e2;border-radius:99px;padding:7px 13px;background:#fff;text-decoration:none}
+  .ext:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+  .tier{border:1px solid var(--line);border-radius:12px;padding:13px 14px;background:#fff;position:relative}
+  .tier .tn{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
+  .tier .tp{font-family:'Playfair Display',serif;font-size:26px;font-weight:600;margin-top:3px}
+  .tier .tw{font-size:11px;color:var(--ink-faint);margin-top:3px}
+  .tier.active{border-color:var(--coral);background:var(--coral-tint);box-shadow:0 0 0 3px rgba(223,93,68,.12)}
+  .tier.active .nowtag{position:absolute;top:-9px;right:11px;background:var(--coral);color:#fff;font-size:9px;letter-spacing:.12em;font-weight:700;padding:3px 8px;border-radius:99px;text-transform:uppercase}
+
+  .cdrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .ring{width:96px;height:96px;flex:0 0 auto}
+  .ring .pct{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;fill:var(--ink)}
+  .cdtext .phase{font-family:'Playfair Display',serif;font-size:22px;font-weight:600}
+  .cdtext .sub{font-size:13px;color:var(--ink-soft);margin-top:3px}
+  .cdtext .tminus{display:inline-block;margin-top:9px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--coral-deep);background:var(--coral-tint);padding:5px 11px;border-radius:99px}
+
+  .phase-block{border-top:1px solid var(--line);padding:15px 0}
+  .phase-block:first-of-type{border-top:none}
+  .phase-head{display:flex;align-items:center;gap:12px;cursor:pointer}
+  .phase-head .pname{font-weight:700;font-size:14px;flex:1}
+  .phase-head .pwhen{font-size:11px;color:var(--ink-faint);letter-spacing:.04em}
+  .mini{width:60px;height:5px;border-radius:99px;background:#ece6d7;overflow:hidden}
+  .mini > span{display:block;height:100%;background:var(--coral);transition:width .4s}
+  .mini.full > span{background:var(--green)}
+  .chev{transition:transform .2s;color:var(--ink-faint);font-size:13px}
+  .phase-block.open .chev{transform:rotate(90deg)}
+  .items{margin-top:10px;display:none;flex-direction:column;gap:2px}
+  .phase-block.open .items{display:flex}
+  .item{display:flex;align-items:center;gap:11px;padding:8px 10px;border-radius:9px;cursor:pointer}
+  .item:hover{background:#faf6ec}
+  .check{width:19px;height:19px;flex:0 0 auto;border:1.8px solid #cdc6b6;border-radius:6px;display:grid;place-items:center;transition:all .15s}
+  .check svg{opacity:0;transform:scale(.6);transition:all .15s}
+  .item.done .check{background:var(--green);border-color:var(--green)}
+  .item.done .check svg{opacity:1;transform:scale(1)}
+  .item .txt{font-size:13.5px}
+  .item.done .txt{color:var(--ink-faint);text-decoration:line-through}
+  .additem{font-size:12px;color:var(--ink-soft);font-weight:600;margin-top:8px;padding:8px 10px;border-radius:9px;border:1px dashed var(--line);text-align:left}
+  .additem:hover{color:var(--coral-deep);border-color:var(--coral)}
+
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  thead th{text-align:left;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:700;padding:0 8px 10px}
+  tbody td{padding:11px 8px;border-top:1px solid var(--line);vertical-align:middle}
+  tbody tr:hover{background:#faf6ec}
+  .sp-name{font-weight:600}
+  .sp-type{font-size:11px;color:var(--ink-faint)}
+  .sstat{font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:5px 10px;border-radius:99px;cursor:pointer;white-space:nowrap}
+  .s-prospect{background:#eee9dc;color:var(--ink-soft)}
+  .s-pitched{background:#fbf0d6;color:var(--gold)}
+  .s-confirmed{background:var(--coral-tint);color:var(--coral-deep)}
+  .s-delivered{background:var(--green-tint);color:var(--green)}
+  .sp-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:13px}
+  .sp-foot b{font-family:'Playfair Display',serif;font-size:18px;font-weight:600}
+
+  .twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+  .notes textarea{width:100%;min-height:90px;border:1px solid var(--line);border-radius:10px;padding:11px;font-family:inherit;font-size:13px;resize:vertical;background:#fff;color:var(--ink)}
+  .vend{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+  .vend .v{display:flex;justify-content:space-between;font-size:13px;padding:9px 11px;background:#faf6ec;border-radius:9px}
+  .vend .v .who{font-weight:600}
+  .vend .v .role{font-size:11px;color:var(--ink-faint)}
+  .budget{font-size:13px}
+  .budget .row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .budget .row.net{border-bottom:none;font-weight:700;padding-top:11px}
+  .budget .row.net b{font-family:'Playfair Display',serif;font-size:18px;color:var(--green)}
+
+  .panel h3.ph{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;margin:0 0 14px}
+  .footnote{text-align:center;font-size:11px;color:var(--ink-faint);margin-top:30px;line-height:1.6}
+  .footnote a{color:var(--coral-deep)}
+  .resetbtn{font-size:11px;color:var(--ink-faint);text-decoration:underline;background:none}
+  @media(max-width:720px){
+    .stats{grid-template-columns:repeat(2,1fr)} .grid{grid-template-columns:1fr}
+    .factgrid{grid-template-columns:repeat(2,1fr)} .tiers{grid-template-columns:1fr}
+    .twocol{grid-template-columns:1fr} .wrap{padding:18px 14px 70px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== LOCK SCREEN ===== -->
+<div id="lock">
+  <div class="lockcard">
+    <div class="kicker">Haps Club</div>
+    <h1 class="serif">Command Center</h1>
+    <p>Enter the passphrase to continue.</p>
+    <input id="pw" type="password" autocomplete="off" placeholder="Passphrase" autofocus>
+    <button id="enter">Enter</button>
+    <div class="lockerr" id="lockerr"></div>
+    <div class="lockfoot">Private · Haps Club Events</div>
+  </div>
+</div>
+
+<!-- ===== APP ===== -->
+<div id="app">
+<div class="wrap">
+  <div id="overview">
+    <div class="mast">
+      <div class="brand">
+        <span class="kicker">Haps Club</span>
+        <h1 class="serif">Events Command Center</h1>
+      </div>
+      <div class="mast-r">
+        <span class="concept-tag">v1</span>
+        <button class="lockout" data-lock>lock</button>
+      </div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="section-h">
+      <h2>The Calendar</h2>
+      <button class="addbtn" data-add-event>+ New Event</button>
+    </div>
+    <div class="grid" id="eventGrid"></div>
+
+    <p class="footnote">
+      One dashboard, two layers — <b>public</b> mirrors your live haps.club event page; <b>private</b> holds the checklist, sponsor pipeline &amp; budget.<br>
+      Progress saves on this device. <button class="resetbtn" data-reset>reset data</button>
+    </p>
+  </div>
+
+  <div id="detail" class="hidden"></div>
+</div>
+</div>
+
+<script>
+/* ---------------- auth gate (client-side obfuscation) ---------------- */
+var PW='haps#2026';
+function showApp(){
+  document.getElementById('lock').style.display='none';
+  document.getElementById('app').style.display='block';
+  boot();
+}
+function tryUnlock(){
+  var v=document.getElementById('pw').value;
+  if(v===PW){ try{sessionStorage.setItem('haps_dash_ok','1');}catch(e){} showApp(); }
+  else{
+    var i=document.getElementById('pw'); i.classList.add('err');
+    document.getElementById('lockerr').textContent='Incorrect passphrase';
+    setTimeout(function(){i.classList.remove('err');},400); i.select();
+  }
+}
+document.getElementById('enter').addEventListener('click',tryUnlock);
+document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')tryUnlock();});
+try{ if(sessionStorage.getItem('haps_dash_ok')==='1') showApp(); }catch(e){}
+
+/* ---------------- persistence (browser localStorage) ---------------- */
+var KEY='haps:dashboard:v1';
+var store={
+  load:function(seed){ try{var r=localStorage.getItem(KEY); if(r) return JSON.parse(r);}catch(e){} return seed; },
+  save:function(d){ try{localStorage.setItem(KEY, JSON.stringify(d));}catch(e){} },
+  clear:function(){ try{localStorage.removeItem(KEY);}catch(e){} }
+};
+
+/* ---------------- seed data ---------------- */
+function seedData(){return {events:[
+  {
+    id:'garden', name:'Summer Garden Party', status:'live',
+    date:'2026-06-20', dateLabel:'Sat · June 20', time:'5:00 – 9:00 PM',
+    venue:'Twentieth Street Garden', neighborhood:'West Adams', capacity:60,
+    cohost:'Twentieth Street Garden', ticketUrl:'https://luma.com/TheHapsClub',
+    pageUrl:'https://haps.club/events/summer-garden-party/',
+    blurb:'One dish from Tacos Como En El D.F. + a seasonal garden cocktail. Live music, open-air backyard.',
+    tiers:[
+      {name:'Early Bird',price:25,when:'Launch → ~June 10'},
+      {name:'Standard',price:35,when:'June 10 → June 19'},
+      {name:'Day-of / Door',price:45,when:'June 20'}
+    ],
+    costPerGuest:18,
+    phases:[
+      {name:'Foundation',when:'done',items:[
+        ['f1','Lock venue + date',1],['f2','Confirm co-host (Twentieth Street Garden)',1],
+        ['f3','Set capacity (60)',1],['f4','Set 3 pricing tiers',1],['f5','Open Luma',1]]},
+      {name:'Supply & Sponsors',when:'now',items:[
+        ['s1','Outreach: garden-cocktail / beverage partner',1],['s2','Outreach: 2 gift-bag brands',0],
+        ['s3','Book photographer',0],['s4','Confirm live music 5–9',1],['s5','Order gift-bag items',0]]},
+      {name:'Launch',when:'now',items:[
+        ['l1','Event page live',1],['l2','First newsletter feature',1],
+        ['l3','IG launch reel',0],['l4','Open Early Bird pricing',1]]},
+      {name:'Sell',when:'now → June 19',items:[
+        ['se1','IG 2× / week',0],['se2','Weekly newsletter mention',0],
+        ['se3','Personal VIP + Haps network invites',0],['se4','Flip to Standard (~June 10)',0]]},
+      {name:'Confirm (week of)',when:'June 15–19',items:[
+        ['c1','Lock headcount with venue',0],['c2','Confirm Tacos Como En El D.F.',0],
+        ['c3','Confirm cocktail menu',0],['c4','Finalize run-of-show',0],
+        ['c5','Assemble gift bags',0],['c6','Print next-event QR signage',0]]},
+      {name:'Day-of',when:'June 20',items:[
+        ['d1','Test Luma check-in',0],['d2','Set playlist / cue musician',0],
+        ['d3','Stage gift bags + raffle',0],['d4','Flip to Day-of pricing',0],['d5','Welcome (30 sec) + program',0]]},
+      {name:'Wrap & Recycle',when:'June 21–23',items:[
+        ['w1','Thank-you to guests',0],['w2','Recap reel + photos',0],
+        ['w3','Send sponsors 1-page recap',0],['w4','Tease next event',0],['w5','Seed next event Luma',0]]}
+    ],
+    sponsors:[
+      {id:'sp1',name:'Offshoot / The Bruery',type:'Beverage partner',fee:0,units:'Product',status:'pitched'},
+      {id:'sp2',name:'Rosenthal Wine',type:'Beverage partner',fee:0,units:'Product',status:'prospect'},
+      {id:'sp3',name:'ZBiotics',type:'Gift bag',fee:1000,units:60,status:'prospect'}
+    ],
+    vendors:[
+      {who:'Tacos Como En El D.F.',role:'Food'},
+      {who:'Twentieth Street Garden',role:'Venue + cocktails'},
+      {who:'Yuriy',role:'Photo (hold)'}
+    ],
+    notes:'Garden-cocktail partner is the natural sponsor fit. Decide: run lean vs. full sponsor push? Doors open at 5 — string lights + warm-evening dress code.'
+  },
+  {
+    id:'next', name:'Late Summer Supper', status:'planning',
+    date:'2026-08-15', dateLabel:'TBD · Mid-August', time:'TBD',
+    venue:'TBD — shortlist: Hermanito · Maydan Market', neighborhood:'TBD', capacity:45,
+    cohost:'', ticketUrl:'', pageUrl:'',
+    blurb:'Next dinner in the rotation. Concept + venue still being locked.',
+    tiers:[{name:'Early Bird',price:0,when:'TBD'},{name:'Standard',price:0,when:'TBD'},{name:'Day-of',price:0,when:'TBD'}],
+    costPerGuest:65,
+    phases:[
+      {name:'Foundation',when:'now',items:[
+        ['nf1','Pick venue from shortlist',0],['nf2','Lock date',0],['nf3','Set concept in one line',0],
+        ['nf4','Set capacity + pricing',0],['nf5','Open Luma',0]]},
+      {name:'Supply & Sponsors',when:'next',items:[
+        ['ns1','Sponsor outreach from rolodex',0],['ns2','Book DJ + photographer',0]]}
+    ],
+    sponsors:[],
+    vendors:[],
+    notes:'Carry over confirmed sponsors from the garden party. Re-skin the event page, don\u2019t rebuild.'
+  },
+  {
+    id:'hermanito', name:'Hermanito Sunday Social', status:'done',
+    date:'2026-03-08', dateLabel:'Sun · March 8', time:'6:45 – 9:30 PM',
+    venue:'Hermanito', neighborhood:'Santa Monica', capacity:40,
+    cohost:'', ticketUrl:'https://luma.com/TheHapsClub', pageUrl:'',
+    blurb:'Family-style Sunday dinner. Trivia, gift bags, hot-sauce favors.',
+    tiers:[{name:'Early Bird',price:120,when:'closed'},{name:'Standard',price:130,when:'closed'},{name:'Day-of',price:140,when:'closed'}],
+    costPerGuest:65,
+    phases:[
+      {name:'Wrap & Recycle',when:'complete',items:[
+        ['hw1','Recap posted',1],['hw2','Sponsor recaps sent',1],['hw3','Next event teased',1]]}
+    ],
+    sponsors:[{id:'hsp1',name:'Local hot-sauce maker',type:'Gift / favor',fee:0,units:40,status:'delivered'}],
+    vendors:[{who:'Gilberto',role:'Menu'}],
+    notes:'Reference build for the standardized run-of-show.'
+  }
+]};}
+
+/* ---------------- state + helpers ---------------- */
+var DATA;
+function $(s){return document.querySelector(s);}
+function fmtMoney(n){return '$'+n.toLocaleString();}
+function eventProgress(ev){var t=0,d=0;ev.phases.forEach(function(p){p.items.forEach(function(it){t++;if(it[2])d++;});});return t?Math.round(d/t*100):0;}
+function daysUntil(dateStr){var ev=new Date(dateStr+'T00:00:00');var now=new Date();now.setHours(0,0,0,0);return Math.round((ev-now)/86400000);}
+function phaseLabel(ev){
+  var d=daysUntil(ev.date);
+  if(ev.status==='done') return {phase:'Complete',sub:'In the archive',tminus:'Wrapped'};
+  if(ev.status==='planning') return {phase:'Foundation',sub:'Locking venue + concept',tminus:'Early planning'};
+  if(d<0) return {phase:'Wrap & Recycle',sub:'Recap + seed the next one',tminus:'Just happened'};
+  if(d===0) return {phase:'Day-of',sub:'Run the show',tminus:'Today'};
+  if(d<=5) return {phase:'Confirm',sub:'Lock headcount + vendors',tminus:'T-'+d+' days'};
+  if(d<=14) return {phase:'Sell',sub:'Promo cadence + flip tiers',tminus:'T-'+d+' days'};
+  if(d<=24) return {phase:'Launch + Sell',sub:'Page live · push tickets',tminus:'T-'+Math.round(d/7)+' weeks'};
+  return {phase:'Supply & Sponsors',sub:'Line up partners + vendors',tminus:'T-'+Math.round(d/7)+' weeks'};
+}
+function activeTierIndex(ev){var d=daysUntil(ev.date);if(ev.status!=='live')return -1;if(d<=0)return 2;if(d<=10)return 1;return 0;}
+var badgeClass={live:'b-live',planning:'b-plan',done:'b-done',soon:'b-soon'};
+var badgeText={live:'Live · Selling',planning:'Planning',done:'Wrapped'};
+
+function renderOverview(){
+  var live=DATA.events.filter(function(e){return e.status==='live';}).length;
+  var sponsorsConfirmed=DATA.events.reduce(function(a,e){return a+e.sponsors.filter(function(s){return s.status==='confirmed'||s.status==='delivered';}).length;},0);
+  var upcoming=DATA.events.filter(function(e){return e.status!=='done';}).sort(function(a,b){return new Date(a.date)-new Date(b.date);})[0];
+  var nextDays=upcoming?daysUntil(upcoming.date):'—';
+  $('#stats').innerHTML=
+    '<div class="stat live"><div class="n">'+live+'</div><div class="l">Events Live</div></div>'+
+    '<div class="stat"><div class="n">'+DATA.events.length+'</div><div class="l">In Pipeline</div></div>'+
+    '<div class="stat"><div class="n">'+sponsorsConfirmed+'<small> conf.</small></div><div class="l">Sponsors Locked</div></div>'+
+    '<div class="stat"><div class="n">'+(typeof nextDays==='number'?nextDays:'—')+'<small> days</small></div><div class="l">To Next Event</div></div>';
+
+  $('#eventGrid').innerHTML=DATA.events.map(function(ev){
+    var pct=eventProgress(ev); var pl=phaseLabel(ev);
+    return '<div class="ev" data-open="'+ev.id+'">'+
+      (ev.status==='live'?'<div class="corner">Selling</div>':'')+
+      '<div class="top"><div>'+
+        '<div class="when">'+ev.dateLabel+' · '+ev.neighborhood+'</div>'+
+        '<h3 class="serif">'+ev.name+'</h3></div>'+
+        '<span class="badge '+badgeClass[ev.status]+'">'+badgeText[ev.status]+'</span></div>'+
+      '<div class="meta"><span><b>'+ev.venue.split('—')[0].trim()+'</b></span><span>'+pl.tminus+'</span></div>'+
+      '<div class="pbar '+(ev.status==='done'?'done':'')+'"><span style="width:'+pct+'%"></span></div>'+
+      '<div class="pmeta"><span>'+pl.phase+'</span><span>'+pct+'% prepped</span></div>'+
+    '</div>';
+  }).join('');
+}
+
+var openEventId=null;
+function renderDetail(id){
+  openEventId=id;
+  var ev=DATA.events.find(function(e){return e.id===id;});
+  var pct=eventProgress(ev); var pl=phaseLabel(ev); var ati=activeTierIndex(ev);
+  var C=2*Math.PI*42, off=C*(1-pct/100);
+  var spRev=ev.sponsors.filter(function(s){return s.status==='confirmed'||s.status==='delivered';}).reduce(function(a,s){return a+(s.fee||0);},0);
+  var tixRev=ev.capacity*(ev.tiers[1].price||0);
+  var cost=ev.capacity*ev.costPerGuest+750;
+  var net=tixRev+spRev-cost;
+
+  var tiersHTML=ev.tiers.map(function(t,i){
+    return '<div class="tier '+(i===ati?'active':'')+'">'+
+      (i===ati?'<span class="nowtag">Active now</span>':'')+
+      '<div class="tn">'+t.name+'</div><div class="tp">'+(t.price?('$'+t.price):'—')+'</div><div class="tw">'+t.when+'</div></div>';
+  }).join('');
+
+  var phasesHTML=ev.phases.map(function(p,pi){
+    var pt=p.items.length, pd=p.items.filter(function(it){return it[2];}).length;
+    var ppct=pt?Math.round(pd/pt*100):0;
+    var itemsHTML=p.items.map(function(it){
+      return '<div class="item '+(it[2]?'done':'')+'" data-toggle="'+pi+':'+it[0]+'">'+
+        '<span class="check"><svg width="12" height="12" viewBox="0 0 12 12"><path d="M2 6.2l2.6 2.6L10 3.2" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
+        '<span class="txt">'+it[1]+'</span></div>';
+    }).join('');
+    var openCls=(pi===1||(ppct<100&&pi<3))?'open':'';
+    return '<div class="phase-block '+openCls+'">'+
+      '<div class="phase-head" data-phase="'+pi+'"><span class="chev">▸</span>'+
+        '<span class="pname">'+p.name+'</span><span class="pwhen">'+p.when+'</span>'+
+        '<span class="mini '+(ppct===100?'full':'')+'"><span style="width:'+ppct+'%"></span></span></div>'+
+      '<div class="items">'+itemsHTML+'<button class="additem" data-additem="'+pi+'">+ add task</button></div></div>';
+  }).join('');
+
+  var sponsorsHTML=ev.sponsors.length? ev.sponsors.map(function(s){
+    return '<tr><td><div class="sp-name">'+s.name+'</div><div class="sp-type">'+s.type+'</div></td>'+
+      '<td>'+(s.fee?fmtMoney(s.fee):'<span class="muted">in-kind</span>')+'</td>'+
+      '<td>'+(s.units||'—')+'</td>'+
+      '<td><span class="sstat s-'+s.status+'" data-sponsor="'+s.id+'">'+s.status+'</span></td></tr>';
+  }).join('') : '<tr><td colspan="4" class="muted" style="padding:18px 8px">No sponsors yet — pull from the rolodex and start outreach.</td></tr>';
+
+  var vendorsHTML=ev.vendors.length? ev.vendors.map(function(v){
+    return '<div class="v"><span class="who">'+v.who+'</span><span class="role">'+v.role+'</span></div>';
+  }).join('') : '<div class="muted" style="font-size:13px">No vendors logged.</div>';
+
+  $('#detail').innerHTML=
+    '<button class="back" data-back>← All events</button>'+
+    '<div class="layerlabel pub"><span class="dot"></span>Public · mirrors haps.club event page</div>'+
+    '<div class="panel public"><div class="head"><div>'+
+        '<h2 class="title serif">'+ev.name+'</h2>'+
+        '<div class="muted" style="font-size:13.5px;max-width:560px">'+ev.blurb+'</div></div>'+
+        '<div style="display:flex;gap:8px;flex-wrap:wrap">'+
+        (ev.ticketUrl?'<a class="ext" href="'+ev.ticketUrl+'" target="_blank" rel="noopener">🎟 Tickets · Luma</a>':'')+
+        (ev.pageUrl?'<a class="ext" href="'+ev.pageUrl+'" target="_blank" rel="noopener">↗ Live page</a>':'')+
+        '</div></div>'+
+      '<div class="factgrid">'+
+        '<div class="fact"><div class="k">Date</div><div class="v">'+ev.dateLabel+'</div></div>'+
+        '<div class="fact"><div class="k">Time</div><div class="v">'+ev.time+'</div></div>'+
+        '<div class="fact"><div class="k">Venue</div><div class="v">'+ev.venue+'</div></div>'+
+        '<div class="fact"><div class="k">Capacity</div><div class="v">'+ev.capacity+' guests</div></div></div>'+
+      '<div class="tiers">'+tiersHTML+'</div></div>'+
+    '<div class="layerlabel priv"><span class="dot"></span>Private · internal only</div>'+
+    '<div class="panel"><div class="cdrow">'+
+        '<svg class="ring" viewBox="0 0 100 100">'+
+          '<circle cx="50" cy="50" r="42" fill="none" stroke="#ece6d7" stroke-width="9"/>'+
+          '<circle cx="50" cy="50" r="42" fill="none" stroke="'+(ev.status==='done'?'#6f8b62':'#df5d44')+'" stroke-width="9" stroke-linecap="round" stroke-dasharray="'+C+'" stroke-dashoffset="'+off+'" transform="rotate(-90 50 50)"/>'+
+          '<text class="pct" x="50" y="57" text-anchor="middle">'+pct+'%</text></svg>'+
+        '<div class="cdtext"><div class="phase serif">'+pl.phase+'</div><div class="sub">'+pl.sub+'</div><span class="tminus">'+pl.tminus+'</span></div>'+
+      '</div></div>'+
+    '<div class="panel"><h3 class="ph">Prep Checklist</h3>'+phasesHTML+'</div>'+
+    '<div class="panel"><h3 class="ph">Sponsor Pipeline</h3>'+
+      '<table><thead><tr><th>Partner</th><th>Fee</th><th>Units</th><th>Status · tap to advance</th></tr></thead>'+
+      '<tbody>'+sponsorsHTML+'</tbody></table>'+
+      '<div class="sp-foot"><button class="addbtn" data-addsponsor>+ Add sponsor</button>'+
+      '<span>Confirmed sponsor revenue · <b>'+fmtMoney(spRev)+'</b></span></div></div>'+
+    '<div class="twocol">'+
+      '<div class="panel notes"><h3 class="ph">Notes</h3><textarea data-notes>'+(ev.notes||'')+'</textarea>'+
+        '<h3 class="ph" style="margin-top:18px">Vendors &amp; Contacts</h3><div class="vend">'+vendorsHTML+'</div></div>'+
+      '<div class="panel budget"><h3 class="ph">Quick Budget</h3>'+
+        '<div class="row"><span>Ticket revenue <span class="muted">('+ev.capacity+' × $'+(ev.tiers[1].price||0)+')</span></span><span>'+fmtMoney(tixRev)+'</span></div>'+
+        '<div class="row"><span>Sponsor revenue</span><span>'+fmtMoney(spRev)+'</span></div>'+
+        '<div class="row"><span>Guest cost <span class="muted">('+ev.capacity+' × $'+ev.costPerGuest+')</span></span><span>('+fmtMoney(ev.capacity*ev.costPerGuest)+')</span></div>'+
+        '<div class="row"><span>Production <span class="muted">(photo + music)</span></span><span>($750)</span></div>'+
+        '<div class="row net"><span>Projected net</span><b>'+fmtMoney(net)+'</b></div></div>'+
+    '</div>'+
+    '<p class="footnote">Figures illustrative until you enter real numbers. Sponsor revenue counts only Confirmed/Delivered partners.</p>';
+
+  $('#overview').classList.add('hidden');
+  $('#detail').classList.remove('hidden');
+  window.scrollTo(0,0);
+}
+
+function persist(){store.save(DATA);}
+
+document.addEventListener('click',function(e){
+  if(e.target.closest('[data-lock]')){ try{sessionStorage.removeItem('haps_dash_ok');}catch(err){} location.reload(); return; }
+  var open=e.target.closest('[data-open]'); if(open){renderDetail(open.getAttribute('data-open'));return;}
+  if(e.target.closest('[data-back]')){$('#detail').classList.add('hidden');$('#overview').classList.remove('hidden');renderOverview();return;}
+  var ph=e.target.closest('[data-phase]'); if(ph){ph.closest('.phase-block').classList.toggle('open');return;}
+  var tog=e.target.closest('[data-toggle]');
+  if(tog){var parts=tog.getAttribute('data-toggle').split(':');var ev=DATA.events.find(function(x){return x.id===openEventId;});
+    var it=ev.phases[parts[0]].items.find(function(i){return i[0]===parts[1];});it[2]=it[2]?0:1;persist();renderDetail(openEventId);return;}
+  var ai=e.target.closest('[data-additem]');
+  if(ai){var txt=prompt('New task:');if(!txt)return;var ev=DATA.events.find(function(x){return x.id===openEventId;});
+    ev.phases[ai.getAttribute('data-additem')].items.push(['x'+Date.now(),txt,0]);persist();renderDetail(openEventId);return;}
+  var sp=e.target.closest('[data-sponsor]');
+  if(sp){var order=['prospect','pitched','confirmed','delivered'];var ev=DATA.events.find(function(x){return x.id===openEventId;});
+    var s=ev.sponsors.find(function(z){return z.id===sp.getAttribute('data-sponsor');});
+    s.status=order[(order.indexOf(s.status)+1)%order.length];persist();renderDetail(openEventId);return;}
+  if(e.target.closest('[data-addsponsor]')){var name=prompt('Sponsor / brand name:');if(!name)return;
+    var type=prompt('Type (e.g. Beverage partner, Gift bag):')||'Partner';var ev=DATA.events.find(function(x){return x.id===openEventId;});
+    ev.sponsors.push({id:'sp'+Date.now(),name:name,type:type,fee:0,units:'—',status:'prospect'});persist();renderDetail(openEventId);return;}
+  if(e.target.closest('[data-add-event]')){alert('This would open a "New Event" form — name, date, venue, capacity, pricing — then auto-generate the standardized checklist.');return;}
+  if(e.target.closest('[data-reset]')){if(confirm('Reset all saved progress on this device?')){store.clear();DATA=seedData();persist();renderOverview();}}
+});
+document.addEventListener('input',function(e){
+  if(e.target.matches('[data-notes]')){DATA.events.find(function(x){return x.id===openEventId;}).notes=e.target.value;persist();}
+});
+
+/* ---------------- boot ---------------- */
+function boot(){ DATA=store.load(seedData()); renderOverview(); }
+</script>
+</body>
+</html>
