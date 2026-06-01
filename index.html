@@ -75,10 +75,6 @@ body.night .rail-area .rail-label{color:rgba(255,255,255,.55)}
 body.night .tag.area-tag:hover{background:color-mix(in srgb,var(--coral) 28%,transparent);color:#fff}
 .f.on[data-f]:not([data-f="all"]){background:var(--c);border-color:var(--c)}
 
-
-
-
-
 .shuffle{margin-left:auto;display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--coral);background:rgba(255,255,255,.7);border:1.5px solid var(--coral);padding:9px 14px;border-radius:999px;cursor:pointer;transition:.2s;min-height:40px;backdrop-filter:blur(8px);white-space:nowrap}
 .shuffle:hover{background:var(--coral);color:#fff}.shuffle:active svg{transform:rotate(180deg)}.shuffle svg{transition:.4s}
 
@@ -225,7 +221,6 @@ body.night .sponsor-strip p{color:rgba(255,255,255,.72)}
 body.night footer{border-top-color:rgba(255,255,255,.1);color:rgba(255,255,255,.6)}body.night footer a,body.night footer .made{color:#fff}
 body.night .empty .big{color:#fff}
 
-
 </style>
 </head>
 <body>
@@ -291,29 +286,6 @@ body.night .empty .big{color:#fff}
 
 <main class="grid" id="grid">
 
-  <!-- LARGE / FEATURED: imminent (this Fri) -->
-  <article class="tile feat t-culture" data-cat="culture music free date" data-when="weekend"
-    data-title="Violinist Amelia Sze on 'Zhang Enli'" data-start="20260529T183000" data-end="20260529T200000"
-    data-loc="Hauser &amp; Wirth West Hollywood, 8980 Santa Monica Blvd, West Hollywood, CA"
-    data-details="Free standing-only violin performance inside the Zhang Enli exhibition. Performance 6:30-7pm; gallery reception til 8. RSVP via Eventbrite. via Haps Club"
-    data-link="https://www.hauserwirth.com/locations/los-angeles/" data-area="weho">
-    <div class="mesh"></div>
-    <svg class="illo" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-linecap="round">
-      <circle cx="140" cy="60" r="30" opacity=".5" stroke-width="2.5"/>
-      <circle cx="140" cy="60" r="48" opacity=".28" stroke-width="2"/>
-      <circle cx="140" cy="60" r="66" opacity=".14" stroke-width="2"/>
-      <g opacity=".5" stroke-width="5">
-        <line x1="120" y1="96" x2="120" y2="80"/><line x1="134" y1="96" x2="134" y2="66"/>
-        <line x1="148" y1="96" x2="148" y2="86"/><line x1="162" y1="96" x2="162" y2="74"/>
-      </g>
-    </svg>
-    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Pick of the week</span><span class="badge">FRI</span></div>
-    <h3>Violinist Amelia Sze on &lsquo;Zhang Enli&rsquo;</h3>
-    <p>The free Friday violin show. Amelia Sze performs inside Hauser &amp; Wirth's Zhang Enli exhibition &mdash; standing-only, 6:30 to 7pm, gallery reception til 8. Rideshare in; parking is brutal.</p>
-    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>West Hollywood</span><span class="tag free">Free</span><span class="tag date">Date</span></div>
-    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-  </article>
-
   <article class="tile feat rec t-culture" data-cat="culture date" data-when="upcoming"
     data-title="Crimes, Conversation &amp; Cocktails with Rob Rosen"
     data-start="20260611T170000" data-end="20260611T190000"
@@ -361,31 +333,6 @@ body.night .empty .big{color:#fff}
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <!-- MEDIUM: this weekend (recurring) -->
-  <article class="tile wide t-music" data-cat="music date" data-when="weekend"
-    data-title="Azar Lawrence at The World Stage" data-start="20260529T200000" data-end="20260529T230000"
-    data-loc="The World Stage, 4321 Degnan Blvd, Los Angeles, CA 90008"
-    data-details="Coltrane-lineage saxophonist Azar Lawrence and his band TALE. Doors 8pm, show 8:30pm. $20 cash at the door. via Haps Club"
-    data-link="https://www.theworldstage.org" style="animation-delay:.07s" data-area="midcity">
-    <div class="head"><span class="cat"><svg class="ic"><use href="#i-music"/></svg>Music</span><span class="badge">FRI</span></div>
-    <h3>Azar Lawrence at The World Stage</h3>
-    <p>Coltrane-lineage saxophonist Azar Lawrence with The Azar Lawrence Experience at the Leimert Park jazz institution. Doors 8, show 8:30, cash only at the door.</p>
-    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Leimert Park</span><span class="tag paid">$20</span><span class="tag date">Date</span></div>
-    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-  </article>
-
-  <article class="tile wide t-culture" data-cat="culture outdoors date" data-when="weekend"
-    data-title="DTLA Movie Night: Mamma Mia" data-start="20260530T173000" data-end="20260530T220000"
-    data-loc="Grand Hope Park, Los Angeles, CA"
-    data-details="Outdoor screening of Mamma Mia in DTLA. Picnic blankets, singalong moments, ABBA-fueled nostalgia. Ticketed. via Haps Club"
-    data-link="https://downtownla.com" style="animation-delay:.12s" data-area="dtla">
-    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">SAT</span></div>
-    <h3>DTLA Movie Night: Mamma Mia</h3>
-    <p>Outdoor screening of Mamma Mia at Grand Hope Park &mdash; picnic blankets, singalong moments, ABBA-fueled nostalgia. Grab Greek beforehand from George's or Arda's.</p>
-    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>DTLA</span><span class="tag paid">Ticketed</span><span class="tag date">Date</span></div>
-    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-  </article>
-
   <article class="tile feat t-food" data-cat="food free" data-when="weekend"
     data-title="Smorgasburg LA — Sundays" data-loc="ROW DTLA, 777 S Alameda St, Los Angeles, CA"
     data-details="Open-air food market every Sunday, 10am-4pm. Free entry. via Haps Club" data-link="https://la.smorgasburg.com/" style="animation-delay:.1s" data-area="dtla">
@@ -412,6 +359,26 @@ body.night .empty .big{color:#fff}
     <h3>Penmar Wine Mixer</h3>
     <p>Natural pours and a soft-launch crowd in Venice. For the subscribers who simply do not cross the 405, this one comes to you.</p>
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span><span class="tag date">Date</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile wide awol t-music" data-cat="music date" data-when="upcoming"
+    data-title="Perry's Beach Club" data-start="20260606" data-loc="930 Pacific Coast Hwy, Santa Monica, CA 90401"
+    data-details="AWOL pick - open-air beach club with guest DJs on PCH. Santa Monica, Saturday June 6, 3-8pm, 21+. Tickets from ~$23 via Eventbrite. via Haps Club" data-link="https://www.eventbrite.com/e/perrys-beach-club-saturday-66-tickets-1989405174430" style="animation-delay:.16s" data-area="westside">
+    <div class="head"><span class="flag"><svg class="ic"><use href="#i-comp"/></svg>AWOL · West of Lincoln</span><span class="badge">JUN 6</span></div>
+    <h3>Perry's Beach Club</h3>
+    <p>Sand, firepits and a guest DJ booth that has lately run to the likes of Kaskade and Diplo — Santa Monica’s open-air day club, right on PCH. Doors at 3, 21-and-up, tickets from around twenty bucks.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Santa Monica</span><span class="tag paid">Ticketed</span><span class="tag date">Sat 6/6</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile t-food" data-cat="food" data-when="upcoming"
+    data-title="Garibaldina Pasta Platter" data-start="20260625" data-loc="4533 N Figueroa St, Los Angeles, CA 90065"
+    data-details="Family-style pasta night at the Garibaldina MB Society, the oldest Italian-American society in America. Highland Park, last Thursday of every month, 6-9pm. Tickets via Eventbrite. via Haps Club" data-link="https://www.eventbrite.com/e/june-2026-pasta-platter-tickets-1979936769175" style="animation-delay:.18s" data-area="nela">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">JUN 25</span></div>
+    <h3>Garibaldina Pasta Platter</h3>
+    <p>Family-style red-sauce night inside the oldest Italian-American society in America. Long tables in the Highland Park hall, last Thursday of every month — strangers who won’t be strangers by dessert.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Highland Park</span><span class="tag paid">Ticketed</span><span class="tag date">Thu 6/25</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
@@ -582,44 +549,6 @@ body.night .empty .big{color:#fff}
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Malibu</span><span class="tag free">Free</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
-
-  
-
-  <article class="tile wide t-culture rec" data-cat="culture date" data-when="weekend"
-  data-title="Wild Embodiment" data-start="20260529T180000" data-end="20260529T210000"
-  data-loc="The KINN, Venice, CA"
-  data-details="A friend hosting: an evening of art, movement and intuition. Light snacks and drinks. Code chaosmos13 for $35. via Haps Club"
-  data-link="https://luma.com/WildEmbodiment" style="animation-delay:.18s" data-area="westside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps</span><span class="badge">FRI · MAY 29</span></div>
-  <h3>Wild Embodiment</h3>
-  <p>Chao's hosting an evening of art, movement and intuition at The KINN. Light snacks and drinks; code <code style="background:color-mix(in srgb,var(--coral) 13%,#fff);color:#c64a2a;padding:1px 6px;border-radius:5px;font-family:ui-monospace,Menlo,monospace;font-size:12px">chaosmos13</code> drops it to $35.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span><span class="tag paid">Ticketed</span></div>
-  <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</article>
-
-  <article class="tile t-music rec" data-cat="music date" data-when="weekend"
-  data-title="Mendelssohn &amp; Saint-Saëns Piano Trios" data-start="20260529T190000" data-end="20260529T210000"
-  data-loc="Steinway Showroom, Beverly Hills, CA"
-  data-details="Intimate Groupmuse chamber concert in the Steinway showroom. Friend recommendation. via Haps Club"
-  data-link="https://www.groupmuse.com/events/16361-mendelssohn-saint-saens-piano-trios-with-ensemble132" style="animation-delay:.2s" data-area="bh">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps</span><span class="badge">FRI · MAY 29</span></div>
-  <h3>Mendelssohn &amp; Saint-Saëns Piano Trios</h3>
-  <p>Geoff's pick: an intimate Groupmuse chamber concert in the Steinway showroom, with a handful of Haps members already locked in.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Beverly Hills</span><span class="tag paid">Ticketed</span></div>
-  <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</article>
-
-  <article class="tile t-outdoors rec" data-cat="outdoors date" data-when="weekend"
-  data-title="Full Blue Moon Rising Hike" data-start="20260531T193000" data-end="20260531T223000"
-  data-loc="Elysian Park, Los Angeles, CA"
-  data-details="Full-moon hike with live music in the Elysian hills. Friend recommendation. via Haps Club"
-  data-link="https://www.eventbrite.com/e/full-blue-moon-rising-experience-may-tickets-1989962888568" style="animation-delay:.22s" data-area="eastside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps</span><span class="badge">SUN · MAY 31</span></div>
-  <h3>Full Blue Moon Rising Hike</h3>
-  <p>Stefanie's going again this Sunday — a full-moon hike with live music up in the Elysian hills. She called it magical the first time around.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Elysian Park</span><span class="tag paid">Ticketed</span></div>
-  <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</article>
 
   <article class="tile t-music rec" data-cat="music date" data-when="upcoming"
   data-title="MindTravel Silent Piano Concert" data-start="20260606T193000" data-end="20260606T220000"
