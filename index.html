@@ -43,6 +43,9 @@ svg.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-
 .theme-btn svg{font-size:17px;color:var(--navy)}
 .sub-btn{background:var(--navy);color:#fff;font-weight:600;font-size:13.5px;padding:11px 18px;border-radius:999px;min-height:42px;display:flex;align-items:center;transition:.22s var(--ease)}
 .sub-btn:hover{background:var(--coral)}
+.cal-btn{display:flex;align-items:center;gap:6px;font-weight:600;font-size:13.5px;padding:11px 16px;border-radius:999px;min-height:42px;background:transparent;color:inherit;border:1px solid currentColor;opacity:.8;transition:.22s var(--ease)}
+.cal-btn:hover{opacity:1}
+.cal-btn .ic{width:15px;height:15px}
 
 .hero{max-width:1080px;margin:0 auto;padding:28px 18px 20px}
 .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--mut)}
@@ -249,6 +252,7 @@ body.night .empty .big{color:#fff}
   <div class="bar-right">
     <button class="pillbtn theme-btn" id="themeBtn" title="Night mode" aria-label="Toggle night mode"><svg class="ic"><use href="#i-moon" id="themeIcon"/></svg></button>
     <button class="pillbtn saved-pill" id="savedPill" title="Show saved"><svg class="ic"><use href="#i-heart"/></svg><span id="savedN">0</span></button>
+    <a class="cal-btn" href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener"><svg class="ic"><use href="#i-cal"/></svg>Calendar</a>
     <a class="sub-btn" href="#join">Subscribe</a>
   </div>
 </div></header>
@@ -672,6 +676,7 @@ body.night .empty .big{color:#fff}
   <a href="mailto:michael@haps.club">Contact</a>
   <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
   <a href="https://chat.whatsapp.com/CrQFCLOZjYm5eBqsU1vcA5?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Calendar</a>
   <span class="made">© 2026 Haps Club · Made by hand in LA</span>
 </footer>
 
