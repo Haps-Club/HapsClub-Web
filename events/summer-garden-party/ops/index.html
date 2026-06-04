@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Summer Garden Party — Ops Dashboard</title>
+<title>Summer Solstice in the Garden — Ops Dashboard</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -349,6 +349,30 @@ section { margin-bottom: 48px; }
 .detail-val a { color: var(--blue); text-decoration: none; }
 .detail-val a:hover { text-decoration: underline; }
 
+/* ── MENU ── */
+.menu-row { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; padding:12px 0; border-bottom:.5px solid var(--bg); }
+.menu-row:last-child { border-bottom:none; }
+.menu-name { font-size:14px; font-weight:600; color:var(--ink); }
+.menu-desc { font-size:12.5px; color:var(--sec); line-height:1.5; margin-top:3px; }
+.menu-price { font-size:14px; font-weight:700; color:#6E9410; font-family:ui-monospace,"SF Mono",Menlo,monospace; white-space:nowrap; }
+.menu-cat { font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--sec); margin-bottom:12px; }
+
+/* ── TICKET TIERS ── */
+.tier { text-align:center; padding:22px 18px; }
+.tier-name { font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sec); margin-bottom:8px; }
+.tier-price { font-size:34px; font-weight:800; letter-spacing:-.03em; color:var(--ink); line-height:1; }
+.tier-price span { color:#6E9410; }
+.tier-win { font-size:12.5px; color:var(--muted); margin-top:8px; line-height:1.4; }
+
+/* ── BUDGET ── */
+.bud-row { display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:.5px solid var(--bg); font-size:14px; }
+.bud-row:last-child { border-bottom:none; }
+.bud-label { color:var(--ink); }
+.bud-note { font-size:12px; color:var(--muted); margin-top:2px; }
+.bud-amt { font-weight:700; font-family:ui-monospace,"SF Mono",Menlo,monospace; white-space:nowrap; }
+.bud-total { display:flex; justify-content:space-between; gap:16px; padding:14px 0 4px; margin-top:6px; border-top:1.5px solid var(--hair); font-size:15px; font-weight:700; }
+.callout { background:rgba(76,175,80,.07); border:.5px solid rgba(76,175,80,.25); border-radius:12px; padding:14px 16px; font-size:13.5px; color:var(--ink); line-height:1.6; }
+
 /* ── HOSTS ── */
 .host-card {
   display: flex; align-items: center; gap: 12px;
@@ -426,7 +450,7 @@ section { margin-bottom: 48px; }
   <div class="gate-card">
     <div class="gate-icon">🌿</div>
     <div class="gate-title">Garden Party Ops</div>
-    <div class="gate-sub">Haps Club · Summer 2025<br>Enter the event access code</div>
+    <div class="gate-sub">Haps Club · Summer 2026<br>Enter the event access code</div>
     <input id="gate-input" type="password" placeholder="Access code" autocomplete="off">
     <button id="gate-btn">Continue →</button>
     <p class="gate-hint">Contact Michael for access</p>
@@ -437,7 +461,7 @@ section { margin-bottom: 48px; }
 <nav>
   <div class="nav-brand">
     <div class="nav-leaf">🌿</div>
-    Summer Garden Party
+    Summer Solstice in the Garden
   </div>
   <div class="nav-right">
     <span class="nav-date" id="nav-date"></span>
@@ -451,8 +475,8 @@ section { margin-bottom: 48px; }
   <!-- HERO -->
   <div class="hero">
     <div class="hero-eyebrow">Haps Club · Event Operations</div>
-    <h1 class="hero-title">Summer<br><span>Garden Party</span></h1>
-    <p class="hero-sub">Twentieth Street Garden · West Adams, LA<br>Saturday, June 20 · 5:00–9:00 PM</p>
+    <h1 class="hero-title">Summer Solstice<br><span>in the Garden</span></h1>
+    <p class="hero-sub">Twentieth Street Garden · West Adams, LA<br>Saturday, June 20, 2026 · 5:00–9:00 PM</p>
     <div class="stat-pills">
       <div class="stat-pill">
         <span>🗓</span>
@@ -480,11 +504,15 @@ section { margin-bottom: 48px; }
   <!-- WAYFINDING -->
   <div class="section-nav">
     <a class="snav-btn" href="#timeline">Timeline</a>
+    <a class="snav-btn" href="#menu">Menu</a>
+    <a class="snav-btn" href="#ticketing">Ticketing</a>
+    <a class="snav-btn" href="#budget">Budget</a>
+    <a class="snav-btn" href="#decisions">Open Decisions</a>
     <a class="snav-btn" href="#copromo">Co-Promotion</a>
     <a class="snav-btn" href="#checklist">Checklist</a>
     <a class="snav-btn" href="#quicklinks">Quick Links</a>
     <a class="snav-btn" href="#details">Event Details</a>
-    <a class="snav-btn" href="#hosts">Hosts</a>
+    <a class="snav-btn" href="#roles">Roles</a>
   </div>
 
   <!-- TIMELINE -->
@@ -526,6 +554,150 @@ section { margin-bottom: 48px; }
         <div class="tl-date">Saturday, June 20</div>
         <div class="tl-count" id="tl-count-event">–</div>
         <div class="tl-count-label" style="color:var(--sec)">days away</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="sec-header">
+      <span class="sec-title">Menu</span>
+      <span class="sec-sub">BBQ smoked + slow-roasted on site · 1 drink included with ticket</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="menu-cat">🍖 Food</div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Pork Plate</div><div class="menu-desc">Slow-roasted pork shoulder over open flame · brioche bun, house-made BBQ sauce, potato salad, coleslaw, pickles, corn on the cob</div></div>
+          <div class="menu-price">$20</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Mushroom Plate <span style="color:var(--sec);font-weight:400;">(Vegetarian)</span></div><div class="menu-desc">Slow-roasted mushrooms over open flame · brioche bun, house-made BBQ sauce, potato salad, coleslaw, pickles, corn on the cob</div></div>
+          <div class="menu-price">$20</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Pork Slider</div></div>
+          <div class="menu-price">$6</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Mushroom Slider</div></div>
+          <div class="menu-price">$6</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Corn on the Cob</div><div class="menu-desc">With compound butter</div></div>
+          <div class="menu-price">$5</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Peach Cobbler Bars</div></div>
+          <div class="menu-price">$7</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="menu-cat">🍹 Drinks</div>
+        <div class="menu-row">
+          <div><div class="menu-name">2 batched cocktails</div><div class="menu-desc">Recipes TBD</div></div>
+          <div class="menu-price">TBD</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Beer &amp; wine</div></div>
+          <div class="menu-price">TBD</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">NA drinks</div></div>
+          <div class="menu-price">TBD</div>
+        </div>
+        <div class="callout" style="margin-top:16px;">Ticket includes 1 beverage at the door. Full drink menu + pricing still being finalized by Jenn &amp; Jimmy.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKETING -->
+  <section id="ticketing">
+    <div class="sec-header">
+      <span class="sec-title">Ticketing</span>
+      <span class="sec-sub">No coupons · Sell on Luma · Push public by EOW</span>
+    </div>
+    <div class="grid-3">
+      <div class="card tier">
+        <div class="tier-name">Early Bird</div>
+        <div class="tier-price"><span>$10</span></div>
+        <div class="tier-win">First 48 hours<br>(drives early signup)</div>
+      </div>
+      <div class="card tier">
+        <div class="tier-name">Standard</div>
+        <div class="tier-price">$15</div>
+        <div class="tier-win">Main window</div>
+      </div>
+      <div class="card tier">
+        <div class="tier-name">Last Minute</div>
+        <div class="tier-price">$20</div>
+        <div class="tier-win">Final 48 hours</div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="callout">Ticket includes a beverage at the door, live entertainment, and access to BBQ. Goal: 100 guests → ~$5K with tickets + food/bev sales. Tiers approved by all hosts.</div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section id="budget">
+    <div class="sec-header">
+      <span class="sec-title">Budget &amp; Economics</span>
+      <span class="sec-sub">Rough estimate · per Jenn</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="menu-cat">Cost Basis</div>
+        <div class="bud-row"><div><div class="bud-label">Food &amp; beverage cost</div></div><div class="bud-amt">$500</div></div>
+        <div class="bud-row"><div><div class="bud-label">Jenn &amp; Jacob — labor</div><div class="bud-note">Prep, drinks, food for 100, logistics, setup</div></div><div class="bud-amt">$1,250</div></div>
+        <div class="bud-row"><div><div class="bud-label">Chairs + delivery</div><div class="bud-note">Tables in driveway for seating/eating</div></div><div class="bud-amt">$75</div></div>
+        <div class="bud-row"><div><div class="bud-label">Disposables</div><div class="bud-note">Plates, cups, etc.</div></div><div class="bud-amt">$100</div></div>
+        <div class="bud-row"><div><div class="bud-label">Twentieth Street Garden cleaning</div><div class="bud-note">Both bathrooms open</div></div><div class="bud-amt">$300</div></div>
+        <div class="bud-total"><div>Breakeven<div class="bud-note" style="font-weight:400;">Excl. photographer, entertainment, assistant</div></div><div class="bud-amt">$2,225</div></div>
+      </div>
+      <div class="card">
+        <div class="menu-cat">Variable / TBD</div>
+        <div class="bud-row"><div><div class="bud-label">Photographer</div><div class="bud-note">Target &lt;$200 · Andy pending · Michael may reach out</div></div><div class="bud-amt">&lt;$200</div></div>
+        <div class="bud-row"><div><div class="bud-label">Entertainment</div><div class="bud-note">Target &lt;$200 · Jenn's friends pending · Jimmy/Michael may approach</div></div><div class="bud-amt">&lt;$200</div></div>
+        <div class="bud-row"><div><div class="bud-label">Assistant</div><div class="bud-note">Not needed unless barback for Jimmy at 80+</div></div><div class="bud-amt">$0</div></div>
+        <div class="menu-cat" style="margin-top:20px;">Revenue Target</div>
+        <div class="bud-row"><div><div class="bud-label">100 guests → tickets + food/bev</div></div><div class="bud-amt" style="color:#6E9410;">~$5,000</div></div>
+        <div class="callout" style="margin-top:16px;"><strong>Split:</strong> No 15% admin fee this time. Jenn &amp; Jacob take a labor cut, then all revenue is pooled and gross profits split 50/50 once costs are recouped.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN DECISIONS -->
+  <section id="decisions">
+    <div class="sec-header">
+      <span class="sec-title">Open Decisions</span>
+      <span class="sec-sub">Needs a call from Michael / the team</span>
+    </div>
+    <div class="card">
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>VIP comp code?</strong> — Jenn asked: 100%-off code for a few VIPs, or just manually add them to the list. Decide which.</span>
+        <span class="check-tag purple tag">Michael</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Photographer</strong> — Andy not yet confirmed. If Michael has someone &lt;$200, reach out.</span>
+        <span class="check-tag amber tag">Michael</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Entertainment</strong> — Jenn's friends pending. If &lt;$200 option exists, Jimmy/Michael approach.</span>
+        <span class="check-tag amber tag">Team</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Barback for Jimmy</strong> — add a hand if we pass 80 guests.</span>
+        <span class="check-tag blue tag">Jimmy</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Sponsorship + local vendors</strong> — Jenn brainstorming; Jimmy/Michael welcome to source.</span>
+        <span class="check-tag gray tag">Team</span>
       </div>
     </div>
   </section>
@@ -660,7 +832,7 @@ section { margin-bottom: 48px; }
       </div>
       <div class="check-item" onclick="toggle(this)">
         <div class="check-box"></div>
-        <span class="check-text">Confirm Tacos Como En El D.F. — headcount + arrival time</span>
+        <span class="check-text">Confirm BBQ food/vending — Jenn &amp; Jacob (headcount, prep, fire setup)</span>
         <span class="check-tag gray tag">Vendor</span>
       </div>
       <div class="check-item" onclick="toggle(this)">
@@ -672,6 +844,31 @@ section { margin-bottom: 48px; }
         <div class="check-box"></div>
         <span class="check-text">Add Partiful link to landing page once event created</span>
         <span class="check-tag gray tag">Site</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Push tickets public by EOW — set up Early Bird / Standard / Last Minute tiers on Luma</span>
+        <span class="check-tag amber tag">Tickets</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Add branded images to landing page banner — IG post + IG story + flower-wall photo (from Jenn)</span>
+        <span class="check-tag blue tag">Site</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Finalize drink menu — 2 batched cocktails, NA, beer, wine (Jenn &amp; Jimmy)</span>
+        <span class="check-tag gray tag">Menu</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Order chairs + tables for driveway; buy disposable plates/cups</span>
+        <span class="check-tag gray tag">Supplies</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Confirm Twentieth Street Garden cleaning + both bathrooms open</span>
+        <span class="check-tag gray tag">Venue</span>
       </div>
       <div class="check-item" onclick="toggle(this)">
         <div class="check-box"></div>
@@ -744,54 +941,60 @@ section { margin-bottom: 48px; }
       <span class="sec-title">Event Details</span>
     </div>
     <div class="card">
-      <div class="detail-row"><span class="detail-key">Event</span><span class="detail-val">Summer Garden Party</span></div>
-      <div class="detail-row"><span class="detail-key">Date</span><span class="detail-val">Saturday, June 20, 2025</span></div>
+      <div class="detail-row"><span class="detail-key">Event</span><span class="detail-val">Summer Solstice in the Garden</span></div>
+      <div class="detail-row"><span class="detail-key">Blurb</span><span class="detail-val">Twentieth Street Garden and Haps Club invite you to welcome the start of summer. We'll have the fire going, cold drinks, and plenty of room to relax and enjoy the longest day of the year. Your ticket includes a beverage at the door, live entertainment, and access to BBQ smoked and slow-roasted on site. Bring your friends and expect to make a few new ones along the way.</span></div>
+      <div class="detail-row"><span class="detail-key">Date</span><span class="detail-val">Saturday, June 20, 2026</span></div>
       <div class="detail-row"><span class="detail-key">Time</span><span class="detail-val">5:00 PM – 9:00 PM PDT</span></div>
       <div class="detail-row"><span class="detail-key">Venue</span><span class="detail-val">Twentieth Street Garden</span></div>
       <div class="detail-row"><span class="detail-key">Address</span><span class="detail-val">2267 W 20th St, Los Angeles, CA 90018</span></div>
       <div class="detail-row"><span class="detail-key">Area</span><span class="detail-val">West Adams — between Catalina St & Harvard Blvd, ~2 blocks south of Washington Blvd. Near USC.</span></div>
       <div class="detail-row"><span class="detail-key">Entry</span><span class="detail-val">Walk up driveway on right — garden is behind the house</span></div>
       <div class="detail-row"><span class="detail-key">Parking</span><span class="detail-val">Street parking on W 20th St</span></div>
-      <div class="detail-row"><span class="detail-key">Food</span><span class="detail-val">Tacos Como En El D.F. — tacos, burrito, or quesadilla (1 per ticket)</span></div>
-      <div class="detail-row"><span class="detail-key">Drinks</span><span class="detail-val">Seasonal cocktails + mocktails, garden-grown ingredients (1 per ticket)</span></div>
+      <div class="detail-row"><span class="detail-key">Food</span><span class="detail-val">BBQ — pulled pork & pulled mushroom (veg), smoked + slow-roasted on site. See Menu.</span></div>
+      <div class="detail-row"><span class="detail-key">Drinks</span><span class="detail-val">2 batched cocktails, NA, beer & wine. 1 beverage included with ticket.</span></div>
       <div class="detail-row"><span class="detail-key">Tickets</span><span class="detail-val"><a href="https://luma.com/TheHapsClub">luma.com/TheHapsClub</a></span></div>
       <div class="detail-row"><span class="detail-key">Page</span><span class="detail-val"><a href="https://haps.club/events/summer-garden-party/">haps.club/events/summer-garden-party/</a></span></div>
     </div>
   </section>
 
-  <!-- HOSTS -->
-  <section id="hosts">
+  <!-- ROLES -->
+  <section id="roles">
     <div class="sec-header">
-      <span class="sec-title">Hosts</span>
+      <span class="sec-title">Roles &amp; Hosts</span>
+      <span class="sec-sub">Event-day assignments</span>
     </div>
     <div class="card">
       <div class="host-card">
         <div class="host-av" style="background:#C4583A;">MA</div>
         <div style="flex:1;">
           <div class="host-name">Michael Abraham</div>
-          <div class="host-ig">Instagram: <a href="#">— add handle</a></div>
+          <div class="host-ig">Door &amp; guest list · co-promo · sourcing photographer/sponsors</div>
         </div>
-      </div>
-      <div class="host-card">
-        <div class="host-av" style="background:#5C7A52;">JP</div>
-        <div style="flex:1;">
-          <div class="host-name">Jacob Perlmutter</div>
-          <div class="host-ig">Instagram: <a href="#">— add handle</a></div>
-        </div>
+        <span class="check-tag purple tag">Door / List</span>
       </div>
       <div class="host-card">
         <div class="host-av" style="background:#1A1E3C;">JB</div>
         <div style="flex:1;">
           <div class="host-name">Jimmy Barnes</div>
-          <div class="host-ig">Instagram: <a href="#">— add handle</a></div>
+          <div class="host-ig">Bartending · add a barback if we pass 80 guests</div>
         </div>
+        <span class="check-tag blue tag">Bar</span>
       </div>
       <div class="host-card">
         <div class="host-av" style="background:#9DC81A;">JZ</div>
         <div style="flex:1;">
           <div class="host-name">Jenn Zelmer</div>
-          <div class="host-ig">Instagram: <a href="#">— add handle</a></div>
+          <div class="host-ig">Food &amp; vending · entertainment · budget</div>
         </div>
+        <span class="check-tag green tag">Food / Vending</span>
+      </div>
+      <div class="host-card">
+        <div class="host-av" style="background:#5C7A52;">JP</div>
+        <div style="flex:1;">
+          <div class="host-name">Jacob Perlmutter</div>
+          <div class="host-ig">Food &amp; vending · BBQ + prep</div>
+        </div>
+        <span class="check-tag green tag">Food / Vending</span>
       </div>
     </div>
   </section>
@@ -819,8 +1022,8 @@ document.getElementById("gate-btn").onclick = () => {
 document.getElementById("gate-input").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("gate-btn").click(); });
 
 // ── DATES ──
-const EVENT = new Date("2025-06-20T17:00:00-07:00");
-const BLAST = new Date("2025-06-17T09:00:00-07:00");
+const EVENT = new Date("2026-06-20T17:00:00-07:00");
+const BLAST = new Date("2026-06-16T09:00:00-07:00");
 
 function daysBetween(d) {
   return Math.ceil((d - new Date()) / 864e5);
