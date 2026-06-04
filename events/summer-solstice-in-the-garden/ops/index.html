@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Summer Solstice in the Garden — Ops Dashboard</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white:   #FFFFFF;
+  --bg:      #F5F5F7;
+  --ink:     #1D1D1F;
+  --sec:     #6E6E73;
+  --muted:   #86868B;
+  --hair:    #D2D2D7;
+  --blue:    #0071E3;
+  --green:   #248A3D;
+  --red:     #E30000;
+  --amber:   #B25000;
+  --purple:  #6B47DC;
+  --lime:    #4CAF50;
+  --card-r:  18px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+}
+
+/* ── GATE ── */
+#gate {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.72);
+  backdrop-filter: saturate(180%) blur(40px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 9999;
+}
+.gate-card {
+  background: rgba(255,255,255,.96);
+  border-radius: 28px;
+  padding: 48px 44px 44px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 32px 80px rgba(0,0,0,.22), 0 0 0 1px rgba(0,0,0,.06);
+}
+.gate-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(145deg,#9DC81A,#6E9410);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 26px;
+}
+.gate-title { font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+.gate-sub { font-size: 14px; color: var(--sec); margin-bottom: 28px; line-height: 1.5; }
+#gate-input {
+  width: 100%; padding: 13px 16px;
+  border: 1.5px solid var(--hair);
+  border-radius: 12px; font-size: 15px;
+  outline: none; text-align: center;
+  letter-spacing: .12em;
+  background: var(--bg);
+  transition: border-color .2s;
+  margin-bottom: 12px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+#gate-input:focus { border-color: #9DC81A; }
+#gate-input.shake { animation: shake .4s ease; }
+@keyframes shake {
+  0%,100%{transform:translateX(0)} 20%{transform:translateX(-8px)} 60%{transform:translateX(8px)} 80%{transform:translateX(-4px)}
+}
+#gate-btn {
+  width: 100%; padding: 14px;
+  background: #1D1D1F; color: #fff;
+  border: none; border-radius: 12px;
+  font-size: 15px; font-weight: 600;
+  cursor: pointer; transition: opacity .2s;
+}
+#gate-btn:hover { opacity: .82; }
+.gate-hint { font-size: 12px; color: var(--muted); margin-top: 14px; }
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(245,245,247,.88);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: .5px solid var(--hair);
+  padding: 0 32px;
+  height: 52px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 15px; font-weight: 600; color: var(--ink);
+}
+.nav-leaf {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: linear-gradient(145deg, #9DC81A, #6E9410);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.nav-right {
+  display: flex; align-items: center; gap: 12px;
+}
+.status-pill {
+  padding: 4px 12px; border-radius: 980px;
+  font-size: 12px; font-weight: 600;
+  display: flex; align-items: center; gap: 6px;
+}
+.status-pill.active { background: rgba(36,138,61,.12); color: var(--green); }
+.status-pill::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: currentColor;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.8)}
+}
+.nav-date { font-size: 13px; color: var(--sec); }
+
+/* ── LAYOUT ── */
+main {
+  max-width: 1060px; margin: 0 auto;
+  padding: 40px 32px 100px;
+}
+
+/* ── HERO ── */
+.hero {
+  text-align: center;
+  padding: 64px 0 48px;
+}
+.hero-eyebrow {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--sec); margin-bottom: 14px;
+}
+.hero-title {
+  font-size: clamp(44px,6vw,72px);
+  font-weight: 800; letter-spacing: -.03em;
+  color: var(--ink); line-height: 1;
+  margin-bottom: 8px;
+}
+.hero-title span { color: #6E9410; }
+.hero-sub {
+  font-size: 18px; color: var(--sec);
+  font-weight: 400; margin-bottom: 32px;
+  line-height: 1.5;
+}
+.stat-pills {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; flex-wrap: wrap;
+}
+.stat-pill {
+  padding: 10px 20px; border-radius: 980px;
+  background: var(--white);
+  border: .5px solid var(--hair);
+  font-size: 14px; font-weight: 500;
+  color: var(--ink);
+  display: flex; align-items: center; gap: 8px;
+}
+.stat-pill .sp-label { font-size: 11px; color: var(--sec); font-weight: 400; margin-left: -2px; }
+.countdown { font-weight: 700; }
+.countdown.urgent { color: var(--red); }
+.countdown.soon { color: var(--amber); }
+.countdown.ok { color: var(--green); }
+
+/* ── SECTION HEADER ── */
+.sec-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  margin-bottom: 20px; padding-bottom: 14px;
+  border-bottom: .5px solid var(--hair);
+}
+.sec-title {
+  font-size: 22px; font-weight: 700;
+  letter-spacing: -.02em; color: var(--ink);
+}
+.sec-sub { font-size: 13px; color: var(--sec); }
+
+/* ── CARDS ── */
+.card {
+  background: var(--white);
+  border-radius: var(--card-r);
+  border: .5px solid var(--hair);
+  padding: 24px;
+}
+.card + .card { margin-top: 12px; }
+
+/* ── GRID ── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+
+section { margin-bottom: 48px; }
+
+/* ── TIMELINE ── */
+.timeline { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+.tl-card {
+  background: var(--white);
+  border-radius: var(--card-r);
+  border: .5px solid var(--hair);
+  padding: 24px 20px;
+  position: relative; overflow: hidden;
+}
+.tl-card.complete { border-color: rgba(36,138,61,.3); }
+.tl-card.active {
+  background: var(--ink);
+  border-color: transparent;
+}
+.tl-card.pending { opacity: .7; }
+.tl-bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.tl-card.complete .tl-bar { background: var(--green); }
+.tl-card.active .tl-bar { background: #9DC81A; }
+.tl-card.pending .tl-bar { background: var(--hair); }
+.tl-num {
+  font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; margin-bottom: 10px;
+}
+.tl-card.complete .tl-num { color: var(--green); }
+.tl-card.active .tl-num { color: #9DC81A; }
+.tl-card.pending .tl-num { color: var(--muted); }
+.tl-name {
+  font-size: 17px; font-weight: 700;
+  letter-spacing: -.01em; line-height: 1.2;
+  margin-bottom: 6px;
+}
+.tl-card.active .tl-name { color: var(--white); }
+.tl-date {
+  font-size: 13px; font-weight: 400;
+}
+.tl-card.complete .tl-date { color: var(--green); }
+.tl-card.active .tl-date { color: rgba(255,255,255,.65); }
+.tl-card.pending .tl-date { color: var(--sec); }
+.tl-count {
+  margin-top: 14px; font-size: 28px; font-weight: 800;
+  letter-spacing: -.03em; line-height: 1;
+}
+.tl-card.active .tl-count { color: var(--white); }
+.tl-count-label { font-size: 11px; font-weight: 400; letter-spacing: .04em; }
+.tl-card.active .tl-count-label { color: rgba(255,255,255,.5); }
+.check-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(36,138,61,.12);
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 14px;
+}
+
+/* ── CHECKLIST ── */
+.check-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 13px 0;
+  border-bottom: .5px solid var(--hair);
+  cursor: pointer;
+  transition: opacity .15s;
+}
+.check-item:last-child { border-bottom: none; }
+.check-item.done { opacity: .45; }
+.check-box {
+  width: 20px; height: 20px; border-radius: 6px;
+  border: 1.5px solid var(--hair);
+  background: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+  transition: border-color .15s, background .15s;
+}
+.check-item.done .check-box {
+  border-color: var(--green); background: var(--green);
+}
+.check-text { font-size: 14px; color: var(--ink); line-height: 1.4; }
+.check-item.done .check-text { text-decoration: line-through; color: var(--sec); }
+.check-tag {
+  font-size: 11px; font-weight: 600; padding: 2px 8px;
+  border-radius: 6px; margin-left: auto; flex-shrink: 0; margin-top: 1px;
+}
+
+/* ── CO-PROMO CARDS ── */
+.promo-card {
+  background: var(--white);
+  border-radius: var(--card-r);
+  border: .5px solid var(--hair);
+  overflow: hidden;
+}
+.promo-header {
+  padding: 20px 24px;
+  display: flex; align-items: center; gap: 14px;
+  border-bottom: .5px solid var(--hair);
+  cursor: pointer;
+  user-select: none;
+}
+.promo-logo {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+.promo-name { font-size: 17px; font-weight: 700; letter-spacing: -.01em; color: var(--ink); }
+.promo-status { margin-top: 3px; }
+.promo-toggle { margin-left: auto; color: var(--muted); font-size: 20px; line-height: 1; }
+.promo-body { padding: 20px 24px; display: none; }
+.promo-body.open { display: block; }
+.promo-field-label {
+  font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 8px; margin-top: 16px;
+}
+.promo-field-label:first-child { margin-top: 0; }
+.promo-note {
+  font-size: 14px; color: var(--ink); line-height: 1.55;
+  padding: 8px 12px 8px 14px;
+  border-left: 2px solid var(--hair);
+  margin-bottom: 6px;
+}
+.promo-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; color: var(--blue);
+  text-decoration: none; padding: 6px 0;
+}
+.promo-link:hover { text-decoration: underline; }
+
+/* ── STATUS TAGS ── */
+.tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-weight: 600;
+  padding: 3px 9px; border-radius: 6px;
+}
+.tag.green { background: rgba(36,138,61,.1); color: var(--green); }
+.tag.amber { background: rgba(178,80,0,.1); color: var(--amber); }
+.tag.red { background: rgba(227,0,0,.1); color: var(--red); }
+.tag.blue { background: rgba(0,113,227,.1); color: var(--blue); }
+.tag.purple { background: rgba(107,71,220,.1); color: var(--purple); }
+.tag.gray { background: rgba(110,110,115,.1); color: var(--sec); }
+
+/* ── EVENT DETAILS CARD ── */
+.detail-row {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 10px 0; border-bottom: .5px solid var(--bg);
+}
+.detail-row:last-child { border-bottom: none; }
+.detail-key {
+  font-size: 12px; font-weight: 500; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--muted);
+  min-width: 90px; padding-top: 1px;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+}
+.detail-val { font-size: 14px; color: var(--ink); line-height: 1.5; }
+.detail-val a { color: var(--blue); text-decoration: none; }
+.detail-val a:hover { text-decoration: underline; }
+
+/* ── MENU ── */
+.menu-row { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; padding:12px 0; border-bottom:.5px solid var(--bg); }
+.menu-row:last-child { border-bottom:none; }
+.menu-name { font-size:14px; font-weight:600; color:var(--ink); }
+.menu-desc { font-size:12.5px; color:var(--sec); line-height:1.5; margin-top:3px; }
+.menu-price { font-size:14px; font-weight:700; color:#6E9410; font-family:ui-monospace,"SF Mono",Menlo,monospace; white-space:nowrap; }
+.menu-cat { font-size:11px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--sec); margin-bottom:12px; }
+
+/* ── TICKET TIERS ── */
+.tier { text-align:center; padding:22px 18px; }
+.tier-name { font-size:12px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--sec); margin-bottom:8px; }
+.tier-price { font-size:34px; font-weight:800; letter-spacing:-.03em; color:var(--ink); line-height:1; }
+.tier-price span { color:#6E9410; }
+.tier-win { font-size:12.5px; color:var(--muted); margin-top:8px; line-height:1.4; }
+
+/* ── BUDGET ── */
+.bud-row { display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:.5px solid var(--bg); font-size:14px; }
+.bud-row:last-child { border-bottom:none; }
+.bud-label { color:var(--ink); }
+.bud-note { font-size:12px; color:var(--muted); margin-top:2px; }
+.bud-amt { font-weight:700; font-family:ui-monospace,"SF Mono",Menlo,monospace; white-space:nowrap; }
+.bud-total { display:flex; justify-content:space-between; gap:16px; padding:14px 0 4px; margin-top:6px; border-top:1.5px solid var(--hair); font-size:15px; font-weight:700; }
+.callout { background:rgba(76,175,80,.07); border:.5px solid rgba(76,175,80,.25); border-radius:12px; padding:14px 16px; font-size:13.5px; color:var(--ink); line-height:1.6; }
+
+/* ── HOSTS ── */
+.host-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 0; border-bottom: .5px solid var(--hair);
+}
+.host-card:last-child { border-bottom: none; }
+.host-av {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  color: #fff; flex-shrink: 0;
+}
+.host-name { font-size: 15px; font-weight: 600; color: var(--ink); }
+.host-ig { font-size: 12px; color: var(--sec); margin-top: 1px; }
+.host-ig a { color: var(--blue); text-decoration: none; }
+
+/* ── LINKS GRID ── */
+.link-btn {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 18px; border-radius: 14px;
+  background: var(--white); border: .5px solid var(--hair);
+  text-decoration: none; color: var(--ink);
+  font-size: 14px; font-weight: 500;
+  transition: border-color .15s, box-shadow .15s;
+}
+.link-btn:hover { border-color: #aaa; box-shadow: 0 4px 16px rgba(0,0,0,.07); }
+.link-icon {
+  width: 36px; height: 36px; border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.link-label { flex: 1; }
+.link-label-main { font-size: 14px; font-weight: 600; }
+.link-label-sub { font-size: 11px; color: var(--sec); margin-top: 1px; }
+.link-arr { font-size: 16px; color: var(--muted); }
+
+/* ── WAYFINDING NAV ── */
+.section-nav {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.snav-btn {
+  padding: 7px 14px; border-radius: 980px;
+  border: .5px solid var(--hair);
+  background: var(--white); font-size: 13px; font-weight: 500;
+  color: var(--sec); cursor: pointer; text-decoration: none;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.snav-btn:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+/* ── PROGRESS BAR ── */
+.progress-wrap { margin-bottom: 6px; }
+.progress-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--sec); margin-bottom: 6px; }
+.progress-bar { height: 6px; background: var(--hair); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 3px; background: var(--green); transition: width .3s ease; }
+.progress-fill.amber-fill { background: var(--amber); }
+
+/* RESPONSIVE */
+@media (max-width: 780px) {
+  .timeline { grid-template-columns: 1fr 1fr; }
+  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+  main { padding: 24px 16px 80px; }
+  .timeline, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── GATE ── -->
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-icon">🌿</div>
+    <div class="gate-title">Garden Party Ops</div>
+    <div class="gate-sub">Haps Club · Summer 2026<br>Enter the event access code</div>
+    <input id="gate-input" type="password" placeholder="Access code" autocomplete="off">
+    <button id="gate-btn">Continue →</button>
+    <p class="gate-hint">Contact Michael for access</p>
+  </div>
+</div>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-leaf">🌿</div>
+    Summer Solstice in the Garden
+  </div>
+  <div class="nav-right">
+    <span class="nav-date" id="nav-date"></span>
+    <span class="status-pill active">Event Active</span>
+  </div>
+</nav>
+
+<!-- ── MAIN ── -->
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Haps Club · Event Operations</div>
+    <h1 class="hero-title">Summer Solstice<br><span>in the Garden</span></h1>
+    <p class="hero-sub">Twentieth Street Garden · West Adams, LA<br>Saturday, June 20, 2026 · 5:00–9:00 PM</p>
+    <div class="stat-pills">
+      <div class="stat-pill">
+        <span>🗓</span>
+        <span class="countdown" id="days-to-event">–</span>
+        <span class="sp-label">days to event</span>
+      </div>
+      <div class="stat-pill">
+        <span>🎫</span>
+        <span class="countdown ok">luma.com</span>
+        <span class="sp-label">ticketing</span>
+      </div>
+      <div class="stat-pill">
+        <span>✅</span>
+        <span class="countdown" id="tasks-done">–</span>
+        <span class="sp-label">tasks complete</span>
+      </div>
+      <div class="stat-pill">
+        <span>📣</span>
+        <span class="countdown" id="promo-status">2 platforms</span>
+        <span class="sp-label">co-promo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WAYFINDING -->
+  <div class="section-nav">
+    <a class="snav-btn" href="#timeline">Timeline</a>
+    <a class="snav-btn" href="#menu">Menu</a>
+    <a class="snav-btn" href="#ticketing">Ticketing</a>
+    <a class="snav-btn" href="#budget">Budget</a>
+    <a class="snav-btn" href="#decisions">Open Decisions</a>
+    <a class="snav-btn" href="#copromo">Co-Promotion</a>
+    <a class="snav-btn" href="#checklist">Checklist</a>
+    <a class="snav-btn" href="#quicklinks">Quick Links</a>
+    <a class="snav-btn" href="#details">Event Details</a>
+    <a class="snav-btn" href="#roles">Roles</a>
+  </div>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="sec-header">
+      <span class="sec-title">Event Timeline</span>
+      <span class="sec-sub">Key milestones to June 20</span>
+    </div>
+    <div class="timeline">
+      <div class="tl-card complete">
+        <div class="tl-bar"></div>
+        <div class="tl-num">Phase 01</div>
+        <div class="tl-name">Page Live</div>
+        <div class="tl-date">haps.club/events/...</div>
+        <div class="check-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14"><path d="M2.5 7l3 3 6-6" stroke="#248A3D" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="tl-card active">
+        <div class="tl-bar"></div>
+        <div class="tl-num">Phase 02</div>
+        <div class="tl-name" style="color:#fff;">Co-Promo</div>
+        <div class="tl-date">Partiful + Luma outreach</div>
+        <div class="tl-count" id="tl-count-promo">–</div>
+        <div class="tl-count-label" style="color:rgba(255,255,255,.5)">days remaining</div>
+      </div>
+      <div class="tl-card pending">
+        <div class="tl-bar"></div>
+        <div class="tl-num">Phase 03</div>
+        <div class="tl-name">Promote</div>
+        <div class="tl-date">Newsletter + social blast</div>
+        <div class="tl-count" id="tl-count-promo2">–</div>
+        <div class="tl-count-label" style="color:var(--sec)">days to blast</div>
+      </div>
+      <div class="tl-card pending">
+        <div class="tl-bar"></div>
+        <div class="tl-num">Phase 04</div>
+        <div class="tl-name">Event Day</div>
+        <div class="tl-date">Saturday, June 20</div>
+        <div class="tl-count" id="tl-count-event">–</div>
+        <div class="tl-count-label" style="color:var(--sec)">days away</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="sec-header">
+      <span class="sec-title">Menu</span>
+      <span class="sec-sub">BBQ smoked + slow-roasted on site · 1 drink included with ticket</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="menu-cat">🍖 Food</div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Pork Plate</div><div class="menu-desc">Slow-roasted pork shoulder over open flame · brioche bun, house-made BBQ sauce, potato salad, coleslaw, pickles, corn on the cob</div></div>
+          <div class="menu-price">$20</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Mushroom Plate <span style="color:var(--sec);font-weight:400;">(Vegetarian)</span></div><div class="menu-desc">Slow-roasted mushrooms over open flame · brioche bun, house-made BBQ sauce, potato salad, coleslaw, pickles, corn on the cob</div></div>
+          <div class="menu-price">$20</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Pork Slider</div></div>
+          <div class="menu-price">$6</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Pulled Mushroom Slider</div></div>
+          <div class="menu-price">$6</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Corn on the Cob</div><div class="menu-desc">With compound butter</div></div>
+          <div class="menu-price">$5</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Peach Cobbler Bars</div></div>
+          <div class="menu-price">$7</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="menu-cat">🍹 Drinks</div>
+        <div class="menu-row">
+          <div><div class="menu-name">2 batched cocktails</div><div class="menu-desc">Recipes TBD</div></div>
+          <div class="menu-price">TBD</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">Beer &amp; wine</div></div>
+          <div class="menu-price">TBD</div>
+        </div>
+        <div class="menu-row">
+          <div><div class="menu-name">NA drinks</div></div>
+          <div class="menu-price">TBD</div>
+        </div>
+        <div class="callout" style="margin-top:16px;">Ticket includes 1 beverage at the door. Full drink menu + pricing still being finalized by Jenn &amp; Jimmy.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKETING -->
+  <section id="ticketing">
+    <div class="sec-header">
+      <span class="sec-title">Ticketing</span>
+      <span class="sec-sub">No coupons · Sell on Luma · Push public by EOW</span>
+    </div>
+    <div class="grid-3">
+      <div class="card tier">
+        <div class="tier-name">Early Bird</div>
+        <div class="tier-price"><span>$10</span></div>
+        <div class="tier-win">First 48 hours<br>(drives early signup)</div>
+      </div>
+      <div class="card tier">
+        <div class="tier-name">Standard</div>
+        <div class="tier-price">$15</div>
+        <div class="tier-win">Main window</div>
+      </div>
+      <div class="card tier">
+        <div class="tier-name">Last Minute</div>
+        <div class="tier-price">$20</div>
+        <div class="tier-win">Final 48 hours</div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="callout">Ticket includes a beverage at the door, live entertainment, and access to BBQ. Goal: 100 guests → ~$5K with tickets + food/bev sales. Tiers approved by all hosts.</div>
+    </div>
+  </section>
+
+  <!-- BUDGET -->
+  <section id="budget">
+    <div class="sec-header">
+      <span class="sec-title">Budget &amp; Economics</span>
+      <span class="sec-sub">Rough estimate · per Jenn</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="menu-cat">Cost Basis</div>
+        <div class="bud-row"><div><div class="bud-label">Food &amp; beverage cost</div></div><div class="bud-amt">$500</div></div>
+        <div class="bud-row"><div><div class="bud-label">Jenn &amp; Jacob — labor</div><div class="bud-note">Prep, drinks, food for 100, logistics, setup</div></div><div class="bud-amt">$1,250</div></div>
+        <div class="bud-row"><div><div class="bud-label">Chairs + delivery</div><div class="bud-note">Tables in driveway for seating/eating</div></div><div class="bud-amt">$75</div></div>
+        <div class="bud-row"><div><div class="bud-label">Disposables</div><div class="bud-note">Plates, cups, etc.</div></div><div class="bud-amt">$100</div></div>
+        <div class="bud-row"><div><div class="bud-label">Twentieth Street Garden cleaning</div><div class="bud-note">Both bathrooms open</div></div><div class="bud-amt">$300</div></div>
+        <div class="bud-total"><div>Breakeven<div class="bud-note" style="font-weight:400;">Excl. photographer, entertainment, assistant</div></div><div class="bud-amt">$2,225</div></div>
+      </div>
+      <div class="card">
+        <div class="menu-cat">Variable / TBD</div>
+        <div class="bud-row"><div><div class="bud-label">Photographer</div><div class="bud-note">Target &lt;$200 · Andy pending · Michael may reach out</div></div><div class="bud-amt">&lt;$200</div></div>
+        <div class="bud-row"><div><div class="bud-label">Entertainment</div><div class="bud-note">Target &lt;$200 · Jenn's friends pending · Jimmy/Michael may approach</div></div><div class="bud-amt">&lt;$200</div></div>
+        <div class="bud-row"><div><div class="bud-label">Assistant</div><div class="bud-note">Not needed unless barback for Jimmy at 80+</div></div><div class="bud-amt">$0</div></div>
+        <div class="menu-cat" style="margin-top:20px;">Revenue Target</div>
+        <div class="bud-row"><div><div class="bud-label">100 guests → tickets + food/bev</div></div><div class="bud-amt" style="color:#6E9410;">~$5,000</div></div>
+        <div class="callout" style="margin-top:16px;"><strong>Split:</strong> No 15% admin fee this time. Jenn &amp; Jacob take a labor cut, then all revenue is pooled and gross profits split 50/50 once costs are recouped.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN DECISIONS -->
+  <section id="decisions">
+    <div class="sec-header">
+      <span class="sec-title">Open Decisions</span>
+      <span class="sec-sub">Needs a call from Michael / the team</span>
+    </div>
+    <div class="card">
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>VIP comp code?</strong> — Jenn asked: 100%-off code for a few VIPs, or just manually add them to the list. Decide which.</span>
+        <span class="check-tag purple tag">Michael</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Photographer</strong> — Andy not yet confirmed. If Michael has someone &lt;$200, reach out.</span>
+        <span class="check-tag amber tag">Michael</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Entertainment</strong> — Jenn's friends pending. If &lt;$200 option exists, Jimmy/Michael approach.</span>
+        <span class="check-tag amber tag">Team</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Barback for Jimmy</strong> — add a hand if we pass 80 guests.</span>
+        <span class="check-tag blue tag">Jimmy</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text"><strong>Sponsorship + local vendors</strong> — Jenn brainstorming; Jimmy/Michael welcome to source.</span>
+        <span class="check-tag gray tag">Team</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CO-PROMOTION -->
+  <section id="copromo">
+    <div class="sec-header">
+      <span class="sec-title">Co-Promotion</span>
+      <span class="sec-sub">Partiful · Luma · Cross-listing strategy</span>
+    </div>
+
+    <p style="font-size:15px;color:var(--sec);line-height:1.6;margin-bottom:20px;max-width:680px;">
+      Goal: cross-list on Partiful and Luma to expand reach beyond the existing Haps Club audience. Coordinate on guest list syncing, ticketing flows, and shared social posts.
+    </p>
+
+    <div style="display:flex;flex-direction:column;gap:12px;">
+
+      <!-- LUMA -->
+      <div class="promo-card">
+        <div class="promo-header" onclick="togglePromo(this)">
+          <div class="promo-logo" style="background:linear-gradient(145deg,#FF6B6B,#C4583A);">📅</div>
+          <div style="flex:1;">
+            <div class="promo-name">Luma</div>
+            <div class="promo-status"><span class="tag green">● In Progress</span></div>
+          </div>
+          <div class="promo-toggle">+</div>
+        </div>
+        <div class="promo-body open">
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Setup progress</span><span>60%</span></div>
+            <div class="progress-bar"><div class="progress-fill" style="width:60%;"></div></div>
+          </div>
+          <div class="promo-field-label">Status</div>
+          <p style="font-size:14px;color:var(--ink);line-height:1.55;">Primary ticketing platform — event created at <a href="https://luma.com/TheHapsClub" style="color:var(--blue);">luma.com/TheHapsClub</a>. Pursuing featured placement and newsletter inclusion.</p>
+          <div class="promo-field-label">Action Items</div>
+          <div class="promo-note">Request feature in Luma's LA discovery section</div>
+          <div class="promo-note">Ask about co-promotion newsletter slot</div>
+          <div class="promo-note">Explore "Presented by Haps Club" partnership for future events</div>
+          <div class="promo-note">Confirm ticket count + waitlist settings</div>
+          <div class="promo-field-label">Links</div>
+          <a class="promo-link" href="https://luma.com/TheHapsClub" target="_blank">Luma Event Page →</a><br>
+          <a class="promo-link" href="https://lu.ma/organizer" target="_blank">Luma for Organizers →</a>
+        </div>
+      </div>
+
+      <!-- PARTIFUL -->
+      <div class="promo-card">
+        <div class="promo-header" onclick="togglePromo(this)">
+          <div class="promo-logo" style="background:linear-gradient(145deg,#A78BFA,#6B47DC);">🎉</div>
+          <div style="flex:1;">
+            <div class="promo-name">Partiful</div>
+            <div class="promo-status"><span class="tag amber">● Exploring</span></div>
+          </div>
+          <div class="promo-toggle">+</div>
+        </div>
+        <div class="promo-body">
+          <div class="progress-wrap">
+            <div class="progress-label"><span>Setup progress</span><span>40%</span></div>
+            <div class="progress-bar"><div class="progress-fill amber-fill" style="width:40%;"></div></div>
+          </div>
+          <div class="promo-field-label">Opportunity</div>
+          <p style="font-size:14px;color:var(--ink);line-height:1.55;">Partiful reaches a younger, social-first LA crowd that overlaps well with the Haps Club audience. Co-listing creates a second discovery surface without splitting ticketing. RSVP-only — ticketing stays on Luma.</p>
+          <div class="promo-field-label">Ready-to-paste description</div>
+          <div class="promo-note" style="white-space:pre-line;border-left-color:#9DC81A;">Summer Solstice in the Garden
+Twentieth Street Garden &times; Haps Club
+
+Welcome the start of summer with us. We'll have the fire going, cold drinks, and plenty of room to relax and enjoy the longest day of the year.
+
+Your ticket includes a beverage at the door, live entertainment, and access to BBQ smoked and slow-roasted on site — pulled pork plus a pulled-mushroom option for the vegetarians, with all the sides.
+
+Set in a lush open-air backyard in West Adams. Bring your friends and expect to make a few new ones along the way.
+
+Saturday, June 20 · 5–9 PM
+2267 W 20th St, Los Angeles
+Tickets: luma.com/TheHapsClub</div>
+          <div class="promo-field-label">Action Items</div>
+          <div class="promo-note">Create Partiful event page — RSVP only (ticketing stays on Luma)</div>
+          <div class="promo-note">Request cross-post to Partiful's discovery feed</div>
+          <div class="promo-note">Confirm whether Partiful handles any ticketing or just RSVPs</div>
+          <div class="promo-note">Discuss social post sharing — they tag events on their Instagram</div>
+          <div class="promo-note">Add Partiful link to the landing page once live</div>
+          <div class="promo-field-label">Contact</div>
+          <p style="font-size:14px;color:var(--sec);">— Add Partiful contact / partnership email here</p>
+          <div class="promo-field-label">Links</div>
+          <a class="promo-link" href="https://partiful.com" target="_blank">Partiful.com →</a><br>
+          <a class="promo-link" href="https://partiful.com/e/new" target="_blank">Create Partiful Event →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section id="checklist">
+    <div class="sec-header">
+      <span class="sec-title">Pre-Event Checklist</span>
+      <span class="sec-sub" id="checklist-progress">Click items to mark complete</span>
+    </div>
+    <div class="card">
+
+      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sec);padding:8px 0 4px;">🟢 Done</div>
+      <div class="check-item done" onclick="toggle(this)">
+        <div class="check-box"><svg width="11" height="11" viewBox="0 0 11 11"><path d="M1.5 5.5l2.5 2.5 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="check-text">Landing page live — haps.club/events/summer-solstice-in-the-garden/</span>
+        <span class="check-tag green tag">Done</span>
+      </div>
+      <div class="check-item done" onclick="toggle(this)">
+        <div class="check-box"><svg width="11" height="11" viewBox="0 0 11 11"><path d="M1.5 5.5l2.5 2.5 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="check-text">OG image + meta tags added (link previews working)</span>
+        <span class="check-tag green tag">Done</span>
+      </div>
+      <div class="check-item done" onclick="toggle(this)">
+        <div class="check-box"><svg width="11" height="11" viewBox="0 0 11 11"><path d="M1.5 5.5l2.5 2.5 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="check-text">Luma ticket link connected — luma.com/TheHapsClub</span>
+        <span class="check-tag green tag">Done</span>
+      </div>
+
+      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sec);padding:16px 0 4px;">🔴 In Progress</div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Contact Partiful — create co-listing event page</span>
+        <span class="check-tag amber tag">Co-promo</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Contact Luma team re: discovery / co-promo</span>
+        <span class="check-tag amber tag">Co-promo</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Update host Instagram handles on landing page</span>
+        <span class="check-tag blue tag">Site</span>
+      </div>
+
+      <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sec);padding:16px 0 4px;">⬜ Upcoming</div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Newsletter blast — schedule for Tuesday before event</span>
+        <span class="check-tag gray tag">Marketing</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Instagram post — 1 week out + day-before stories</span>
+        <span class="check-tag gray tag">Social</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Confirm BBQ food/vending — Jenn &amp; Jacob (headcount, prep, fire setup)</span>
+        <span class="check-tag gray tag">Vendor</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Confirm Twentieth Street Garden — setup time + capacity</span>
+        <span class="check-tag gray tag">Venue</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Add Partiful link to landing page once event created</span>
+        <span class="check-tag gray tag">Site</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Push tickets public by EOW — set up Early Bird / Standard / Last Minute tiers on Luma</span>
+        <span class="check-tag amber tag">Tickets</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Add branded images to landing page banner — IG post + IG story + flower-wall photo (from Jenn)</span>
+        <span class="check-tag blue tag">Site</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Finalize drink menu — 2 batched cocktails, NA, beer, wine (Jenn &amp; Jimmy)</span>
+        <span class="check-tag gray tag">Menu</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Order chairs + tables for driveway; buy disposable plates/cups</span>
+        <span class="check-tag gray tag">Supplies</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Confirm Twentieth Street Garden cleaning + both bathrooms open</span>
+        <span class="check-tag gray tag">Venue</span>
+      </div>
+      <div class="check-item" onclick="toggle(this)">
+        <div class="check-box"></div>
+        <span class="check-text">Final RSVP count — share with venue + vendors 48hrs before</span>
+        <span class="check-tag gray tag">Ops</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS -->
+  <section id="quicklinks">
+    <div class="sec-header">
+      <span class="sec-title">Quick Links</span>
+    </div>
+    <div class="grid-2">
+      <a class="link-btn" href="https://haps.club/events/summer-solstice-in-the-garden/" target="_blank">
+        <div class="link-icon" style="background:linear-gradient(145deg,#9DC81A,#6E9410);">🌿</div>
+        <div class="link-label">
+          <div class="link-label-main">Event Landing Page</div>
+          <div class="link-label-sub">haps.club/events/summer-solstice-in-the-garden/</div>
+        </div>
+        <div class="link-arr">→</div>
+      </a>
+      <a class="link-btn" href="https://luma.com/TheHapsClub" target="_blank">
+        <div class="link-icon" style="background:linear-gradient(145deg,#FF8A65,#C4583A);">📅</div>
+        <div class="link-label">
+          <div class="link-label-main">Luma Event Page</div>
+          <div class="link-label-sub">luma.com/TheHapsClub</div>
+        </div>
+        <div class="link-arr">→</div>
+      </a>
+      <a class="link-btn" href="https://partiful.com" target="_blank">
+        <div class="link-icon" style="background:linear-gradient(145deg,#A78BFA,#6B47DC);">🎉</div>
+        <div class="link-label">
+          <div class="link-label-main">Partiful</div>
+          <div class="link-label-sub">Create event · partiful.com</div>
+        </div>
+        <div class="link-arr">→</div>
+      </a>
+      <a class="link-btn" href="https://instagram.com/thehapsclub" target="_blank">
+        <div class="link-icon" style="background:linear-gradient(145deg,#E1306C,#833AB4);">📸</div>
+        <div class="link-label">
+          <div class="link-label-main">@thehapsclub</div>
+          <div class="link-label-sub">Instagram</div>
+        </div>
+        <div class="link-arr">→</div>
+      </a>
+      <a class="link-btn" href="https://www.twentiethstreetgarden.com" target="_blank">
+        <div class="link-icon" style="background:linear-gradient(145deg,#66BB6A,#248A3D);">🏡</div>
+        <div class="link-label">
+          <div class="link-label-main">Twentieth Street Garden</div>
+          <div class="link-label-sub">twentiethstreetgarden.com</div>
+        </div>
+        <div class="link-arr">→</div>
+      </a>
+      <a class="link-btn" href="https://haps.club" target="_blank">
+        <div class="link-icon" style="background:linear-gradient(145deg,#1A1E3C,#0D1020);">⚡</div>
+        <div class="link-label">
+          <div class="link-label-main">Haps Club</div>
+          <div class="link-label-sub">haps.club</div>
+        </div>
+        <div class="link-arr">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS -->
+  <section id="details">
+    <div class="sec-header">
+      <span class="sec-title">Event Details</span>
+    </div>
+    <div class="card">
+      <div class="detail-row"><span class="detail-key">Event</span><span class="detail-val">Summer Solstice in the Garden</span></div>
+      <div class="detail-row"><span class="detail-key">Blurb</span><span class="detail-val">Twentieth Street Garden and Haps Club invite you to welcome the start of summer. We'll have the fire going, cold drinks, and plenty of room to relax and enjoy the longest day of the year. Your ticket includes a beverage at the door, live entertainment, and access to BBQ smoked and slow-roasted on site. Bring your friends and expect to make a few new ones along the way.</span></div>
+      <div class="detail-row"><span class="detail-key">Date</span><span class="detail-val">Saturday, June 20, 2026</span></div>
+      <div class="detail-row"><span class="detail-key">Time</span><span class="detail-val">5:00 PM – 9:00 PM PDT</span></div>
+      <div class="detail-row"><span class="detail-key">Venue</span><span class="detail-val">Twentieth Street Garden</span></div>
+      <div class="detail-row"><span class="detail-key">Address</span><span class="detail-val">2267 W 20th St, Los Angeles, CA 90018</span></div>
+      <div class="detail-row"><span class="detail-key">Area</span><span class="detail-val">West Adams — between Catalina St & Harvard Blvd, ~2 blocks south of Washington Blvd. Near USC.</span></div>
+      <div class="detail-row"><span class="detail-key">Entry</span><span class="detail-val">Walk up driveway on right — garden is behind the house</span></div>
+      <div class="detail-row"><span class="detail-key">Parking</span><span class="detail-val">Street parking on W 20th St</span></div>
+      <div class="detail-row"><span class="detail-key">Food</span><span class="detail-val">BBQ — pulled pork & pulled mushroom (veg), smoked + slow-roasted on site. See Menu.</span></div>
+      <div class="detail-row"><span class="detail-key">Drinks</span><span class="detail-val">2 batched cocktails, NA, beer & wine. 1 beverage included with ticket.</span></div>
+      <div class="detail-row"><span class="detail-key">Tickets</span><span class="detail-val"><a href="https://luma.com/TheHapsClub">luma.com/TheHapsClub</a></span></div>
+      <div class="detail-row"><span class="detail-key">Page</span><span class="detail-val"><a href="https://haps.club/events/summer-solstice-in-the-garden/">haps.club/events/summer-solstice-in-the-garden/</a></span></div>
+    </div>
+  </section>
+
+  <!-- ROLES -->
+  <section id="roles">
+    <div class="sec-header">
+      <span class="sec-title">Roles &amp; Hosts</span>
+      <span class="sec-sub">Event-day assignments</span>
+    </div>
+    <div class="card">
+      <div class="host-card">
+        <div class="host-av" style="background:#C4583A;">MA</div>
+        <div style="flex:1;">
+          <div class="host-name">Michael Abraham</div>
+          <div class="host-ig">Door &amp; guest list · co-promo · sourcing photographer/sponsors</div>
+        </div>
+        <span class="check-tag purple tag">Door / List</span>
+      </div>
+      <div class="host-card">
+        <div class="host-av" style="background:#1A1E3C;">JB</div>
+        <div style="flex:1;">
+          <div class="host-name">Jimmy Barnes</div>
+          <div class="host-ig">Bartending · add a barback if we pass 80 guests</div>
+        </div>
+        <span class="check-tag blue tag">Bar</span>
+      </div>
+      <div class="host-card">
+        <div class="host-av" style="background:#9DC81A;">JZ</div>
+        <div style="flex:1;">
+          <div class="host-name">Jenn Zelmer</div>
+          <div class="host-ig">Food &amp; vending · entertainment · budget</div>
+        </div>
+        <span class="check-tag green tag">Food / Vending</span>
+      </div>
+      <div class="host-card">
+        <div class="host-av" style="background:#5C7A52;">JP</div>
+        <div style="flex:1;">
+          <div class="host-name">Jacob Perlmutter</div>
+          <div class="host-ig">Food &amp; vending · BBQ + prep</div>
+        </div>
+        <span class="check-tag green tag">Food / Vending</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+// ── GATE ──
+const CODE = "garden2025";
+if (sessionStorage.getItem("gp_auth") === "1") document.getElementById("gate").style.display = "none";
+
+document.getElementById("gate-btn").onclick = () => {
+  const v = document.getElementById("gate-input").value.trim().toLowerCase();
+  if (v === CODE) {
+    sessionStorage.setItem("gp_auth","1");
+    document.getElementById("gate").style.display = "none";
+  } else {
+    const inp = document.getElementById("gate-input");
+    inp.classList.add("shake");
+    inp.value = "";
+    inp.placeholder = "Try again";
+    setTimeout(() => inp.classList.remove("shake"), 500);
+  }
+};
+document.getElementById("gate-input").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("gate-btn").click(); });
+
+// ── DATES ──
+const EVENT = new Date("2026-06-20T17:00:00-07:00");
+const BLAST = new Date("2026-06-16T09:00:00-07:00");
+
+function daysBetween(d) {
+  return Math.ceil((d - new Date()) / 864e5);
+}
+
+function updateCountdowns() {
+  const toEvent = daysBetween(EVENT);
+  const toBlast = daysBetween(BLAST);
+
+  const el = document.getElementById("days-to-event");
+  el.textContent = toEvent > 0 ? toEvent : toEvent === 0 ? "Today!" : "Passed";
+  el.className = "countdown " + (toEvent <= 3 ? "urgent" : toEvent <= 10 ? "soon" : "ok");
+
+  ["tl-count-promo","tl-count-promo2","tl-count-event"].forEach((id,i) => {
+    const days = [toEvent - 15, toBlast, toEvent][i];
+    const el2 = document.getElementById(id);
+    if (el2) el2.textContent = Math.max(0, Math.ceil(days)) + (days <= 0 ? "" : "");
+  });
+
+  // nav date
+  const now = new Date();
+  document.getElementById("nav-date").textContent = now.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+}
+
+updateCountdowns();
+setInterval(updateCountdowns, 60000);
+
+// ── CHECKLIST ──
+function toggle(el) {
+  el.classList.toggle("done");
+  updateProgress();
+}
+
+function updateProgress() {
+  const all = document.querySelectorAll(".check-item");
+  const done = document.querySelectorAll(".check-item.done").length;
+  document.getElementById("checklist-progress").textContent = `${done} of ${all.length} complete`;
+  document.getElementById("tasks-done").textContent = `${done}/${all.length}`;
+}
+
+updateProgress();
+
+// ── PROMO TOGGLE ──
+function togglePromo(header) {
+  const body = header.nextElementSibling;
+  const toggle = header.querySelector(".promo-toggle");
+  const isOpen = body.classList.contains("open");
+  body.classList.toggle("open");
+  toggle.textContent = isOpen ? "+" : "−";
+}
+</script>
+</body>
+</html>
