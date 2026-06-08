@@ -19,7 +19,7 @@ Every past issue of the weekly newsletter, newest first:
 - [The Back Nine — Sunday, May 24, 2026](https://haps.club/archive/2026-05-24-the-back-nine/)
 - [The Long Weekend — Tuesday, May 19, 2026](https://haps.club/archive/2026-05-19-the-long-weekend/)
 - [Date Night LA — Tuesday, May 12, 2026](https://haps.club/archive/2026-05-12-date-night-la/)
-- [Full archive index](https://haps.club/archive)
+- [Full archive index](https://haps.club/archive/)
 
 ## Contact
 - Email: newsletter@haps.club
