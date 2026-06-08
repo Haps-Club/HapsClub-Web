@@ -66,6 +66,17 @@ nav{position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:cente
 .stat .l{font-size:12px;color:var(--sec);font-weight:500}
 .stat.live .n{color:var(--green)}
 
+/* ── HUB LINKS ── */
+.hublinks{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:36px}
+.hub{display:flex;flex-direction:column;background:var(--white);border:.5px solid var(--hair);border-radius:var(--card);padding:18px 20px;cursor:pointer;transition:box-shadow .18s,transform .18s;text-decoration:none;color:var(--ink);position:relative}
+.hub:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-2px);text-decoration:none}
+.hub-ico{font-size:22px;margin-bottom:12px;line-height:1}
+.hub-l{font-size:15px;font-weight:700;letter-spacing:-.01em;display:flex;align-items:center;gap:6px}
+.hub-s{font-size:12px;color:var(--sec);margin-top:3px;line-height:1.35}
+.hub-arr{position:absolute;top:18px;right:18px;font-size:14px;color:var(--muted);transition:transform .18s}
+.hub:hover .hub-arr{transform:translate(2px,-2px)}
+.hub-new{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:#9DC81A;border-radius:5px;padding:2px 6px}
+
 /* ── EVENT GRID ── */
 .grid-label{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;padding-bottom:12px;border-bottom:.5px solid var(--hair)}
 .grid-label span{font-size:13px;font-weight:600;color:var(--sec);letter-spacing:.04em;text-transform:uppercase}
@@ -211,6 +222,7 @@ tbody tr:last-child td{border-bottom:none}
 @media(max-width:900px){
   #stats{grid-template-columns:1fr 1fr}
   #eventGrid{grid-template-columns:1fr 1fr}
+  .hublinks{grid-template-columns:1fr 1fr}
   .factgrid{grid-template-columns:1fr 1fr}
   .tiers{grid-template-columns:1fr}
   .twocol{grid-template-columns:1fr}
@@ -218,6 +230,7 @@ tbody tr:last-child td{border-bottom:none}
 @media(max-width:600px){
   .wrap{padding:32px 16px 80px}
   #eventGrid{grid-template-columns:1fr}
+  .hublinks{grid-template-columns:1fr}
   #stats{grid-template-columns:1fr 1fr}
   .head{flex-direction:column}
   .mast{flex-direction:column}
@@ -272,6 +285,14 @@ tbody tr:last-child td{border-bottom:none}
 
     <div id="stats"></div>
 
+    <div class="grid-label" style="margin-bottom:14px"><span>Jump to</span></div>
+    <div class="hublinks">
+      <a class="hub" href="/events/summer-solstice-in-the-garden/ops/" target="_blank" rel="noopener"><div class="hub-ico">🌿</div><div class="hub-l">Solstice — Ops</div><div class="hub-s">Live event control room</div><span class="hub-arr">↗</span></a>
+      <a class="hub" href="/dashboard/seo/"><div class="hub-ico">📈</div><div class="hub-l">SEO &amp; Traffic <span class="hub-new">New</span></div><div class="hub-s">GA4 + Search Console</div><span class="hub-arr">↗</span></a>
+      <a class="hub" href="/events/summer-solstice-in-the-garden/" target="_blank" rel="noopener"><div class="hub-ico">🎟</div><div class="hub-l">Event page</div><div class="hub-s">Public Solstice page</div><span class="hub-arr">↗</span></a>
+      <a class="hub" href="https://haps.club" target="_blank" rel="noopener"><div class="hub-ico">↗</div><div class="hub-l">Live site</div><div class="hub-s">haps.club homepage</div><span class="hub-arr">↗</span></a>
+    </div>
+
     <div class="grid-label">
       <span>The Calendar</span>
       <span style="font-size:13px;color:var(--muted)">One dashboard, two layers — <b style="color:var(--ink)">public</b> mirrors your live haps.club event page; <b style="color:var(--ink)">private</b> holds the checklist, co-promo, sponsor pipeline &amp; budget.</span>
@@ -286,7 +307,7 @@ tbody tr:last-child td{border-bottom:none}
 </div><!-- /app -->
 
 <script>
-var PW='haps#2026';
+var PW='Haps#2026';
 function showApp(){document.getElementById('lock').style.display='none';document.getElementById('app').style.display='block';boot();}
 function tryUnlock(){var v=document.getElementById('pw').value;if(v===PW){try{sessionStorage.setItem('haps_dash_ok','1');}catch(e){}showApp();}else{var i=document.getElementById('pw');i.classList.add('err');document.getElementById('lockerr').textContent='Incorrect passphrase';setTimeout(function(){i.classList.remove('err');},400);}}
 document.getElementById('enter').addEventListener('click',tryUnlock);
