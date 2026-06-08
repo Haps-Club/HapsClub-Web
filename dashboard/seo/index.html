@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Haps Club — SEO &amp; Traffic</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#F5F5F7;--white:#FFFFFF;--ink:#1D1D1F;--sec:#6E6E73;--muted:#86868B;
+  --hair:#D2D2D7;--blue:#0071E3;--green:#248A3D;--red:#E30000;--amber:#B25000;
+  --purple:#6B47DC;--leaf:#9DC81A;--card:18px;--section-pad:72px 32px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
+a{color:var(--blue);text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+#lock{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:saturate(180%) blur(40px);display:flex;align-items:center;justify-content:center;z-index:9999}
+.lock-card{background:rgba(255,255,255,.97);border-radius:28px;padding:52px 44px 44px;width:340px;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.2),0 0 0 .5px rgba(0,0,0,.08)}
+.lock-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(145deg,#9DC81A,#6E9410);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px}
+.lock-title{font-size:22px;font-weight:700;margin-bottom:4px}
+.lock-sub{font-size:14px;color:var(--sec);margin-bottom:28px;line-height:1.5}
+#pw{width:100%;padding:13px 16px;border:1.5px solid var(--hair);border-radius:12px;font-size:15px;font-family:ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.14em;text-align:center;background:var(--bg);outline:none;transition:border-color .2s;margin-bottom:10px}
+#pw:focus{border-color:#9DC81A}
+#pw.err{animation:shk .38s ease;border-color:var(--red)}
+@keyframes shk{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}60%{transform:translateX(8px)}80%{transform:translateX(-4px)}}
+#enter{width:100%;padding:14px;background:var(--ink);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:600;transition:opacity .2s}
+#enter:hover{opacity:.82}
+#lockerr{display:block;font-size:12px;color:var(--red);margin-top:8px;min-height:16px}
+.lock-hint{font-size:12px;color:var(--muted);margin-top:14px}
+.lockfoot{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);font-size:12px;color:rgba(255,255,255,.35);letter-spacing:.04em}
+#app{display:none}
+nav{position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(245,245,247,.9);backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid var(--hair)}
+.nav-brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--ink)}
+.nav-leaf{width:28px;height:28px;border-radius:7px;background:linear-gradient(145deg,#9DC81A,#6E9410);display:flex;align-items:center;justify-content:center;font-size:13px}
+.nav-r{display:flex;align-items:center;gap:12px}
+.nav-date{font-size:13px;color:var(--sec)}
+.pill-live{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:980px;background:rgba(0,113,227,.1);color:var(--blue);font-size:12px;font-weight:600}
+.pill-live::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.nav-lock-btn{font-size:12px;color:var(--sec);background:none;border:none;padding:4px 8px}
+.wrap{max-width:1060px;margin:0 auto;padding:var(--section-pad)}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;color:var(--sec);background:none;border:.5px solid var(--hair);border-radius:980px;padding:7px 16px;margin-bottom:24px;transition:border-color .15s}
+.back:hover{border-color:var(--ink);color:var(--ink)}
+.kicker{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sec);display:block;margin-bottom:8px}
+.serif{font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.lede{font-size:14px;color:var(--sec);margin-top:10px;line-height:1.5}
+.note{display:flex;gap:12px;align-items:flex-start;background:rgba(178,80,0,.07);border:.5px solid rgba(178,80,0,.25);border-radius:14px;padding:16px 18px;margin:26px 0 8px}
+.note .ico{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:rgba(178,80,0,.14);display:flex;align-items:center;justify-content:center;font-size:14px}
+.note .txt{font-size:13px;line-height:1.55;color:var(--ink)}
+.note .txt b{color:var(--amber)}
+.sec-h{display:flex;align-items:center;justify-content:space-between;margin:46px 0 14px;padding-bottom:12px;border-bottom:.5px solid var(--hair)}
+.sec-h h2{font-size:13px;font-weight:600;color:var(--sec);letter-spacing:.05em;text-transform:uppercase}
+.sec-h .rng{font-size:12px;color:var(--muted)}
+#stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:var(--white);border-radius:var(--card);border:.5px solid var(--hair);padding:18px 20px}
+.stat .n{font-size:28px;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.stat .n small{font-size:15px;font-weight:400;color:var(--sec)}
+.stat .l{font-size:12px;color:var(--sec);font-weight:500;margin-top:5px}
+.stat .d{font-size:11px;font-weight:600;margin-top:7px;display:inline-flex;align-items:center;gap:3px}
+.d.up{color:var(--green)}.d.dn{color:var(--red)}.d.flat{color:var(--muted)}
+.panel{background:var(--white);border-radius:var(--card);border:.5px solid var(--hair);padding:24px 26px}
+.chart{display:flex;align-items:flex-end;gap:6px;height:178px;padding-top:8px;position:relative;border-bottom:.5px solid var(--hair)}
+.clip{position:absolute;left:0;right:0;top:50px;border-top:1px dashed var(--hair)}
+.clip span{position:absolute;right:0;top:-8px;font-size:9px;color:var(--muted);background:var(--white);padding:0 4px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+.bar .v{font-size:9px;color:var(--muted);font-weight:600}
+.bar .col{width:100%;max-width:30px;background:var(--blue);border-radius:4px 4px 0 0;min-height:2px}
+.bar.spike .col{background:linear-gradient(180deg,#C77b1f,#B25000)}
+.bar.spike .v{color:var(--amber)}
+.xlab{display:flex;gap:6px;margin-top:7px}
+.xlab span{flex:1;text-align:center;font-size:9px;color:var(--muted)}
+.cap{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.5}
+.rows{display:flex;flex-direction:column;gap:11px}
+.row{display:grid;grid-template-columns:160px 1fr 64px;align-items:center;gap:12px}
+.row .rk{font-size:13px;color:var(--ink);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .rk small{display:block;font-size:10px;color:var(--muted);font-weight:400}
+.row .track{height:8px;background:var(--bg);border-radius:5px;overflow:hidden}
+.row .track i{display:block;height:100%;background:var(--leaf);border-radius:5px}
+.row .track i.blu{background:var(--blue)}
+.row .rv{font-size:13px;font-weight:600;text-align:right}
+.row .rv small{font-weight:400;color:var(--muted);font-size:11px}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dev{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:6px 0 14px}
+.dev i{height:100%}
+.dev .dk{background:var(--blue)}.dev .mb{background:var(--leaf)}
+.legend{display:flex;gap:18px;font-size:12px;color:var(--sec)}
+.legend b{color:var(--ink)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:middle}
+.empty{text-align:center;padding:34px 24px}
+.empty .ei{width:50px;height:50px;border-radius:14px;background:rgba(0,113,227,.08);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 14px}
+.empty h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.empty p{font-size:13px;color:var(--sec);line-height:1.55;max-width:440px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:4px 11px;border-radius:980px;margin-top:14px}
+.badge.coll{background:rgba(178,80,0,.1);color:var(--amber)}
+.gscmeta{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.gscmeta span{font-size:11px;color:var(--sec);background:var(--bg);border:.5px solid var(--hair);border-radius:8px;padding:5px 10px}
+.foot{margin-top:54px;padding-top:22px;border-top:.5px solid var(--hair);font-size:12px;color:var(--muted);line-height:1.6}
+.foot b{color:var(--sec);font-weight:600}
+@media(max-width:760px){
+  .wrap{padding:48px 18px}
+  #stats{grid-template-columns:1fr 1fr}
+  .twocol{grid-template-columns:1fr}
+  .row{grid-template-columns:128px 1fr 56px}
+  .serif{font-size:30px}
+}
+</style>
+</head>
+<body>
+
+<div id="lock">
+  <div class="lock-card">
+    <div class="lock-icon">🌿</div>
+    <div class="lock-title">Haps Club</div>
+    <div class="lock-sub">SEO &amp; Traffic<br>Enter the passphrase to continue.</div>
+    <input id="pw" type="password" placeholder="Passphrase" autocomplete="off">
+    <span id="lockerr"></span>
+    <button id="enter">Enter</button>
+    <p class="lock-hint">Private · Haps Club Events</p>
+  </div>
+  <div class="lockfoot">Private · Haps Club Events</div>
+</div>
+
+<div id="app">
+
+<nav>
+  <div class="nav-brand">
+    <div class="nav-leaf">🌿</div>
+    Haps Club
+  </div>
+  <div class="nav-r">
+    <span class="nav-date" id="nav-date"></span>
+    <span class="pill-live">SEO &amp; Traffic</span>
+    <button class="nav-lock-btn" data-lock>Lock</button>
+  </div>
+</nav>
+
+<div class="wrap">
+  <a class="back" href="/dashboard/">← Command Center</a>
+  <span class="kicker">Analytics · Google Analytics 4</span>
+  <h1 class="serif">SEO &amp; Traffic</h1>
+  <p class="lede">haps.club · GA4 property 536909119 · snapshot Jun 8, 2026. Numbers refresh each time the page is regenerated — this is not a live client-side feed.</p>
+
+  <div class="note">
+    <div class="ico">⚠️</div>
+    <div class="txt"><b>Read the June 5 spike with caution.</b> 991 of the week's 1,067 active users arrived on a single day (Jun 5), almost entirely as <i>Direct</i> traffic, with top "cities" being San Jose, Moses Lake, Des Moines and Ashburn (a major datacenter region) rather than Los Angeles. That pattern reads as a bot / referral surge, not organic growth — so the week-over-week percentages below are inflated by it. The underlying real audience is the steady ~5–35 users/day baseline.</div>
+  </div>
+
+  <div class="sec-h"><h2>Last 7 days</h2><span class="rng">Jun 1 – Jun 7 · vs prior 7 days</span></div>
+  <div id="stats">
+    <div class="stat"><div class="n">1,067</div><div class="l">Active users</div><div class="d up">▲ +2,078% WoW</div></div>
+    <div class="stat"><div class="n">1,063</div><div class="l">New users</div><div class="d up">▲ +2,162% WoW</div></div>
+    <div class="stat"><div class="n">1,169</div><div class="l">Sessions</div><div class="d up">▲ +1,259% WoW</div></div>
+    <div class="stat"><div class="n">1,380</div><div class="l">Page views</div><div class="d up">▲ +381% WoW</div></div>
+    <div class="stat"><div class="n">682</div><div class="l">Engaged sessions</div><div class="d up">▲ +1,649% WoW</div></div>
+    <div class="stat"><div class="n">58.3<small>%</small></div><div class="l">Engagement rate</div><div class="d up">▲ +13.0 pts WoW</div></div>
+    <div class="stat"><div class="n">0:56</div><div class="l">Avg. session</div><div class="d dn">▼ −82% WoW</div></div>
+    <div class="stat"><div class="n">1.10</div><div class="l">Sessions / user</div><div class="d dn">▼ −38% WoW</div></div>
+  </div>
+
+  <div class="sec-h"><h2>Daily active users</h2><span class="rng">Last 14 days</span></div>
+  <div class="panel">
+    <div class="chart">
+      <div class="clip"><span>scale clipped ↑</span></div>
+      <div class="bar"><span class="v">26</span><div class="col" style="height:78px"></div></div>
+      <div class="bar"><span class="v">1</span><div class="col" style="height:3px"></div></div>
+      <div class="bar"><span class="v">4</span><div class="col" style="height:12px"></div></div>
+      <div class="bar"><span class="v">4</span><div class="col" style="height:12px"></div></div>
+      <div class="bar"><span class="v">11</span><div class="col" style="height:33px"></div></div>
+      <div class="bar"><span class="v">9</span><div class="col" style="height:27px"></div></div>
+      <div class="bar"><span class="v">8</span><div class="col" style="height:24px"></div></div>
+      <div class="bar"><span class="v">27</span><div class="col" style="height:81px"></div></div>
+      <div class="bar"><span class="v">3</span><div class="col" style="height:9px"></div></div>
+      <div class="bar"><span class="v">5</span><div class="col" style="height:15px"></div></div>
+      <div class="bar spike"><span class="v">991</span><div class="col" style="height:160px"></div></div>
+      <div class="bar"><span class="v">35</span><div class="col" style="height:105px"></div></div>
+      <div class="bar"><span class="v">23</span><div class="col" style="height:69px"></div></div>
+    </div>
+    <div class="xlab">
+      <span>5/26</span><span>5/27</span><span>5/28</span><span>5/29</span><span>5/30</span><span>5/31</span><span>6/1</span><span>6/2</span><span>6/3</span><span>6/4</span><span>6/5</span><span>6/6</span><span>6/7</span>
+    </div>
+    <p class="cap">The Jun 5 bar (991) is clipped to fit — every other day sits in the 1–35 range. The baseline reflects the site's real day-to-day audience.</p>
+  </div>
+
+  <div class="sec-h"><h2>Last 28 days</h2><span class="rng">May 11 – Jun 7</span></div>
+  <div id="stats">
+    <div class="stat"><div class="n">1,317</div><div class="l">Active users</div></div>
+    <div class="stat"><div class="n">1,314</div><div class="l">New users</div></div>
+    <div class="stat"><div class="n">1,559</div><div class="l">Sessions</div></div>
+    <div class="stat"><div class="n">2,318</div><div class="l">Page views</div></div>
+    <div class="stat"><div class="n">831</div><div class="l">Engaged sessions</div></div>
+    <div class="stat"><div class="n">53.3<small>%</small></div><div class="l">Engagement rate</div></div>
+  </div>
+
+  <div class="sec-h"><h2>Traffic by channel</h2><span class="rng">Sessions · 28 days</span></div>
+  <div class="panel">
+    <div class="rows">
+      <div class="row"><span class="rk">Direct</span><div class="track"><i class="blu" style="width:100%"></i></div><span class="rv">1,375</span></div>
+      <div class="row"><span class="rk">Referral</span><div class="track"><i class="blu" style="width:7.2%"></i></div><span class="rv">99</span></div>
+      <div class="row"><span class="rk">Organic Social</span><div class="track"><i class="blu" style="width:4.6%"></i></div><span class="rv">63</span></div>
+      <div class="row"><span class="rk">Organic Search</span><div class="track"><i class="blu" style="width:1.5%"></i></div><span class="rv">21</span></div>
+      <div class="row"><span class="rk">Unassigned</span><div class="track"><i class="blu" style="width:1%"></i></div><span class="rv">2</span></div>
+    </div>
+    <p class="cap">Organic Search is still tiny (21 sessions) — expected for a five-week-old domain. This is the number the Search Console section below will help grow.</p>
+  </div>
+
+  <div class="sec-h"><h2>Top pages</h2><span class="rng">Views · 28 days</span></div>
+  <div class="panel">
+    <div class="rows">
+      <div class="row"><span class="rk">/ <small>Homepage</small></span><div class="track"><i style="width:100%"></i></div><span class="rv">1,382<small> · 598u</small></span></div>
+      <div class="row"><span class="rk">/jwjxh4zp <small>Solstice tickets (Luma)</small></span><div class="track"><i style="width:58.8%"></i></div><span class="rv">812<small> · 691u</small></span></div>
+      <div class="row"><span class="rk">/subscribe <small>Newsletter sign-up</small></span><div class="track"><i style="width:4.7%"></i></div><span class="rv">65<small> · 82u</small></span></div>
+      <div class="row"><span class="rk">/TheHapsClub <small>Luma profile</small></span><div class="track"><i style="width:3%"></i></div><span class="rv">41<small> · 4u</small></span></div>
+      <div class="row"><span class="rk">/hapsclub_cincodemayo</span><div class="track"><i style="width:0.4%"></i></div><span class="rv">6<small> · 5u</small></span></div>
+      <div class="row"><span class="rk">/staging.html <small>staging — candidate to prune</small></span><div class="track"><i style="width:0.3%"></i></div><span class="rv">4<small> · 1u</small></span></div>
+      <div class="row"><span class="rk">/user/MichaelAbraham</span><div class="track"><i style="width:0.2%"></i></div><span class="rv">3<small> · 3u</small></span></div>
+      <div class="row"><span class="rk">/discover</span><div class="track"><i style="width:0.2%"></i></div><span class="rv">1<small> · 1u</small></span></div>
+    </div>
+  </div>
+
+  <div class="twocol" style="margin-top:14px">
+    <div class="panel">
+      <div class="sec-h" style="margin:0 0 14px"><h2>Devices</h2><span class="rng">28 days</span></div>
+      <div class="dev"><i class="dk" style="width:82%"></i><i class="mb" style="width:18%"></i></div>
+      <div class="legend"><span><i style="background:var(--blue)"></i>Desktop <b>82%</b> · 1,279</span><span><i style="background:var(--leaf)"></i>Mobile <b>18%</b> · 280</span></div>
+      <p class="cap">Desktop-heavy — unusual for an events/discovery audience and another nudge that recent traffic skews non-organic. Worth re-checking after the spike clears.</p>
+    </div>
+    <div class="panel">
+      <div class="sec-h" style="margin:0 0 14px"><h2>Top sources</h2><span class="rng">Sessions · 28 days</span></div>
+      <div class="rows">
+        <div class="row"><span class="rk">(direct) / (none)</span><div class="track"><i class="blu" style="width:100%"></i></div><span class="rv">1,375</span></div>
+        <div class="row"><span class="rk">ig / social</span><div class="track"><i class="blu" style="width:3.1%"></i></div><span class="rv">43</span></div>
+        <div class="row"><span class="rk">haps.club / referral</span><div class="track"><i class="blu" style="width:2.2%"></i></div><span class="rv">30</span></div>
+        <div class="row"><span class="rk">mail.google.com</span><div class="track"><i class="blu" style="width:1.7%"></i></div><span class="rv">24</span></div>
+        <div class="row"><span class="rk">compass.com</span><div class="track"><i class="blu" style="width:1.7%"></i></div><span class="rv">23</span></div>
+        <div class="row"><span class="rk">google / organic</span><div class="track"><i class="blu" style="width:1.3%"></i></div><span class="rv">18</span></div>
+        <div class="row"><span class="rk">l.instagram.com</span><div class="track"><i class="blu" style="width:0.9%"></i></div><span class="rv">13</span></div>
+        <div class="row"><span class="rk">link.edgepilot.com</span><div class="track"><i class="blu" style="width:0.7%"></i></div><span class="rv">10</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-h"><h2>Top cities</h2><span class="rng">Active users · 28 days</span></div>
+  <div class="panel">
+    <div class="rows">
+      <div class="row"><span class="rk">(not set)</span><div class="track"><i style="width:100%"></i></div><span class="rv">252</span></div>
+      <div class="row"><span class="rk">San Jose, CA</span><div class="track"><i style="width:86.5%"></i></div><span class="rv">218</span></div>
+      <div class="row"><span class="rk">Moses Lake, WA</span><div class="track"><i style="width:77%"></i></div><span class="rv">194</span></div>
+      <div class="row"><span class="rk">Des Moines, IA</span><div class="track"><i style="width:72.2%"></i></div><span class="rv">182</span></div>
+      <div class="row"><span class="rk">Los Angeles, CA</span><div class="track"><i style="width:54%"></i></div><span class="rv">136</span></div>
+      <div class="row"><span class="rk">Ashburn, VA</span><div class="track"><i style="width:39.3%"></i></div><span class="rv">99</span></div>
+    </div>
+    <p class="cap">For an LA events site, LA should dominate. It doesn't here — San Jose, Moses Lake, Des Moines and Ashburn (datacenter region) all outrank it, reinforcing the bot read on the Jun 5 surge.</p>
+  </div>
+
+  <div class="sec-h"><h2>Search Console</h2><span class="rng">sc-domain:haps.club</span></div>
+  <div class="panel">
+    <div class="empty">
+      <div class="ei">🔍</div>
+      <h3>Collecting search data</h3>
+      <p>The property is verified and owned (siteOwner), but Google hasn't reported any search clicks or impressions for the last 28 days yet. New domains typically take a few weeks to start accruing Search performance data after verification and sitemap submission. This section will fill in with top queries, pages, clicks, impressions, CTR and average position once data lands.</p>
+      <span class="badge coll">● Collecting — no data yet</span>
+      <div class="gscmeta">
+        <span>Property: sc-domain:haps.club</span>
+        <span>Permission: siteOwner</span>
+        <span>Sitemap submission: pending</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <b>Source:</b> Google Analytics 4 (property 536909119), pulled via the connected Haps Club account. Search Console: sc-domain:haps.club. <br>
+    <b>Snapshot:</b> Jun 8, 2026. Figures are a point-in-time pull, not a live feed — regenerate this page to refresh. GA4 timezone America/Los_Angeles.<br>
+    © 2026 Haps Club
+  </div>
+</div>
+
+</div>
+
+<script>
+var PW='Haps#2026';
+function showApp(){document.getElementById('lock').style.display='none';document.getElementById('app').style.display='block';updateNavDate();}
+function tryUnlock(){var v=document.getElementById('pw').value;if(v===PW){try{sessionStorage.setItem('haps_dash_ok','1');}catch(e){}showApp();}else{var i=document.getElementById('pw');i.classList.add('err');document.getElementById('lockerr').textContent='Incorrect passphrase';setTimeout(function(){i.classList.remove('err');},400);}}
+function updateNavDate(){document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});}
+document.getElementById('enter').addEventListener('click',tryUnlock);
+document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')tryUnlock();});
+document.querySelector('[data-lock]').addEventListener('click',function(){try{sessionStorage.removeItem('haps_dash_ok');}catch(e){}document.getElementById('lock').style.display='flex';document.getElementById('app').style.display='none';document.getElementById('pw').value='';});
+try{if(sessionStorage.getItem('haps_dash_ok')==='1')showApp();}catch(e){}
+</script>
+</body>
+</html>
