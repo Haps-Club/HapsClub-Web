@@ -1,18 +1,23 @@
 # Haps Club
 
-> Haps Club is a hand-picked weekly guide to the best events, food, music, and culture in Los Angeles. A free email goes out every Tuesday morning, and the homepage is refreshed continuously with current picks across the city.
+> Haps Club is a hand-picked guide to what is worth doing in Los Angeles this week — events, food, and culture. It is delivered as a free weekly email every Tuesday morning and as a continuously updated homepage at https://haps.club.
 
-Haps Club is independent and made by hand in LA. Coverage spans neighborhoods across Los Angeles — the Eastside, Westside, Hollywood, Mid-City, Downtown, West Adams, and beyond — with picks organized by category: food, culture, music, outdoors, date ideas, and free things to do. Recommendations are verified before they are published; the goal is a short, trustworthy list of what is genuinely worth leaving the house for this week.
+Haps Club is independent and editorial: a real person reading the city, not an algorithmic listings feed. Every pick names its LA neighborhood and links straight to the source. Coverage spans the Eastside, Westside, Hollywood, West Hollywood, Mid-City, Downtown, and beyond. Founded and written by Michael Abraham.
 
-## Main pages
-- [This Week in LA — homepage](https://haps.club/): Current hand-picked events and recommendations across Los Angeles, refreshed continuously.
-- [Subscribe](https://haps.club/subscribe): The free weekly newsletter, sent every Tuesday morning. Unsubscribe anytime.
-- [About](https://haps.club/about.html): What Haps Club is, who makes it, and how to submit a tip.
+## Key pages
+- [This week in LA](https://haps.club/): The current week's hand-picked events, food, and culture, filterable by category and neighborhood.
+- [Subscribe](https://haps.club/subscribe): Join the free newsletter — one email every Tuesday morning, unsubscribe anytime.
+- [About](https://haps.club/about): Who runs Haps Club, the editorial philosophy, and how to submit a tip.
+- [Sitemap](https://haps.club/sitemap): A full, human-readable index of pages.
 
 ## Events
-- [Summer Solstice in the Garden](https://haps.club/events/summer-solstice-in-the-garden/): Saturday, June 20, 2026, 5–9 PM, at Twentieth Street Garden (2267 W 20th St) in West Adams, Los Angeles. An open-air evening with BBQ on site and a beverage included. Tickets via Luma.
+- [Summer Solstice in the Garden](https://haps.club/events/summer-solstice-in-the-garden/): Saturday, June 20, 2026, 5–9 PM at Twentieth Street Garden in West Adams, Los Angeles. An open-air evening with BBQ on site and a beverage included. Tickets from $10.
 
-## Contact and follow
-- Email: michael@haps.club
-- Instagram: https://instagram.com/thehapsclub/
-- A public Los Angeles events calendar is linked from the site footer.
+## Contact
+- Email: newsletter@haps.club
+- Instagram: https://instagram.com/thehapsclub
+
+## Notes
+- Coverage area: Los Angeles, California, USA.
+- Cadence: a weekly email on Tuesdays, plus a daily homepage refresh.
+- Cost: free.
