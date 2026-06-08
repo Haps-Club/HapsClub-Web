@@ -1,4 +1,133 @@
+# Haps Club — robots.txt
+# This Week in LA · https://haps.club
+
 User-agent: *
 Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+# AI assistants and answer engines are welcome to read and cite Haps Club.
+# (Private/staging paths stay disallowed below.)
+
+User-agent: GPTBot
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: CCBot
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /staging.html
+Disallow: /dashboard/
+Disallow: /partnership/
+Disallow: /events/summer-solstice-in-the-garden/ops/
+Disallow: /events/summer-garden-party/ops/
+Disallow: /events/summer-garden-party/
 
 Sitemap: https://haps.club/sitemap.xml
