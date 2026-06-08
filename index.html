@@ -107,6 +107,7 @@ body.night .tile.rec .cat{background:rgba(255,107,71,.28);color:#fff}
 .cat{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--c,var(--navy));background:color-mix(in srgb,var(--c,var(--navy)) 13%,#fff);padding:6px 11px;border-radius:999px;white-space:nowrap}
 .cat svg{font-size:13px}
 .badge{flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.6px;color:var(--coral);background:color-mix(in srgb,var(--coral) 14%,#fff);padding:6px 10px;border-radius:10px}
+.badge.new{background:var(--coral);color:#fff;animation:pop .4s var(--ease)}
 .tile h3{font-family:var(--serif);font-size:26px;font-weight:400;line-height:1.03;margin:13px 0 7px;position:relative;z-index:2}
 .tile p{font-size:13.5px;color:#5c576b;line-height:1.55;position:relative;z-index:2;margin-bottom:0}
 .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:14px;padding-bottom:20px;position:relative;z-index:2}
@@ -445,17 +446,6 @@ body.night .empty .big{color:#fff}
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <article class="tile t-culture" data-cat="culture free" data-when="upcoming"
-    data-title="The Sea Around Us at the Hammer" data-start="20260603T193000" data-end="20260603T210000" data-loc="Hammer Museum, 10899 Wilshire Blvd, Los Angeles, CA 90024"
-    data-details="Free screening of Rebeca Mendez's The Sea Around Us, followed by a conversation with the artist, UCLA professor Elizabeth DeLoughrey, and journalist Rosanna Xia. Wednesday June 3, 7:30pm. Free. via Haps Club"
-    data-link="https://hammer.ucla.edu" style="animation-delay:.05s" data-area="westside">
-    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">JUN 3</span></div>
-    <h3>The Sea Around Us — Hammer Screening</h3>
-    <p>Artist Rebeca Mendez's filmwork screens in Westwood, then she sits down with UCLA's Elizabeth DeLoughrey and journalist Rosanna Xia. Wednesday night at 7:30 — and like everything at the Hammer, free.</p>
-    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Westwood</span><span class="tag free">Free</span><span class="tag date">Wed 6/3</span></div>
-    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-  </article>
-
   <article class="tile t-food" data-cat="food free" data-when="weekend"
     data-title="Smorgasburg LA — Sundays" data-loc="ROW DTLA, 777 S Alameda St, Los Angeles, CA"
     data-details="Open-air food market every Sunday, 10am-4pm. Free entry. via Haps Club" data-link="https://la.smorgasburg.com/" style="animation-delay:.1s" data-area="dtla">
@@ -466,24 +456,80 @@ body.night .empty .big{color:#fff}
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <!-- MEDIUM: upcoming, AWOL -->
-  <article class="tile wide awol t-date" data-cat="date" data-when="upcoming"
-    data-title="Penmar Wine Mixer" data-start="20260606" data-loc="Penmar, Venice, CA"
-    data-details="AWOL pick - Westside wine mixer. Venice, June 6. via Haps Club" data-link="https://www.instagram.com/thehapsclub/" style="animation-delay:.15s" data-area="westside">
-    <div class="head"><span class="flag"><svg class="ic"><use href="#i-comp"/></svg>AWOL · West of Lincoln</span><span class="badge">JUN 6</span></div>
-    <h3>Penmar Wine Mixer</h3>
-    <p>Natural pours and a soft-launch crowd in Venice. For the subscribers who simply do not cross the 405, this one comes to you.</p>
-    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Venice</span><span class="tag date">Date</span></div>
+  <article class="tile wide t-culture" data-cat="culture music food" data-when="upcoming"
+    data-title="FIFA Fan Festival - Los Angeles" data-start="20260611T100000" data-end="20260614T210000" data-loc="Los Angeles Memorial Coliseum, 3911 S Figueroa St, Los Angeles, CA 90037"
+    data-details="The official FIFA World Cup Fan Festival at the Coliseum: live match broadcasts on giant screens, global food, and music from Los Lobos, Steve Aoki and Capital Cities. June 11-14, opens Thursday at 10am. Tickets $10 via Ticketmaster, kids under 12 free. via Haps Club"
+    data-link="https://www.lacoliseum.com/events/fifa-fan-festival-los-angeles/" style="animation-delay:.05s" data-area="dtla">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">JUN 11&ndash;14</span></div>
+    <h3>FIFA Fan Festival at the Coliseum</h3>
+    <p>The World Cup turns the Coliseum into a four-day open-air party — matches on giant screens, food from across the city, and sets from Los Lobos, Steve Aoki and Capital Cities. Opening weekend, ten bucks at the gate, kids free.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Exposition Park</span><span class="tag paid">From $10</span><span class="tag date">Jun 11&ndash;14</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <article class="tile wide awol t-music" data-cat="music date" data-when="upcoming"
-    data-title="Perry's Beach Club" data-start="20260606" data-loc="930 Pacific Coast Hwy, Santa Monica, CA 90401"
-    data-details="AWOL pick - open-air beach club with guest DJs on PCH. Santa Monica, Saturday June 6, 3-8pm, 21+. Tickets from ~$23 via Eventbrite. via Haps Club" data-link="https://www.eventbrite.com/e/perrys-beach-club-saturday-66-tickets-1989405174430" style="animation-delay:.16s" data-area="westside">
-    <div class="head"><span class="flag"><svg class="ic"><use href="#i-comp"/></svg>AWOL · West of Lincoln</span><span class="badge">JUN 6</span></div>
-    <h3>Perry's Beach Club</h3>
-    <p>Sand, firepits and a guest DJ booth that has lately run to the likes of Kaskade and Diplo — Santa Monica’s open-air day club, right on PCH. Doors at 3, 21-and-up, tickets from around twenty bucks.</p>
-    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Santa Monica</span><span class="tag paid">Ticketed</span><span class="tag date">Sat 6/6</span></div>
+  <article class="tile wide t-music" data-cat="music free" data-when="upcoming"
+    data-title="Off the 405: Hunx and His Punx" data-start="20260613T193000" data-end="20260613T210000" data-loc="Getty Center, 1200 Getty Center Dr, Los Angeles, CA 90049"
+    data-details="The Getty's free summer concert series Off the 405 hosts queer garage-punk trio Hunx and His Punx. Saturday June 13 — DJ in the courtyard at 6, main set at 7:30, galleries open late. Free, but reserve ahead at getty.edu. via Haps Club"
+    data-link="https://www.getty.edu/calendar/off-the-405-hunx-his-punx/" style="animation-delay:.06s" data-area="westside">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-music"/></svg>Music</span><span class="badge">JUN 13</span></div>
+    <h3>Off the 405: Hunx and His Punx</h3>
+    <p>The hardest free ticket in LA is back — sunset on the Getty courtyard, a DJ at 6, then Seth Bogart and Shannon Shaw's campy queer punk at 7:30. Reserve ahead, pack a picnic, stay for the view.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Brentwood</span><span class="tag free">Free</span><span class="tag date">Sat 6/13</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile wide t-culture" data-cat="culture free" data-when="upcoming"
+    data-title="LA Pride Parade - Hollywood" data-start="20260614T110000" data-end="20260614T140000" data-loc="Hollywood Blvd between Highland and Cahuenga, Los Angeles, CA 90028"
+    data-details="The 56th LA Pride Parade steps off at 11am down Hollywood Blvd, with the free Pride Village street festival running alongside from 12:30 to 8:30pm. Sunday June 14. Free. via Haps Club"
+    data-link="https://lapride.org/2026-events/" style="animation-delay:.07s" data-area="hollywood">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">JUN 14</span></div>
+    <h3>LA Pride Takes Hollywood Blvd</h3>
+    <p>The 56th edition steps off at 11 down Hollywood Boulevard, with the free Pride Village street festival running beside it into the evening. Over 100,000 people, two Metro stops, and the original home of Pride in LA.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</span><span class="tag free">Free</span><span class="tag date">Sun 6/14</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile t-culture" data-cat="culture date" data-when="upcoming"
+    data-title="RHEOLOGY at REDCAT" data-start="20260611T200000" data-end="20260613T213000" data-loc="REDCAT, 631 W 2nd St, Los Angeles, CA 90012"
+    data-details="Playwright Shayok Misha Chowdhury and his physicist mother Bulbul Chakraborty stage RHEOLOGY, an Obie-winning play about family and the physics of sand, fresh off an Off-Broadway run. June 11-13 at 8pm at REDCAT. via Haps Club"
+    data-link="https://www.redcat.org" style="animation-delay:.08s" data-area="dtla">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">JUN 11&ndash;13</span></div>
+    <h3>RHEOLOGY at REDCAT</h3>
+    <p>A playwright and his physicist mother turn the flow of sand into a meditation on time and mortality — an Obie winner landing at REDCAT for three nights after an extended Off-Broadway run. Downtown, 8pm.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Downtown</span><span class="tag paid">Ticketed</span><span class="tag date">Jun 11&ndash;13</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile t-culture" data-cat="culture free" data-when="upcoming"
+    data-title="Living Art at Helms Design District" data-start="20260613T110000" data-end="20260613T160000" data-loc="Helms Design District, 8800 Venice Blvd, Culver City, CA 90232"
+    data-details="Living Art: An Exhibition of Connection, presented by L.A. GOAL and Inside Out Productions, featuring artists of all abilities. Opening reception Saturday June 13, 11am-4pm at Helms; closing reception June 20, 12-3pm; by appointment June 15-18. Free. via Haps Club"
+    data-link="https://helmsdesigndistrict.com" style="animation-delay:.09s" data-area="westside">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">JUN 13</span></div>
+    <h3>Living Art at Helms</h3>
+    <p>An exhibition of work by artists of all abilities and backgrounds, from L.A. GOAL and Inside Out Productions. Opening reception Saturday in Culver City, a closing the following Saturday, and viewings by appointment in between.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Culver City</span><span class="tag free">Free</span><span class="tag date">Sat 6/13</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile t-culture" data-cat="culture outdoors free" data-when="upcoming"
+    data-title="Long Beach Walls Mural Festival" data-start="20260612T170000" data-end="20260612T220000" data-loc="Downtown Long Beach, CA"
+    data-details="Long Beach Walls and Art Renzei turn the city into an open-air gallery — roughly 150 new murals citywide, with a bike tour, night market and a Friday closing party (June 12, 5-10pm). Festival runs June 8-13. Free, murals viewable anytime. via Haps Club"
+    data-link="https://www.longbeachwalls.com" style="animation-delay:.1s" data-area="citywide">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">THRU JUN 13</span></div>
+    <h3>Long Beach Walls Mural Festival</h3>
+    <p>The old POW! WOW! festival, reborn — international muralists repainting Long Beach across 40 square miles, plus a bike tour and a Friday night market. The murals stay up for good; the painting and parties wrap this weekend.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Long Beach</span><span class="tag free">Free</span><span class="tag date">Thru 6/13</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile t-culture" data-cat="culture music date" data-when="upcoming"
+    data-title="Hell's Kitchen at the Pantages" data-start="20260617T193000" data-end="20260617T220500" data-loc="Hollywood Pantages Theatre, 6233 Hollywood Blvd, Los Angeles, CA 90028"
+    data-details="Alicia Keys' Tony-winning coming-of-age musical, set to her songbook, plays the Hollywood Pantages through June 21. Tuesday-Sunday, evenings plus weekend matinees; tickets from $57. via Haps Club"
+    data-link="https://www.broadwayinhollywood.com/events/detail/hells-kitchen" style="animation-delay:.11s" data-area="hollywood">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-culture"/></svg>Culture</span><span class="badge">THRU JUN 21</span></div>
+    <h3>Hell's Kitchen at the Pantages</h3>
+    <p>Alicia Keys' semi-autobiographical musical — "Fallin'," "Girl on Fire," and a 17-year-old finding her voice — closes out its LA run at the Pantages. Tuesday through Sunday, evenings and weekend matinees, seats from $57.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Hollywood</span><span class="tag paid">From $57</span><span class="tag date">Thru 6/21</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
@@ -506,14 +552,36 @@ body.night .empty .big{color:#fff}
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
-  <article class="tile t-food" data-cat="food" data-when="upcoming"
-    data-title="Alta Adams Reopens" data-start="20260604" data-loc="Alta Adams, 5359 W Adams Blvd, Los Angeles, CA 90016"
-    data-details="Keith Corbin's West Adams landmark is back with a reimagined seasonal menu spanning the American South, West Africa, Asia and Mesoamerica. Open Tue-Sun 5-10pm; a fresh round of reservations opens June 4. via Haps Club"
+  <article class="tile t-food" data-cat="food" data-when="evergreen"
+    data-title="Alta Adams" data-loc="Alta Adams, 5359 W Adams Blvd, Los Angeles, CA 90016"
+    data-details="Keith Corbin's West Adams landmark, reopened with a seasonal menu spanning the American South, West Africa, Asia and Mesoamerica. Open Tue-Sun, 5-10pm. via Haps Club"
     data-link="https://altaadams.com" style="animation-delay:.19s" data-area="midcity">
-    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">JUN 4</span></div>
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge">OPEN</span></div>
     <h3>Alta Adams</h3>
-    <p>Keith Corbin reopened his West Adams room with a rebuilt seasonal menu — shared plates pulling from the South, West Africa, Asia and Mesoamerica, dishes landing as they're ready. A fresh batch of reservations opens June 4.</p>
+    <p>Keith Corbin's West Adams room, back with a rebuilt seasonal menu — shared plates pulling from the South, West Africa, Asia and Mesoamerica, landing as they're ready. A short walk from the Solstice garden, worth a table either way.</p>
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>West Adams</span><span class="tag">Dinner</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile t-food" data-cat="food" data-when="evergreen"
+    data-title="Cinnies at Grand Central Market" data-loc="Grand Central Market, 317 S Broadway, Los Angeles, CA 90013"
+    data-details="Cinnies makes its DTLA debut at Grand Central Market with oversized cinnamon rolls — Classic, Blueberry Lemon, a rotating flavor and a GCM-only special. Open Wednesday-Sunday, 9am-9pm. via Haps Club"
+    data-link="https://www.grandcentralmarket.com" style="animation-delay:.12s" data-area="dtla">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge new">NEW</span></div>
+    <h3>Cinnies Lands at Grand Central Market</h3>
+    <p>The oversized-cinnamon-roll cult favorite, long a farmers'-market regular, just opened a permanent stall at GCM. Classic, blueberry lemon, a rotating flavor, and one you can only get here. Wednesday to Sunday, 9 to 9.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>DTLA</span><span class="tag">Open now</span></div>
+    <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
+  </article>
+
+  <article class="tile t-food" data-cat="food" data-when="evergreen"
+    data-title="Lielle" data-loc="Lielle, 9575 W Pico Blvd, Los Angeles, CA 90035"
+    data-details="Swedish-born chef Marcus Jernmark's hyper-seasonal four-course prix fixe in Pico-Robertson runs $150 — a relative bargain in LA fine dining, and Michelin-listed. Menu changes every five weeks; reservations are scarce. Dinner 5:30-9pm. via Haps Club"
+    data-link="https://www.lielle.la" style="animation-delay:.13s" data-area="midcity">
+    <div class="head"><span class="cat"><svg class="ic"><use href="#i-food"/></svg>Food</span><span class="badge new">NEW</span></div>
+    <h3>Lielle</h3>
+    <p>Chef Marcus Jernmark spent four years learning California's farmers' markets before opening this Pico-Robertson room. The payoff: a hyper-seasonal four-course menu at $150 — a steal by tasting-menu math. Book early.</p>
+    <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Pico-Robertson</span><span class="tag paid">$150 prix fixe</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
 
@@ -695,18 +763,6 @@ body.night .empty .big{color:#fff}
     <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Malibu</span><span class="tag free">Free</span></div>
     <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
   </article>
-
-  <article class="tile t-music rec" data-cat="music date" data-when="upcoming"
-  data-title="MindTravel Silent Piano Concert" data-start="20260606T193000" data-end="20260606T220000"
-  data-loc="Elysian Park, Los Angeles, CA"
-  data-details="Murray Hidary's silent piano under the stars at Elysian Park. Group discount via Barrett's affiliate link. via Haps Club"
-  data-link="https://www.eventbrite.com/e/mindtravel-june-live-to-headphones-silent-piano-concert-in-los-angeles-tickets-1988282409209?aff=barrett" style="animation-delay:.24s" data-area="eastside">
-  <div class="head"><span class="cat" style="background:color-mix(in srgb,var(--coral) 18%,#fff);color:#c64a2a"><svg class="ic"><use href="#i-heart"/></svg>Haps</span><span class="badge">SAT · JUN 6</span></div>
-  <h3>MindTravel Silent Piano</h3>
-  <p>Barrett shared the group discount link for Murray Hidary's silent piano under the stars at Elysian Park, near Dodger Stadium. Bring headphones and a blanket.</p>
-  <div class="tags"><span class="tag"><svg class="ic"><use href="#i-pin"/></svg>Elysian Park</span><span class="tag paid">Ticketed</span></div>
-  <div class="actions"><button class="iconbtn save" title="Save"><svg class="ic"><use href="#i-heart"/></svg></button><button class="iconbtn add" title="Add to calendar"><svg class="ic"><use href="#i-cal"/></svg></button><a class="iconbtn details" title="Details" style="margin-left:auto"><svg class="ic"><use href="#i-arrow"/></svg></a></div>
-</article>
 
   <article class="tile t-food rec" data-cat="food date" data-when="evergreen"
   data-title="Twentieth Street Garden" data-loc="Santa Monica, CA"
