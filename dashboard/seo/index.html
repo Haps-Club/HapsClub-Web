@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haps Club · SEO & Traffic</title>
-<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Haps Club · SEO &amp; Traffic</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{margin:0;padding:0;box-sizing:border-box}
 :root{
   --bg:#F5F5F7;--white:#FFFFFF;--ink:#1D1D1F;--sec:#6E6E73;--muted:#86868B;
   --hair:#D2D2D7;--blue:#0071E3;--green:#248A3D;--red:#E30000;--amber:#B25000;
-  --purple:#6B47DC;--haps:#9DC81A;--card:18px;--section-pad:56px 32px 80px;
+  --purple:#6B47DC;--leaf:#9DC81A;--card:18px;--section-pad:56px 32px 80px;
 }
 body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh}
-a{color:var(--blue);text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 button{font-family:inherit;cursor:pointer}
-/* GATE */
 #lock{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:saturate(180%) blur(40px);display:flex;align-items:center;justify-content:center;z-index:9999}
 .lock-card{background:rgba(255,255,255,.97);border-radius:28px;padding:52px 44px 44px;width:340px;text-align:center;box-shadow:0 32px 80px rgba(0,0,0,.2),0 0 0 .5px rgba(0,0,0,.08)}
 .lock-icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(145deg,#9DC81A,#6E9410);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:28px}
@@ -30,161 +28,275 @@ button{font-family:inherit;cursor:pointer}
 #enter:hover{opacity:.82}
 #lockerr{display:block;font-size:12px;color:var(--red);margin-top:8px;min-height:16px}
 .lock-hint{font-size:12px;color:var(--muted);margin-top:14px}
-/* NAV */
+.lockfoot{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);font-size:12px;color:rgba(255,255,255,.35);letter-spacing:.04em}
+#app{display:none}
 nav{position:sticky;top:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;background:rgba(245,245,247,.9);backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid var(--hair)}
 .nav-brand{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:var(--ink)}
 .nav-leaf{width:28px;height:28px;border-radius:7px;background:linear-gradient(145deg,#9DC81A,#6E9410);display:flex;align-items:center;justify-content:center;font-size:13px}
 .nav-back{font-size:13px;color:var(--sec)}
 .nav-r{display:flex;align-items:center;gap:12px}
 .nav-date{font-size:13px;color:var(--sec)}
-.pill-live{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:980px;background:rgba(36,138,61,.1);color:var(--green);font-size:12px;font-weight:600}
+.pill-live{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:980px;background:rgba(0,113,227,.1);color:var(--blue);font-size:12px;font-weight:600}
 .pill-live::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-/* SHELL */
-#app{display:none}
+.nav-lock-btn{font-size:12px;color:var(--sec);background:none;border:none;padding:4px 8px}
 .wrap{max-width:1060px;margin:0 auto;padding:var(--section-pad)}
-.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:32px}
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
 .kicker{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sec);display:block;margin-bottom:8px}
 .serif{font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
-.mast-sub{font-size:14px;color:var(--sec);margin-top:10px;line-height:1.5}
-.mast-r{text-align:right;flex-shrink:0;margin-top:4px}
-.stamp{font-size:12px;color:var(--muted);line-height:1.5}
+.lede{font-size:13px;color:var(--sec);margin-top:12px;line-height:1.55;max-width:680px}
+.lede b{color:var(--ink);font-weight:600}
+.stamp{text-align:right;flex-shrink:0;font-size:12px;color:var(--muted);line-height:1.5}
 .stamp b{color:var(--ink);font-weight:600}
-/* STATS */
-.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
-.stat{background:var(--white);border-radius:var(--card);border:.5px solid var(--hair);padding:20px 22px}
-.stat .n{font-size:32px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:5px}
-.stat .l{font-size:13px;color:var(--ink);font-weight:600}
-.stat .s-sub{font-size:11px;color:var(--muted);margin-top:3px}
-/* PANEL */
-.panel{background:var(--white);border-radius:var(--card);border:.5px solid var(--hair);padding:26px 28px;margin-bottom:14px}
-.ph{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:4px}
-.ph-sub{font-size:12px;color:var(--muted);margin-bottom:20px}
-.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-/* BARS */
-.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:13px}
-.bar-row:last-child{margin-bottom:0}
-.bar-lab{font-size:13px;color:var(--ink);width:118px;flex-shrink:0}
-.bar-track{flex:1;height:8px;background:var(--bg);border-radius:5px;overflow:hidden}
-.bar-track.sm{height:6px;margin-top:7px}
-.bar-fill{height:100%;border-radius:5px;background:linear-gradient(90deg,#9DC81A,#6E9410)}
-.bar-fill.teal{background:linear-gradient(90deg,#5AC8FA,#0071E3)}
-.bar-val{font-size:13px;font-weight:600;color:var(--ink);width:54px;text-align:right;flex-shrink:0}
-/* TREND */
-.trend-wrap{margin-top:4px}
-.trend-cap{font-size:12px;color:var(--muted);margin-top:6px}
-/* PAGES */
-.pg{padding:13px 0;border-bottom:.5px solid var(--bg)}
-.pg:first-of-type{padding-top:0}
-.pg:last-child{border-bottom:none;padding-bottom:0}
-.pg-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
-.pg-label{font-size:14px;font-weight:600;color:var(--ink)}
-.pg-views{font-size:13px;font-weight:600;color:var(--sec)}
-.pg-path{font-size:12px;color:var(--muted);font-family:ui-monospace,"SF Mono",Menlo,monospace;margin-top:2px}
-/* SC */
-.factgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
-.fact{background:var(--bg);border-radius:12px;padding:16px 18px}
-.fact .k{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.fact .v{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
-.fact .v.muted{color:var(--muted)}
-.notebox{display:flex;gap:11px;background:rgba(0,113,227,.05);border:.5px solid rgba(0,113,227,.18);border-radius:12px;padding:14px 16px}
-.notebox .ico{font-size:16px;line-height:1.4}
-.notebox p{font-size:13px;color:var(--sec);line-height:1.55}
-.caveat{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.5}
-.footnote{font-size:12px;color:var(--muted);text-align:center;padding-top:18px;line-height:1.6}
-@media(max-width:900px){
-  .statgrid{grid-template-columns:1fr 1fr}
-  .twocol{grid-template-columns:1fr}
-  .factgrid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  .wrap{padding:32px 16px 80px}
+.note{display:flex;gap:12px;align-items:flex-start;background:rgba(178,80,0,.07);border:.5px solid rgba(178,80,0,.25);border-radius:14px;padding:16px 18px;margin:26px 0 8px}
+.note .ico{flex:0 0 auto;width:26px;height:26px;border-radius:8px;background:rgba(178,80,0,.14);display:flex;align-items:center;justify-content:center;font-size:14px}
+.note .txt{font-size:13px;line-height:1.55;color:var(--ink)}
+.note .txt b{color:var(--amber)}
+.sec-h{display:flex;align-items:center;justify-content:space-between;margin:44px 0 14px;padding-bottom:12px;border-bottom:.5px solid var(--hair)}
+.sec-h h2{font-size:13px;font-weight:600;color:var(--sec);letter-spacing:.05em;text-transform:uppercase}
+.sec-h .rng{font-size:12px;color:var(--muted)}
+#stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.stat{background:var(--white);border-radius:var(--card);border:.5px solid var(--hair);padding:18px 20px}
+.stat .n{font-size:28px;font-weight:700;letter-spacing:-.02em;line-height:1.05}
+.stat .n small{font-size:15px;font-weight:400;color:var(--sec)}
+.stat .l{font-size:12px;color:var(--sec);font-weight:500;margin-top:5px}
+.panel{background:var(--white);border-radius:var(--card);border:.5px solid var(--hair);padding:24px 26px}
+.ph{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
+.ph-sub{font-size:12px;color:var(--muted);margin-bottom:18px}
+.chart{display:flex;align-items:flex-end;gap:3px;height:178px;padding-top:8px;position:relative;border-bottom:.5px solid var(--hair)}
+.clip{position:absolute;left:0;right:0;top:40px;border-top:1px dashed var(--hair)}
+.clip span{position:absolute;right:0;top:-8px;font-size:9px;color:var(--muted);background:var(--white);padding:0 4px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar .col{width:100%;max-width:18px;background:var(--leaf);border-radius:3px 3px 0 0;min-height:2px}
+.bar.spike{justify-content:flex-end}
+.bar.spike .col{background:linear-gradient(180deg,#C77b1f,#B25000)}
+.bar.spike .v{font-size:9px;color:var(--amber);font-weight:700;margin-bottom:2px}
+.xends{display:flex;justify-content:space-between;margin-top:7px;font-size:10px;color:var(--muted)}
+.cap{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.5}
+.rows{display:flex;flex-direction:column;gap:11px}
+.row{display:grid;grid-template-columns:150px 1fr 78px;align-items:center;gap:12px}
+.row .rk{font-size:13px;color:var(--ink);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .rk small{display:block;font-size:10px;color:var(--muted);font-weight:400}
+.row .track{height:8px;background:var(--bg);border-radius:5px;overflow:hidden}
+.row .track i{display:block;height:100%;background:var(--leaf);border-radius:5px}
+.row .track i.blu{background:var(--blue)}
+.row .rv{font-size:13px;font-weight:600;text-align:right}
+.row .rv small{font-weight:400;color:var(--muted);font-size:11px}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.dev{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:4px 0 12px}
+.dev i{height:100%}
+.dev .dk{background:var(--blue)}.dev .mb{background:var(--leaf)}
+.legend{display:flex;gap:18px;font-size:12px;color:var(--sec);flex-wrap:wrap}
+.legend b{color:var(--ink)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:5px;vertical-align:middle}
+.empty{text-align:center;padding:30px 24px}
+.empty .ei{width:50px;height:50px;border-radius:14px;background:rgba(0,113,227,.08);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 14px}
+.empty h3{font-size:16px;font-weight:600;margin-bottom:6px}
+.empty p{font-size:13px;color:var(--sec);line-height:1.55;max-width:440px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:4px 11px;border-radius:980px;margin-top:14px;background:rgba(178,80,0,.1);color:var(--amber)}
+.gscmeta{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.gscmeta span{font-size:11px;color:var(--sec);background:var(--bg);border:.5px solid var(--hair);border-radius:8px;padding:5px 10px}
+.foot{margin-top:52px;padding-top:22px;border-top:.5px solid var(--hair);font-size:12px;color:var(--muted);line-height:1.6}
+.foot b{color:var(--sec);font-weight:600}
+@media(max-width:760px){
+  .wrap{padding:40px 18px 64px}
   .mast{flex-direction:column}
-  .mast-r{text-align:left}
-  nav{padding:0 16px}
-  .nav-back{display:none}
+  .stamp{text-align:left}
+  #stats{grid-template-columns:1fr 1fr}
+  .twocol{grid-template-columns:1fr}
+  .row{grid-template-columns:120px 1fr 66px}
+  .serif{font-size:30px}
+  .bar .col{max-width:12px}
 }
 </style>
 </head>
 <body>
 
-<!-- GATE -->
 <div id="lock">
   <div class="lock-card">
-    <div class="lock-icon">📊</div>
+    <div class="lock-icon">🌿</div>
     <div class="lock-title">Haps Club</div>
-    <div class="lock-sub">SEO & Traffic<br>Enter the passphrase to continue.</div>
+    <div class="lock-sub">SEO &amp; Traffic<br>Enter the passphrase to continue.</div>
     <input id="pw" type="password" placeholder="Passphrase" autocomplete="off">
     <span id="lockerr"></span>
     <button id="enter">Enter</button>
     <p class="lock-hint">Private · Haps Club Analytics</p>
   </div>
+  <div class="lockfoot">Private · Haps Club Events</div>
 </div>
 
-<!-- APP -->
 <div id="app">
+
 <nav>
-  <div class="nav-brand"><span class="nav-leaf">🌿</span> Haps Club <span class="nav-back">· <a href="/dashboard/" style="color:var(--sec)">← Dashboard</a></span></div>
-  <div class="nav-r"><span class="pill-live">Connected</span><span class="nav-date">SEO & Traffic</span></div>
+  <div class="nav-brand">
+    <div class="nav-leaf">🌿</div>
+    Haps Club <span class="nav-back">· <a href="/dashboard/" style="color:var(--sec)">← Dashboard</a></span>
+  </div>
+  <div class="nav-r">
+    <span class="nav-date" id="nav-date"></span>
+    <span class="pill-live">SEO &amp; Traffic</span>
+    <button class="nav-lock-btn" data-lock>Lock</button>
+  </div>
 </nav>
+
 <div class="wrap">
   <div class="mast">
     <div>
-      <span class="kicker">Analytics</span>
-      <h1 class="serif">SEO & Traffic</h1>
-      <p class="mast-sub">Google Analytics 4 and Search Console for haps.club.<br>Reporting window: last 28 days (May 11 – Jun 7, 2026).</p>
+      <span class="kicker">Analytics · GA4 + Search Console</span>
+      <h1 class="serif">SEO &amp; Traffic</h1>
+      <p class="lede"><b>Filtered to haps.club only.</b> The same GA4 ID also fires on the Luma event pages, which roughly doubled the raw numbers — those are excluded here (<code>hostName = haps.club</code>) so everything below reflects the website itself. Reporting window: last 28 days, May 11 – Jun 7, 2026.</p>
     </div>
-    <div class="mast-r"><div class="stamp"><b>Snapshot</b><br>Generated Jun 8, 2026<br>Refreshed on request</div></div>
+    <div class="stamp"><b>Snapshot</b><br>Jun 8, 2026<br>Refreshed on request</div>
   </div>
 
-  <div class="statgrid"><div class="stat"><div class="n">1,317</div><div class="l">Users</div><div class="s-sub">Last 28 days</div></div><div class="stat"><div class="n">1,559</div><div class="l">Sessions</div><div class="s-sub">Last 28 days</div></div><div class="stat"><div class="n">2,318</div><div class="l">Page views</div><div class="s-sub">Last 28 days</div></div><div class="stat"><div class="n">6,831</div><div class="l">Events</div><div class="s-sub">Last 28 days</div></div></div>
-  <div class="statgrid"><div class="stat"><div class="n">1,314</div><div class="l">New users</div></div><div class="stat"><div class="n">831</div><div class="l">Engaged sessions</div></div><div class="stat"><div class="n">53%</div><div class="l">Engagement rate</div></div><div class="stat"><div class="n">1m 30s</div><div class="l">Avg. session</div></div></div>
+  <div class="note">
+    <div class="ico">⚠️</div>
+    <div class="txt"><b>Traffic-quality &amp; blocking check.</b> Jun 5 shows a one-day spike of 333 users against a ~5–30/day baseline — almost all Direct, concentrated in datacenter regions (Ashburn VA, Boardman OR, San Jose, Des Moines) rather than LA. That reads as bot / non-human traffic, not audience. <b>Non-US traffic is negligible</b> — ≈42 users over 28 days (~7%), all low-volume cloud regions — so there is nothing worth geo-blocking, and blocking wouldn't touch the spike (it's US datacenter bots). GA4's built-in known-bot filter already runs; the practical move is to discount spike days, not block countries.</div>
+  </div>
 
+  <div class="sec-h"><h2>Overview</h2><span class="rng">haps.club · 28 days</span></div>
+  <div id="stats">
+    <div class="stat"><div class="n">619</div><div class="l">Active users</div></div>
+    <div class="stat"><div class="n">616</div><div class="l">New users</div></div>
+    <div class="stat"><div class="n">795</div><div class="l">Sessions</div></div>
+    <div class="stat"><div class="n">1,451</div><div class="l">Page views</div></div>
+    <div class="stat"><div class="n">330</div><div class="l">Engaged sessions</div></div>
+    <div class="stat"><div class="n">41.5<small>%</small></div><div class="l">Engagement rate</div></div>
+    <div class="stat"><div class="n">3,846</div><div class="l">Events</div></div>
+    <div class="stat"><div class="n">2:01</div><div class="l">Avg. session</div></div>
+  </div>
+
+  <div class="sec-h"><h2>Daily active users</h2><span class="rng">May 11 – Jun 7</span></div>
   <div class="panel">
-    <div class="ph">Daily users</div>
-    <div class="ph-sub">Active users per day · last 28 days</div>
-    <div class="trend-wrap"><svg viewBox="0 0 560 170" width="100%" preserveAspectRatio="xMidYMid meet" style="display:block"><rect x="0" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="20" y="149.4" width="15" height="10.6" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="40" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="60" y="157.0" width="15" height="3.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="80" y="156.5" width="15" height="3.5" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="100" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="120" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="140" y="157.9" width="15" height="2.1" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="160" y="155.8" width="15" height="4.2" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="180" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="200" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="220" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="240" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="260" y="156.5" width="15" height="3.5" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="280" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="300" y="156.1" width="15" height="3.9" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="320" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="340" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="360" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="380" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="400" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="420" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="440" y="155.9" width="15" height="4.1" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="460" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="480" y="158.0" width="15" height="2.0" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="500" y="10.0" width="15" height="150.0" rx="2" fill="#9DC81A"></rect><rect x="520" y="154.7" width="15" height="5.3" rx="2" fill="rgba(157,200,26,.45)"></rect><rect x="540" y="156.5" width="15" height="3.5" rx="2" fill="rgba(157,200,26,.45)"></rect><text x="508" y="6" text-anchor="middle" font-size="11" font-weight="700" fill="#1D1D1F">991</text><text x="8" y="168" text-anchor="middle" font-size="9" fill="#86868B">May 11</text><text x="148" y="168" text-anchor="middle" font-size="9" fill="#86868B">May 18</text><text x="288" y="168" text-anchor="middle" font-size="9" fill="#86868B">May 25</text><text x="428" y="168" text-anchor="middle" font-size="9" fill="#86868B">Jun 1</text><text x="548" y="168" text-anchor="middle" font-size="9" fill="#86868B">Jun 7</text></svg></div>
-    <div class="trend-cap">Peak of 991 users on Jun 5, aligned with the newsletter send. Baseline runs ~3–70 users per day.</div>
+    <div class="chart">
+      <div class="clip"><span>scale clipped ↑</span></div>
+      <div class="bar"><div class="col" style="height:14px"></div></div>
+      <div class="bar"><div class="col" style="height:120px"></div></div>
+      <div class="bar"><div class="col" style="height:19px"></div></div>
+      <div class="bar"><div class="col" style="height:34px"></div></div>
+      <div class="bar"><div class="col" style="height:39px"></div></div>
+      <div class="bar"><div class="col" style="height:17px"></div></div>
+      <div class="bar"><div class="col" style="height:14px"></div></div>
+      <div class="bar"><div class="col" style="height:24px"></div></div>
+      <div class="bar"><div class="col" style="height:48px"></div></div>
+      <div class="bar"><div class="col" style="height:19px"></div></div>
+      <div class="bar"><div class="col" style="height:14px"></div></div>
+      <div class="bar"><div class="col" style="height:5px"></div></div>
+      <div class="bar"><div class="col" style="height:2px"></div></div>
+      <div class="bar"><div class="col" style="height:39px"></div></div>
+      <div class="bar"><div class="col" style="height:3px"></div></div>
+      <div class="bar"><div class="col" style="height:45px"></div></div>
+      <div class="bar"><div class="col" style="height:2px"></div></div>
+      <div class="bar"><div class="col" style="height:7px"></div></div>
+      <div class="bar"><div class="col" style="height:7px"></div></div>
+      <div class="bar"><div class="col" style="height:19px"></div></div>
+      <div class="bar"><div class="col" style="height:12px"></div></div>
+      <div class="bar"><div class="col" style="height:9px"></div></div>
+      <div class="bar"><div class="col" style="height:45px"></div></div>
+      <div class="bar"><div class="col" style="height:2px"></div></div>
+      <div class="bar"><div class="col" style="height:5px"></div></div>
+      <div class="bar spike"><span class="v">333</span><div class="col" style="height:150px"></div></div>
+      <div class="bar"><div class="col" style="height:15px"></div></div>
+      <div class="bar"><div class="col" style="height:9px"></div></div>
+    </div>
+    <div class="xends"><span>May 11</span><span>Jun 7</span></div>
+    <p class="cap">The Jun 5 bar (333) is clipped to fit — every other day sits in the 1–70 range. May 12 (70) was the only other above-baseline day. The bars use real haps.club-only figures.</p>
   </div>
 
   <div class="twocol">
     <div class="panel">
-      <div class="ph">Traffic channels</div>
-      <div class="ph-sub">Sessions by default channel group</div>
-      <div class="bar-row"><div class="bar-lab">Direct</div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div></div><div class="bar-val">1,375</div></div><div class="bar-row"><div class="bar-lab">Referral</div><div class="bar-track"><div class="bar-fill" style="width:7.2%"></div></div><div class="bar-val">99</div></div><div class="bar-row"><div class="bar-lab">Organic Social</div><div class="bar-track"><div class="bar-fill" style="width:4.6%"></div></div><div class="bar-val">63</div></div><div class="bar-row"><div class="bar-lab">Organic Search</div><div class="bar-track"><div class="bar-fill" style="width:1.5%"></div></div><div class="bar-val">21</div></div><div class="bar-row"><div class="bar-lab">Unassigned</div><div class="bar-track"><div class="bar-fill" style="width:1.5%"></div></div><div class="bar-val">2</div></div>
+      <div class="ph">Traffic by channel</div>
+      <div class="ph-sub">Sessions · 28 days</div>
+      <div class="rows">
+        <div class="row"><span class="rk">Direct</span><div class="track"><i class="blu" style="width:100%"></i></div><span class="rv">669</span></div>
+        <div class="row"><span class="rk">Referral</span><div class="track"><i class="blu" style="width:8.2%"></i></div><span class="rv">55</span></div>
+        <div class="row"><span class="rk">Organic Social</span><div class="track"><i class="blu" style="width:7.2%"></i></div><span class="rv">48</span></div>
+        <div class="row"><span class="rk">Organic Search</span><div class="track"><i class="blu" style="width:3.1%"></i></div><span class="rv">21</span></div>
+        <div class="row"><span class="rk">Unassigned</span><div class="track"><i class="blu" style="width:1%"></i></div><span class="rv">2</span></div>
+      </div>
+      <p class="cap">Organic Search is 21 sessions — the number Search Console will help grow.</p>
     </div>
     <div class="panel">
       <div class="ph">Devices</div>
-      <div class="ph-sub">Share of sessions</div>
-      <div class="bar-row"><div class="bar-lab">Desktop</div><div class="bar-track"><div class="bar-fill" style="width:82.0%"></div></div><div class="bar-val">82%</div></div><div class="bar-row"><div class="bar-lab">Mobile</div><div class="bar-track"><div class="bar-fill" style="width:18.0%"></div></div><div class="bar-val">18%</div></div>
-      <div class="caveat">Desktop leads at roughly four in five sessions.</div>
+      <div class="ph-sub">Share of sessions · 28 days</div>
+      <div class="dev"><i class="dk" style="width:80.8%"></i><i class="mb" style="width:19.2%"></i></div>
+      <div class="legend"><span><i style="background:var(--blue)"></i>Desktop <b>81%</b> · 642</span><span><i style="background:var(--leaf)"></i>Mobile <b>19%</b> · 153</span></div>
+      <p class="cap">Desktop-heavy for an events audience — partly the bot/datacenter sessions, which are desktop. Expect mobile share to rise as the spike clears.</p>
     </div>
   </div>
 
+  <div class="sec-h"><h2>Top pages</h2><span class="rng">Views · 28 days</span></div>
   <div class="panel">
-    <div class="ph">Top pages</div>
-    <div class="ph-sub">By page views · GA4 property spans haps.club plus linked Luma event pages</div>
-    <div class="pg"><div class="pg-top"><span class="pg-label">Homepage</span><span class="pg-views">1,382</span></div><div class="pg-path">/</div><div class="bar-track sm"><div class="bar-fill" style="width:100.0%"></div></div></div><div class="pg"><div class="pg-top"><span class="pg-label">Solstice tickets (Luma)</span><span class="pg-views">812</span></div><div class="pg-path">/jwjxh4zp</div><div class="bar-track sm"><div class="bar-fill" style="width:58.8%"></div></div></div><div class="pg"><div class="pg-top"><span class="pg-label">Subscribe</span><span class="pg-views">65</span></div><div class="pg-path">/subscribe</div><div class="bar-track sm"><div class="bar-fill" style="width:4.7%"></div></div></div><div class="pg"><div class="pg-top"><span class="pg-label">Luma profile</span><span class="pg-views">41</span></div><div class="pg-path">/TheHapsClub</div><div class="bar-track sm"><div class="bar-fill" style="width:3.0%"></div></div></div><div class="pg"><div class="pg-top"><span class="pg-label">Cinco de Mayo</span><span class="pg-views">6</span></div><div class="pg-path">/hapsclub_cincodemayo</div><div class="bar-track sm"><div class="bar-fill" style="width:1.5%"></div></div></div><div class="pg"><div class="pg-top"><span class="pg-label">Staging</span><span class="pg-views">4</span></div><div class="pg-path">/staging.html</div><div class="bar-track sm"><div class="bar-fill" style="width:1.5%"></div></div></div><div class="pg"><div class="pg-top"><span class="pg-label">Luma — organizer</span><span class="pg-views">3</span></div><div class="pg-path">/user/MichaelAbraham</div><div class="bar-track sm"><div class="bar-fill" style="width:1.5%"></div></div></div>
+    <div class="rows">
+      <div class="row"><span class="rk">/ <small>Homepage</small></span><div class="track"><i style="width:100%"></i></div><span class="rv">1,382<small> · 598u</small></span></div>
+      <div class="row"><span class="rk">/subscribe <small>Newsletter sign-up</small></span><div class="track"><i style="width:4.7%"></i></div><span class="rv">65<small> · 82u</small></span></div>
+      <div class="row"><span class="rk">/staging.html <small>staging — prune candidate</small></span><div class="track"><i style="width:0.3%"></i></div><span class="rv">4<small> · 1u</small></span></div>
+    </div>
+    <p class="cap">Now that Luma pages are excluded, the site is effectively a single-page index plus the subscribe page. <b>/staging.html</b> is a stray staging file live on production — worth removing.</p>
   </div>
 
-  <div class="panel">
-    <div class="ph">Top locations</div>
-    <div class="ph-sub">Active users by city</div>
-    <div class="bar-row"><div class="bar-lab">San Jose</div><div class="bar-track"><div class="bar-fill teal" style="width:100.0%"></div></div><div class="bar-val">218</div></div><div class="bar-row"><div class="bar-lab">Moses Lake</div><div class="bar-track"><div class="bar-fill teal" style="width:89.0%"></div></div><div class="bar-val">194</div></div><div class="bar-row"><div class="bar-lab">Des Moines</div><div class="bar-track"><div class="bar-fill teal" style="width:83.5%"></div></div><div class="bar-val">182</div></div><div class="bar-row"><div class="bar-lab">Los Angeles</div><div class="bar-track"><div class="bar-fill teal" style="width:62.4%"></div></div><div class="bar-val">136</div></div><div class="bar-row"><div class="bar-lab">Ashburn</div><div class="bar-track"><div class="bar-fill teal" style="width:45.4%"></div></div><div class="bar-val">99</div></div><div class="bar-row"><div class="bar-lab">Seattle</div><div class="bar-track"><div class="bar-fill teal" style="width:6.4%"></div></div><div class="bar-val">14</div></div>
-    <div class="caveat">Some city rows reflect data-center and bot traffic typical of early-stage properties; Los Angeles is the leading genuine audience market.</div>
+  <div class="twocol">
+    <div class="panel">
+      <div class="ph">Top countries</div>
+      <div class="ph-sub">Active users · 28 days</div>
+      <div class="rows">
+        <div class="row"><span class="rk">United States</span><div class="track"><i class="blu" style="width:100%"></i></div><span class="rv">577</span></div>
+        <div class="row"><span class="rk">Germany</span><div class="track"><i class="blu" style="width:1.7%"></i></div><span class="rv">10</span></div>
+        <div class="row"><span class="rk">Netherlands</span><div class="track"><i class="blu" style="width:1.4%"></i></div><span class="rv">8</span></div>
+        <div class="row"><span class="rk">Ireland</span><div class="track"><i class="blu" style="width:0.7%"></i></div><span class="rv">4</span></div>
+        <div class="row"><span class="rk">Russia</span><div class="track"><i class="blu" style="width:0.5%"></i></div><span class="rv">3</span></div>
+        <div class="row"><span class="rk">Singapore</span><div class="track"><i class="blu" style="width:0.5%"></i></div><span class="rv">3</span></div>
+      </div>
+      <p class="cap">~93% US. The handful of foreign hits are low-volume cloud regions (DE/NL/IE = hosting hubs) — nothing to block.</p>
+    </div>
+    <div class="panel">
+      <div class="ph">Top cities</div>
+      <div class="ph-sub">Active users · 28 days</div>
+      <div class="rows">
+        <div class="row"><span class="rk">(not set)</span><div class="track"><i style="width:100%"></i></div><span class="rv">111</span></div>
+        <div class="row"><span class="rk">San Jose, CA</span><div class="track"><i style="width:76.6%"></i></div><span class="rv">85</span></div>
+        <div class="row"><span class="rk">Ashburn, VA</span><div class="track"><i style="width:65.8%"></i></div><span class="rv">73</span></div>
+        <div class="row"><span class="rk">Des Moines, IA</span><div class="track"><i style="width:63.1%"></i></div><span class="rv">70</span></div>
+        <div class="row"><span class="rk">Los Angeles, CA</span><div class="track"><i style="width:59.5%"></i></div><span class="rv">66</span></div>
+        <div class="row"><span class="rk">Moses Lake, WA</span><div class="track"><i style="width:56.8%"></i></div><span class="rv">63</span></div>
+      </div>
+      <p class="cap">Ashburn, Boardman, San Jose and Des Moines are datacenter regions — bot noise. <b>Los Angeles is the leading genuine market.</b></p>
+    </div>
   </div>
 
+  <div class="sec-h"><h2>Search Console</h2><span class="rng">sc-domain:haps.club</span></div>
   <div class="panel">
-    <div class="ph">Search Console</div>
-    <div class="ph-sub">Search performance · sc-domain:haps.club · May 9 – Jun 5, 2026</div>
-    <div class="factgrid"><div class="fact"><div class="k">Clicks</div><div class="v muted">—</div></div><div class="fact"><div class="k">Impressions</div><div class="v muted">—</div></div><div class="fact"><div class="k">Avg. CTR</div><div class="v muted">—</div></div><div class="fact"><div class="k">Avg. position</div><div class="v muted">—</div></div></div>
-    <div class="notebox"><span class="ico">⏳</span><p>The property is verified at owner level and collecting. Search performance data typically appears two to three days after verification, then backfills. Clicks, impressions, top queries, and top pages will populate here on the next refresh.</p></div>
+    <div class="empty">
+      <div class="ei">🔍</div>
+      <h3>Collecting search data</h3>
+      <p>The property is verified and owned (siteOwner), but Google hasn't reported any search clicks or impressions in the last 28 days yet. New domains take a few weeks to accrue Search performance data after verification and sitemap submission. Top queries, pages, clicks, impressions, CTR and average position will populate here on a future refresh.</p>
+      <span class="badge">● Collecting — no data yet</span>
+      <div class="gscmeta">
+        <span>Property: sc-domain:haps.club</span>
+        <span>Permission: siteOwner</span>
+        <span>Sitemap submission: pending</span>
+      </div>
+    </div>
   </div>
 
-  <div class="footnote">Data via Google Analytics 4 (G-RKY63MK7ND) and Google Search Console, pulled through the haps account.<br>© 2026 Haps Club · Internal dashboard · noindex</div>
+  <div class="foot">
+    <b>Source:</b> Google Analytics 4 (property 536909119 · G-RKY63MK7ND), filtered to <code>hostName = haps.club</code> to exclude Luma cross-tracking. Search Console: sc-domain:haps.club.<br>
+    <b>Snapshot:</b> Jun 8, 2026 — point-in-time pull, not a live feed; regenerate to refresh. GA4 timezone America/Los_Angeles.<br>
+    © 2026 Haps Club · Internal dashboard · noindex
+  </div>
 </div>
+
 </div>
 
-<script>var PW='Haps#2026';function showApp(){document.getElementById('lock').style.display='none';document.getElementById('app').style.display='block';}function tryUnlock(){var v=document.getElementById('pw').value;if(v===PW){try{sessionStorage.setItem('haps_dash_ok','1');}catch(e){}showApp();}else{var i=document.getElementById('pw');i.classList.add('err');document.getElementById('lockerr').textContent='Incorrect passphrase';setTimeout(function(){i.classList.remove('err');},400);}}document.getElementById('enter').addEventListener('click',tryUnlock);document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')tryUnlock();});try{if(sessionStorage.getItem('haps_dash_ok')==='1')showApp();}catch(e){}</script>
+<script>
+var PW='Haps#2026';
+function showApp(){document.getElementById('lock').style.display='none';document.getElementById('app').style.display='block';updateNavDate();}
+function tryUnlock(){var v=document.getElementById('pw').value;if(v===PW){try{sessionStorage.setItem('haps_dash_ok','1');}catch(e){}showApp();}else{var i=document.getElementById('pw');i.classList.add('err');document.getElementById('lockerr').textContent='Incorrect passphrase';setTimeout(function(){i.classList.remove('err');},400);}}
+function updateNavDate(){document.getElementById('nav-date').textContent=new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});}
+document.getElementById('enter').addEventListener('click',tryUnlock);
+document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')tryUnlock();});
+document.querySelector('[data-lock]').addEventListener('click',function(){try{sessionStorage.removeItem('haps_dash_ok');}catch(e){}document.getElementById('lock').style.display='flex';document.getElementById('app').style.display='none';document.getElementById('pw').value='';});
+try{if(sessionStorage.getItem('haps_dash_ok')==='1')showApp();}catch(e){}
+</script>
 </body>
 </html>
