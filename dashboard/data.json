@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T23:20:00-07:00",
+  "generated_at": "2026-06-11T09:45:00-07:00",
   "sources": {
     "ga4": {
       "refreshed": "2026-06-10",
@@ -13,10 +13,7 @@
       "refreshed": "2026-06-10",
       "note": "Gross processed payments. Net of fees not yet pulled."
     },
-    "kit": {
-      "refreshed": null,
-      "note": "Connector approved in settings but calls still blocked. Needs a reconnect."
-    },
+    "kit": "Kit API · Haps Club account · refreshed Jun 11, 2026",
     "ticketing": {
       "refreshed": null,
       "note": "Luma / Partiful CSV exports not yet uploaded."
@@ -28,8 +25,11 @@
   },
   "overview": {
     "subscribers": {
-      "value": null,
-      "delta_week": null
+      "value": 1041,
+      "delta_week": null,
+      "net_28d": -5,
+      "new_28d": 16,
+      "cancels_28d": 21
     },
     "registrations": {
       "value": 30,
@@ -45,7 +45,7 @@
     },
     "search_clicks_28d": {
       "value": 2,
-      "impressions": 4
+      "impressions": 5
     }
   },
   "events": [

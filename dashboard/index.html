@@ -49,7 +49,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:24px;margin:42px 0 16px}
 .tile .k{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .tile .v{font-family:var(--serif);font-size:32px;margin-top:6px;line-height:1.1}
 .tile .d{font-size:12px;color:var(--muted);margin-top:4px}
-.tile .d .up{color:#1f7a3d;font-weight:600}
+.tile .d .up{color:#1f7a3d;font-weight:600}.warn-t{color:#C0392B;font-weight:700}
 .tile .spark{margin-top:auto;padding-top:8px}
 .tile.pending .v{color:var(--muted);font-size:20px;font-family:var(--sans);font-weight:500;padding-top:8px}
 
@@ -316,7 +316,10 @@ footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-a
     if(o.subscribers.value==null){
       t+='<div class="tile pending"><div class="k">Newsletter subscribers</div><div class="v">Awaiting Kit data</div><div class="d">Connector pending approval</div></div>';
     }else{
-      t+='<div class="tile"><div class="k">Newsletter subscribers</div><div class="v">'+fmt(o.subscribers.value)+'</div><div class="d">'+(o.subscribers.delta_week!=null?('<span class="up">+'+fmt(o.subscribers.delta_week)+'</span> this week'):'')+'</div></div>';
+      var sd='';
+      if(o.subscribers.delta_week!=null){var dw=o.subscribers.delta_week;sd='<span class="'+(dw>=0?'up':'warn-t')+'">'+(dw>=0?'+':'\u2212')+fmt(Math.abs(dw))+'</span> this week';}
+      else if(o.subscribers.net_28d!=null){var dn=o.subscribers.net_28d;sd='<span class="'+(dn>=0?'up':'warn-t')+'">'+(dn>=0?'+':'\u2212')+fmt(Math.abs(dn))+'</span> net \u00b7 28 days';}
+      t+='<div class="tile"><div class="k">Newsletter subscribers</div><div class="v">'+fmt(o.subscribers.value)+'</div><div class="d">'+sd+'<a class="seolink" style="display:block;margin-top:2px;font-size:12px" href="/dashboard/newsletter/">Newsletter dashboard \u2192</a></div></div>';
     }
     t+='<div class="tile"><div class="k">Event registrations</div><div class="v">'+fmt(o.registrations.value)+'</div><div class="d">'+esc(o.registrations.label)+'</div></div>';
     var rm=D.revenue.monthly.map(function(m){return m.gross;});
