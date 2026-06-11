@@ -23,7 +23,7 @@ a:hover{color:var(--coral-deep)}
 /* gate */
 #gate{position:fixed;inset:0;background:var(--navy-deep);display:flex;align-items:center;justify-content:center;z-index:100;padding:24px}
 #gate .box{width:100%;max-width:340px;text-align:center}
-#gate img{height:44px;margin-bottom:20px;filter:brightness(0) invert(1)}
+#gate img{height:110px;margin-bottom:20px;filter:brightness(0) invert(1)}
 #gate input{width:100%;padding:13px 16px;border:1px solid rgba(255,255,255,.25);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;font-size:16px;font-family:var(--sans);outline:none}
 #gate input::placeholder{color:rgba(255,255,255,.45)}
 #gate button{width:100%;margin-top:12px;padding:13px;border:0;border-radius:10px;background:var(--coral);color:#fff;font-weight:700;font-size:15px;cursor:pointer;font-family:var(--sans)}
@@ -32,8 +32,8 @@ a:hover{color:var(--coral-deep)}
 /* shell */
 #app{display:none}
 .topbar{background:var(--card);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:10}
-.topbar .in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-.topbar img{height:30px;display:block}
+.topbar .in{max-width:1080px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+.topbar img{height:75px;display:block}
 .topbar .links{font-size:13px;font-weight:600}
 .topbar .links a{margin-left:18px;color:var(--muted)}
 .topbar .links a:hover{color:var(--coral-deep)}
@@ -119,6 +119,12 @@ footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-a
 
     <h2>Events</h2>
     <div id="events"></div>
+    <div class="card" id="cadenceCard" style="display:none">
+      <div class="chart-title">Signup cadence · Cinco vs Summer Solstice · cumulative payments by days until event</div>
+      <div id="cadenceChart"></div>
+      <div class="legend" id="cadenceLegend"></div>
+      <div class="note" id="cadenceNote" style="margin-top:6px"></div>
+    </div>
     <div class="card">
       <div class="chart-title">Past events</div>
       <div class="scrollx"><table id="pastTable">
@@ -170,6 +176,11 @@ footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-a
       <div class="chart-title">Search · Google Search Console</div>
       <div id="gscBlock"></div>
       <a class="seolink" href="/dashboard/seo/">Open the full SEO dashboard →</a>
+    </div>
+    <div class="card" id="clicksCard" style="display:none">
+      <div class="chart-title" id="clicksTitle">What gets clicked · outbound links</div>
+      <div id="clicksBars"></div>
+      <div class="note" id="clicksNote" style="margin-top:6px"></div>
     </div>
 
     <h2>Engagement</h2>
@@ -277,6 +288,19 @@ footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-a
     return svg+leg+'</div>';
   }
 
+  function igTimes(times){
+    var max=Math.max.apply(null,times.map(function(t){return t.v;}))||1;
+    var w=320,h=110,bw=w/times.length;
+    var svg='<svg viewBox="0 0 '+w+' '+h+'" style="width:100%;max-width:360px;height:auto;display:block">';
+    times.forEach(function(t,i){
+      var bh=Math.max(2,t.v/max*(h-30));
+      svg+='<rect x="'+(i*bw+5).toFixed(1)+'" y="'+(h-20-bh).toFixed(1)+'" width="'+(bw-10).toFixed(1)+'" height="'+bh.toFixed(1)+'" rx="4" fill="'+(t.v===max?'#FF6B47':'#292f71')+'"/>'+
+        '<text x="'+(i*bw+bw/2).toFixed(1)+'" y="'+(h-6)+'" text-anchor="middle" font-size="9" fill="#6B6F7A" font-family="Inter,sans-serif">'+t.t+'</text>'+
+        '<text x="'+(i*bw+bw/2).toFixed(1)+'" y="'+(h-24-bh).toFixed(1)+'" text-anchor="middle" font-size="9" fill="#6B6F7A" font-family="Inter,sans-serif">'+t.v+'</text>';
+    });
+    return svg+'</svg>';
+  }
+
   function load(){
     fetch('data.json?v='+Date.now()).then(function(r){return r.json();}).then(render)
       .catch(function(){document.getElementById('genline').textContent='Could not load data.json — try a refresh.';});
@@ -331,6 +355,50 @@ footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-a
     });
     pb.innerHTML=ph;
 
+
+    /* cadence */
+    if(D.cadence&&D.cadence.series&&D.cadence.series.length){
+      var cc=D.cadence,maxOut=0,maxY=cc.target||0;
+      cc.series.forEach(function(s){s.points.forEach(function(p){if(p.days_out>maxOut)maxOut=p.days_out;if(p.cum>maxY)maxY=p.cum;});});
+      maxOut=Math.max(maxOut,21);maxY=Math.ceil(maxY/20)*20;
+      var w=720,h=230,pl=38,pr=14,pt=12,pb=26,iw=w-pl-pr,ih=h-pt-pb;
+      function cx(o){return pl+(maxOut-o)/maxOut*iw;}
+      function cy(v){return pt+ih-(v/maxY)*ih;}
+      var svg='<svg viewBox="0 0 '+w+' '+h+'" style="width:100%;height:auto;display:block">';
+      [0,0.25,0.5,0.75,1].forEach(function(f){
+        var gy=cy(maxY*f);
+        svg+='<line x1="'+pl+'" y1="'+gy+'" x2="'+(w-pr)+'" y2="'+gy+'" stroke="#ECECE6"/>'+
+          '<text x="'+(pl-6)+'" y="'+(gy+4)+'" text-anchor="end" font-size="10" fill="'+MUTED+'" font-family="Inter,sans-serif">'+Math.round(maxY*f)+'</text>';
+      });
+      if(cc.target){
+        var ty=cy(cc.target);
+        svg+='<line x1="'+pl+'" y1="'+ty+'" x2="'+(w-pr)+'" y2="'+ty+'" stroke="'+MUTED+'" stroke-width="1.5" stroke-dasharray="6 5"/>'+
+          '<text x="'+(w-pr)+'" y="'+(ty-6)+'" text-anchor="end" font-size="11" font-weight="700" fill="'+MUTED+'" font-family="Inter,sans-serif">Target '+cc.target+'</text>';
+      }
+      var colors={navy:NAVY,coral:CORAL};
+      cc.series.forEach(function(s){
+        var col=colors[s.color]||NAVY;
+        var pts=s.points.map(function(p){return cx(p.days_out).toFixed(1)+','+cy(p.cum).toFixed(1);}).join(' ');
+        svg+='<polyline points="'+pts+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>';
+        s.points.forEach(function(p){svg+='<circle cx="'+cx(p.days_out).toFixed(1)+'" cy="'+cy(p.cum).toFixed(1)+'" r="3" fill="'+col+'"/>';});
+        if(s.live){
+          var lp=s.points[s.points.length-1];
+          svg+='<circle cx="'+cx(lp.days_out).toFixed(1)+'" cy="'+cy(lp.cum).toFixed(1)+'" r="6" fill="none" stroke="'+col+'" stroke-width="2"/>'+
+            '<text x="'+cx(lp.days_out).toFixed(1)+'" y="'+(cy(lp.cum)-12).toFixed(1)+'" text-anchor="middle" font-size="11" font-weight="700" fill="'+col+'" font-family="Inter,sans-serif">'+lp.cum+' today</text>';
+        }
+      });
+      var ticks=[maxOut];for(var tt=Math.floor(maxOut/7)*7;tt>0;tt-=7)ticks.push(tt);ticks.push(0);
+      ticks.forEach(function(o){
+        svg+='<text x="'+cx(o).toFixed(1)+'" y="'+(h-8)+'" text-anchor="middle" font-size="10" fill="'+MUTED+'" font-family="Inter,sans-serif">'+(o===0?'event day':o+'d out')+'</text>';
+      });
+      document.getElementById('cadenceChart').innerHTML=svg+'</svg>';
+      var lg='';
+      cc.series.forEach(function(s){lg+='<span><i style="background:'+(colors[s.color]||NAVY)+'"></i>'+esc(s.name)+' ('+esc(s.event_date)+')</span>';});
+      document.getElementById('cadenceLegend').innerHTML=lg;
+      document.getElementById('cadenceNote').textContent=cc.note||'';
+      document.getElementById('cadenceCard').style.display='block';
+    }
+
     /* revenue */
     var months={'01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun','07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec'};
     document.getElementById('revBars').innerHTML=barChart(D.revenue.monthly.map(function(m){
@@ -350,7 +418,7 @@ footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-a
     /* audience */
     var a=D.audience,ac;
     if(a.subscribers==null&&(!a.history||!a.history.length)){
-      ac='<div class="empty">Subscriber data lands here once the Kit connector is approved. History accumulates one point per refresh from then on.</div>';
+      ac='<div class="empty">Kit is connected but calls are still blocked pending a reconnect. Subscriber history starts accumulating on the first successful pull.</div>';
     }else{
       ac='<div class="ev-stats"><div class="s"><div class="n">'+fmt(a.subscribers)+'</div><div class="l">Subscribers</div></div>'+
          '<div class="s"><div class="n">'+(a.weekly_net_adds!=null?('+'+fmt(a.weekly_net_adds)):'—')+'</div><div class="l">Net adds · week</div></div></div>';
@@ -385,11 +453,46 @@ footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-a
     gb+='</div><div class="note">Window '+esc(g.window)+'. The property is young — first impressions registered June 7. Sparse numbers here are expected for now.</div>';
     document.getElementById('gscBlock').innerHTML=gb;
 
+
+    /* outbound clicks */
+    var oc=D.traffic.ga4.outbound_clicks;
+    if(oc&&oc.items&&oc.items.length){
+      document.getElementById('clicksTitle').textContent='What gets clicked · outbound links · '+oc.window;
+      document.getElementById('clicksBars').innerHTML=barChart(oc.items.map(function(i){
+        return{label:i.label,value:i.clicks,display:i.clicks+' click'+(i.clicks===1?'':'s'),color:NAVY};
+      }));
+      document.getElementById('clicksNote').textContent='Source: '+oc.source+'. These are clicks out from haps.club cards and links, tracked automatically by GA4.';
+      document.getElementById('clicksCard').style.display='block';
+    }
+
     /* engagement */
-    var ig=D.engagement.instagram;
-    document.getElementById('igCard').innerHTML=ig?
-      ('<div class="ev-stats"><div class="s"><div class="n">'+fmt(ig.followers)+'</div><div class="l">IG followers</div></div></div>'):
-      '<div class="empty">Instagram numbers for @thehapsclub appear here once an insights export is uploaded.</div>';
+    var ig=D.engagement.instagram,ih2;
+    if(!ig){
+      ih2='<div class="empty">Instagram numbers for @thehapsclub appear here once an insights export is uploaded.</div>';
+    }else{
+      ih2='<div class="note" style="margin-bottom:12px">'+esc(ig.handle)+' · '+esc(ig.window)+' · as of '+esc(ig.as_of)+'</div>'+
+        '<div class="ev-stats" style="margin-top:0">'+
+        '<div class="s"><div class="n">'+fmt(ig.followers)+'</div><div class="l">Followers</div></div>'+
+        '<div class="s"><div class="n">'+fmt(ig.views)+'</div><div class="l">Views</div></div>'+
+        '<div class="s"><div class="n">'+fmt(ig.accounts_reached)+'</div><div class="l">Reached</div></div>'+
+        '<div class="s"><div class="n">'+fmt(ig.interactions)+'</div><div class="l">Interactions</div></div>'+
+        '<div class="s"><div class="n">'+fmt(ig.accounts_engaged)+'</div><div class="l">Engaged</div></div>'+
+        '<div class="s"><div class="n">'+fmt(ig.profile_visits)+'</div><div class="l">Profile visits</div></div>'+
+        '<div class="s"><div class="n">'+fmt(ig.external_link_taps)+'</div><div class="l">Link taps</div></div>'+
+        '</div>'+
+        '<div class="note" style="margin:2px 0 16px">'+ig.views_non_followers_pct+'% of views come from non-followers · '+ig.interactions_followers_pct+'% of interactions come from followers</div>'+
+        '<div class="chartrow">'+
+        '<div><div class="chart-title">Views by content type</div>'+barChart(ig.views_by_type.map(function(x,i){return{label:x.type,value:x.pct,display:x.pct+'%',color:SERIES[i%SERIES.length]};}))+'</div>'+
+        '<div><div class="chart-title">Interactions by content type</div>'+barChart(ig.interactions_by_type.map(function(x,i){return{label:x.type,value:x.pct,display:x.pct+'%',color:SERIES[i%SERIES.length]};}))+'</div>'+
+        '</div>'+
+        '<div class="chartrow" style="margin-top:16px">'+
+        '<div><div class="chart-title">Most active follower times</div><div id="igTimes">'+igTimes(ig.active_times)+'</div></div>'+
+        '<div><div class="chart-title">Top content</div>'+
+          '<div class="note" style="margin-bottom:6px">By views: '+ig.top_views.map(function(x){return fmt(x.v)+' ('+esc(x.d)+')';}).join(' · ')+'</div>'+
+          '<div class="note">By interactions: '+ig.top_interactions.map(function(x){return fmt(x.v)+' ('+esc(x.d)+')';}).join(' · ')+'</div>'+
+        '</div></div>';
+    }
+    document.getElementById('igCard').innerHTML=ih2;
 
     /* freshness */
     var fr='Source freshness — ';
