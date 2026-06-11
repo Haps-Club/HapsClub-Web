@@ -446,17 +446,6 @@ section { margin-bottom: 48px; }
 <body>
 
 <!-- ── GATE ── -->
-<div id="gate">
-  <div class="gate-card">
-    <div class="gate-icon">🌿</div>
-    <div class="gate-title">Garden Party Ops</div>
-    <div class="gate-sub">Haps Club · Summer 2026<br>Enter the event access code</div>
-    <input id="gate-input" type="password" placeholder="Access code" autocomplete="off">
-    <button id="gate-btn">Continue →</button>
-    <p class="gate-hint">Contact Michael for access</p>
-  </div>
-</div>
-
 <!-- ── NAV ── -->
 <nav>
   <div class="nav-brand">
@@ -1015,24 +1004,6 @@ Tickets: luma.com/jwjxh4zp</div>
 </main>
 
 <script>
-// ── GATE ──
-const CODE = "garden2025";
-if (sessionStorage.getItem("gp_auth") === "1") document.getElementById("gate").style.display = "none";
-
-document.getElementById("gate-btn").onclick = () => {
-  const v = document.getElementById("gate-input").value.trim().toLowerCase();
-  if (v === CODE) {
-    sessionStorage.setItem("gp_auth","1");
-    document.getElementById("gate").style.display = "none";
-  } else {
-    const inp = document.getElementById("gate-input");
-    inp.classList.add("shake");
-    inp.value = "";
-    inp.placeholder = "Try again";
-    setTimeout(() => inp.classList.remove("shake"), 500);
-  }
-};
-document.getElementById("gate-input").addEventListener("keydown", e => { if (e.key === "Enter") document.getElementById("gate-btn").click(); });
 
 // ── DATES ──
 const EVENT = new Date("2026-06-20T17:00:00-07:00");
