@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<title>Haps Club · Newsletter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#292f71;--navy-deep:#1a1f4d;--navy-tint:#EEF0F8;
+  --coral:#FF6B47;--coral-deep:#E54D2B;--coral-tint:#FFF1ED;
+  --bg:#FAFAF7;--ink:#0F1117;--muted:#6B6F7A;--hair:#E4E4DE;--card:#FFFFFF;
+  --serif:'Instrument Serif',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--navy);text-decoration:none}
+a:hover{color:var(--coral-deep)}
+
+/* gate */
+#gate{position:fixed;inset:0;background:var(--navy-deep);display:flex;align-items:center;justify-content:center;z-index:100;padding:24px}
+#gate .box{width:100%;max-width:340px;text-align:center}
+#gate img{height:110px;margin-bottom:20px;filter:brightness(0) invert(1)}
+#gate input{width:100%;padding:13px 16px;border:1px solid rgba(255,255,255,.25);border-radius:10px;background:rgba(255,255,255,.08);color:#fff;font-size:16px;font-family:var(--sans);outline:none}
+#gate input::placeholder{color:rgba(255,255,255,.45)}
+#gate button{width:100%;margin-top:12px;padding:13px;border:0;border-radius:10px;background:var(--coral);color:#fff;font-weight:700;font-size:15px;cursor:pointer;font-family:var(--sans)}
+#gate .err{color:var(--coral);font-size:13px;margin-top:10px;min-height:18px}
+
+/* shell */
+#app{display:none}
+.topbar{background:var(--card);border-bottom:1px solid var(--hair);position:sticky;top:0;z-index:10}
+.topbar .in{max-width:1080px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+.topbar img{height:75px;display:block}
+.topbar .links{font-size:13px;font-weight:600}
+.topbar .links a{margin-left:18px;color:var(--muted)}
+.topbar .links a:hover{color:var(--coral-deep)}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+h1{font-family:var(--serif);font-weight:400;font-size:34px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:13px;margin:6px 0 26px}
+.sub b{color:var(--ink);font-weight:600}
+h2{font-family:var(--serif);font-weight:400;font-size:24px;margin:42px 0 16px}
+.note{font-size:12px;color:var(--muted)}
+
+/* recommendations */
+.recs{background:var(--card);border:2px solid var(--navy);border-radius:14px;padding:20px;margin-bottom:8px}
+.recs ol{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.recs li{display:grid;grid-template-columns:26px 1fr;gap:12px;font-size:13px;line-height:1.55;color:var(--muted)}
+.recs li .num{width:24px;height:24px;border-radius:99px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.recs li b{color:var(--ink);font-weight:700}
+.recs li .done{color:#1f7a3d;font-weight:700}
+
+/* warning */
+.warn{background:var(--coral-tint);border:1px solid var(--coral);border-radius:14px;padding:16px 18px;font-size:13px;line-height:1.6;margin-bottom:8px}
+.warn b{color:var(--coral-deep)}
+
+/* overview tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:16px 16px 12px;min-height:96px;display:flex;flex-direction:column}
+.tile .k{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.tile .v{font-family:var(--serif);font-size:32px;margin-top:6px;line-height:1.1}
+.tile .v small{font-size:18px;color:var(--muted)}
+.tile .d{font-size:12px;color:var(--muted);margin-top:4px}
+
+/* cards */
+.card{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:20px;margin-bottom:14px}
+.chart-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:10px}
+.chart-title span{float:right;font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted)}
+.chartrow{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:760px){.chartrow{grid-template-columns:1fr 1fr}}
+
+/* daily bars */
+.chart{display:flex;align-items:flex-end;gap:3px;height:178px;padding-top:8px;position:relative;border-bottom:1px solid var(--hair)}
+.clip{position:absolute;left:0;right:0;top:40px;border-top:1px dashed var(--hair)}
+.clip span{position:absolute;right:0;top:-8px;font-size:9px;color:var(--muted);background:var(--card);padding:0 4px}
+.bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar .col{width:100%;max-width:18px;background:var(--navy);border-radius:3px 3px 0 0;min-height:2px}
+.bar.spike .col{background:linear-gradient(180deg,var(--coral),var(--coral-deep))}
+.bar.spike .v{font-size:9px;color:var(--coral-deep);font-weight:700;margin-bottom:2px}
+.xends{display:flex;justify-content:space-between;margin-top:7px;font-size:10px;color:var(--muted)}
+.cap{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.5}
+.cap b{color:var(--ink);font-weight:600}
+
+/* rows */
+.rows{display:flex;flex-direction:column;gap:11px}
+.row{display:grid;grid-template-columns:150px 1fr 84px;align-items:center;gap:12px}
+.row .rk{font-size:13px;color:var(--ink);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .rk small{display:block;font-size:10px;color:var(--muted);font-weight:400}
+.row .track{height:10px;background:#F0F0EA;border-radius:6px;overflow:hidden}
+.row .track i{display:block;height:100%;background:var(--navy);border-radius:6px}
+.row .rv{font-size:13px;font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.row .rv small{font-weight:400;color:var(--muted);font-size:11px}
+
+/* devices split */
+.dev{display:flex;height:14px;border-radius:7px;overflow:hidden;margin:4px 0 12px}
+.dev i{height:100%}
+.dev .dk{background:var(--navy)}.dev .mb{background:var(--coral)}
+.legend{font-size:12px;color:var(--muted)}
+.legend b{color:var(--ink)}
+.legend span{display:inline-flex;align-items:center;margin-right:14px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:6px}
+
+/* GSC stats */
+.gsc-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-bottom:18px}
+.gsc-stats .s .n{font-family:var(--serif);font-size:24px}
+.gsc-stats .s .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.badge{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:99px;background:var(--coral-tint);color:var(--coral-deep)}
+.badge.ok{background:var(--navy-tint);color:var(--navy)}
+
+.freshness{font-size:11px;color:var(--muted);background:var(--navy-tint);border-radius:10px;padding:10px 14px;margin-top:18px;line-height:1.7}
+.freshness b{color:var(--ink);font-weight:600}
+footer{border-top:1px solid var(--hair);margin-top:50px;padding:24px 20px;text-align:center;font-size:12px;color:var(--muted)}
+
+@media(max-width:600px){
+  h1{font-size:28px}
+  .row{grid-template-columns:118px 1fr 72px}
+  .bar .col{max-width:12px}
+}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <img src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club">
+    <input id="pw" type="password" placeholder="Password" autocomplete="off">
+    <button id="go">Enter</button>
+    <div class="err" id="err"></div>
+  </div>
+</div>
+
+<div id="app">
+  <div class="topbar">
+    <div class="in">
+      <a href="/"><img src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club"></a>
+      <div class="links">
+        <a href="/dashboard/">← Command dashboard</a>
+        <a href="/dashboard/seo/">SEO &amp; Traffic</a>
+        <a href="/">haps.club</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h1>Newsletter</h1>
+    <div class="sub"><b>Kit · Haps Club account.</b> Weekly LA events newsletter sent Tuesdays from hapsclub.kit.com. Snapshot Jun 11, 2026 · Refreshed on request.</div>
+
+    <div class="warn"><b>Growth has stalled while engagement stays strong.</b> The last 28 days are <b>net &minus;5 subscribers</b> (16 new vs 21 cancels) and primary-send opens drifted from the low-50s in mid-May to 41&ndash;43% in June. List quality is healthy &mdash; the gap is top-of-funnel. Levers already on deck: QR codes at Summer Solstice (Jun 20), Instagram conversion, referral links on Luma / Eventbrite / Partiful profiles.</div>
+
+    <h2>Overview</h2>
+    <div class="tiles">
+      <div class="tile"><div class="k">Subscribers</div><div class="v">1,041</div></div>
+      <div class="tile"><div class="k">Net · 28 days</div><div class="v">&minus;5</div></div>
+      <div class="tile"><div class="k">New · 28 days</div><div class="v">16</div></div>
+      <div class="tile"><div class="k">Cancels · 28 days</div><div class="v">21</div></div>
+      <div class="tile"><div class="k">Open rate · 90d</div><div class="v">42.6<small>%</small></div></div>
+      <div class="tile"><div class="k">Click rate · 90d</div><div class="v">3.0<small>%</small></div></div>
+      <div class="tile"><div class="k">Unsub rate · 90d</div><div class="v">0.34<small>%</small></div></div>
+      <div class="tile"><div class="k">Bounce rate · 90d</div><div class="v">1.63<small>%</small></div></div>
+    </div>
+
+    <h2>Primary sends</h2>
+    <div class="card">
+      <div class="chart-title">Tuesday list sends <span>Open rate · clicks · ~1,050 recipients</span></div>
+      <div class="rows">
+        <div class="row"><span class="rk">May 24 · MDW Special Edition</span><div class="track"><i style="width:100%"></i></div><span class="rv">52.1%<small> · 106 clicks</small></span></div>
+        <div class="row"><span class="rk">May 26 · Everything worth doing in LA</span><div class="track"><i style="width:96.6%"></i></div><span class="rv">50.3%<small> · 137 clicks</small></span></div>
+        <div class="row"><span class="rk">May 19 · MDW? Are you prepared</span><div class="track"><i style="width:94.1%"></i></div><span class="rv">49.1%<small> · 127 clicks</small></span></div>
+        <div class="row"><span class="rk">May 12 · Sunset salsa, jazz, swan boat</span><div class="track"><i style="width:90.6%"></i></div><span class="rv">47.2%<small> · 119 clicks · 4.3% CTR</small></span></div>
+        <div class="row"><span class="rk">Jun 5 · Another Haps night</span><div class="track"><i style="width:83.2%"></i></div><span class="rv">43.3%<small> · 79 clicks</small></span></div>
+        <div class="row"><span class="rk">Jun 2 · 6 things this June</span><div class="track"><i style="width:81.4%"></i></div><span class="rv">42.4%<small> · 89 clicks</small></span></div>
+        <div class="row"><span class="rk">Jun 9 · Garden party, 1877 pasta, bass phenom</span><div class="track"><i style="width:78.8%"></i></div><span class="rv">41.0%<small> · 106 clicks</small></span></div>
+      </div>
+      <p class="cap">Sorted by open rate. The pattern: <b>mid/late May sends opened in the high-40s to low-50s; June sends sit at 41&ndash;43%</b>. Could be seasonal inbox fatigue or subject-line drift &mdash; the May 24 (&ldquo;MDW Special Edition&rdquo;) and May 26 sends are the benchmark. May 12 holds the best click rate at 4.3%. Recipients also slid 1,057 → 1,043 over the month, the list-shrink showing up in sends.</p>
+    </div>
+
+    <h2>Re-sends to non-openers</h2>
+    <div class="card">
+      <div class="chart-title">Second-pass sends <span>Open rate · non-opener segment</span></div>
+      <div class="rows">
+        <div class="row"><span class="rk">May 20 · MDW in Los Angeles <small>680 sent</small></span><div class="track"><i style="width:100%"></i></div><span class="rv">32.7%<small> · 6 clicks</small></span></div>
+        <div class="row"><span class="rk">May 24 · MDW Special re-send <small>719 sent</small></span><div class="track"><i style="width:96.2%"></i></div><span class="rv">31.4%<small> · 11 clicks</small></span></div>
+        <div class="row"><span class="rk">May 13 · Always something fun <small>628 sent</small></span><div class="track"><i style="width:67.2%"></i></div><span class="rv">22.0%<small> · 4 clicks</small></span></div>
+        <div class="row"><span class="rk">Jun 3 · June calendar re-send <small>664 sent</small></span><div class="track"><i style="width:53.0%"></i></div><span class="rv">17.3%<small> · 7 clicks</small></span></div>
+        <div class="row"><span class="rk">Jun 6 · Solstice re-send <small>633 sent</small></span><div class="track"><i style="width:48.8%"></i></div><span class="rv">16.0%<small> · 2 clicks</small></span></div>
+      </div>
+      <p class="cap">Re-sends recover a meaningful second audience &mdash; the May passes pulled 22&ndash;33% of non-openers back in, though June re-sends softened to 16&ndash;17% in line with the primary-send dip. Worth keeping in the cadence; subject-line variation does the heavy lifting here.</p>
+    </div>
+
+    <h2>90-day volume</h2>
+    <div class="card">
+      <div class="tiles" style="margin-top:4px">
+        <div class="tile"><div class="k">Emails sent</div><div class="v">20,939</div></div>
+        <div class="tile"><div class="k">Opened</div><div class="v">8,910</div></div>
+        <div class="tile"><div class="k">Clicked</div><div class="v">623</div></div>
+        <div class="tile"><div class="k">Window</div><div class="v" style="font-size:18px;padding-top:8px">Mar 13 &ndash; Jun 11</div></div>
+      </div>
+      <p class="cap">Account-level totals across all sends, last 90 days. Open and click tracking enabled.</p>
+    </div>
+
+    <div class="freshness">
+      <b>Source:</b> Kit (ConvertKit) · Haps Club account · michael@haps.club · subscriber form forms/9421017.<br>
+      <b>Snapshot:</b> Jun 11, 2026 — point-in-time pull, not a live feed; regenerate to refresh. Growth window May 14 – Jun 11; rate averages trailing 90 days.
+    </div>
+  </div>
+
+  <footer>© 2026 Haps Club · Internal dashboard · noindex</footer>
+</div>
+
+<script>
+(function(){
+  var KEY='haps_dash_ok';
+  var gate=document.getElementById('gate'),app=document.getElementById('app');
+  function unlock(){gate.style.display='none';app.style.display='block';}
+  function tryPw(){
+    var v=document.getElementById('pw').value;
+    if(v==='haps#2026'){try{sessionStorage.setItem(KEY,'1');}catch(e){}unlock();}
+    else{document.getElementById('err').textContent='That is not it. Try again.';}
+  }
+  document.getElementById('go').addEventListener('click',tryPw);
+  document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')tryPw();});
+  var ok=false;try{ok=sessionStorage.getItem(KEY)==='1';}catch(e){}
+  if(ok)unlock();
+})();
+</script>
+</body>
+</html>
