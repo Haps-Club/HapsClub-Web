@@ -315,9 +315,9 @@ document.getElementById('pw').addEventListener('keydown',function(e){if(e.key===
 try{if(sessionStorage.getItem('haps_dash_ok')==='1')showApp();}catch(e){}
 
 /* persistence */
-var KEY='haps:dashboard:v1';
+var KEY='haps:dashboard:v2';
 var store={
-  load:function(seed){try{var r=localStorage.getItem(KEY);if(r)return JSON.parse(r);}catch(e){}return seed;},
+  load:function(seed){try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);if(d&&d.events&&d.events.length&&d.events.every(function(e){return e&&e.sponsors&&e.phases;}))return d;}}catch(e){}return seed;},
   save:function(d){try{localStorage.setItem(KEY,JSON.stringify(d));}catch(e){}},
   clear:function(){try{localStorage.removeItem(KEY);}catch(e){}}
 };
