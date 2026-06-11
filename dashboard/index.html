@@ -316,8 +316,9 @@ try{if(sessionStorage.getItem('haps_dash_ok')==='1')showApp();}catch(e){}
 
 /* persistence */
 var KEY='haps:dashboard:v2';
+var SEED_V=3;
 var store={
-  load:function(seed){try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);if(d&&d.events&&d.events.length&&d.events.every(function(e){return e&&e.sponsors&&e.phases;}))return d;}}catch(e){}return seed;},
+  load:function(seed){try{var r=localStorage.getItem(KEY);if(r){var d=JSON.parse(r);if(d&&d.events&&d.events.length&&d.events.every(function(e){return e&&e.sponsors&&e.phases;})){if(d.seedV===SEED_V)return d;var m=migrate(d,seed);this.save(m);return m;}}}catch(e){}return seed;},
   save:function(d){try{localStorage.setItem(KEY,JSON.stringify(d));}catch(e){}},
   clear:function(){try{localStorage.removeItem(KEY);}catch(e){}}
 };
@@ -325,11 +326,11 @@ var store={
 /* seed data — full event roster */
 function seedData(){return {events:[
   {
-    id:'garden',name:'Summer Garden Party',status:'live',
+    id:'garden',name:'Summer Solstice in the Garden',status:'live',
     date:'2026-06-20',dateLabel:'Sat · June 20',time:'5:00 – 9:00 PM',
     venue:'Twentieth Street Garden',neighborhood:'West Adams',capacity:60,
-    cohost:'Twentieth Street Garden',ticketUrl:'https://luma.com/TheHapsClub',
-    pageUrl:'https://haps.club/events/summer-garden-party/',
+    cohost:'Jimmy Barnes \u00b7 Jacob Perlmutter \u00b7 Jenn Zelmer',ticketUrl:'https://luma.com/jwjxh4zp',
+    pageUrl:'https://haps.club/events/summer-solstice-in-the-garden/',
     blurb:'One dish from Tacos Como En El D.F. + a seasonal garden cocktail. Live music, open-air backyard.',
     tiers:[
       {name:'Early Bird',price:25,when:'Launch → ~June 10'},
@@ -339,11 +340,11 @@ function seedData(){return {events:[
     costPerGuest:18,
     copromo:[
       {id:'cp1',platform:'Luma',logo:'📅',color:'#C4583A',status:'in-progress',progress:60,
-       notes:['Primary ticketing — event live at luma.com/TheHapsClub','Request LA discovery section feature','Ask about co-promo newsletter slot','Explore "Presented by Haps Club" for future events'],
-       links:[{label:'Event Page',url:'https://luma.com/TheHapsClub'},{label:'Luma for Organizers',url:'https://lu.ma/organizer'}]},
-      {id:'cp2',platform:'Partiful',logo:'🎉',color:'#6B47DC',status:'exploring',progress:15,
-       notes:['Create Partiful event — RSVP only, ticketing stays on Luma','Request cross-post to Partiful discovery feed','Discuss social sharing — they tag events on Instagram','Add Partiful link to landing page once live'],
-       links:[{label:'Partiful.com',url:'https://partiful.com'},{label:'Create Event',url:'https://partiful.com/e/new'}]}
+       notes:['Primary ticketing — event live at luma.com/jwjxh4zp','Request LA discovery section feature','Ask about co-promo newsletter slot','Explore "Presented by Haps Club" for future events'],
+       links:[{label:'Event Page',url:'https://luma.com/jwjxh4zp'},{label:'Organizer Profile',url:'https://luma.com/TheHapsClub'}]},
+      {id:'cp2',platform:'Partiful',logo:'🎉',color:'#6B47DC',status:'in-progress',progress:70,
+       notes:['Partiful event is live — RSVP only, ticketing stays on Luma','Request cross-post to Partiful discovery feed','Discuss social sharing — they tag events on Instagram','Co-host invites sent via Partiful'],
+       links:[{label:'Partiful Event',url:'https://partiful.com/e/zvhCOmRj1REsY9SPVINY'},{label:'Partiful.com',url:'https://partiful.com'}]}
     ],
     phases:[
       {name:'Foundation',when:'done',items:[
@@ -419,8 +420,36 @@ function seedData(){return {events:[
   }
 ]};} /* end seedData */
 
+/* migrate: overlay saved progress onto fresh seed (new deploys win on content, user wins on progress) */
+function migrate(saved,seed){
+  var checks={},extras={};
+  saved.events.forEach(function(se){
+    se.phases.forEach(function(p,pi){p.items.forEach(function(it){
+      checks[it[0]]=it[2];
+      if((''+it[0]).charAt(0)==='x'){(extras[se.id]=extras[se.id]||[]).push([pi,it]);}
+    });});
+  });
+  seed.events.forEach(function(ev){
+    var se=null;saved.events.forEach(function(x){if(x.id===ev.id)se=x;});
+    ev.phases.forEach(function(p){p.items.forEach(function(it){if(it[0] in checks)it[2]=checks[it[0]];});});
+    if(se){
+      ev.notes=se.notes!==undefined?se.notes:ev.notes;
+      (extras[ev.id]||[]).forEach(function(pair){var pi=Math.min(pair[0],ev.phases.length-1);ev.phases[pi].items.push(pair[1]);});
+      ev.sponsors.forEach(function(s){se.sponsors.forEach(function(os){if(os.id===s.id){s.status=os.status;s.fee=os.fee;s.units=os.units;}});});
+      se.sponsors.forEach(function(os){if(!ev.sponsors.some(function(s){return s.id===os.id;}))ev.sponsors.push(os);});
+      if(se.copromo)se.copromo.forEach(function(oc){
+        var match=null;(ev.copromo=ev.copromo||[]).forEach(function(c){if(c.id===oc.id)match=c;});
+        if(match){match.status=oc.status;match.progress=oc.progress;}else if((''+oc.id).length>4){ev.copromo.push(oc);}
+      });
+    }
+  });
+  saved.events.forEach(function(se){if(!seed.events.some(function(e){return e.id===se.id;}))seed.events.push(se);});
+  seed.seedV=SEED_V;return seed;
+}
+
 /* helpers */
 var DATA;
+function esc(s){return (''+(s==null?'':s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function $(s){return document.querySelector(s);}
 function fmtMoney(n){return '$'+n.toLocaleString();}
 function eventProgress(ev){var t=0,d=0;ev.phases.forEach(function(p){p.items.forEach(function(it){t++;if(it[2])d++;});});return t?Math.round(d/t*100):0;}
@@ -461,7 +490,7 @@ function renderOverview(){
       (ev.status==='live'?'<div class="corner"></div>':'')+
       '<div class="top"><div>'+
         '<div class="when">'+ev.dateLabel+' · '+ev.neighborhood+'</div>'+
-        '<h3 class="serif" style="font-size:20px">'+ev.name+'</h3></div>'+
+        '<h3 class="serif" style="font-size:20px">'+esc(ev.name)+'</h3></div>'+
         '<span class="badge '+badgeClass[ev.status]+'">'+badgeText[ev.status]+'</span></div>'+
       '<div class="meta"><span><b>'+ev.venue.split('—')[0].trim()+'</b></span><span>'+pl.tminus+'</span></div>'+
       '<div class="pbar '+(ev.status==='done'?'done':'')+'"><span style="width:'+pct+'%"></span></div>'+
@@ -494,7 +523,7 @@ function renderDetail(id){
     var itemsHTML=p.items.map(function(it){
       return '<div class="item '+(it[2]?'done':'')+'" data-toggle="'+pi+':'+it[0]+'">'+
         '<span class="check"><svg width="11" height="11" viewBox="0 0 11 11"><path d="M1.5 5.5l2.5 2.5 5-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'+
-        '<span class="txt">'+it[1]+'</span></div>';
+        '<span class="txt">'+esc(it[1])+'</span></div>';
     }).join('');
     var openCls=(pi===1||(ppct<100&&pi<3))?'open':'';
     return '<div class="phase-block '+openCls+'">'+
@@ -505,7 +534,7 @@ function renderDetail(id){
   }).join('');
 
   var sponsorsHTML=ev.sponsors.length?ev.sponsors.map(function(s){
-    return '<tr><td><div class="sp-name">'+s.name+'</div><div class="sp-type">'+s.type+'</div></td>'+
+    return '<tr><td><div class="sp-name">'+esc(s.name)+'</div><div class="sp-type">'+esc(s.type)+'</div></td>'+
       '<td>'+(s.fee?fmtMoney(s.fee):'<span class="muted">in-kind</span>')+'</td>'+
       '<td>'+(s.units||'—')+'</td>'+
       '<td><span class="sstat s-'+s.status+'" data-sponsor="'+s.id+'">'+s.status+'</span></td></tr>';
@@ -531,7 +560,7 @@ function renderDetail(id){
       return '<div class="copromo-card">'+
         '<div class="cp-head" onclick="toggleCopromo(this)">'+
           '<div class="cp-logo" style="background:'+cp.color+'22;font-size:20px">'+cp.logo+'</div>'+
-          '<div style="flex:1"><div class="cp-name">'+cp.platform+'</div>'+
+          '<div style="flex:1"><div class="cp-name">'+esc(cp.platform)+'</div>'+
           '<div class="cp-status">'+(statusLabel[cp.status]||'')+'</div></div>'+
           '<button class="cp-tog">+</button></div>'+
         '<div class="cp-body">'+
@@ -552,7 +581,7 @@ function renderDetail(id){
     '<div class="layerlabel pub"><span class="dot"></span>Public · mirrors haps.club event page</div>'+
     '<div class="panel public">'+
       '<div class="head"><div>'+
-        '<h2 class="title serif">'+ev.name+'</h2>'+
+        '<h2 class="title serif">'+esc(ev.name)+'</h2>'+
         '<div class="muted" style="font-size:13.5px;max-width:560px;margin-top:4px">'+ev.blurb+'</div></div>'+
         '<div style="display:flex;gap:8px;flex-wrap:wrap">'+
         (ev.ticketUrl?'<a class="ext" href="'+ev.ticketUrl+'" target="_blank" rel="noopener">🎟 Tickets · Luma</a>':'')+
@@ -593,7 +622,7 @@ function renderDetail(id){
       '<span>Confirmed sponsor revenue · <b>'+fmtMoney(spRev)+'</b></span></div></div>'+
 
     '<div class="twocol">'+
-      '<div class="panel notes"><h3 class="ph">Notes</h3><textarea data-notes>'+(ev.notes||'')+'</textarea>'+
+      '<div class="panel notes"><h3 class="ph">Notes</h3><textarea data-notes>'+esc(ev.notes||'')+'</textarea>'+
         '<h3 class="ph" style="margin-top:18px">Vendors &amp; Contacts</h3><div class="vend">'+vendorsHTML+'</div></div>'+
       '<div class="panel budget"><h3 class="ph">Quick Budget</h3>'+
         '<div class="row"><span>Ticket revenue <span class="muted">('+ev.capacity+'×$'+(ev.tiers[1].price||0)+')</span></span><span>'+fmtMoney(tixRev)+'</span></div>'+
@@ -642,15 +671,38 @@ document.addEventListener('click',function(e){
     if(!ev.copromo)ev.copromo=[];
     ev.copromo.push({id:'cp'+Date.now(),platform:platform,logo:'📣',color:'#6E6E73',status:'not-started',progress:0,notes:['Add outreach notes here'],links:[]});
     persist();renderDetail(openEventId);return;}
-  if(e.target.closest('[data-add-event]')){alert('New Event form coming soon — will auto-generate the standardized checklist.');return;}
-  if(e.target.closest('[data-reset]')){if(confirm('Reset all saved progress on this device?')){store.clear();DATA=seedData();persist();renderOverview();}}
+  if(e.target.closest('[data-add-event]')){
+    var name=prompt('Event name:');if(!name)return;
+    var date=prompt('Date (YYYY-MM-DD):','');if(date&&!/^\d{4}-\d{2}-\d{2}$/.test(date)){alert('Date must be YYYY-MM-DD — saved as TBD.');date='';}
+    if(!date){var t=new Date();t.setDate(t.getDate()+45);date=t.toISOString().slice(0,10);}
+    var venue=prompt('Venue (or TBD):')||'TBD';
+    var cap=parseInt(prompt('Capacity:','50'),10)||50;
+    var id='ev'+Date.now(),px=id+'_';
+    var dl=new Date(date+'T00:00:00').toLocaleDateString('en-US',{weekday:'short',month:'long',day:'numeric'});
+    DATA.events.push({id:id,name:name,status:'planning',date:date,dateLabel:dl,time:'TBD',
+      venue:venue,neighborhood:'TBD',capacity:cap,cohost:'',ticketUrl:'',pageUrl:'',
+      blurb:'New event — concept being locked.',
+      tiers:[{name:'Early Bird',price:0,when:'TBD'},{name:'Standard',price:0,when:'TBD'},{name:'Day-of',price:0,when:'TBD'}],
+      costPerGuest:0,copromo:[],
+      phases:[
+        {name:'Foundation',when:'now',items:[[px+'f1','Lock venue + date',venue!=='TBD'?1:0],[px+'f2','Confirm co-host',0],[px+'f3','Set capacity + pricing',0],[px+'f4','One-line concept',0],[px+'f5','Open Luma',0]]},
+        {name:'Supply & Sponsors',when:'next',items:[[px+'s1','Sponsor outreach from rolodex',0],[px+'s2','Book photographer',0],[px+'s3','Book music / DJ',0],[px+'s4','Order gift-bag items',0]]},
+        {name:'Launch',when:'later',items:[[px+'l1','Event page live',0],[px+'l2','Newsletter feature',0],[px+'l3','IG launch reel',0],[px+'l4','Open Early Bird pricing',0]]},
+        {name:'Sell',when:'later',items:[[px+'se1','IG 2\u00d7 / week',0],[px+'se2','Weekly newsletter mention',0],[px+'se3','VIP + Haps network invites',0],[px+'se4','Flip to Standard tier',0]]},
+        {name:'Confirm (week of)',when:'later',items:[[px+'c1','Lock headcount with venue',0],[px+'c2','Confirm food + drink',0],[px+'c3','Finalize run-of-show',0],[px+'c4','Assemble gift bags',0]]},
+        {name:'Day-of',when:'later',items:[[px+'d1','Test check-in',0],[px+'d2','Stage gift bags',0],[px+'d3','Welcome (30 sec) + program',0]]},
+        {name:'Wrap & Recycle',when:'later',items:[[px+'w1','Thank-you to guests',0],[px+'w2','Recap reel + photos',0],[px+'w3','Sponsor recaps',0],[px+'w4','Seed next event',0]]}
+      ],
+      sponsors:[],vendors:[],notes:''});
+    persist();renderOverview();return;}
+  if(e.target.closest('[data-reset]')){if(confirm('Reset all saved progress on this device?')){store.clear();DATA=seedData();DATA.seedV=SEED_V;persist();renderOverview();}}
 });
 
 document.addEventListener('input',function(e){
   if(e.target.matches('[data-notes]')){DATA.events.find(function(x){return x.id===openEventId;}).notes=e.target.value;persist();}
 });
 
-function boot(){DATA=store.load(seedData());renderOverview();}
+function boot(){DATA=store.load(seedData());DATA.seedV=SEED_V;renderOverview();}
 </script>
 </body>
 </html>
