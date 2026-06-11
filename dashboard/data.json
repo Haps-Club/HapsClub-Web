@@ -1,572 +1,135 @@
 {
- "generated_at": "2026-06-10T17:30:00-07:00",
- "sources": {
-  "ga4": {
-   "as_of": "2026-06-10",
-   "detail": "property 536909119, hostName=haps.club, through Jun 9",
-   "status": "live"
+  "generated_at": "2026-06-10T22:50:00-07:00",
+  "sources": {
+    "ga4": { "refreshed": "2026-06-10", "note": "hostName = haps.club. Property data begins May 9, 2026." },
+    "gsc": { "refreshed": "2026-06-08", "note": "Young property. Search Console data lags 2\u20133 days." },
+    "stripe": { "refreshed": "2026-06-10", "note": "Gross processed payments. Net of fees not yet pulled." },
+    "kit": { "refreshed": null, "note": "Kit connector awaiting approval. Subscriber data pending." },
+    "ticketing": { "refreshed": null, "note": "Luma / Partiful CSV exports not yet uploaded." },
+    "instagram": { "refreshed": null, "note": "No Instagram export uploaded yet." }
   },
-  "gsc": {
-   "as_of": "2026-06-10",
-   "detail": "sc-domain:haps.club - property is new, data is sparse",
-   "status": "live"
+  "overview": {
+    "subscribers": { "value": null, "delta_week": null },
+    "registrations": { "value": 30, "label": "Paid registrations, Summer Solstice (Stripe)" },
+    "revenue_90d": { "value": 3535.60, "payments": 96 },
+    "sessions_30d": { "value": 837, "note": "Site live since May 9 \u2014 no full prior period to compare" },
+    "search_clicks_28d": { "value": 2, "impressions": 4 }
   },
-  "stripe": {
-   "as_of": "2026-06-10",
-   "detail": "135 succeeded charges, Feb-Jun 2026",
-   "status": "live"
+  "events": [
+    {
+      "name": "Summer Solstice in the Garden",
+      "date": "2026-06-20",
+      "time": "5\u20139 PM",
+      "venue": "Twentieth Street Garden, West Adams",
+      "status": "upcoming",
+      "featured": true,
+      "registrations_paid": 30,
+      "revenue": 350.00,
+      "tiers": [
+        { "price": 10, "count": 22 },
+        { "price": 15, "count": 6 },
+        { "price": 20, "count": 2 }
+      ],
+      "links": {
+        "luma": "https://luma.com/jwjxh4zp",
+        "partiful": "https://partiful.com/e/zvhCOmRj1REsY9SPVINY",
+        "page": "/events/summer-solstice-in-the-garden/",
+        "ops": "/events/summer-solstice-in-the-garden/ops/"
+      },
+      "note": "Counts are Stripe-processed payments. Free RSVPs and Luma-side registrations arrive via CSV upload."
+    }
+  ],
+  "events_past": [
+    { "name": "Cinco de Mayo Party", "date": "2026-05-05", "venue": "Twentieth Street Garden", "payments": 58, "revenue": 1645.60 },
+    { "name": "Dinner Series \u00b7 Proper Hotel Santa Monica", "date": "2026-04", "venue": "Proper Hotel, Santa Monica", "payments": 8, "revenue": 1540.00 },
+    { "name": "Dinner Series \u00b7 Crustacean Beverly Hills", "date": "2026-02", "venue": "Crustacean, Beverly Hills", "payments": 39, "revenue": 4320.00 }
+  ],
+  "revenue": {
+    "currency": "USD",
+    "all_time_gross": 7855.60,
+    "all_time_payments": 135,
+    "balance": { "available": 507.08, "pending": 104.38, "as_of": "2026-06-10" },
+    "monthly": [
+      { "month": "2026-02", "gross": 4320.00, "payments": 39 },
+      { "month": "2026-03", "gross": 0, "payments": 0 },
+      { "month": "2026-04", "gross": 2520.00, "payments": 45 },
+      { "month": "2026-05", "gross": 665.60, "payments": 21 },
+      { "month": "2026-06", "gross": 350.00, "payments": 30, "partial": true }
+    ],
+    "by_event": [
+      { "name": "Crustacean Dinner Series", "gross": 4320.00, "payments": 39 },
+      { "name": "Cinco de Mayo Party", "gross": 1645.60, "payments": 58 },
+      { "name": "Proper Hotel Dinner Series", "gross": 1540.00, "payments": 8 },
+      { "name": "Summer Solstice in the Garden", "gross": 350.00, "payments": 30 }
+    ],
+    "recent": [
+      { "date": "2026-06-10", "event": "Summer Solstice", "amount": 15.00, "email": "mskkinla@gmail.com" },
+      { "date": "2026-06-10", "event": "Summer Solstice", "amount": 15.00, "email": "ahcohen22@gmail.com" },
+      { "date": "2026-06-10", "event": "Summer Solstice", "amount": 15.00, "email": "ilovo@careismatic.com" },
+      { "date": "2026-06-10", "event": "Summer Solstice", "amount": 15.00, "email": "violette.moussavi@gmail.com" },
+      { "date": "2026-06-09", "event": "Summer Solstice", "amount": 15.00, "email": "rrosen14@mac.com" },
+      { "date": "2026-06-09", "event": "Summer Solstice", "amount": 15.00, "email": "greywarden59@yahoo.com" },
+      { "date": "2026-06-09", "event": "Summer Solstice", "amount": 10.00, "email": "ruble-knurled1s@icloud.com" },
+      { "date": "2026-06-09", "event": "Summer Solstice", "amount": 10.00, "email": "dipak143@yahoo.com" },
+      { "date": "2026-06-09", "event": "Summer Solstice", "amount": 10.00, "email": "anjali.banthia@yahoo.com" },
+      { "date": "2026-06-09", "event": "Summer Solstice", "amount": 10.00, "email": "blueglasssurfer@gmail.com" }
+    ]
   },
-  "kit": {
-   "as_of": "2026-05-19",
-   "detail": "last known count - no fresh export this session",
-   "status": "carried"
+  "audience": {
+    "subscribers": null,
+    "weekly_net_adds": null,
+    "history": [],
+    "issues": []
   },
-  "luma": {
-   "as_of": null,
-   "detail": "no CSV ingested yet - registrations shown are paid Stripe orders",
-   "status": "empty"
+  "traffic": {
+    "ga4": {
+      "window": "2026-05-09 to 2026-06-10",
+      "sessions_30d": 837,
+      "daily": [
+        { "d": "05-09", "s": 3 }, { "d": "05-10", "s": 8 }, { "d": "05-11", "s": 13 },
+        { "d": "05-12", "s": 76 }, { "d": "05-13", "s": 18 }, { "d": "05-14", "s": 28 },
+        { "d": "05-15", "s": 30 }, { "d": "05-16", "s": 17 }, { "d": "05-17", "s": 11 },
+        { "d": "05-18", "s": 14 }, { "d": "05-19", "s": 34 }, { "d": "05-20", "s": 18 },
+        { "d": "05-21", "s": 14 }, { "d": "05-22", "s": 4 }, { "d": "05-23", "s": 2 },
+        { "d": "05-24", "s": 27 }, { "d": "05-25", "s": 3 }, { "d": "05-26", "s": 32 },
+        { "d": "05-27", "s": 5 }, { "d": "05-28", "s": 11 }, { "d": "05-29", "s": 6 },
+        { "d": "05-30", "s": 15 }, { "d": "05-31", "s": 11 }, { "d": "06-01", "s": 10 },
+        { "d": "06-02", "s": 27 }, { "d": "06-03", "s": 2 }, { "d": "06-04", "s": 6 },
+        { "d": "06-05", "s": 340 }, { "d": "06-06", "s": 14 }, { "d": "06-07", "s": 6 },
+        { "d": "06-08", "s": 14 }, { "d": "06-09", "s": 30 }, { "d": "06-10", "s": 12 }
+      ],
+      "top_pages": [
+        { "path": "/", "sessions": 800 },
+        { "path": "/subscribe", "sessions": 87 },
+        { "path": "/archive/2026-06-09-the-garden-party/", "sessions": 16 },
+        { "path": "/archive/", "sessions": 5 },
+        { "path": "/archive/2026-05-12-date-night-la/", "sessions": 3 }
+      ],
+      "channels": [
+        { "name": "Direct", "sessions": 698 },
+        { "name": "Organic Social", "sessions": 56 },
+        { "name": "Referral", "sessions": 55 },
+        { "name": "Organic Search", "sessions": 27 },
+        { "name": "Unassigned", "sessions": 6 }
+      ]
+    },
+    "gsc": {
+      "window": "2026-05-12 to 2026-06-08",
+      "clicks": 2,
+      "impressions": 4,
+      "daily": [
+        { "d": "06-07", "clicks": 0, "impressions": 1 },
+        { "d": "06-08", "clicks": 2, "impressions": 3 }
+      ],
+      "top_queries": [
+        { "q": "haps club", "clicks": 2, "impressions": 3, "position": 2.7 }
+      ],
+      "top_pages": [
+        { "page": "https://haps.club/", "clicks": 2, "impressions": 4, "position": 2.3 }
+      ]
+    }
   },
-  "instagram": {
-   "as_of": null,
-   "detail": "no export ingested yet",
-   "status": "empty"
+  "engagement": {
+    "instagram": null
   }
- },
- "kit": {
-  "subscribers": 1200,
-  "approx": true,
-  "as_of": "2026-05-19",
-  "weekly_delta": null,
-  "history": [
-   {
-    "date": "2026-06-10",
-    "value": 1200,
-    "approx": true
-   }
-  ]
- },
- "events": [
-  {
-   "id": "solstice",
-   "name": "Summer Solstice in the Garden",
-   "status": "upcoming",
-   "featured": true,
-   "date": "2026-06-20",
-   "date_label": "Sat, June 20",
-   "time": "5:00-9:00 PM",
-   "venue": "Twentieth Street Garden",
-   "neighborhood": "West Adams",
-   "capacity": 60,
-   "registrations_paid": 30,
-   "registrations_note": "paid Stripe orders; Luma comp/free RSVPs not yet ingested",
-   "revenue": 35000,
-   "tickets": "$10 / $15 / $20 tiers observed in charges",
-   "links": {
-    "luma": "https://luma.com/jwjxh4zp",
-    "partiful": "https://partiful.com/e/zvhCOmRj1REsY9SPVINY",
-    "page": "https://haps.club/events/summer-solstice-in-the-garden/",
-    "ops": "/dashboard/events/"
-   }
-  },
-  {
-   "id": "late-summer",
-   "name": "Late Summer Supper",
-   "status": "planning",
-   "date": null,
-   "venue": "TBD",
-   "registrations_paid": null,
-   "revenue": 0,
-   "links": {
-    "ops": "/dashboard/events/"
-   }
-  }
- ],
- "events_history": [
-  {
-   "name": "Cinco de Mayo Party, Twentieth Street Garden",
-   "date": "2026-05-05",
-   "paid_orders": 58,
-   "revenue": 164560
-  },
-  {
-   "name": "Dinner Series: Proper Hotel Santa Monica",
-   "date": "2026-04",
-   "paid_orders": 8,
-   "revenue": 154000
-  },
-  {
-   "name": "Crustacean Beverly Hills x Haps Club Dinner Series",
-   "date": "2026-02",
-   "paid_orders": 39,
-   "revenue": 432000
-  },
-  {
-   "name": "Hermanito Sunday Social",
-   "date": "2026",
-   "paid_orders": null,
-   "revenue": 0,
-   "note": "no Stripe trace - free or external ticketing"
-  }
- ],
- "revenue": {
-  "currency": "usd",
-  "balance": {
-   "available": 50708,
-   "pending": 10438
-  },
-  "total_gross": 785560,
-  "total_count": 135,
-  "trailing_90": {
-   "gross": 353560,
-   "count": 96,
-   "prior_gross": 432000
-  },
-  "monthly": [
-   {
-    "month": "2025-07",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2025-08",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2025-09",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2025-10",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2025-11",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2025-12",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2026-01",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2026-02",
-    "gross": 432000,
-    "count": 39,
-    "net_est": 418302
-   },
-   {
-    "month": "2026-03",
-    "gross": 0,
-    "count": 0,
-    "net_est": 0
-   },
-   {
-    "month": "2026-04",
-    "gross": 252000,
-    "count": 45,
-    "net_est": 243342
-   },
-   {
-    "month": "2026-05",
-    "gross": 66560,
-    "count": 21,
-    "net_est": 64000
-   },
-   {
-    "month": "2026-06",
-    "gross": 35000,
-    "count": 30,
-    "net_est": 33085
-   }
-  ],
-  "by_product": [
-   {
-    "name": "Crustacean Beverly Hills x Haps Club Dinner Series",
-    "gross": 432000,
-    "count": 39,
-    "period": "Feb 2026"
-   },
-   {
-    "name": "Cinco de Mayo Party, Twentieth Street Garden",
-    "gross": 164560,
-    "count": 58,
-    "period": "Apr-May 2026"
-   },
-   {
-    "name": "Dinner Series: Proper Hotel Santa Monica",
-    "gross": 154000,
-    "count": 8,
-    "period": "Apr 2026"
-   },
-   {
-    "name": "Summer Solstice in the Garden",
-    "gross": 35000,
-    "count": 30,
-    "period": "Jun 2026"
-   }
-  ],
-  "transactions": [
-   {
-    "date": "2026-06-10",
-    "amount": 1500,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-10",
-    "amount": 1500,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-10",
-    "amount": 1500,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-10",
-    "amount": 1500,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-10",
-    "amount": 1500,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-10",
-    "amount": 1500,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-10",
-    "amount": 1000,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-10",
-    "amount": 1000,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-09",
-    "amount": 1000,
-    "description": "Summer Solstice in the Garden"
-   },
-   {
-    "date": "2026-06-09",
-    "amount": 1000,
-    "description": "Summer Solstice in the Garden"
-   }
-  ],
-  "net_note": "Net is estimated at standard Stripe card pricing (2.9% + 30 cents). Payments flow through Luma's Stripe integration."
- },
- "ga4": {
-  "tracking_since": "2026-05-09",
-  "sessions_30d": 838,
-  "sessions_30d_ex_spike": 498,
-  "daily": [
-   [
-    "20260509",
-    3,
-    3,
-    3
-   ],
-   [
-    "20260510",
-    8,
-    3,
-    0
-   ],
-   [
-    "20260511",
-    13,
-    8,
-    5
-   ],
-   [
-    "20260512",
-    76,
-    70,
-    69
-   ],
-   [
-    "20260513",
-    18,
-    12,
-    10
-   ],
-   [
-    "20260514",
-    28,
-    20,
-    15
-   ],
-   [
-    "20260515",
-    30,
-    24,
-    20
-   ],
-   [
-    "20260516",
-    17,
-    11,
-    8
-   ],
-   [
-    "20260517",
-    11,
-    8,
-    5
-   ],
-   [
-    "20260518",
-    14,
-    14,
-    12
-   ],
-   [
-    "20260519",
-    34,
-    29,
-    26
-   ],
-   [
-    "20260520",
-    18,
-    11,
-    9
-   ],
-   [
-    "20260521",
-    14,
-    9,
-    5
-   ],
-   [
-    "20260522",
-    4,
-    4,
-    2
-   ],
-   [
-    "20260523",
-    2,
-    2,
-    1
-   ],
-   [
-    "20260524",
-    27,
-    24,
-    22
-   ],
-   [
-    "20260525",
-    3,
-    3,
-    1
-   ],
-   [
-    "20260526",
-    32,
-    26,
-    27
-   ],
-   [
-    "20260527",
-    5,
-    2,
-    0
-   ],
-   [
-    "20260528",
-    11,
-    5,
-    3
-   ],
-   [
-    "20260529",
-    6,
-    4,
-    3
-   ],
-   [
-    "20260530",
-    15,
-    11,
-    8
-   ],
-   [
-    "20260531",
-    11,
-    8,
-    6
-   ],
-   [
-    "20260601",
-    10,
-    7,
-    2
-   ],
-   [
-    "20260602",
-    27,
-    26,
-    25
-   ],
-   [
-    "20260603",
-    2,
-    1,
-    0
-   ],
-   [
-    "20260604",
-    6,
-    3,
-    0
-   ],
-   [
-    "20260605",
-    340,
-    333,
-    337
-   ],
-   [
-    "20260606",
-    14,
-    10,
-    8
-   ],
-   [
-    "20260607",
-    6,
-    5,
-    2
-   ],
-   [
-    "20260608",
-    14,
-    9,
-    6
-   ],
-   [
-    "20260609",
-    30,
-    27,
-    26
-   ]
-  ],
-  "pages": [
-   [
-    "/",
-    802,
-    1419
-   ],
-   [
-    "/subscribe",
-    86,
-    67
-   ],
-   [
-    "/archive/2026-06-09-the-garden-party/",
-    16,
-    19
-   ],
-   [
-    "/archive/",
-    5,
-    9
-   ],
-   [
-    "/archive/2026-05-12-date-night-la/",
-    3,
-    2
-   ]
-  ],
-  "channels": [
-   [
-    "Direct",
-    700
-   ],
-   [
-    "Organic Social",
-    58
-   ],
-   [
-    "Referral",
-    55
-   ],
-   [
-    "Organic Search",
-    24
-   ],
-   [
-    "Unassigned",
-    2
-   ]
-  ],
-  "notes": [
-   "Jun 5 spike (340 sessions) is confirmed US bot/datacenter traffic.",
-   "GA4 tracking on haps.club begins May 9, 2026 - no prior-period comparison yet."
-  ]
- },
- "gsc": {
-  "window": "28d (2026-05-13 to 2026-06-09)",
-  "daily": [
-   [
-    "2026-06-07",
-    0,
-    1
-   ],
-   [
-    "2026-06-08",
-    2,
-    3
-   ]
-  ],
-  "queries": [
-   [
-    "haps club",
-    2,
-    3,
-    2.7
-   ]
-  ],
-  "pages": [
-   [
-    "https://haps.club/",
-    2,
-    4
-   ]
-  ],
-  "totals": {
-   "clicks": 2,
-   "impressions": 4,
-   "ctr": 0.5,
-   "position": 2.7
-  }
- },
- "instagram": {
-  "handle": "@thehapsclub",
-  "history": [],
-  "posts": []
- },
- "newsletter_issues": []
 }
