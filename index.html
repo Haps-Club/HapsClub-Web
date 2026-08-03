@@ -1,1 +1,967 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij4KPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLCB2aWV3cG9ydC1maXQ9Y292ZXIiPgo8dGl0bGU+SGFwcyBDbHViIOKAlCBUaGlzIFdlZWsgaW4gTEE8L3RpdGxlPgo8bWV0YSBuYW1lPSJkZXNjcmlwdGlvbiIgY29udGVudD0iRXZlcnl0aGluZyB3b3J0aCBsZWF2aW5nIHRoZSBob3VzZSBmb3IgaW4gTEEgdGhpcyB3ZWVrIOKAlCBoYW5kLXBpY2tlZCwgZnJlZSB3ZWVrbHkgbmV3c2xldHRlciBldmVyeSBUdWVzZGF5LiI+CjxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbSI+CjxsaW5rIHJlbD0icHJlY29ubmVjdCIgaHJlZj0iaHR0cHM6Ly9mb250cy5nc3RhdGljLmNvbSIgY3Jvc3NvcmlnaW4+CjxsaW5rIGhyZWY9Imh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9SW5zdHJ1bWVudCtTZXJpZjppdGFsQDA7MSZmYW1pbHk9SW50ZXI6d2dodEA0MDA7NTAwOzYwMDs3MDAmZGlzcGxheT1zd2FwIiByZWw9InN0eWxlc2hlZXQiPgoKPGxpbmsgcmVsPSJjYW5vbmljYWwiIGhyZWY9Imh0dHBzOi8vaGFwcy5jbHViLyI+CjxtZXRhIG5hbWU9InRoZW1lLWNvbG9yIiBjb250ZW50PSIjZmFmN2YwIj4KPG1ldGEgcHJvcGVydHk9Im9nOnR5cGUiIGNvbnRlbnQ9IndlYnNpdGUiPgo8bWV0YSBwcm9wZXJ0eT0ib2c6c2l0ZV9uYW1lIiBjb250ZW50PSJIYXBzIENsdWIiPgo8bWV0YSBwcm9wZXJ0eT0ib2c6dXJsIiBjb250ZW50PSJodHRwczovL2hhcHMuY2x1Yi8iPgo8bWV0YSBwcm9wZXJ0eT0ib2c6dGl0bGUiIGNvbnRlbnQ9IkhhcHMgQ2x1YiDigJQgVGhpcyBXZWVrIGluIExBIj4KPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSJFdmVyeXRoaW5nIHdvcnRoIGxlYXZpbmcgdGhlIGhvdXNlIGZvciBpbiBMQSB0aGlzIHdlZWsg4oCUIGhhbmQtcGlja2VkLCBmcmVlIHdlZWtseSBuZXdzbGV0dGVyIGV2ZXJ5IFR1ZXNkYXkuIj4KPG1ldGEgcHJvcGVydHk9Im9nOmltYWdlIiBjb250ZW50PSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvSGFwcy1DbHViL0hhcHNDbHViLUFzc2V0c0BtYWluL2ltYWdlcy9vZy1pbWFnZS5wbmciPgo8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2U6d2lkdGgiIGNvbnRlbnQ9IjEyMDAiPgo8bWV0YSBwcm9wZXJ0eT0ib2c6aW1hZ2U6aGVpZ2h0IiBjb250ZW50PSI2MzAiPgo8bWV0YSBuYW1lPSJ0d2l0dGVyOmNhcmQiIGNvbnRlbnQ9InN1bW1hcnlfbGFyZ2VfaW1hZ2UiPgo8bWV0YSBuYW1lPSJ0d2l0dGVyOnRpdGxlIiBjb250ZW50PSJIYXBzIENsdWIg4oCUIFRoaXMgV2VlayBpbiBMQSI+CjxtZXRhIG5hbWU9InR3aXR0ZXI6ZGVzY3JpcHRpb24iIGNvbnRlbnQ9IkV2ZXJ5dGhpbmcgd29ydGggbGVhdmluZyB0aGUgaG91c2UgZm9yIGluIExBIHRoaXMgd2VlayDigJQgaGFuZC1waWNrZWQsIGZyZWUgd2Vla2x5IG5ld3NsZXR0ZXIgZXZlcnkgVHVlc2RheS4iPgo8bWV0YSBuYW1lPSJ0d2l0dGVyOmltYWdlIiBjb250ZW50PSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvZ2gvSGFwcy1DbHViL0hhcHNDbHViLUFzc2V0c0BtYWluL2ltYWdlcy9vZy1pbWFnZS5wbmciPgoKPHNjcmlwdCBhc3luYyBzcmM9Imh0dHBzOi8vd3d3Lmdvb2dsZXRhZ21hbmFnZXIuY29tL2d0YWcvanM/aWQ9Ry1SS1k2M01LN05EIj48L3NjcmlwdD4KPHNjcmlwdD53aW5kb3cuZGF0YUxheWVyPXdpbmRvdy5kYXRhTGF5ZXJ8fFtdO2Z1bmN0aW9uIGd0YWcoKXtkYXRhTGF5ZXIucHVzaChhcmd1bWVudHMpO31ndGFnKCdqcycsbmV3IERhdGUoKSk7Z3RhZygnY29uZmlnJywnRy1SS1k2M01LN05EJyk7PC9zY3JpcHQ+CjxzdHlsZT4KOnJvb3R7CiAgLS1uYXZ5OiMyOTJmNzE7IC0tbmF2eS1kZWVwOiMxYjFmNTI7IC0tY29yYWw6I0ZGNkI0NzsKICAtLWNyZWFtOiNGQUY3RjA7IC0tcGFwZXI6I2ZmZjsgLS1saW5lOiNFN0RGQ0Y7IC0taW5rOiMxYzFlMzA7IC0tbXV0OiM3YTc0ODg7CiAgLS1mb29kOiNGRjZCNDc7IC0tY3VsdHVyZTojN0M1Q0ZGOyAtLW91dGRvb3JzOiMxRkE3NzQ7IC0tbXVzaWM6IzJENkNERjsgLS1kYXRlOiNFODQ1OEM7IC0tZnJlZTojMEZCNUE2OwogIC0tc2VyaWY6J0luc3RydW1lbnQgU2VyaWYnLEdlb3JnaWEsc2VyaWY7IC0tc2FuczonSW50ZXInLHN5c3RlbS11aSwtYXBwbGUtc3lzdGVtLHNhbnMtc2VyaWY7CiAgLS1yOjIycHg7IC0tbWF4dzoxMTQwcHg7IC0tbmF2aDo2MHB4Owp9Cip7Ym94LXNpemluZzpib3JkZXItYm94O21hcmdpbjowO3BhZGRpbmc6MDstd2Via2l0LXRhcC1oaWdobGlnaHQtY29sb3I6dHJhbnNwYXJlbnR9Cmh0bWx7c2Nyb2xsLWJlaGF2aW9yOnNtb290aH0KYm9keXtmb250LWZhbWlseTp2YXIoLS1zYW5zKTtjb2xvcjp2YXIoLS1uYXZ5KTtmb250LXNpemU6MTZweDtsaW5lLWhlaWdodDoxLjU1Oy13ZWJraXQtZm9udC1zbW9vdGhpbmc6YW50aWFsaWFzZWQ7CiAgYmFja2dyb3VuZDpyYWRpYWwtZ3JhZGllbnQoNjAlIDQ2JSBhdCA4NiUgLTQlLHJnYmEoMjU1LDEwNyw3MSwuMTApLHRyYW5zcGFyZW50IDYwJSksCiAgICByYWRpYWwtZ3JhZGllbnQoNTIlIDQwJSBhdCAyJSA0JSxyZ2JhKDEyNCw5MiwyNTUsLjA4KSx0cmFuc3BhcmVudCA2MiUpLHZhcigtLWNyZWFtKX0KYXtjb2xvcjppbmhlcml0O3RleHQtZGVjb3JhdGlvbjpub25lfQouaWN7d2lkdGg6MThweDtoZWlnaHQ6MThweDtkaXNwbGF5OmlubGluZS1ibG9jazt2ZXJ0aWNhbC1hbGlnbjptaWRkbGU7Y29sb3I6Y3VycmVudENvbG9yfQoKLm5hdntwb3NpdGlvbjpzdGlja3k7dG9wOjA7ei1pbmRleDo2MDtiYWNrZ3JvdW5kOnJnYmEoMjUwLDI0NywyNDAsLjgpOwogIGJhY2tkcm9wLWZpbHRlcjpzYXR1cmF0ZSgxODAlKSBibHVyKDE4cHgpOy13ZWJraXQtYmFja2Ryb3AtZmlsdGVyOnNhdHVyYXRlKDE4MCUpIGJsdXIoMThweCk7Ym9yZGVyLWJvdHRvbToxcHggc29saWQgdmFyKC0tbGluZSl9Ci5uYXYtaW57bWF4LXdpZHRoOnZhcigtLW1heHcpO21hcmdpbjowIGF1dG87aGVpZ2h0OnZhcigtLW5hdmgpO3BhZGRpbmc6MCAxOHB4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47Z2FwOjEycHh9Ci5icmFuZHtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxMHB4O2ZvbnQtZmFtaWx5OnZhcigtLXNlcmlmKTtmb250LXNpemU6MjZweDtjb2xvcjp2YXIoLS1uYXZ5KX0KLmJyYW5kIGltZ3t3aWR0aDo2MHB4O2hlaWdodDo2MHB4fQoubmF2LWxpbmtze2Rpc3BsYXk6ZmxleDtnYXA6MjRweDtmb250LXNpemU6MTRweDtjb2xvcjp2YXIoLS1tdXQpfQoubmF2LWxpbmtzIGF7ZGlzcGxheTppbmxpbmUtZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjZweDt0cmFuc2l0aW9uOmNvbG9yIC4yczttaW4taGVpZ2h0OjQwcHh9Ci5uYXYtbGlua3MgYTpob3Zlcntjb2xvcjp2YXIoLS1uYXZ5KX0KLmN0YXtkaXNwbGF5OmlubGluZS1mbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO3RleHQtYWxpZ246Y2VudGVyOwogIGZvbnQtc2l6ZToxNHB4O2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjojZmZmO2JhY2tncm91bmQ6dmFyKC0tbmF2eSk7cGFkZGluZzo5cHggMThweDtib3JkZXItcmFkaXVzOjk4MHB4O3RyYW5zaXRpb246LjJzO21pbi1oZWlnaHQ6NDBweH0KLmN0YTpob3Zlcntia
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haps Club — This Week in LA</title>
+<meta name="description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="canonical" href="https://haps.club/">
+<meta name="theme-color" content="#faf7f0">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haps Club">
+<meta property="og:url" content="https://haps.club/">
+<meta property="og:title" content="Haps Club — This Week in LA">
+<meta property="og:description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Haps-Club/HapsClub-Assets@main/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Haps Club — This Week in LA">
+<meta name="twitter:description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Haps-Club/HapsClub-Assets@main/images/og-image.png">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RKY63MK7ND"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RKY63MK7ND');</script>
+<style>
+:root{
+  --navy:#292f71; --navy-deep:#1b1f52; --coral:#FF6B47;
+  --cream:#FAF7F0; --paper:#fff; --line:#E7DFCF; --ink:#1c1e30; --mut:#7a7488;
+  --food:#FF6B47; --culture:#7C5CFF; --outdoors:#1FA774; --music:#2D6CDF; --date:#E8458C; --free:#0FB5A6;
+  --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:22px; --maxw:1140px; --navh:60px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--navy);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(60% 46% at 86% -4%,rgba(255,107,71,.10),transparent 60%),
+    radial-gradient(52% 40% at 2% 4%,rgba(124,92,255,.08),transparent 62%),var(--cream)}
+a{color:inherit;text-decoration:none}
+.ic{width:18px;height:18px;display:inline-block;vertical-align:middle;color:currentColor}
+
+.nav{position:sticky;top:0;z-index:60;background:rgba(250,247,240,.8);
+  backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:var(--maxw);margin:0 auto;height:var(--navh);padding:0 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:26px;color:var(--navy)}
+.brand img{width:60px;height:60px}
+.nav-links{display:flex;gap:24px;font-size:14px;color:var(--mut)}
+.nav-links a{display:inline-flex;align-items:center;gap:6px;transition:color .2s;min-height:40px}
+.nav-links a:hover{color:var(--navy)}
+.cta{display:inline-flex;align-items:center;justify-content:center;text-align:center;
+  font-size:14px;font-weight:600;color:#fff;background:var(--navy);padding:9px 18px;border-radius:980px;transition:.2s;min-height:40px}
+.cta:hover{background:var(--navy-deep);transform:translateY(-1px)}
+
+.hero{max-width:var(--maxw);margin:0 auto;padding:64px 22px 34px;text-align:center}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--coral)}
+.eyebrow .ic{width:15px;height:15px}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,8.5vw,92px);line-height:1.0;letter-spacing:-.01em;margin:16px 0 0}
+.hero h1 em{font-style:italic;color:var(--coral)}
+.hero p{max-width:560px;margin:18px auto 0;font-size:clamp(17px,2.1vw,20px);color:var(--mut)}
+.hero-actions{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;
+  font-family:var(--sans);font-size:15px;font-weight:600;padding:12px 24px;border-radius:980px;border:0;cursor:pointer;transition:.2s;min-height:46px}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(255,107,71,.32)}
+.btn-ghost{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--navy)}
+
+.controls{position:sticky;top:var(--navh);z-index:50;background:rgba(250,247,240,.85);
+  backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line);padding:11px 0}
+.controls-in{max-width:var(--maxw);margin:0 auto;padding:0 18px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+.rail{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+.rail::-webkit-scrollbar{display:none}
+.f{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:7px;flex:0 0 auto;scroll-snap-align:start;
+  font-family:var(--sans);font-size:13px;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);
+  padding:9px 15px;border-radius:980px;cursor:pointer;white-space:nowrap;transition:.18s;min-height:40px}
+.f .dot{width:8px;height:8px;border-radius:50%;background:var(--mut)}
+.f[data-f="food"] .dot{background:var(--food)} .f[data-f="culture"] .dot{background:var(--culture)}
+.f[data-f="music"] .dot{background:var(--music)} .f[data-f="outdoors"] .dot{background:var(--outdoors)}
+.f[data-f="date"] .dot{background:var(--date)} .f[data-f="free"] .dot{background:var(--free)}
+.f[data-f="saved"] .ic{width:14px;height:14px;color:var(--coral)}
+.f:hover{border-color:var(--navy)}
+.f.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.f.on .dot{background:#fff} .f.on[data-f="saved"] .ic{color:#fff}
+.hood{display:inline-flex;align-items:center;gap:7px;flex:0 0 auto}
+.hood>svg{color:var(--mut)}
+select.nb{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--navy);background:#fff;border:1px solid var(--line);
+  border-radius:980px;padding:10px 34px 10px 16px;cursor:pointer;appearance:none;min-height:40px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23292f71' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center}
+select.nb:hover{border-color:var(--navy)}
+
+/* result/clear bar */
+.metabar{max-width:var(--maxw);margin:0 auto;padding:12px 22px 0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.metabar .count{font-size:13px;font-weight:600;color:var(--mut)}
+.metabar .clear{display:none;font-size:13px;font-weight:600;color:var(--coral);background:none;border:0;cursor:pointer;align-items:center;gap:5px;min-height:36px}
+.metabar .clear.show{display:inline-flex}
+
+section{max-width:var(--maxw);margin:0 auto;padding:30px 22px 24px;scroll-margin-top:calc(var(--navh) + 70px)}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:18px;gap:16px}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,42px);letter-spacing:-.005em}
+.sec-head .more{font-size:14px;color:var(--coral);font-weight:600;white-space:nowrap}
+.sec-head .more:hover{text-decoration:underline}
+
+.featured{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fcard{position:relative;border-radius:var(--r);overflow:hidden;min-height:300px;display:flex;flex-direction:column;
+  justify-content:flex-end;color:#fff;isolation:isolate;background:var(--navy);transition:transform .3s;border:1px solid rgba(0,0,0,.05)}
+.fcard:hover{transform:translateY(-4px)} .fcard:hover .fgo{opacity:1;transform:none}
+.fmesh{position:absolute;inset:0;z-index:-1}
+.t-food .fmesh{background:radial-gradient(120% 100% at 0% 0%,var(--food),#7a1f12 90%)}
+.t-culture .fmesh{background:radial-gradient(120% 100% at 0% 0%,var(--culture),#2a1d63 90%)}
+.t-outdoors .fmesh{background:radial-gradient(120% 100% at 0% 0%,var(--outdoors),#0c3d2c 90%)}
+.t-music .fmesh{background:radial-gradient(120% 100% at 0% 0%,var(--music),#102a5e 90%)}
+.fbody{padding:24px}
+.fpill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(255,255,255,.2);backdrop-filter:blur(6px);padding:5px 11px;border-radius:980px;margin-bottom:12px}
+.fcard h3{font-family:var(--serif);font-weight:400;font-size:31px;line-height:1.04;margin-bottom:6px}
+.fmeta{font-size:14px;opacity:.92}
+.fgo{position:absolute;top:16px;right:16px;font-size:13px;font-weight:600;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);padding:7px 13px;border-radius:980px;opacity:0;transform:translateY(-4px);transition:.25s}
+.fsticker{position:absolute;top:16px;left:16px;z-index:2;background:var(--coral);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 13px;border-radius:980px;box-shadow:0 4px 12px rgba(0,0,0,.22)}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:15px;
+  cursor:pointer;transition:transform .25s,box-shadow .25s;border-top:3px solid var(--mut)}
+.card.t-food{border-top-color:var(--food)} .card.t-culture{border-top-color:var(--culture)}
+.card.t-music{border-top-color:var(--music)} .card.t-outdoors{border-top-color:var(--outdoors)}
+.card.t-date{border-top-color:var(--date)} .card.t-free{border-top-color:var(--free)}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(41,47,113,.10)}
+.card:hover .go{color:var(--coral)}
+.card-top{display:flex;align-items:flex-start;gap:13px}
+.datetile{flex:0 0 auto;width:50px;border-radius:13px;overflow:hidden;border:1px solid var(--line);text-align:center;background:#fff;display:flex;flex-direction:column}
+.datetile .m{background:var(--navy);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;padding:3px 0}
+.datetile .d{font-family:var(--serif);font-size:24px;color:var(--navy);padding:3px 0 5px;line-height:1}
+.card-head{flex:1;min-width:0}
+.cat{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}
+.card.t-food .cat{color:var(--food)} .card.t-culture .cat{color:var(--culture)}
+.card.t-music .cat{color:var(--music)} .card.t-outdoors .cat{color:var(--outdoors)}
+.card.t-date .cat{color:var(--date)} .card.t-free .cat{color:var(--free)}
+.card h3{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.12;margin-top:2px}
+.card h3 a:hover{color:var(--coral)}
+.iconbtn{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;
+  display:inline-flex;align-items:center;justify-content:center;text-align:center;color:var(--mut);cursor:pointer;transition:.18s}
+.iconbtn:hover{color:var(--navy);border-color:var(--navy)}
+.iconbtn.save.on{background:var(--coral);border-color:var(--coral);color:#fff}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:13px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+.where{display:inline-flex;align-items:center;gap:5px}
+.where .pin{width:15px;height:15px}
+.right{display:inline-flex;align-items:center;gap:10px}
+.price{font-weight:700;color:var(--navy)}
+.price.free{color:var(--free)}
+.go{color:var(--mut);transition:.18s;display:inline-flex} .go .ic{width:17px;height:17px}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:40px 0;font-size:15px}
+
+.calstrip{max-width:var(--maxw);margin:0 auto;padding:18px 22px 0}
+.calbox{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 24px}
+.calbox .t{font-family:var(--serif);font-size:24px}
+.calbox p{font-size:14px;color:var(--mut);margin-top:2px}
+
+.band{background:var(--navy);color:#fff;margin-top:30px;scroll-margin-top:var(--navh)}
+.band-in{max-width:var(--maxw);margin:0 auto;padding:66px 22px;text-align:center}
+.band .eyebrow{color:var(--coral)}
+.band h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,50px);margin-top:12px}
+.band p{color:rgba(255,255,255,.78);max-width:460px;margin:12px auto 24px;font-size:17px}
+.sub{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.sub input{flex:1;min-width:210px;font-family:var(--sans);font-size:16px;padding:14px 19px;border-radius:980px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;outline:none}
+.sub input::placeholder{color:rgba(255,255,255,.6)}
+.sub input:focus{border-color:var(--coral)}
+
+footer{background:var(--navy-deep);color:rgba(255,255,255,.7)}
+.foot-in{max-width:var(--maxw);margin:0 auto;padding:38px 22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:14px}
+.foot-in .brand{color:#fff;font-size:22px} .foot-in .brand img{width:26px;height:26px}
+.fl{display:flex;gap:22px;flex-wrap:wrap} .fl a{min-height:40px;display:inline-flex;align-items:center} .fl a:hover{color:#fff}
+
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:8px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+
+/* ------- MOBILE ------- */
+@media(max-width:880px){
+  .featured{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:84%;overflow-x:auto;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;margin:0 -22px;padding-left:22px;padding-right:22px;gap:14px}
+  .featured::-webkit-scrollbar{display:none}
+  .fcard{scroll-snap-align:start;min-height:240px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .nav-links a:not(.show-m){display:none}
+  .nav-links .show-m .lbl{display:none}
+  .nav-in{justify-content:flex-start}
+  .nav-links{margin-left:auto}
+  .controls-in{flex-direction:column;align-items:stretch;gap:9px}
+  .hood{width:100%} select.nb{width:100%}
+  .f{padding:11px 16px;font-size:14px;min-height:44px}
+  .iconbtn{width:44px;height:44px}
+  .hero{padding-top:46px}
+  .calbox{flex-direction:column;align-items:flex-start}
+  .calbox .btn{width:100%}
+}
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .sub{flex-direction:column} .sub .btn{width:100%}
+  .featured{grid-auto-columns:90%}
+}
+
+/* archive teaser */
+.archive-teaser{max-width:var(--maxw);margin:0 auto;padding:30px 22px 0}
+.atease-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:18px;gap:16px}
+.atease-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,42px);letter-spacing:-.005em}
+.atease-head .more{font-size:14px;color:var(--coral);font-weight:600;white-space:nowrap}
+.atease-head .more:hover{text-decoration:underline}
+.acards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.acard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px;
+  display:flex;flex-direction:column;gap:8px;transition:transform .25s,box-shadow .25s,border-color .25s;
+  border-top:3px solid var(--coral)}
+.acard:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(41,47,113,.08)}
+.acard .adate{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}
+.acard h4{font-family:var(--serif);font-weight:400;font-size:22px;line-height:1.15;color:var(--navy)}
+.acard .alink{margin-top:auto;font-size:13px;font-weight:600;color:var(--coral)}
+@media(max-width:900px){.acards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.acards{grid-template-columns:1fr}}
+
+/* Long Table announcement bar (auto-expires via data-ends) */
+.topbar{display:flex;gap:10px 14px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;
+  background:var(--coral);color:#fff;font-family:var(--sans);font-size:14px;font-weight:600;padding:10px 18px;line-height:1.3;transition:background .2s}
+.topbar:hover{background:#ff835f}
+.topbar .tb-tag{background:rgba(255,255,255,.22);padding:2px 10px;border-radius:980px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.topbar .tb-when{opacity:.95;white-space:nowrap}
+.topbar[data-expired="1"]{display:none}
+@media(max-width:600px){.topbar{font-size:13px;padding:9px 14px} .topbar .tb-tag{display:none}}
+
+.iglink{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;flex:0 0 auto;margin-left:8px;color:var(--mut);border-radius:980px;transition:color .2s,background .2s,transform .2s}
+.iglink:hover{color:var(--navy);background:rgba(41,47,113,.07);transform:translateY(-1px)}
+.iglink .ic{width:19px;height:19px}
+</style>
+<meta name="theme-color" content="#FAF7F0">
+<link rel="canonical" href="https://haps.club/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="Haps Club">
+<meta name="geo.region" content="US-CA"><meta name="geo.placename" content="Los Angeles">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Haps Club">
+<meta property="og:locale" content="en_US"><meta property="og:url" content="https://haps.club/">
+<meta property="og:title" content="Haps Club — This Week in LA">
+<meta property="og:description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
+<meta property="og:image" content="https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png">
+<meta property="og:image:width" content="2400"><meta property="og:image:height" content="1260">
+<meta property="og:image:alt" content="Haps Club — everything worth leaving the house for in LA, every week.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Haps Club — This Week in LA">
+<meta name="twitter:description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
+<meta name="twitter:image" content="https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png">
+<link rel="alternate" type="application/rss+xml" title="Haps Club" href="https://haps.club/archive/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Haps Club", "url": "https://haps.club/", "description": "Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.", "publisher": {"@type": "Organization", "name": "Haps Club", "url": "https://haps.club/", "logo": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg"}}, {"@type": "ItemList", "name": "This week in Los Angeles", "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "Event", "name": "El Pueblo Heritage Festival", "startDate": "2026-06-26T10:00:00-07:00", "endDate": "2026-06-28T21:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "El Pueblo de Los Angeles", "address": "El Pueblo de Los Angeles, 125 Paseo de la Plaza, Los Angeles, CA 90012"}, "url": "https://elpueblo.lacity.gov/events", "description": "Free heritage festival at El Pueblo Historical Monument — music, food, and culture, Fri–Sun all weekend."}}, {"@type": "ListItem", "position": 2, "item": {"@type": "Event", "name": "LA World Cup 26 Fan Zone at Union Station", "startDate": "2026-06-26T12:00:00-07:00", "endDate": "2026-06-28T22:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Union Station", "address": "Union Station, 800 N Alameda St, Los Angeles, CA 90012"}, "url": "https://unionstationla.com/happenings/fan-zone-26-at-union-station/", "description": "Downtown's free World Cup fan zone — giant-screen match viewing, DJ sets, athlete meet-and-greets, and food all weekend."}}, {"@type": "ListItem", "position": 3, "item": {"@type": "Event", "name": "New York City Ballet: Program B", "startDate": "2026-06-27T14:00:00-07:00", "endDate": "2026-06-28T22:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Dorothy Chandler Pavilion", "address": "Dorothy Chandler Pavilion, 135 N Grand Ave, Los Angeles, CA 90012"}, "url": "https://www.musiccenter.org", "description": "New York City Ballet at the Music Center — Program B, Saturday and Sunday matinee and evening performances."}}, {"@type": "ListItem", "position": 4, "item": {"@type": "Event", "name": "TAWANDA: Jazz & Soul at Vibrato", "startDate": "2026-06-27T19:30:00-07:00", "endDate": "2026-06-27T22:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Herb Alpert's Vibrato Grill Jazz", "address": "Herb Alpert's Vibrato Grill Jazz, 2930 Beverly Glen Cir, Los Angeles, CA 90077"}, "url": "https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/tawanda-jazz-soul-with-a-twist-2026-06-27", "description": "Award-winning vocalist Tawanda brings jazz and soul to Herb Alpert's Vibrato in Bel Air. See resy for set times."}}, {"@type": "ListItem", "position": 5, "item": {"@type": "Event", "name": "Freddie Ravel: Salsa & Soul at Vibrato", "startDate": "2026-06-28T19:30:00-07:00", "endDate": "2026-06-28T22:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Herb Alpert's Vibrato Grill Jazz", "address": "Herb Alpert's Vibrato Grill Jazz, 2930 Beverly Glen Cir, Los Angeles, CA 90077"}, "url": "https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/freddie-ravel-sizzling-sensuous-salsa-soul-2026-06-28", "description": "The Freddie Ravel Power Band brings Latin, R&B and salsa to Vibrato in Bel Air. See resy for set times."}}, {"@type": "ListItem", "position": 6, "item": {"@type": "Event", "name": "Medicine Women", "startDate": "2026-06-29T17:30:00-07:00", "endDate": "2026-06-29T19:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Los Angeles", "address": "Los Angeles, CA"}, "url": "https://luma.com/i/F8NhxwwvPD", "description": "An intimate women's gathering hosted by The KINN — Monday evening, 5:30–7:30 PM."}}, {"@type": "ListItem", "position": 7, "item": {"@type": "Event", "name": "Seth MacFarlane & His Chamber Orchestra", "startDate": "2026-06-30T19:30:00-07:00", "endDate": "2026-06-30T22:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Herb Alpert's Vibrato Grill Jazz", "address": "Herb Alpert's Vibrato Grill Jazz, 2930 Beverly Glen Cir, Los Angeles, CA 90077"}, "url": "https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/seth-mac-farlane-and-his-chamber-orchestra-2026-06-30", "description": "Prix-fixe dinner followed by Seth MacFarlane and his Chamber Orchestra at Vibrato in Bel Air. See resy for set times."}}, {"@type": "ListItem", "position": 8, "item": {"@type": "Event", "name": "Tim Hockenberry / Sherman Oakies at Vibrato", "startDate": "2026-07-01T19:30:00-07:00", "endDate": "2026-07-01T22:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Herb Alpert's Vibrato Grill Jazz", "address": "Herb Alpert's Vibrato Grill Jazz, 2930 Beverly Glen Cir, Los Angeles, CA 90077"}, "url": "https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/tim-hockenberry-the-559-band-sherman-oakies-2026-07-01", "description": "LA's top studio musicians take on Willie, Dylan and the Great American Songbook at Vibrato in Bel Air. See resy for set times."}}, {"@type": "ListItem", "position": 9, "item": {"@type": "Event", "name": ":Gather Studio Grand Opening", "startDate": "2026-07-11T18:00:00-07:00", "endDate": "2026-07-11T20:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Los Angeles", "address": "Los Angeles, CA"}, "url": "https://luma.com/i/qRKALDkbMX", "description": "Grand opening of Gather's new studio — Saturday, July 11, 6–8 PM."}}, {"@type": "ListItem", "position": 10, "item": {"@type": "Event", "name": "third eye lover x moss: Midsummer", "startDate": "2026-07-17T20:00:00-07:00", "endDate": "2026-07-18T02:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Los Angeles", "address": "Los Angeles, CA"}, "url": "https://luma.com/i/SGHX4B4LGW", "description": "Third Eye Lover x moss present Midsummer — a late-night party, Friday July 17, 8 PM–2 AM."}}, {"@type": "ListItem", "position": 11, "item": {"@type": "Event", "name": "Summer Solstice in the Garden", "startDate": "2026-06-20T17:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Twentieth Street Garden", "address": "Twentieth Street Garden, 2267 W 20th St, Los Angeles, CA 90018"}, "url": "https://luma.com/jwjxh4zp", "endDate": "2026-06-20T21:00:00-07:00", "description": "Haps Club's golden-hour garden party at Twentieth Street Garden in West Adams — food, drinks, and music from 5 to 9 PM on the summer solstice.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Haps Club", "url": "https://haps.club"}, "performer": {"@type": "Organization", "name": "Haps Club"}, "offers": {"@type": "Offer", "url": "https://luma.com/jwjxh4zp", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 12, "item": {"@type": "Event", "name": "Haps Club @ Hermanito Broadway Dinner Series", "startDate": "2026-07-02T18:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Hermanito Broadway", "address": "Hermanito Broadway, 802 Broadway, Santa Monica, CA"}, "url": "https://luma.com/hapsclub-hermanito-dinner-series", "endDate": "2026-07-02T21:00:00-07:00", "description": "A Haps Club dinner-series evening at Hermanito Broadway in Santa Monica — a seasonal prix-fixe menu and drinks, 6 to 9 PM.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Haps Club", "url": "https://haps.club"}, "performer": {"@type": "Organization", "name": "Hermanito"}, "offers": {"@type": "Offer", "url": "https://luma.com/hapsclub-hermanito-dinner-series", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 13, "item": {"@type": "Event", "name": "LACMA Block Party — David Geffen Galleries Open", "startDate": "2026-06-20T10:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "LACMA", "address": "LACMA, 5905 Wilshire Blvd, Los Angeles, CA"}, "url": "https://www.lacma.org/event/block-party", "endDate": "2026-06-20T19:00:00-07:00", "description": "LACMA throws a free block party on Wilshire Boulevard to mark the opening of the new David Geffen Galleries — music, art, and activities for all ages.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "LACMA", "url": "https://www.lacma.org"}, "performer": {"@type": "Organization", "name": "LACMA"}, "offers": {"@type": "Offer", "url": "https://www.lacma.org/event/block-party", "availability": "https://schema.org/InStock", "priceCurrency": "USD", "price": "0"}}}, {"@type": "ListItem", "position": 14, "item": {"@type": "Event", "name": "Taylor Eigsti at Sam First", "startDate": "2026-06-25T19:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Sam First", "address": "Sam First, 6171 W Century Blvd #180, Los Angeles, CA 90045"}, "url": "https://www.samfirstbar.com/", "endDate": "2026-06-25T23:00:00-07:00", "description": "Two-time Grammy-winning pianist Taylor Eigsti plays two intimate sets at Sam First near LAX — 7:30 and 9:30 PM.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Sam First", "url": "https://www.samfirstbar.com/"}, "performer": {"@type": "Person", "name": "Taylor Eigsti"}, "offers": {"@type": "Offer", "url": "https://www.samfirstbar.com/", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 15, "item": {"@type": "Event", "name": "Off the 405: Leenalchi", "startDate": "2026-07-11T19:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Getty Center", "address": "Getty Center, 1200 Getty Center Dr, Los Angeles, CA"}, "url": "https://www.getty.edu/", "endDate": "2026-07-11T21:30:00-07:00", "description": "The Getty's free summer concert series Off the 405 hosts Korean band Leenalchi — DJ set in the courtyard at 6, main set at 7:30, galleries open late.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Getty Center", "url": "https://www.getty.edu/"}, "performer": {"@type": "MusicGroup", "name": "Leenalchi"}, "offers": {"@type": "Offer", "url": "https://www.getty.edu/", "availability": "https://schema.org/InStock", "priceCurrency": "USD", "price": "0"}}}, {"@type": "ListItem", "position": 16, "item": {"@type": "Event", "name": "Hell's Kitchen at the Pantages", "startDate": "2026-06-17T19:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Hollywood Pantages Theatre", "address": "Hollywood Pantages Theatre, 6233 Hollywood Blvd, Los Angeles, CA"}, "url": "https://www.broadwayinhollywood.com/", "endDate": "2026-06-17T22:05:00-07:00", "description": "Alicia Keys' Tony-winning coming-of-age musical, set to her songbook, plays the Hollywood Pantages — evening shows plus weekend matinees.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Broadway in Hollywood", "url": "https://www.broadwayinhollywood.com/"}, "performer": {"@type": "TheaterGroup", "name": "Hell's Kitchen National Tour"}, "offers": {"@type": "Offer", "url": "https://www.broadwayinhollywood.com/events/detail/hells-kitchen", "availability": "https://schema.org/InStock", "priceCurrency": "USD", "price": "57"}}}, {"@type": "ListItem", "position": 17, "item": {"@type": "Event", "name": "Vivian Sessoms at The Broad Stage", "startDate": "2026-06-20T20:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "The Broad Stage", "address": "The Broad Stage, 1310 11th St, Santa Monica, CA"}, "url": "https://broadstage.org/tickets-shows/calendar/vivian-sessoms/", "endDate": "2026-06-20T22:30:00-07:00", "description": "Vocalist Vivian Sessoms closes the Broad Stage 2025/26 season with a Black Box set honoring the women of 1970s disco — Santa Monica, 8 PM.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "The Broad Stage", "url": "https://broadstage.org"}, "performer": {"@type": "Person", "name": "Vivian Sessoms"}, "offers": {"@type": "Offer", "url": "https://broadstage.org/tickets-shows/calendar/vivian-sessoms/", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 18, "item": {"@type": "Event", "name": "The Thelma Houston Experience at Catalina", "startDate": "2026-06-19T20:30:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Catalina Jazz Club", "address": "Catalina Jazz Club, 6725 W Sunset Blvd, Los Angeles, CA"}, "url": "https://catalinajazzclub.com/calendar", "endDate": "2026-06-20T22:30:00-07:00", "description": "Grammy-winning Motown legend Thelma Houston plays two nights at Catalina Jazz Club over Juneteenth weekend — doors 7, show 8:30.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Catalina Jazz Club", "url": "https://catalinajazzclub.com"}, "performer": {"@type": "Person", "name": "Thelma Houston"}, "offers": {"@type": "Offer", "url": "https://catalinajazzclub.com/calendar", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 19, "item": {"@type": "Event", "name": "Garibaldina Pasta Platter", "startDate": "2026-06-25", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Garibaldina Society", "address": "Garibaldina Society, 4533 N Figueroa St, Los Angeles, CA 90065"}, "url": "https://garibaldinasociety.com/events", "description": "A communal Italian pasta-platter dinner at the historic Garibaldina Society in Highland Park.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Garibaldina Society", "url": "https://garibaldinasociety.com"}, "performer": {"@type": "Organization", "name": "Garibaldina Society"}, "offers": {"@type": "Offer", "url": "https://garibaldinasociety.com/events", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 20, "item": {"@type": "Event", "name": "Angry, Raucous, and Shamelessly Gorgeous", "startDate": "2026-06-10T20:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Geffen Playhouse", "address": "Geffen Playhouse, 10886 Le Conte Ave, Los Angeles, CA"}, "url": "https://www.geffenplayhouse.org", "endDate": "2026-07-12T22:00:00-07:00", "description": "Pearl Cleage's backstage comedy, directed by LaTanya Richardson Jackson, gets its LA premiere at the Geffen Playhouse — running through July 12.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Geffen Playhouse", "url": "https://www.geffenplayhouse.org"}, "performer": {"@type": "TheaterGroup", "name": "Geffen Playhouse"}, "offers": {"@type": "Offer", "url": "https://www.geffenplayhouse.org", "availability": "https://schema.org/InStock", "priceCurrency": "USD", "price": "36"}}}, {"@type": "ListItem", "position": 21, "item": {"@type": "Event", "name": "Hollywood Bowl — Opening Night", "startDate": "2026-06-20T20:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Hollywood Bowl", "address": "Hollywood Bowl, 2301 N Highland Ave, Los Angeles, CA"}, "url": "https://www.hollywoodbowl.com", "endDate": "2026-06-20T22:30:00-07:00", "description": "The Hollywood Bowl kicks off its summer season with a star-studded opening night under the stars.", "image": "https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png", "organizer": {"@type": "Organization", "name": "Hollywood Bowl", "url": "https://www.hollywoodbowl.com"}, "performer": {"@type": "Organization", "name": "Los Angeles Philharmonic"}, "offers": {"@type": "Offer", "url": "https://www.hollywoodbowl.com", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 22, "item": {"@type": "Event", "name": "Friends in Town: Claudette Zepeda at Maydan LA", "startDate": "2026-06-23T18:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Maydan LA", "address": "Maydan LA, Los Angeles, CA"}, "url": "https://meetatmaydan.com", "endDate": "2026-06-23T22:00:00-07:00", "organizer": {"@type": "Organization", "name": "Maydan LA", "url": "https://meetatmaydan.com"}, "offers": {"@type": "Offer", "url": "https://meetatmaydan.com", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 23, "item": {"@type": "Event", "name": "Last Dance at La Brea Tar Pits", "startDate": "2026-06-27T19:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "La Brea Tar Pits", "address": "5801 Wilshire Blvd, Los Angeles, CA 90036"}, "url": "https://tarpits.org/calendar/last-dance-la-brea-tar-pits", "endDate": "2026-06-27T22:00:00-07:00", "organizer": {"@type": "Organization", "name": "La Brea Tar Pits", "url": "https://tarpits.org/calendar/last-dance-la-brea-tar-pits"}, "offers": {"@type": "Offer", "url": "https://tarpits.org/calendar/last-dance-la-brea-tar-pits", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 24, "item": {"@type": "Event", "name": "Grand Park July 4th Block Party", "startDate": "2026-07-04T16:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Gloria Molina Grand Park", "address": "200 N Grand Ave, Los Angeles, CA 90012"}, "url": "https://www.eventbrite.com/e/las-biggest-free-summer-block-party-is-back-tickets-1989624466338", "endDate": "2026-07-04T21:30:00-07:00", "organizer": {"@type": "Organization", "name": "Gloria Molina Grand Park", "url": "https://www.eventbrite.com/e/las-biggest-free-summer-block-party-is-back-tickets-1989624466338"}, "offers": {"@type": "Offer", "url": "https://www.eventbrite.com/e/las-biggest-free-summer-block-party-is-back-tickets-1989624466338", "availability": "https://schema.org/InStock", "priceCurrency": "USD", "price": "0"}}}, {"@type": "ListItem", "position": 25, "item": {"@type": "Event", "name": "Hands-On: Summer Focaccia & Spritz", "startDate": "2026-07-04T12:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Eataly Los Angeles", "address": "10250 Santa Monica Blvd, Los Angeles, CA 90067"}, "url": "https://www.eataly.com/us_en/stores/los-angeles/", "endDate": "2026-07-04T14:00:00-07:00", "organizer": {"@type": "Organization", "name": "Eataly Los Angeles", "url": "https://www.eataly.com/us_en/stores/los-angeles/"}, "offers": {"@type": "Offer", "url": "https://www.eataly.com/us_en/stores/los-angeles/", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}, {"@type": "ListItem", "position": 26, "item": {"@type": "Event", "name": "Daredevil Arts Festival", "startDate": "2026-07-10T19:00:00-07:00", "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "location": {"@type": "Place", "name": "Electric Lodge", "address": "1416 Electric Ave, Venice, CA 90291"}, "url": "https://daredevilarts.org", "endDate": "2026-07-19T23:00:00-07:00", "organizer": {"@type": "Organization", "name": "Electric Lodge", "url": "https://daredevilarts.org"}, "offers": {"@type": "Offer", "url": "https://daredevilarts.org", "availability": "https://schema.org/InStock", "priceCurrency": "USD"}}}]}]}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.6-9.3-9C1 7.6 2.8 4.5 6 4.5c2 0 3.2 1.1 4 2.3.8-1.2 2-2.3 4-2.3 3.2 0 5 3.1 3.3 6.5C19 15.4 12 20 12 20Z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-5.7-6.5-10.5A6.5 6.5 0 0 1 12 4a6.5 6.5 0 0 1 6.5 6.5C18.5 15.3 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.2"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.4"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" stroke="none"/></symbol>
+</defs></svg>
+
+<nav class="nav"><div class="nav-in">
+  <a class="brand" href="#" aria-label="Haps Club home"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMTAwIDExMDAiPgogIDwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAzMC4zLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiAyLjEuMyBCdWlsZCAxODIpICAtLT4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLnN0MCB7CiAgICAgICAgZmlsbDogIzI5MmY3MTsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNS4wNyw0NDguNTdjMS4xMiwwLDIuMjMuMDcsMy4zMS4xOS0zLjQ1LTEuNDUtNy4xNS0yLjE5LTEwLjE5LTEuNDYtNS42MSwxLjI3LTM2LjcyLDkuMTgtNzkuODIsMTYuMDcsMjAuOTEtNzguOCw1MS4yNi0xNTkuMzgsODAuMDctMjExLjY1LDMuMDYtNS42MS0xMi43NS0xOC44Ny0xNC4wMy0xMi41LTI3LjgsNTUuMzQtNjIuNzMsMTQ0Ljg0LTg1Ljk0LDIyNy4yMS0yNi4yNywzLjgzLTU1LjM0LDcuMTQtODUuMTcsOC40MiwyMS4xNy04Ni40NSw1Ni4zNi0xNjguNTYsNjMuNzUtMTg4LjcsMi4wNC01LjYxLTEwLjk3LTIzLjQ2LTE0LjI4LTE2LjA3LTYuNjMsMTQuNzktNDMuNjEsMTA3LjEtNjYuNTYsMTk4LjM5LTE2LjgzLTEyLjc1LTM0Ljk0LTIwLjkxLTUyLjc5LTIyLjctNi42My0uNTEtMTMuNzcuNzYtMTMuNzcsMTAuMiwwLDE5LjY0LDIwLjE1LDMwLjM1LDUzLjA0LDMxLjYyaDguOTNjLTEwLjcxLDQ3LjQzLTE3LjA5LDkzLjMzLTEyLjI0LDEyNS45NywyLjA0LDEzLjI2LDIxLjY4LDE5Ljg5LDIwLjQsMTEuMjItNS44Ny0zNi45OC0xLjAyLTgyLjYyLDguNjctMTI4LjAxLDQ3LjE4LDQ5LjQ3LDYxLjk3LDEyMy42OCw2Mi45OSwxNDAuMjUsMCwuMTIuMDIuMjQuMDMuMzYsNy4yNCwxLjk5LDE0LjExLDQuNjYsMjAuNjEsOC4wMi0yLjc4LTQzLjk1LDcuMjQtMTA2Ljg1LDIzLjczLTE3MS44NCwyNC4xNS0zLjMsNDcuNTktNi40Miw2Ni42OS04Ljc1LDcuMTktOS42MSwxNS4wMi0xNi4yNCwyMi41NS0xNi4yNFpNMTk5LjE0LDQ3NS4zNGMtMTYuMDYtLjI1LTM1LjctNS4zNS0zNS43LTExLjQ4czUuNjEtNS44NiwxMC40Ni00LjA4YzEwLjcxLDQuMDgsMjAuNjYsOS40NCwyOS41OCwxNS41NmgtNC4zNFpNMjk0LjUxLDU4MS42OGMtMTAuNDYtMzQuNjgtMzIuMTMtNzAuMTMtNTguNC05Ni4xNCwyMS45My0yLjA0LDUwLjQ5LTUuNjEsNzkuNTYtOS40NC0xMC40NiwzOC41MS0xOC4xMSw3NS4yMy0yMS4xNywxMDUuNTdaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTQ2NC41OSw1NzUuMDVjLTEuMjcsMC00Ljg0LS43Ni00Ljg0LTUuMzUsMC0xOS44OSwyOC44Mi05OC42OSwyOC44Mi0xMDcuODcsMC02Ljg5LTcuNjUtMTEuNDgtMTEuMjItMTEuNDhzLTcuMTQsNC4wOC0xNS44MSwxNS4wNWMtOC42NywxMC45Ny01Ny44OSw3Mi42OC02OS44Nyw3Mi42OC0uNzcsMC0yLjgxLS4yNS0yLjgxLTMuMDYsMC0yNy41NCwzNi43Mi03My4xOSw1MC43NS03My4xOSw1LjYxLDAsMTEuNDgsMTAuMiwxNC41NCw1Ljg3LDEuOTEtMi44Ni05LjgyLTE3LjEzLTI1Ljc2LTE4Ljk0LDguNjksMy42NSwxNS43NiwxMS44Myw2LjY0LDEyLjU2LTcuODguNjMtMTkuMTMsMS44Ny0zMi41LDMuNDktMTUuNDYsMjAuNjctMjcuOTQsNTUuMTMtMjcuOTQsNjcuMTQsMCw4LjkzLDguNjcsMTYuODMsMTMuNzcsMTYuODMsMTcuMzQsMCw1Ny4zOC01OS4xNiw4My42NC04My4zOS05LjQ0LDMxLjExLTI2Ljc4LDcyLjY4LTI2Ljc4LDk0LjM1LDAsOS40MywxMC40NiwyMy4yMSwyMy43MiwyMy4yMSw5LjE4LDAsMjUuNzYtMTguNjIsNDQuMTItMzkuMjcsMTEuMjEtMTIuNzMsMjIuOTYtMjYuMzgsMzIuODUtMzcuOTUsMS44MS01LjQ1LDMuNTYtMTAuNDksNS4yNy0xNS4yMi0yNS43OCwyOS40OS03Mi43MSw4NC41NC04Ni41Nyw4NC41NFoiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI4LjM4LDQ0OC43NmMtMS4wOS0uMTItMi4xOS0uMTktMy4zMS0uMTktNy41MywwLTE1LjM2LDYuNjMtMjIuNTUsMTYuMjQsMTMuMzctMS42MywyNC42My0yLjg2LDMyLjUtMy40OSw5LjEzLS43MywyLjA1LTguOTEtNi42NC0xMi41NloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNzU2Ljc2LDQ0Ni41NGMtNS45MywzLjI2LTU3LjMxLDM1Ljk1LTkxLjk5LDU3LjYyLDkuOTUtMjMuNDYsMTYuNTgtNDguNDUsMTYuNTgtNjkuODcsMC0xOC4xMS0xMS45OS0yNS43Ni0yMS42Ny0yNS43Ni00NS42NSwwLTEyMS42NCwyMDcuODMtMTMzLjg4LDI0OC44OSwzMS4zNy0xNDkuNDMsNTguNC0xOTkuMTYsNTguOTEtMjA1LjUzLjUxLTYuMzgtOS42OS0xMi4yNC0xMy0xMS4yMi0zLjA2LDEuMDItMTAuMiwxNC43OS0xMy41MiwyMS45My0uNTEsMS4yNy0uMjUsMi44MS4yNSwzLjgzbC4yNS41MWMuNTEsMS4yOC41MSwyLjI5LDAsMy41Ny0yLjQxLDYuMjItNC45MSwxMi43Ni03LjUzLDIwLjAxLDYuOTUtNy45NSwxMi4zNy0xNC4wNCwxNS4xOC0xNi42OSwzLjU3LTMuMzEsNS4xLDEuNzksMy4zMiwzLjgzLS41OS43My0xMC40OCwxMi41NC0yMy43NywyOC4wOS0xMi4xNCwzNi41Ny0yNi43Miw5MS43Mi00NS42LDE5OC4zNS02Ljg5LDM5LjUzLDQuMDgsNDMuODYsMTMuNzcsNDMuODYsNi4xMiwwLDQuNTktMzkuNzgsMTMuMDEtNjkuODcsMjkuMzMtMTA2LjA4LDEwMi4yNi0yNjEuMzgsMTM2Ljk0LTI2MS4zOCwzLjU3LDAsNS4xLDIuNTUsNC44NCw4LjE2LTEuMjgsMjkuNTgtMTEuOTksNjQuMDEtMjUuNzYsOTMuMDgtMzUuOTYsMjMuOTctNjguODUsNDguOTYtNjguODUsNjIuNzMsMCw2LjM4LDEwLjcxLDExLjQ4LDIwLjQsMTEuNDgsMy41NywwLDguNDItLjUxLDEzLjI2LTMuODMsMTUuNTYtMTEuNDgsMzYuMjEtNDAuMDQsNTEuNzctNzIuNjgsMjQuODEtMTYuMzcsNTAuMDMtMzAuODEsNjYuNDUtMzkuODQsNS45Ni01Ljk4LDEyLjAyLTExLDE2Ljc2LTE0LjczLTIuMTQtMS4xNywxNS4yMS0xNS4yNSwxMy44OC0xNC41M1pNNTkxLjU4LDU4My40N2MtNy42NS4yNi01LjEtNC4wOC0xLjc4LTguNjcsOS45NC0xMy43NywyNy4wMy0yOC44Miw0Ni42Ny00My4xLTE1LjgxLDI5Ljg0LTMzLjY2LDUxLjUxLTQ0Ljg4LDUxLjc3WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01NjYuMzQsNDczLjgxYy0yLjgxLDIuNjUtOC4yMyw4Ljc1LTE1LjE4LDE2LjY5LTEuNzEsNC43My0zLjQ2LDkuNzctNS4yNywxNS4yMiwxMy4yOC0xNS41NiwyMy4xOC0yNy4zNiwyMy43Ny0yOC4wOSwxLjc5LTIuMDQuMjUtNy4xNC0zLjMyLTMuODNaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTc4MC41Myw1NzUuMzFjMC0xMy4yNi00LjMzLTIyLjE4LTE4LjM2LTI5LjU4LDM1LjctMjYuMDEsNzEuOTEtNDcuOTQsOTMuMzMtNTUuMDgsMS41My0uNTEtLjc3LTUuMzYtMi41NS00Ljg1LTIxLjkzLDcuNC02MC42OSwyOS44NC05OC42OSw1Ni42MS0zLjA2LTEuMjctNi4zOC0yLjU1LTkuOTUtMy41Ny0xNC4yOC00LjM0LTMxLjExLTYuMzgtMzEuMTEtMTUuMywwLTIxLjY4LDU1LjM0LTY1LjU0LDc5LjA1LTczLjk1LDYuMzgtMi4yOSwxLjI3LTE0LjU0LTUuNjEtMTQuNTQtNS44NywwLTIwLjUyLDUuNS0zMS4xMSwxMi4yNC01LjYxLDMuNTctNC42Niw0LjQ3LTYuMTQsNS44OS0xLjA5LDEuMDYtMi43NiwxLjAxLTUuMSw1LjA0LTEuMzMtLjExLTMuNzUuODUtMi45OCwyLjU5LTIuNzMsMS4zMS02Ljk3LDUuOTgtMTAuMjYsNy43Ni0yLjI0LDEuMTcuODUuMzgtNC45NSw3LjIxLTExLjc2LDExLjc5LTIzLjEsMjcuMjktMjMuMSw0My45MiwwLDE0LjAzLDE3LjYsMjUuMjUsMzAuNiwyOS4zMywyLjguNzYsNS42MSwxLjUzLDguMTYsMi4wNC00OC43MSwzNS43LTkyLjgyLDc2LjUtOTIuODIsOTguNjksMCw5LjY5LDYuMTIsMjMuNDYsMjMuNzEsMjMuNDYsMy4xNiwwLDYuNjItLjUzLDEwLjI5LTEuNTF2LTEwLjk5Yy00Ljk4LDIuMTMtOS44MSwzLjU2LTE0LjM3LDQuMDgtNy45MSwxLjAyLTExLjQ3LTQuMzMtMTEuNDctOS4xOCwwLTIxLjE3LDQ1LjY1LTY0Ljc3LDk0Ljg2LTEwMi4yNiw5LjQ0LDEuNzksMTYuMDcsMy41NywxNi4wNyw4LjkyLDAsMTYuMzItMjIuMjcsNDkuMTMtNDguNjEsNzMuM2gxOC4yNXYyLjY5YzIzLjU1LTIwLjg1LDQyLjg1LTQ2LjQxLDQyLjg1LTYyLjk5WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yOTEuNDksNjM3LjM4Yy0xMC40OS0yLjg4LTIxLjc1LTQuMzMtMzMuOC00LjMzLTIxLjc2LDAtNDEuMjMsNC44Ni01OC40LDE0LjU2LTE3LjE4LDkuNzEtMzAuNTYsMjMuMjUtNDAuMTYsNDAuNjQtOS42LDE3LjM5LTE0LjQsMzcuMTctMTQuNCw1OS4zNnM0LjgsNDEuOTIsMTQuNCw1OS4yYzkuNiwxNy4yOCwyMi45OCwzMC43OCw0MC4xNiw0MC40OCwxNy4xNyw5LjcxLDM2LjY0LDE0LjU2LDU4LjQsMTQuNTYsMjYuNjcsMCw0OS40OS02Ljk4LDY4LjQ4LTIwLjk2LDE4Ljk4LTEzLjk3LDMxLjY4LTMzLjEyLDM4LjA4LTU3LjQ0aC02MC4xNmMtNC40OCw5LjM5LTEwLjgzLDE2LjU0LTE5LjA0LDIxLjQ0LTguMjEsNC45MS0xNy41NSw3LjM2LTI4LDcuMzYtMTYuODUsMC0zMC41MS01Ljg3LTQwLjk2LTE3LjYtMTAuNDYtMTEuNzMtMTUuNjgtMjcuNDEtMTUuNjgtNDcuMDRzNS4yMi0zNS4zMSwxNS42OC00Ny4wNGMxMC40NS0xMS43MywyNC4xLTE3LjYsNDAuOTYtMTcuNiwxMC40NSwwLDE5Ljc5LDIuNDYsMjgsNy4zNiw4LjIxLDQuOTEsMTQuNTYsMTIuMDUsMTkuMDQsMjEuNDRoNjAuMTZjLTYuNC0yNC4zMi0xOS4xLTQzLjUyLTM4LjA4LTU3LjYtNC40Ny0zLjMyLTkuMTctNi4yMy0xNC4wNy04Ljc3LjE0LDIuMjcuMzEsNC41LjUyLDYuNjYsMS4yNywxMi45LTIwLjA1LjItMjEuMTMtMTQuNjlaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTMxMi42Miw2NTIuMDZjLS4yMS0yLjE2LS4zOC00LjQtLjUyLTYuNjYtNi41LTMuMzYtMTMuMzYtNi4wNC0yMC42MS04LjAyLDEuMDksMTQuODksMjIuNCwyNy41OSwyMS4xMywxNC42OVoiLz4KICA8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjQ1Mi41NiA2MzUuNjEgMzk3Ljg0IDYzNS42MSAzOTcuODQgODYwLjI0IDUyNC4yNCA4NjAuMjQgNTI0LjI0IDgxOCA0NTIuNTYgODE4IDQ1Mi41NiA2MzUuNjEiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjgyLjk2LDc3MGMwLDEzLjQ0LTMuNDEsMjMuNzktMTAuMjQsMzEuMDQtNi44Myw3LjI1LTE2LjY0LDEwLjg4LTI5LjQ0LDEwLjg4cy0yMi41MS0zLjYyLTI5LjEyLTEwLjg4Yy02LjYxLTcuMjUtOS45Mi0xNy42LTkuOTItMzEuMDR2LTEzNC40aC01NC43MnYxMzQuMDhjMCwyMC4wNSw0LjA1LDM3LjA3LDEyLjE2LDUxLjA0LDguMTEsMTMuOTcsMTkuMTUsMjQuNDMsMzMuMTIsMzEuMzYsMTMuOTcsNi45NCwyOS44MSwxMC40LDQ3LjUyLDEwLjRzMzMuNzYtMy41Miw0OC4xNi0xMC41NmMxNC40LTcuMDQsMjUuODctMTcuNDksMzQuNC0zMS4zNiw4LjUzLTEzLjg3LDEyLjgtMzAuODMsMTIuOC01MC44OHYtMTMxLjM5Yy0xOCwxNS45My0zOC40OCwyOS4xLTU0LjcyLDMzLjQydjk4LjI4WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik03MTkuNDMsNjM1LjYxYy0xMS44OSwxMC45MS0yNC42LDIwLjA0LTM2LjQ3LDI1LjEydjEwLjk5YzE2LjI0LTQuMzIsMzYuNzItMTcuNDksNTQuNzItMzMuNDJ2LTIuNjloLTE4LjI1WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05NDMuNDQsNzY0LjRjLTcuOS0xMC4xMy0xOC4zNS0xNi41OC0zMS4zNi0xOS4zNiwxMS41Mi0zLjQxLDIwLjc1LTkuNDksMjcuNjgtMTguMjQsNi45My04Ljc0LDEwLjQtMTkuNzMsMTAuNC0zMi45NiwwLTE3LjkyLTYuNDYtMzIuMS0xOS4zNi00Mi41Ni0xMi45MS0xMC40NS0zMC43Ny0xNS42OC01My42LTE1LjY4aC0xMDEuMTJ2MjI0LjY0aDEwNC42NGMyMy40NiwwLDQxLjc2LTUuNDksNTQuODgtMTYuNDgsMTMuMTItMTAuOTgsMTkuNjgtMjUuODYsMTkuNjgtNDQuNjQsMC0xMy4wMS0zLjk1LTI0LjU4LTExLjg0LTM0LjcyWk04MzAuNzksNjc5LjQ0aDM1Ljg0YzguOTYsMCwxNS44NCwyLjAzLDIwLjY0LDYuMDgsNC44LDQuMDUsNy4yLDkuOTIsNy4yLDE3LjZzLTIuNCwxMy41LTcuMiwxNy40NGMtNC44LDMuOTUtMTEuNjgsNS45Mi0yMC42NCw1LjkyaC0zNS44NHYtNDcuMDRaTTg5Mi40LDgwOS44NGMtNS4wMiw0LjE2LTEyLjExLDYuMjQtMjEuMjgsNi4yNGgtNDAuMzJ2LTQ5LjZoMzkuNjhjOS4xNywwLDE2LjM3LDIuMjQsMjEuNiw2LjcyLDUuMjMsNC40OCw3Ljg0LDEwLjY3LDcuODQsMTguNTZzLTIuNTEsMTMuOTItNy41MiwxOC4wOFoiLz4KPC9zdmc+" alt="Haps Club"></a>
+  <div class="nav-links">
+    <a href="#week"><span class="lbl">This week</span></a>
+    <a class="show-m" href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener" aria-label="Open calendar"><svg class="ic"><use href="#i-cal"/></svg><span class="lbl">Calendar</span></a>
+    <a href="https://haps.club/archive/"><span class="lbl">Archive</span></a>
+  </div>
+  <a class="iglink" href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener" aria-label="Haps Club on Instagram" title="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+  <a class="cta" href="#subscribe">Subscribe</a>
+</div></nav>
+
+<header class="hero">
+  <span class="eyebrow" id="eyebrow"><svg class="ic"><use href="#i-pin"/></svg> Los Angeles · Updated weekly</span>
+  <h1>Here's what's <em>good.</em></h1>
+  <p>A hand-picked guide to the best of LA this week — dinners, shows, openings, and outdoor escapes. Free every Tuesday.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#subscribe">Get the newsletter</a>
+    <a class="btn btn-ghost" href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Open the calendar</a>
+  </div>
+</header>
+
+<div class="controls"><div class="controls-in">
+  <div class="rail" id="rail" role="group" aria-label="Filter by category">
+    <button class="f on" data-f="all">All</button>
+    <button class="f" data-f="saved"><svg class="ic"><use href="#i-heart"/></svg>Saved</button>
+    <button class="f" data-f="food"><span class="dot"></span>Food</button>
+    <button class="f" data-f="culture"><span class="dot"></span>Culture</button>
+    <button class="f" data-f="music"><span class="dot"></span>Music</button>
+    <button class="f" data-f="outdoors"><span class="dot"></span>Outdoors</button>
+    <button class="f" data-f="date"><span class="dot"></span>Date night</button>
+    <button class="f" data-f="free"><span class="dot"></span>Free</button>
+  </div>
+  <label class="hood"><svg class="ic"><use href="#i-pin"/></svg>
+    <select class="nb" id="nb" aria-label="Filter by neighborhood"><option value="all">All neighborhoods</option><option value="midcity">Mid-City</option><option value="westside">Westside</option><option value="dtla">Downtown</option><option value="hollywood">Hollywood</option><option value="nela">Northeast LA</option><option value="eastside">Eastside</option><option value="citywide">Citywide</option></select>
+  </label>
+</div></div>
+
+<div class="metabar">
+  <span class="count" id="count"></span>
+  <button class="clear" id="clear">Clear filters ✕</button>
+</div>
+
+<section id="featured" style="padding-bottom:6px">
+  <div class="sec-head"><h2>Featured</h2></div>
+  <div class="featured" id="featured-grid">
+    <a class="fcard t-food" href="https://luma.com/HapsClub-Sunset-Happy-Hour" target="_blank" rel="noopener"
+       data-cat="food" data-area="westside" data-when="upcoming" data-title="Haps Club &amp; Sunset Happy Hour" data-starts="20260821T170000" data-ends="20260821T200000">
+      <span class="fsticker">Featured</span>
+      <div class="fmesh"></div>
+      <div class="fbody">
+        <span class="fpill">Haps Club · Fri 8/21</span>
+        <h3>Haps Club &amp; Sunset Happy Hour</h3>
+        <div class="fmeta">Regent Santa Monica Beach · From $12 · 5&ndash;8 PM</div>
+      </div>
+      <span class="fgo" aria-hidden="true">Get tickets ↗</span>
+    </a>
+    <a class="fcard t-music" href="https://www.skirball.org/sunsetconcerts" target="_blank" rel="noopener"
+       data-cat="music free" data-area="westside" data-when="upcoming" data-title="Sunset Concerts finale at the Skirball" data-starts="20260806T180000" data-ends="20260806T220000">
+      <div class="fmesh"></div>
+      <div class="fbody">
+        <span class="fpill">Music · Thu 8/6</span>
+        <h3>Annie and The Caldwells close the Skirball&rsquo;s summer</h3>
+        <div class="fmeta">Brentwood · Free walk-up · Doors 6 PM</div>
+      </div>
+      <span class="fgo" aria-hidden="true">Details ↗</span>
+    </a>
+    <a class="fcard t-music" href="https://los-angeles-jazz-festival-mli0.vivenushop.com/event/jazz-on-the-beach-saturday-5p6gsk" target="_blank" rel="noopener"
+       data-cat="music" data-area="westside" data-when="upcoming" data-title="Jazz on the Beach at Dockweiler" data-starts="20260822T110000" data-ends="20260822T220000">
+      <div class="fmesh"></div>
+      <div class="fbody">
+        <span class="fpill">Music · Sat 8/22</span>
+        <h3>Jazz on the Beach at Dockweiler</h3>
+        <div class="fmeta">Dockweiler Beach · Ticketed · Doors 11 AM</div>
+      </div>
+      <span class="fgo" aria-hidden="true">Details ↗</span>
+    </a>
+  </div>
+</section>
+
+<section id="week">
+  <div class="sec-head"><h2>This week</h2><a class="more" href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Full calendar →</a></div>
+  <div class="grid" id="grid">
+    <article class="card t-culture" data-cat="culture free" data-area="dtla" data-when="upcoming" data-link="https://www.grandperformances.org/events/classical-hidden-architects" data-starts="20260806T180000" data-ends="20260806T193000" data-title="Classical x DTLA ARTNIGHT" tabindex="0" role="link" aria-label="Classical x DTLA ARTNIGHT — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">6</span></span>
+        <div class="card-head">
+          <span class="cat">Culture</span>
+          <h3><a href="https://www.grandperformances.org/events/classical-hidden-architects" target="_blank" rel="noopener">Classical x DTLA ARTNIGHT</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Classical x DTLA ARTNIGHT" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>California Plaza</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+
+    <article class="card t-music" data-cat="music free" data-area="westside" data-when="upcoming" data-link="https://www.culvercity.gov/Events-directory/2026-Summer-Sunset-Concert-Series" data-starts="20260806T190000" data-ends="20260806T210000" data-title="Summer Sunset Music Series at the Culver Steps" tabindex="0" role="link" aria-label="Summer Sunset Music Series at the Culver Steps — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">6</span></span>
+        <div class="card-head">
+          <span class="cat">Music</span>
+          <h3><a href="https://www.culvercity.gov/Events-directory/2026-Summer-Sunset-Concert-Series" target="_blank" rel="noopener">Summer Sunset Music Series at the Culver Steps</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Summer Sunset Music Series at the Culver Steps" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>The Culver Steps</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food free" data-area="westside" data-when="upcoming" data-link="https://www.abbotkinneyblvd.com/firstfridays" data-starts="20260807T170000" data-ends="20260807T213000" data-title="First Fridays on Abbot Kinney" tabindex="0" role="link" aria-label="First Fridays on Abbot Kinney — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">7</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.abbotkinneyblvd.com/firstfridays" target="_blank" rel="noopener">First Fridays on Abbot Kinney</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save First Fridays on Abbot Kinney" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Venice</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+
+    <article class="card t-music" data-cat="music free" data-area="midcity" data-when="upcoming" data-link="https://www.lacma.org/programs/music" data-starts="20260807T180000" data-ends="20260807T200000" data-title="Jazz at LACMA: Theo Saunders Septet" tabindex="0" role="link" aria-label="Jazz at LACMA: Theo Saunders Septet — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">7</span></span>
+        <div class="card-head">
+          <span class="cat">Music</span>
+          <h3><a href="https://www.lacma.org/programs/music" target="_blank" rel="noopener">Jazz at LACMA: Theo Saunders Septet</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Jazz at LACMA: Theo Saunders Septet" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Smidt Plaza, LACMA</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+
+    <article class="card t-outdoors" data-cat="outdoors date" data-area="westside" data-when="upcoming" data-link="https://www.santamonica.com/events/sunset-swim/" data-starts="20260807T180000" data-ends="20260807T210000" data-title="Sunset Swim at the Annenberg Beach House" tabindex="0" role="link" aria-label="Sunset Swim at the Annenberg Beach House — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">7</span></span>
+        <div class="card-head">
+          <span class="cat">Outdoors</span>
+          <h3><a href="https://www.santamonica.com/events/sunset-swim/" target="_blank" rel="noopener">Sunset Swim at the Annenberg Beach House</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Sunset Swim at the Annenberg Beach House" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Annenberg Beach House</span>
+        <span class="right"><span class="price">Pool admission</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+
+    <article class="card t-outdoors" data-cat="outdoors free" data-area="westside" data-when="weekend" data-link="https://yovenice.com/2026/07/10/venice-pier-block-party-postponed-until-august/" data-starts="20260808T110000" data-ends="20260808T200000" data-title="Venice Pier Block Party" tabindex="0" role="link" aria-label="Venice Pier Block Party — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">8</span></span>
+        <div class="card-head">
+          <span class="cat">Outdoors</span>
+          <h3><a href="https://yovenice.com/2026/07/10/venice-pier-block-party-postponed-until-august/" target="_blank" rel="noopener">Venice Pier Block Party</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Venice Pier Block Party" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Venice Pier</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-music" data-cat="music free" data-area="dtla" data-when="weekend" data-link="https://www.grandperformances.org/events/insunpark-and-generals" data-starts="20260808T180000" data-ends="20260808T220000" data-title="Tradition in Motion: Pamyua + Insun Park" tabindex="0" role="link" aria-label="Tradition in Motion: Pamyua + Insun Park — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">8</span></span>
+        <div class="card-head">
+          <span class="cat">Music</span>
+          <h3><a href="https://www.grandperformances.org/events/insunpark-and-generals" target="_blank" rel="noopener">Tradition in Motion: Pamyua + Insun Park</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Tradition in Motion: Pamyua + Insun Park" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>California Plaza</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-culture" data-cat="culture food" data-area="nela" data-when="weekend" data-link="https://www.streetfoodcinema.com/events/wet-hot-american-summer-25th-anniversary" data-starts="20260808T180000" data-ends="20260808T230000" data-title="Wet Hot American Summer 25th Reunion" tabindex="0" role="link" aria-label="Wet Hot American Summer 25th Reunion — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">8</span></span>
+        <div class="card-head">
+          <span class="cat">Culture</span>
+          <h3><a href="https://www.streetfoodcinema.com/events/wet-hot-american-summer-25th-anniversary" target="_blank" rel="noopener">Wet Hot American Summer 25th Reunion</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Wet Hot American Summer 25th Reunion" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>The Autry, Griffith Park</span>
+        <span class="right"><span class="price">$23</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-music" data-cat="music food free" data-area="westside" data-when="upcoming" data-link="https://events.humanitix.com/kcrw-summer-nights-with-the-wende-museum" data-starts="20260814T180000" data-ends="20260814T220000" data-title="KCRW Summer Nights at the Wende" tabindex="0" role="link" aria-label="KCRW Summer Nights at the Wende — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">14</span></span>
+        <div class="card-head">
+          <span class="cat">Music</span>
+          <h3><a href="https://events.humanitix.com/kcrw-summer-nights-with-the-wende-museum" target="_blank" rel="noopener">KCRW Summer Nights at the Wende</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save KCRW Summer Nights at the Wende" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Culver City</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-music" data-cat="music free" data-area="dtla" data-when="weekend" data-link="https://www.grandperformances.org/events/ethiocali" data-starts="20260815T180000" data-ends="20260815T220000" data-title="15 Years of Ethio Cali + DJ Nu-Mark" tabindex="0" role="link" aria-label="15 Years of Ethio Cali + DJ Nu-Mark — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">15</span></span>
+        <div class="card-head">
+          <span class="cat">Music</span>
+          <h3><a href="https://www.grandperformances.org/events/ethiocali" target="_blank" rel="noopener">15 Years of Ethio Cali + DJ Nu-Mark</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save 15 Years of Ethio Cali + DJ Nu-Mark" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>California Plaza</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-culture" data-cat="culture food" data-area="nela" data-when="weekend" data-link="https://www.streetfoodcinema.com/events/the-princess-bride" data-starts="20260815T180000" data-ends="20260815T230000" data-title="The Princess Bride at LA State Historic Park" tabindex="0" role="link" aria-label="The Princess Bride at LA State Historic Park — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">15</span></span>
+        <div class="card-head">
+          <span class="cat">Culture</span>
+          <h3><a href="https://www.streetfoodcinema.com/events/the-princess-bride" target="_blank" rel="noopener">The Princess Bride at LA State Historic Park</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save The Princess Bride at LA State Historic Park" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>LA State Historic Park</span>
+        <span class="right"><span class="price">$10</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+
+    <article class="card t-outdoors" data-cat="outdoors free" data-area="citywide" data-when="upcoming" data-link="https://secure.midnightmission.org/campaign/779803/donate" data-starts="20260821T230000" data-ends="20260822T070000" data-title="The Midnight Walk with The Midnight Mission" tabindex="0" role="link" aria-label="The Midnight Walk with The Midnight Mission — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">AUG</span><span class="d">21</span></span>
+        <div class="card-head">
+          <span class="cat">Outdoors</span>
+          <h3><a href="https://secure.midnightmission.org/campaign/779803/donate" target="_blank" rel="noopener">The Midnight Walk with The Midnight Mission</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save The Midnight Walk with The Midnight Mission" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Expo/Sepulveda Station</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="westside" data-when="evergreen" data-link="https://damianrestaurants.com/san-damian/" data-title="San Damián" tabindex="0" role="link" aria-label="San Damián — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">New</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://damianrestaurants.com/san-damian/" target="_blank" rel="noopener">San Damián</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save San Damián" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Venice</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+
+    <article class="card t-food" data-cat="food" data-area="westside" data-when="evergreen" data-link="https://www.westsideoysterclub.com/" data-title="West Side Oyster Club" tabindex="0" role="link" aria-label="West Side Oyster Club — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">New</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.westsideoysterclub.com/" target="_blank" rel="noopener">West Side Oyster Club</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save West Side Oyster Club" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Santa Monica</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-outdoors" data-cat="outdoors free" data-area="westside" data-when="weekend" data-link="https://venicerunclub.co/pages/schedule" data-title="Venice Run Club — Long Run Saturday" tabindex="0" role="link" aria-label="Venice Run Club — Long Run Saturday — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Sat</span><span class="d">•</span></span>
+        <div class="card-head">
+          <span class="cat">Outdoors</span>
+          <h3><a href="https://venicerunclub.co/pages/schedule" target="_blank" rel="noopener">Venice Run Club — Long Run Saturday</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Venice Run Club" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Venice</span>
+        <span class="right"><span class="price">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="westside" data-when="evergreen" data-link="https://www.thetastingkitchen.com/" data-title="The Tasting Kitchen" tabindex="0" role="link" aria-label="The Tasting Kitchen — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.thetastingkitchen.com/" target="_blank" rel="noopener">The Tasting Kitchen</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save The Tasting Kitchen" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Venice</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-outdoors" data-cat="outdoors" data-area="westside" data-when="evergreen" data-link="https://visitmdr.com/play/activities-marina-del-rey" data-title="Get on the water in the Marina" tabindex="0" role="link" aria-label="Get on the water in the Marina — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Outdoors</span>
+          <h3><a href="https://visitmdr.com/play/activities-marina-del-rey" target="_blank" rel="noopener">Get on the water in the Marina</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Get on the water in the Marina" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Marina del Rey</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-music" data-cat="music" data-area="westside" data-when="upcoming" data-link="https://samfirstbar.com/" data-title="Jazz nightly at Sam First" tabindex="0" role="link" aria-label="Jazz nightly at Sam First — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Now</span><span class="d">&#9834;</span></span>
+        <div class="card-head">
+          <span class="cat">Music</span>
+          <h3><a href="https://samfirstbar.com/" target="_blank" rel="noopener">Jazz nightly at Sam First</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Jazz nightly at Sam First" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Westchester</span>
+        <span class="right"><span class="price">2 sets nightly</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food free" data-area="dtla" data-when="weekend" data-link="https://la.smorgasburg.com/" data-title="Smorgasburg LA — Sundays" tabindex="0" role="link" aria-label="Smorgasburg LA — Sundays — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Now</span><span class="d">•</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://la.smorgasburg.com/" target="_blank" rel="noopener">Smorgasburg LA — Sundays</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Smorgasburg LA — Sundays" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>DTLA</span>
+        <span class="right"><span class="price free">Free entry</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="midcity" data-when="evergreen" data-link="https://altaadams.com" data-title="Alta Adams" tabindex="0" role="link" aria-label="Alta Adams — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://altaadams.com" target="_blank" rel="noopener">Alta Adams</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Alta Adams" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>West Adams</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="dtla" data-when="evergreen" data-link="https://www.grandcentralmarket.com" data-title="Cinnies at Grand Central Market" tabindex="0" role="link" aria-label="Cinnies at Grand Central Market — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.grandcentralmarket.com" target="_blank" rel="noopener">Cinnies at Grand Central Market</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Cinnies at Grand Central Market" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>DTLA</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="midcity" data-when="evergreen" data-link="https://www.lielle.la" data-title="Lielle" tabindex="0" role="link" aria-label="Lielle — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.lielle.la" target="_blank" rel="noopener">Lielle</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Lielle" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Pico-Robertson</span>
+        <span class="right"><span class="price ">$150 prix fixe</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-outdoors" data-cat="outdoors free" data-area="hollywood" data-when="evergreen" data-link="https://www.alltrails.com/parks/us/california/runyon-canyon-park" data-title="Runyon Canyon" tabindex="0" role="link" aria-label="Runyon Canyon — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Outdoors</span>
+          <h3><a href="https://www.alltrails.com/parks/us/california/runyon-canyon-park" target="_blank" rel="noopener">Runyon Canyon</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Runyon Canyon" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Hollywood</span>
+        <span class="right"><span class="price free">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="westside" data-when="evergreen" data-link="https://www.gjelina.com/" data-title="Gjelina" tabindex="0" role="link" aria-label="Gjelina — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.gjelina.com/" target="_blank" rel="noopener">Gjelina</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Gjelina" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Venice</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="midcity" data-when="evergreen" data-link="https://www.google.com/maps/search/Guelaguetza+Restaurant+Los+Angeles" data-title="Guelaguetza" tabindex="0" role="link" aria-label="Guelaguetza — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.google.com/maps/search/Guelaguetza+Restaurant+Los+Angeles" target="_blank" rel="noopener">Guelaguetza</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Guelaguetza" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Koreatown</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="eastside" data-when="evergreen" data-link="https://www.instagram.com/mh.zh/" data-title="Mh Zh" tabindex="0" role="link" aria-label="Mh Zh — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.instagram.com/mh.zh/" target="_blank" rel="noopener">Mh Zh</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Mh Zh" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Echo Park</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="eastside" data-when="evergreen" data-link="https://www.alltimelosangeles.com/" data-title="All Time" tabindex="0" role="link" aria-label="All Time — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.alltimelosangeles.com/" target="_blank" rel="noopener">All Time</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save All Time" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Los Feliz</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="citywide" data-when="evergreen" data-link="https://www.tacos1986.com/" data-title="Tacos 1986" tabindex="0" role="link" aria-label="Tacos 1986 — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.tacos1986.com/" target="_blank" rel="noopener">Tacos 1986</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Tacos 1986" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Citywide</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food date" data-area="dtla" data-when="evergreen" data-link="https://baveldtla.com/" data-title="Bavel" tabindex="0" role="link" aria-label="Bavel — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://baveldtla.com/" target="_blank" rel="noopener">Bavel</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Bavel" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Arts District</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="westside" data-when="evergreen" data-link="https://www.phoragela.com/" data-title="Phorage" tabindex="0" role="link" aria-label="Phorage — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.phoragela.com/" target="_blank" rel="noopener">Phorage</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Phorage" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Palms</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-culture" data-cat="culture free" data-area="eastside" data-when="evergreen" data-link="https://www.skylightbooks.com/" data-title="Skylight Books" tabindex="0" role="link" aria-label="Skylight Books — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Culture</span>
+          <h3><a href="https://www.skylightbooks.com/" target="_blank" rel="noopener">Skylight Books</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Skylight Books" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Los Feliz</span>
+        <span class="right"><span class="price free">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-outdoors" data-cat="outdoors free" data-area="westside" data-when="evergreen" data-link="https://www.alltrails.com/trail/us/california/escondido-falls-trail" data-title="Escondido Falls" tabindex="0" role="link" aria-label="Escondido Falls — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Outdoors</span>
+          <h3><a href="https://www.alltrails.com/trail/us/california/escondido-falls-trail" target="_blank" rel="noopener">Escondido Falls</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Escondido Falls" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Malibu</span>
+        <span class="right"><span class="price free">Free</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food date" data-area="westside" data-when="evergreen" data-link="https://www.twentiethstreetgarden.com/upcomingevents" data-title="Twentieth Street Garden" tabindex="0" role="link" aria-label="Twentieth Street Garden — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://www.twentiethstreetgarden.com/upcomingevents" target="_blank" rel="noopener">Twentieth Street Garden</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Twentieth Street Garden" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Santa Monica</span>
+        <span class="right"><span class="price ">Ticketed</span><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <article class="card t-food" data-cat="food" data-area="westside" data-when="evergreen" data-link="https://maps.apple.com/?address=1915%20Lincoln%20Blvd,%20Venice,%20CA%2090291&q=Teddy%E2%80%99s%20Hot%20House" data-title="Teddy's Hot House" tabindex="0" role="link" aria-label="Teddy's Hot House — open details">
+      <div class="card-top">
+        <span class="datetile" aria-hidden="true"><span class="m">Any</span><span class="d">★</span></span>
+        <div class="card-head">
+          <span class="cat">Food</span>
+          <h3><a href="https://maps.apple.com/?address=1915%20Lincoln%20Blvd,%20Venice,%20CA%2090291&q=Teddy%E2%80%99s%20Hot%20House" target="_blank" rel="noopener">Teddy's Hot House</a></h3>
+        </div>
+        <button class="iconbtn save" aria-pressed="false" aria-label="Save Teddy's Hot House" title="Save" onclick="event.stopPropagation();toggleSave(this)"><svg class="ic"><use href="#i-heart"/></svg></button>
+      </div>
+      <div class="card-foot">
+        <span class="where"><svg class="ic pin"><use href="#i-pin"/></svg>Venice</span>
+        <span class="right"><span class="go" aria-hidden="true"><svg class="ic"><use href="#i-arrow"/></svg></span></span>
+      </div>
+    </article>
+    <div class="empty" id="empty" style="display:none">No events match these filters. <button class="clear show" style="display:inline-flex" onclick="clearAll()">Clear filters</button></div>
+  </div>
+</section>
+
+
+<section class="archive-teaser" id="archive-teaser" aria-labelledby="atease-h2">
+  <div class="atease-head">
+    <h2 id="atease-h2">From the archive</h2>
+    <a class="more" href="https://haps.club/archive/">See all issues →</a>
+  </div>
+  <div class="acards">
+      <a class="acard" href="https://haps.club/archive/2026-06-15-the-longest-day/">
+        <span class="adate">Jun 15, 2026</span>
+        <h4>The Longest Day</h4>
+        <span class="alink">Read issue →</span>
+      </a>
+      <a class="acard" href="https://haps.club/archive/2026-06-09-the-garden-party/">
+        <span class="adate">Jun 9, 2026</span>
+        <h4>The Garden Party</h4>
+        <span class="alink">Read issue →</span>
+      </a>
+      <a class="acard" href="https://haps.club/archive/2026-06-02-week-of-june-3/">
+        <span class="adate">Jun 2, 2026</span>
+        <h4>Week of June 3</h4>
+        <span class="alink">Read issue →</span>
+      </a>
+      <a class="acard" href="https://haps.club/archive/2026-05-24-the-back-nine/">
+        <span class="adate">May 24, 2026</span>
+        <h4>The Back Nine</h4>
+        <span class="alink">Read issue →</span>
+      </a>
+  </div>
+</section>
+<div class="calstrip"><div class="calbox">
+  <div><div class="t">Never miss a thing</div><p>Subscribe to the Haps Club calendar — every pick lands straight in your own Google Calendar.</p></div>
+  <a class="btn btn-ghost" href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Add the calendar</a>
+</div></div>
+
+<div class="band" id="subscribe"><div class="band-in">
+  <span class="eyebrow">The Haps Club newsletter</span>
+  <h2>One email. Every Tuesday.</h2>
+  <p>The week's best of Los Angeles, curated by people who actually go out. No noise, no filler.</p>
+  <form class="sub" action="https://app.kit.com/forms/9421017/subscriptions" method="post" target="_blank">
+    <input type="email" name="email_address" placeholder="you@email.com" aria-label="Email address" required>
+    <button class="btn btn-primary" type="submit">Subscribe</button>
+  </form>
+</div></div>
+
+<footer><div class="foot-in">
+  <a class="brand" href="#" aria-label="Haps Club home"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5MDAgOTAwIj4KICA8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMzAuMy4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogMi4xLjMgQnVpbGQgMTgyKSAgLS0+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5zdDAgewogICAgICAgIGZpbGw6ICNmZGZiZmQ7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgPC9kZWZzPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zMjUuMDcsMzQ4LjU3YzEuMTIsMCwyLjIzLjA3LDMuMzEuMTktMy40NS0xLjQ1LTcuMTUtMi4xOS0xMC4xOS0xLjQ2LTUuNjEsMS4yNy0zNi43Miw5LjE4LTc5LjgyLDE2LjA3LDIwLjkxLTc4LjgsNTEuMjYtMTU5LjM4LDgwLjA3LTIxMS42NSwzLjA2LTUuNjEtMTIuNzUtMTguODctMTQuMDMtMTIuNS0yNy44LDU1LjM0LTYyLjczLDE0NC44NC04NS45NCwyMjcuMjEtMjYuMjcsMy44My01NS4zNCw3LjE0LTg1LjE3LDguNDIsMjEuMTctODYuNDUsNTYuMzYtMTY4LjU2LDYzLjc1LTE4OC43LDIuMDQtNS42MS0xMC45Ny0yMy40Ni0xNC4yOC0xNi4wNy02LjYzLDE0Ljc5LTQzLjYxLDEwNy4xLTY2LjU2LDE5OC4zOS0xNi44My0xMi43NS0zNC45NC0yMC45MS01Mi43OS0yMi43LTYuNjMtLjUxLTEzLjc3Ljc2LTEzLjc3LDEwLjIsMCwxOS42NCwyMC4xNSwzMC4zNSw1My4wNCwzMS42Mmg4LjkzYy0xMC43MSw0Ny40My0xNy4wOSw5My4zMy0xMi4yNCwxMjUuOTcsMi4wNCwxMy4yNiwyMS42OCwxOS44OSwyMC40LDExLjIyLTUuODctMzYuOTgtMS4wMi04Mi42Miw4LjY3LTEyOC4wMSw0Ny4xOCw0OS40Nyw2MS45NywxMjMuNjgsNjIuOTksMTQwLjI1LDAsLjEyLjAyLjI0LjAzLjM2LDcuMjQsMS45OSwxNC4xMSw0LjY2LDIwLjYxLDguMDItMi43OC00My45NSw3LjI0LTEwNi44NSwyMy43My0xNzEuODQsMjQuMTUtMy4zLDQ3LjU5LTYuNDIsNjYuNjktOC43NSw3LjE5LTkuNjEsMTUuMDItMTYuMjQsMjIuNTUtMTYuMjRaTTk5LjE0LDM3NS4zNGMtMTYuMDYtLjI1LTM1LjctNS4zNS0zNS43LTExLjQ4czUuNjEtNS44NiwxMC40Ni00LjA4YzEwLjcxLDQuMDgsMjAuNjYsOS40NCwyOS41OCwxNS41NmgtNC4zNFpNMTk0LjUxLDQ4MS42OGMtMTAuNDYtMzQuNjgtMzIuMTMtNzAuMTMtNTguNC05Ni4xNCwyMS45My0yLjA0LDUwLjQ5LTUuNjEsNzkuNTYtOS40NC0xMC40NiwzOC41MS0xOC4xMSw3NS4yMy0yMS4xNywxMDUuNTdaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTM2NC41OSw0NzUuMDVjLTEuMjcsMC00Ljg0LS43Ni00Ljg0LTUuMzUsMC0xOS44OSwyOC44Mi05OC42OSwyOC44Mi0xMDcuODcsMC02Ljg5LTcuNjUtMTEuNDgtMTEuMjItMTEuNDhzLTcuMTQsNC4wOC0xNS44MSwxNS4wNWMtOC42NywxMC45Ny01Ny44OSw3Mi42OC02OS44Nyw3Mi42OC0uNzcsMC0yLjgxLS4yNS0yLjgxLTMuMDYsMC0yNy41NCwzNi43Mi03My4xOSw1MC43NS03My4xOSw1LjYxLDAsMTEuNDgsMTAuMiwxNC41NCw1Ljg3LDEuOTEtMi44Ni05LjgyLTE3LjEzLTI1Ljc2LTE4Ljk0LDguNjksMy42NSwxNS43NiwxMS44Myw2LjY0LDEyLjU2LTcuODguNjMtMTkuMTMsMS44Ny0zMi41LDMuNDktMTUuNDYsMjAuNjctMjcuOTQsNTUuMTMtMjcuOTQsNjcuMTQsMCw4LjkzLDguNjcsMTYuODMsMTMuNzcsMTYuODMsMTcuMzQsMCw1Ny4zOC01OS4xNiw4My42NC04My4zOS05LjQ0LDMxLjExLTI2Ljc4LDcyLjY4LTI2Ljc4LDk0LjM1LDAsOS40MywxMC40NiwyMy4yMSwyMy43MiwyMy4yMSw5LjE4LDAsMjUuNzYtMTguNjIsNDQuMTItMzkuMjcsMTEuMjEtMTIuNzMsMjIuOTYtMjYuMzgsMzIuODUtMzcuOTUsMS44MS01LjQ1LDMuNTYtMTAuNDksNS4yNy0xNS4yMi0yNS43OCwyOS40OS03Mi43MSw4NC41NC04Ni41Nyw4NC41NFoiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMzI4LjM4LDM0OC43NmMtMS4wOS0uMTItMi4xOS0uMTktMy4zMS0uMTktNy41MywwLTE1LjM2LDYuNjMtMjIuNTUsMTYuMjQsMTMuMzctMS42MywyNC42My0yLjg2LDMyLjUtMy40OSw5LjEzLS43MywyLjA1LTguOTEtNi42NC0xMi41NloiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjU2Ljc2LDM0Ni41NGMtNS45MywzLjI2LTU3LjMxLDM1Ljk1LTkxLjk5LDU3LjYyLDkuOTUtMjMuNDYsMTYuNTgtNDguNDUsMTYuNTgtNjkuODcsMC0xOC4xMS0xMS45OS0yNS43Ni0yMS42Ny0yNS43Ni00NS42NSwwLTEyMS42NCwyMDcuODMtMTMzLjg4LDI0OC44OSwzMS4zNy0xNDkuNDMsNTguNC0xOTkuMTYsNTguOTEtMjA1LjUzLjUxLTYuMzgtOS42OS0xMi4yNC0xMy0xMS4yMi0zLjA2LDEuMDItMTAuMiwxNC43OS0xMy41MiwyMS45My0uNTEsMS4yNy0uMjUsMi44MS4yNSwzLjgzbC4yNS41MWMuNTEsMS4yOC41MSwyLjI5LDAsMy41Ny0yLjQxLDYuMjItNC45MSwxMi43Ni03LjUzLDIwLjAxLDYuOTUtNy45NSwxMi4zNy0xNC4wNCwxNS4xOC0xNi42OSwzLjU3LTMuMzEsNS4xLDEuNzksMy4zMiwzLjgzLS41OS43My0xMC40OCwxMi41NC0yMy43NywyOC4wOS0xMi4xNCwzNi41Ny0yNi43Miw5MS43Mi00NS42LDE5OC4zNS02Ljg5LDM5LjUzLDQuMDgsNDMuODYsMTMuNzcsNDMuODYsNi4xMiwwLDQuNTktMzkuNzgsMTMuMDEtNjkuODcsMjkuMzMtMTA2LjA4LDEwMi4yNi0yNjEuMzgsMTM2Ljk0LTI2MS4zOCwzLjU3LDAsNS4xLDIuNTUsNC44NCw4LjE2LTEuMjgsMjkuNTgtMTEuOTksNjQuMDEtMjUuNzYsOTMuMDgtMzUuOTYsMjMuOTctNjguODUsNDguOTYtNjguODUsNjIuNzMsMCw2LjM4LDEwLjcxLDExLjQ4LDIwLjQsMTEuNDgsMy41NywwLDguNDItLjUxLDEzLjI2LTMuODMsMTUuNTYtMTEuNDgsMzYuMjEtNDAuMDQsNTEuNzctNzIuNjgsMjQuODEtMTYuMzcsNTAuMDMtMzAuODEsNjYuNDUtMzkuODQsNS45Ni01Ljk4LDEyLjAyLTExLDE2Ljc2LTE0LjczLTIuMTQtMS4xNywxNS4yMS0xNS4yNSwxMy44OC0xNC41M1pNNDkxLjU4LDQ4My40N2MtNy42NS4yNi01LjEtNC4wOC0xLjc4LTguNjcsOS45NC0xMy43NywyNy4wMy0yOC44Miw0Ni42Ny00My4xLTE1LjgxLDI5Ljg0LTMzLjY2LDUxLjUxLTQ0Ljg4LDUxLjc3WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00NjYuMzQsMzczLjgxYy0yLjgxLDIuNjUtOC4yMyw4Ljc1LTE1LjE4LDE2LjY5LTEuNzEsNC43My0zLjQ2LDkuNzctNS4yNywxNS4yMiwxMy4yOC0xNS41NiwyMy4xOC0yNy4zNiwyMy43Ny0yOC4wOSwxLjc5LTIuMDQuMjUtNy4xNC0zLjMyLTMuODNaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTY4MC41Myw0NzUuMzFjMC0xMy4yNi00LjMzLTIyLjE4LTE4LjM2LTI5LjU4LDM1LjctMjYuMDEsNzEuOTEtNDcuOTQsOTMuMzMtNTUuMDgsMS41My0uNTEtLjc3LTUuMzYtMi41NS00Ljg1LTIxLjkzLDcuNC02MC42OSwyOS44NC05OC42OSw1Ni42MS0zLjA2LTEuMjctNi4zOC0yLjU1LTkuOTUtMy41Ny0xNC4yOC00LjM0LTMxLjExLTYuMzgtMzEuMTEtMTUuMywwLTIxLjY4LDU1LjM0LTY1LjU0LDc5LjA1LTczLjk1LDYuMzgtMi4yOSwxLjI3LTE0LjU0LTUuNjEtMTQuNTQtNS44NywwLTIwLjUyLDUuNS0zMS4xMSwxMi4yNC01LjYxLDMuNTctNC42Niw0LjQ3LTYuMTQsNS44OS0xLjA5LDEuMDYtMi43NiwxLjAxLTUuMSw1LjA0LTEuMzMtLjExLTMuNzUuODUtMi45OCwyLjU5LTIuNzMsMS4zMS02Ljk3LDUuOTgtMTAuMjYsNy43Ni0yLjI0LDEuMTcuODUuMzgtNC45NSw3LjIxLTExLjc2LDExLjc5LTIzLjEsMjcuMjktMjMuMSw0My45MiwwLDE0LjAzLDE3LjYsMjUuMjUsMzAuNiwyOS4zMywyLjguNzYsNS42MSwxLjUzLDguMTYsMi4wNC00OC43MSwzNS43LTkyLjgyLDc2LjUtOTIuODIsOTguNjksMCw5LjY5LDYuMTIsMjMuNDYsMjMuNzEsMjMuNDYsMy4xNiwwLDYuNjItLjUzLDEwLjI5LTEuNTF2LTEwLjk5Yy00Ljk4LDIuMTMtOS44MSwzLjU2LTE0LjM3LDQuMDgtNy45MSwxLjAyLTExLjQ3LTQuMzMtMTEuNDctOS4xOCwwLTIxLjE3LDQ1LjY1LTY0Ljc3LDk0Ljg2LTEwMi4yNiw5LjQ0LDEuNzksMTYuMDcsMy41NywxNi4wNyw4LjkyLDAsMTYuMzItMjIuMjcsNDkuMTMtNDguNjEsNzMuM2gxOC4yNXYyLjY5YzIzLjU1LTIwLjg1LDQyLjg1LTQ2LjQxLDQyLjg1LTYyLjk5WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xOTEuNDksNTM3LjM4Yy0xMC40OS0yLjg4LTIxLjc1LTQuMzMtMzMuOC00LjMzLTIxLjc2LDAtNDEuMjMsNC44Ni01OC40LDE0LjU2LTE3LjE4LDkuNzEtMzAuNTYsMjMuMjUtNDAuMTYsNDAuNjQtOS42LDE3LjM5LTE0LjQsMzcuMTctMTQuNCw1OS4zNnM0LjgsNDEuOTIsMTQuNCw1OS4yYzkuNiwxNy4yOCwyMi45OCwzMC43OCw0MC4xNiw0MC40OCwxNy4xNyw5LjcxLDM2LjY0LDE0LjU2LDU4LjQsMTQuNTYsMjYuNjcsMCw0OS40OS02Ljk4LDY4LjQ4LTIwLjk2LDE4Ljk4LTEzLjk3LDMxLjY4LTMzLjEyLDM4LjA4LTU3LjQ0aC02MC4xNmMtNC40OCw5LjM5LTEwLjgzLDE2LjU0LTE5LjA0LDIxLjQ0LTguMjEsNC45MS0xNy41NSw3LjM2LTI4LDcuMzYtMTYuODUsMC0zMC41MS01Ljg3LTQwLjk2LTE3LjYtMTAuNDYtMTEuNzMtMTUuNjgtMjcuNDEtMTUuNjgtNDcuMDRzNS4yMi0zNS4zMSwxNS42OC00Ny4wNGMxMC40NS0xMS43MywyNC4xLTE3LjYsNDAuOTYtMTcuNiwxMC40NSwwLDE5Ljc5LDIuNDYsMjgsNy4zNiw4LjIxLDQuOTEsMTQuNTYsMTIuMDUsMTkuMDQsMjEuNDRoNjAuMTZjLTYuNC0yNC4zMi0xOS4xLTQzLjUyLTM4LjA4LTU3LjYtNC40Ny0zLjMyLTkuMTctNi4yMy0xNC4wNy04Ljc3LjE0LDIuMjcuMzEsNC41LjUyLDYuNjYsMS4yNywxMi45LTIwLjA1LjItMjEuMTMtMTQuNjlaIi8+CiAgPHBhdGggY2xhc3M9InN0MCIgZD0iTTIxMi42Miw1NTIuMDZjLS4yMS0yLjE2LS4zOC00LjQtLjUyLTYuNjYtNi41LTMuMzYtMTMuMzYtNi4wNC0yMC42MS04LjAyLDEuMDksMTQuODksMjIuNCwyNy41OSwyMS4xMywxNC42OVoiLz4KICA8cG9seWdvbiBjbGFzcz0ic3QwIiBwb2ludHM9IjM1Mi41NiA1MzUuNjEgMjk3Ljg0IDUzNS42MSAyOTcuODQgNzYwLjI0IDQyNC4yNCA3NjAuMjQgNDI0LjI0IDcxOCAzNTIuNTYgNzE4IDM1Mi41NiA1MzUuNjEiLz4KICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTgyLjk2LDY3MGMwLDEzLjQ0LTMuNDEsMjMuNzktMTAuMjQsMzEuMDQtNi44Myw3LjI1LTE2LjY0LDEwLjg4LTI5LjQ0LDEwLjg4cy0yMi41MS0zLjYyLTI5LjEyLTEwLjg4Yy02LjYxLTcuMjUtOS45Mi0xNy42LTkuOTItMzEuMDR2LTEzNC40aC01NC43MnYxMzQuMDhjMCwyMC4wNSw0LjA1LDM3LjA3LDEyLjE2LDUxLjA0LDguMTEsMTMuOTcsMTkuMTUsMjQuNDMsMzMuMTIsMzEuMzYsMTMuOTcsNi45NCwyOS44MSwxMC40LDQ3LjUyLDEwLjRzMzMuNzYtMy41Miw0OC4xNi0xMC41NmMxNC40LTcuMDQsMjUuODctMTcuNDksMzQuNC0zMS4zNiw4LjUzLTEzLjg3LDEyLjgtMzAuODMsMTIuOC01MC44OHYtMTMxLjM5Yy0xOCwxNS45My0zOC40OCwyOS4xLTU0LjcyLDMzLjQydjk4LjI4WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik02MTkuNDMsNTM1LjYxYy0xMS44OSwxMC45MS0yNC42LDIwLjA0LTM2LjQ3LDI1LjEydjEwLjk5YzE2LjI0LTQuMzIsMzYuNzItMTcuNDksNTQuNzItMzMuNDJ2LTIuNjloLTE4LjI1WiIvPgogIDxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04NDMuNDQsNjY0LjRjLTcuOS0xMC4xMy0xOC4zNS0xNi41OC0zMS4zNi0xOS4zNiwxMS41Mi0zLjQxLDIwLjc1LTkuNDksMjcuNjgtMTguMjQsNi45My04Ljc0LDEwLjQtMTkuNzMsMTAuNC0zMi45NiwwLTE3LjkyLTYuNDYtMzIuMS0xOS4zNi00Mi41Ni0xMi45MS0xMC40NS0zMC43Ny0xNS42OC01My42LTE1LjY4aC0xMDEuMTJ2MjI0LjY0aDEwNC42NGMyMy40NiwwLDQxLjc2LTUuNDksNTQuODgtMTYuNDgsMTMuMTItMTAuOTgsMTkuNjgtMjUuODYsMTkuNjgtNDQuNjQsMC0xMy4wMS0zLjk1LTI0LjU4LTExLjg0LTM0LjcyWk03MzAuNzksNTc5LjQ0aDM1Ljg0YzguOTYsMCwxNS44NCwyLjAzLDIwLjY0LDYuMDgsNC44LDQuMDUsNy4yLDkuOTIsNy4yLDE3LjZzLTIuNCwxMy41LTcuMiwxNy40NGMtNC44LDMuOTUtMTEuNjgsNS45Mi0yMC42NCw1LjkyaC0zNS44NHYtNDcuMDRaTTc5Mi40LDcwOS44NGMtNS4wMiw0LjE2LTEyLjExLDYuMjQtMjEuMjgsNi4yNGgtNDAuMzJ2LTQ5LjZoMzkuNjhjOS4xNywwLDE2LjM3LDIuMjQsMjEuNiw2LjcyLDUuMjMsNC40OCw3Ljg0LDEwLjY3LDcuODQsMTguNTZzLTIuNTEsMTMuOTItNy41MiwxOC4wOFoiLz4KPC9zdmc+" alt="Haps Club"></a>
+  <div class="fl">
+    <a href="https://haps.club/subscribe">Subscribe</a>
+    <a href="https://haps.club/about.html">About</a>
+    <a href="https://haps.club/about.html#tip">Submit a tip</a>
+    <a href="mailto:michael@haps.club">Contact</a>
+    <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://chat.whatsapp.com/CrQFCLOZjYm5eBqsU1vcA5?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Calendar</a>
+    <a href="https://haps.club/archive/">Archive</a>
+    <a href="https://haps.club/sitemap">Sitemap</a>
+  </div>
+  <div>© 2026 Haps Club · Los Angeles</div>
+</div></footer>
+
+<script>
+  var curCat="all", curHood="all";
+  var fbtns=document.querySelectorAll('.f'), nb=document.getElementById('nb');
+  var items=document.querySelectorAll('[data-cat]'), empty=document.getElementById('empty');
+  var countEl=document.getElementById('count'), clearEl=document.getElementById('clear');
+
+  
+  (function(){var now=new Date();document.querySelectorAll('[data-ends],[data-starts]').forEach(function(el){
+    var v=el.dataset.ends||el.dataset.starts; if(!v) return;
+    var iso=v.slice(0,4)+'-'+v.slice(4,6)+'-'+v.slice(6,8)+'T'+((v.length>8?v.slice(9,11):'23'))+':'+((v.length>8?v.slice(11,13):'59'))+':00-07:00';
+    var d=new Date(iso); if(!isNaN(d)&&d<now){ el.dataset.expired='1'; }
+  });})();
+
+  function savedSet(){ try{return JSON.parse(localStorage.getItem('haps_saved')||'[]')}catch(e){return []} }
+
+  function apply(){
+    var saved=savedSet(), shown=0;
+    items.forEach(function(el){
+      var cats=(el.dataset.cat||'').split(' '), area=el.dataset.area||'';
+      var okCat = curCat==='all' || cats.indexOf(curCat)>-1
+        || (curCat==='free' && el.querySelector('.free, .fpill') && /free/i.test(el.textContent))
+        || (curCat==='saved' && saved.indexOf(el.dataset.title)>-1);
+      var okHood = curHood==='all' || area===curHood;
+      var show = okCat && okHood && el.dataset.expired!=="1";
+      el.style.display = show ? '' : 'none';
+      if(show && el.classList.contains('card')) shown++;
+    });
+    if(empty) empty.style.display = shown ? 'none' : 'block';
+    if(countEl) countEl.textContent = shown + (shown===1?' event':' events') + (curHood!=='all'?' · '+nb.options[nb.selectedIndex].text:'');
+    var active = curCat!=='all' || curHood!=='all';
+    clearEl.classList.toggle('show', active);
+  }
+  function clearAll(){ curCat='all'; curHood='all'; nb.value='all';
+    fbtns.forEach(function(x){x.classList.toggle('on', x.dataset.f==='all')}); apply(); }
+  window.clearAll=clearAll;
+
+  fbtns.forEach(function(b){ b.addEventListener('click',function(){
+    fbtns.forEach(function(x){x.classList.remove('on')}); b.classList.add('on'); curCat=b.dataset.f; apply();
+  })});
+  nb.addEventListener('change',function(){ curHood=nb.value; apply(); });
+  clearEl.addEventListener('click', clearAll);
+
+  // open outbound link: whole-card click + keyboard (Enter/Space)
+  function openCard(c){ var u=c.dataset.link; if(u) window.open(u,'_blank','noopener'); }
+  document.querySelectorAll('.card').forEach(function(c){
+    c.addEventListener('click',function(e){ if(e.target.closest('a,button')) return; openCard(c); });
+    c.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openCard(c); } });
+  });
+
+  function toggleSave(btn){
+    var on=!btn.classList.contains('on'); btn.classList.toggle('on',on); btn.setAttribute('aria-pressed',on);
+    var id=btn.closest('.card').dataset.title, set=savedSet();
+    if(on){ if(set.indexOf(id)<0) set.push(id); } else { set=set.filter(function(x){return x!==id}); }
+    try{ localStorage.setItem('haps_saved',JSON.stringify(set)); }catch(e){}
+    if(curCat==='saved') apply();
+  }
+  window.toggleSave=toggleSave;
+
+  // restore saved hearts
+  (function(){ var set=savedSet(); document.querySelectorAll('.card .save').forEach(function(b){
+    if(set.indexOf(b.closest('.card').dataset.title)>-1){ b.classList.add('on'); b.setAttribute('aria-pressed','true'); }
+  }); })();
+
+  // live date in eyebrow
+  (function(){ try{ var d=new Date(), o={weekday:'long',month:'long',day:'numeric'};
+    document.getElementById('eyebrow').innerHTML='<svg class="ic"><use href="#i-pin"/></svg> Los Angeles · Updated '+d.toLocaleDateString('en-US',o);
+  }catch(e){} })();
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  document.querySelectorAll('.card,.fcard').forEach(function(el){el.classList.add('reveal');io.observe(el)});
+
+  apply();
+</script>
+</body>
+</html>
