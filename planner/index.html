@@ -126,7 +126,7 @@
 
   <div class="top">
     <h1>Event Calculator</h1>
-    <div class="sub">Haps Club × Anjali · drag the sliders — every number updates live · Haps <b>20%</b> · Anjali <b>10% space + $100 cleaning</b> · <b>3% card fees</b></div>
+    <div class="sub">Haps Club × Anjali · drag the sliders — every number updates live · Haps <b>20%</b> · Anjali <b>10% space + $100 cleaning</b> · <b>3% card fees</b> · Michael attends each event on <b>1 comp ticket</b></div>
   </div>
 
   <h2 id="calc" style="margin-top:0">Play With the Numbers</h2>
@@ -140,8 +140,8 @@
         <input type="range" id="aPrice" min="80" max="200" step="5" value="130">
       </div>
       <div class="ctrl">
-        <div class="row"><label>Tickets sold</label><span class="val" id="aSoldV">12</span></div>
-        <input type="range" id="aSold" min="4" max="16" step="1" value="12">
+        <div class="row"><label>Paid tickets (11 + Michael comp)</label><span class="val" id="aSoldV">11</span></div>
+        <input type="range" id="aSold" min="4" max="11" step="1" value="11">
       </div>
       <div class="kpis">
         <div class="kpi"><div class="n" id="aGross">–</div><div class="l">Gross</div></div>
@@ -150,6 +150,7 @@
       </div>
       <table>
         <tr class="rev"><td>Revenue</td><td id="aRev">–</td></tr>
+        <tr><td>Michael's ticket · 1 comp seat <span class="tag th">HAPS</span></td><td>$0</td></tr>
         <tr><td>Card fees 3% <span class="tag tc">COST</span></td><td id="aCC">–</td></tr>
         <tr><td>Haps Club 20% <span class="tag th">HAPS</span></td><td id="aH">–</td></tr>
         <tr><td>Event space 10% <span class="tag ta">ANJALI</span></td><td id="aSp">–</td></tr>
@@ -158,7 +159,7 @@
         <tr class="total"><td>Left for Anjali's labor</td><td id="aNet">–</td></tr>
       </table>
       <div class="status" id="aStatus">–</div>
-      <div class="note">Groceries = tickets sold + 2 buffer servings × $20. Anjali total = space + cleaning + labor remainder.</div>
+      <div class="note">12 seats total = 11 paid + Michael's comp (part of his 20% effort). Groceries = paid + Michael + 2 buffer servings × $20. Anjali total = space + cleaning + labor remainder.</div>
     </div>
 
     <!-- SVETLANA -->
@@ -180,6 +181,7 @@
       </div>
       <table>
         <tr class="rev"><td>Revenue</td><td id="sRev">–</td></tr>
+        <tr><td>Michael's ticket · 1 of the 2 comps <span class="tag th">HAPS</span></td><td>$0</td></tr>
         <tr><td>Card fees 3% <span class="tag tc">COST</span></td><td id="sCC">–</td></tr>
         <tr><td>Haps Club 20% <span class="tag th">HAPS</span></td><td id="sH">–</td></tr>
         <tr><td>Event space 10% <span class="tag ta">ANJALI</span></td><td id="sSp">–</td></tr>
@@ -213,6 +215,7 @@
       </div>
       <table>
         <tr class="rev"><td>Revenue</td><td id="jRev">–</td></tr>
+        <tr><td>Michael's ticket · 1 comp <span class="tag th">HAPS</span></td><td>$0</td></tr>
         <tr><td>Card fees 3% <span class="tag tc">COST</span></td><td id="jCC">–</td></tr>
         <tr><td>Haps Club 20% <span class="tag th">HAPS</span></td><td id="jH">–</td></tr>
         <tr><td>Event space 10% <span class="tag ta">ANJALI</span></td><td id="jSp">–</td></tr>
@@ -359,23 +362,23 @@ const neg = n => '–$' + Math.abs(Math.round(n)).toLocaleString();
 function setNet(el, n){ el.textContent = fmt(n); el.style.color = n >= 0 ? 'var(--green)' : 'var(--red)'; }
 function setStatus(el, ok, msg){ el.className = 'status ' + (ok ? 'st-ok' : 'st-bad'); el.textContent = msg; }
 
-function anjaliNet(p, n){ const g = p*n; return g - .03*g - .20*g - .10*g - 100 - (n+2)*20; }
+function anjaliNet(p, n){ const g = p*n; return g - .03*g - .20*g - .10*g - 100 - (n+3)*20; }
 function calcA(){
   const p = +$('aPrice').value, n = +$('aSold').value, g = p*n;
   $('aPriceV').textContent = '$'+p; $('aSoldV').textContent = n;
-  const cc=.03*g, h=.20*g, sp=.10*g, food=(n+2)*20;
+  const cc=.03*g, h=.20*g, sp=.10*g, food=(n+3)*20;
   const net = g-cc-h-sp-100-food;
   $('aGross').textContent = fmt(g); $('aHaps').textContent = fmt(h);
   $('aAnj').textContent = fmt(sp+100+net);
   $('aRev').textContent = fmt(g); $('aCC').textContent = neg(cc); $('aH').textContent = neg(h);
   $('aSp').textContent = neg(sp); $('aFood').textContent = neg(food);
-  $('aFoodL').textContent = '('+(n+2)+' srv × $20)';
+  $('aFoodL').textContent = '('+(n+3)+' srv × $20)';
   setNet($('aNet'), net);
-  let be = null; for(let k=1;k<=16;k++){ if(anjaliNet(p,k)>=0){ be=k; break; } }
+  let be = null; for(let k=1;k<=11;k++){ if(anjaliNet(p,k)>=0){ be=k; break; } }
   const hourly = net>0 ? Math.round(net/20) : 0;
   setStatus($('aStatus'), net>=0,
     net>=0 ? `✓ Anjali earns ~$${hourly}/hr for 20 hrs. Breakeven at this price: ${be??'—'} tickets.`
-           : `✗ Her labor goes unpaid — needs ${be??'more than 16'} tickets at $${p}.`);
+           : `✗ Her labor goes unpaid — needs ${be??'more than 11'} tickets at $${p}.`);
 }
 
 function svetNet(p, n){ const g=p*n; return g - .03*g - .20*g - .10*g - .10*g - 1680; }
