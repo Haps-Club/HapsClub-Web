@@ -19,10 +19,13 @@
   .sub{color:var(--muted);font-size:17px;margin:10px 0 28px}
   h2{font-size:26px;font-weight:700;letter-spacing:-.02em;margin:56px 0 20px;scroll-margin-top:70px}
   nav{position:sticky;top:0;z-index:10;background:rgba(245,245,247,.85);backdrop-filter:blur(14px);
-    display:flex;gap:6px;padding:14px 0;margin-bottom:36px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+    display:flex;gap:6px;padding:14px 0;margin-bottom:36px;flex-wrap:wrap;border-bottom:1px solid var(--line);align-items:center}
   nav a{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;background:var(--card);
     border:1px solid var(--line);padding:7px 14px;border-radius:100px}
   nav a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  nav a.brand{background:none;border:none;padding:0;margin-right:auto;border-radius:0}
+  nav a.brand:hover{background:none}
+  nav a.brand img{height:36px;display:block}
   .top{padding-top:44px}
   .backtop{display:inline-block;font-size:12px;font-weight:600;color:var(--blue);text-decoration:none;margin-top:14px}
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
@@ -115,6 +118,7 @@
 <div id="content">
 
   <nav>
+    <a class="brand" href="#top"><img src="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg" alt="Haps Club"></a>
     <a href="#calc">Calculator</a>
     <a href="#concerns">Concerns</a>
     <a href="#recs">Recommendations</a>
