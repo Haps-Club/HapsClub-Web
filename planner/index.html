@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Haps Club × Anjali — Event Calculator</title>
+<style>
+  :root{
+    --bg:#f5f5f7; --card:#ffffff; --ink:#1d1d1f; --muted:#86868b; --line:#e5e5ea;
+    --blue:#0071e3; --orange:#ff7d1a; --purple:#7d5fff; --teal:#00a884;
+    --red:#ff3b30; --green:#30a14e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,sans-serif;
+    background:var(--bg);color:var(--ink);padding:0 28px 56px;max-width:1120px;margin:0 auto;-webkit-font-smoothing:antialiased}
+  h1{font-size:40px;font-weight:700;letter-spacing:-.025em;line-height:1.1}
+  .sub{color:var(--muted);font-size:17px;margin:10px 0 28px}
+  h2{font-size:26px;font-weight:700;letter-spacing:-.02em;margin:56px 0 20px;scroll-margin-top:70px}
+  nav{position:sticky;top:0;z-index:10;background:rgba(245,245,247,.85);backdrop-filter:blur(14px);
+    display:flex;gap:6px;padding:14px 0;margin-bottom:36px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+  nav a{font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;background:var(--card);
+    border:1px solid var(--line);padding:7px 14px;border-radius:100px}
+  nav a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .top{padding-top:44px}
+  .backtop{display:inline-block;font-size:12px;font-weight:600;color:var(--blue);text-decoration:none;margin-top:14px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px}
+  .card{background:var(--card);border-radius:20px;padding:26px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .pill{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
+    padding:4px 10px;border-radius:100px;margin-bottom:14px}
+  .p-o{background:#fff1e6;color:var(--orange)} .p-p{background:#f0ecff;color:var(--purple)} .p-t{background:#e4f6f0;color:var(--teal)}
+  .ctrl{background:var(--bg);border-radius:14px;padding:14px 16px;margin-bottom:8px}
+  .ctrl .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .ctrl label{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .ctrl .val{font-size:18px;font-weight:800;letter-spacing:-.02em}
+  input[type=range]{width:100%;-webkit-appearance:none;height:5px;border-radius:3px;background:#d6d6db;outline:none}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;
+    background:#fff;border:1px solid #d0d0d5;box-shadow:0 2px 6px rgba(0,0,0,.18);cursor:pointer}
+  .kpis{display:flex;gap:8px;margin:14px 0}
+  .kpi{flex:1;border-radius:12px;padding:10px 8px;text-align:center;background:var(--bg)}
+  .kpi .n{font-size:18px;font-weight:800;letter-spacing:-.02em}
+  .kpi .l{font-size:9.5px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-top:2px}
+  .kpi.hl{background:#e8f1fd}.kpi.hl .n{color:var(--blue)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  td{padding:8px 4px;text-align:right;border-bottom:1px solid var(--line)}
+  td:first-child{text-align:left}
+  tr:last-child td{border-bottom:none}
+  tr.total td{font-weight:700;font-size:15px;border-top:2px solid var(--ink);border-bottom:none}
+  tr.rev td{font-weight:600}
+  .tag{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:100px;margin-left:6px;vertical-align:middle}
+  .th{background:#e8f1fd;color:var(--blue)} .ta{background:#fff1e6;color:var(--orange)}
+  .ts{background:#f0ecff;color:var(--purple)} .tc{background:#f2f2f4;color:#6e6e73}
+  .status{border-radius:12px;padding:11px 14px;font-size:12.5px;font-weight:600;margin-top:14px;line-height:1.45}
+  .st-ok{background:#eaf7ee;color:#1a7a34} .st-bad{background:#fdeceb;color:#c22a20}
+  .note{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+  .lists{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .lcard{background:var(--card);border-radius:20px;padding:26px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .lcard h3{font-size:17px;font-weight:700;margin-bottom:14px}
+  .item{display:flex;gap:12px;margin-bottom:14px}
+  .item:last-child{margin-bottom:0}
+  .item .ic{font-size:16px;line-height:1.4}
+  .item p{font-size:13.5px;line-height:1.5;color:var(--muted)}
+  .item p b{color:var(--ink);font-weight:600}
+  .next{background:var(--ink);color:#fff;border-radius:20px;padding:26px;margin-top:56px}
+  .next h2{color:#fff;margin:0 0 16px;font-size:22px}
+  .next table{font-size:14px}
+  .next td,.next th{border-color:#3a3a3c;color:#fff;text-align:left;padding:10px 8px;border-bottom:1px solid #3a3a3c}
+  .next th{color:#98989d;font-size:11px;text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+  .months{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .month{background:var(--card);border-radius:20px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .month h3{font-size:15px;font-weight:700;margin-bottom:10px}
+  .month table{table-layout:fixed}
+  .month th{font-size:10px;padding:4px 2px;text-align:center;border:none;color:var(--muted);font-weight:600}
+  .month td{height:52px;vertical-align:top;border:1px solid var(--line);padding:3px;font-size:11px;text-align:left;position:relative}
+  .month td.empty{border:none}
+  .d{font-size:11px;font-weight:600;color:var(--muted)}
+  .ev{display:block;margin-top:2px;border-radius:4px;padding:1px 4px;font-size:9px;font-weight:700;line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  .ev-a{background:#fff1e6;color:var(--orange)} .ev-s{background:#f0ecff;color:var(--purple)}
+  .ev-j{background:#e4f6f0;color:var(--teal)} .ev-b{background:#fdeceb;color:var(--red)}
+  .month td.rec{outline:2px solid var(--ink);outline-offset:-2px;background:#fffdf5}
+  .star{position:absolute;top:2px;right:4px;font-size:10px}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;margin-bottom:16px;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:10px;height:10px;border-radius:3px;display:inline-block}
+  #gate{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;align-items:center;justify-content:center}
+  .gate-card{background:var(--card);border-radius:24px;padding:44px 40px;max-width:380px;width:90%;
+    box-shadow:0 4px 24px rgba(0,0,0,.08);text-align:center}
+  .gate-card .logo{font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+  .gate-card h2{font-size:22px;font-weight:700;letter-spacing:-.02em;margin:0 0 6px}
+  .gate-card p{font-size:13px;color:var(--muted);margin-bottom:22px}
+  .gate-card input{width:100%;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;
+    outline:none;text-align:center;font-family:inherit;background:var(--bg)}
+  .gate-card input:focus{border-color:var(--blue)}
+  .gate-card button{width:100%;margin-top:12px;font-size:15px;font-weight:600;color:#fff;background:var(--ink);
+    border:none;border-radius:12px;padding:12px;cursor:pointer;font-family:inherit}
+  .gate-card button:hover{background:#333}
+  .gate-err{font-size:12px;color:var(--red);font-weight:600;margin-top:10px;min-height:16px}
+  body.locked{overflow:hidden}
+  body.locked #content{filter:blur(14px);pointer-events:none;user-select:none}
+</style>
+</head>
+<body id="top">
+
+<div id="gate">
+  <div class="gate-card">
+    <div class="logo">Haps Club</div>
+    <h2>Event Planner</h2>
+    <p>Partner access · enter the password</p>
+    <input type="password" id="gatePw" placeholder="Password" autocomplete="off" autofocus>
+    <button id="gateBtn">Unlock</button>
+    <div class="gate-err" id="gateErr"></div>
+  </div>
+</div>
+<div id="content">
+
+  <nav>
+    <a href="#calc">Calculator</a>
+    <a href="#concerns">Concerns</a>
+    <a href="#recs">Recommendations</a>
+    <a href="#strategies">Strategies</a>
+    <a href="#dates">Dates</a>
+    <a href="#calendar">Calendar</a>
+    <a href="https://haps.club">← haps.club</a>
+  </nav>
+
+  <div class="top">
+    <h1>Event Calculator</h1>
+    <div class="sub">Haps Club × Anjali · drag the sliders — every number updates live · Haps <b>20%</b> · Anjali <b>10% space + $100 cleaning</b> · <b>3% card fees</b></div>
+  </div>
+
+  <h2 id="calc" style="margin-top:0">Play With the Numbers</h2>
+  <div class="cards">
+
+    <!-- ANJALI -->
+    <div class="card">
+      <span class="pill p-o">Anjali's Dinner · Sept 12</span>
+      <div class="ctrl">
+        <div class="row"><label>Ticket price</label><span class="val" id="aPriceV">$130</span></div>
+        <input type="range" id="aPrice" min="80" max="200" step="5" value="130">
+      </div>
+      <div class="ctrl">
+        <div class="row"><label>Tickets sold</label><span class="val" id="aSoldV">12</span></div>
+        <input type="range" id="aSold" min="4" max="16" step="1" value="12">
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="n" id="aGross">–</div><div class="l">Gross</div></div>
+        <div class="kpi hl"><div class="n" id="aHaps">–</div><div class="l">Haps 20%</div></div>
+        <div class="kpi"><div class="n" id="aAnj">–</div><div class="l">Anjali total</div></div>
+      </div>
+      <table>
+        <tr class="rev"><td>Revenue</td><td id="aRev">–</td></tr>
+        <tr><td>Card fees 3% <span class="tag tc">COST</span></td><td id="aCC">–</td></tr>
+        <tr><td>Haps Club 20% <span class="tag th">HAPS</span></td><td id="aH">–</td></tr>
+        <tr><td>Event space 10% <span class="tag ta">ANJALI</span></td><td id="aSp">–</td></tr>
+        <tr><td>Cleaning fee <span class="tag ta">ANJALI</span></td><td>–$100</td></tr>
+        <tr><td>Groceries <span id="aFoodL">(14 srv × $20)</span> <span class="tag tc">COST</span></td><td id="aFood">–</td></tr>
+        <tr class="total"><td>Left for Anjali's labor</td><td id="aNet">–</td></tr>
+      </table>
+      <div class="status" id="aStatus">–</div>
+      <div class="note">Groceries = tickets sold + 2 buffer servings × $20. Anjali total = space + cleaning + labor remainder.</div>
+    </div>
+
+    <!-- SVETLANA -->
+    <div class="card">
+      <span class="pill p-p">Svetlana's Dinner · Oct 10 · at Anjali's place</span>
+      <div class="ctrl">
+        <div class="row"><label>Ticket price</label><span class="val" id="sPriceV">$130</span></div>
+        <input type="range" id="sPrice" min="100" max="220" step="5" value="130">
+      </div>
+      <div class="ctrl">
+        <div class="row"><label>Tickets sold (max 23)</label><span class="val" id="sSoldV">23</span></div>
+        <input type="range" id="sSold" min="10" max="23" step="1" value="23">
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="n" id="sGross">–</div><div class="l">Gross</div></div>
+        <div class="kpi hl"><div class="n" id="sHaps">–</div><div class="l">Haps 20%</div></div>
+        <div class="kpi"><div class="n" id="sAnj">–</div><div class="l">Anjali</div></div>
+        <div class="kpi"><div class="n" id="sSvet">$920</div><div class="l">Svetlana</div></div>
+      </div>
+      <table>
+        <tr class="rev"><td>Revenue</td><td id="sRev">–</td></tr>
+        <tr><td>Card fees 3% <span class="tag tc">COST</span></td><td id="sCC">–</td></tr>
+        <tr><td>Haps Club 20% <span class="tag th">HAPS</span></td><td id="sH">–</td></tr>
+        <tr><td>Event space 10% <span class="tag ta">ANJALI</span></td><td id="sSp">–</td></tr>
+        <tr><td>Inventory 10% <span class="tag ta">ANJALI</span></td><td id="sInv">–</td></tr>
+        <tr><td>Cleaning <span class="tag ta">ANJALI</span></td><td>–$100</td></tr>
+        <tr><td>Cooking 12h × $30 <span class="tag ts">SVETLANA</span></td><td>–$360</td></tr>
+        <tr><td>Ops 28h × $20 <span class="tag ts">SVETLANA</span></td><td>–$560</td></tr>
+        <tr><td>Groceries 28 srv × $20 <span class="tag tc">COST</span></td><td>–$560</td></tr>
+        <tr><td>Misc <span class="tag tc">COST</span></td><td>–$100</td></tr>
+        <tr class="total"><td>Event net</td><td id="sNet">–</td></tr>
+      </table>
+      <div class="status" id="sStatus">–</div>
+      <div class="note">All events are at Anjali's place — space 10% + inventory 10% + $100 cleaning go to Anjali; Svetlana earns the labor ($920). Fixed costs stay committed even when fewer tickets sell — that's the risk.</div>
+    </div>
+
+    <!-- JAZZ -->
+    <div class="card">
+      <span class="pill p-t">1920s Jazz Night · Nov 14</span>
+      <div class="ctrl">
+        <div class="row"><label>Ticket price</label><span class="val" id="jPriceV">$30</span></div>
+        <input type="range" id="jPrice" min="15" max="75" step="5" value="30">
+      </div>
+      <div class="ctrl">
+        <div class="row"><label>Tickets sold</label><span class="val" id="jSoldV">60</span></div>
+        <input type="range" id="jSold" min="10" max="120" step="5" value="60">
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="n" id="jGross">–</div><div class="l">Gross</div></div>
+        <div class="kpi hl"><div class="n" id="jHaps">–</div><div class="l">Haps 20%</div></div>
+        <div class="kpi"><div class="n" id="jBE">–</div><div class="l">Breakeven</div></div>
+      </div>
+      <table>
+        <tr class="rev"><td>Revenue</td><td id="jRev">–</td></tr>
+        <tr><td>Card fees 3% <span class="tag tc">COST</span></td><td id="jCC">–</td></tr>
+        <tr><td>Haps Club 20% <span class="tag th">HAPS</span></td><td id="jH">–</td></tr>
+        <tr><td>Event space 10% <span class="tag ta">ANJALI</span></td><td id="jSp">–</td></tr>
+        <tr><td>Cleaning fee <span class="tag ta">ANJALI</span></td><td>–$100</td></tr>
+        <tr><td>Band (flat) <span class="tag tc">COST</span></td><td>–$500</td></tr>
+        <tr class="total"><td>Net remaining</td><td id="jNet">–</td></tr>
+      </table>
+      <div class="status" id="jStatus">–</div>
+      <div class="note">Decide upfront who keeps the remainder. Drink sales and sponsors are pure upside on top.</div>
+    </div>
+  </div>
+
+  <!-- CONCERNS -->
+  <h2 id="concerns">Concerns</h2>
+  <div class="lists">
+    <div class="lcard">
+      <h3>💰 Money</h3>
+      <div class="item"><span class="ic">🎯</span><p><b>Svetlana's dinner needs ~96% sell-through at $130.</b> Drag her slider to 20 sold and watch it go red. Reprice or flat-fee it.</p></div>
+      <div class="item"><span class="ic">❓</span><p><b>Jazz remainder is unassigned</b> — agree in writing who keeps it before tickets go on sale.</p></div>
+      <div class="item"><span class="ic">🎟</span><p><b>Comps hurt small rooms.</b> One free seat at a 12-top = 8% of capacity straight off Anjali's labor line.</p></div>
+    </div>
+    <div class="lcard">
+      <h3>📅 Timing</h3>
+      <div class="item"><span class="ic">🦃</span><p><b>Jazz moved to Nov 14</b> — a full 12 days before Thanksgiving and clear on Michael's calendar. Nov 21 stays as the backup.</p></div>
+      <div class="item"><span class="ic">⚾</span><p><b>Dodgers postseason (Oct 3–18 evenings)</b> — start Svetlana's dinner early on Oct 10.</p></div>
+      <div class="item"><span class="ic">✅</span><p><b>Michael's calendar is clear</b> on all three recommended Saturdays.</p></div>
+    </div>
+    <div class="lcard">
+      <h3>⚙️ Operations</h3>
+      <div class="item"><span class="ic">🚦</span><p><b>Go/no-go at T-7 days:</b> 9 of 12 · 18 of 23 · 30 paid (jazz). Below that → backup date.</p></div>
+      <div class="item"><span class="ic">🏛</span><p><b>Jazz venue capacity unknown.</b> Below 30 seats it can't break even; upside starts at 40+.</p></div>
+      <div class="item"><span class="ic">📋</span><p><b>Three formats in 10 weeks</b> — build one run-of-show + budget template and reuse it.</p></div>
+    </div>
+  </div>
+
+  <!-- RECOMMENDATIONS -->
+  <h2 id="recs">Recommendations</h2>
+  <div class="lists">
+    <div class="lcard">
+      <div class="item"><span class="ic">1️⃣</span><p><b>Green-light Anjali's Sept 12 dinner at $130.</b> Clean structure, no cost risk to Haps.</p></div>
+      <div class="item"><span class="ic">2️⃣</span><p><b>Counter Svetlana at $145–150</b> or flat fees instead of 10% + 10%.</p></div>
+      <div class="item"><span class="ic">3️⃣</span><p><b>Green-light jazz at $30 with the $500 band</b> — lock venue capacity (40+) and assign the remainder first.</p></div>
+    </div>
+    <div class="lcard">
+      <div class="item"><span class="ic">4️⃣</span><p><b>Max 1 comp per event,</b> half-price if possible.</p></div>
+      <div class="item"><span class="ic">5️⃣</span><p><b>Confirm Sept 12 · Oct 10 · Nov 14 now.</b> Hold Sept 19, Oct 17 & Nov 21 as rain dates.</p></div>
+      <div class="item"><span class="ic">6️⃣</span><p><b>Put the split in writing</b> — one page: percentages, fees, comps, go/no-go, who keeps remainders.</p></div>
+    </div>
+  </div>
+
+  <!-- STRATEGIES -->
+  <h2 id="strategies">Strategies</h2>
+  <div class="lists">
+    <div class="lcard">
+      <h3>🎟 Fill the Room</h3>
+      <div class="item"><span class="ic">📬</span><p><b>Haps newsletter = the engine.</b> Feature each event in the 3 Tuesday sends before its date (Aug 25 / Sep 1 / Sep 8 for the opener).</p></div>
+      <div class="item"><span class="ic">⏰</span><p><b>Early-bird tier</b> — first third of seats discounted locks revenue early.</p></div>
+      <div class="item"><span class="ic">📱</span><p><b>IG + Threads drumbeat via Buffer</b> — 2 weeks out, recap content after.</p></div>
+    </div>
+    <div class="lcard">
+      <h3>🔁 Chain the Events</h3>
+      <div class="item"><span class="ic">🪑</span><p><b>Each event sells the next.</b> Pre-sell $30 jazz tickets at both dinners — that alone could cover the 30-head breakeven.</p></div>
+      <div class="item"><span class="ic">📇</span><p><b>Capture every attendee</b> into the Haps list at checkout.</p></div>
+      <div class="item"><span class="ic">📸</span><p><b>Shoot every event</b> — recap content markets the next one.</p></div>
+    </div>
+    <div class="lcard">
+      <h3>📈 Add Margin</h3>
+      <div class="item"><span class="ic">🍷</span><p><b>Wine-pairing add-on</b> (+$25–35) at the dinners.</p></div>
+      <div class="item"><span class="ic">🍸</span><p><b>Drink sales at jazz</b> — a $10 cocktail on 60 heads beats the ticket margin.</p></div>
+      <div class="item"><span class="ic">🤝</span><p><b>Sponsor the band</b> — $500 sponsor makes jazz profitable from guest #1.</p></div>
+    </div>
+  </div>
+
+  <!-- DATES -->
+  <div class="next" id="dates">
+    <h2>Dates & Next Steps</h2>
+    <table>
+      <tr><th>Event</th><th>Date</th><th>Backup</th><th>Do next</th></tr>
+      <tr><td><b>Anjali's Dinner</b> · 12 ppl · $130</td><td>Sat, Sept 12</td><td>Sept 19</td><td>Confirm date; clarify comps</td></tr>
+      <tr><td><b>Svetlana's Dinner</b> · 25 ppl</td><td>Sat, Oct 10</td><td>Oct 17</td><td>Counter at $145–150 or flat fees</td></tr>
+      <tr><td><b>Jazz Night</b> · $30 · $500 band</td><td>Sat, Nov 14</td><td>Nov 21</td><td>Confirm capacity 40+; assign remainder</td></tr>
+    </table>
+    <a class="backtop" href="#top" style="color:#6eb5ff">↑ Back to top</a>
+  </div>
+
+  <!-- CALENDAR -->
+  <h2 id="calendar">Calendar</h2>
+  <div class="legend">
+    <span><span class="dot" style="background:var(--orange)"></span>Anjali's Dinner</span>
+    <span><span class="dot" style="background:var(--purple)"></span>Svetlana's Dinner</span>
+    <span><span class="dot" style="background:var(--teal)"></span>Jazz Night</span>
+    <span><span class="dot" style="background:var(--red)"></span>Michael's existing events</span>
+    <span>★ recommended</span>
+  </div>
+  <div class="months">
+    <div class="month">
+      <h3>September 2026</h3>
+      <table>
+        <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+        <tr><td class="empty"></td><td class="empty"></td><td><span class="d">1</span></td><td><span class="d">2</span></td><td><span class="d">3</span></td><td><span class="d">4</span></td><td><span class="d">5</span></td></tr>
+        <tr><td><span class="d">6</span></td><td><span class="d">7</span></td><td><span class="d">8</span></td><td><span class="d">9</span></td><td><span class="d">10</span></td><td><span class="d">11</span></td>
+          <td class="rec"><span class="star">★</span><span class="d">12</span><span class="ev ev-a">Anjali dinner</span></td></tr>
+        <tr><td><span class="d">13</span><span class="ev ev-a">option</span></td><td><span class="d">14</span></td><td><span class="d">15</span></td><td><span class="d">16</span></td><td><span class="d">17</span></td><td><span class="d">18</span></td>
+          <td><span class="d">19</span><span class="ev ev-a">backup</span></td></tr>
+        <tr><td><span class="d">20</span><span class="ev ev-a">option</span></td><td><span class="d">21</span></td><td><span class="d">22</span></td><td><span class="d">23</span></td><td><span class="d">24</span></td><td><span class="d">25</span></td><td><span class="d">26</span></td></tr>
+        <tr><td><span class="d">27</span></td><td><span class="d">28</span></td><td><span class="d">29</span></td><td><span class="d">30</span></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+      </table>
+    </div>
+    <div class="month">
+      <h3>October 2026</h3>
+      <table>
+        <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+        <tr><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td><span class="d">1</span></td><td><span class="d">2</span></td>
+          <td><span class="d">3</span><span class="ev ev-s">option</span></td></tr>
+        <tr><td><span class="d">4</span><span class="ev ev-s">option</span></td><td><span class="d">5</span></td><td><span class="d">6</span></td><td><span class="d">7</span></td><td><span class="d">8</span></td><td><span class="d">9</span></td>
+          <td class="rec"><span class="star">★</span><span class="d">10</span><span class="ev ev-s">Svetlana dinner</span></td></tr>
+        <tr><td><span class="d">11</span><span class="ev ev-s">option</span></td><td><span class="d">12</span></td><td><span class="d">13</span></td><td><span class="d">14</span></td><td><span class="d">15</span></td><td><span class="d">16</span></td>
+          <td><span class="d">17</span><span class="ev ev-s">backup</span></td></tr>
+        <tr><td><span class="d">18</span><span class="ev ev-s">option</span></td><td><span class="d">19</span></td><td><span class="d">20</span></td><td><span class="d">21</span></td><td><span class="d">22</span></td><td><span class="d">23</span></td><td><span class="d">24</span></td></tr>
+        <tr><td><span class="d">25</span></td><td><span class="d">26</span></td><td><span class="d">27</span></td><td><span class="d">28</span></td><td><span class="d">29</span></td><td><span class="d">30</span></td><td><span class="d">31</span></td></tr>
+      </table>
+    </div>
+    <div class="month">
+      <h3>November 2026</h3>
+      <table>
+        <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+        <tr><td><span class="d">1</span></td><td><span class="d">2</span></td><td><span class="d">3</span></td><td><span class="d">4</span></td><td><span class="d">5</span></td><td><span class="d">6</span></td><td><span class="d">7</span></td></tr>
+        <tr><td><span class="d">8</span></td><td><span class="d">9</span></td><td><span class="d">10</span></td><td><span class="d">11</span></td><td><span class="d">12</span></td><td><span class="d">13</span></td>
+          <td class="rec"><span class="star">★</span><span class="d">14</span><span class="ev ev-j">Jazz night</span></td></tr>
+        <tr><td><span class="d">15</span></td><td><span class="d">16</span></td><td><span class="d">17</span></td><td><span class="d">18</span></td><td><span class="d">19</span></td><td><span class="d">20</span></td>
+          <td><span class="d">21</span><span class="ev ev-j">backup</span></td></tr>
+        <tr><td><span class="d">22</span></td><td><span class="d">23</span></td><td><span class="d">24</span></td><td><span class="d">25</span></td><td><span class="d">26</span><span class="ev ev-b">Thanksgiving</span></td><td><span class="d">27</span></td><td><span class="d">28</span></td></tr>
+        <tr><td><span class="d">29</span></td><td><span class="d">30</span></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td><td class="empty"></td></tr>
+      </table>
+    </div>
+  </div>
+  <a class="backtop" href="#top">↑ Back to top</a>
+
+<script>
+const $ = id => document.getElementById(id);
+const fmt = n => (n<0?'–$':'$') + Math.abs(Math.round(n)).toLocaleString();
+const neg = n => '–$' + Math.abs(Math.round(n)).toLocaleString();
+
+function setNet(el, n){ el.textContent = fmt(n); el.style.color = n >= 0 ? 'var(--green)' : 'var(--red)'; }
+function setStatus(el, ok, msg){ el.className = 'status ' + (ok ? 'st-ok' : 'st-bad'); el.textContent = msg; }
+
+function anjaliNet(p, n){ const g = p*n; return g - .03*g - .20*g - .10*g - 100 - (n+2)*20; }
+function calcA(){
+  const p = +$('aPrice').value, n = +$('aSold').value, g = p*n;
+  $('aPriceV').textContent = '$'+p; $('aSoldV').textContent = n;
+  const cc=.03*g, h=.20*g, sp=.10*g, food=(n+2)*20;
+  const net = g-cc-h-sp-100-food;
+  $('aGross').textContent = fmt(g); $('aHaps').textContent = fmt(h);
+  $('aAnj').textContent = fmt(sp+100+net);
+  $('aRev').textContent = fmt(g); $('aCC').textContent = neg(cc); $('aH').textContent = neg(h);
+  $('aSp').textContent = neg(sp); $('aFood').textContent = neg(food);
+  $('aFoodL').textContent = '('+(n+2)+' srv × $20)';
+  setNet($('aNet'), net);
+  let be = null; for(let k=1;k<=16;k++){ if(anjaliNet(p,k)>=0){ be=k; break; } }
+  const hourly = net>0 ? Math.round(net/20) : 0;
+  setStatus($('aStatus'), net>=0,
+    net>=0 ? `✓ Anjali earns ~$${hourly}/hr for 20 hrs. Breakeven at this price: ${be??'—'} tickets.`
+           : `✗ Her labor goes unpaid — needs ${be??'more than 16'} tickets at $${p}.`);
+}
+
+function svetNet(p, n){ const g=p*n; return g - .03*g - .20*g - .10*g - .10*g - 1680; }
+function calcS(){
+  const p = +$('sPrice').value, n = +$('sSold').value, g = p*n;
+  $('sPriceV').textContent = '$'+p; $('sSoldV').textContent = n;
+  const cc=.03*g, h=.20*g, sp=.10*g, inv=.10*g;
+  const net = svetNet(p,n);
+  $('sGross').textContent = fmt(g); $('sHaps').textContent = fmt(h);
+  $('sAnj').textContent = fmt(sp+inv+100);
+  $('sRev').textContent = fmt(g); $('sCC').textContent = neg(cc); $('sH').textContent = neg(h);
+  $('sSp').textContent = neg(sp); $('sInv').textContent = neg(inv);
+  setNet($('sNet'), net);
+  let be = null; for(let k=1;k<=23;k++){ if(svetNet(p,k)>=0){ be=k; break; } }
+  setStatus($('sStatus'), net>=0,
+    net>=0 ? `✓ Profitable. Breakeven at $${p}: ${be} of 23 tickets (${Math.round(be/23*100)}%).`
+           : be ? `✗ Losing money — needs ${be} of 23 tickets (${Math.round(be/23*100)}%) at $${p}.`
+                : `✗ Can't break even at $${p} even at a full sellout — raise the price.`);
+}
+
+function jazzNet(p, n){ const g=p*n; return g - .03*g - .20*g - .10*g - 600; }
+function calcJ(){
+  const p = +$('jPrice').value, n = +$('jSold').value, g = p*n;
+  $('jPriceV').textContent = '$'+p; $('jSoldV').textContent = n;
+  const cc=.03*g, h=.20*g, sp=.10*g;
+  const net = jazzNet(p,n);
+  const be = Math.ceil(600/(p*.67));
+  $('jGross').textContent = fmt(g); $('jHaps').textContent = fmt(h);
+  $('jBE').textContent = be + ' heads';
+  $('jRev').textContent = fmt(g); $('jCC').textContent = neg(cc); $('jH').textContent = neg(h);
+  $('jSp').textContent = neg(sp);
+  setNet($('jNet'), net);
+  setStatus($('jStatus'), net>=0,
+    net>=0 ? `✓ Profitable past ${be} guests — each extra head adds ~$${(p*.67).toFixed(0)}.`
+           : `✗ Below breakeven — needs ${be} paid guests at $${p}.`);
+}
+
+['aPrice','aSold'].forEach(id => $(id).addEventListener('input', calcA));
+['sPrice','sSold'].forEach(id => $(id).addEventListener('input', calcS));
+['jPrice','jSold'].forEach(id => $(id).addEventListener('input', calcJ));
+calcA(); calcS(); calcJ();
+</script>
+</div>
+
+<script>
+(function(){
+  const HASH='6e62fb115b885480ae7acfeaffabccc1f2a7d359ce7140aff1b34f266ad2147b';
+  const KEY='haps-events-auth';
+  async function sha(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+    return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');}
+  function unlock(){document.getElementById('gate').style.display='none';document.body.classList.remove('locked');}
+  async function attempt(){
+    const v=document.getElementById('gatePw').value;
+    if(await sha(v)===HASH){try{sessionStorage.setItem(KEY,'1');}catch(e){} unlock();}
+    else{document.getElementById('gateErr').textContent='Wrong password — try again';
+      document.getElementById('gatePw').value='';}
+  }
+  document.body.classList.add('locked');
+  try{if(sessionStorage.getItem(KEY)==='1'){unlock();}}catch(e){}
+  document.getElementById('gateBtn').addEventListener('click',attempt);
+  document.getElementById('gatePw').addEventListener('keydown',e=>{if(e.key==='Enter')attempt();});
+})();
+</script>
+</body>
+</html>
