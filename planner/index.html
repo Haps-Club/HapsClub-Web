@@ -195,10 +195,10 @@
         <tr><td>Ops 28h × $20 <span class="tag ts">SVETLANA</span></td><td>–$560</td></tr>
         <tr><td>Groceries 28 srv × $20 <span class="tag tc">COST</span></td><td>–$560</td></tr>
         <tr><td>Misc <span class="tag tc">COST</span></td><td>–$100</td></tr>
-        <tr class="total"><td>Event net</td><td id="sNet">–</td></tr>
+        <tr class="total"><td>Net after all expenses → Svetlana</td><td id="sNet">–</td></tr>
       </table>
       <div class="status" id="sStatus">–</div>
-      <div class="note">All events are at Anjali's place — space 10% + inventory 10% + $100 cleaning go to Anjali; Svetlana earns the labor ($920). Fixed costs stay committed even when fewer tickets sell — that's the risk.</div>
+      <div class="note">All events are at Anjali's place — space 10% + inventory 10% + $100 cleaning go to Anjali. Svetlana earns the labor ($920) plus the net after all expenses. Fixed costs stay committed even when fewer tickets sell — that's the risk.</div>
     </div>
 
     <!-- JAZZ -->
@@ -393,13 +393,14 @@ function calcS(){
   const net = svetNet(p,n);
   $('sGross').textContent = fmt(g); $('sHaps').textContent = fmt(h);
   $('sAnj').textContent = fmt(sp+inv+100);
+  $('sSvet').textContent = fmt(920+net);
   $('sRev').textContent = fmt(g); $('sCC').textContent = neg(cc); $('sH').textContent = neg(h);
   $('sSp').textContent = neg(sp); $('sInv').textContent = neg(inv);
   setNet($('sNet'), net);
   let be = null; for(let k=1;k<=23;k++){ if(svetNet(p,k)>=0){ be=k; break; } }
   setStatus($('sStatus'), net>=0,
-    net>=0 ? `✓ Profitable. Breakeven at $${p}: ${be} of 23 tickets (${Math.round(be/23*100)}%).`
-           : be ? `✗ Losing money — needs ${be} of 23 tickets (${Math.round(be/23*100)}%) at $${p}.`
+    net>=0 ? `✓ Svetlana takes home $${Math.round(920+net).toLocaleString()} ($920 labor + $${Math.round(net).toLocaleString()} net). Full-pay breakeven: ${be} of 23 (${Math.round(be/23*100)}%).`
+           : be ? `✗ Shortfall comes out of Svetlana's labor — she'd take home $${Math.round(920+net).toLocaleString()}. Needs ${be} of 23 (${Math.round(be/23*100)}%) at $${p}.`
                 : `✗ Can't break even at $${p} even at a full sellout — raise the price.`);
 }
 
