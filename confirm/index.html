@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://haps.club/confirm/">
 <meta name="robots" content="noindex,follow">
 <meta name="author" content="Haps Club">
-<meta name="theme-color" content="#FAF7F0">
+<meta name="theme-color" content="#F5F5F7">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://haps.club/confirm/">
 <meta property="og:title" content="Almost there — confirm your subscription · Haps Club">
@@ -24,85 +24,10 @@
 <meta name="twitter:image" content="https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKY63MK7ND"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-RKY63MK7ND");</script>
-<style>
-:root{
-  --navy:#292f71; --navy-deep:#181c4e; --coral:#FF6B47;
-  --cream:#FAF7F0; --paper:#F1EADC; --line:#E7DFCF; --ink:#1c1e30; --mut:#7a7488;
-  --food:#FF6B47; --culture:#7C5CFF; --outdoors:#1FA774; --music:#2D6CDF;
-  --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
-  --ease:cubic-bezier(.22,.61,.36,1); --r:22px;
-}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--navy);-webkit-font-smoothing:antialiased;position:relative;min-height:100vh;
-  background:
-    radial-gradient(62% 48% at 86% -4%, rgba(255,107,71,.13), transparent 60%),
-    radial-gradient(54% 42% at 2% 6%, rgba(124,92,255,.10), transparent 62%),
-    radial-gradient(80% 60% at 50% 118%, rgba(45,108,223,.08), transparent 60%),
-    var(--cream)}
-body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-a{text-decoration:none;color:inherit}
-svg.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-.bar{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.72);backdrop-filter:blur(20px) saturate(1.3);border-bottom:1px solid rgba(231,223,207,.8)}
-.bar-in{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 18px}
-.logo img{height:44px;width:auto;display:block}
-.back{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:var(--navy);opacity:.8;transition:.22s var(--ease)}
-.back:hover{opacity:1;color:var(--coral)}
-.back .ic{width:15px;height:15px;transform:rotate(180deg)}
-
-.wrap{max-width:620px;margin:0 auto;padding:46px 20px 90px}
-.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}
-.eyebrow .pin{color:var(--coral)}
-h1{font-family:var(--serif);font-size:clamp(30px,8vw,48px);line-height:1.02;font-weight:400;margin:14px 0 0;padding-bottom:.06em}
-h1 em{font-style:italic;color:var(--coral)}
-.lede{font-size:15px;line-height:1.55;color:#5d586c;margin-top:16px}
-.lede b{color:var(--navy);font-weight:600}
-
-.card{margin-top:30px;background:linear-gradient(150deg,rgba(241,234,220,.85),rgba(250,247,240,.9));border:1px dashed #cdbfa3;border-radius:var(--r);padding:26px 22px}
-.card h2{font-family:var(--serif);font-size:23px;font-weight:400;margin-bottom:16px}
-.steps{display:grid;gap:14px}
-.step{display:flex;align-items:flex-start;gap:13px}
-.step .n{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--coral);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
-.step .txt{font-size:14.5px;line-height:1.55;color:#4c4860}
-.step .txt b{color:var(--navy);font-weight:600}
-.spam{margin-top:20px;padding-top:18px;border-top:1px solid rgba(205,191,163,.6);font-size:13.5px;line-height:1.55;color:#5d586c}
-.spam b{color:var(--navy);font-weight:600}
-.spam a{font-weight:600;color:var(--navy);border-bottom:1px solid rgba(41,47,113,.25)}
-.spam a:hover{color:var(--coral);border-color:var(--coral)}
-code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:rgba(41,47,113,.07);padding:2px 6px;border-radius:6px}
-
-.what{margin-top:40px}
-.what h2{font-family:var(--serif);font-size:24px;font-weight:400;margin-bottom:14px}
-.what p{font-size:15px;line-height:1.6;color:#4c4860}
-
-.links{margin-top:34px;display:grid;gap:11px}
-.link{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 17px;transition:.22s var(--ease)}
-.link:hover{border-color:var(--coral);transform:translateY(-1px);box-shadow:0 8px 22px rgba(41,47,113,.07)}
-.link .badge{flex:0 0 auto;width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:19px}
-.link .badge.ig{background:color-mix(in srgb,var(--culture) 15%,#fff);color:var(--culture)}
-.link .badge.wa{background:color-mix(in srgb,var(--outdoors) 15%,#fff);color:var(--outdoors)}
-.link .body{flex:1}
-.link .body .t{display:block;font-size:15px;font-weight:600;color:var(--navy)}
-.link .body .d{display:block;font-size:13px;color:var(--mut);margin-top:2px}
-.link .go{color:var(--mut);width:16px;height:16px;flex:0 0 auto}
-.link:hover .go{color:var(--coral)}
-
-.sig{margin-top:34px;font-size:14.5px;line-height:1.6;color:#5d586c}
-.sig .name{font-family:var(--serif);font-size:18px;color:var(--navy);margin-top:8px;display:block}
-.sig a{font-weight:600;color:var(--navy);border-bottom:1px solid rgba(41,47,113,.25)}
-.sig a:hover{color:var(--coral);border-color:var(--coral)}
-
-footer{max-width:620px;margin:54px auto 0;padding:26px 20px 60px;color:var(--mut);font-size:13px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;border-top:1px solid var(--line)}
-footer a{font-weight:600;color:var(--navy)}
-footer a:hover{color:var(--coral)}
-footer .made{margin-left:auto;font-family:var(--serif);font-size:15px}
-@media(max-width:560px){footer .made{margin-left:0;width:100%}}
-</style>
+<link rel="stylesheet" href="/assets/sunset-pages.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Almost there — confirm your subscription · Haps Club", "url": "https://haps.club/confirm/", "description": "One more step. Check your email and click the confirmation link to join Haps Club.", "isPartOf": {"@type": "WebSite", "name": "Haps Club", "url": "https://haps.club/"}, "publisher": {"@type": "Organization", "name": "Haps Club", "url": "https://haps.club/"}}</script>
 </head>
 <body>

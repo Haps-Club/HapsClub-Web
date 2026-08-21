@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://haps.club/about">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="author" content="Michael Abraham">
-<meta name="theme-color" content="#FAF7F0">
+<meta name="theme-color" content="#F5F5F7">
 <meta name="geo.region" content="US-CA">
 <meta name="geo.placename" content="Los Angeles">
 <meta property="og:type" content="website">
@@ -27,128 +27,10 @@
 <meta name="twitter:image" content="https://res.cloudinary.com/dimlqawuh/image/upload/v1780950616/haps-og-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKY63MK7ND"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-RKY63MK7ND");</script>
-<style>
-:root{
-  --navy:#292f71; --navy-deep:#181c4e; --coral:#FF6B47;
-  --cream:#FAF7F0; --paper:#F1EADC; --line:#E7DFCF; --ink:#1c1e30; --mut:#7a7488;
-  --r:22px; --serif:'Instrument Serif',Georgia,serif; --sans:'Inter',system-ui,sans-serif;
-  --ease:cubic-bezier(.22,1,.36,1);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--cream);color:var(--navy);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:-.011em;min-height:100vh;transition:background .4s var(--ease),color .4s var(--ease)}
-body{padding-bottom:48px;overflow-x:hidden;position:relative;
-  background:
-    radial-gradient(80% 50% at 80% -10%,rgba(255,107,71,.10),transparent 60%),
-    radial-gradient(60% 40% at 0% 100%,rgba(124,92,255,.10),transparent 60%),
-    var(--cream)}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font-family:inherit}
-*:focus-visible{outline:2px solid var(--coral);outline-offset:3px;border-radius:6px}
-
-/* ========== Header ========== */
-.bar{position:sticky;top:0;z-index:50;background:rgba(250,247,240,.78);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid rgba(41,47,113,.08)}
-.bar-in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:12px}
-.logo{flex-shrink:0;display:block}
-.logo img{height:44px;width:auto;display:block}
-.bar-right{margin-left:auto;display:flex;align-items:center;gap:10px}
-.pillbtn{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--navy);background:rgba(255,255,255,.7);border:1px solid var(--line);padding:9px 13px;border-radius:999px;min-height:42px;backdrop-filter:blur(8px);cursor:pointer;transition:.2s var(--ease)}
-.pillbtn:hover{border-color:var(--coral)}
-.theme-btn svg{font-size:17px;color:var(--navy)}
-.sub-btn{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#fff;background:var(--navy);padding:11px 16px;border-radius:999px;transition:.2s var(--ease)}
-.sub-btn:hover{background:var(--navy-deep);transform:translateY(-1px)}
-
-/* ========== Hero ========== */
-.hero{max-width:1080px;margin:0 auto;padding:56px 20px 24px;text-align:left}
-.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
-.eyebrow svg{font-size:14px;fill:none;stroke:currentColor;stroke-width:2}
-.hero h1{font-family:var(--serif);font-size:clamp(40px,7vw,72px);font-weight:400;line-height:1;letter-spacing:-.025em;color:var(--navy);margin:0 0 20px}
-.hero h1 em{font-style:italic;color:var(--coral)}
-.hero .sub{font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);line-height:1.4;color:var(--ink);max-width:680px}
-
-/* ========== Content cards (glass) ========== */
-.about-wrap{max-width:1080px;margin:24px auto 0;padding:0 20px;display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:780px){.about-wrap{grid-template-columns:1fr 1fr}}
-.card{position:relative;background:rgba(255,255,255,.66);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:26px 26px 24px;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 14px 34px -22px rgba(41,47,113,.4)}
-.card .cat{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--navy);background:color-mix(in srgb,var(--navy) 10%,#fff);padding:6px 11px;border-radius:999px;margin-bottom:14px}
-.card h2{font-family:var(--serif);font-size:30px;font-weight:400;line-height:1.1;letter-spacing:-.015em;color:var(--navy);margin:0 0 12px}
-.card p{font-size:15px;line-height:1.6;color:var(--ink);margin:0 0 12px}
-.card p:last-child{margin-bottom:0}
-.card p strong{font-weight:600;color:var(--navy)}
-.card em.coral{font-style:normal;color:var(--coral);font-weight:600}
-
-/* ========== Bio card with photo on the LEFT ========== */
-.bio{max-width:1080px;margin:24px auto 0;padding:0 20px}
-.bio-card{position:relative;background:rgba(255,255,255,.66);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);border:1px solid rgba(255,255,255,.7);border-radius:var(--r);padding:26px;display:flex;gap:26px;align-items:flex-start;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 14px 34px -22px rgba(41,47,113,.4)}
-.bio-photo{flex-shrink:0;display:block;width:180px;height:180px;border-radius:18px;object-fit:cover;border:1px solid var(--line);box-shadow:0 14px 30px -14px rgba(0,0,0,.25)}
-.bio-text{flex:1;min-width:0}
-.bio-eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--coral);margin:0 0 8px;display:inline-block}
-.bio-name{font-family:var(--serif);font-size:34px;font-weight:400;line-height:1.05;letter-spacing:-.015em;color:var(--navy);margin:0 0 10px}
-.bio-body{font-size:15px;line-height:1.6;color:var(--ink);margin:0 0 14px}
-.bio-link{display:inline-flex;align-items:center;gap:5px;font-size:14px;font-weight:600;color:var(--navy);transition:color .2s ease}
-.bio-link:hover{color:var(--coral)}
-.bio-link svg{width:13px;height:13px}
-@media(max-width:560px){.bio-card{flex-direction:column;gap:18px}.bio-photo{width:140px;height:140px}.bio-name{font-size:28px}}
-
-/* ========== Tip form ========== */
-.tip{max-width:1080px;margin:32px auto 0;padding:0 20px}
-.tip-card{background:linear-gradient(155deg,rgba(41,47,113,.96),rgba(24,28,78,.96));color:#fff;border-radius:var(--r);padding:32px 28px;position:relative;overflow:hidden}
-.tip-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,107,71,.45),transparent 50%),radial-gradient(circle at 10% 90%,rgba(124,92,255,.4),transparent 48%);pointer-events:none}
-.tip-card>*{position:relative;z-index:2}
-.tip-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);margin:0 0 8px}
-.tip-title{font-family:var(--serif);font-size:34px;font-weight:400;line-height:1.05;letter-spacing:-.015em;color:#fff;margin:0 0 6px}
-.tip-sub{font-size:14.5px;color:rgba(255,255,255,.78);line-height:1.55;margin:0 0 22px;max-width:560px}
-.tip-form{display:flex;flex-direction:column;gap:12px;max-width:560px}
-.tip-row{display:flex;flex-direction:column;gap:5px}
-.tip-row label{font-size:11px;font-weight:600;letter-spacing:.06em;color:rgba(255,255,255,.7);text-transform:uppercase}
-.tip-row input,.tip-row textarea,.tip-row select{background:rgba(255,255,255,.95);border:1px solid rgba(255,255,255,.15);border-radius:10px;padding:11px 14px;font-size:15px;color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s}
-.tip-row input:focus,.tip-row textarea:focus,.tip-row select:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 3px rgba(255,107,71,.32)}
-.tip-row textarea{min-height:120px;resize:vertical;font-family:inherit}
-.tip-submit{margin-top:4px;background:var(--coral);color:#fff;border:none;border-radius:999px;padding:13px 26px;font-size:14px;font-weight:700;cursor:pointer;transition:.2s var(--ease);align-self:flex-start;letter-spacing:.02em}
-.tip-submit:hover{transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(255,107,71,.6)}
-.tip-submit:disabled{opacity:.6;cursor:progress}
-.tip-status{font-size:13.5px;margin-top:10px;padding:10px 14px;border-radius:10px;display:none}
-.tip-status.success{display:block;background:rgba(15,181,166,.18);color:#d6fffa;border:1px solid rgba(15,181,166,.35)}
-.tip-status.error{display:block;background:rgba(255,107,71,.18);color:#fff;border:1px solid rgba(255,107,71,.4)}
-
-/* ========== Sponsor strip (matches home) ========== */
-.sponsor-strip{max-width:1080px;margin:32px auto 0;padding:0 20px}
-.sponsor-strip .inner{background:#0a0a0a;color:#fff;border-radius:var(--r);padding:26px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.sponsor-strip .cat{display:inline-block;font-size:11px;font-weight:600;color:#aaa;letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px}
-.sponsor-strip h3{font-family:var(--serif);font-size:28px;line-height:1.12;letter-spacing:-.015em;margin:0 0 10px;color:#fff;font-weight:400}
-.sponsor-strip p{font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.78);max-width:560px;margin:0}
-.sponsor-strip .cta{flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:#fff;color:#0a0a0a;padding:13px 22px;border-radius:999px;font-size:14px;font-weight:600;transition:.2s var(--ease);text-decoration:none}
-.sponsor-strip .cta:hover{transform:translateY(-1px);background:#f0f0f0}
-.sponsor-strip .cta svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.5}
-@media(max-width:600px){.sponsor-strip .inner{flex-direction:column;align-items:flex-start;padding:22px;border-radius:18px}}
-
-/* ========== Footer ========== */
-footer{max-width:1080px;margin:42px auto 0;padding:24px 20px;text-align:center}
-footer a{font-size:13px;color:var(--navy);font-weight:500;opacity:.75;padding:4px 8px;transition:.2s}
-footer a:hover{color:var(--coral);opacity:1}
-footer .made{display:block;font-size:12px;color:var(--mut);margin-top:12px}
-
-/* ========== Night mode (shared with home via localStorage) ========== */
-body.night{background:linear-gradient(180deg,#0d1024 0%,#1a1d3d 100%);color:#fff}
-body.night .bar{background:rgba(13,16,36,.78);border-bottom-color:rgba(255,255,255,.08)}
-body.night .pillbtn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff}
-body.night .pillbtn svg{color:#fff}
-body.night .hero h1,body.night .hero .sub{color:#fff}
-body.night .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
-body.night .card h2{color:#fff}
-body.night .card p{color:rgba(255,255,255,.78)}
-body.night .card p strong{color:#fff}
-body.night .card .cat{background:rgba(255,255,255,.12);color:#fff}
-body.night .bio-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
-body.night .bio-name{color:#fff}
-body.night .bio-body{color:rgba(255,255,255,.78)}
-body.night .bio-link{color:#fff}
-body.night footer a{color:rgba(255,255,255,.7)}
-body.night footer .made{color:rgba(255,255,255,.4)}
-
-</style>
+<link rel="stylesheet" href="/assets/sunset-pages.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "About · Haps Club", "url": "https://haps.club/about", "description": "Haps Club is a daily-curated guide to what is actually worth doing in Los Angeles, with a weekly email digest.", "mainEntity": {"@type": "Organization", "name": "Haps Club", "url": "https://haps.club/", "email": "michael@haps.club", "founder": {"@type": "Person", "name": "Michael Abraham"}, "sameAs": ["https://instagram.com/thehapsclub"]}}</script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
@@ -164,7 +46,6 @@ body.night footer .made{color:rgba(255,255,255,.4)}
 <header class="bar"><div class="bar-in">
   <a class="logo" href="https://haps.club"><img src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club"></a>
   <div class="bar-right">
-    <button class="pillbtn theme-btn" id="themeBtn" title="Night mode" aria-label="Toggle night mode"><svg width="17" height="17"><use href="#i-moon" id="themeIcon"/></svg></button>
     <a class="sub-btn" href="https://haps.club/#join">Subscribe</a>
   </div>
 </div></header>
@@ -272,48 +153,5 @@ body.night footer .made{color:rgba(255,255,255,.4)}
   <a href="https://chat.whatsapp.com/CrQFCLOZjYm5eBqsU1vcA5?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>
   <span class="made">© 2026 Haps Club · Made by hand in LA</span>
 </footer>
-
-<script>
-// Shared night mode with home page (same localStorage key)
-(function(){
-  const KEY='haps_theme', root=document.body;
-  const themeBtn=document.getElementById('themeBtn'), themeIcon=document.getElementById('themeIcon');
-  function apply(mode){
-    if(mode==='night'){root.classList.add('night');themeIcon.setAttribute('href','#i-sun');}
-    else{root.classList.remove('night');themeIcon.setAttribute('href','#i-moon');}
-  }
-  try{apply(localStorage.getItem(KEY)||'day');}catch(e){apply('day');}
-  themeBtn.addEventListener('click',()=>{
-    const next=root.classList.contains('night')?'day':'night';
-    try{localStorage.setItem(KEY,next);}catch(e){}
-    apply(next);
-  });
-})();
-
-// Tip form (EmailJS)
-const EMAILJS_PUBLIC_KEY  = "yWt3TMJ6ysOrH3vH1";
-const EMAILJS_SERVICE_ID  = "service_r16vi4q";
-const EMAILJS_TEMPLATE_ID = "template_3uwwsgq";
-(function(){
-  if(window.emailjs && EMAILJS_PUBLIC_KEY && !EMAILJS_PUBLIC_KEY.startsWith("YOUR_")){
-    emailjs.init({publicKey:EMAILJS_PUBLIC_KEY});
-  }
-  const form=document.getElementById("tipForm"), submit=document.getElementById("tipSubmit"), status=document.getElementById("tipStatus");
-  form.addEventListener("submit",function(e){
-    e.preventDefault();
-    status.className="tip-status"; status.textContent="";
-    if(!window.emailjs || EMAILJS_PUBLIC_KEY.startsWith("YOUR_")){
-      status.className="tip-status error";
-      status.textContent="Form not yet configured. Email michael@haps.club directly and I'll get back to you.";
-      return;
-    }
-    submit.disabled=true; const original=submit.textContent; submit.textContent="Sending…";
-    emailjs.sendForm(EMAILJS_SERVICE_ID,EMAILJS_TEMPLATE_ID,form)
-      .then(()=>{status.className="tip-status success";status.textContent="Got it. Thanks for the tip — I'll read every word.";form.reset();},
-            err=>{status.className="tip-status error";status.textContent="Something went wrong. Try emailing michael@haps.club directly.";console.error("EmailJS error:",err);})
-      .finally(()=>{submit.disabled=false;submit.textContent=original;});
-  });
-})();
-</script>
 </body>
 </html>
