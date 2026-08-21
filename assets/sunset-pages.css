@@ -226,3 +226,4 @@ svg.ic{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;
 .badge svg.ic,.ico svg.ic{width:19px;height:19px;stroke-width:2}
 svg.ic.go,svg.ic.arr{margin-left:auto;align-self:center;color:var(--red)}
 .eyebrow svg.ic{width:14px;height:14px;stroke-width:2}
+.t,.d{display:block}
