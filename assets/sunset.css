@@ -1,0 +1,153 @@
+/* ============================================================
+   HAPS CLUB — "Sunset" design system (locked 2026-08-21)
+   Single source of truth for the haps.club look.
+   Tokens first; change a token, the whole site follows.
+   ============================================================ */
+:root{
+  --ink:#1D1D1F; --ink2:#3A3A3C; --ink3:#48484A;
+  --gray:#86868B; --gray2:#A1A1A6; --gray3:#6E6E73;
+  --bg:#F5F5F7; --card:#FFFFFF; --hair:#E8E8ED;
+  --red:#FF3B30; --orange:#FF9500; --green:#34C759;
+  --blue:#007AFF; --purple:#AF52DE; --navy:#292F71;
+  --grad-sunset:linear-gradient(135deg,#FF9500 0%,#FF3B30 38%,#AF52DE 72%,#292F71 100%);
+  --grad-lead:linear-gradient(160deg,#FFF1E6 0%,#FFEAF0 100%);
+  --grad-navy:linear-gradient(135deg,#292F71 0%,#5A45B0 55%,#AF52DE 100%);
+  --r:26px; --r-sm:22px;
+  --sans:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter','Segoe UI',Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase}
+
+/* ---------- announcement bar ---------- */
+.annbar{display:block;background:var(--red);color:#fff;text-align:center;padding:11px 18px;font-size:14px;font-weight:600;letter-spacing:-.1px;text-decoration:none}
+.annbar:hover{background:#E5342A}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(245,245,247,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:54px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.5px;font-size:17px;text-decoration:none}
+.brand .dot{width:22px;height:22px;border-radius:8px;background:var(--grad-sunset);flex:none}
+.nav nav{display:flex;gap:24px;margin-left:auto}
+.nav nav a{font-size:14px;font-weight:500;color:var(--ink3);text-decoration:none;letter-spacing:-.1px}
+.nav nav a:hover{color:var(--red)}
+.navcta{margin-left:24px;background:var(--red);color:#fff!important;font-size:14px;font-weight:600;padding:8px 18px;border-radius:999px;text-decoration:none;letter-spacing:-.2px;white-space:nowrap}
+
+/* ---------- hero ---------- */
+.hero{background:#FF6B47;background-image:var(--grad-sunset);color:#fff;padding:72px 0 88px;text-align:center;overflow:hidden}
+.hero .kicker{opacity:.85}
+.hero h1{margin:14px 0 0;font-size:clamp(30px,7.2vw,78px);line-height:1;font-weight:800;letter-spacing:-.04em;white-space:nowrap}
+.hero .dek{margin:20px auto 0;max-width:600px;font-size:19px;line-height:29px;letter-spacing:-.2px;color:rgba(255,255,255,.9)}
+.btns{display:flex;gap:12px;justify-content:center;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 30px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none;letter-spacing:-.2px;border:0;cursor:pointer;font-family:inherit}
+.btn-w{background:#fff;color:var(--navy)}
+.btn-g{background:rgba(255,255,255,.16);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+.stats{display:flex;gap:34px;justify-content:center;margin-top:42px;flex-wrap:wrap}
+.stat b{display:block;font-size:26px;font-weight:800;letter-spacing:-1px}
+.stat span{font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;opacity:.8}
+
+/* ---------- sections ---------- */
+section{padding:56px 0 0}
+.shead{display:flex;align-items:flex-end;gap:14px;margin-bottom:22px}
+.shead h2{margin:0;font-size:34px;line-height:1.05;font-weight:800;letter-spacing:-1.4px}
+.shead .k{margin:0 0 4px}
+.shead .more{margin-left:auto;font-size:15px;font-weight:600;color:var(--red);text-decoration:none;letter-spacing:-.2px;white-space:nowrap}
+
+/* ---------- pills ---------- */
+.pill{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.3px;padding:5px 12px;border-radius:999px;margin:0 6px 6px 0}
+.p-red{background:var(--red);color:#fff}.p-org{background:var(--orange);color:#fff}
+.p-grn{background:var(--green);color:#fff}.p-blu{background:var(--blue);color:#fff}
+.p-pur{background:var(--purple);color:#fff}
+.p-w{background:#fff;color:var(--gray)}.p-bg{background:var(--bg);color:var(--gray)}
+
+/* ---------- featured ---------- */
+.feat{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+.fcol{display:grid;gap:18px;align-content:start}
+.card{background:var(--card);border-radius:var(--r);padding:28px 30px;text-decoration:none;color:inherit;display:block;transition:transform .18s ease}
+.card:hover{transform:translateY(-3px)}
+.lead{background-image:var(--grad-lead);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;min-height:340px}
+.lead h3{margin:0;font-size:38px;line-height:40px;font-weight:700;letter-spacing:-1.4px}
+.lead .sub{margin:10px 0 0;font-size:19px;line-height:27px;font-weight:500;letter-spacing:-.3px;color:var(--red)}
+.card h3{margin:0;font-size:25px;line-height:29px;font-weight:700;letter-spacing:-.8px}
+.card .sub{margin:8px 0 0;font-size:17px;line-height:25px;font-weight:500;letter-spacing:-.3px}
+.sub.a-music{color:var(--purple)}.sub.a-food{color:var(--orange)}.sub.a-culture{color:var(--blue)}.sub.a-outdoors{color:var(--green)}
+.meta{margin:12px 0 0;font-size:13px;line-height:20px;color:var(--gray);font-weight:500;letter-spacing:-.1px}
+.inline-btn{display:inline-block;margin-top:20px;background:var(--red);color:#fff;padding:13px 26px;border-radius:999px;font-size:15px;font-weight:600;letter-spacing:-.2px;text-decoration:none}
+
+/* ---------- filters ---------- */
+.filters{background:#fff;border-radius:var(--r);padding:20px 24px;margin-top:30px;position:sticky;top:54px;z-index:20}
+.frow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.frow+.frow{margin-top:12px;padding-top:12px;border-top:1px solid var(--hair)}
+.flab{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--gray);min-width:80px}
+.chip{border:0;cursor:pointer;font-family:inherit;background:var(--bg);color:var(--ink3);font-size:13px;font-weight:600;letter-spacing:-.1px;padding:8px 15px;border-radius:999px}
+.chip.on{background:var(--ink);color:#fff}
+.chip:hover:not(.on){background:#EAEAEF}
+.fcount{margin-left:auto;font-size:13px;color:var(--gray);font-weight:500;white-space:nowrap}
+
+/* ---------- week list ---------- */
+.week{display:grid;gap:14px;margin-top:22px}
+.row{background:#fff;border-radius:var(--r-sm);padding:22px 26px;display:grid;grid-template-columns:96px 1fr auto;gap:22px;align-items:center;text-decoration:none;color:inherit;transition:transform .18s ease}
+.row:hover{transform:translateY(-2px)}
+.date{text-align:center}
+.date .d{font-size:30px;font-weight:800;letter-spacing:-1.2px;line-height:1}
+.date .m{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--gray);margin-top:4px}
+.row h4{margin:0;font-size:20px;font-weight:700;letter-spacing:-.5px;line-height:25px}
+.row .meta{margin:6px 0 0}
+.rside{display:flex;align-items:center;gap:18px}
+.price{font-size:15px;font-weight:700;letter-spacing:-.3px;white-space:nowrap}
+.price.free{color:var(--green)}
+.stripe{width:4px;border-radius:2px;height:52px}
+.s-food{background:var(--orange)}.s-culture{background:var(--blue)}.s-music{background:var(--purple)}.s-outdoors{background:var(--green)}.s-haps{background:var(--red)}
+.empty{background:#fff;border-radius:var(--r-sm);padding:34px;text-align:center;color:var(--gray);font-size:15px}
+
+/* ---------- calendar strip ---------- */
+.calstrip{margin-top:52px;background:#fff;border-radius:var(--r);padding:28px 32px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.calstrip .t{font-size:21px;font-weight:700;letter-spacing:-.5px}
+.calstrip p{margin:6px 0 0;font-size:15px;line-height:23px;color:var(--ink2)}
+.calstrip .btn-n{margin-left:auto;background:var(--ink);color:#fff;padding:13px 26px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;letter-spacing:-.2px;white-space:nowrap}
+
+/* ---------- subscribe ---------- */
+.sub-block{margin-top:18px;background:var(--navy);background-image:var(--grad-navy);border-radius:var(--r);padding:52px 32px;text-align:center;color:#fff}
+.sub-block h2{margin:0;font-size:36px;line-height:1.05;font-weight:800;letter-spacing:-1.5px}
+.sub-block p{margin:12px 0 26px;font-size:16px;color:#D9D6F2}
+.subform{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap}
+.subform input{flex:1;min-width:200px;border:0;border-radius:999px;padding:15px 22px;font-family:inherit;font-size:15px;outline:none}
+.subform button{border:0;cursor:pointer;font-family:inherit;background:#fff;color:var(--navy);font-size:15px;font-weight:600;padding:15px 28px;border-radius:999px;letter-spacing:-.2px}
+
+/* ---------- archive ---------- */
+.arch{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.acard{background:#fff;border-radius:var(--r-sm);padding:22px 24px;text-decoration:none;color:inherit;transition:transform .18s ease}
+.acard:hover{transform:translateY(-2px)}
+.acard h4{margin:8px 0 0;font-size:18px;font-weight:700;letter-spacing:-.5px;line-height:23px}
+.acard .rd{display:block;margin-top:10px;font-size:13px;font-weight:600;color:var(--red)}
+
+/* ---------- footer ---------- */
+footer{margin-top:60px;background:var(--ink);color:var(--gray2);padding:46px 0 40px}
+footer .cols{display:flex;gap:60px;flex-wrap:wrap}
+footer h5{margin:0 0 12px;font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:#fff}
+footer .cols a{display:block;font-size:14px;line-height:26px;color:var(--gray2);text-decoration:none}
+footer .cols a:hover{color:#fff}
+.fbrand{font-size:22px;font-weight:800;letter-spacing:-.8px;color:#fff}
+.fabout{font-size:14px;line-height:23px;max-width:260px;margin:10px 0 0}
+.fbot{margin-top:34px;padding-top:22px;border-top:1px solid #333;font-size:12px;color:var(--gray3)}
+
+/* ---------- responsive ---------- */
+@media(max-width:860px){
+  .feat{grid-template-columns:1fr}
+  .arch{grid-template-columns:repeat(2,1fr)}
+  .nav nav{display:none}
+  .row{grid-template-columns:64px 1fr}
+  .rside{display:none}
+  .lead{min-height:280px}
+  .lead h3{font-size:30px;line-height:33px}
+  .calstrip .btn-n{margin-left:0}
+}
+@media(max-width:480px){
+  .arch{grid-template-columns:1fr}
+  .hero{padding:56px 0 64px}
+  .shead h2{font-size:28px}
+}
