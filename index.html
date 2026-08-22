@@ -57,6 +57,7 @@
       <a class="btn btn-g" href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Open the calendar</a>
     </div>
     <div class="stats" id="stats"></div>
+    <div><span class="spon-line" id="sponline" style="display:none"></span></div>
   </div>
 </div>
 
@@ -159,9 +160,9 @@
 (function(){
 "use strict";
 var CATS=[["all","All"],["food","Food"],["culture","Culture"],["music","Music"],["outdoors","Outdoors"],["date","Date night"],["free","Free"]];
-var HOODS=[["all","Everywhere"],["westside","Westside"],["midcity","Mid-City"],["dtla","Downtown"],["hollywood","Hollywood"],["nela","Northeast LA"],["eastside","Eastside"],["citywide","Citywide"]];
+var HOODS=[["all","Everywhere"],["westside","Westside"],["midcity","Mid-City"],["dtla","Downtown"],["hollywood","Hollywood"],["eastside","Eastside"],["citywide","Citywide"]];
 var PILL={food:"p-org",culture:"p-blu",music:"p-pur",outdoors:"p-grn",date:"p-red",free:"p-grn"};
-var HOODNAME={westside:"Westside",midcity:"Mid-City",dtla:"Downtown",hollywood:"Hollywood",nela:"Northeast LA",eastside:"Eastside",citywide:"Citywide"};
+var HOODNAME={westside:"Westside",midcity:"Mid-City",dtla:"Downtown",hollywood:"Hollywood",eastside:"Eastside",citywide:"Citywide"};
 var state={cat:"all",hood:"all"},DATA=null;
 
 function esc(s){return String(s==null?"":s).replace(/[&<>\"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
@@ -186,6 +187,14 @@ function render(){
     '<div class="stat"><b>'+freeCount+'</b><span>free picks</span></div>'+
     '<div class="stat"><b>Tue</b><span>every week, 7am</span></div>';
   document.getElementById("seeall").textContent="See all "+evs.length+" →";
+
+  var sp=DATA.sponsor;
+  if(sp&&sp.name){
+    var el=document.getElementById("sponline");
+    el.innerHTML='Sponsored by <b>'+esc(sp.name)+'</b> · '+esc(sp.blurb||'')+
+      (sp.link?' <a href="'+esc(sp.link)+'" target="_blank" rel="noopener">'+esc(sp.cta||'Learn more')+'</a>':'');
+    el.style.display="inline-flex";
+  }
 
   var fhtml="";
   feats.forEach(function(f,i){

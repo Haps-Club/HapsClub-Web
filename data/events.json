@@ -162,7 +162,7 @@
    "day": "3",
    "cat": "Culture",
    "tags": "culture date",
-   "area": "nela",
+   "area": "eastside",
    "where": "Autry Museum, Griffith Park",
    "price": "Ticketed",
    "link": "https://theautry.org/",
@@ -241,7 +241,7 @@
    "day": "5",
    "cat": "Culture",
    "tags": "culture free",
-   "area": "nela",
+   "area": "eastside",
    "where": "The Dell at the Old Zoo",
    "price": "Free",
    "link": "https://indieshakes.org/",
@@ -528,24 +528,40 @@
  ],
  "archive": [
   {
-   "date": "Jun 15, 2026",
-   "title": "The Longest Day",
-   "url": "https://haps.club/archive/2026-06-15-the-longest-day/"
+   "date": "Aug 21, 2026",
+   "title": "Tonight at Sunset",
+   "url": "https://haps.club/archive/2026-08-21-tonight-at-sunset/"
   },
   {
-   "date": "Jun 9, 2026",
-   "title": "The Garden Party",
-   "url": "https://haps.club/archive/2026-06-09-the-garden-party/"
+   "date": "Aug 18, 2026",
+   "title": "Summer Time Fun All Week",
+   "url": "https://haps.club/archive/2026-08-18-summer-time-fun/"
   },
   {
-   "date": "Jun 2, 2026",
-   "title": "Week of June 3",
-   "url": "https://haps.club/archive/2026-06-02-week-of-june-3/"
+   "date": "Aug 11, 2026",
+   "title": "Let&rsquo;s Stay Together",
+   "url": "https://haps.club/archive/2026-08-11-lets-stay-together/"
   },
   {
-   "date": "May 24, 2026",
-   "title": "The Back Nine",
-   "url": "https://haps.club/archive/2026-05-24-the-back-nine/"
+   "date": "Aug 5, 2026",
+   "title": "One Friday, Two Nights",
+   "url": "https://haps.club/archive/2026-08-05-one-friday-two-nights/"
+  },
+  {
+   "date": "Aug 4, 2026",
+   "title": "The Sound of August",
+   "url": "https://haps.club/archive/2026-08-04-the-sound-of-august/"
+  },
+  {
+   "date": "Jul 28, 2026",
+   "title": "After the Long Table",
+   "url": "https://haps.club/archive/2026-07-28-after-the-long-table/"
   }
- ]
+ ],
+ "sponsor": {
+  "name": "Blackbird",
+  "blurb": "earn $FLY when you eat out in LA",
+  "cta": "Get $20 to start",
+  "link": "https://app.blackbird.xyz/r/bb-igyo61"
+ }
 }
