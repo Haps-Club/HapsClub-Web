@@ -60,6 +60,7 @@ img{max-width:100%}
 
 /* ---------- sections ---------- */
 section{padding:56px 0 0}
+section[id],div[id]{scroll-margin-top:108px}
 .shead{display:flex;align-items:flex-end;gap:14px;margin-bottom:22px}
 .shead h2{margin:0;font-size:34px;line-height:1.05;font-weight:800;letter-spacing:-1.4px}
 .shead .k{margin:0 0 4px}
@@ -169,6 +170,7 @@ footer .cols a:hover{color:#fff}
   .lead{min-height:280px}
   .lead h3{font-size:30px;line-height:33px}
   .calstrip .btn-n{margin-left:0}
+  section[id],div[id]{scroll-margin-top:88px}
   .bar-in,.nav .wrap{height:76px}
   .brand img.logo{height:64px}
   .filters{top:76px}
@@ -179,6 +181,7 @@ footer .cols a:hover{color:#fff}
   .hero{padding:56px 0 64px}
   .shead h2{font-size:28px}
   /* the wordmark is ~4:1, so it has to come down again to leave room for the CTA */
+  section[id],div[id]{scroll-margin-top:74px}
   .bar-in,.nav .wrap{height:62px;gap:12px}
   .brand img.logo{height:46px;margin:4px 0}
   .filters{top:62px}
