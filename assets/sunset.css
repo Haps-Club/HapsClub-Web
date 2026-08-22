@@ -31,6 +31,7 @@ img{max-width:100%}
 .nav{position:sticky;top:0;z-index:50;background:rgba(245,245,247,.72);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid rgba(0,0,0,.06)}
 .nav .wrap{display:flex;align-items:center;gap:28px;height:54px}
 .brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.5px;font-size:17px;text-decoration:none}
+.brand img.logo{height:28px;width:auto;display:block}
 .brand .dot{width:22px;height:22px;border-radius:8px;background:var(--grad-sunset);flex:none}
 .nav nav{display:flex;gap:24px;margin-left:auto}
 .nav nav a{font-size:14px;font-weight:500;color:var(--ink3);text-decoration:none;letter-spacing:-.1px}
