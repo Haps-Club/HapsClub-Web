@@ -188,7 +188,8 @@ def main(path):
     for href, meta, title in cards[:6]:
         m = re.match(r'\w+day,\s*(\w+)\s+(\d+),\s*(\d{4})', re.sub(r'<[^>]+>','',meta).strip())
         pretty = '%s %s, %s' % (m.group(1)[:3], m.group(2), m.group(3)) if m else re.sub(r'<[^>]+>','',meta).strip()[:14]
-        teaser.append({"date": pretty, "title": re.sub(r'<[^>]+>','',title).strip(),
+        teaser.append({"date": pretty,
+                       "title": html.unescape(re.sub(r'<[^>]+>','',title)).strip(),
                        "url": "https://haps.club" + href})
     if teaser:
         ev['archive'] = teaser
