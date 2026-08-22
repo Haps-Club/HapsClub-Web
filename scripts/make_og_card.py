@@ -50,7 +50,7 @@ d.ellipse([((W-64)*S-kw-30*S, 90*S), ((W-64)*S-kw-16*S, 104*S)], fill=(255,255,2
 
 # --- headline
 hf = f('ExtraBold', 92)
-text((64, 214), "Here's what's", hf)
+text((64, 214), "Here\u2019s what\u2019s", hf)
 text((64, 314), "good.", hf)
 
 # --- sub
