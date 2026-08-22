@@ -563,5 +563,55 @@
   "blurb": "earn $FLY when you eat out in LA",
   "cta": "Get $20 to start",
   "link": "https://app.blackbird.xyz/r/bb-igyo61"
- }
+ },
+ "plan": [
+  {
+   "title": "Ocean Way Festival",
+   "when": "Sep 26–27",
+   "accent": "purple",
+   "tagline": "Goldenvoice puts a festival on the sand.",
+   "meta": "The Beach at Santa Monica · The Killers, Jack White, Sublime, Khruangbin, Olivia Dean, Alvvays",
+   "cta": "Tickets",
+   "link": "https://www.axs.com/events/1459419/ocean-way-festival-tickets",
+   "tags": "music",
+   "area": "westside",
+   "ends": "20260927T230000"
+  },
+  {
+   "title": "The Other Art Fair",
+   "when": "Sep 24–27",
+   "accent": "blue",
+   "tagline": "160 independent artists in a hangar.",
+   "meta": "Barker Hangar, Santa Monica · advance pricing through Sep 18 · DJs and a full bar",
+   "cta": "Tickets",
+   "link": "https://www.theotherartfair.com/la/",
+   "tags": "culture",
+   "area": "westside",
+   "ends": "20260927T180000"
+  },
+  {
+   "title": "Día de los Muertos at Hollywood Forever",
+   "when": "Sat Oct 24",
+   "accent": "orange",
+   "tagline": "The 27th year, noon to midnight.",
+   "meta": "Hollywood Forever · timed entry at 12, 4 and 7 · altars, procession, costume contest",
+   "cta": "Tickets",
+   "link": "https://www.ladayofthedead.com/event-info/",
+   "tags": "culture",
+   "area": "hollywood",
+   "ends": "20261024T235900"
+  },
+  {
+   "title": "Camp Flog Gnaw",
+   "when": "Nov 14–15",
+   "accent": "red",
+   "tagline": "Tyler's carnival, back at the stadium.",
+   "meta": "Dodger Stadium · two-day GA from $415 · general admission sold out, waitlist open",
+   "cta": "Join the waitlist",
+   "link": "https://www.campfloggnaw.com/",
+   "tags": "music",
+   "area": "dtla",
+   "ends": "20261115T235900"
+  }
+ ]
 }

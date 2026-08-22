@@ -71,6 +71,16 @@
   </div>
 </section>
 
+<section id="plan" style="display:none">
+  <div class="wrap">
+    <div class="shead">
+      <div><p class="kicker k" style="color:var(--orange)">Save the date</p><h2>Plan for it</h2></div>
+      <span class="more" style="color:var(--gray);font-weight:500">Buy ahead — these go</span>
+    </div>
+    <div class="plan" id="plangrid"></div>
+  </div>
+</section>
+
 <section id="week">
   <div class="wrap">
     <div class="shead">
@@ -213,6 +223,19 @@ function render(){
   });
   if(feats.length>1)fhtml+="</div>";
   document.getElementById("feat").innerHTML=fhtml;
+
+  var plans=(DATA.plan||[]).filter(live);
+  if(plans.length){
+    document.getElementById("plan").style.display="";
+    document.getElementById("plangrid").innerHTML=plans.map(function(p){
+      return '<a class="pcard" href="'+esc(p.link)+'" target="_blank" rel="noopener">'+
+        '<span class="pwhen a-'+esc(p.accent||"red")+'">'+esc(p.when)+'</span>'+
+        '<h3>'+esc(p.title)+'</h3>'+
+        '<p class="ptag">'+esc(p.tagline)+'</p>'+
+        '<p class="meta">'+esc(p.meta)+'</p>'+
+        '<span class="pgo">'+esc(p.cta||"Tickets")+' →</span></a>';
+    }).join("");
+  }
 
   document.getElementById("cats").innerHTML=CATS.map(function(c){return '<button class="chip'+(state.cat===c[0]?' on':'')+'" data-k="cat" data-v="'+c[0]+'">'+c[1]+'</button>';}).join("");
   document.getElementById("hoods").innerHTML=HOODS.map(function(h){return '<button class="chip'+(state.hood===h[0]?' on':'')+'" data-k="hood" data-v="'+h[0]+'">'+h[1]+'</button>';}).join("");
