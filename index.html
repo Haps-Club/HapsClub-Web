@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Haps Club — This Week in LA</title>
+<title>Haps Club — This Week in Los Angeles</title>
 <meta name="description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
 <link rel="canonical" href="https://haps.club/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Haps Club">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://haps.club/">
-<meta property="og:title" content="Haps Club — This Week in LA">
+<meta property="og:title" content="Haps Club — This Week in Los Angeles">
 <meta property="og:description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
 <meta property="og:image" content="https://haps.club/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Haps Club — everything worth leaving the house for in LA, every week.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Haps Club — This Week in LA">
+<meta name="twitter:title" content="Haps Club — This Week in Los Angeles">
 <meta name="twitter:description" content="Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.">
 <meta name="twitter:image" content="https://haps.club/assets/og-card.png">
 <link rel="icon" href="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg">
@@ -90,12 +90,14 @@
     <div class="filters">
       <div class="frow">
         <span class="flab">Category</span>
-        <span id="cats"></span>
+        <span class="chipwrap" id="cats"></span>
+        <select class="fsel" id="catSel" aria-label="Filter by category"></select>
         <span class="fcount" id="count"></span>
       </div>
       <div class="frow">
         <span class="flab">Where</span>
-        <span id="hoods"></span>
+        <span class="chipwrap" id="hoods"></span>
+        <select class="fsel" id="hoodSel" aria-label="Filter by neighborhood"></select>
       </div>
     </div>
     <div class="week" id="grid"></div>
@@ -201,7 +203,8 @@ function render(){
   var sp=DATA.sponsor;
   if(sp&&sp.name){
     var el=document.getElementById("sponline");
-    el.innerHTML='Sponsored by <b>'+esc(sp.name)+'</b> · '+esc(sp.blurb||'')+
+    el.innerHTML='Sponsored by <b>'+esc(sp.name)+'</b>'+
+      (sp.blurb?' <span class="spon-blurb">· '+esc(sp.blurb)+'</span>':'')+
       (sp.link?' <a href="'+esc(sp.link)+'" target="_blank" rel="noopener">'+esc(sp.cta||'Learn more')+'</a>':'');
     el.style.display="inline-flex";
   }
@@ -239,6 +242,8 @@ function render(){
 
   document.getElementById("cats").innerHTML=CATS.map(function(c){return '<button class="chip'+(state.cat===c[0]?' on':'')+'" data-k="cat" data-v="'+c[0]+'">'+c[1]+'</button>';}).join("");
   document.getElementById("hoods").innerHTML=HOODS.map(function(h){return '<button class="chip'+(state.hood===h[0]?' on':'')+'" data-k="hood" data-v="'+h[0]+'">'+h[1]+'</button>';}).join("");
+  document.getElementById("catSel").innerHTML=CATS.map(function(c){return '<option value="'+c[0]+'"'+(state.cat===c[0]?' selected':'')+'>'+(c[0]==="all"?"All categories":c[1])+'</option>';}).join("");
+  document.getElementById("hoodSel").innerHTML=HOODS.map(function(h){return '<option value="'+h[0]+'"'+(state.hood===h[0]?' selected':'')+'>'+h[1]+'</option>';}).join("");
 
   var shown=evs.filter(function(e){
     return (state.cat==="all"||(" "+e.tags+" ").indexOf(" "+state.cat+" ")>-1)&&(state.hood==="all"||e.area===state.hood);
@@ -261,6 +266,10 @@ function render(){
 document.addEventListener("click",function(ev){
   var b=ev.target.closest(".chip"); if(!b)return;
   state[b.getAttribute("data-k")]=b.getAttribute("data-v"); render();
+});
+document.addEventListener("change",function(ev){
+  if(ev.target.id==="catSel"){state.cat=ev.target.value;render();}
+  else if(ev.target.id==="hoodSel"){state.hood=ev.target.value;render();}
 });
 
 fetch("data/events.json?u="+(Date.now()>>16)).then(function(r){return r.json();}).then(function(d){DATA=d;render();})

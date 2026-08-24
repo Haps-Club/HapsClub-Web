@@ -111,6 +111,7 @@ section[id],div[id]{scroll-margin-top:108px}
 .chip.on{background:var(--ink);color:#fff}
 .chip:hover:not(.on){background:#EAEAEF}
 .fcount{margin-left:auto;font-size:13px;color:var(--gray);font-weight:500;white-space:nowrap}
+.fsel{display:none}
 
 /* ---------- week list ---------- */
 .week{display:grid;gap:14px;margin-top:22px}
@@ -184,6 +185,21 @@ footer .cols a:hover{color:#fff}
   section[id],div[id]{scroll-margin-top:74px}
   .bar-in,.nav .wrap{height:62px;gap:12px}
   .brand img.logo{height:46px;margin:4px 0}
-  .filters{top:62px}
+  .filters{top:62px;padding:14px 16px}
   .navcta{margin-left:auto;padding:7px 15px;font-size:13px}
+
+  /* mobile filters: swap wrapping chip rows for compact native dropdowns */
+  #cats,#hoods{display:none}
+  .frow{gap:8px;flex-wrap:nowrap}
+  .flab{min-width:auto;white-space:nowrap}
+  .fcount{flex:none}
+  .fsel{display:block;flex:1 1 auto;min-width:0;width:100%;border:0;background:var(--bg);
+    color:var(--ink3);font-family:inherit;font-size:14px;font-weight:600;
+    padding:10px 32px 10px 14px;border-radius:999px;-webkit-appearance:none;appearance:none;
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2386868B' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 10px center;background-size:16px}
+
+  /* mobile sponsor pill: drop the blurb, keep name + CTA on one line */
+  .spon-blurb{display:none}
+  .spon-line{padding:7px 14px;font-size:12.5px;gap:6px}
 }
