@@ -1,136 +1,70 @@
 {
-  "updated": "2026-08-26",
-  "weekLabel": "Week of Aug 24",
+  "updated": "2026-08-31",
+  "weekLabel": "Week of Aug 31",
   "announcement": {
-    "text": "Next Saturday — the 7th Annual Leimert Park Jazz Festival, free all day. →",
-    "link": "https://www.leimertparkjazzfestival.org/",
-    "ends": "20260829T203000"
+    "text": "Free Shakespeare closes this Sunday at the Old Zoo in Griffith Park. →",
+    "link": "https://indieshakes.org/",
+    "ends": "20260906T220000"
   },
   "featured": [
     {
-      "title": "7th Annual Leimert Park Jazz Festival",
-      "pill": "Free · Sat 8/29",
-      "tagline": "The jazz LA still gets to have.",
-      "meta": "Sat Aug 29 · 11:30 AM–8:30 PM · Baldwin Hills Crenshaw · free / pay-what-you-wish",
-      "cta": "Get free tickets",
-      "link": "https://www.leimertparkjazzfestival.org/",
-      "tags": "music free",
-      "area": "midcity",
-      "starts": "20260829T113000",
-      "ends": "20260829T203000"
-    },
-    {
-      "title": "Echo Park Rising",
-      "pill": "Music · Aug 29–30",
-      "tagline": "Two days, free, the whole neighborhood a stage.",
-      "meta": "Sat–Sun Aug 29–30 · Echo Park venues · free, all ages",
-      "cta": "Lineup",
-      "link": "https://epr.la/",
-      "tags": "music free",
+      "title": "Free Shakespeare: The Comedy of Errors",
+      "pill": "Free · Closes Sun 9/6",
+      "tagline": "Bring a blanket. The Old Zoo does the rest.",
+      "meta": "Through Sun Sep 6 · The Dell at the Old Zoo, Griffith Park · free",
+      "cta": "Reserve a spot",
+      "link": "https://indieshakes.org/",
+      "tags": "culture free",
       "area": "eastside",
-      "starts": "20260829T140000",
-      "ends": "20260830T230000"
+      "ends": "20260906T220000"
     },
     {
-      "title": "dineL.A. Restaurant Week",
-      "pill": "Food · Ends Fri 8/28",
-      "tagline": "Last few nights of the prix-fixe city.",
-      "meta": "Through Fri Aug 28 · 400+ restaurants citywide · from $15",
-      "cta": "Find a table",
-      "link": "https://www.discoverlosangeles.com/dinela",
+      "title": "Autry After Hours",
+      "pill": "Culture · Thu 9/3",
+      "tagline": "The museum after dark, drinks included.",
+      "meta": "Thu Sep 3 · Autry Museum, Griffith Park · ticketed",
+      "cta": "Get tickets",
+      "link": "https://theautry.org/",
+      "tags": "culture date",
+      "area": "eastside",
+      "ends": "20260903T220000"
+    },
+    {
+      "title": "Friday Night Wine Tastings at Hollyhock House",
+      "pill": "Food · Fri 9/11",
+      "tagline": "Wine on Frank Lloyd Wright's lawn.",
+      "meta": "Fri Sep 11 · Barnsdall Park, Los Feliz · ticketed",
+      "cta": "Book a tasting",
+      "link": "https://barnsdall.org/",
       "tags": "food date",
-      "area": "citywide",
-      "starts": "20260814T110000",
-      "ends": "20260828T230000"
+      "area": "eastside",
+      "ends": "20260911T220000"
     }
   ],
   "events": [
     {
-      "title": "Echo Park Rising",
-      "month": "AUG",
-      "day": "29",
-      "cat": "Music",
-      "tags": "music free",
+      "title": "Autry After Hours",
+      "month": "SEP",
+      "day": "3",
+      "cat": "Culture",
+      "tags": "culture date",
       "area": "eastside",
-      "where": "Echo Park venues",
-      "price": "Free",
-      "link": "https://epr.la/",
-      "starts": "20260829T140000",
-      "ends": "20260830T230000"
+      "where": "Autry Museum, Griffith Park",
+      "price": "Ticketed",
+      "link": "https://theautry.org/",
+      "ends": "20260903T220000"
     },
     {
-      "title": "7th Annual Leimert Park Jazz Festival",
-      "month": "AUG",
-      "day": "29",
-      "cat": "Music",
-      "tags": "music free",
-      "area": "midcity",
-      "where": "Baldwin Hills Crenshaw",
-      "price": "Free",
-      "link": "https://www.leimertparkjazzfestival.org/",
-      "starts": "20260829T113000",
-      "ends": "20260829T203000"
-    },
-    {
-      "title": "Spinning Sunset — vinyl fair on the Strip",
-      "month": "AUG",
-      "day": "29",
-      "cat": "Music",
-      "tags": "music free",
-      "area": "hollywood",
-      "where": "Sunset Strip, West Hollywood",
-      "price": "Free",
-      "link": "https://www.visitwesthollywood.com/",
-      "starts": "20260829T110000",
-      "ends": "20260829T190000"
-    },
-    {
-      "title": "Grand Performances at California Plaza",
-      "month": "AUG",
-      "day": "29",
-      "cat": "Music",
-      "tags": "music free",
-      "area": "dtla",
-      "where": "California Plaza",
-      "price": "Free",
-      "link": "https://www.grandperformances.org/",
-      "ends": "20260829T220000"
-    },
-    {
-      "title": "The Actors' Gang: Two Gentlebots of Verona",
-      "month": "AUG",
-      "day": "30",
+      "title": "Free Shakespeare: The Comedy of Errors",
+      "month": "SEP",
+      "day": "6",
       "cat": "Culture",
       "tags": "culture free",
-      "area": "westside",
-      "where": "Media Park, Culver City",
+      "area": "eastside",
+      "where": "The Dell at the Old Zoo",
       "price": "Free",
-      "link": "https://theactorsgang.com/",
-      "ends": "20260830T220000"
-    },
-    {
-      "title": "Cinespia at Hollywood Forever",
-      "month": "SEP",
-      "day": "12",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "hollywood",
-      "where": "Hollywood Forever Cemetery",
-      "price": "Ticketed",
-      "link": "https://cinespia.org/",
-      "ends": "20260912T235900"
-    },
-    {
-      "title": "Rooftop Cinema Club DTLA",
-      "month": "SEP",
-      "day": "29",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "dtla",
-      "where": "LEVEL, Downtown",
-      "price": "Ticketed",
-      "link": "https://rooftopcinemaclub.com/los-angeles/",
-      "ends": "20260929T235900"
+      "link": "https://indieshakes.org/",
+      "ends": "20260906T220000"
     },
     {
       "title": "Friday Night Wine Tastings at Hollyhock House",
@@ -145,16 +79,16 @@
       "ends": "20260911T220000"
     },
     {
-      "title": "Autry After Hours",
+      "title": "Cinespia at Hollywood Forever",
       "month": "SEP",
-      "day": "3",
+      "day": "12",
       "cat": "Culture",
       "tags": "culture date",
-      "area": "eastside",
-      "where": "Autry Museum, Griffith Park",
+      "area": "hollywood",
+      "where": "Hollywood Forever Cemetery",
       "price": "Ticketed",
-      "link": "https://theautry.org/",
-      "ends": "20260903T220000"
+      "link": "https://cinespia.org/",
+      "ends": "20260912T235900"
     },
     {
       "title": "Markets at the Villa",
@@ -167,6 +101,30 @@
       "price": "Free",
       "link": "https://www.marketsatthevilla.com/",
       "ends": "20260927T180000"
+    },
+    {
+      "title": "Rooftop Cinema Club DTLA",
+      "month": "SEP",
+      "day": "29",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "dtla",
+      "where": "LEVEL, Downtown",
+      "price": "Ticketed",
+      "link": "https://rooftopcinemaclub.com/los-angeles/",
+      "ends": "20260929T235900"
+    },
+    {
+      "title": "Wellness & Waves on the Santa Monica Pier",
+      "month": "OCT",
+      "day": "17",
+      "cat": "Outdoors",
+      "tags": "outdoors free",
+      "area": "westside",
+      "where": "Santa Monica Pier",
+      "price": "Free",
+      "link": "https://santamonicapier.org/wellness-and-waves/",
+      "ends": "20261017T100000"
     },
     {
       "title": "MAUM Market at ROW DTLA",
@@ -222,43 +180,6 @@
       "where": "Mar Vista",
       "price": "Free",
       "link": "https://www.handstamp.com/e/alanas-open-mic-mar-vista-6b8yr5oj"
-    },
-    {
-      "title": "Free Shakespeare: The Comedy of Errors",
-      "month": "AUG",
-      "day": "5",
-      "cat": "Culture",
-      "tags": "culture free",
-      "area": "eastside",
-      "where": "The Dell at the Old Zoo",
-      "price": "Free",
-      "link": "https://indieshakes.org/",
-      "ends": "20260906T220000"
-    },
-    {
-      "title": "Wellness & Waves on the Santa Monica Pier",
-      "month": "AUG",
-      "day": "8",
-      "cat": "Outdoors",
-      "tags": "outdoors free",
-      "area": "westside",
-      "where": "Santa Monica Pier",
-      "price": "Free",
-      "link": "https://santamonicapier.org/wellness-and-waves/",
-      "ends": "20261017T100000"
-    },
-    {
-      "title": "dineL.A. Restaurant Week",
-      "month": "AUG",
-      "day": "14",
-      "cat": "Food",
-      "tags": "food date",
-      "area": "citywide",
-      "where": "400+ restaurants",
-      "price": "From $15",
-      "link": "https://www.discoverlosangeles.com/dinela",
-      "starts": "20260814T110000",
-      "ends": "20260828T230000"
     },
     {
       "title": "Cookie Queens",
