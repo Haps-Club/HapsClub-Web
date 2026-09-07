@@ -2,11 +2,23 @@
   "updated": "2026-09-08",
   "weekLabel": "Week of Sep 8",
   "announcement": {
-    "text": "This week's newsletter: LA Ballet's Bowl debut, a Thursday triple-header, and a new bodega in Venice. →",
-    "link": "https://haps.club/archive/2026-09-08-tap-dance-on-pointe/",
-    "ends": "20260913T235900"
+    "text": "Sat Sep 19: our Long Table Dinner — a playful Indian-Mexican vegetarian street-food menu in South LA. 12 seats. →",
+    "link": "https://luma.com/dinner-series-masala-meets-mexico",
+    "ends": "20260919T210000"
   },
   "featured": [
+    {
+      "title": "Masala Meets Mexico: Long Table Dinner",
+      "pill": "Haps Club · Sat Sep 19",
+      "tagline": "A playful Indian-Mexican vegetarian street-food menu, at one long table.",
+      "meta": "Sat Sep 19 · 6–9 PM · a private residence in South LA · $79 · 12 seats",
+      "cta": "Reserve a seat",
+      "link": "https://luma.com/dinner-series-masala-meets-mexico",
+      "tags": "food date",
+      "area": "midcity",
+      "hood": "south-la",
+      "ends": "20260919T210000"
+    },
     {
       "title": "LA Ballet at the Bowl",
       "pill": "Dance · Tonight",
@@ -28,20 +40,23 @@
       "tags": "culture date",
       "area": "westside",
       "ends": "20260910T220000"
-    },
-    {
-      "title": "Friday Night Wine Tastings at Hollyhock House",
-      "pill": "Food · Fri 9/11",
-      "tagline": "Wine on Frank Lloyd Wright's lawn.",
-      "meta": "Fri Sep 11 · Barnsdall Park, Los Feliz · ticketed",
-      "cta": "Book a tasting",
-      "link": "https://barnsdall.org/",
-      "tags": "food date",
-      "area": "eastside",
-      "ends": "20260911T220000"
     }
   ],
   "events": [
+    {
+      "title": "Masala Meets Mexico: Long Table Dinner",
+      "month": "SEP",
+      "day": "19",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "midcity",
+      "hood": "south-la",
+      "where": "A private residence, South LA",
+      "price": "$79",
+      "link": "https://luma.com/dinner-series-masala-meets-mexico",
+      "starts": "20260919T180000",
+      "ends": "20260919T210000"
+    },
     {
       "title": "LA Ballet at the Bowl",
       "month": "SEP",

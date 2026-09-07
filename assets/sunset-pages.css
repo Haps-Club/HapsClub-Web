@@ -235,3 +235,126 @@ svg.ic{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;
 svg.ic.go,svg.ic.arr{margin-left:auto;align-self:center;color:var(--red)}
 .eyebrow svg.ic{width:14px;height:14px;stroke-width:2}
 .t,.d{display:block}
+
+/* ==================================================================
+   Site nav + guide editorial system — added 2026-09-07
+   Additive only: every selector below is new, nothing above is touched.
+   ================================================================== */
+
+/* ---- sitewide nav (mirrors the homepage .nav in sunset.css) ---- */
+.snav{position:sticky;top:0;z-index:50;background:rgba(245,245,247,.72);
+  backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
+  border-bottom:1px solid rgba(0,0,0,.06)}
+.snav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:28px;height:96px}
+.snav .brand{display:flex;align-items:center;text-decoration:none;flex:none}
+.snav .brand img{height:84px;width:auto;display:block;margin:6px 0}
+.snav nav{display:flex;gap:24px;margin-left:auto;align-items:center}
+.snav nav a{font-size:14px;font-weight:500;color:var(--ink3);text-decoration:none;letter-spacing:-.1px;white-space:nowrap}
+.snav nav a:hover{color:var(--red)}
+.snav nav a.on{color:var(--ink);font-weight:700}
+.snav .navcta{background:var(--red);color:#fff!important;font-weight:600;padding:8px 18px;border-radius:999px;letter-spacing:-.2px}
+.snav .navcta:hover{background:var(--red-txt)}
+@media(max-width:860px){
+  .snav-in{height:60px;gap:12px;padding:0 16px}
+  .snav .brand img{height:44px;margin:3px 0}
+  .snav nav{gap:14px}
+  .snav nav a.sm-hide{display:none}
+  .snav nav a{font-size:13px}
+  .snav .navcta{padding:7px 14px}
+}
+
+/* ---- category colour + icon system ---- */
+.cat-food{--c:var(--orange)}    .cat-drink{--c:var(--red)}
+.cat-coffee{--c:var(--orange)}  .cat-art{--c:var(--purple)}
+.cat-music{--c:var(--blue)}     .cat-outdoors{--c:var(--green)}
+.cat-park{--c:var(--green)}     .cat-walk{--c:var(--green)}
+.cat-beach{--c:var(--blue)}     .cat-museum{--c:var(--navy)}
+.cat-shop{--c:var(--red-txt)}   .cat-ticket{--c:var(--purple)}
+.cat-clock{--c:var(--navy)}     .cat-map{--c:var(--gray3)}
+.ci{width:19px;height:19px;flex:none;stroke:var(--c,var(--gray3));fill:none;
+  stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.chip-i{width:34px;height:34px;border-radius:11px;flex:none;display:flex;align-items:center;
+  justify-content:center;background:color-mix(in srgb,var(--c,var(--gray)) 13%,transparent)}
+.chip-i .ci{width:18px;height:18px}
+
+/* ---- hero panel ---- */
+.ghero{position:relative;overflow:hidden;border-radius:var(--r);
+  background:var(--grad-lead);padding:46px 40px 40px;margin:22px 0 0}
+.ghero::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:var(--grad-sunset)}
+.ghero .eyebrow{margin:0}
+.ghero h1{margin:14px 0 0;max-width:16ch}
+.ghero .dek{margin:12px 0 0;max-width:46ch}
+.ghero .art{position:absolute;right:-54px;top:-56px;width:300px;height:266px;opacity:.42;pointer-events:none}
+@media(max-width:1000px){.ghero .art{display:none}}
+@media(max-width:860px){.ghero{padding:32px 22px 28px}}
+
+/* ---- at-a-glance facts ---- */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--hair);
+  border:1px solid var(--hair);border-radius:var(--r-sm);overflow:hidden;margin:18px 0 0}
+.facts>div{background:var(--card);padding:14px 16px;min-width:0}
+.facts b{display:block;font-size:10.5px;font-weight:700;letter-spacing:.7px;
+  text-transform:uppercase;color:var(--gray)}
+.facts span{display:block;font-size:15px;font-weight:600;color:var(--ink);margin-top:4px;letter-spacing:-.2px}
+@media(max-width:720px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+/* ---- in-page wayfinding ---- */
+.jump{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0;padding:0}
+.jump a{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;
+  color:var(--ink2);text-decoration:none;background:var(--card);border:1px solid var(--hair);
+  border-radius:999px;padding:7px 14px 7px 10px;letter-spacing:-.1px}
+.jump a:hover{border-color:var(--c,var(--gray2));color:var(--ink)}
+.jump a .ci{width:16px;height:16px}
+
+/* ---- numbered route ---- */
+.route{margin:26px 0 0;counter-reset:stop}
+.stop{position:relative;padding:0 0 30px 62px}
+.stop:last-child{padding-bottom:0}
+.stop::before{counter-increment:stop;content:counter(stop);position:absolute;left:0;top:-2px;
+  width:40px;height:40px;border-radius:50%;background:var(--c,var(--gray3));color:#fff;
+  font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;
+  letter-spacing:-.4px}
+.stop::after{content:"";position:absolute;left:19px;top:46px;bottom:2px;width:2px;background:var(--hair)}
+.stop:last-child::after{display:none}
+.stop .when{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;
+  letter-spacing:.7px;text-transform:uppercase;color:var(--c,var(--gray))}
+.stop h2{font-size:23px;line-height:1.22;letter-spacing:-.6px;margin:7px 0 0}
+.stop .body{margin-top:10px}
+@media(max-width:600px){.stop{padding-left:52px}.stop::before{width:34px;height:34px;font-size:14px}
+  .stop::after{left:16px;top:40px}.stop h2{font-size:20px}}
+
+/* ---- place rows: icon + tags ---- */
+.place{display:flex;align-items:flex-start;gap:14px;padding:15px 18px;background:var(--card);
+  border:1px solid var(--hair);border-radius:var(--r-sm);text-decoration:none;color:inherit}
+.place+.place{margin-top:9px}
+a.place:hover{border-color:var(--c,var(--gray2))}
+.place>span:nth-child(2){min-width:0;flex:1}
+.place .pt{display:block;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.3px}
+.place .pd{display:block;font-size:13.5px;color:var(--gray3);line-height:1.55;margin-top:4px}
+.place .pgo{margin-left:auto;flex:none;color:var(--c,var(--gray2));align-self:center}
+.place .pgo svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2.2;
+  stroke-linecap:round;stroke-linejoin:round}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--hair);
+  color:var(--gray3);margin:0 6px 0 0;vertical-align:2px}
+.tag.free{background:var(--green);border-color:var(--green);color:#fff}
+.tag.cat{background:color-mix(in srgb,var(--c,var(--gray)) 14%,transparent);
+  border-color:transparent;color:var(--c,var(--gray3))}
+
+/* ---- the one thing ---- */
+.oneline{margin:28px 0 0;padding:28px 32px;border-radius:var(--r);background:var(--grad-navy);color:#fff}
+.oneline b{display:block;font-size:10.5px;letter-spacing:.9px;text-transform:uppercase;
+  opacity:.72;margin-bottom:9px;font-weight:700}
+.oneline p{margin:0;font-size:21px;line-height:1.45;font-weight:600;letter-spacing:-.4px}
+@media(max-width:600px){.oneline{padding:22px}.oneline p{font-size:18px}}
+
+/* ---- data table (free museum days) ---- */
+.tscroll{overflow-x:auto;border:1px solid var(--hair);border-radius:var(--r-sm);
+  background:var(--card);margin:18px 0 0}
+.mtable{width:100%;min-width:560px;border-collapse:collapse;font-size:14.5px}
+.mtable th{text-align:left;font-size:10.5px;letter-spacing:.7px;text-transform:uppercase;
+  color:var(--gray);font-weight:700;padding:12px 16px;border-bottom:1px solid var(--hair);
+  background:var(--bg);white-space:nowrap}
+.mtable td{padding:13px 16px;border-bottom:1px solid var(--hair);vertical-align:top;color:var(--ink2);line-height:1.5}
+.mtable tr:last-child td{border-bottom:0}
+.mtable td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+.mtable .w{font-weight:700;color:var(--red-txt);white-space:nowrap}
