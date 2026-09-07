@@ -57,8 +57,10 @@ A small script reads `data-ends` (fallback `data-starts`), parses ISO at -07:00,
 1. Fetch live `index.html` via Composio `GITHUB_GET_REPOSITORY_CONTENT`.
 2. Featured row: max 3 `fcard`s. Grid: insert new dated `<article class="card">` immediately after `<div class="grid" id="grid">` so dated leads; keep evergreen below.
 3. Update the inline `application/ld+json` `ItemList`: append one `Event` per new dated card (parse with `json.loads`, append, re-dump, validate).
+3a. **Run `python3 scripts/build_pages.py` before committing — non-negotiable.** It bakes `data/events.json` into `index.html` between the `<!-- HAPS:GRID -->` markers and fills the `<!-- HAPS:LIVE -->` blocks in every page under `guides/`, then regenerates the `Event` JSON-LD and bumps `dateModified` + `sitemap.xml` `lastmod`. Without this step the homepage ships an empty shell again and the guides go stale — the client-side `fetch` only runs in a browser, so Google sees nothing. `--check` exits 1 when anything is stale, so use it as a pre-commit guard.
+3b. Commit `data/events.json`, `index.html`, `guides/` and `sitemap.xml` **in the same commit**. If they drift apart you get `Event` schema describing events no longer on the page, which risks a manual action.
 4. **Deploy via Composio** `GITHUB_COMMIT_MULTIPLE_FILES` to `Haps-Club/HapsClub-Web@main`, run inside `COMPOSIO_REMOTE_WORKBENCH` so the ~93KB file stays server-side. **The project PAT is expired (401) — do not use it.**
-5. Verify live: `curl https://haps.club/` and confirm new titles + card count before claiming done.
+5. Verify live: `curl https://haps.club/` and confirm new titles + card count before claiming done. Also confirm event titles appear in the **raw HTML** (`curl -s https://haps.club/ | grep -c 'class="row"'`) — if that is 0, `build_pages.py` did not run.
 
 ## 7. Calendar sync (every refresh — non-negotiable)
 - Calendar: **Haps Club Calendar** `c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384@group.calendar.google.com`.
