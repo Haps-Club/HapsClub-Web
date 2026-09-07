@@ -1,577 +1,614 @@
 {
- "updated": "2026-09-08",
- "weekLabel": "Week of Sep 8",
- "announcement": {
-  "text": "This week's newsletter: LA Ballet's Bowl debut, a Thursday triple-header, and a new bodega in Venice. →",
-  "link": "https://haps.club/archive/2026-09-08-tap-dance-on-pointe/",
-  "ends": "20260913T235900"
- },
- "featured": [
-  {
-   "title": "LA Ballet at the Bowl",
-   "pill": "Dance · Tonight",
-   "tagline": "The Phil and the ballet share a stage for the first time.",
-   "meta": "Tue Sep 8 · Hollywood Bowl · gates 6pm",
-   "cta": "See the program",
-   "link": "https://www.hollywoodbowl.com/events/performances/4336/2026-09-08/los-angeles-ballet-at-the-bowl",
-   "tags": "culture date",
-   "area": "hollywood",
-   "ends": "20260908T223000"
+  "updated": "2026-09-08",
+  "weekLabel": "Week of Sep 8",
+  "announcement": {
+    "text": "This week's newsletter: LA Ballet's Bowl debut, a Thursday triple-header, and a new bodega in Venice. →",
+    "link": "https://haps.club/archive/2026-09-08-tap-dance-on-pointe/",
+    "ends": "20260913T235900"
   },
-  {
-   "title": "Beer, A New Musical",
-   "pill": "Theater · Thu 9/10",
-   "tagline": "A staged reading, under the oaks, from Inara George.",
-   "meta": "Thu Sep 10 · Theatricum Botanicum, Topanga · $35",
-   "cta": "Get tickets",
-   "link": "https://app.arts-people.com/index.php?show=318047",
-   "tags": "culture date",
-   "area": "westside",
-   "ends": "20260910T220000"
+  "featured": [
+    {
+      "title": "LA Ballet at the Bowl",
+      "pill": "Dance · Tonight",
+      "tagline": "The Phil and the ballet share a stage for the first time.",
+      "meta": "Tue Sep 8 · Hollywood Bowl · gates 6pm",
+      "cta": "See the program",
+      "link": "https://www.hollywoodbowl.com/events/performances/4336/2026-09-08/los-angeles-ballet-at-the-bowl",
+      "tags": "culture date",
+      "area": "hollywood",
+      "ends": "20260908T223000"
+    },
+    {
+      "title": "Beer, A New Musical",
+      "pill": "Theater · Thu 9/10",
+      "tagline": "A staged reading, under the oaks, from Inara George.",
+      "meta": "Thu Sep 10 · Theatricum Botanicum, Topanga · $35",
+      "cta": "Get tickets",
+      "link": "https://app.arts-people.com/index.php?show=318047",
+      "tags": "culture date",
+      "area": "westside",
+      "ends": "20260910T220000"
+    },
+    {
+      "title": "Friday Night Wine Tastings at Hollyhock House",
+      "pill": "Food · Fri 9/11",
+      "tagline": "Wine on Frank Lloyd Wright's lawn.",
+      "meta": "Fri Sep 11 · Barnsdall Park, Los Feliz · ticketed",
+      "cta": "Book a tasting",
+      "link": "https://barnsdall.org/",
+      "tags": "food date",
+      "area": "eastside",
+      "ends": "20260911T220000"
+    }
+  ],
+  "events": [
+    {
+      "title": "LA Ballet at the Bowl",
+      "month": "SEP",
+      "day": "8",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "hollywood",
+      "hood": "hollywood",
+      "where": "Hollywood Bowl",
+      "price": "Varies",
+      "link": "https://www.hollywoodbowl.com/events/performances/4336/2026-09-08/los-angeles-ballet-at-the-bowl",
+      "starts": "20260908T200000",
+      "ends": "20260908T223000"
+    },
+    {
+      "title": "Ravel, Debussy & Saint-Saëns",
+      "month": "SEP",
+      "day": "10",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "hollywood",
+      "hood": "hollywood",
+      "where": "Hollywood Bowl",
+      "price": "Varies",
+      "link": "https://www.hollywoodbowl.com/events/performances/4338/2026-09-10/ravel-debussy-saint-saens",
+      "starts": "20260910T200000",
+      "ends": "20260910T223000"
+    },
+    {
+      "title": "Beer, A New Musical",
+      "month": "SEP",
+      "day": "10",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "westside",
+      "hood": "topanga",
+      "where": "Theatricum Botanicum, Topanga",
+      "price": "$35",
+      "link": "https://app.arts-people.com/index.php?show=318047",
+      "starts": "20260910T193000",
+      "ends": "20260910T220000"
+    },
+    {
+      "title": "Downtown LA Art Walk",
+      "month": "SEP",
+      "day": "10",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "dtla",
+      "hood": "dtla",
+      "where": "Spring & Main St, Historic Core",
+      "price": "Free",
+      "link": "https://www.downtownartwalk.org/",
+      "starts": "20260910T180000",
+      "ends": "20260910T220000"
+    },
+    {
+      "title": "Friday Night Wine Tastings at Hollyhock House",
+      "month": "SEP",
+      "day": "11",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "eastside",
+      "hood": "los-feliz",
+      "where": "Barnsdall Park, Los Feliz",
+      "price": "Ticketed",
+      "link": "https://barnsdall.org/",
+      "ends": "20260911T220000"
+    },
+    {
+      "title": "Cinespia at Hollywood Forever",
+      "month": "SEP",
+      "day": "12",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "hollywood",
+      "hood": "hollywood",
+      "where": "Hollywood Forever Cemetery",
+      "price": "Ticketed",
+      "link": "https://cinespia.org/",
+      "ends": "20260912T235900"
+    },
+    {
+      "title": "CBVA Beach Volleyball at Ocean Park",
+      "month": "SEP",
+      "day": "13",
+      "cat": "Outdoors",
+      "tags": "outdoors free",
+      "area": "westside",
+      "hood": "santa-monica",
+      "where": "Ocean Park, Santa Monica",
+      "price": "Free",
+      "link": "https://cbva.com/tournaments/4795",
+      "ends": "20260913T190000"
+    },
+    {
+      "title": "Markets at the Villa",
+      "month": "SEP",
+      "day": "27",
+      "cat": "Food",
+      "tags": "food free",
+      "area": "citywide",
+      "hood": "toluca-lake",
+      "where": "Toluca Lake",
+      "price": "Free",
+      "link": "https://www.marketsatthevilla.com/",
+      "ends": "20260927T180000"
+    },
+    {
+      "title": "Rooftop Cinema Club DTLA",
+      "month": "SEP",
+      "day": "29",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "dtla",
+      "hood": "dtla",
+      "where": "LEVEL, Downtown",
+      "price": "Ticketed",
+      "link": "https://rooftopcinemaclub.com/los-angeles/",
+      "ends": "20260929T235900"
+    },
+    {
+      "title": "Wellness & Waves on the Santa Monica Pier",
+      "month": "OCT",
+      "day": "17",
+      "cat": "Outdoors",
+      "tags": "outdoors free",
+      "area": "westside",
+      "hood": "santa-monica",
+      "where": "Santa Monica Pier",
+      "price": "Free",
+      "link": "https://santamonicapier.org/wellness-and-waves/",
+      "ends": "20261017T100000"
+    },
+    {
+      "title": "MAUM Market at ROW DTLA",
+      "month": "Now",
+      "day": "•",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "dtla",
+      "hood": "dtla",
+      "where": "ROW DTLA",
+      "price": "Free",
+      "link": "https://www.maummarket.com/"
+    },
+    {
+      "title": "Vandell",
+      "month": "New",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "eastside",
+      "hood": "los-feliz",
+      "where": "Los Feliz",
+      "price": "",
+      "link": "https://www.instagram.com/vandell.la/"
+    },
+    {
+      "title": "Mic Drop karaoke lounge",
+      "month": "New",
+      "day": "★",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "hollywood",
+      "hood": "west-hollywood",
+      "where": "West Hollywood",
+      "price": "",
+      "link": "https://www.micdropkaraoke.com/"
+    },
+    {
+      "title": "Sunday Jazz at The World Stage",
+      "month": "Sun",
+      "day": "♪",
+      "cat": "Music",
+      "tags": "music",
+      "area": "midcity",
+      "hood": "leimert-park",
+      "where": "Leimert Park",
+      "price": "Ticketed",
+      "link": "https://www.leimertparkjazzfestival.org/sunday-jazz"
+    },
+    {
+      "title": "Alana's Open Mic",
+      "month": "Any",
+      "day": "•",
+      "cat": "Music",
+      "tags": "music free",
+      "area": "westside",
+      "hood": "mar-vista",
+      "where": "Mar Vista",
+      "price": "Free",
+      "link": "https://www.handstamp.com/e/alanas-open-mic-mar-vista-6b8yr5oj"
+    },
+    {
+      "title": "Cookie Queens",
+      "month": "New",
+      "day": "★",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "citywide",
+      "where": "In theaters",
+      "price": "Ticketed",
+      "link": "https://www.ticketingcookiequeens.com/"
+    },
+    {
+      "title": "San Damián",
+      "month": "New",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "westside",
+      "hood": "venice",
+      "where": "Venice",
+      "price": "",
+      "link": "https://damianrestaurants.com/san-damian/"
+    },
+    {
+      "title": "West Side Oyster Club",
+      "month": "New",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "westside",
+      "hood": "santa-monica",
+      "where": "Santa Monica",
+      "price": "",
+      "link": "https://www.westsideoysterclub.com/"
+    },
+    {
+      "title": "Venice Run Club — Long Run Saturday",
+      "month": "Sat",
+      "day": "•",
+      "cat": "Outdoors",
+      "tags": "outdoors free",
+      "area": "westside",
+      "hood": "venice",
+      "where": "Venice",
+      "price": "Free",
+      "link": "https://venicerunclub.co/pages/schedule"
+    },
+    {
+      "title": "The Tasting Kitchen",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "westside",
+      "hood": "venice",
+      "where": "Venice",
+      "price": "",
+      "link": "https://www.thetastingkitchen.com/"
+    },
+    {
+      "title": "Get on the water in the Marina",
+      "month": "Any",
+      "day": "★",
+      "cat": "Outdoors",
+      "tags": "outdoors",
+      "area": "westside",
+      "hood": "marina-del-rey",
+      "where": "Marina del Rey",
+      "price": "",
+      "link": "https://visitmdr.com/play/activities-marina-del-rey"
+    },
+    {
+      "title": "Jazz nightly at Sam First",
+      "month": "Now",
+      "day": "♪",
+      "cat": "Music",
+      "tags": "music",
+      "area": "westside",
+      "hood": "westchester",
+      "where": "Westchester",
+      "price": "2 sets nightly",
+      "link": "https://samfirstbar.com/"
+    },
+    {
+      "title": "Smorgasburg LA — Sundays",
+      "month": "Now",
+      "day": "•",
+      "cat": "Food",
+      "tags": "food free",
+      "area": "dtla",
+      "hood": "dtla",
+      "where": "DTLA",
+      "price": "",
+      "link": "https://la.smorgasburg.com/"
+    },
+    {
+      "title": "Alta Adams",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "midcity",
+      "hood": "west-adams",
+      "where": "West Adams",
+      "price": "",
+      "link": "https://altaadams.com"
+    },
+    {
+      "title": "Cinnies at Grand Central Market",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "dtla",
+      "hood": "dtla",
+      "where": "DTLA",
+      "price": "",
+      "link": "https://www.grandcentralmarket.com"
+    },
+    {
+      "title": "Lielle",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "midcity",
+      "hood": "pico-robertson",
+      "where": "Pico-Robertson",
+      "price": "",
+      "link": "https://www.lielle.la"
+    },
+    {
+      "title": "Runyon Canyon",
+      "month": "Any",
+      "day": "★",
+      "cat": "Outdoors",
+      "tags": "outdoors free",
+      "area": "hollywood",
+      "hood": "hollywood",
+      "where": "Hollywood",
+      "price": "",
+      "link": "https://www.alltrails.com/parks/us/california/runyon-canyon-park"
+    },
+    {
+      "title": "Gjelina",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "westside",
+      "hood": "venice",
+      "where": "Venice",
+      "price": "",
+      "link": "https://www.gjelina.com/"
+    },
+    {
+      "title": "Guelaguetza",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "midcity",
+      "hood": "koreatown",
+      "where": "Koreatown",
+      "price": "",
+      "link": "https://www.google.com/maps/search/Guelaguetza+Restaurant+Los+Angeles"
+    },
+    {
+      "title": "Mh Zh",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "eastside",
+      "hood": "echo-park",
+      "where": "Echo Park",
+      "price": "",
+      "link": "https://www.instagram.com/mh.zh/"
+    },
+    {
+      "title": "All Time",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "eastside",
+      "hood": "los-feliz",
+      "where": "Los Feliz",
+      "price": "",
+      "link": "https://www.alltimelosangeles.com/"
+    },
+    {
+      "title": "Tacos 1986",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "citywide",
+      "where": "Citywide",
+      "price": "",
+      "link": "https://www.tacos1986.com/"
+    },
+    {
+      "title": "Bavel",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "dtla",
+      "hood": "arts-district",
+      "where": "Arts District",
+      "price": "",
+      "link": "https://baveldtla.com/"
+    },
+    {
+      "title": "Phorage",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "westside",
+      "hood": "palms",
+      "where": "Palms",
+      "price": "",
+      "link": "https://www.phoragela.com/"
+    },
+    {
+      "title": "Skylight Books",
+      "month": "Any",
+      "day": "★",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "eastside",
+      "hood": "los-feliz",
+      "where": "Los Feliz",
+      "price": "",
+      "link": "https://www.skylightbooks.com/"
+    },
+    {
+      "title": "Escondido Falls",
+      "month": "Any",
+      "day": "★",
+      "cat": "Outdoors",
+      "tags": "outdoors free",
+      "area": "westside",
+      "hood": "malibu",
+      "where": "Malibu",
+      "price": "",
+      "link": "https://www.alltrails.com/trail/us/california/escondido-falls-trail"
+    },
+    {
+      "title": "Twentieth Street Garden",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "hood": "west-adams",
+      "where": "Santa Monica",
+      "price": "",
+      "link": "https://www.twentiethstreetgarden.com/upcomingevents"
+    },
+    {
+      "title": "Teddy's Hot House",
+      "month": "Any",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "westside",
+      "hood": "venice",
+      "where": "Venice",
+      "price": "",
+      "link": "https://maps.apple.com/?address=1915%20Lincoln%20Blvd,%20Venice,%20CA%2090291&q=Teddy%E2%80%99s%20Hot%20House"
+    },
+    {
+      "title": "Bodega + Palms",
+      "month": "New",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "westside",
+      "hood": "venice",
+      "where": "1915 Penmar Ave, Venice",
+      "price": "$",
+      "link": "https://bodegaandpalms.com/"
+    }
+  ],
+  "archive": [
+    {
+      "date": "Sep 8, 2026",
+      "title": "Tap Dance on Pointe",
+      "url": "https://haps.club/archive/2026-09-08-tap-dance-on-pointe/"
+    },
+    {
+      "date": "Sep 1, 2026",
+      "title": "The Long Weekend",
+      "url": "https://haps.club/archive/2026-09-01-long-weekend/"
+    },
+    {
+      "date": "Aug 21, 2026",
+      "title": "Tonight at Sunset",
+      "url": "https://haps.club/archive/2026-08-21-tonight-at-sunset/"
+    },
+    {
+      "date": "Aug 18, 2026",
+      "title": "Summer Time Fun All Week",
+      "url": "https://haps.club/archive/2026-08-18-summer-time-fun/"
+    },
+    {
+      "date": "Aug 11, 2026",
+      "title": "Let’s Stay Together",
+      "url": "https://haps.club/archive/2026-08-11-lets-stay-together/"
+    },
+    {
+      "date": "Aug 5, 2026",
+      "title": "One Friday, Two Nights",
+      "url": "https://haps.club/archive/2026-08-05-one-friday-two-nights/"
+    }
+  ],
+  "sponsor": {
+    "name": "Blackbird",
+    "blurb": "earn $FLY when you eat out in LA",
+    "cta": "Get $20 to start",
+    "link": "https://app.blackbird.xyz/r/bb-igyo61"
   },
-  {
-   "title": "Friday Night Wine Tastings at Hollyhock House",
-   "pill": "Food · Fri 9/11",
-   "tagline": "Wine on Frank Lloyd Wright's lawn.",
-   "meta": "Fri Sep 11 · Barnsdall Park, Los Feliz · ticketed",
-   "cta": "Book a tasting",
-   "link": "https://barnsdall.org/",
-   "tags": "food date",
-   "area": "eastside",
-   "ends": "20260911T220000"
-  }
- ],
- "events": [
-  {
-   "title": "LA Ballet at the Bowl",
-   "month": "SEP",
-   "day": "8",
-   "cat": "Culture",
-   "tags": "culture date",
-   "area": "hollywood",
-   "where": "Hollywood Bowl",
-   "price": "Varies",
-   "link": "https://www.hollywoodbowl.com/events/performances/4336/2026-09-08/los-angeles-ballet-at-the-bowl",
-   "starts": "20260908T200000",
-   "ends": "20260908T223000"
-  },
-  {
-   "title": "Ravel, Debussy & Saint-Saëns",
-   "month": "SEP",
-   "day": "10",
-   "cat": "Music",
-   "tags": "music date",
-   "area": "hollywood",
-   "where": "Hollywood Bowl",
-   "price": "Varies",
-   "link": "https://www.hollywoodbowl.com/events/performances/4338/2026-09-10/ravel-debussy-saint-saens",
-   "starts": "20260910T200000",
-   "ends": "20260910T223000"
-  },
-  {
-   "title": "Beer, A New Musical",
-   "month": "SEP",
-   "day": "10",
-   "cat": "Culture",
-   "tags": "culture date",
-   "area": "westside",
-   "where": "Theatricum Botanicum, Topanga",
-   "price": "$35",
-   "link": "https://app.arts-people.com/index.php?show=318047",
-   "starts": "20260910T193000",
-   "ends": "20260910T220000"
-  },
-  {
-   "title": "Downtown LA Art Walk",
-   "month": "SEP",
-   "day": "10",
-   "cat": "Culture",
-   "tags": "culture free",
-   "area": "dtla",
-   "where": "Spring & Main St, Historic Core",
-   "price": "Free",
-   "link": "https://www.downtownartwalk.org/",
-   "starts": "20260910T180000",
-   "ends": "20260910T220000"
-  },
-  {
-   "title": "Friday Night Wine Tastings at Hollyhock House",
-   "month": "SEP",
-   "day": "11",
-   "cat": "Food",
-   "tags": "food date",
-   "area": "eastside",
-   "where": "Barnsdall Park, Los Feliz",
-   "price": "Ticketed",
-   "link": "https://barnsdall.org/",
-   "ends": "20260911T220000"
-  },
-  {
-   "title": "Cinespia at Hollywood Forever",
-   "month": "SEP",
-   "day": "12",
-   "cat": "Culture",
-   "tags": "culture date",
-   "area": "hollywood",
-   "where": "Hollywood Forever Cemetery",
-   "price": "Ticketed",
-   "link": "https://cinespia.org/",
-   "ends": "20260912T235900"
-  },
-  {
-   "title": "CBVA Beach Volleyball at Ocean Park",
-   "month": "SEP",
-   "day": "13",
-   "cat": "Outdoors",
-   "tags": "outdoors free",
-   "area": "westside",
-   "where": "Ocean Park, Santa Monica",
-   "price": "Free",
-   "link": "https://cbva.com/tournaments/4795",
-   "ends": "20260913T190000"
-  },
-  {
-   "title": "Markets at the Villa",
-   "month": "SEP",
-   "day": "27",
-   "cat": "Food",
-   "tags": "food free",
-   "area": "citywide",
-   "where": "Toluca Lake",
-   "price": "Free",
-   "link": "https://www.marketsatthevilla.com/",
-   "ends": "20260927T180000"
-  },
-  {
-   "title": "Rooftop Cinema Club DTLA",
-   "month": "SEP",
-   "day": "29",
-   "cat": "Culture",
-   "tags": "culture date",
-   "area": "dtla",
-   "where": "LEVEL, Downtown",
-   "price": "Ticketed",
-   "link": "https://rooftopcinemaclub.com/los-angeles/",
-   "ends": "20260929T235900"
-  },
-  {
-   "title": "Wellness & Waves on the Santa Monica Pier",
-   "month": "OCT",
-   "day": "17",
-   "cat": "Outdoors",
-   "tags": "outdoors free",
-   "area": "westside",
-   "where": "Santa Monica Pier",
-   "price": "Free",
-   "link": "https://santamonicapier.org/wellness-and-waves/",
-   "ends": "20261017T100000"
-  },
-  {
-   "title": "MAUM Market at ROW DTLA",
-   "month": "Now",
-   "day": "•",
-   "cat": "Culture",
-   "tags": "culture free",
-   "area": "dtla",
-   "where": "ROW DTLA",
-   "price": "Free",
-   "link": "https://www.maummarket.com/"
-  },
-  {
-   "title": "Vandell",
-   "month": "New",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food date",
-   "area": "eastside",
-   "where": "Los Feliz",
-   "price": "",
-   "link": "https://www.instagram.com/vandell.la/"
-  },
-  {
-   "title": "Mic Drop karaoke lounge",
-   "month": "New",
-   "day": "★",
-   "cat": "Music",
-   "tags": "music date",
-   "area": "hollywood",
-   "where": "West Hollywood",
-   "price": "",
-   "link": "https://www.micdropkaraoke.com/"
-  },
-  {
-   "title": "Sunday Jazz at The World Stage",
-   "month": "Sun",
-   "day": "♪",
-   "cat": "Music",
-   "tags": "music",
-   "area": "midcity",
-   "where": "Leimert Park",
-   "price": "Ticketed",
-   "link": "https://www.leimertparkjazzfestival.org/sunday-jazz"
-  },
-  {
-   "title": "Alana's Open Mic",
-   "month": "Any",
-   "day": "•",
-   "cat": "Music",
-   "tags": "music free",
-   "area": "westside",
-   "where": "Mar Vista",
-   "price": "Free",
-   "link": "https://www.handstamp.com/e/alanas-open-mic-mar-vista-6b8yr5oj"
-  },
-  {
-   "title": "Cookie Queens",
-   "month": "New",
-   "day": "★",
-   "cat": "Culture",
-   "tags": "culture date",
-   "area": "citywide",
-   "where": "In theaters",
-   "price": "Ticketed",
-   "link": "https://www.ticketingcookiequeens.com/"
-  },
-  {
-   "title": "San Damián",
-   "month": "New",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "westside",
-   "where": "Venice",
-   "price": "",
-   "link": "https://damianrestaurants.com/san-damian/"
-  },
-  {
-   "title": "West Side Oyster Club",
-   "month": "New",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "westside",
-   "where": "Santa Monica",
-   "price": "",
-   "link": "https://www.westsideoysterclub.com/"
-  },
-  {
-   "title": "Venice Run Club — Long Run Saturday",
-   "month": "Sat",
-   "day": "•",
-   "cat": "Outdoors",
-   "tags": "outdoors free",
-   "area": "westside",
-   "where": "Venice",
-   "price": "Free",
-   "link": "https://venicerunclub.co/pages/schedule"
-  },
-  {
-   "title": "The Tasting Kitchen",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "westside",
-   "where": "Venice",
-   "price": "",
-   "link": "https://www.thetastingkitchen.com/"
-  },
-  {
-   "title": "Get on the water in the Marina",
-   "month": "Any",
-   "day": "★",
-   "cat": "Outdoors",
-   "tags": "outdoors",
-   "area": "westside",
-   "where": "Marina del Rey",
-   "price": "",
-   "link": "https://visitmdr.com/play/activities-marina-del-rey"
-  },
-  {
-   "title": "Jazz nightly at Sam First",
-   "month": "Now",
-   "day": "♪",
-   "cat": "Music",
-   "tags": "music",
-   "area": "westside",
-   "where": "Westchester",
-   "price": "2 sets nightly",
-   "link": "https://samfirstbar.com/"
-  },
-  {
-   "title": "Smorgasburg LA — Sundays",
-   "month": "Now",
-   "day": "•",
-   "cat": "Food",
-   "tags": "food free",
-   "area": "dtla",
-   "where": "DTLA",
-   "price": "",
-   "link": "https://la.smorgasburg.com/"
-  },
-  {
-   "title": "Alta Adams",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "midcity",
-   "where": "West Adams",
-   "price": "",
-   "link": "https://altaadams.com"
-  },
-  {
-   "title": "Cinnies at Grand Central Market",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "dtla",
-   "where": "DTLA",
-   "price": "",
-   "link": "https://www.grandcentralmarket.com"
-  },
-  {
-   "title": "Lielle",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "midcity",
-   "where": "Pico-Robertson",
-   "price": "",
-   "link": "https://www.lielle.la"
-  },
-  {
-   "title": "Runyon Canyon",
-   "month": "Any",
-   "day": "★",
-   "cat": "Outdoors",
-   "tags": "outdoors free",
-   "area": "hollywood",
-   "where": "Hollywood",
-   "price": "",
-   "link": "https://www.alltrails.com/parks/us/california/runyon-canyon-park"
-  },
-  {
-   "title": "Gjelina",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "westside",
-   "where": "Venice",
-   "price": "",
-   "link": "https://www.gjelina.com/"
-  },
-  {
-   "title": "Guelaguetza",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "midcity",
-   "where": "Koreatown",
-   "price": "",
-   "link": "https://www.google.com/maps/search/Guelaguetza+Restaurant+Los+Angeles"
-  },
-  {
-   "title": "Mh Zh",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "eastside",
-   "where": "Echo Park",
-   "price": "",
-   "link": "https://www.instagram.com/mh.zh/"
-  },
-  {
-   "title": "All Time",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "eastside",
-   "where": "Los Feliz",
-   "price": "",
-   "link": "https://www.alltimelosangeles.com/"
-  },
-  {
-   "title": "Tacos 1986",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "citywide",
-   "where": "Citywide",
-   "price": "",
-   "link": "https://www.tacos1986.com/"
-  },
-  {
-   "title": "Bavel",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food date",
-   "area": "dtla",
-   "where": "Arts District",
-   "price": "",
-   "link": "https://baveldtla.com/"
-  },
-  {
-   "title": "Phorage",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "westside",
-   "where": "Palms",
-   "price": "",
-   "link": "https://www.phoragela.com/"
-  },
-  {
-   "title": "Skylight Books",
-   "month": "Any",
-   "day": "★",
-   "cat": "Culture",
-   "tags": "culture free",
-   "area": "eastside",
-   "where": "Los Feliz",
-   "price": "",
-   "link": "https://www.skylightbooks.com/"
-  },
-  {
-   "title": "Escondido Falls",
-   "month": "Any",
-   "day": "★",
-   "cat": "Outdoors",
-   "tags": "outdoors free",
-   "area": "westside",
-   "where": "Malibu",
-   "price": "",
-   "link": "https://www.alltrails.com/trail/us/california/escondido-falls-trail"
-  },
-  {
-   "title": "Twentieth Street Garden",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food date",
-   "area": "westside",
-   "where": "Santa Monica",
-   "price": "",
-   "link": "https://www.twentiethstreetgarden.com/upcomingevents"
-  },
-  {
-   "title": "Teddy's Hot House",
-   "month": "Any",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "westside",
-   "where": "Venice",
-   "price": "",
-   "link": "https://maps.apple.com/?address=1915%20Lincoln%20Blvd,%20Venice,%20CA%2090291&q=Teddy%E2%80%99s%20Hot%20House"
-  },
-  {
-   "title": "Bodega + Palms",
-   "month": "New",
-   "day": "★",
-   "cat": "Food",
-   "tags": "food",
-   "area": "westside",
-   "where": "1915 Penmar Ave, Venice",
-   "price": "$",
-   "link": "https://bodegaandpalms.com/"
-  }
- ],
- "archive": [
-  {
-   "date": "Sep 8, 2026",
-   "title": "Tap Dance on Pointe",
-   "url": "https://haps.club/archive/2026-09-08-tap-dance-on-pointe/"
-  },
-  {
-   "date": "Sep 1, 2026",
-   "title": "The Long Weekend",
-   "url": "https://haps.club/archive/2026-09-01-long-weekend/"
-  },
-  {
-   "date": "Aug 21, 2026",
-   "title": "Tonight at Sunset",
-   "url": "https://haps.club/archive/2026-08-21-tonight-at-sunset/"
-  },
-  {
-   "date": "Aug 18, 2026",
-   "title": "Summer Time Fun All Week",
-   "url": "https://haps.club/archive/2026-08-18-summer-time-fun/"
-  },
-  {
-   "date": "Aug 11, 2026",
-   "title": "Let’s Stay Together",
-   "url": "https://haps.club/archive/2026-08-11-lets-stay-together/"
-  },
-  {
-   "date": "Aug 5, 2026",
-   "title": "One Friday, Two Nights",
-   "url": "https://haps.club/archive/2026-08-05-one-friday-two-nights/"
-  }
- ],
- "sponsor": {
-  "name": "Blackbird",
-  "blurb": "earn $FLY when you eat out in LA",
-  "cta": "Get $20 to start",
-  "link": "https://app.blackbird.xyz/r/bb-igyo61"
- },
- "plan": [
-  {
-   "title": "Ocean Way Festival",
-   "when": "Sep 26–27",
-   "accent": "purple",
-   "tagline": "Goldenvoice puts a festival on the sand.",
-   "meta": "The Beach at Santa Monica · The Killers, Jack White, Sublime, Khruangbin, Olivia Dean, Alvvays",
-   "cta": "Tickets",
-   "link": "https://www.axs.com/events/1459419/ocean-way-festival-tickets",
-   "tags": "music",
-   "area": "westside",
-   "ends": "20260927T230000"
-  },
-  {
-   "title": "The Other Art Fair",
-   "when": "Sep 24–27",
-   "accent": "blue",
-   "tagline": "160 independent artists in a hangar.",
-   "meta": "Barker Hangar, Santa Monica · advance pricing through Sep 18 · DJs and a full bar",
-   "cta": "Tickets",
-   "link": "https://www.theotherartfair.com/la/",
-   "tags": "culture",
-   "area": "westside",
-   "ends": "20260927T180000"
-  },
-  {
-   "title": "Día de los Muertos at Hollywood Forever",
-   "when": "Sat Oct 24",
-   "accent": "orange",
-   "tagline": "The 27th year, noon to midnight.",
-   "meta": "Hollywood Forever · timed entry at 12, 4 and 7 · altars, procession, costume contest",
-   "cta": "Tickets",
-   "link": "https://www.ladayofthedead.com/event-info/",
-   "tags": "culture",
-   "area": "hollywood",
-   "ends": "20261024T235900"
-  },
-  {
-   "title": "Camp Flog Gnaw",
-   "when": "Nov 14–15",
-   "accent": "red",
-   "tagline": "Tyler's carnival, back at the stadium.",
-   "meta": "Dodger Stadium · two-day GA from $415 · general admission sold out, waitlist open",
-   "cta": "Join the waitlist",
-   "link": "https://www.campfloggnaw.com/",
-   "tags": "music",
-   "area": "dtla",
-   "ends": "20261115T235900"
-  }
- ]
+  "plan": [
+    {
+      "title": "Ocean Way Festival",
+      "when": "Sep 26–27",
+      "accent": "purple",
+      "tagline": "Goldenvoice puts a festival on the sand.",
+      "meta": "The Beach at Santa Monica · The Killers, Jack White, Sublime, Khruangbin, Olivia Dean, Alvvays",
+      "cta": "Tickets",
+      "link": "https://www.axs.com/events/1459419/ocean-way-festival-tickets",
+      "tags": "music",
+      "area": "westside",
+      "ends": "20260927T230000"
+    },
+    {
+      "title": "The Other Art Fair",
+      "when": "Sep 24–27",
+      "accent": "blue",
+      "tagline": "160 independent artists in a hangar.",
+      "meta": "Barker Hangar, Santa Monica · advance pricing through Sep 18 · DJs and a full bar",
+      "cta": "Tickets",
+      "link": "https://www.theotherartfair.com/la/",
+      "tags": "culture",
+      "area": "westside",
+      "ends": "20260927T180000"
+    },
+    {
+      "title": "Día de los Muertos at Hollywood Forever",
+      "when": "Sat Oct 24",
+      "accent": "orange",
+      "tagline": "The 27th year, noon to midnight.",
+      "meta": "Hollywood Forever · timed entry at 12, 4 and 7 · altars, procession, costume contest",
+      "cta": "Tickets",
+      "link": "https://www.ladayofthedead.com/event-info/",
+      "tags": "culture",
+      "area": "hollywood",
+      "ends": "20261024T235900"
+    },
+    {
+      "title": "Camp Flog Gnaw",
+      "when": "Nov 14–15",
+      "accent": "red",
+      "tagline": "Tyler's carnival, back at the stadium.",
+      "meta": "Dodger Stadium · two-day GA from $415 · general admission sold out, waitlist open",
+      "cta": "Join the waitlist",
+      "link": "https://www.campfloggnaw.com/",
+      "tags": "music",
+      "area": "dtla",
+      "ends": "20261115T235900"
+    }
+  ]
 }
