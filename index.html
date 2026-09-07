@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://haps.club/assets/og-card.png">
 <link rel="icon" href="https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 <link rel="stylesheet" href="assets/sunset.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Haps Club","url":"https://haps.club/","description":"Everything worth leaving the house for in LA this week — hand-picked, free weekly newsletter every Tuesday.","publisher":{"@type":"Organization","name":"Haps Club","url":"https://haps.club/","logo":"https://res.cloudinary.com/dimlqawuh/image/upload/v1780177972/haps-club-events/haps-club-logo-color-svg.svg"}}</script>
 <!-- Google tag (gtag.js) -->
@@ -31,7 +31,7 @@
 </head>
 <body>
 
-<a class="annbar" id="annbar" href="#" style="display:none"></a>
+<a class="annbar" id="annbar" href="#subscribe">Free every Tuesday: the best of LA this week, hand-picked. Subscribe →</a>
 
 <header class="nav">
   <div class="wrap">
@@ -56,15 +56,16 @@
       <a class="btn btn-w" href="#subscribe">Get the newsletter</a>
       <a class="btn btn-g" href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Open the calendar</a>
     </div>
-    <div class="stats" id="stats"></div>
-    <div><span class="spon-line" id="sponline" style="display:none"></span></div>
+    <div class="stats" id="stats"><div class="stat"><b>&nbsp;</b><span>picks this week</span></div><div class="stat"><b>&nbsp;</b><span>free picks</span></div><div class="stat"><b>Tue</b><span>every week, 7am</span></div></div>
+    <div class="spon-slot"><span class="spon-line" id="sponline" style="visibility:hidden">&nbsp;</span></div>
   </div>
 </div>
 
+<main>
 <section id="featured">
   <div class="wrap">
     <div class="shead">
-      <div><p class="kicker k" style="color:var(--red)">Haps picks</p><h2>Featured this week</h2></div>
+      <div><p class="kicker k" style="color:var(--red-txt)">Haps picks</p><h2>Featured this week</h2></div>
       <a class="more" href="#week" id="seeall"></a>
     </div>
     <div class="feat" id="feat"></div>
@@ -136,6 +137,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <div class="cols">
@@ -186,7 +188,7 @@ function render(){
   var now=new Date();
   var ann=DATA.announcement;
   if(ann&&ann.text&&(!ann.ends||stamp(ann.ends)>now)){
-    var ab=document.getElementById("annbar"); ab.textContent=ann.text; ab.href=ann.link||"#"; ab.target="_blank"; ab.rel="noopener"; ab.style.display="block";
+    var ab=document.getElementById("annbar"); ab.textContent=ann.text; ab.href=ann.link||"#"; ab.target="_blank"; ab.rel="noopener";
   }
   if(DATA.weekLabel)document.getElementById("weeklabel").textContent=DATA.weekLabel;
 
@@ -206,7 +208,7 @@ function render(){
     el.innerHTML='Sponsored by <b>'+esc(sp.name)+'</b>'+
       (sp.blurb?' <span class="spon-blurb">· '+esc(sp.blurb)+'</span>':'')+
       (sp.link?' <a href="'+esc(sp.link)+'" target="_blank" rel="noopener">'+esc(sp.cta||'Learn more')+'</a>':'');
-    el.style.display="inline-flex";
+    el.style.visibility="visible";
   }
 
   var fhtml="";
@@ -253,13 +255,13 @@ function render(){
     var t=firstTag(e), price=e.price?'<span class="price'+(/^free$/i.test(e.price)?' free':'')+'">'+esc(e.price)+'</span>':"";
     return '<a class="row" href="'+esc(e.link)+'" target="_blank" rel="noopener">'+
       '<div class="date"><div class="d">'+esc(e.day)+'</div><div class="m">'+esc(e.month)+'</div></div>'+
-      '<div><h4>'+esc(e.title)+'</h4><p class="meta">'+esc(e.cat)+' · '+esc(e.where)+'</p></div>'+
+      '<div><h3>'+esc(e.title)+'</h3><p class="meta">'+esc(e.cat)+' · '+esc(e.where)+'</p></div>'+
       '<div class="rside">'+price+'<span class="stripe s-'+t+'"></span></div></a>';
   }).join("");
   document.getElementById("empty").style.display=shown.length?"none":"block";
 
   document.getElementById("arch").innerHTML=DATA.archive.slice(0,4).map(function(a){
-    return '<a class="acard" href="'+esc(a.url)+'"><span class="pill p-bg">'+esc(a.date)+'</span><h4>'+esc(a.title)+'</h4><span class="rd">Read issue →</span></a>';
+    return '<a class="acard" href="'+esc(a.url)+'"><span class="pill p-bg">'+esc(a.date)+'</span><h3>'+esc(a.title)+'</h3><span class="rd">Read issue →</span></a>';
   }).join("");
 }
 

@@ -11,7 +11,7 @@
   --gray:#86868B; --gray2:#A1A1A6; --gray3:#6E6E73;
   --bg:#F5F5F7; --card:#FFFFFF; --hair:#E8E8ED;
   --red:#FF3B30; --orange:#FF9500; --green:#34C759;
-  --blue:#007AFF; --purple:#AF52DE; --navy:#292F71;
+  --blue:#007AFF; --purple:#AF52DE; --navy:#292F71; --red-txt:#D70015;
   --grad-sunset:linear-gradient(135deg,#FF9500 0%,#FF3B30 38%,#AF52DE 72%,#292F71 100%);
   --grad-lead:linear-gradient(160deg,#FFF1E6 0%,#FFEAF0 100%);
   --grad-navy:linear-gradient(135deg,#292F71 0%,#5A45B0 55%,#AF52DE 100%);

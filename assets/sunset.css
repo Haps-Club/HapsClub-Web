@@ -8,7 +8,7 @@
   --gray:#86868B; --gray2:#A1A1A6; --gray3:#6E6E73;
   --bg:#F5F5F7; --card:#FFFFFF; --hair:#E8E8ED;
   --red:#FF3B30; --orange:#FF9500; --green:#34C759;
-  --blue:#007AFF; --purple:#AF52DE; --navy:#292F71;
+  --blue:#007AFF; --purple:#AF52DE; --navy:#292F71; --red-txt:#D70015;
   --grad-sunset:linear-gradient(135deg,#FF9500 0%,#FF3B30 38%,#AF52DE 72%,#292F71 100%);
   --grad-lead:linear-gradient(160deg,#FFF1E6 0%,#FFEAF0 100%);
   --grad-navy:linear-gradient(135deg,#292F71 0%,#5A45B0 55%,#AF52DE 100%);
@@ -47,9 +47,10 @@ img{max-width:100%}
 .btn{display:inline-block;padding:15px 30px;border-radius:999px;font-size:16px;font-weight:600;text-decoration:none;letter-spacing:-.2px;border:0;cursor:pointer;font-family:inherit}
 .btn-w{background:#fff;color:var(--navy)}
 .btn-g{background:rgba(255,255,255,.16);color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
-.stats{display:flex;gap:34px;justify-content:center;margin-top:42px;flex-wrap:wrap}
-.stat b{display:block;font-size:26px;font-weight:800;letter-spacing:-1px}
+.stats{display:flex;gap:34px;justify-content:center;margin-top:42px;flex-wrap:wrap;min-height:50px}
+.stat b{display:block;min-height:32px;font-size:26px;font-weight:800;letter-spacing:-1px}
 .stat span{font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;opacity:.8}
+.spon-slot{min-height:62px}
 .spon-line{margin:26px auto 0;font-size:13px;line-height:20px;font-weight:500;letter-spacing:-.1px;
   color:rgba(255,255,255,.82);display:inline-flex;align-items:center;gap:8px;
   background:rgba(255,255,255,.14);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);
@@ -64,7 +65,7 @@ section[id],div[id]{scroll-margin-top:108px}
 .shead{display:flex;align-items:flex-end;gap:14px;margin-bottom:22px}
 .shead h2{margin:0;font-size:34px;line-height:1.05;font-weight:800;letter-spacing:-1.4px}
 .shead .k{margin:0 0 4px}
-.shead .more{margin-left:auto;font-size:15px;font-weight:600;color:var(--red);text-decoration:none;letter-spacing:-.2px;white-space:nowrap}
+.shead .more{margin-left:auto;font-size:15px;font-weight:600;color:var(--red-txt);text-decoration:none;letter-spacing:-.2px;white-space:nowrap}
 
 /* ---------- pills ---------- */
 .pill{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.3px;padding:5px 12px;border-radius:999px;margin:0 6px 6px 0}
@@ -74,7 +75,7 @@ section[id],div[id]{scroll-margin-top:108px}
 .p-w{background:#fff;color:var(--gray)}.p-bg{background:var(--bg);color:var(--gray)}
 
 /* ---------- featured ---------- */
-.feat{display:grid;grid-template-columns:1.35fr 1fr;gap:18px}
+.feat{display:grid;grid-template-columns:1.35fr 1fr;gap:18px;min-height:428px}
 .fcol{display:grid;gap:18px;align-content:start}
 .card{background:var(--card);border-radius:var(--r);padding:28px 30px;text-decoration:none;color:inherit;display:block;transition:transform .18s ease}
 .card:hover{transform:translateY(-3px)}
@@ -120,7 +121,7 @@ section[id],div[id]{scroll-margin-top:108px}
 .date{text-align:center}
 .date .d{font-size:30px;font-weight:800;letter-spacing:-1.2px;line-height:1}
 .date .m{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--gray);margin-top:4px}
-.row h4{margin:0;font-size:20px;font-weight:700;letter-spacing:-.5px;line-height:25px}
+.row h3{margin:0;font-size:20px;font-weight:700;letter-spacing:-.5px;line-height:25px}
 .row .meta{margin:6px 0 0}
 .rside{display:flex;align-items:center;gap:18px}
 .price{font-size:15px;font-weight:700;letter-spacing:-.3px;white-space:nowrap}
@@ -147,8 +148,8 @@ section[id],div[id]{scroll-margin-top:108px}
 .arch{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
 .acard{background:#fff;border-radius:var(--r-sm);padding:22px 24px;text-decoration:none;color:inherit;transition:transform .18s ease}
 .acard:hover{transform:translateY(-2px)}
-.acard h4{margin:8px 0 0;font-size:18px;font-weight:700;letter-spacing:-.5px;line-height:23px}
-.acard .rd{display:block;margin-top:10px;font-size:13px;font-weight:600;color:var(--red)}
+.acard h3{margin:8px 0 0;font-size:18px;font-weight:700;letter-spacing:-.5px;line-height:23px}
+.acard .rd{display:block;margin-top:10px;font-size:13px;font-weight:600;color:var(--red-txt)}
 
 /* ---------- footer ---------- */
 footer{margin-top:60px;background:var(--ink);color:var(--gray2);padding:46px 0 40px}
@@ -162,7 +163,7 @@ footer .cols a:hover{color:#fff}
 
 /* ---------- responsive ---------- */
 @media(max-width:860px){
-  .feat{grid-template-columns:1fr}
+  .feat{grid-template-columns:1fr;min-height:0}
   .plan{grid-template-columns:repeat(2,1fr)}
   .arch{grid-template-columns:repeat(2,1fr)}
   .nav nav{display:none}
