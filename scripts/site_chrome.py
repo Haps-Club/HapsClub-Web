@@ -11,7 +11,12 @@ Everything now comes from here:
 So change the nav or the footer HERE, then run both scripts. Never hand-edit
 a <header> or <footer> in a page file — the next build will overwrite it.
 
-DOM order inside .snav-in / .nav .wrap is load-bearing:
+There is ONE shell on every page: <header class="nav"><div class="navbar">.
+The old .snav / .snav-in subpage variant is gone, and so is the duplicated
+CSS that went with it -- the header and footer are defined once, in
+assets/chrome.css, which normalize_chrome.py links into every page.
+
+DOM order inside .navbar is load-bearing:
     brand, navtog, nav, navcta, burger
 The CSS drawer is `.navtog:checked ~ nav`, so nav and burger must both come
 AFTER the checkbox, and navcta sits outside nav so Subscribe stays reachable
@@ -55,6 +60,8 @@ FOOTER_COLS = [
               ("Contact", "mailto:michael@haps.club", False)]),
 ]
 
+CHROME_CSS = '<link rel="stylesheet" href="/assets/chrome.css">'
+
 TAGLINE = "Everything worth leaving the house for, in Los Angeles."
 COPYRIGHT = "&copy; 2026 Haps Club &middot; Made by hand in Los Angeles"
 
@@ -69,17 +76,16 @@ def _href(h, absolute):
     return SITE + h
 
 
-def header(active="", absolute=True, shell="snav"):
+def header(active="", absolute=True):
     """active: the NAV_ITEMS href to mark as current, e.g. '/guides/'."""
-    inner = "wrap" if shell == "nav" else "snav-in"
     links = ""
     for label, h, ext in NAV_ITEMS:
         cls = ' class="on"' if active and h == active else ""
         rel = ' target="_blank" rel="noopener"' if ext else ""
         links += f'<a href="{_href(h, absolute)}"{rel}{cls}>{label}</a>'
-    sub = _href("/subscribe", absolute) if absolute else "#subscribe"
+    sub = _href("/subscribe", absolute)
     return (
-        f'<header class="{shell}"><div class="{inner}">'
+        f'<header class="nav"><div class="navbar">'
         f'<a class="brand" href="{_href("/", absolute)}" aria-label="Haps Club home">'
         f'<img class="logo" src="{LOGO}" alt="Haps Club" '
         f'width="{LOGO_W}" height="{LOGO_H}"></a>'
@@ -104,7 +110,7 @@ def footer(absolute=True):
         cols += f'\n      <div><h5>{head}</h5>{rows}\n      </div>'
     return (
         '<footer>\n'
-        '  <div class="wrap">\n'
+        '  <div class="footin">\n'
         '    <div class="cols">\n'
         '      <div class="fcol-brand">\n'
         '        <div class="fbrand">Haps Club</div>\n'

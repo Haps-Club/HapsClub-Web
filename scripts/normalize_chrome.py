@@ -23,11 +23,16 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = ("events", "planner", "planner-svetlana", "partnership", ".git")
 
 HEADER_RE = re.compile(r'<header class="(?:snav|nav)"[^>]*>.*?</header>', re.S)
+CHROME_LINK = '<link rel="stylesheet" href="/assets/chrome.css">'
+CHROME_RE = re.compile(r'[ \t]*<link[^>]+assets/chrome\.css[^>]*>\n?')
+# chrome.css must load BEFORE the page stylesheet so page rules can still win
+PAGE_CSS_RE = re.compile(r'([ \t]*)(<link[^>]+assets/sunset(?:-pages)?\.css[^>]*>)')
 FOOTER_RE = re.compile(r'<footer[^>]*>.*?</footer>', re.S)
 
 # Which nav item to mark current, by path prefix. Longest match wins.
 ACTIVE = [("guides/", "/guides/"), ("archive/", "/archive/"),
-          ("about.html", "/about"), ("subscribe.html", "/subscribe")]
+          ("about.html", "/about"), ("subscribe.html", "/subscribe"),
+          ("index.html", "/#week")]
 
 
 def active_for(rel):
@@ -35,6 +40,16 @@ def active_for(rel):
         if rel.startswith(prefix) or rel == prefix:
             return href
     return ""
+
+
+def ensure_chrome_link(src):
+    """Link assets/chrome.css immediately before the page stylesheet."""
+    src = CHROME_RE.sub("", src)
+    m = PAGE_CSS_RE.search(src)
+    if not m:
+        return src
+    indent = m.group(1)
+    return src[:m.start()] + indent + CHROME_LINK + "\n" + indent + m.group(2) + src[m.end():]
 
 
 def pages():
@@ -53,14 +68,11 @@ def main(check=False):
         src = open(path, encoding="utf-8").read()
         if not HEADER_RE.search(src):
             continue                      # bespoke page, not ours
-        home = rel == "index.html"
-        new = HEADER_RE.sub(
-            lambda m: sc.header(active=active_for(rel), absolute=not home,
-                                shell="nav" if home else "snav"),
-            src, count=1)
+        new = ensure_chrome_link(src)
+        new = HEADER_RE.sub(lambda m: sc.header(active=active_for(rel)),
+                            new, count=1)
         if FOOTER_RE.search(new):
-            new = FOOTER_RE.sub(lambda m: sc.footer(absolute=not home),
-                                new, count=1)
+            new = FOOTER_RE.sub(lambda m: sc.footer(), new, count=1)
         if new == src:
             continue
         stale.append(rel)

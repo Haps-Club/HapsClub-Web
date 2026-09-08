@@ -187,13 +187,6 @@ a.row:hover,a.link:hover{transform:translateY(-2px)}
 .sponsor-strip .inner{background:var(--card);border-radius:var(--r);padding:24px 28px;
   font-size:15px;line-height:24px;color:var(--ink2)}
 
-/* ---------- footer ---------- */
-footer{margin-top:56px;background:var(--ink);color:var(--gray2);padding:40px 24px 36px;
-  display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;text-align:center}
-footer a{font-size:14px;line-height:26px;color:var(--gray2);text-decoration:none;font-weight:500}
-footer a:hover{color:#fff}
-footer .made{flex-basis:100%;margin-top:14px;font-size:12px;color:var(--gray3)}
-
 /* ---------- responsive ---------- */
 @media(max-width:860px){
   section[id],div[id]{scroll-margin-top:88px}
@@ -241,28 +234,7 @@ svg.ic.go,svg.ic.arr{margin-left:auto;align-self:center;color:var(--red)}
    Additive only: every selector below is new, nothing above is touched.
    ================================================================== */
 
-/* ---- sitewide nav (mirrors the homepage .nav in sunset.css) ---- */
-.snav{position:sticky;top:0;z-index:50;background:rgba(245,245,247,.72);
-  backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);
-  border-bottom:1px solid rgba(0,0,0,.06)}
-.snav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:28px;height:96px}
-.snav .brand{display:flex;align-items:center;text-decoration:none;flex:none}
-.snav .brand img{height:84px;width:auto;display:block;margin:6px 0}
-.snav nav{display:flex;gap:24px;margin-left:auto;align-items:center}
-.snav nav a{font-size:14px;font-weight:500;color:var(--ink3);text-decoration:none;letter-spacing:-.1px;white-space:nowrap}
-.snav nav a:hover{color:var(--red)}
-.snav nav a.on{color:var(--ink);font-weight:700}
-.snav .navcta{background:var(--red);color:#fff!important;font-weight:600;padding:8px 18px;border-radius:999px;letter-spacing:-.2px}
-.snav .navcta:hover{background:var(--red-txt)}
-@media(max-width:860px){
-  .snav-in{height:60px;gap:12px;padding:0 16px}
-  .snav .brand img{height:44px;margin:3px 0}
-  .snav nav{gap:14px}
-  .snav nav a.sm-hide{display:none}
-  .snav nav a{font-size:13px}
-  .snav .navcta{padding:7px 14px}
-}
-
+/* the sitewide nav lives in assets/chrome.css */
 /* ---- category colour + icon system ---- */
 .cat-food{--c:var(--orange)}    .cat-drink{--c:var(--red)}
 .cat-coffee{--c:var(--orange)}  .cat-art{--c:var(--purple)}
@@ -391,74 +363,17 @@ a.place:hover{border-color:var(--c,var(--gray2))}
   stroke-linecap:round;stroke-linejoin:round}
 
 /* ---- mobile drawer nav ---- */
-.navtog{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-.burger{display:none}
-@media(max-width:860px){
-  .burger{display:flex;flex-direction:column;justify-content:center;gap:5px;margin-left:auto;
-    width:44px;height:44px;padding:11px;cursor:pointer;border-radius:12px}
-  .burger span{display:block;height:2px;width:100%;background:var(--ink);border-radius:2px;
-    transition:transform .2s ease,opacity .15s ease}
-  .snav nav{position:absolute;left:0;right:0;top:100%;display:none;flex-direction:column;
-    align-items:stretch;gap:0;margin-left:0;padding:4px 16px 16px;background:var(--card);
-    border-bottom:1px solid var(--hair);box-shadow:0 14px 26px rgba(0,0,0,.07)}
-  .navtog:checked ~ nav{display:flex}
-  .navtog:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .navtog:checked ~ .burger span:nth-child(2){opacity:0}
-  .navtog:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .snav nav a{font-size:16px;padding:14px 2px;border-bottom:1px solid var(--hair)}
-  .snav nav a.sm-hide{display:block}
-  .snav .navcta{margin-top:14px;padding:13px;text-align:center;border-bottom:0;font-size:15px}
-}
-
 /* ---- reading rhythm: tighter lines, clearer paragraph breaks ---- */
 .wrap.wide .body p{line-height:25px}
 .wrap.wide .intro p{line-height:26px}
 .wrap.wide .body + .body{margin-top:15px}
 
-/* ============================================================
-   v4 — chrome parity with the homepage, one measure for content
-   ------------------------------------------------------------
-   Header: .snav already matched .nav pixel-for-pixel at desktop;
-   what differed was the responsive steps and the link set. Both
-   are aligned here. Markup comes from scripts/site_chrome.py.
-   Footer: the thin centred link row is replaced by the homepage's
-   four-column footer, so every page on the site ends the same way.
-   Content: every block inside .wrap.wide shares one 764px measure
-   (~72 characters) instead of prose at 764 and everything else at
-   1080, which left a dead gutter down the right of the page.
-   ============================================================ */
+/* The header and footer now live in assets/chrome.css, loaded before
+   this file on every page. Do not redefine them here. */
 
-/* --- footer --- */
-footer{margin-top:60px;background:var(--ink);color:var(--gray2);
-  padding:46px 0 40px;display:block;text-align:left}
-footer .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-footer .cols{display:flex;gap:60px;flex-wrap:wrap}
-footer .fcol-brand{flex:1;min-width:200px}
-footer h5{margin:0 0 12px;font-size:11px;font-weight:700;letter-spacing:.7px;
-  text-transform:uppercase;color:#fff}
-footer .cols a{display:block;font-size:14px;line-height:26px;
-  color:var(--gray2);text-decoration:none;font-weight:500}
-footer .cols a:hover{color:#fff}
-footer .fbrand{font-size:22px;font-weight:800;letter-spacing:-.8px;color:#fff}
-footer .fabout{font-size:14px;line-height:23px;max-width:260px;margin:10px 0 0}
-footer .fbot{margin-top:34px;padding-top:22px;border-top:1px solid #333;
-  font-size:12px;color:var(--gray3)}
-@media(max-width:600px){footer .cols{gap:28px}footer .fcol-brand{min-width:100%}}
-
-/* --- header: same responsive steps as the homepage --- */
 @media(max-width:860px){
-  .snav-in{height:76px;gap:12px;padding:0 16px}
-  .snav .brand img{height:64px;margin:4px 0}
-  .snav nav a:last-child{border-bottom:0}
   /* Subscribe stays in the bar next to the burger, not in the drawer */
-  .snav .navcta{margin-top:0;margin-left:auto;order:0}
 }
-@media(max-width:480px){
-  .snav-in{height:62px}
-  .snav .brand img{height:46px;margin:4px 0}
-  .snav .navcta{padding:7px 15px;font-size:13px}
-}
-
 /* --- one measure for every content block ------------------
    Measured, not guessed: at 764px the 16px body copy ran 89
    characters a line and the 17px intro ran 92. The readable

@@ -171,6 +171,7 @@ def head(title, desc, url, ld, og_type="article", active="/guides/", robots=None
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{GA}");</script>
 <script type="application/ld+json">{ld}</script>
+{site_chrome.CHROME_CSS}
 <link rel="stylesheet" href="/assets/sunset-pages.css">
 </head>
 <body>
