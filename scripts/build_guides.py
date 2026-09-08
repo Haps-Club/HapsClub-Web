@@ -498,7 +498,7 @@ def build_museums():
                 ("Commonly wrong","5 listings"),("Re-checked","First Monday monthly")])
     b += jump([("Always free","always","museum"),("Set days","set-days","clock"),
                ("Reservation traps","traps","ticket"),("Get these wrong","wrong","art")])
-    b += intro(["Most free-museum lists for Los Angeles are wrong in the same three ways: they include a museum that closed in 2020, they list free days for a museum shut for renovation until 2027, and they get the Autry's free day wrong.",
+    b += intro(["Most free-museum lists for Los Angeles are wrong in the same three ways: they include a museum that closed in 2020, they list free days for a museum that is shut for renovation, and they get the Autry's free day wrong.",
                 "This page is re-checked at the start of every month against each museum's own website, never against another list."])
     b += sec(icon("museum")+" The short answer","Eight museums are free every day they are open.",
         ["The Broad, the Getty Center, the Getty Villa, the Hammer, MOCA Grand Avenue, the California Science Center, Griffith Observatory and the Fowler at UCLA.",
