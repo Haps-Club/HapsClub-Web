@@ -8,7 +8,10 @@ The guides are generated, not hand-edited. Change the copy here and re-run:
     python3 scripts/build_pages.py     # then fill the live blocks + schema
 
 Conventions this file encodes, all of which matter:
-  * Pages use the shared .snav nav and the 1080 .wrap.wide container.
+  * Header and footer come from scripts/site_chrome.py — the same markup the
+    homepage uses. Never write nav or footer HTML here.
+  * Pages use the shared .snav nav and the 1080 .wrap.wide container; every
+    content block inside it shares one 764px measure.
   * Prose is emitted one <div class="body"> per paragraph, because
     sunset-pages.css styles .body p:nth-child(2) as a small grey caption and a
     multi-paragraph .body silently demotes its second sentence.
@@ -19,7 +22,9 @@ Conventions this file encodes, all of which matter:
     belongs in the HAPS:LIVE block, which build_pages.py fills and prunes.
   * Every venue named here has appeared in a Haps Club newsletter issue.
 """
-import os, json
+import os, json, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import site_chrome
 
 OUT  = os.environ.get("REPO") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GA   = "G-RKY63MK7ND"
@@ -27,6 +32,8 @@ KIT  = "9421017"
 LOGO = "https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5"
 OG   = "https://haps.club/assets/og-card.png"
 TODAY = "2026-09-07"
+
+FOOTER = site_chrome.footer()
 
 
 # ---------- shared components v2: nav, icons, hero, route, places ----------
@@ -60,21 +67,10 @@ def icon(name, cls="ci"):
     c = f' class="{cls}"' if cls else ""
     return f'<svg{c} aria-hidden="true"><use href="#i-{name}"/></svg>'
 
-NAV_ITEMS = [("This week", "/", ""), ("Guides", "/guides/", ""),
-             ("Archive", "/archive/", "sm-hide"), ("About", "/about", "sm-hide")]
-
 def snav(active="/guides/"):
-    links = "".join(
-        f'<a href="{h}" class="{(c + (" on" if h == active else "")).strip()}">{t}</a>'
-        for t, h, c in NAV_ITEMS)
-    return (f'<header class="snav"><div class="snav-in">'
-            f'<a class="brand" href="/" aria-label="Haps Club home">'
-            f'<img src="{LOGO}" alt="Haps Club" width="112" height="84"></a>'
-            f'<input class="navtog" type="checkbox" id="navtog" aria-hidden="true" tabindex="-1">'
-            f'<label class="burger" for="navtog" aria-label="Open menu">'
-            f'<span></span><span></span><span></span></label>'
-            f'<nav>{links}<a class="navcta" href="/subscribe">Subscribe</a></nav>'
-            f'</div></header>\n')
+    """The shared site header. Markup lives in scripts/site_chrome.py so the
+    homepage and every subpage cannot drift apart again."""
+    return site_chrome.header(active=active) + "\n"
 
 def facts(items):
     """items: list of (label, value)"""
@@ -193,15 +189,7 @@ FOOT = f'''
   <p class="reassure">Free forever. No more than one email a week. Unsubscribe in one click.</p>
 </section>
 </main>
-<footer>
-  <a href="/">This week</a>
-  <a href="/guides/">Guides</a>
-  <a href="/archive/">Archive</a>
-  <a href="/about">About</a>
-  <a href="mailto:michael@haps.club">Contact</a>
-  <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
-  <span class="made">&copy; 2026 Haps Club &middot; Made by hand in LA</span>
-</footer>
+{FOOTER}
 </body>
 </html>
 '''

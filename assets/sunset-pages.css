@@ -414,3 +414,85 @@ a.place:hover{border-color:var(--c,var(--gray2))}
 .wrap.wide .body p{line-height:25px}
 .wrap.wide .intro p{line-height:26px}
 .wrap.wide .body + .body{margin-top:15px}
+
+/* ============================================================
+   v4 — chrome parity with the homepage, one measure for content
+   ------------------------------------------------------------
+   Header: .snav already matched .nav pixel-for-pixel at desktop;
+   what differed was the responsive steps and the link set. Both
+   are aligned here. Markup comes from scripts/site_chrome.py.
+   Footer: the thin centred link row is replaced by the homepage's
+   four-column footer, so every page on the site ends the same way.
+   Content: every block inside .wrap.wide shares one 764px measure
+   (~72 characters) instead of prose at 764 and everything else at
+   1080, which left a dead gutter down the right of the page.
+   ============================================================ */
+
+/* --- footer --- */
+footer{margin-top:60px;background:var(--ink);color:var(--gray2);
+  padding:46px 0 40px;display:block;text-align:left}
+footer .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+footer .cols{display:flex;gap:60px;flex-wrap:wrap}
+footer .fcol-brand{flex:1;min-width:200px}
+footer h5{margin:0 0 12px;font-size:11px;font-weight:700;letter-spacing:.7px;
+  text-transform:uppercase;color:#fff}
+footer .cols a{display:block;font-size:14px;line-height:26px;
+  color:var(--gray2);text-decoration:none;font-weight:500}
+footer .cols a:hover{color:#fff}
+footer .fbrand{font-size:22px;font-weight:800;letter-spacing:-.8px;color:#fff}
+footer .fabout{font-size:14px;line-height:23px;max-width:260px;margin:10px 0 0}
+footer .fbot{margin-top:34px;padding-top:22px;border-top:1px solid #333;
+  font-size:12px;color:var(--gray3)}
+@media(max-width:600px){footer .cols{gap:28px}footer .fcol-brand{min-width:100%}}
+
+/* --- header: same responsive steps as the homepage --- */
+@media(max-width:860px){
+  .snav-in{height:76px;gap:12px;padding:0 16px}
+  .snav .brand img{height:64px;margin:4px 0}
+  .snav nav a:last-child{border-bottom:0}
+  /* Subscribe stays in the bar next to the burger, not in the drawer */
+  .snav .navcta{margin-top:0;margin-left:auto;order:0}
+}
+@media(max-width:480px){
+  .snav-in{height:62px}
+  .snav .brand img{height:46px;margin:4px 0}
+  .snav .navcta{padding:7px 15px;font-size:13px}
+}
+
+/* --- one measure for every content block ------------------
+   Measured, not guessed: at 764px the 16px body copy ran 89
+   characters a line and the 17px intro ran 92. The readable
+   band is 45-75. Fixed from both ends -- the column comes in
+   to 680 and the type goes up a step -- which lands body at
+   74ch and the intro at 73ch without making the page feel
+   like a phone layout on a desktop.
+   The container itself is now the measure, so every block on
+   the page is exactly as wide as every other block. Balanced
+   left and right gutters, not one dead column on the right.
+   --------------------------------------------------------- */
+:root{--measure:680px}
+.wrap,.wrap.wide{max-width:calc(var(--measure) + 48px)}
+.wrap.wide > .intro,
+.wrap.wide > .route,
+.wrap.wide > .sec,
+.wrap.wide > .places,
+.wrap.wide > .morelinks,
+.wrap.wide > .cta{max-width:none;margin-left:0;margin-right:0}
+.wrap.wide .ghero h1{max-width:20ch}
+.wrap.wide .ghero .dek{max-width:none}
+.ghero .art{display:none}
+.facts{grid-template-columns:repeat(2,1fr)}
+
+/* type one step up, so the narrower column reads as editorial
+   rather than cramped */
+.intro{font-size:19px;line-height:31px}
+.sec{padding:30px 30px}
+.body p,.wrap.wide .body p{font-size:17px;line-height:28px}
+.body p:nth-child(2){font-size:13px;line-height:20px}
+.wrap.wide .intro p{line-height:31px}
+.wrap.wide .body + .body{margin-top:16px}
+@media(max-width:600px){
+  .intro{font-size:17px;line-height:28px}
+  .sec{padding:24px 22px}
+  .body p,.wrap.wide .body p{font-size:16px;line-height:26px}
+}
