@@ -23,7 +23,32 @@ AFTER the checkbox, and navcta sits outside nav so Subscribe stays reachable
 in the mobile bar instead of being buried in the drawer.
 """
 
+import hashlib
+import os
+
 SITE = "https://haps.club"
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def css_link(name):
+    """A <link> for assets/<name> with a content hash on the end.
+
+    Cloudflare serves the CSS with max-age=14400, so without this a stylesheet
+    change keeps being served from the edge for up to four hours -- long enough
+    to look like the change never shipped, or worse, to serve one page the new
+    CSS and another page the old. The hash changes only when the file does.
+    """
+    path = os.path.join(REPO, "assets", name)
+    try:
+        h = hashlib.md5(open(path, "rb").read()).hexdigest()[:8]
+    except OSError:
+        h = "0"
+    return f'<link rel="stylesheet" href="/assets/{name}?v={h}">'
+
+
+def chrome_css():
+    return css_link("chrome.css")
+
 LOGO = ("https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/"
         "haps-club-logo.svg?v=5")
 CAL = ("https://calendar.google.com/calendar/embed?src="
@@ -59,8 +84,6 @@ FOOTER_COLS = [
     ("More", [("About", "/about", False),
               ("Contact", "mailto:michael@haps.club", False)]),
 ]
-
-CHROME_CSS = '<link rel="stylesheet" href="/assets/chrome.css">'
 
 TAGLINE = "Everything worth leaving the house for, in Los Angeles."
 COPYRIGHT = "&copy; 2026 Haps Club &middot; Made by hand in Los Angeles"

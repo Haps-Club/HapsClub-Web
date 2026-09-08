@@ -23,10 +23,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = ("events", "planner", "planner-svetlana", "partnership", ".git")
 
 HEADER_RE = re.compile(r'<header class="(?:snav|nav)"[^>]*>.*?</header>', re.S)
-CHROME_LINK = '<link rel="stylesheet" href="/assets/chrome.css">'
 CHROME_RE = re.compile(r'[ \t]*<link[^>]+assets/chrome\.css[^>]*>\n?')
 # chrome.css must load BEFORE the page stylesheet so page rules can still win
-PAGE_CSS_RE = re.compile(r'([ \t]*)(<link[^>]+assets/sunset(?:-pages)?\.css[^>]*>)')
+PAGE_CSS_RE = re.compile(
+    r'([ \t]*)<link[^>]+assets/(sunset(?:-pages)?\.css)(?:\?[^"\']*)?[^>]*>')
 FOOTER_RE = re.compile(r'<footer[^>]*>.*?</footer>', re.S)
 
 # Which nav item to mark current, by path prefix. Longest match wins.
@@ -43,13 +43,17 @@ def active_for(rel):
 
 
 def ensure_chrome_link(src):
-    """Link assets/chrome.css immediately before the page stylesheet."""
+    """Link assets/chrome.css immediately before the page stylesheet, and put a
+    content hash on both so Cloudflare cannot serve either one stale."""
     src = CHROME_RE.sub("", src)
     m = PAGE_CSS_RE.search(src)
     if not m:
         return src
-    indent = m.group(1)
-    return src[:m.start()] + indent + CHROME_LINK + "\n" + indent + m.group(2) + src[m.end():]
+    indent, page_css = m.group(1), m.group(2)
+    return (src[:m.start()]
+            + indent + sc.chrome_css() + "\n"
+            + indent + sc.css_link(page_css)
+            + src[m.end():])
 
 
 def pages():
