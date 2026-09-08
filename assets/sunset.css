@@ -204,3 +204,21 @@ footer .cols a:hover{color:#fff}
   .spon-blurb{display:none}
   .spon-line{padding:7px 14px;font-size:12.5px;gap:6px}
 }
+
+/* ---- guides strip on the homepage (added 2026-09-08) ---- */
+.gstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+@media(max-width:900px){.gstrip{grid-template-columns:1fr}}
+.gs{background:#fff;border-radius:var(--r-sm);padding:22px 24px;text-decoration:none;color:inherit;
+  display:flex;flex-direction:column;transition:transform .18s ease}
+.gs:hover{transform:translateY(-2px)}
+.gs-walk{--c:var(--green)}  .gs-beach{--c:var(--blue)}
+.gs-music{--c:var(--purple)} .gs-museum{--c:var(--navy)}
+.gs-park{--c:var(--green)}
+.gs .gi{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;
+  justify-content:center;background:color-mix(in srgb,var(--c,var(--gray)) 14%,transparent)}
+.gs .gi svg{width:20px;height:20px;stroke:var(--c,var(--gray3));fill:none;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.gs h3{margin:14px 0 0;font-size:18px;font-weight:700;letter-spacing:-.5px;line-height:23px}
+.gs p{margin:7px 0 0;font-size:14px;color:var(--gray3);line-height:20px}
+.gs .rd{display:block;margin-top:auto;padding-top:14px;font-size:13px;font-weight:600;
+  color:var(--c,var(--red-txt))}

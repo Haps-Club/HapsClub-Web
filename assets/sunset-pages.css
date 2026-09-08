@@ -358,3 +358,59 @@ a.place:hover{border-color:var(--c,var(--gray2))}
 .mtable tr:last-child td{border-bottom:0}
 .mtable td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
 .mtable .w{font-weight:700;color:var(--red-txt);white-space:nowrap}
+
+/* ==================================================================
+   v3 — standard-width guides, mobile drawer nav, guides index grid
+   ================================================================== */
+
+/* ---- guides run at the site's standard 1080 container; prose stays readable ---- */
+.wrap.wide{max-width:1080px}
+.wrap.wide > .intro,
+.wrap.wide > .route,
+.wrap.wide > .sec,
+.wrap.wide > .places,
+.wrap.wide > .morelinks{max-width:764px;margin-left:0;margin-right:auto}
+.wrap.wide .ghero h1{max-width:22ch}
+.wrap.wide .ghero .dek{max-width:56ch}
+.wrap.wide > .cta{max-width:900px;margin-left:auto;margin-right:auto}
+
+/* ---- guides index: two-up cards at full width ---- */
+.glist{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:22px 0 0}
+@media(max-width:760px){.glist{grid-template-columns:1fr}}
+.gcard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--hair);
+  border-radius:var(--r);padding:24px 26px;text-decoration:none;color:inherit}
+.gcard:hover{border-color:var(--c,var(--gray2))}
+.gcard .gtop{display:flex;align-items:center;gap:11px}
+.gcard .kick{font-size:10.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;
+  color:var(--c,var(--gray))}
+.gcard h2{font-size:21px;letter-spacing:-.5px;line-height:1.22;margin:14px 0 0}
+.gcard p{font-size:14.5px;color:var(--gray3);line-height:1.55;margin:9px 0 0}
+.gcard .rd{margin-top:auto;padding-top:16px;font-size:13.5px;font-weight:700;
+  color:var(--c,var(--red-txt));display:flex;align-items:center;gap:7px}
+.gcard .rd svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;
+  stroke-linecap:round;stroke-linejoin:round}
+
+/* ---- mobile drawer nav ---- */
+.navtog{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.burger{display:none}
+@media(max-width:860px){
+  .burger{display:flex;flex-direction:column;justify-content:center;gap:5px;margin-left:auto;
+    width:44px;height:44px;padding:11px;cursor:pointer;border-radius:12px}
+  .burger span{display:block;height:2px;width:100%;background:var(--ink);border-radius:2px;
+    transition:transform .2s ease,opacity .15s ease}
+  .snav nav{position:absolute;left:0;right:0;top:100%;display:none;flex-direction:column;
+    align-items:stretch;gap:0;margin-left:0;padding:4px 16px 16px;background:var(--card);
+    border-bottom:1px solid var(--hair);box-shadow:0 14px 26px rgba(0,0,0,.07)}
+  .navtog:checked ~ nav{display:flex}
+  .navtog:checked ~ .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .navtog:checked ~ .burger span:nth-child(2){opacity:0}
+  .navtog:checked ~ .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .snav nav a{font-size:16px;padding:14px 2px;border-bottom:1px solid var(--hair)}
+  .snav nav a.sm-hide{display:block}
+  .snav .navcta{margin-top:14px;padding:13px;text-align:center;border-bottom:0;font-size:15px}
+}
+
+/* ---- reading rhythm: tighter lines, clearer paragraph breaks ---- */
+.wrap.wide .body p{line-height:25px}
+.wrap.wide .intro p{line-height:26px}
+.wrap.wide .body + .body{margin-top:15px}
