@@ -82,6 +82,7 @@ FOOTER_COLS = [
               ("Instagram", IG, True),
               ("Submit a tip", "/about#tip", False)]),
     ("More", [("About", "/about", False),
+              ("Partner with us", "/partners", False),
               ("Contact", "mailto:michael@haps.club", False)]),
 ]
 
