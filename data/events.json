@@ -1,12 +1,25 @@
 {
-  "updated": "2026-09-08",
-  "weekLabel": "Week of Sep 8",
+  "updated": "2026-09-14",
+  "weekLabel": "Week of Sep 14",
   "announcement": {
     "text": "Sat Sep 19: our Long Table Dinner — a playful Indian-Mexican vegetarian street-food menu in South LA. 12 seats. →",
     "link": "https://luma.com/dinner-series-masala-meets-mexico",
     "ends": "20260919T210000"
   },
   "featured": [
+    {
+      "title": "David Lynch: LA — Opening Reception",
+      "pill": "Free · Sat 9/19",
+      "tagline": "David Lynch's LA photography, unveiled at his first posthumous hometown show.",
+      "meta": "Sat Sep 19 · 6–8 PM · La Brea · free",
+      "cta": "RSVP",
+      "link": "https://www.pacegallery.com/exhibitions/david-lynch-la/",
+      "tags": "culture free",
+      "area": "midcity",
+      "where": "Pace Gallery, La Brea",
+      "price": "Free",
+      "ends": "20260919T200000"
+    },
     {
       "title": "Masala Meets Mexico: Long Table Dinner",
       "pill": "Haps Club · Sat Sep 19",
@@ -20,26 +33,17 @@
       "ends": "20260919T210000"
     },
     {
-      "title": "LA Ballet at the Bowl",
-      "pill": "Dance · Tonight",
-      "tagline": "The Phil and the ballet share a stage for the first time.",
-      "meta": "Tue Sep 8 · Hollywood Bowl · gates 6pm",
-      "cta": "See the program",
-      "link": "https://www.hollywoodbowl.com/events/performances/4336/2026-09-08/los-angeles-ballet-at-the-bowl",
-      "tags": "culture date",
-      "area": "hollywood",
-      "ends": "20260908T223000"
-    },
-    {
-      "title": "Beer, A New Musical",
-      "pill": "Theater · Thu 9/10",
-      "tagline": "A staged reading, under the oaks, from Inara George.",
-      "meta": "Thu Sep 10 · Theatricum Botanicum, Topanga · $35",
-      "cta": "Get tickets",
-      "link": "https://app.arts-people.com/index.php?show=318047",
-      "tags": "culture date",
+      "title": "Thai Fest by the Beach",
+      "pill": "Free · Sat–Sun 9/19–20",
+      "tagline": "Two days of Thai food, music, and dance right on the sand.",
+      "meta": "Sat–Sun Sep 19–20 · 11 AM–8 PM · Santa Monica Pier · free",
+      "cta": "Get details",
+      "link": "https://www.thaifestbythebeach.com/",
+      "tags": "food culture free",
       "area": "westside",
-      "ends": "20260910T220000"
+      "where": "Santa Monica Pier",
+      "price": "Free",
+      "ends": "20260920T200000"
     }
   ],
   "events": [
@@ -58,99 +62,28 @@
       "ends": "20260919T210000"
     },
     {
-      "title": "LA Ballet at the Bowl",
+      "title": "David Lynch: LA — Opening Reception",
       "month": "SEP",
-      "day": "8",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "hollywood",
-      "hood": "hollywood",
-      "where": "Hollywood Bowl",
-      "price": "Varies",
-      "link": "https://www.hollywoodbowl.com/events/performances/4336/2026-09-08/los-angeles-ballet-at-the-bowl",
-      "starts": "20260908T200000",
-      "ends": "20260908T223000"
-    },
-    {
-      "title": "Ravel, Debussy & Saint-Saëns",
-      "month": "SEP",
-      "day": "10",
-      "cat": "Music",
-      "tags": "music date",
-      "area": "hollywood",
-      "hood": "hollywood",
-      "where": "Hollywood Bowl",
-      "price": "Varies",
-      "link": "https://www.hollywoodbowl.com/events/performances/4338/2026-09-10/ravel-debussy-saint-saens",
-      "starts": "20260910T200000",
-      "ends": "20260910T223000"
-    },
-    {
-      "title": "Beer, A New Musical",
-      "month": "SEP",
-      "day": "10",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "westside",
-      "hood": "topanga",
-      "where": "Theatricum Botanicum, Topanga",
-      "price": "$35",
-      "link": "https://app.arts-people.com/index.php?show=318047",
-      "starts": "20260910T193000",
-      "ends": "20260910T220000"
-    },
-    {
-      "title": "Downtown LA Art Walk",
-      "month": "SEP",
-      "day": "10",
+      "day": "19",
       "cat": "Culture",
       "tags": "culture free",
-      "area": "dtla",
-      "hood": "dtla",
-      "where": "Spring & Main St, Historic Core",
+      "area": "midcity",
+      "where": "Pace Gallery, La Brea",
       "price": "Free",
-      "link": "https://www.downtownartwalk.org/",
-      "starts": "20260910T180000",
-      "ends": "20260910T220000"
+      "link": "https://www.pacegallery.com/exhibitions/david-lynch-la/",
+      "ends": "20260919T200000"
     },
     {
-      "title": "Friday Night Wine Tastings at Hollyhock House",
+      "title": "Thai Fest by the Beach",
       "month": "SEP",
-      "day": "11",
+      "day": "20",
       "cat": "Food",
-      "tags": "food date",
-      "area": "eastside",
-      "hood": "los-feliz",
-      "where": "Barnsdall Park, Los Feliz",
-      "price": "Ticketed",
-      "link": "https://barnsdall.org/",
-      "ends": "20260911T220000"
-    },
-    {
-      "title": "Cinespia at Hollywood Forever",
-      "month": "SEP",
-      "day": "12",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "hollywood",
-      "hood": "hollywood",
-      "where": "Hollywood Forever Cemetery",
-      "price": "Ticketed",
-      "link": "https://cinespia.org/",
-      "ends": "20260912T235900"
-    },
-    {
-      "title": "CBVA Beach Volleyball at Ocean Park",
-      "month": "SEP",
-      "day": "13",
-      "cat": "Outdoors",
-      "tags": "outdoors free",
+      "tags": "food culture free",
       "area": "westside",
-      "hood": "santa-monica",
-      "where": "Ocean Park, Santa Monica",
+      "where": "Santa Monica Pier",
       "price": "Free",
-      "link": "https://cbva.com/tournaments/4795",
-      "ends": "20260913T190000"
+      "link": "https://www.thaifestbythebeach.com/",
+      "ends": "20260920T200000"
     },
     {
       "title": "Markets at the Villa",
