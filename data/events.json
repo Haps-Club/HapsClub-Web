@@ -1,8 +1,8 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "weekLabel": "Week of Sep 14",
   "announcement": {
-    "text": "Sat Sep 19: our Long Table Dinner — a playful Indian-Mexican vegetarian street-food menu in South LA. 12 seats. →",
+    "text": "Sat Sep 19: our Long Table Dinner — a playful Indian-Mexican vegetarian street-food menu in South LA. 4 seats left. →",
     "link": "https://luma.com/dinner-series-masala-meets-mexico",
     "ends": "20260919T210000"
   },
@@ -48,6 +48,57 @@
   ],
   "events": [
     {
+      "title": "KCRW Trivia Night at Re/creation Cafe",
+      "month": "SEP",
+      "day": "15",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "midcity",
+      "hood": "mid-city",
+      "where": "Re/creation Cafe, Mid City",
+      "price": "Free",
+      "link": "https://www.recreation.cafe/event-details/kcrw-presents-trivia-night-2026-09-15-18-00",
+      "ends": "20260915T200000"
+    },
+    {
+      "title": "A Proper Night Out — Venice Beach Wine Club",
+      "month": "SEP",
+      "day": "16",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "hood": "santa-monica",
+      "where": "Santa Monica Proper Hotel",
+      "price": "From $6",
+      "link": "https://www.tickpick.com/organizer/event/a-proper-night-out-42665821",
+      "ends": "20260916T230000"
+    },
+    {
+      "title": "Nat Geo Live: Diving the Great Barrier Reef",
+      "month": "SEP",
+      "day": "17",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "westside",
+      "hood": "santa-monica",
+      "where": "BroadStage, Santa Monica",
+      "price": "Ticketed",
+      "link": "https://broadstage.org/tickets-shows/calendar/nat-geo-live-diving-the-great-barrier-reef-with-erika-woolsey/",
+      "ends": "20260917T210000"
+    },
+    {
+      "title": "David Lynch: LA — Opening Reception",
+      "month": "SEP",
+      "day": "19",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "midcity",
+      "where": "Pace Gallery, La Brea",
+      "price": "Free",
+      "link": "https://www.pacegallery.com/exhibitions/david-lynch-la/",
+      "ends": "20260919T200000"
+    },
+    {
       "title": "Masala Meets Mexico: Long Table Dinner",
       "month": "SEP",
       "day": "19",
@@ -62,16 +113,30 @@
       "ends": "20260919T210000"
     },
     {
-      "title": "David Lynch: LA — Opening Reception",
+      "title": "The Big Ass Brass Band",
+      "month": "SEP",
+      "day": "19",
+      "cat": "Music",
+      "tags": "music free",
+      "area": "midcity",
+      "hood": "mid-city",
+      "where": "Re/creation Cafe, Mid City",
+      "price": "Free",
+      "link": "https://www.recreation.cafe/event-details/the-big-ass-brass-band-w-quinn-carson-company-6",
+      "ends": "20260919T213000"
+    },
+    {
+      "title": "The Truman Show at Rooftop Cinema Club",
       "month": "SEP",
       "day": "19",
       "cat": "Culture",
-      "tags": "culture free",
-      "area": "midcity",
-      "where": "Pace Gallery, La Brea",
-      "price": "Free",
-      "link": "https://www.pacegallery.com/exhibitions/david-lynch-la/",
-      "ends": "20260919T200000"
+      "tags": "culture date",
+      "area": "dtla",
+      "hood": "dtla",
+      "where": "LEVEL, Downtown",
+      "price": "Ticketed",
+      "link": "https://rooftopcinemaclub.com/us/los-angeles/dtla/screenings/the-truman-show-25177",
+      "ends": "20260919T220000"
     },
     {
       "title": "Thai Fest by the Beach",
@@ -110,6 +175,19 @@
       "price": "Ticketed",
       "link": "https://rooftopcinemaclub.com/los-angeles/",
       "ends": "20260929T235900"
+    },
+    {
+      "title": "Antigone: In the Language of Kings",
+      "month": "SEP",
+      "day": "17",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "westside",
+      "hood": "pacific-palisades",
+      "where": "Getty Villa Outdoor Theater",
+      "price": "From $30",
+      "link": "https://www.getty.edu/calendar/oct-antigone/",
+      "ends": "20261003T233000"
     },
     {
       "title": "Wellness & Waves on the Santa Monica Pier",
@@ -472,6 +550,11 @@
     }
   ],
   "archive": [
+    {
+      "date": "Sep 15, 2026",
+      "title": "Four Seats Left",
+      "url": "https://haps.club/archive/2026-09-15-four-seats-left/"
+    },
     {
       "date": "Sep 8, 2026",
       "title": "Tap Dance on Pointe",
