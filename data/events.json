@@ -1,7 +1,21 @@
 {
-    "updated": "2026-09-21",
+    "updated": "2026-09-23",
     "weekLabel": "Week of Sep 22",
     "featured": [
+        {
+            "title": "Haps Club @ Hermanito Broadway Dinner Series",
+            "pill": "Dinner · Thu 10/1",
+            "tagline": "An intimate family-style dinner at Hermanito Broadway in Santa Monica.",
+            "meta": "Thu Oct 1 · 6-9 PM · Santa Monica",
+            "cta": "Register",
+            "link": "https://luma.com/hapsclub-hermanito-dinnertime?coupon=HAPSCLUB5",
+            "tags": "food date",
+            "area": "westside",
+            "where": "Hermanito Broadway, Santa Monica",
+            "price": "",
+            "starts": "20261001T180000",
+            "ends": "20261001T210000"
+        },
         {
             "title": "Pasadena Chalk Festival",
             "pill": "Free · Sat-Sun 9/26-27",
@@ -27,19 +41,6 @@
             "where": "Toluca Lake",
             "price": "Free",
             "ends": "20260927T180000"
-        },
-        {
-            "title": "Rooftop Cinema Club DTLA",
-            "pill": "Ticketed · Mon 9/29",
-            "tagline": "Catch a film under the stars with skyline views atop LEVEL Downtown.",
-            "meta": "Mon Sep 29 · LEVEL, Downtown · ticketed",
-            "cta": "Get tickets",
-            "link": "https://rooftopcinemaclub.com/los-angeles/",
-            "tags": "culture date",
-            "area": "dtla",
-            "where": "LEVEL, Downtown",
-            "price": "Ticketed",
-            "ends": "20260929T235900"
         }
     ],
     "events": [
@@ -143,6 +144,20 @@
             "price": "Ticketed",
             "link": "https://rooftopcinemaclub.com/los-angeles/",
             "ends": "20260929T235900"
+        },
+        {
+            "title": "Haps Club @ Hermanito Broadway Dinner Series",
+            "month": "OCT",
+            "day": "1",
+            "cat": "Food",
+            "tags": "food date",
+            "area": "westside",
+            "hood": "santa-monica",
+            "where": "Hermanito Broadway, Santa Monica",
+            "price": "",
+            "link": "https://luma.com/hapsclub-hermanito-dinnertime?coupon=HAPSCLUB5",
+            "starts": "20261001T180000",
+            "ends": "20261001T210000"
         },
         {
             "title": "Antigone: In the Language of Kings",
@@ -611,8 +626,8 @@
         }
     ],
     "announcement": {
-        "text": "This weekend: 500+ chalk artists take over Pasadena’s Brookside Park — free all weekend.",
-        "link": "https://www.pasadenachalkfestival.org/",
-        "ends": "20260927T183000"
+        "text": "Haps Club heads to Hermanito Broadway for an intimate dinner series — Thu Oct 1, Santa Monica.",
+        "link": "https://luma.com/hapsclub-hermanito-dinnertime?coupon=HAPSCLUB5",
+        "ends": "20261001T210000"
     }
 }
