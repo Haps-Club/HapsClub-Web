@@ -83,6 +83,7 @@ FOOTER_COLS = [
               ("Submit a tip", "/about#tip", False)]),
     ("More", [("About", "/about", False),
               ("Partner with us", "/partners", False),
+              ("Privacy", "/privacy", False),
               ("Contact", "mailto:michael@haps.club", False)]),
 ]
 

@@ -32,6 +32,7 @@ FOOTER_RE = re.compile(r'<footer[^>]*>.*?</footer>', re.S)
 # Which nav item to mark current, by path prefix. Longest match wins.
 ACTIVE = [("guides/", "/guides/"), ("archive/", "/archive/"),
           ("about.html", "/about"), ("subscribe.html", "/subscribe"),
+          ("privacy.html", "/privacy"),
           ("index.html", "/#week")]
 
 
