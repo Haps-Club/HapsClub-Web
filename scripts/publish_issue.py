@@ -116,6 +116,7 @@ def build(iss):
                               meta=s['meta'] or '&nbsp;',
                               body="".join("<p>%s</p>\n"%p for p in s['body']))
                    for s in iss['sections'])
+    secs = secs.replace('<p><em></em></p>\n', '')
     return PAGE.format(title=iss['title'], title_attr=esc(iss['title']),
                        dek=iss['dek'], dek_attr=esc(iss['dek']),
                        date=iss['date'], slug=iss['slug'], pretty=iss['pretty'],
