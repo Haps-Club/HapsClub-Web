@@ -15,13 +15,16 @@ Haps Club is independent and editorial: a real person reading the city, not an a
 
 Evergreen, hand-written guides to Los Angeles neighbourhoods and to what is genuinely free.
 Each one is refreshed every Sunday night with the current week's events, from the same
-curated list that runs on the homepage. Every venue named has appeared in a Haps Club issue.
+curated list that runs on the homepage. Every venue named is checked against its own website.
 
 - [Things to Do in Venice, CA](https://haps.club/guides/venice/): One day on foot west of Lincoln — Gjusta, the Venice canals, Abbot Kinney top to bottom, and four dinners ordered by how hard they are to get into.
 - [Free Things to Do in Santa Monica](https://haps.club/guides/santa-monica/): The Adelaide stairs, the Wednesday farmers market on Arizona Ave, and the Annenberg Community Beach House — plus the handful of rooms worth paying for.
 - [Things to Do in Culver City](https://haps.club/guides/culver-city/): Downtown and the Culver Steps, Ivy Station, and the Helms design district — three walkable pieces about ten minutes apart.
 - [Free Museum Days in Los Angeles](https://haps.club/guides/free-museum-days-los-angeles/): Which LA museums are free every day, which are free on set days, and which "free" days still require a timed reservation. Re-checked at the start of every month against each museum's own website, not against other lists.
 - [Free Things to Do in LA This Weekend](https://haps.club/guides/free-things-to-do-in-la-this-weekend/): A short, checked list of what is free this weekend, rebuilt every Sunday night, plus everything in LA that is free every weekend of the year.
+- [Halloween Events in Los Angeles 2026](https://haps.club/guides/halloween-events-los-angeles/): Pumpkin nights (Descanso Gardens' Carved, Magic of the Jack O'Lanterns, Mr. Bones), Cinespia cemetery screenings, Halloween Horror Nights and Delusion, the free West Hollywood Carnaval, and Día de los Muertos at Hollywood Forever, Grand Park and Olvera Street, with 2026 dates checked on each official site.
+- [Supper Clubs and Chef's Tables in LA](https://haps.club/guides/supper-clubs-los-angeles/): Long-table dinners (Haps Club at Hermanito, LA Foodshop, Twentieth Street Garden), matched dinners with strangers (Timeleft, 222), and counter omakase (Shunji, Mori Nozomi, Ueki, Loreto, Hayato), with how each one books.
+- [Where to Take Someone Who Says They Don't Like LA](https://haps.club/guides/la-for-skeptics/): Ten Westside-first stops, from the Getty and the Venice canals to a Malibu farm stand, the Hollywood Bowl and Griffith Observatory, with timing and parking tips.
 
 ## Events
 - [Summer Solstice in the Garden](https://haps.club/events/summer-solstice-in-the-garden/): Saturday, June 20, 2026, 5–9 PM at Twentieth Street Garden in West Adams, Los Angeles. An open-air evening with BBQ on site and a beverage included. Tickets from $10.

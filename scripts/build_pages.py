@@ -171,6 +171,9 @@ def render_live(rows):
     out.append("  </div>")
     return "\n".join(out)
 
+OG_IMAGE = "https://haps.club/assets/og-card.png"
+ONSALE_DEFAULT = "2026-09-01"   # listings go up ahead of the event; override per entry with "onsale"
+
 def event_nodes(rows):
     nodes = []
     for e in rows:
@@ -191,6 +194,19 @@ def event_nodes(rows):
             n["endDate"] = iso(e["ends"])
         if e.get("link"):
             n["url"] = e["link"]
+        # Search Console (2026-09-29) flagged description/image/organizer/performer/
+        # offers.validFrom as missing. Fill every one from the entry, with honest defaults.
+        where = e.get("where") or "Los Angeles"
+        n["description"] = (e.get("tagline") or e.get("description") or
+                            f"{e.get('title')} at {where}. Picked by Haps Club, the weekly guide to what's on in LA.")
+        n["image"] = [e.get("image") or OG_IMAGE]
+        hosted = (e.get("title") or "").lower().startswith("haps club")
+        org_name = e.get("organizer") or ("Haps Club" if hosted else where.split(",")[0].strip())
+        org = {"@type": "Organization", "name": org_name,
+               "url": "https://haps.club/" if org_name == "Haps Club" else (e.get("link") or "https://haps.club/")}
+        n["organizer"] = org
+        n["performer"] = ({"@type": "PerformingGroup", "name": e["performer"]}
+                          if e.get("performer") else dict(org))
         price = (e.get("price") or "").strip()
         if price:
             amt = "0" if re.match(r"^free$", price, re.I) else \
@@ -198,7 +214,8 @@ def event_nodes(rows):
             if amt:                       # skip "Varies", "Ticketed", "2 sets nightly"
                 n["offers"] = {"@type": "Offer", "price": amt, "priceCurrency": "USD",
                                "availability": "https://schema.org/InStock",
-                               "url": e.get("link")}
+                               "url": e.get("link"),
+                               "validFrom": iso(e.get("onsale")) or ONSALE_DEFAULT}
         nodes.append(n)
     return nodes
 
