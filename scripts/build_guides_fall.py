@@ -96,6 +96,11 @@ SPOOKY = [
   "Nine nights of procession through the oldest street in the city."),
 ]
 
+def cost_of(detail):
+    segs = [x.strip().rstrip(".") for x in detail.split(" · ")]
+    hit = [x for x in segs if "$" in x or "free" in x.lower()]
+    return hit[-1][0].upper() + hit[-1][1:] if hit else "Ticketed"
+
 def rows_for(group):
     return [place(n, d, c, u, t) for (g, n, d, c, u, t, *_ ) in SPOOKY if g == group]
 
@@ -137,7 +142,7 @@ def build_halloween():
              ["Hollywood Forever's celebration is the city's largest, with altars built across the whole cemetery. Grand Park and Olvera Street run for more than a week and are free, so you can go on a weeknight and see the altars without the crowd."], "muertos")
     b += placelist(rows_for("muertos"))
     b += table(["What", "When", "Cost"], [
-        [a(u, n), d.split(" · ")[0], (d.split(" · ")[-1])] for (g, n, d, c, u, t, *_ ) in SPOOKY])
+        [a(u, n), d.split(" · ")[0], cost_of(d)] for (g, n, d, c, u, t, *_ ) in SPOOKY])
     b += oneline("If you only do one thing",
         "Cinespia's Carrie on October 10. A horror film in a cemetery, in Hollywood, fifty years to the season. Nowhere else can do that.")
     b += live_block("tags:halloween", "tags:culture", 6, "Halloween on the homepage this week",
