@@ -17,20 +17,6 @@
    "ends": "20261001T210000"
   },
   {
-   "title": "Carrie 50th Anniversary — Cinespia",
-   "pill": "Ticketed · Sat 10/10",
-   "tagline": "Brian De Palma's 1976 classic on the big screen among the headstones.",
-   "meta": "Sat Oct 10 · Gates 5:30, film ~7:15 PM · Hollywood Forever Cemetery · ticketed",
-   "cta": "Get tickets",
-   "link": "https://cinespia.org/event/carrie-50/",
-   "tags": "culture date halloween",
-   "area": "hollywood",
-   "where": "Hollywood Forever Cemetery",
-   "price": "Ticketed",
-   "starts": "20261010T191500",
-   "ends": "20261010T235900"
-  },
-  {
    "title": "Carved at Descanso Gardens",
    "pill": "Nightly · Oct 2–Nov 1",
    "tagline": "Hand-carved pumpkins and glowing trails take over the garden after dark.",
@@ -43,6 +29,20 @@
    "price": "From $29",
    "starts": "20261002T180000",
    "ends": "20261101T220000"
+  },
+  {
+   "title": "Carrie 50th Anniversary — Cinespia",
+   "pill": "Ticketed · Sat 10/10",
+   "tagline": "Brian De Palma's 1976 classic on the big screen among the headstones.",
+   "meta": "Sat Oct 10 · Gates 5:30, film ~7:15 PM · Hollywood Forever Cemetery · ticketed",
+   "cta": "Get tickets",
+   "link": "https://cinespia.org/event/carrie-50/",
+   "tags": "culture date halloween",
+   "area": "hollywood",
+   "where": "Hollywood Forever Cemetery",
+   "price": "Ticketed",
+   "starts": "20261010T191500",
+   "ends": "20261010T235900"
   }
  ],
  "events": [
@@ -153,6 +153,22 @@
    "ends": "20261003T220000"
   },
   {
+   "title": "Live music + Rummikub at Re/Creation Cafe",
+   "month": "OCT",
+   "day": "3",
+   "cat": "Music",
+   "tags": "music free",
+   "area": "midcity",
+   "hood": "west-adams",
+   "where": "Re/Creation Cafe, West Adams",
+   "price": "Free",
+   "link": "https://www.recreation.cafe/event-details/saturday-night-live-music-sierra-sellers-4",
+   "tagline": "No cover. Order food, drinks and tea, and bring a game of Rummikub.",
+   "pick": "Anjali",
+   "starts": "20261003T190000",
+   "ends": "20261003T220000"
+  },
+  {
    "title": "Antigone: In the Language of Kings",
    "month": "OCT",
    "day": "3",
@@ -164,6 +180,38 @@
    "price": "From $30",
    "link": "https://www.getty.edu/calendar/oct-antigone/",
    "ends": "20261003T233000"
+  },
+  {
+   "title": "Seffarine World Music Concert",
+   "month": "OCT",
+   "day": "8",
+   "cat": "Music",
+   "tags": "music",
+   "area": "westside",
+   "hood": "culver-city",
+   "where": "Culver City",
+   "price": "$36",
+   "link": "https://www.eventbrite.com/e/seffarine-world-music-concert-tickets-1992959792388",
+   "tagline": "Music from North Africa, southern Spain and the Middle East.",
+   "pick": "Anjali",
+   "starts": "20261008T200000",
+   "ends": "20261008T230000"
+  },
+  {
+   "title": "Culver City Arts Festival",
+   "month": "OCT",
+   "day": "10",
+   "cat": "Culture",
+   "tags": "culture music outdoors free",
+   "area": "westside",
+   "hood": "culver-city",
+   "where": "Culver City Arts District",
+   "price": "Free",
+   "link": "https://www.culvercity.gov/Events-directory/8th-Annual-Culver-City-Arts-Festival",
+   "tagline": "Outdoors and free: vendors, art, food and music.",
+   "pick": "Anjali",
+   "starts": "20261010T140000",
+   "ends": "20261010T180000"
   },
   {
    "title": "Carrie 50th Anniversary — Cinespia",
@@ -179,6 +227,22 @@
    "ends": "20261010T235900"
   },
   {
+   "title": "Sound Dhaba: Indian electronica + street food",
+   "month": "OCT",
+   "day": "11",
+   "cat": "Music",
+   "tags": "music food",
+   "area": "dtla",
+   "hood": "dtla",
+   "where": "Sound Dhaba, Arts District",
+   "price": "$20",
+   "link": "https://www.eventbrite.com/e/priya-mani-vanshika-arora-artronika-live-at-sound-dhaba-tickets-2001969030261",
+   "tagline": "Indian electronica and street food in a warehouse. Probably a little strange.",
+   "pick": "Anjali",
+   "starts": "20261011T140000",
+   "ends": "20261011T180000"
+  },
+  {
    "title": "Wellness & Waves on the Santa Monica Pier",
    "month": "OCT",
    "day": "17",
@@ -190,6 +254,22 @@
    "price": "Free",
    "link": "https://santamonicapier.org/wellness-and-waves/",
    "ends": "20261017T100000"
+  },
+  {
+   "title": "Maydan Market dinner + Zula Den",
+   "month": "OCT",
+   "day": "22",
+   "cat": "Food",
+   "tags": "food music date",
+   "area": "midcity",
+   "hood": "west-adams",
+   "where": "Maydan Market, West Adams",
+   "price": "$33",
+   "link": "https://www.eventbrite.com/e/the-residency-sound-connections-vol-46-roots-itai-x-aviv-hadari-tickets-2000075510693",
+   "tagline": "Dinner at the Maydan food court, then Moroccan and Israeli beats at Zula Den next door.",
+   "pick": "Anjali",
+   "starts": "20261022T180000",
+   "ends": "20261022T230000"
   },
   {
    "title": "Matilda's",

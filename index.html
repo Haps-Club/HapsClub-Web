@@ -322,7 +322,7 @@ function render(){
     var t=firstTag(e), price=e.price?'<span class="price'+(/^free$/i.test(e.price)?' free':'')+'">'+esc(e.price)+'</span>':"";
     return '<a class="row" href="'+esc(e.link)+'" target="_blank" rel="noopener">'+
       '<div class="date"><div class="d">'+esc(e.day)+'</div><div class="m">'+esc(e.month)+'</div></div>'+
-      '<div><h3>'+esc(e.title)+'</h3><p class="meta">'+esc(e.cat)+' · '+esc(e.where)+'</p></div>'+
+      '<div><h3>'+esc(e.title)+'</h3><p class="meta">'+esc(e.cat)+' · '+esc(e.where)+(e.pick?' · ♥ '+esc(e.pick)+'’s pick':'')+'</p></div>'+
       '<div class="rside">'+price+'<span class="stripe s-'+t+'"></span></div></a>';
   }).join("");
   document.getElementById("empty").style.display=shown.length?"none":"block";
