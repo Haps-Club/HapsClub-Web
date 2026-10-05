@@ -4,36 +4,23 @@
  "featured": [
   {
    "title": "Carved at Descanso Gardens",
-   "pill": "Nightly \u00b7 Oct 2\u2013Nov 1",
+   "pill": "Nightly · Oct 2–Nov 1",
    "tagline": "Hand-carved pumpkins and glowing trails take over the garden after dark.",
-   "meta": "Oct 2\u2013Nov 1 \u00b7 6\u201310 PM \u00b7 La Ca\u00f1ada Flintridge \u00b7 from $29",
+   "meta": "Oct 2–Nov 1 · 6–10 PM · La Cañada Flintridge · from $29",
    "cta": "Get tickets",
    "link": "https://www.descansogardens.org/carved/",
    "tags": "outdoors date halloween",
    "area": "eastside",
-   "where": "Descanso Gardens, La Ca\u00f1ada Flintridge",
+   "where": "Descanso Gardens, La Cañada Flintridge",
    "price": "From $29",
    "starts": "20261002T180000",
    "ends": "20261101T220000"
   },
   {
-   "title": "Seffarine World Music Concert",
-   "pill": "$36 \u00b7 Thu 10/8",
-   "tagline": "Music from North Africa, southern Spain and the Middle East.",
-   "meta": "Thu Oct 8 \u00b7 8\u201311 PM \u00b7 Culver City \u00b7 $36",
-   "cta": "Get tickets",
-   "link": "https://www.eventbrite.com/e/seffarine-world-music-concert-tickets-1992959792388",
-   "tags": "music",
-   "area": "westside",
-   "where": "Culver City",
-   "price": "$36",
-   "ends": "20261008T230000"
-  },
-  {
-   "title": "Carrie 50th Anniversary \u2014 Cinespia",
-   "pill": "Ticketed \u00b7 Sat 10/10",
+   "title": "Carrie 50th Anniversary — Cinespia",
+   "pill": "Ticketed · Sat 10/10",
    "tagline": "Brian De Palma's 1976 classic on the big screen among the headstones.",
-   "meta": "Sat Oct 10 \u00b7 Gates 5:30, film ~7:15 PM \u00b7 Hollywood Forever Cemetery \u00b7 ticketed",
+   "meta": "Sat Oct 10 · Gates 5:30, film ~7:15 PM · Hollywood Forever Cemetery · ticketed",
    "cta": "Get tickets",
    "link": "https://cinespia.org/event/carrie-50/",
    "tags": "culture date halloween",
@@ -42,6 +29,20 @@
    "price": "Ticketed",
    "starts": "20261010T191500",
    "ends": "20261010T235900"
+  },
+  {
+   "title": "CicLAvia: Heart of LA",
+   "pill": "Free · Sun 10/11",
+   "tagline": "Six and a half miles of car-free streets, downtown to Echo Park.",
+   "meta": "Sun Oct 11 · 9am–4pm · Chinatown to Boyle Heights · free",
+   "cta": "See the route",
+   "link": "https://ciclavia.org/events/heart-of-la-2026-10/",
+   "tags": "outdoors free",
+   "area": "dtla",
+   "where": "Chinatown, Little Tokyo, Arts District, Boyle Heights, Echo Park",
+   "price": "Free",
+   "starts": "20261011T090000",
+   "ends": "20261011T160000"
   }
  ],
  "events": [
@@ -53,13 +54,27 @@
    "tags": "outdoors date halloween",
    "area": "eastside",
    "hood": "la-canada-flintridge",
-   "where": "Descanso Gardens, La Ca\u00f1ada Flintridge",
+   "where": "Descanso Gardens, La Cañada Flintridge",
    "addr": "1418 Descanso Dr",
    "price": "From $29",
    "link": "https://www.descansogardens.org/carved/",
    "tagline": "Hand-carved pumpkins and glowing trails take over the garden every night through Nov 1.",
    "starts": "20261002T180000",
    "ends": "20261101T220000"
+  },
+  {
+   "title": "Screamfest Horror Film Festival",
+   "month": "OCT",
+   "day": "6",
+   "cat": "Culture",
+   "tags": "culture",
+   "area": "hollywood",
+   "where": "TCL Chinese 6 Theatres",
+   "price": "Passes",
+   "link": "https://screamfestla.com/",
+   "tagline": "Ten days of independent horror in Hollywood.",
+   "starts": "20261006T000000",
+   "ends": "20261015T235900"
   },
   {
    "title": "Seffarine World Music Concert",
@@ -78,6 +93,20 @@
    "ends": "20261008T230000"
   },
   {
+   "title": "ArtNight Pasadena",
+   "month": "OCT",
+   "day": "9",
+   "cat": "Culture",
+   "tags": "culture free",
+   "area": "citywide",
+   "where": "Venues across Pasadena",
+   "price": "Free",
+   "link": "https://www.cityofpasadena.net/artnight/",
+   "tagline": "Twenty-plus museums and stages open free after dark.",
+   "starts": "20261009T180000",
+   "ends": "20261009T220000"
+  },
+  {
    "title": "Culver City Arts Festival",
    "month": "OCT",
    "day": "10",
@@ -94,7 +123,21 @@
    "ends": "20261010T180000"
   },
   {
-   "title": "Carrie 50th Anniversary \u2014 Cinespia",
+   "title": "Bacchus Uncorked: Beer in Ancient Mesopotamia and Egypt",
+   "month": "OCT",
+   "day": "10",
+   "cat": "Culture",
+   "tags": "culture food",
+   "area": "westside",
+   "where": "Getty Villa, Pacific Palisades",
+   "price": "$110",
+   "link": "https://www.getty.edu/calendar/bacchus-uncorked-mesopotamia-egypt/",
+   "tagline": "Five thousand years of brewing, with modern pours.",
+   "starts": "20261010T171500",
+   "ends": "20261010T203000"
+  },
+  {
+   "title": "Carrie 50th Anniversary — Cinespia",
    "month": "OCT",
    "day": "10",
    "cat": "Culture",
@@ -105,6 +148,33 @@
    "link": "https://cinespia.org/event/carrie-50/",
    "starts": "20261010T191500",
    "ends": "20261010T235900"
+  },
+  {
+   "title": "Hammer Museum Fall Exhibition Celebration",
+   "month": "OCT",
+   "day": "10",
+   "cat": "Culture",
+   "tags": "culture music free",
+   "area": "westside",
+   "where": "Hammer Museum, Westwood",
+   "price": "Free",
+   "link": "https://hammer.ucla.edu/",
+   "tagline": "Late-night galleries and a DJ in the courtyard.",
+   "starts": "20261010T200000",
+   "ends": "20261010T223000"
+  },
+  {
+   "title": "CicLAvia: Heart of LA",
+   "month": "OCT",
+   "day": "11",
+   "cat": "Outdoors",
+   "tags": "outdoors free",
+   "area": "dtla",
+   "where": "Chinatown, Little Tokyo, Arts District, Boyle Heights, Echo Park",
+   "price": "Free",
+   "link": "https://ciclavia.org/events/heart-of-la-2026-10/",
+   "starts": "20261011T090000",
+   "ends": "20261011T160000"
   },
   {
    "title": "Sound Dhaba: Indian electronica + street food",
@@ -152,9 +222,23 @@
    "ends": "20261022T230000"
   },
   {
+   "title": "The Santa Monica Open: Pickleball",
+   "month": "OCT",
+   "day": "31",
+   "cat": "Outdoors",
+   "tags": "outdoors",
+   "area": "westside",
+   "where": "Memorial Park, Santa Monica",
+   "price": "$30/player",
+   "link": "https://thesantamonicaopen.com/",
+   "tagline": "Community doubles tournament, all levels welcome.",
+   "starts": "20261031T080000",
+   "ends": "20261101T150000"
+  },
+  {
    "title": "Matilda's",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -166,7 +250,7 @@
   {
    "title": "Ueki at Blue Ribbon Sushi",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food date",
    "area": "westside",
@@ -178,7 +262,7 @@
   {
    "title": "The Hart and the Hunter",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "hollywood",
@@ -188,9 +272,9 @@
    "link": "https://hoodline.com/2026/09/the-hart-and-the-hunter-returns-to-west-hollywood-after-five-year-absence/"
   },
   {
-   "title": "Marina del Rey Farmers\u2019 Market",
+   "title": "Marina del Rey Farmers’ Market",
    "month": "Sat",
-   "day": "\u2022",
+   "day": "•",
    "cat": "Food",
    "tags": "food free",
    "area": "westside",
@@ -202,7 +286,7 @@
   {
    "title": "Lucas Museum of Narrative Art",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Culture",
    "tags": "culture",
    "area": "citywide",
@@ -214,7 +298,7 @@
   {
    "title": "MAUM Market at ROW DTLA",
    "month": "Now",
-   "day": "\u2022",
+   "day": "•",
    "cat": "Culture",
    "tags": "culture free",
    "area": "dtla",
@@ -226,7 +310,7 @@
   {
    "title": "Vandell",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food date",
    "area": "eastside",
@@ -238,7 +322,7 @@
   {
    "title": "Mic Drop karaoke lounge",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Music",
    "tags": "music date",
    "area": "hollywood",
@@ -250,7 +334,7 @@
   {
    "title": "Sunday Jazz at The World Stage",
    "month": "Sun",
-   "day": "\u266a",
+   "day": "♪",
    "cat": "Music",
    "tags": "music",
    "area": "midcity",
@@ -262,7 +346,7 @@
   {
    "title": "Alana's Open Mic",
    "month": "Any",
-   "day": "\u2022",
+   "day": "•",
    "cat": "Music",
    "tags": "music free",
    "area": "westside",
@@ -274,7 +358,7 @@
   {
    "title": "Cookie Queens",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Culture",
    "tags": "culture date",
    "area": "citywide",
@@ -283,9 +367,9 @@
    "link": "https://www.ticketingcookiequeens.com/"
   },
   {
-   "title": "San Dami\u00e1n",
+   "title": "San Damián",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -297,7 +381,7 @@
   {
    "title": "West Side Oyster Club",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -307,9 +391,9 @@
    "link": "https://www.westsideoysterclub.com/"
   },
   {
-   "title": "Venice Run Club \u2014 Long Run Saturday",
+   "title": "Venice Run Club — Long Run Saturday",
    "month": "Sat",
-   "day": "\u2022",
+   "day": "•",
    "cat": "Outdoors",
    "tags": "outdoors free",
    "area": "westside",
@@ -321,7 +405,7 @@
   {
    "title": "The Tasting Kitchen",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -333,7 +417,7 @@
   {
    "title": "Get on the water in the Marina",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Outdoors",
    "tags": "outdoors",
    "area": "westside",
@@ -345,7 +429,7 @@
   {
    "title": "Jazz nightly at Sam First",
    "month": "Now",
-   "day": "\u266a",
+   "day": "♪",
    "cat": "Music",
    "tags": "music",
    "area": "westside",
@@ -355,9 +439,9 @@
    "link": "https://samfirstbar.com/"
   },
   {
-   "title": "Smorgasburg LA \u2014 Sundays",
+   "title": "Smorgasburg LA — Sundays",
    "month": "Now",
-   "day": "\u2022",
+   "day": "•",
    "cat": "Food",
    "tags": "food free",
    "area": "dtla",
@@ -369,7 +453,7 @@
   {
    "title": "Alta Adams",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "midcity",
@@ -381,7 +465,7 @@
   {
    "title": "Cinnies at Grand Central Market",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "dtla",
@@ -393,7 +477,7 @@
   {
    "title": "Lielle",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "midcity",
@@ -405,7 +489,7 @@
   {
    "title": "Runyon Canyon",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Outdoors",
    "tags": "outdoors free",
    "area": "hollywood",
@@ -417,7 +501,7 @@
   {
    "title": "Gjelina",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -429,7 +513,7 @@
   {
    "title": "Guelaguetza",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "midcity",
@@ -441,7 +525,7 @@
   {
    "title": "Mh Zh",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "eastside",
@@ -453,7 +537,7 @@
   {
    "title": "All Time",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "eastside",
@@ -465,7 +549,7 @@
   {
    "title": "Tacos 1986",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "citywide",
@@ -476,7 +560,7 @@
   {
    "title": "Bavel",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food date",
    "area": "dtla",
@@ -488,7 +572,7 @@
   {
    "title": "Phorage",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -500,7 +584,7 @@
   {
    "title": "Skylight Books",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Culture",
    "tags": "culture free",
    "area": "eastside",
@@ -512,7 +596,7 @@
   {
    "title": "Escondido Falls",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Outdoors",
    "tags": "outdoors free",
    "area": "westside",
@@ -524,7 +608,7 @@
   {
    "title": "Twentieth Street Garden",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food date",
    "area": "westside",
@@ -536,7 +620,7 @@
   {
    "title": "Teddy's Hot House",
    "month": "Any",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -548,7 +632,7 @@
   {
    "title": "Bodega + Palms",
    "month": "New",
-   "day": "\u2605",
+   "day": "★",
    "cat": "Food",
    "tags": "food",
    "area": "westside",
@@ -560,13 +644,18 @@
  ],
  "archive": [
   {
+   "date": "Oct 6, 2026",
+   "title": "Open Streets, Late Art",
+   "url": "https://haps.club/archive/2026-10-06-open-streets-late-art/"
+  },
+  {
    "date": "Sep 29, 2026",
    "title": "Back for Seconds",
    "url": "https://haps.club/archive/2026-09-29-back-for-seconds/"
   },
   {
    "date": "Sep 24, 2026",
-   "title": "Dinner at\u00a0Hermanito",
+   "title": "Dinner at Hermanito",
    "url": "https://haps.club/archive/2026-09-24-dinner-at-hermanito/"
   },
   {
@@ -583,11 +672,6 @@
    "date": "Sep 8, 2026",
    "title": "Tap Dance on Pointe",
    "url": "https://haps.club/archive/2026-09-08-tap-dance-on-pointe/"
-  },
-  {
-   "date": "Sep 1, 2026",
-   "title": "The Long Weekend",
-   "url": "https://haps.club/archive/2026-09-01-long-weekend/"
   }
  ],
  "sponsor": {
@@ -598,11 +682,11 @@
  },
  "plan": [
   {
-   "title": "D\u00eda de los Muertos at Hollywood Forever",
+   "title": "Día de los Muertos at Hollywood Forever",
    "when": "Sat Oct 24",
    "accent": "orange",
    "tagline": "The 27th year, noon to midnight.",
-   "meta": "Hollywood Forever \u00b7 timed entry at 12, 4 and 7 \u00b7 altars, procession, costume contest",
+   "meta": "Hollywood Forever · timed entry at 12, 4 and 7 · altars, procession, costume contest",
    "cta": "Tickets",
    "link": "https://www.ladayofthedead.com/event-info/",
    "tags": "culture",
@@ -611,10 +695,10 @@
   },
   {
    "title": "Camp Flog Gnaw",
-   "when": "Nov 14\u201315",
+   "when": "Nov 14–15",
    "accent": "red",
    "tagline": "Tyler's carnival, back at the stadium.",
-   "meta": "Dodger Stadium \u00b7 two-day GA from $415 \u00b7 general admission sold out, waitlist open",
+   "meta": "Dodger Stadium · two-day GA from $415 · general admission sold out, waitlist open",
    "cta": "Join the waitlist",
    "link": "https://www.campfloggnaw.com/",
    "tags": "music",
@@ -623,7 +707,7 @@
   }
  ],
  "announcement": {
-  "text": "Carved at Descanso Gardens is lighting up the garden after dark through Nov 1 \u2014 hand-carved pumpkins and glowing trails.",
+  "text": "Carved at Descanso Gardens is lighting up the garden after dark through Nov 1 — hand-carved pumpkins and glowing trails.",
   "link": "https://www.descansogardens.org/carved/",
   "ends": "20261101T220000"
  }
