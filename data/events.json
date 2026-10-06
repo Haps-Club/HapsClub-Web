@@ -77,6 +77,20 @@
       "ends": "20261015T235900"
     },
     {
+      "title": "Vibrato: Benny Benack III Quintet",
+      "month": "OCT",
+      "day": "7",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "westside",
+      "where": "Vibrato Grill Jazz, Bel Air",
+      "price": "See venue",
+      "link": "https://www.vibratogrilljazz.com/music",
+      "tagline": "DownBeat Rising Star live album show.",
+      "starts": "20261007T200000",
+      "ends": "20261007T223000"
+    },
+    {
       "title": "Seffarine World Music Concert",
       "month": "OCT",
       "day": "8",
@@ -105,6 +119,34 @@
       "tagline": "Twenty-plus museums and stages open free after dark.",
       "starts": "20261009T180000",
       "ends": "20261009T220000"
+    },
+    {
+      "title": "BroadStage: Takács Quartet with Jeremy Denk",
+      "month": "OCT",
+      "day": "9",
+      "cat": "Music",
+      "tags": "music culture",
+      "area": "westside",
+      "where": "BroadStage, Santa Monica",
+      "price": "Ticketed",
+      "link": "https://broadstage.org/tickets-shows/calendar/takacs-quartet-with-jeremy-denk/",
+      "tagline": "A Grammy-winning quartet and a star pianist.",
+      "starts": "20261009T193000",
+      "ends": "20261009T213000"
+    },
+    {
+      "title": "The World Stage: Jeff Robinson",
+      "month": "OCT",
+      "day": "9",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "midcity",
+      "where": "The World Stage, Leimert Park",
+      "price": "$20 cash",
+      "link": "https://theworldstage.org",
+      "tagline": "Soulful jazz vocals at the Leimert Park institution.",
+      "starts": "20261009T200000",
+      "ends": "20261009T223000"
     },
     {
       "title": "Culver City Arts Festival",
@@ -137,6 +179,20 @@
       "ends": "20261010T203000"
     },
     {
+      "title": "Groupmuse: Marlonius Jazz Quartet in Venice",
+      "month": "OCT",
+      "day": "10",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "westside",
+      "where": "Private house concert, Venice",
+      "price": "$5 to reserve",
+      "link": "https://www.groupmuse.com",
+      "tagline": "Jazz quartet under the treehouse.",
+      "starts": "20261010T183000",
+      "ends": "20261010T210000"
+    },
+    {
       "title": "Carrie 50th Anniversary — Cinespia",
       "month": "OCT",
       "day": "10",
@@ -160,6 +216,20 @@
       "price": "Free",
       "link": "https://hammer.ucla.edu/",
       "tagline": "Late-night galleries and a DJ in the courtyard.",
+      "starts": "20261010T200000",
+      "ends": "20261010T223000"
+    },
+    {
+      "title": "Vibrato: Olivia Kuper Harris",
+      "month": "OCT",
+      "day": "10",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "westside",
+      "where": "Vibrato Grill Jazz, Bel Air",
+      "price": "See venue",
+      "link": "https://www.vibratogrilljazz.com/music",
+      "tagline": "Jazz, soul, and originals from the Postmodern Jukebox vocalist.",
       "starts": "20261010T200000",
       "ends": "20261010T223000"
     },
@@ -191,6 +261,20 @@
       "pick": "Anjali",
       "starts": "20261011T140000",
       "ends": "20261011T180000"
+    },
+    {
+      "title": "Vibrato: Yellowjackets",
+      "month": "OCT",
+      "day": "13",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "westside",
+      "where": "Vibrato Grill Jazz, Bel Air",
+      "price": "See venue",
+      "link": "https://www.vibratogrilljazz.com/music",
+      "tagline": "Grammy-winning jazz fusion, up close.",
+      "starts": "20261013T200000",
+      "ends": "20261013T223000"
     },
     {
       "title": "Wellness & Waves on the Santa Monica Pier",
@@ -248,6 +332,20 @@
       "tagline": "Indian and Mexican street food at one candlelit table.",
       "starts": "20261101T180000",
       "ends": "20261101T210000"
+    },
+    {
+      "title": "Paint + Sound - Venice Beach",
+      "month": "NOV",
+      "day": "8",
+      "cat": "Culture",
+      "tags": "culture outdoors",
+      "area": "westside",
+      "where": "2100 Ocean Front Walk, Venice",
+      "price": "Ticketed",
+      "link": "https://www.eventbrite.com/e/paint-sound-venice-beach-tickets-1994474997407",
+      "tagline": "Acrylic painting workshop, then a sound bath by the sand.",
+      "starts": "20261108T140000",
+      "ends": "20261108T170000"
     },
     {
       "title": "Haps Club Jazz Age Party",
@@ -668,6 +766,42 @@
       "where": "1915 Penmar Ave, Venice",
       "price": "$",
       "link": "https://bodegaandpalms.com/"
+    },
+    {
+      "title": "Evergreen at Sabbatikal",
+      "month": "New",
+      "day": "★",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "westside",
+      "where": "Sabbatikal, 1224 25th St, Santa Monica",
+      "price": "Free",
+      "link": "https://sabbatikal.com",
+      "tagline": "Paul Paiement's new landscape paintings, now on view."
+    },
+    {
+      "title": "The World Stage: Thursday Jam",
+      "month": "Any",
+      "day": "♪",
+      "cat": "Music",
+      "tags": "music",
+      "area": "midcity",
+      "where": "The World Stage, Leimert Park",
+      "price": "$5",
+      "link": "https://theworldstage.org",
+      "tagline": "Instrumental jam session, Thursdays 8–11pm."
+    },
+    {
+      "title": "Primal Moves Venice",
+      "month": "Any",
+      "day": "•",
+      "cat": "Outdoors",
+      "tags": "outdoors",
+      "area": "westside",
+      "where": "Primal Moves, Venice",
+      "price": "Classes",
+      "link": "https://linktr.ee/primalveniceevents",
+      "tagline": "Movement classes with sauna and cold plunge, first class 50% off with EVENTWELCOME."
     }
   ],
   "archive": [
