@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "weekLabel": "Week of Oct 5",
   "featured": [
     {
@@ -844,6 +844,18 @@
   },
   "plan": [
     {
+      "title": "Haps Underground Supper Club: Masala Meets Mexico",
+      "when": "Sun Nov 1",
+      "accent": "orange",
+      "tagline": "A cozy vegetarian dinner where Indian and Mexican street food meet at one candlelit table.",
+      "meta": "6–9 PM · private home in South LA (address shared with confirmed guests) · $79 · fully non-alcoholic, festive drinks · sales end Oct 30 · menu: cardamom horchata, hibiscus-tamarind pani puri, grilled paneer tostadas, persimmon and roasted pepita salad",
+      "cta": "Get tickets",
+      "link": "https://luma.com/hapsclub-x4yc?coupon=HAPSCLUBPLUS",
+      "tags": "food date",
+      "area": "citywide",
+      "ends": "20261101T210000"
+    },
+    {
       "title": "Día de los Muertos at Hollywood Forever",
       "when": "Sat Oct 24",
       "accent": "orange",
@@ -869,8 +881,8 @@
     }
   ],
   "announcement": {
-    "text": "Carved at Descanso Gardens is lighting up the garden after dark through Nov 1 — hand-carved pumpkins and glowing trails.",
-    "link": "https://www.descansogardens.org/carved/",
-    "ends": "20261101T220000"
+    "text": "Next dinner: Haps Underground Supper Club — Masala Meets Mexico. Sun Nov 1, 6–9 PM · $79 · sales end Oct 30.",
+    "link": "https://luma.com/hapsclub-x4yc?coupon=HAPSCLUBPLUS",
+    "ends": "20261101T210000"
   }
 }
