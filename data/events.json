@@ -101,7 +101,8 @@
    "where": "Santa Monica Pier",
    "price": "Free",
    "link": "https://santamonicapier.org/wellness-and-waves/",
-   "ends": "20261017T100000"
+   "ends": "20261017T100000",
+   "starts": "20261017T080000"
   },
   {
    "title": "Maydan Market dinner + Zula Den",
@@ -118,6 +119,50 @@
    "pick": "Anjali",
    "starts": "20261022T180000",
    "ends": "20261022T230000"
+  },
+  {
+   "title": "Kiwis in LA Art Show & Wine Tasting",
+   "month": "OCT",
+   "day": "24",
+   "cat": "Culture",
+   "tags": "culture date",
+   "area": "westside",
+   "hood": "santa-monica",
+   "where": "Studios 3026, 3026 Airport Ave, Santa Monica",
+   "price": "$20 RSVP",
+   "link": "https://www.zeffy.com/en-US/ticketing/kiwis-in-la-art-show-and-wine-tasting",
+   "tagline": "Kiwi art and New Zealand wine, with all proceeds to Kiwis in LA. Clark will be there.",
+   "pick": "Clark",
+   "ends": "20261024T235900"
+  },
+  {
+   "title": "The Haunted Mansion: Halloween Costume Party",
+   "month": "OCT",
+   "day": "24",
+   "cat": "Music",
+   "tags": "music date halloween",
+   "area": "hollywood",
+   "where": "1749 N La Brea Ave, Hollywood",
+   "price": "Tickets",
+   "link": "https://www.eventbrite.com/e/the-haunted-mansion-immersive-halloween-costume-party-experience-tickets-2003262365662",
+   "tagline": "DJs, live performers, and a real haunted house. 21+, costume contest.",
+   "starts": "20261024T210000",
+   "ends": "20261025T020000"
+  },
+  {
+   "title": "Garden Halloween Party with Asado",
+   "month": "OCT",
+   "day": "30",
+   "cat": "Music",
+   "tags": "music food free halloween",
+   "area": "midcity",
+   "hood": "west-adams",
+   "where": "2267 W 20th St, Los Angeles",
+   "price": "Free",
+   "link": "https://www.instagram.com/p/DeP2KYpyTiT/",
+   "tagline": "Latin American darkwave and post-punk in a backyard garden, with Argentine asado for sale.",
+   "starts": "20261030T173000",
+   "ends": "20261030T203000"
   },
   {
    "title": "The Santa Monica Open: Pickleball",
@@ -174,6 +219,19 @@
    "tagline": "A live jazz trio, Prohibition-era cocktails, and a historic home turning 100.",
    "starts": "20261121T193000",
    "ends": "20261121T233000"
+  },
+  {
+   "title": "Apple picking in Oak Glen",
+   "month": "Now",
+   "day": "•",
+   "cat": "Outdoors",
+   "tags": "outdoors date",
+   "area": "citywide",
+   "where": "Oak Glen, San Bernardino foothills",
+   "price": "Varies",
+   "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
+   "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
+   "ends": "20261126T235900"
   },
   {
    "title": "Matilda's",
