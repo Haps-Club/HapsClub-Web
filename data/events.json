@@ -79,6 +79,47 @@
    "ends": "20261022T230000"
   },
   {
+   "title": "Real Genius at the Natural History Museum",
+   "month": "OCT",
+   "day": "22",
+   "cat": "Culture",
+   "tags": "culture date",
+   "area": "midcity",
+   "where": "Natural History Museum, 900 Exposition Blvd",
+   "price": "Tickets",
+   "link": "https://nhm.org/movies-under-microscope",
+   "tagline": "An 80s laser comedy with a pre-show vinyl DJ set and a talk with UCLA physicists.",
+   "ends": "20261022T235900"
+  },
+  {
+   "title": "Día de los Muertos at Hollywood Forever",
+   "month": "OCT",
+   "day": "24",
+   "cat": "Culture",
+   "tags": "culture date",
+   "area": "hollywood",
+   "where": "Hollywood Forever, 6000 Santa Monica Blvd",
+   "price": "Tickets",
+   "link": "https://www.ladayofthedead.com/event-info/",
+   "tagline": "Altars, a procession, dancers, and live music. Noon to midnight, timed entry at 12, 4, and 7.",
+   "starts": "20261024T120000",
+   "ends": "20261024T235900"
+  },
+  {
+   "title": "Downtown Día de los Muertos at Grand Park",
+   "month": "OCT",
+   "day": "24",
+   "cat": "Culture",
+   "tags": "culture free",
+   "area": "dtla",
+   "where": "Gloria Molina Grand Park, 200 N Grand Ave",
+   "price": "Free",
+   "link": "https://grandparkla.org/diadelosmuertos",
+   "tagline": "Seventeen community altars, Oct 24 to Nov 2. Opening celebration Saturday 11 AM to 4 PM.",
+   "starts": "20261024T080000",
+   "ends": "20261102T210000"
+  },
+  {
    "title": "The Haunted Mansion: Halloween Costume Party",
    "month": "OCT",
    "day": "24",
