@@ -55,7 +55,6 @@ CAL = ("https://calendar.google.com/calendar/embed?src="
        "c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384"
        "%40group.calendar.google.com")
 IG = "https://instagram.com/thehapsclub/"
-WA = "https://chat.whatsapp.com/CrQFCLOZjYm5eBqsU1vcA5?mode=gi_t"
 
 # The logo SVG has a square viewBox (0 0 1100 1100). Declaring 112x28 told the
 # browser the wrong aspect ratio and cost a layout shift on every page.
@@ -78,7 +77,6 @@ FOOTER_COLS = [
               ("Archive", "/archive/", False),
               ("Sitemap", "/sitemap", False)]),
     ("Join", [("Subscribe", "/subscribe", False),
-              ("WhatsApp", WA, True),
               ("Instagram", IG, True),
               ("Submit a tip", "/about#tip", False)]),
     ("More", [("About", "/about", False),

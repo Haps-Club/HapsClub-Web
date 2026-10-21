@@ -83,7 +83,6 @@ PAGE = """<!DOCTYPE html>
   <a href="https://haps.club/about.html#tip">Submit a tip</a>
   <a href="mailto:michael@haps.club">Contact</a>
   <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
-  <a href="https://chat.whatsapp.com/CrQFCLOZjYm5eBqsU1vcA5?mode=gi_t" target="_blank" rel="noopener">WhatsApp</a>
   <a href="{cal}" target="_blank" rel="noopener">Calendar</a>
   <a href="https://haps.club/archive/">Archive</a>
   <a href="https://haps.club/sitemap">Sitemap</a>

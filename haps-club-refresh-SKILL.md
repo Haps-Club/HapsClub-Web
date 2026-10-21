@@ -70,7 +70,7 @@ A small script reads `data-ends` (fallback `data-starts`), parses ISO at -07:00,
 - List existing events for the window first (avoid duplicates); add only the missing ones. Description style: one or two lines + ticket link + a final `More: https://haps.club`.
 
 ## 8. Footer (homepage + archive — exact, in order)
-Subscribe · About · Submit a tip · Contact (mailto:michael@haps.club) · Instagram · WhatsApp · Calendar · Archive · Sitemap
+Subscribe · About · Submit a tip · Contact (mailto:michael@haps.club) · Instagram · Calendar · Archive · Sitemap
 
 ## 9. Hard rules
 - Push to the **org** repo `Haps-Club/HapsClub-Web` only; never `Hilex2030/*`.
