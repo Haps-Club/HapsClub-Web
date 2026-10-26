@@ -72,7 +72,7 @@
    "where": "Gloria Molina Grand Park, 200 N Grand Ave",
    "price": "Free",
    "link": "https://grandparkla.org/diadelosmuertos",
-   "tagline": "Seventeen community altars, Oct 24 to Nov 2. Opening celebration Saturday 11 AM to 4 PM.",
+   "tagline": "Seventeen community altars through Nov 2. Noche de los Muertos closing party Sun Nov 1, 3 to 7 PM.",
    "starts": "20261024T080000",
    "ends": "20261102T210000"
   },
@@ -104,6 +104,51 @@
    "tagline": "Community doubles tournament, all levels welcome.",
    "starts": "20261031T080000",
    "ends": "20261101T150000"
+  },
+  {
+   "title": "West Hollywood Halloween Carnaval",
+   "month": "OCT",
+   "day": "31",
+   "cat": "Culture",
+   "tags": "culture free",
+   "area": "hollywood",
+   "hood": "west-hollywood",
+   "where": "Santa Monica Blvd, Doheny to La Cienega",
+   "price": "Free",
+   "link": "https://www.visitwesthollywood.com/events/halloween-carnaval/",
+   "tagline": "LA's biggest Halloween street party, 6 to 11 PM. No tickets, clear bags only.",
+   "starts": "20261031T180000",
+   "ends": "20261031T230000"
+  },
+  {
+   "title": "Maiya Sykes' Monster Mash at Vibrato",
+   "month": "OCT",
+   "day": "31",
+   "cat": "Music",
+   "tags": "music date",
+   "area": "westside",
+   "hood": "bel-air",
+   "where": "Vibrato Grill Jazz, 2930 Beverly Glen Circle",
+   "price": "Reservations",
+   "link": "https://www.vibratogrilljazz.com/music/maiya-sykes-monster-mash-halloween-costume-party",
+   "tagline": "Halloween costume party with jazz, funk, and disco. Shows at 7 and 9:30 PM.",
+   "starts": "20261031T190000",
+   "ends": "20261031T233000"
+  },
+  {
+   "title": "Día de los Muertos at SPARC",
+   "month": "NOV",
+   "day": "1",
+   "cat": "Culture",
+   "tags": "culture free",
+   "area": "westside",
+   "hood": "venice",
+   "where": "SPARC, 685 Venice Blvd",
+   "price": "Free",
+   "link": "https://sparcinla.org/event/dia-de-los-muertos-2026/",
+   "tagline": "24th annual celebration: sunset invocation, altars, performances, Oaxacan treats.",
+   "starts": "20261101T173000",
+   "ends": "20261101T203000"
   },
   {
    "title": "Haps Underground Supper Club: Masala Meets Mexico",
@@ -601,9 +646,27 @@
    "price": "Classes",
    "link": "https://linktr.ee/primalveniceevents",
    "tagline": "Movement classes with sauna and cold plunge, first class 50% off with EVENTWELCOME."
+  },
+  {
+   "title": "Bar Fortuna",
+   "month": "New",
+   "day": "★",
+   "cat": "Food",
+   "tags": "food date",
+   "area": "westside",
+   "hood": "santa-monica",
+   "where": "2917 Main St, Santa Monica",
+   "price": "$$",
+   "link": "https://lamag.com/food/bar-fortuna-california-italian-wine-bar-opens-main-street-santa-monica/",
+   "tagline": "Crudo e Nudo's new Italian bar: house-made pasta, five Negronis, espresso window."
   }
  ],
  "archive": [
+  {
+   "date": "Oct 27, 2026",
+   "title": "Costumes, candlelight, and one last seat",
+   "url": "https://haps.club/archive/2026-10-27-costumes-and-candlelight/"
+  },
   {
    "date": "Oct 19, 2026",
    "title": "Close out the year with an intimate dinner and a Jazz Age party",
@@ -628,11 +691,6 @@
    "date": "Sep 29, 2026",
    "title": "Back for Seconds",
    "url": "https://haps.club/archive/2026-09-29-back-for-seconds/"
-  },
-  {
-   "date": "Sep 24, 2026",
-   "title": "Dinner at Hermanito",
-   "url": "https://haps.club/archive/2026-09-24-dinner-at-hermanito/"
   }
  ],
  "sponsor": {
