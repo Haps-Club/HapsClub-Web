@@ -1,4 +1,4 @@
-// Ask Haps — Cloudflare Worker (v1)
+// Ask Haps — Cloudflare Worker (v2)
 // POST /api/ask  {"q": "something outdoors this Saturday"}
 // → {"answer": "...", "picks": [{title, when, where, price, link, tagline}]}
 // Secrets: ANTHROPIC_API_KEY (wrangler secret put / dashboard → Settings → Variables).
@@ -31,7 +31,9 @@ export default {
 
     const items = await loadItems(ctx);
     const now = new Date();
-    const today = now.toLocaleDateString("en-US", { timeZone: "America/Los_Angeles", weekday: "long", year: "numeric", month: "long", day: "numeric" });
+    const fmtDay = d => d.toLocaleDateString("en-US", { timeZone: "America/Los_Angeles", weekday: "long", month: "long", day: "numeric", year: "numeric" });
+    const today = fmtDay(now);
+    const week = Array.from({ length: 8 }, (_, i) => fmtDay(new Date(now.getTime() + i * 864e5))).join("; ");
 
     const catalog = items.map((e, i) =>
       `[${i}] ${e.title} | ${when(e)} | ${e.where || e.area || ""} | ${e.price || ""} | ${e.cat || ""} ${e.tags || ""} | ${e.tagline || ""}`
@@ -39,8 +41,11 @@ export default {
 
     const system =
 `You are "Ask Haps", the search box on haps.club — a curated guide to what's good in Los Angeles.
-Today is ${today} (Los Angeles time). Resolve "this Saturday", "tonight", "this weekend" against today.
+Today is ${today} (Los Angeles time). The next 8 days are: ${week}.
+Use that list to resolve dates: "this Saturday" = the first Saturday in the list on or after today; "this weekend" = the coming Saturday and Sunday (if today is Sunday, just today); "tonight" = today. Never state a weekday/date that isn't in that list.
+An event fits a day if that day falls between its start and end. Items marked "Ongoing" are available any day.
 Answer ONLY from the catalog below. Never invent events, venues, prices or times. If nothing fits, say so briefly and suggest the closest thing in the catalog.
+Aim for 3–5 picks when the catalog has them.
 Voice: warm, quick, a friend who knows the city. 1–3 short sentences. Always write "Los Angeles", never "LA".
 Return ONLY JSON: {"answer": string, "ids": [up to 5 catalog numbers, best first]}.
 
