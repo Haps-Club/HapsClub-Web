@@ -8,7 +8,7 @@ canonical one, so running it twice changes nothing the second time.
   python3 scripts/normalize_chrome.py --check    # exit 1 if any page is stale
 
 Scope: index.html plus every page that already uses the shared subpage shell
-(header class="snav" or class="nav"). The standalone one-offs under events/,
+(header class="snav", "nav" or the old issue-page "bar"). The standalone one-offs under events/,
 planner/, planner-svetlana/ and partnership/ have their own bespoke chrome and
 are deliberately left alone.
 """
@@ -22,7 +22,7 @@ import site_chrome as sc  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = ("events", "planner", "planner-svetlana", "partnership", ".git")
 
-HEADER_RE = re.compile(r'<header class="(?:snav|nav)"[^>]*>.*?</header>', re.S)
+HEADER_RE = re.compile(r'<header class="(?:snav|nav|bar)"[^>]*>.*?</header>', re.S)
 CHROME_RE = re.compile(r'[ \t]*<link[^>]+assets/chrome(?:-f)?\.css[^>]*>\n?')
 # chrome.css must load BEFORE the page stylesheet so page rules can still win
 PAGE_CSS_RE = re.compile(

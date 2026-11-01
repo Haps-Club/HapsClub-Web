@@ -18,6 +18,9 @@ Touches, in one pass:
   llms.txt                           (issue line at top of the archive list)
   data/events.json                   ("archive" array = 4 most recent, homepage teaser)
 """
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import site_chrome as sc
 import json, re, sys, html, os
 
 ROOT = os.getcwd()
@@ -52,16 +55,15 @@ PAGE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{chrome_css}
 <link rel="stylesheet" href="/assets/sunset-pages.css">
+<link rel="stylesheet" href="/assets/pages-f.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKY63MK7ND"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-RKY63MK7ND");</script>
 <script type="application/ld+json">{ld}</script>
 </head>
 <body>
-<header class="bar"><div class="bar-in">
-  <a class="logo" href="/" aria-label="Haps Club home"><img src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club"></a>
-  <a class="back" href="/archive/"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>All issues</a>
-</div></header>
+{header}
 <main class="wrap">
   <article>
     <div class="eyebrow"><span class="pin">&#9679;</span> {pretty}</div>
@@ -77,17 +79,7 @@ PAGE = """<!DOCTYPE html>
   </div>
   <p class="morelinks">More: <a href="/">this week in LA</a> &middot; <a href="{cal}">the calendar</a> &middot; <a href="/archive/">every issue</a></p>
 </main>
-<footer>
-  <a href="https://haps.club/subscribe">Subscribe</a>
-  <a href="https://haps.club/about.html">About</a>
-  <a href="https://haps.club/about.html#tip">Submit a tip</a>
-  <a href="mailto:michael@haps.club">Contact</a>
-  <a href="https://instagram.com/thehapsclub/" target="_blank" rel="noopener">Instagram</a>
-  <a href="{cal}" target="_blank" rel="noopener">Calendar</a>
-  <a href="https://haps.club/archive/">Archive</a>
-  <a href="https://haps.club/sitemap">Sitemap</a>
-  <span class="made">&copy; 2026 Haps Club &middot; Made by hand in Los Angeles</span>
-</footer>
+{footer}
 </body>
 </html>
 """
@@ -116,7 +108,7 @@ def build(iss):
                               body="".join("<p>%s</p>\n"%p for p in s['body']))
                    for s in iss['sections'])
     secs = secs.replace('<p><em></em></p>\n', '')
-    return PAGE.format(title=iss['title'], title_attr=esc(iss['title']),
+    return PAGE.format(chrome_css=sc.chrome_css(), header=sc.header(active="/archive/"), footer=sc.footer(), title=iss['title'], title_attr=esc(iss['title']),
                        dek=iss['dek'], dek_attr=esc(iss['dek']),
                        date=iss['date'], slug=iss['slug'], pretty=iss['pretty'],
                        intro="".join("<p>%s</p>\n"%p for p in iss['intro']),
