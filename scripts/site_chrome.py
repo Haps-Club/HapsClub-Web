@@ -63,6 +63,7 @@ LOGO_W = LOGO_H = 84
 # (label, href, opens_in_new_tab)
 NAV_ITEMS = [
     ("This week", "/#list",    False),
+    ("Ask Haps",  "/ask/",     False),
     ("Calendar",  CAL,         True),
     ("Guides",    "/guides/",  False),
     ("Archive",   "/archive/", False),

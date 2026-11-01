@@ -1,0 +1,24 @@
+/* Ask Haps — /ask/ page. Loaded after pages-f.css. */
+.ask-hero{background:linear-gradient(120deg,#FFF1E6 0%,#FBEAF4 55%,#EEEBFF 100%);border-bottom:1px solid var(--line);padding:56px 0 44px}
+.ask-wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.ask-eyebrow{font-family:'IBM Plex Mono',Menlo,monospace;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:var(--signal)}
+.ask-hero h1{font-family:'Inter Tight',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:800;letter-spacing:-1px;line-height:1.08;margin:10px 0 8px;color:var(--ink)}
+.ask-sub{color:var(--ink3);font-size:17px;line-height:1.5;margin:0 0 24px;max-width:620px}
+.ask-box{display:flex;gap:8px;align-items:center;background:#fff;border:1.5px solid var(--ink);border-radius:999px;padding:6px 6px 6px 22px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.ask-box input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:500 17px 'Inter Tight',sans-serif;color:var(--ink)}
+.ask-box button{border:0;border-radius:999px;background:var(--signal);color:#fff;font:700 15px 'Inter Tight',sans-serif;padding:13px 24px;cursor:pointer}
+.ask-box button:disabled{opacity:.6;cursor:wait}
+.ask-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ask-chips button{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:500 14px 'Inter Tight',sans-serif;color:var(--ink3);cursor:pointer}
+.ask-chips button:hover{border-color:var(--ink);color:var(--ink)}
+.ask-res{padding:36px 0 64px;min-height:120px}
+.ask-ans{display:flex;gap:14px;align-items:flex-start;background:var(--stone);border-radius:18px;padding:20px 22px;font-size:18px;line-height:1.5;color:var(--ink)}
+.ask-dot{flex:none;width:30px;height:30px;border-radius:50%;background:var(--signal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+.ask-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+.ask-card{display:block;border:1px solid var(--line);border-radius:16px;padding:18px;text-decoration:none;color:var(--ink);background:#fff;transition:transform .2s,box-shadow .2s}
+.ask-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.07)}
+.ask-card h3{font-family:'Inter Tight',sans-serif;font-size:19px;letter-spacing:-.3px;margin:0 0 4px}
+.ask-meta{color:var(--gray);font-size:14px;margin-bottom:8px}
+.ask-card p{margin:0;color:var(--ink3);font-size:15px;line-height:1.45}
+.ask-load{color:var(--gray);font-family:'IBM Plex Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.3px}
+@media(max-width:640px){.ask-grid{grid-template-columns:1fr}.ask-box button{padding:12px 16px}}
