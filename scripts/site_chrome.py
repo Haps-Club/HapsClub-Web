@@ -62,7 +62,7 @@ LOGO_W = LOGO_H = 84
 
 # (label, href, opens_in_new_tab)
 NAV_ITEMS = [
-    ("This week", "/#week",    False),
+    ("This week", "/#list",    False),
     ("Calendar",  CAL,         True),
     ("Guides",    "/guides/",  False),
     ("Archive",   "/archive/", False),
@@ -95,7 +95,7 @@ def _href(h, absolute):
     if h.startswith(("http", "mailto:")):
         return h
     if not absolute:
-        return h if h != "/#week" else "#week"
+        return h if h != "/#list" else "#list"
     return SITE + h
 
 

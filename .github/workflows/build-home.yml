@@ -1,0 +1,45 @@
+name: Build homepage
+
+# Rebuilds index.html from data/events.json.
+# - on every push that touches the data, the template or the homepage assets
+# - every morning at 7:05am PT, so expired events drop off on their own
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/events.json
+      - scripts/build_home.py
+      - assets/home-f.css
+      - assets/home-f.js
+  schedule:
+    - cron: "5 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-home
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Prune expired events and build index.html
+        run: python3 scripts/build_home.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- index.html data/events.json; then
+            echo "No changes"; exit 0
+          fi
+          git config user.name  "haps-build-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html data/events.json
+          git commit -m "Rebuild homepage from events.json [skip ci]"
+          git push
