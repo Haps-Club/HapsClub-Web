@@ -31,10 +31,6 @@
 
   apply();
 
-  // Header shadow
-  var hdr = $('#top');
-  addEventListener('scroll', function () { hdr.classList.toggle('scrolled', scrollY > 10); }, { passive: true });
-
   // Reveal on scroll (section heads wipe, items fade up with stagger)
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (es) {

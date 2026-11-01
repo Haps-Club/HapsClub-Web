@@ -47,7 +47,7 @@ def css_link(name):
 
 
 def chrome_css():
-    return css_link("chrome.css")
+    return css_link("chrome.css") + "\n" + css_link("chrome-f.css")
 
 LOGO = ("https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/"
         "haps-club-logo.svg?v=5")
@@ -67,11 +67,10 @@ NAV_ITEMS = [
     ("Guides",    "/guides/",  False),
     ("Archive",   "/archive/", False),
     ("About",     "/about",    False),
-    ("Instagram", IG,          True),
 ]
 
 FOOTER_COLS = [
-    ("Read", [("This week", "/#week", False),
+    ("Read", [("This week", "/#list", False),
               ("Calendar", CAL, True),
               ("Guides", "/guides/", False),
               ("Archive", "/archive/", False),

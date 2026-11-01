@@ -1,0 +1,42 @@
+/* chrome-f.css — Design F header + footer, ONE definition for every page.
+   Loaded after chrome.css on every page (homepage included). Markup comes
+   from scripts/site_chrome.py; change nav items there, looks here. */
+:root{--f-ink:#111111;--f-ink3:#4A4540;--f-mute:#7D766F;--f-line:#E4DED6;--f-stone:#F4F2EF;--f-signal:#FF4F00;
+  --f-sunset:linear-gradient(90deg,#FF9500,#FF4F00,#FF2D55,#AF52DE,#292F71,#FF9500);
+  --f-mono:'IBM Plex Mono',Menlo,Consolas,monospace;--f-sans:'Inter Tight','Helvetica Neue',Helvetica,Arial,sans-serif;--f-ease:cubic-bezier(.2,.7,.1,1)}
+body::before{content:"";display:block;height:6px;background:var(--f-sunset);background-size:300% 100%;animation:f-flow 12s linear infinite}
+@keyframes f-flow{to{background-position:300% 0}}
+/* header */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--f-line)}
+.nav .navbar{max-width:1180px;margin:0 auto;padding:0 32px;height:78px;gap:28px}
+.nav .brand img.logo{height:58px;width:58px;margin:0;transition:transform .4s var(--f-ease)}
+.nav .brand:hover img.logo{transform:rotate(-6deg) scale(1.05)}
+.nav nav{gap:22px}
+.nav nav a{font-family:var(--f-mono);font-size:12px;font-weight:400;letter-spacing:.3px;text-transform:uppercase;color:var(--f-ink);position:relative;padding:4px 0}
+.nav nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--f-signal);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--f-ease)}
+.nav nav a:hover{color:var(--f-ink)} .nav nav a:hover::after,.nav nav a.on::after{transform:scaleX(1)}
+.nav nav a.on{color:var(--f-signal);font-weight:400}
+.nav .navcta{background:var(--f-signal);color:#fff!important;font-family:var(--f-sans);font-size:14px;font-weight:700;padding:11px 18px;border-radius:999px;position:relative;overflow:hidden;isolation:isolate}
+.nav .navcta::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#FF2D55,#AF52DE);transform:translateX(-101%);transition:transform .45s var(--f-ease);z-index:-1}
+.nav .navcta:hover{background:var(--f-signal)} .nav .navcta:hover::before{transform:translateX(0)}
+.nav a:focus-visible{outline:3px solid var(--f-signal);outline-offset:3px;border-radius:6px}
+/* footer */
+footer{margin-top:80px;background:var(--f-stone);color:var(--f-ink3);padding:44px 0 50px;position:relative;font-family:var(--f-sans)}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--f-sunset);background-size:300% 100%;animation:f-flow 12s linear infinite}
+footer .footin{max-width:1180px;padding:0 32px}
+footer h5{color:var(--f-ink);font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.3px}
+footer .cols a{color:var(--f-ink3);font-size:14px} footer .cols a:hover{color:var(--f-signal)}
+footer .fbrand{color:var(--f-ink);font-weight:900;letter-spacing:-.02em}
+footer .fabout{color:var(--f-ink3)}
+footer .fbot{border-top:1px solid var(--f-line);color:var(--f-mute)}
+@media (prefers-reduced-motion:reduce){body::before,footer::before{animation:none}}
+@media(max-width:860px){
+  .nav .navbar{height:68px;padding:0 16px;gap:12px}
+  .nav .brand img.logo{height:48px;width:48px}
+  .burger span{background:var(--f-ink)}
+  .nav nav{background:#fff;border-bottom:1px solid var(--f-line);box-shadow:0 14px 26px rgba(0,0,0,.07)}
+  .nav nav a{font-size:13px;padding:14px 2px;border-bottom:1px solid var(--f-line)}
+  .nav nav a::after{display:none}
+  .nav .navcta{padding:9px 15px;font-size:13px}
+  footer .footin{padding:0 16px}
+}
