@@ -54,7 +54,7 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 ## Automation (GitHub Actions)
 - `build-home.yml` — rebuilds `index.html` on push to events.json/home assets and daily 7:05am PT.
 - `deploy-from-issue.yml` — old fallback: an issue titled `deploy: <path>` with a base64 body writes that file. Not needed now that git push works.
-- `daily-report.yml` / `process-approval.yml` — call `scripts/daily_report.py`, `scripts/process_approval.py` and `scripts/requirements.txt`, which are not in the repo, so the daily report fails.
+- The May 2026 daily inbox report (`daily-report.yml` / `process-approval.yml`) was retired: its scripts were removed 2026-05-11 and the workflows on 2026-11-02. Don't restore them unless Michael asks.
 
 ## Verify
 - Before commit: `python3 scripts/check_site.py` (pages end with `</html>`, have GA, link their CSS with fresh `?v=`, no stray `<style>`, local links resolve, events.json valid, weekday names match dates, no "singles"/exclamation marks in event copy).
