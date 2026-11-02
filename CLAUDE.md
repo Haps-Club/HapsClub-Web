@@ -6,7 +6,7 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 
 ## How to work
 - Patch existing pages. Never rebuild a page from scratch unless Michael asks.
-- Preview locally first (`python3 -m http.server 8000`), then commit and push only after Michael approves.
+- Preview locally first (`python3 -m http.server 8002` — 8000 is BizColab's, 8001 is AMRE's), then commit and push only after Michael approves.
 - Always `git pull` before editing — other sessions edit this repo too.
 - Keep short, plain answers. Show Michael the result, not the process.
 
