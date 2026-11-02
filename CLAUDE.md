@@ -16,7 +16,8 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 |---|---|---|
 | Weekly / daily picks, featured, announcement, sponsor | `data/events.json` | `python3 scripts/build_home.py` to preview. CI rebuilds `index.html` on push anyway. |
 | Homepage layout or copy | `scripts/build_home.py`, `assets/home-f.css`, `assets/home-f.js` | `python3 scripts/build_home.py`. Never hand-edit `index.html` — it's generated and gets overwritten. |
-| Nav or footer (every page) | `scripts/site_chrome.py` (markup), `assets/chrome-f.css` (looks) | `python3 scripts/normalize_chrome.py`, then `python3 scripts/build_home.py` |
+| Nav or footer (every page) | `scripts/site_chrome.py` (markup), `assets/chrome.css` (looks) | `python3 scripts/normalize_chrome.py`, then `python3 scripts/build_home.py` (both refresh the `?v=` hashes) |
+| Interior page look | `assets/site.css` | `python3 scripts/normalize_chrome.py` to refresh `?v=` on every page |
 | Newsletter issue into `/archive/` | `issues.json` (from `scripts/issues_from_kit.py`) | `python3 scripts/publish_issue.py issues.json`. Never hand-build archive pages or edit the `archive` array. |
 | Guides (`guides/`) | `scripts/build_guides.py` or `build_guides_fall.py` (don't rerun `build_guides.py` blindly — some guides were hand-fixed) | `python3 scripts/build_pages.py` fills the live event blocks + schema |
 | Ask Haps page (`/ask/`) | `scripts/build_ask.py`; worker source in `workers/ask-haps.js` (deployed to Cloudflare separately) | `python3 scripts/build_ask.py` |
@@ -32,7 +33,12 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 ## Design rules ("Design F", Nov 2026)
 - Fonts: Inter Tight (headlines/body) + IBM Plex Mono (small uppercase labels). No other fonts.
 - Colors live only in CSS tokens: ink #111111, stone #F4F2EF, line #E4DED6, signal orange #FF4F00, navy #292F71; category colors food #FF9500, music #AF52DE, culture #007AFF, outdoors #34C759. Never inline a color.
-- Stylesheets: homepage = `chrome.css` + `chrome-f.css` + `home-f.css`. Interior pages = `chrome.css` + `chrome-f.css` + `sunset-pages.css` + `pages-f.css` (pages-f overrides the older sunset-pages). A token used on both sides lives in both `home-f.css` and `pages-f.css` — change both.
+- Stylesheets — each rule lives in exactly one file:
+  - `assets/chrome.css` — header + footer, loaded first by every page (homepage too).
+  - `assets/site.css` — every interior page; tokens in its single `:root` block at the top.
+  - `assets/home-f.css` — homepage only. Page extras load alongside: `partners.css` (before site.css), `ask.css` (after).
+  - A token used on both the homepage and interior pages lives in both `home-f.css` and `site.css` — change both.
+  - The old `chrome-f.css`, `sunset-pages.css` and `pages-f.css` were merged into these in Nov 2026; don't bring them back.
 - CSS/JS links carry `?v=<first 8 of md5>` for cache-busting. Edit an asset → update its `?v=` on every page that links it (the build scripts do this for pages they generate; `check_site.py` flags stale ones).
 - Never bring back Instrument Serif or cream #FAF7F0. No light/dark toggle. Top-left logo always links home.
 - Signup form is MailerLite (`assets/ml-subscribe.js`, form action in build_home.py) — Kit is no longer the site form.

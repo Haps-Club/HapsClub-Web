@@ -151,7 +151,7 @@ def render_grid(events, now):
     return "\n".join(out)
 
 def render_live(rows):
-    """Guide live block — sunset-pages.css .list / .link / .txt vocabulary."""
+    """Guide live block — site.css .list / .link / .txt vocabulary."""
     if not rows:
         return ('  <div class="list">\n    <div class="row"><div class="txt">'
                 '<div class="t">Nothing listed here this week</div>'

@@ -13,7 +13,7 @@ Conventions this file encodes, all of which matter:
   * Pages use the shared .snav nav and the 1080 .wrap.wide container; every
     content block inside it shares one 764px measure.
   * Prose is emitted one <div class="body"> per paragraph, because
-    sunset-pages.css styles .body p:nth-child(2) as a small grey caption and a
+    site.css styles .body p:nth-child(2) as a small grey caption and a
     multi-paragraph .body silently demotes its second sentence.
   * .route / .stop is only for content that really is a sequence.
   * Every number in a heading must match the list under it ("Four rooms" means
@@ -172,7 +172,7 @@ def head(title, desc, url, ld, og_type="article", active="/guides/", robots=None
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{GA}");</script>
 <script type="application/ld+json">{ld}</script>
 {site_chrome.chrome_css()}
-{site_chrome.css_link("sunset-pages.css")}
+{site_chrome.page_css()}
 </head>
 <body>
 {SPRITE}

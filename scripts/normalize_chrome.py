@@ -23,10 +23,12 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_DIRS = ("events", "planner", "planner-svetlana", "partnership", ".git")
 
 HEADER_RE = re.compile(r'<header class="(?:snav|nav|bar)"[^>]*>.*?</header>', re.S)
-CHROME_RE = re.compile(r'[ \t]*<link[^>]+assets/chrome(?:-f)?\.css[^>]*>\n?')
-# chrome.css must load BEFORE the page stylesheet so page rules can still win
+CHROME_RE = re.compile(r'[ \t]*<link[^>]+assets/(?:chrome(?:-f)?|pages-f)\.css[^>]*>\n?')
+# chrome.css must load BEFORE the page stylesheet so page rules can still win.
+# sunset-pages.css / pages-f.css are the pre-merge names of site.css.
 PAGE_CSS_RE = re.compile(
-    r'([ \t]*)<link[^>]+assets/(sunset(?:-pages)?\.css)(?:\?[^"\']*)?[^>]*>')
+    r'([ \t]*)<link[^>]+assets/(?:site|sunset-pages)\.css(?:\?[^"\']*)?[^>]*>')
+FIRST_CSS_RE = re.compile(r'^([ \t]*)<link[^>]+assets/[^"\']+\.css', re.M)
 FOOTER_RE = re.compile(r'<footer[^>]*>.*?</footer>', re.S)
 
 # Which nav item to mark current, by path prefix. Longest match wins.
@@ -44,17 +46,16 @@ def active_for(rel):
 
 
 def ensure_chrome_link(src):
-    """Link assets/chrome.css immediately before the page stylesheet, and put a
-    content hash on both so Cloudflare cannot serve either one stale."""
+    """Link assets/chrome.css before the page's first stylesheet (partners.html
+    loads partners.css ahead of site.css), and put a content hash on both so
+    Cloudflare cannot serve either one stale."""
     src = CHROME_RE.sub("", src)
     m = PAGE_CSS_RE.search(src)
     if not m:
         return src
-    indent, page_css = m.group(1), m.group(2)
-    return (src[:m.start()]
-            + indent + sc.chrome_css() + "\n"
-            + indent + sc.css_link(page_css)
-            + src[m.end():])
+    src = src[:m.start()] + m.group(1) + sc.page_css() + src[m.end():]
+    first = FIRST_CSS_RE.search(src)
+    return src[:first.end(1)] + sc.chrome_css() + "\n" + first.group(1) + src[first.end(1):]
 
 
 def pages():

@@ -56,8 +56,7 @@ PAGE = """<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 {chrome_css}
-<link rel="stylesheet" href="/assets/sunset-pages.css">
-<link rel="stylesheet" href="/assets/pages-f.css">
+{page_css}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKY63MK7ND"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-RKY63MK7ND");</script>
 <script type="application/ld+json">{ld}</script>
@@ -108,7 +107,7 @@ def build(iss):
                               body="".join("<p>%s</p>\n"%p for p in s['body']))
                    for s in iss['sections'])
     secs = secs.replace('<p><em></em></p>\n', '')
-    return PAGE.format(chrome_css=sc.chrome_css(), header=sc.header(active="/archive/"), footer=sc.footer(), title=iss['title'], title_attr=esc(iss['title']),
+    return PAGE.format(chrome_css=sc.chrome_css(), page_css=sc.page_css(), header=sc.header(active="/archive/"), footer=sc.footer(), title=iss['title'], title_attr=esc(iss['title']),
                        dek=iss['dek'], dek_attr=esc(iss['dek']),
                        date=iss['date'], slug=iss['slug'], pretty=iss['pretty'],
                        intro="".join("<p>%s</p>\n"%p for p in iss['intro']),

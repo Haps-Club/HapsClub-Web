@@ -47,7 +47,12 @@ def css_link(name):
 
 
 def chrome_css():
-    return css_link("chrome.css") + "\n" + css_link("chrome-f.css")
+    return css_link("chrome.css")
+
+
+def page_css():
+    """The one stylesheet every interior page loads after chrome.css."""
+    return css_link("site.css")
 
 LOGO = ("https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/"
         "haps-club-logo.svg?v=5")
