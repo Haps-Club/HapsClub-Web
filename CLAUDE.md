@@ -46,7 +46,7 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 - Keep byte-identical: Google Analytics `G-RKY63MK7ND`, canonical/OG meta.
 
 ## Haps Club rules
-- Haps Club is separate from AMRE, BizColab and Compass. No real estate anywhere.
+- Haps Club is separate from AMRE, BizColab and Compass. No real estate anywhere. BizColab may appear only as a labeled sponsor in the "Sponsored by" block (`site_chrome.sponsors()`), never in picks or copy.
 - Never invent events, dates, venues, prices or links. Verify every date's weekday with Python and every URL is live; cut what can't be verified and say so.
 - Never say "singles". No exclamation marks in card or story copy.
 - Link to the venue's own site, not Eater, Infatuation or Yelp.

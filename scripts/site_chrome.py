@@ -141,7 +141,7 @@ def sponsors(sp=None, label="Sponsored by", cls="blk"):
       <div class="rv">
         <div class="mono navy">BizColab</div>
         <h3>Six founders. One&nbsp;month.</h3>
-        <p>A curated four-week mastermind for founders and operators, with real accountability and honest&nbsp;feedback.</p>
+        <p>A four-week mastermind for founders and operators, with real accountability and honest&nbsp;feedback.</p>
         <a href="https://bizcolab.com/" target="_blank" rel="noopener">Request a seat &rarr;</a>
       </div>
       <div class="rv">
