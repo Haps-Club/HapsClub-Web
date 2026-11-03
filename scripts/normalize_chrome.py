@@ -12,6 +12,7 @@ Scope: index.html plus every page that already uses the shared subpage shell
 planner/, planner-svetlana/ and partnership/ have their own bespoke chrome and
 are deliberately left alone.
 """
+import json
 import os
 import re
 import sys
@@ -30,6 +31,13 @@ PAGE_CSS_RE = re.compile(
     r'([ \t]*)<link[^>]+assets/(?:site|sunset-pages)\.css(?:\?[^"\']*)?[^>]*>')
 FIRST_CSS_RE = re.compile(r'^([ \t]*)<link[^>]+assets/[^"\']+\.css', re.M)
 FOOTER_RE = re.compile(r'<footer[^>]*>.*?</footer>', re.S)
+# Pages that opt in to the homepage's sponsor block carry this section.
+SPONS_RE = re.compile(r'<section class="blk spons-wrap">.*?</section>', re.S)
+
+
+def sponsor():
+    with open(os.path.join(ROOT, "data", "events.json"), encoding="utf-8") as f:
+        return json.load(f).get("sponsor")
 
 # Which nav item to mark current, by path prefix. Longest match wins.
 ACTIVE = [("ask/", "/ask/"), ("guides/", "/guides/"), ("archive/", "/archive/"),
@@ -81,6 +89,9 @@ def main(check=False):
                             new, count=1)
         if FOOTER_RE.search(new):
             new = FOOTER_RE.sub(lambda m: sc.footer(), new, count=1)
+        if SPONS_RE.search(new):
+            new = SPONS_RE.sub(lambda m: sc.sponsors(sponsor(), cls="blk spons-wrap"),
+                               new, count=1)
         if new == src:
             continue
         stale.append(rel)

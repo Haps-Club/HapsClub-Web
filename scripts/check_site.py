@@ -157,8 +157,8 @@ def check_events():
     except ValueError:
         err("events.json: 'updated' is not YYYY-MM-DD")
         upd = date.today()
-    if len(d.get("featured", [])) != 3:
-        err(f"events.json: featured has {len(d.get('featured', []))} items, needs 3")
+    if len(d.get("featured", [])) != 3:  # build_home.py promotes the next event to fill 3
+        warn(f"events.json: featured has {len(d.get('featured', []))} items; homepage auto-fills to 3")
     if re.search(r"\bsingles\b", json.dumps(d, ensure_ascii=False), re.I):
         err("events.json: says 'singles' somewhere")
     for sect in ("featured", "events", "plan"):

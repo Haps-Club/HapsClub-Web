@@ -301,25 +301,7 @@ def build(prune=True):
     <div class="issues">{items}</div>
   </section>'''
 
-    sp = d.get("sponsor")
-    spons_html = f'''
-  <section class="blk">
-    <div class="head"><div><div class="mono sig">(06) Sponsored by</div></div></div>
-    <div class="spons">
-      <div class="rv">
-        <div class="mono navy">BizColab</div>
-        <h3>Six founders. One&nbsp;month.</h3>
-        <p>A curated four-week mastermind for founders and operators, with real accountability and honest&nbsp;feedback.</p>
-        <a href="https://bizcolab.com/" target="_blank" rel="noopener">Request a seat &rarr;</a>
-      </div>
-      <div class="rv">
-        <div class="mono purple">{e(sp["name"]) if sp else "Blackbird"}</div>
-        <h3>Get rewarded for eating&nbsp;out</h3>
-        <p>Earn $FLY at restaurants around LA. Code <b>bb-igyo61</b> gets you $20 to&nbsp;start.</p>
-        <a href="{e(sp["link"]) if sp else "https://app.blackbird.xyz/r/bb-igyo61"}" target="_blank" rel="noopener">Claim it &rarr;</a>
-      </div>
-    </div>
-  </section>'''
+    spons_html = "\n  " + sc.sponsors(d.get("sponsor"), label="(06) Sponsored by")
 
     chips = "".join(f'<button class="chip{" on" if k=="All" else ""}" data-f="{k}" aria-pressed="{str(k=="All").lower()}">{k}</button>'
                     for k in ["All", "Food", "Music", "Culture", "Outdoors", "Free", "Date night"])

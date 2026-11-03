@@ -24,6 +24,7 @@ in the mobile bar instead of being buried in the drawer.
 """
 
 import hashlib
+import html
 import os
 
 SITE = "https://haps.club"
@@ -124,6 +125,33 @@ def header(active="", absolute=True):
         f'<span></span><span></span><span></span></label>'
         f'</div></header>'
     )
+
+
+def sponsors(sp=None, label="Sponsored by", cls="blk"):
+    """The "Sponsored by" block that sits above the footer: the homepage
+    (build_home.py, cls="blk") and interior pages (normalize_chrome.py,
+    cls="blk spons-wrap") share this one definition. `sp` is the `sponsor`
+    object from data/events.json; it fills the Blackbird card."""
+    e = html.escape
+    name = e(sp["name"]) if sp else "Blackbird"
+    link = e(sp["link"]) if sp else "https://app.blackbird.xyz/r/bb-igyo61"
+    return f'''<section class="{cls}">
+    <div class="head"><div><div class="mono sig">{label}</div></div></div>
+    <div class="spons">
+      <div class="rv">
+        <div class="mono navy">BizColab</div>
+        <h3>Six founders. One&nbsp;month.</h3>
+        <p>A curated four-week mastermind for founders and operators, with real accountability and honest&nbsp;feedback.</p>
+        <a href="https://bizcolab.com/" target="_blank" rel="noopener">Request a seat &rarr;</a>
+      </div>
+      <div class="rv">
+        <div class="mono purple">{name}</div>
+        <h3>Get rewarded for eating&nbsp;out</h3>
+        <p>Earn $FLY at restaurants around LA. Code <b>bb-igyo61</b> gets you $20 to&nbsp;start.</p>
+        <a href="{link}" target="_blank" rel="noopener">Claim it &rarr;</a>
+      </div>
+    </div>
+  </section>'''
 
 
 def footer(absolute=True):
