@@ -1,0 +1,52 @@
+name: Archive newsletter issues
+
+# Publishes sent "Haps Weekly" MailerLite campaigns to /archive/ and refreshes the
+# homepage's "Recent issues". Runs Tuesday after the send, plus once a day as a
+# catch-up; does nothing when every sent issue is already archived.
+# Needs the repo secret MAILERLITE_API_KEY (MailerLite > Integrations > API).
+on:
+  schedule:
+    - cron: "0 19 * * 2"   # Tuesday ~11am/12pm PT
+    - cron: "30 15 * * *"  # daily catch-up, after build-home
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-issues
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Find sent issues not yet archived
+        env:
+          MAILERLITE_API_KEY: ${{ secrets.MAILERLITE_API_KEY }}
+        run: |
+          if [ -z "$MAILERLITE_API_KEY" ]; then
+            echo "::warning::MAILERLITE_API_KEY secret is not set; skipping"
+            echo "[]" > /tmp/issues.json; exit 0
+          fi
+          python3 scripts/issues_from_mailerlite.py > /tmp/issues.json
+          python3 -c "import json; print(len(json.load(open('/tmp/issues.json'))), 'new issue(s)')"
+      - name: Publish, rebuild homepage, check
+        run: |
+          if [ "$(python3 -c "import json; print(len(json.load(open('/tmp/issues.json'))))")" = "0" ]; then
+            echo "Nothing new"; exit 0
+          fi
+          python3 scripts/publish_issue.py /tmp/issues.json
+          python3 scripts/build_home.py --no-prune
+          python3 scripts/check_site.py
+          git config user.name  "haps-build-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add archive data/events.json index.html sitemap.xml llms.txt
+          git commit -m "Archive newsletter issue(s) from MailerLite"
+          git pull --rebase
+          git push
