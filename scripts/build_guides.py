@@ -24,6 +24,7 @@ Conventions this file encodes, all of which matter:
 """
 import os, json, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import guide_layout
 import site_chrome
 
 OUT  = os.environ.get("REPO") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,6 +134,8 @@ def table(head_cells, rows):
 
 
 def w(path, body):
+    if path.startswith("guides/") and "/_drafts/" not in path:
+        body = guide_layout.transform(body)        # box-free layout with the right-hand rail
     p = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(p), exist_ok=True)
     open(p, "w", encoding="utf-8").write(body)
@@ -197,7 +200,7 @@ def live_block(filt, fallback, limit, heading, note, altheading="", cat="ticket"
     alt = altheading or heading
     return f'''
 <section class="sec" id="this-week">
-  <div class="lbl">{icon(ICON_FOR[cat])} Updated every Sunday night</div>
+  <div class="lbl">{icon(ICON_FOR[cat])} Updated daily</div>
   <!-- HAPS:LIVE start filter="{filt}" fallback="{fallback}" limit="{limit}" -->
   <h2 data-haps-heading="{heading}" data-haps-alt="{alt}">{heading}</h2>
   <div class="body"><p>{note}</p></div>
@@ -548,7 +551,7 @@ def build_freeweekend():
                  ("Smorgasburg LA","777 S Alameda St",None)], ordered=False)]
     b = head(title, desc, url, ld(nodes))
     b += ghero("Los Angeles &middot; Citywide","Free things to do in LA <em>this weekend</em>",
-               "Updated every Sunday night. Nothing expired, nothing padded.")
+               "Updated daily. Nothing expired, nothing padded.")
     b += facts([("Updated","Every Sunday 9pm"),("Cost","$0"),
                 ("Always free","8 museums"),("Watch out for","Parking")])
     b += jump([("This weekend","this-week","ticket"),("Free every weekend","evergreen","park"),
@@ -627,10 +630,10 @@ def build_index():
     b = head(title, desc, url, ld(nodes), og_type="website")
     b += ghero("Los Angeles &middot; Haps Club","Guides to Los Angeles,<br>by someone who <em>goes</em>",
                "Written once, kept current every week.")
-    b += facts([("Coverage","Westside &amp; citywide"),("Refreshed","Every Sunday"),
+    b += facts([("Coverage","Westside &amp; citywide"),("Refreshed","Every day"),
                 ("Venues named","All from past issues"),("Cost","Free, no signup")])
     b += intro(["The homepage tells you what is on this week. These are the pages that stay useful after the week ends — neighbourhood walks, and the honest version of what is free in this city.",
-                "Every place named here has appeared in a Haps Club issue. Each guide refreshes every Sunday night with what is actually on."])
+                "Every place named here has appeared in a Haps Club issue. Each guide refreshes every day with what is actually on."])
     b += '<div class="glist">\n'
     for href, cat, meta, h2, d in GUIDES:
         b += (f'  <a class="gcard cat-{cat}" href="{href}">\n'

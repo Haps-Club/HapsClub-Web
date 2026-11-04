@@ -44,7 +44,7 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 ## Guides
 
 Evergreen, hand-written guides to Los Angeles neighbourhoods and to what is genuinely free.
-Each one is refreshed every Sunday night with the current week's events, from the same
+Each one is refreshed every day with the current week's events, from the same
 curated list that runs on the homepage. Every venue named is checked against its own website.
 
 - [Things to Do in Venice, CA](https://haps.club/guides/venice/): One day on foot west of Lincoln — Gjusta, the Venice canals, Abbot Kinney top to bottom, and four dinners ordered by how hard they are to get into.
@@ -55,6 +55,8 @@ curated list that runs on the homepage. Every venue named is checked against its
 - [Halloween Events in Los Angeles 2026](https://haps.club/guides/halloween-events-los-angeles/): Pumpkin nights (Descanso Gardens' Carved, Magic of the Jack O'Lanterns, Mr. Bones), Cinespia cemetery screenings, Halloween Horror Nights and Delusion, the free West Hollywood Carnaval, and Día de los Muertos at Hollywood Forever, Grand Park and Olvera Street, with 2026 dates checked on each official site.
 - [Supper Clubs and Chef's Tables in LA](https://haps.club/guides/supper-clubs-los-angeles/): Long-table dinners (Haps Club at Hermanito, LA Foodshop, Twentieth Street Garden), matched dinners with strangers (Timeleft, 222), and counter omakase (Shunji, Mori Nozomi, Ueki, Loreto, Hayato), with how each one books.
 - [Where to Take Someone Who Says They Don't Like LA](https://haps.club/guides/la-for-skeptics/): Ten Westside-first stops, from the Getty and the Venice canals to a Malibu farm stand, the Hollywood Bowl and Griffith Observatory, with timing and parking tips.
+- [Fall Hikes in Los Angeles](https://haps.club/guides/fall-hikes-los-angeles/): What is open, what is still closed after the fires, and how red flag closures work.
+- [Best Museums in Los Angeles](https://haps.club/guides/best-museums-los-angeles/): Eleven worth the drive, sorted by mood, with what is free, which day each is closed and what it costs.
 
 ## Newsletter archive
 - [Party like it’s 1926](https://haps.club/archive/2026-11-03-party-like-its-1926/): A 1926 party, an all-you-can-eat Italian holiday night, a salsa night, and more.

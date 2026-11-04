@@ -7,7 +7,7 @@
 In order:
   1. data      current week label; "New" badges older than settings.new_badge_days become evergreen
   2. homepage  build_home.py: drops anything past its end time, re-sorts, keeps 3 featured, rebuilds index.html
-  3. guides    build_pages.py: refreshes every guide's live event list and schema, drops finished events
+  3. guides    build_pages.py refreshes every guide's live event list and schema; guide_layout.py keeps them in the box-free layout
   4. chrome    normalize_chrome.py: header/footer/year, font + cache-buster hashes on every page
   5. feeds     build_feeds.py: calendar.ics, feed.xml, llms-full.txt, llms.txt "This week"
   6. checks    check_site.py, check_seo.py, check_links.py --internal (exit 1 if any fail)
@@ -80,7 +80,8 @@ def main():
     out.append("homepage: " + text.replace("\n", " | "))
     if open(EVENTS, "rb").read() != before and load().get("updated") != TODAY.isoformat():
         d = load(); d["updated"] = TODAY.isoformat(); save(d)      # build_home pruned expired items
-    steps = [("guides", ["scripts/build_pages.py"]), ("chrome", ["scripts/normalize_chrome.py"]),
+    steps = [("guides", ["scripts/build_pages.py"]), ("layout", ["scripts/guide_layout.py"]),
+             ("chrome", ["scripts/normalize_chrome.py"]),
              ("feeds", ["scripts/build_feeds.py"])]
     for name, cmd in steps:
         code, text = run(*cmd)
