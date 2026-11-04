@@ -25,15 +25,14 @@
 <meta name="twitter:title" content="About Haps Club — The Free LA Events Newsletter">
 <meta name="twitter:description" content="One person, one city, one email a week. Hand-picked things to do in Los Angeles every Tuesday morning — no listings dumps, no paid placements, always free.">
 <meta name="twitter:image" content="https://haps.club/assets/og-card.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKY63MK7ND"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-RKY63MK7ND");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="/assets/chrome.css?v=7f218f22">
-<link rel="stylesheet" href="/assets/site.css?v=cd331cc2">
+<link rel="stylesheet" href="/assets/site.css?v=4ef0f529">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "About Haps Club — The Free LA Events Newsletter", "url": "https://haps.club/about", "description": "Haps Club is a daily guide to what is actually worth doing in Los Angeles, with a weekly email digest.", "mainEntity": {"@type": "Organization", "name": "Haps Club", "url": "https://haps.club/", "email": "michael@haps.club", "founder": {"@type": "Person", "name": "Michael Abraham"}, "sameAs": ["https://instagram.com/thehapsclub"]}}</script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -44,7 +43,7 @@
 <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 7 7 0 1 0 20 14.5Z"/></symbol>
 </defs></svg>
 
-<header class="nav"><div class="navbar"><a class="brand" href="https://haps.club/" aria-label="Haps Club home"><img class="logo" src="https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5" alt="Haps Club" width="84" height="84"></a><input class="navtog" type="checkbox" id="navtog" aria-hidden="true" tabindex="-1"><nav><a href="https://haps.club/#list">This week</a><a href="https://haps.club/ask/">Ask Haps</a><a href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Calendar</a><a href="https://haps.club/guides/">Guides</a><a href="https://haps.club/archive/">Archive</a><a href="https://haps.club/about" class="on">About</a></nav><a class="navcta" href="https://haps.club/subscribe">Subscribe</a><label class="burger" for="navtog" aria-label="Open menu"><span></span><span></span><span></span></label></div></header>
+<header class="nav"><div class="navbar"><a class="brand" href="https://haps.club/" aria-label="Haps Club home"><img class="logo" src="https://haps.club/assets/img/haps-logo.svg" alt="Haps Club" width="84" height="84"></a><input class="navtog" type="checkbox" id="navtog" aria-hidden="true" tabindex="-1"><nav><a href="https://haps.club/#list">This week</a><a href="https://haps.club/ask/">Ask Haps</a><a href="https://calendar.google.com/calendar/embed?src=c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384%40group.calendar.google.com" target="_blank" rel="noopener">Calendar</a><a href="https://haps.club/guides/">Guides</a><a href="https://haps.club/archive/">Archive</a><a href="https://haps.club/about" class="on">About</a></nav><a class="navcta" href="https://haps.club/subscribe">Subscribe</a><label class="burger" for="navtog" aria-label="Open menu"><span></span><span></span><span></span></label></div></header>
 
 <section class="hero about-hero">
   <div class="about-intro">
@@ -105,7 +104,7 @@
     <h2 class="tip-title">Heard about something good?</h2>
     <p class="tip-sub">A new restaurant, a one-night-only event, a venue worth knowing about — or just a question for me. The form goes straight to my inbox.</p>
 
-    <form class="tip-form" id="tipForm">
+    <form class="tip-form" id="tipForm" data-emailjs-key="yWt3TMJ6ysOrH3vH1" data-emailjs-service="service_r16vi4q" data-emailjs-template="template_3uwwsgq" data-emailjs-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" data-emailjs-sri="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS">
       <div class="tip-row">
         <label for="tip-name">Your name</label>
         <input type="text" id="tip-name" name="from_name" required>
@@ -182,5 +181,6 @@
     <div class="fbot">&copy; 2026 Haps Club &middot; Made by hand in Los Angeles</div>
   </div>
 </footer>
+<script src="/assets/tip-form.js?v=8ef7303d" defer></script>
 </body>
 </html>

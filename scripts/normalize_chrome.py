@@ -31,6 +31,11 @@ PAGE_CSS_RE = re.compile(
     r'([ \t]*)<link[^>]+assets/(?:site|sunset-pages)\.css(?:\?[^"\']*)?[^>]*>')
 FIRST_CSS_RE = re.compile(r'^([ \t]*)<link[^>]+assets/[^"\']+\.css', re.M)
 FOOTER_RE = re.compile(r'<footer[^>]*>.*?</footer>', re.S)
+# Any Google Fonts <link> or its preconnect hints, wherever an older generator left them.
+FONT_LINK_RE = re.compile(
+    r'[ \t]*<link\b[^>]*(?:fonts\.googleapis\.com|fonts\.gstatic\.com)[^>]*>\n?')
+# /assets/*.css|js references that carry (or should carry) a ?v=<hash> cache-buster.
+ASSET_RE = re.compile(r'\b(href|src)="(/assets/[^"?#]+\.(?:css|js))(?:\?v=[^"]*)?"')
 # Pages that opt in to the homepage's sponsor block carry this section.
 SPONS_RE = re.compile(r'<section class="blk spons-wrap">.*?</section>', re.S)
 
@@ -66,6 +71,25 @@ def ensure_chrome_link(src):
     return src[:first.end(1)] + sc.chrome_css() + "\n" + first.group(1) + src[first.end(1):]
 
 
+def ensure_fonts(src):
+    """Exactly one fonts block (preconnect + stylesheet), immediately before the first stylesheet."""
+    src = FONT_LINK_RE.sub("", src)
+    first = FIRST_CSS_RE.search(src)
+    if not first:
+        return src
+    return src[:first.start()] + first.group(1) + sc.fonts_html().replace("\n", "\n" + first.group(1)) + "\n" + src[first.start():]
+
+
+def refresh_asset_hashes(src):
+    """Re-stamp ?v=<md5[:8]> on every local css/js link so Cloudflare never serves a stale one."""
+    def stamp(m):
+        path = os.path.join(ROOT, m.group(2).lstrip("/"))
+        if not os.path.isfile(path):
+            return m.group(0)
+        return f'{m.group(1)}="{m.group(2)}?v={sc.file_hash(path)}"'
+    return ASSET_RE.sub(stamp, src)
+
+
 def pages():
     for dirpath, dirnames, filenames in os.walk(ROOT):
         dirnames[:] = [d for d in dirnames
@@ -85,6 +109,8 @@ def main(check=False):
         if not HEADER_RE.search(src):
             continue                      # bespoke page, not ours
         new = ensure_chrome_link(src)
+        new = ensure_fonts(new)
+        new = refresh_asset_hashes(new)
         new = HEADER_RE.sub(lambda m: sc.header(active=active_for(rel)),
                             new, count=1)
         if FOOTER_RE.search(new):

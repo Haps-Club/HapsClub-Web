@@ -1,0 +1,12 @@
+{
+  "_about": "Tunable site settings. Scripts read these; nothing below is hard-coded in code. Change a value, run `python3 scripts/sweep.py`.",
+  "site_name": "Haps Club",
+  "site_url": "https://haps.club",
+  "timezone": "America/Los_Angeles",
+  "new_badge_days": 60,
+  "default_event_hours": 2,
+  "feed_items": 30,
+  "this_week_days": 14,
+  "calendar_name": "Haps Club: what's on in Los Angeles",
+  "feed_description": "Hand-picked things to do in Los Angeles, one free email every Tuesday."
+}

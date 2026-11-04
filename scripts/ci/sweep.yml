@@ -1,0 +1,80 @@
+name: Daily sweep
+
+# Install: copy this file to .github/workflows/sweep.yml (GitHub web UI: Add file > Create new file).
+#
+# Every morning (6:30am PST / 7:30am PDT) this runs scripts/sweep.py, which
+#   * drops events that have ended and ages out "New" badges
+#   * rebuilds the homepage, refreshes every guide's live list and schema
+#   * regenerates calendar.ics, feed.xml, llms.txt and llms-full.txt
+#   * refreshes the footer year and cache-buster hashes
+# and commits whatever changed. A second step then runs the site, SEO and internal-link checks;
+# if they fail the run goes red and GitHub emails you.
+# Mondays it also checks every external link and opens an issue listing the dead ones.
+on:
+  schedule:
+    - cron: "30 14 * * *"
+    - cron: "0 15 * * 1"
+  workflow_dispatch:
+    inputs:
+      links:
+        description: "Also check every external link and open an issue if any are dead"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: site-sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sweep (prune, rebuild, refresh feeds)
+        run: python3 scripts/sweep.py --no-checks
+
+      - name: Commit what changed
+        run: |
+          if git diff --quiet && [ -z "$(git ls-files --others --exclude-standard)" ]; then
+            echo "Nothing to commit"; exit 0
+          fi
+          git config user.name  "haps-build-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Daily sweep: prune expired, refresh guides, feeds and hashes"
+          git pull --rebase
+          git push
+
+      - name: Checks (site, SEO, internal links)
+        run: |
+          python3 scripts/check_site.py
+          python3 scripts/check_seo.py
+          python3 scripts/check_links.py --internal
+
+      - name: Weekly external link report
+        if: github.event.schedule == '0 15 * * 1' || inputs.links
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          python3 scripts/check_links.py | tee /tmp/links.txt
+          status=${PIPESTATUS[0]}
+          if [ "$status" != "0" ]; then
+            for n in $(gh issue list --state open --search "Link report in:title" --json number --jq '.[].number'); do
+              gh issue close "$n" --comment "Superseded by the newest report."
+            done
+            gh issue create --title "Link report $(date +%F)" \
+              --body "$(printf 'Dead or rule-breaking links on live pages (archived issues are left as sent).\n\n```\n'; grep -E '^(DEAD|RULE|BROKEN|MOVED)' -A1 /tmp/links.txt | head -80; printf '```\n')"
+          fi
+          exit 0

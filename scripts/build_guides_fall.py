@@ -68,7 +68,7 @@ SPOOKY = [
   "https://enterdelusion.com/",[("Immersive","cat")],"2026-09-17T19:00:00-07:00","2026-11-08T23:59:00-08:00","Beckett Mansion","West Adams",143,
   "Interactive horror theatre set in a 1920s vampire den, back in its original mansion."),
  ("haunts","Queen Mary's Dark Harbor","Select nights through Nov 1 · Long Beach · from about $30.","ticket",
-  "https://www.queenmary.com/dark-harbor.htm",[("Ticketed","cat")],"2026-09-18T19:00:00-07:00","2026-11-01T23:59:00-07:00","The Queen Mary","Long Beach",29.99,
+  "https://www.queenmary.com/seasonal-events.htm",[("Ticketed","cat")],"2026-09-18T19:00:00-07:00","2026-11-01T23:59:00-07:00","The Queen Mary","Long Beach",29.99,
   "Mazes through a famously haunted ocean liner, with bars on the dock."),
  ("haunts","Knott's Scary Farm","Select nights through Oct 31 · Buena Park · from $65 online.","ticket",
   "https://www.sixflags.com/knotts/events/scary-farm",[("Ticketed","cat")],"2026-09-17T19:00:00-07:00","2026-10-31T23:59:00-07:00","Knott's Berry Farm","Buena Park",65,

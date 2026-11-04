@@ -29,7 +29,7 @@ import site_chrome
 OUT  = os.environ.get("REPO") or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GA   = "G-RKY63MK7ND"
 KIT  = "9421017"
-LOGO = "https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5"
+LOGO = "https://haps.club/assets/img/haps-logo.svg"
 OG   = "https://haps.club/assets/og-card.png"
 TODAY = "2026-09-07"
 
@@ -165,9 +165,7 @@ def head(title, desc, url, ld, og_type="article", active="/guides/", robots=None
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{OG}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+{site_chrome.fonts_html()}
 <script async src="https://www.googletagmanager.com/gtag/js?id={GA}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{GA}");</script>
 <script type="application/ld+json">{ld}</script>
@@ -342,7 +340,7 @@ def build_sm():
     nodes = [webpage(title,url,desc,"2026-09-07",TODAY), breadcrumb("Santa Monica",url),
              itemlist("Free Things to Do in Santa Monica",url,
                 [("The Santa Monica Stairs","Adelaide Dr & 4th St",None),
-                 ("Annenberg Community Beach House",None,"https://annenbergbeachhouse.com/"),
+                 ("Annenberg Community Beach House",None,"https://www.santamonica.gov/places/cultural-venue/annenberg-community-beach-house"),
                  ("Santa Monica Farmers Market","155-199 Arizona Ave",None),
                  ("West Side Oyster Club","1355 Ocean Ave",None),
                  ("Blankspaces","929 Colorado Ave",None)], ordered=False)]
@@ -367,7 +365,7 @@ def build_sm():
          "The pool is a small pass on top.",
          "Parking fills by eleven on a weekend, so bike or walk in if you can."],
         placelist([
-          place("Annenberg Community Beach House","Courtyard, splash pad and beach courts free to all. Pool is a small pass. Lot fills by 11am weekends.","beach","https://annenbergbeachhouse.com/",[("Free","free")]),
+          place("Annenberg Community Beach House","Courtyard, splash pad and beach courts free to all. Pool is a small pass. Lot fills by 11am weekends.","beach","https://www.santamonica.gov/places/cultural-venue/annenberg-community-beach-house",[("Free","free")]),
           place("Back on the Beach Café","On the sand at the Annenberg. Breakfast with your feet in it.","food",None,[("$$","cat")])])),
       stop("market","food","Free","Wednesday, not Saturday.",
         ["The Arizona Avenue market on a Wednesday is the one LA's kitchens actually shop at.",
@@ -473,7 +471,7 @@ DAYS = [
  ("Natural History Museum","Weekdays 3–5pm","LA County residents only, <span class='w'>claimed onsite — not bookable online.</span> Closed first Tuesday monthly.","https://nhm.org/free-hours-and-admission"),
  ("The Autry","<span class='w'>First Wednesday</span> of the month","10am–4pm, all exhibitions. Advance registration encouraged; some dates sell out. Free parking.","https://theautry.org/events/free-admission-days"),
  ("The Huntington","First Thursday of the month","<span class='w'>Reservation required.</span> Tickets release the last Thursday at 9am for the following week and sell out. Limit five per household per year.","https://www.huntington.org/plan-your-visit/free-day"),
- ("Skirball Cultural Center","Every Thursday","Free to all, free on-site parking. Same-day reservations cannot be made online.","https://www.skirball.org/visit"),
+ ("Skirball Cultural Center","Every Thursday","Free to all, free on-site parking. Same-day reservations cannot be made online.","https://www.skirball.org/visit/overview"),
  ("Norton Simon","First Friday, 4–7pm","Free to all. Also free <em>every</em> day for students with ID and anyone 18 and under. Free parking lot.","https://www.nortonsimon.org/visit/"),
  ("Craft Contemporary","Sundays","<span class='w'>Pay what you wish, not free.</span> $12 general otherwise; under 12 and EBT holders free.","https://www.craftcontemporary.org/visit")]
 
@@ -546,7 +544,7 @@ def build_freeweekend():
              itemlist("Free things to do in Los Angeles every weekend",url,
                 [("Griffith Observatory",None,"https://griffithobservatory.lacity.gov/visit/"),
                  ("The Venice Canals",None,"https://www.venicecanals.org/"),
-                 ("Annenberg Community Beach House",None,"https://annenbergbeachhouse.com/"),
+                 ("Annenberg Community Beach House",None,"https://www.santamonica.gov/places/cultural-venue/annenberg-community-beach-house"),
                  ("Smorgasburg LA","777 S Alameda St",None)], ordered=False)]
     b = head(title, desc, url, ld(nodes))
     b += ghero("Los Angeles &middot; Citywide","Free things to do in LA <em>this weekend</em>",
@@ -568,7 +566,7 @@ def build_freeweekend():
       place("The Broad, the Hammer, MOCA Grand and the Fowler","Free every day they are open. The Getty is free too — but book the timed ticket.","museum","/guides/free-museum-days-los-angeles/",[("Free","free")]),
       place("The Venice Canals","A mile and a half of bridges most LA natives have never walked.","walk","https://www.venicecanals.org/",[("Free","free")]),
       place("The Santa Monica stairs","Adelaide Dr &amp; 4th St. Street parking.","walk","/guides/santa-monica/",[("Free","free")]),
-      place("Annenberg Community Beach House","Courtyard, splash pad and beach courts. Parking fills by 11am.","beach","https://annenbergbeachhouse.com/",[("Free","free")]),
+      place("Annenberg Community Beach House","Courtyard, splash pad and beach courts. Parking fills by 11am.","beach","https://www.santamonica.gov/places/cultural-venue/annenberg-community-beach-house",[("Free","free")]),
       place("Venice Beach Recreation Center","Ocean Front Walk. Paddle tennis, pickleball and volleyball on the sand.","beach","/guides/venice/",[("Free","free")]),
       place("Smorgasburg LA","ROW DTLA, 777 S Alameda St · Sundays 10am–4pm. Free entry, then go hungry.","food",None,[("Free entry","free")]),
       place("The Strand","Flat and fast from Santa Monica south, on foot, bike or skates.","walk",None,[("Free","free")])])

@@ -281,19 +281,7 @@ def main():
     events = data.get("events", [])
     changed, problems = [], []
 
-    # 1. homepage -------------------------------------------------------
-    if os.path.exists(INDEX):
-        src = open(INDEX, encoding="utf-8").read()
-        if GRID.search(src):
-            new = GRID.sub(lambda m: m.group(1) + "\n" + render_grid(events, now) + "\n" + m.group(3), src)
-            new = splice_ld(new, [e for e in events if is_live(e, now)], today)
-            if new != src:
-                changed.append("index.html")
-                if not a.check:
-                    open(INDEX, "w", encoding="utf-8").write(new)
-        else:
-            problems.append("index.html has no <!-- HAPS:GRID start/end --> markers — "
-                            "the homepage is still JS-only and will not be indexed")
+    # 1. homepage: owned by scripts/build_home.py (server-rendered from events.json), not touched here.
 
     # 2. guides ---------------------------------------------------------
     touched = []

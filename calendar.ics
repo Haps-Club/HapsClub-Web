@@ -1,0 +1,425 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Haps Club//https://haps.club//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Haps Club: what's on in Los Angeles
+X-WR-TIMEZONE:America/Los_Angeles
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:e413fe51a4be43f2069c@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261103T030000Z
+DTEND:20261116T070000Z
+SUMMARY:The Who's Tommy
+LOCATION:Hollywood Pantages Theatre\, 6233 Hollywood Blvd
+DESCRIPTION:The rock opera\, anthems turned all the way up. Through Nov 15
+ \, with a $35 digital lottery. Price: From $35 lottery.\nhttps://www.broa
+ dwayinhollywood.com/
+URL:https://www.broadwayinhollywood.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:d89612a33165d55955f9@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261105T023000Z
+DTEND:20261105T044500Z
+SUMMARY:Yawanawá Concert and Market at The KINN
+LOCATION:The KINN\, Venice
+DESCRIPTION:Yawanawá music\, a hapé circle\, and a market fundraiser in 
+ Venice's favorite living room. Price: Donation.\nhttps://luma.com/Yawanaw
+ aNov4
+URL:https://luma.com/YawanawaNov4
+END:VEVENT
+BEGIN:VEVENT
+UID:205763c1299e7b120478@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261105T040000Z
+DTEND:20261105T073000Z
+SUMMARY:The Black Angels at The Fonda
+LOCATION:The Fonda Theatre\, 6126 Hollywood Blvd
+DESCRIPTION:Austin psych rock\, loud and hazy\, in the Fonda's perfect-siz
+ ed room. Price: Tickets.\nhttps://theblackangels.com/
+URL:https://theblackangels.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:ff091f5134ab73294eac@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261106T020000Z
+DTEND:20261106T040000Z
+SUMMARY:Re-Enacting the Lie at the Schindler House
+LOCATION:MAK Center\, West Hollywood\, 835 N Kings Rd
+DESCRIPTION:LA Poverty Department brings Skid Row residents' stories to Sc
+ hindler's house. Small room\, RSVP. Price: With admission\, RSVP.\nhttps:
+ //www.makcenter.org/
+URL:https://www.makcenter.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:f7621675c797a17708f8@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261106T040000Z
+DTEND:20261107T070000Z
+SUMMARY:Alanis Morissette at YouTube Theater
+LOCATION:YouTube Theater\, Inglewood\, 1011 Stadium Dr
+DESCRIPTION:Two nights of sing-every-word Alanis. Price: Tickets.\nhttps:/
+ /www.youtubetheater.com/events/detail/alanis-morissette
+URL:https://www.youtubetheater.com/events/detail/alanis-morissette
+END:VEVENT
+BEGIN:VEVENT
+UID:c7799ad617a12d70f435@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261106T040000Z
+DTEND:20261106T070000Z
+SUMMARY:Kate Bollinger at 2220 Arts + Archives
+LOCATION:2220 Arts + Archives\, Historic Filipinotown\, 2220 Beverly Blvd
+DESCRIPTION:Soft\, strange indie pop in one of LA's best small rooms. Pric
+ e: Tickets.\nhttps://dice.fm/event/oe9eq5-kate-bollinger-5th-nov-2220-art
+ s-archives-los-angeles-tickets
+URL:https://dice.fm/event/oe9eq5-kate-bollinger-5th-nov-2220-arts-archives
+ -los-angeles-tickets
+END:VEVENT
+BEGIN:VEVENT
+UID:0b94fdde99a9e5a427de@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261106T043000Z
+DTEND:20261122T060000Z
+SUMMARY:NOW Festival at REDCAT
+LOCATION:REDCAT\, Downtown\, 631 W 2nd St
+DESCRIPTION:Nine brand-new LA works across dance\, theater\, and performan
+ ce over three weekends. Price: From $20.\nhttps://www.redcat.org/now26
+URL:https://www.redcat.org/now26
+END:VEVENT
+BEGIN:VEVENT
+UID:1e14ec5904b5aede3242@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261107T043000Z
+DTEND:20261108T063000Z
+SUMMARY:Keiko Matsui at Catalina Jazz Club
+LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
+DESCRIPTION:Two nights with the Japanese jazz pianist. Doors 7\, show 8:30
+ . Price: From $62.\nhttps://www.catalinajazzclub.com/
+URL:https://www.catalinajazzclub.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:73f44ae709c5e62cbe70@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261107T190000Z
+DTEND:20261109T010000Z
+SUMMARY:LA NDN Flea at The Broad
+LOCATION:The Broad\, Downtown\, 221 S Grand Ave
+DESCRIPTION:A Native-made market on the Broad plaza: jewelry\, art\, vinta
+ ge. Price: Free.\nhttps://www.thebroad.org/events/la-ndn-flea-native-mark
+ et
+URL:https://www.thebroad.org/events/la-ndn-flea-native-market
+END:VEVENT
+BEGIN:VEVENT
+UID:a5d9700d7c2e6413e056@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261107T200000Z
+DTEND:20261108T000000Z
+SUMMARY:Competing Cosmologies opens at the Wende
+LOCATION:Wende Museum\, Culver City\, 10808 Culver Blvd
+DESCRIPTION:Artists reimagine the sky\, with a full-scale Sputnik. Curator
+  tour at noon\, reception at 3. Price: Free.\nhttps://www.eventbrite.com/
+ e/exhibition-opening-competing-cosmologies-interpreting-the-sky-tickets-2
+ 002925086852
+URL:https://www.eventbrite.com/e/exhibition-opening-competing-cosmologies-
+ interpreting-the-sky-tickets-2002925086852
+END:VEVENT
+BEGIN:VEVENT
+UID:3635a01f1a95853eadc4@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261108T033000Z
+DTEND:20261108T053000Z
+SUMMARY:Salsa Night at Re/creation Cafe
+LOCATION:Re/creation Cafe\, Mid-City
+DESCRIPTION:Los Calicubanos play a free Saturday salsa set. Bring someone.
+  Price: Free.\nhttps://www.recreation.cafe/
+URL:https://www.recreation.cafe/
+END:VEVENT
+BEGIN:VEVENT
+UID:bc4f9013ca8dca7792b4@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261108T040000Z
+DTEND:20261108T073000Z
+SUMMARY:Tinashe at the Hollywood Palladium
+LOCATION:Hollywood Palladium\, 6215 Sunset Blvd
+DESCRIPTION:One night\, one pop star\, and a very good excuse to dance. Pr
+ ice: Tickets.\nhttps://www.ticketmaster.com/tinashe-one-night-with-a-pops
+ tar-hollywood-california-11-07-2026/event/090064F499E14E53
+URL:https://www.ticketmaster.com/tinashe-one-night-with-a-popstar-hollywoo
+ d-california-11-07-2026/event/090064F499E14E53
+END:VEVENT
+BEGIN:VEVENT
+UID:6fecacebefe38789dde5@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261108T220000Z
+DTEND:20261109T010000Z
+SUMMARY:Paint + Sound - Venice Beach
+LOCATION:2100 Ocean Front Walk\, Venice
+DESCRIPTION:Acrylic painting workshop\, then a sound bath by the sand. Pri
+ ce: Ticketed.\nhttps://www.eventbrite.com/e/paint-sound-venice-beach-tick
+ ets-1994474997407
+URL:https://www.eventbrite.com/e/paint-sound-venice-beach-tickets-19944749
+ 97407
+END:VEVENT
+BEGIN:VEVENT
+UID:9a3ce4c25756f3bd53af@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261109T010000Z
+DTEND:20261109T040000Z
+SUMMARY:Bats\, Birds\, and Agave at Mírate
+LOCATION:Mírate\, Los Feliz\, 1712 N Vermont Ave
+DESCRIPTION:NHM's LA Culture in a Cup: agave's story over mezcal and a pan
+ el. Price: Tickets.\nhttps://nhm.org/calendar/bats-birds-and-agave
+URL:https://nhm.org/calendar/bats-birds-and-agave
+END:VEVENT
+BEGIN:VEVENT
+UID:0a209404f92e5a981024@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261109T020000Z
+DTEND:20261109T050000Z
+SUMMARY:Sage-Based Drag Night at REDCAT
+LOCATION:REDCAT\, Downtown\, 631 W 2nd St
+DESCRIPTION:Indigenous comics and drag artists hand out unsolicited advice
+ . Big energy. Price: Tickets.\nhttps://www.redcat.org/events/sage-based-d
+ rag-night
+URL:https://www.redcat.org/events/sage-based-drag-night
+END:VEVENT
+BEGIN:VEVENT
+UID:c20e690e50f68101ab3c@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261111T040000Z
+DTEND:20261111T073000Z
+SUMMARY:The Last Waltz 50th at Zebulon
+LOCATION:Zebulon\, Frogtown\, 2478 Fletcher Dr
+DESCRIPTION:Chest Fever\, the official revival of The Band\, plays the leg
+ endary farewell concert. Price: Tickets.\nhttps://dice.fm/event/yox5dr-th
+ e-last-waltz-50th-anniversary-tour-ft-chest-fever-the-official-revival-of
+ -the-band-10th-nov-zebulon-los-angeles-tickets
+URL:https://dice.fm/event/yox5dr-the-last-waltz-50th-anniversary-tour-ft-c
+ hest-fever-the-official-revival-of-the-band-10th-nov-zebulon-los-angeles-
+ tickets
+END:VEVENT
+BEGIN:VEVENT
+UID:fd7253600ba93c2f99ec@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261112T040000Z
+DTEND:20261113T073000Z
+SUMMARY:Bonobo at The Wiltern
+LOCATION:The Wiltern\, Koreatown\, 3790 Wilshire Blvd
+DESCRIPTION:Two nights of Bonobo's live band with Sofia Kourtesis opening.
+  Price: Tickets.\nhttps://www.ticketmaster.com/
+URL:https://www.ticketmaster.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:ca60b76141ec72ba7da2@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261113T020000Z
+DTEND:20261113T050000Z
+SUMMARY:George Takei in Korematsu v. The United States
+LOCATION:Japanese American National Museum\, Little Tokyo\, 100 N Central 
+ Ave
+DESCRIPTION:A staged reading with George Takei as Fred Korematsu\, then a 
+ panel. Price: $20.\nhttps://www.janm.org/events
+URL:https://www.janm.org/events
+END:VEVENT
+BEGIN:VEVENT
+UID:036fa3c856c0916ac82f@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261113T020000Z
+DTEND:20270111T060000Z
+SUMMARY:NightTales at the Natural History Museum
+LOCATION:Natural History Museum\, Exposition Park\, 900 Exposition Blvd
+DESCRIPTION:Glowing nature installations and projections after dark\, sele
+ ct nights through January. Price: Tickets.\nhttps://nhm.org/calendar/nigh
+ ttales-museum-experience
+URL:https://nhm.org/calendar/nighttales-museum-experience
+END:VEVENT
+BEGIN:VEVENT
+UID:31b8e48972f433f93c73@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261113T040000Z
+DTEND:20261113T073000Z
+SUMMARY:The Smashing Pumpkins at the Kia Forum
+LOCATION:Kia Forum\, Inglewood\, 3900 W Manchester Blvd
+DESCRIPTION:Two sets\, including Mellon Collie's 30th anniversary. Price: 
+ Tickets.\nhttps://thekiaforum.com/event/the-smashing-pumpkins/
+URL:https://thekiaforum.com/event/the-smashing-pumpkins/
+END:VEVENT
+BEGIN:VEVENT
+UID:305b0e497e0e04cf95d0@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261114T013000Z
+DTEND:20261114T030000Z
+SUMMARY:Hootenanny at The Huntington
+LOCATION:The Huntington\, San Marino\, 1151 Oxford Rd
+DESCRIPTION:Spoken word and music from This Land Is…\, ending in a singa
+ long. 5:30 to 7. Price: Free\, reserve.\nhttps://huntington.org/events
+URL:https://huntington.org/events
+END:VEVENT
+BEGIN:VEVENT
+UID:8be5ef8f47ef48eec3b3@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261115T030000Z
+DTEND:20261115T050000Z
+SUMMARY:Opening Night at Craft Contemporary
+LOCATION:Craft Contemporary\, Miracle Mile\, 5814 Wilshire Blvd
+DESCRIPTION:Three new shows on fire and regeneration\, with the artists in
+  the courtyard. Price: $12.\nhttps://www.craftcontemporary.org/
+URL:https://www.craftcontemporary.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:e727232608027da9687b@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261115T190000Z
+DTEND:20270601T010000Z
+SUMMARY:Paul R. Williams: Architect for Living at LACMA
+LOCATION:LACMA\, Miracle Mile\, 5905 Wilshire Blvd
+DESCRIPTION:The drawings and photos behind the architect who shaped LA. Op
+ ens Nov 15. Price: With admission.\nhttps://www.lacma.org/art/exhibition/
+ paul-r-williams-architect-living
+URL:https://www.lacma.org/art/exhibition/paul-r-williams-architect-living
+END:VEVENT
+BEGIN:VEVENT
+UID:a2fa660c9e009d33fa8b@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261120T003000Z
+DTEND:20261120T030000Z
+SUMMARY:Holiday Tree Lighting at Regent Santa Monica
+LOCATION:Regent Santa Monica Beach\, 1700 Ocean Ave
+DESCRIPTION:A towering tree\, festive treats\, and Santa by the sea. Price
+ : Free.\nhttps://santamonica.regenthotels.com/experience/bookable-experie
+ nces/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
+URL:https://santamonica.regenthotels.com/experience/bookable-experiences/?
+ experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
+END:VEVENT
+BEGIN:VEVENT
+UID:a3033d9aa1d33a84894d@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261121T220000Z
+DTEND:20261122T000000Z
+SUMMARY:Visualizing the Cosmos with Kip Thorne
+LOCATION:Wende Museum\, Culver City\, 10808 Culver Blvd
+DESCRIPTION:A Nobel laureate and artists on where science meets the sky. P
+ rice: Free\, RSVP.\nhttps://www.eventbrite.com/e/visualizing-the-cosmos-s
+ cience-art-history-tickets-2002925098888
+URL:https://www.eventbrite.com/e/visualizing-the-cosmos-science-art-histor
+ y-tickets-2002925098888
+END:VEVENT
+BEGIN:VEVENT
+UID:97c337250a912c985717@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261122T033000Z
+DTEND:20261122T073000Z
+SUMMARY:Haps Club Jazz Age Party
+LOCATION:Historic home\, Los Angeles
+DESCRIPTION:A live jazz trio\, Prohibition-era cocktails\, and a historic 
+ home turning 100. Price: $45 · $80 for two.\nhttps://luma.com/hapsclub-e
+ 193?coupon=HAPSCLUBPLUS
+URL:https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS
+END:VEVENT
+BEGIN:VEVENT
+UID:ba1418ba1241b8be4c81@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261124T033000Z
+DTEND:20261124T050000Z
+SUMMARY:Addams Family Values at LACMA
+LOCATION:LACMA\, Keck Plaza\, 5905 Wilshire Blvd
+DESCRIPTION:A darkly funny pre-Thanksgiving movie night under the stars. P
+ rice: $10.\nhttps://www.lacma.org/event-calendar-by-day
+URL:https://www.lacma.org/event-calendar-by-day
+END:VEVENT
+BEGIN:VEVENT
+UID:d859413a0c08dfc6c6ee@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261127T200000Z
+DTEND:20270104T060000Z
+SUMMARY:LA Kings Holiday Ice Festival at L.A. LIVE
+LOCATION:L.A. LIVE\, Downtown\, 800 W Olympic Blvd
+DESCRIPTION:Skate under the lights\, browse the holiday village\, see the 
+ giant tree. Daily through Jan 3. Price: From $25.\nhttps://link.bucketlis
+ ters.com/Tw8k
+URL:https://link.bucketlisters.com/Tw8k
+END:VEVENT
+BEGIN:VEVENT
+UID:39b292f737ea6d838158@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261128T043000Z
+DTEND:20261129T063000Z
+SUMMARY:A Charlie Brown Christmas at Catalina Jazz Club
+LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
+DESCRIPTION:David Benoit plays Vince Guaraldi with a children's choir. Two
+  nights. Price: Tickets.\nhttps://www.catalinajazzclub.com/
+URL:https://www.catalinajazzclub.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:22834dea09d9acc3ab5b@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261202T033000Z
+DTEND:20261202T053000Z
+SUMMARY:4211KM at Théâtre Raymond Kabbaz
+LOCATION:Théâtre Raymond Kabbaz\, Cheviot Hills\, 10361 W Pico Blvd
+DESCRIPTION:A family story stretched between Paris and Tehran. Price: Tick
+ ets.\nhttps://www.theatreraymondkabbaz.com/4211km
+URL:https://www.theatreraymondkabbaz.com/4211km
+END:VEVENT
+BEGIN:VEVENT
+UID:bb8ffd68f80eac9c8e0d@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261204T190000Z
+DTEND:20261207T010000Z
+SUMMARY:Makers Market at Craft Contemporary
+LOCATION:Craft Contemporary\, Miracle Mile\, 5814 Wilshire Blvd
+DESCRIPTION:LA makers in the courtyard: ceramics\, jewelry\, textiles. Pre
+ view Friday\, shopping Sat–Sun. Price: $12\, Sun pay-what-you-wish.\nht
+ tps://www.craftcontemporary.org/
+URL:https://www.craftcontemporary.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:007f71e7adae311b208c@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261205T193000Z
+DTEND:20261205T223000Z
+SUMMARY:Nutcracker Brunch at ORLA
+LOCATION:ORLA\, Regent Santa Monica Beach\, 1700 Ocean Ave
+DESCRIPTION:Michael Mina brunch with ballet\, Santa\, and a snowfall final
+ e. Price: Tickets.\nhttps://www.sevenrooms.com/experiences/orlabymichaelm
+ ina/nutcracker-brunch-at-orla-santa-monica-5591308148523008
+URL:https://www.sevenrooms.com/experiences/orlabymichaelmina/nutcracker-br
+ unch-at-orla-santa-monica-5591308148523008
+END:VEVENT
+BEGIN:VEVENT
+UID:1c5644faa5630cb776db@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261212T043000Z
+DTEND:20261213T063000Z
+SUMMARY:New Orleans Legends with Andy Garcia
+LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
+DESCRIPTION:Two nights of New Orleans brass and piano\, with Andy Garcia s
+ itting in. Price: From $83.\nhttps://www.catalinajazzclub.com/
+URL:https://www.catalinajazzclub.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:5e7c5a3e040ef1ef8343@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20261219T043000Z
+DTEND:20261220T063000Z
+SUMMARY:Veronica Swift at Catalina Jazz Club
+LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
+DESCRIPTION:A powerhouse jazz vocalist for two nights in Hollywood. Price:
+  Tickets.\nhttps://www.catalinajazzclub.com/
+URL:https://www.catalinajazzclub.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:b708ec2db5953a162615@haps.club
+DTSTAMP:20261104T000000Z
+DTSTART:20270101T043000Z
+DTEND:20270101T075900Z
+SUMMARY:Poncho Sanchez New Year's Eve
+LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
+DESCRIPTION:Latin jazz to close the year. Early show 8:30\, late show 11pm
+ . Price: From $78.\nhttps://www.catalinajazzclub.com/
+URL:https://www.catalinajazzclub.com/
+END:VEVENT
+END:VCALENDAR

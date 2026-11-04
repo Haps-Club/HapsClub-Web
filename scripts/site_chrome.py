@@ -23,12 +23,21 @@ AFTER the checkbox, and navcta sits outside nav so Subscribe stays reachable
 in the mobile bar instead of being buried in the drawer.
 """
 
+import datetime
 import hashlib
 import html
 import os
 
 SITE = "https://haps.club"
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def file_hash(path):
+    """First 8 hex chars of the file's md5, the site's cache-busting version."""
+    try:
+        return hashlib.md5(open(path, "rb").read()).hexdigest()[:8]
+    except OSError:
+        return "0"
 
 
 def css_link(name):
@@ -47,6 +56,14 @@ def css_link(name):
     return f'<link rel="stylesheet" href="/assets/{name}?v={h}">'
 
 
+def fonts_html():
+    """Preconnect + ONE stylesheet link for the site fonts, placed in <head> before the CSS.
+    (An @import inside a stylesheet makes the browser fetch fonts only after the CSS arrives.)"""
+    return ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
+            '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+            f'<link rel="stylesheet" href="{FONTS_HREF}">')
+
+
 def chrome_css():
     return css_link("chrome.css")
 
@@ -55,8 +72,10 @@ def page_css():
     """The one stylesheet every interior page loads after chrome.css."""
     return css_link("site.css")
 
-LOGO = ("https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/"
-        "haps-club-logo.svg?v=5")
+LOGO_PATH = "/assets/img/haps-logo.svg"          # self-hosted: no third-party request on every page
+LOGO = "https://haps.club" + LOGO_PATH           # absolute form, for JSON-LD and Open Graph
+FONTS_HREF = ("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900"
+              "&family=IBM+Plex+Mono:wght@400;500&display=swap")
 CAL = ("https://calendar.google.com/calendar/embed?src="
        "c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384"
        "%40group.calendar.google.com")
@@ -92,7 +111,7 @@ FOOTER_COLS = [
 ]
 
 TAGLINE = "Everything worth leaving the house for, in Los Angeles."
-COPYRIGHT = "&copy; 2026 Haps Club &middot; Made by hand in Los Angeles"
+COPYRIGHT = "&copy; %d Haps Club &middot; Made by hand in Los Angeles" % datetime.date.today().year
 
 
 def _href(h, absolute):
@@ -116,7 +135,7 @@ def header(active="", absolute=True):
     return (
         f'<header class="nav"><div class="navbar">'
         f'<a class="brand" href="{_href("/", absolute)}" aria-label="Haps Club home">'
-        f'<img class="logo" src="{LOGO}" alt="Haps Club" '
+        f'<img class="logo" src="{_href(LOGO_PATH, absolute)}" alt="Haps Club" '
         f'width="{LOGO_W}" height="{LOGO_H}"></a>'
         f'<input class="navtog" type="checkbox" id="navtog" aria-hidden="true" tabindex="-1">'
         f'<nav>{links}</nav>'

@@ -38,7 +38,7 @@ DATA = os.path.join(REPO, "data", "events.json")
 OUT = os.path.join(REPO, "index.html")
 
 SITE = "https://haps.club"
-LOGO = "https://cdn.jsdelivr.net/gh/Hilex2030/haps-club-assets@main/images/haps-club-logo.svg?v=5"
+LOGO = "https://haps.club/assets/img/haps-logo.svg"
 CAL = ("https://calendar.google.com/calendar/embed?src="
        "c_ea45ead7ce1909f199c95778b5b7afd9d1a9f9c9751f911bf3c672f267dc4384"
        "%40group.calendar.google.com")
@@ -318,6 +318,8 @@ def build(prune=True):
 <title>Haps Club — This Week in Los Angeles</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{SITE}/">
+<link rel="alternate" type="application/rss+xml" title="Haps Club: newsletter archive" href="https://haps.club/feed.xml">
+<link rel="alternate" type="text/calendar" title="Haps Club: what's on in Los Angeles" href="https://haps.club/calendar.ics">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Haps Club">
 <meta property="og:locale" content="en_US">
@@ -332,7 +334,6 @@ def build(prune=True):
 <meta name="theme-color" content="#FF4F00">
 <link rel="icon" href="{LOGO}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
 {sc.chrome_css()}
 <link rel="stylesheet" href="/assets/home-f.css?v={css_v}">

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-04",
   "weekLabel": "Week of Nov 2",
   "featured": [
     {
@@ -449,7 +449,7 @@
       "area": "midcity",
       "where": "LACMA, Keck Plaza",
       "price": "$10",
-      "link": "https://www.lacma.org/events",
+      "link": "https://www.lacma.org/event-calendar-by-day",
       "tagline": "A darkly funny pre-Thanksgiving movie night under the stars.",
       "starts": "20261123T193000",
       "ends": "20261123T210000",
@@ -595,7 +595,8 @@
       "hood": "santa-monica",
       "where": "3200 Airport Ave, Santa Monica",
       "price": "$",
-      "link": "https://matildasbakery.com/"
+      "link": "https://matildasbakery.com/",
+      "added": "2026-11-04"
     },
     {
       "title": "Ueki at Blue Ribbon Sushi",
@@ -607,7 +608,8 @@
       "hood": "pacific-palisades",
       "where": "Palisades Village, Pacific Palisades",
       "price": "$$$$",
-      "link": "https://palisadesvillageca.com/dining/ueki-at-blue-ribbon-sushi/"
+      "link": "https://palisadesvillageca.com/dining/ueki-at-blue-ribbon-sushi/",
+      "added": "2026-11-04"
     },
     {
       "title": "The Hart and the Hunter",
@@ -619,7 +621,8 @@
       "hood": "west-hollywood",
       "where": "Palihotel Melrose, West Hollywood",
       "price": "$$",
-      "link": "https://hoodline.com/2026/09/the-hart-and-the-hunter-returns-to-west-hollywood-after-five-year-absence/"
+      "link": "https://hoodline.com/2026/09/the-hart-and-the-hunter-returns-to-west-hollywood-after-five-year-absence/",
+      "added": "2026-11-04"
     },
     {
       "title": "Marina del Rey Farmers’ Market",
@@ -643,7 +646,8 @@
       "hood": "exposition-park",
       "where": "Exposition Park",
       "price": "$25",
-      "link": "https://lucasmuseum.org/plan-your-visit"
+      "link": "https://lucasmuseum.org/plan-your-visit",
+      "added": "2026-11-04"
     },
     {
       "title": "MAUM Market at ROW DTLA",
@@ -667,7 +671,8 @@
       "hood": "los-feliz",
       "where": "Los Feliz",
       "price": "",
-      "link": "https://www.instagram.com/vandell.la/"
+      "link": "https://www.instagram.com/vandell.la/",
+      "added": "2026-11-04"
     },
     {
       "title": "Mic Drop karaoke lounge",
@@ -679,7 +684,8 @@
       "hood": "west-hollywood",
       "where": "West Hollywood",
       "price": "",
-      "link": "https://www.micdropkaraoke.com/"
+      "link": "https://www.micdrop.la/",
+      "added": "2026-11-04"
     },
     {
       "title": "Sunday Jazz at The World Stage",
@@ -714,7 +720,8 @@
       "area": "citywide",
       "where": "In theaters",
       "price": "Ticketed",
-      "link": "https://www.ticketingcookiequeens.com/"
+      "link": "https://www.ticketingcookiequeens.com/",
+      "added": "2026-11-04"
     },
     {
       "title": "San Damián",
@@ -726,7 +733,8 @@
       "hood": "venice",
       "where": "Venice",
       "price": "",
-      "link": "https://damianrestaurants.com/san-damian/"
+      "link": "https://damianrestaurants.com/san-damian/",
+      "added": "2026-11-04"
     },
     {
       "title": "West Side Oyster Club",
@@ -738,7 +746,8 @@
       "hood": "santa-monica",
       "where": "Santa Monica",
       "price": "",
-      "link": "https://www.westsideoysterclub.com/"
+      "link": "https://www.westsideoysterclub.com/",
+      "added": "2026-11-04"
     },
     {
       "title": "Venice Run Club — Long Run Saturday",
@@ -798,7 +807,7 @@
       "hood": "dtla",
       "where": "DTLA",
       "price": "",
-      "link": "https://la.smorgasburg.com/"
+      "link": "https://smorgasburg.com/"
     },
     {
       "title": "Alta Adams",
@@ -989,7 +998,8 @@
       "hood": "venice",
       "where": "1915 Penmar Ave, Venice",
       "price": "$",
-      "link": "https://bodegaandpalms.com/"
+      "link": "https://bodegaandpalms.com/",
+      "added": "2026-11-04"
     },
     {
       "title": "Evergreen at Sabbatikal",
@@ -1001,7 +1011,8 @@
       "where": "Sabbatikal, 1224 25th St, Santa Monica",
       "price": "Free",
       "link": "https://sabbatikal.com",
-      "tagline": "Paul Paiement's new landscape paintings, now on view."
+      "tagline": "Paul Paiement's new landscape paintings, now on view.",
+      "added": "2026-11-04"
     },
     {
       "title": "The World Stage: Thursday Jam",
@@ -1038,7 +1049,8 @@
       "where": "2917 Main St, Santa Monica",
       "price": "$$",
       "link": "https://lamag.com/food/bar-fortuna-california-italian-wine-bar-opens-main-street-santa-monica/",
-      "tagline": "Crudo e Nudo's new Italian bar: house-made pasta, five Negronis, espresso window."
+      "tagline": "Crudo e Nudo's new Italian bar: house-made pasta, five Negronis, espresso window.",
+      "added": "2026-11-04"
     }
   ],
   "archive": [
