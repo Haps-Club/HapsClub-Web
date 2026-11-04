@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+:root{--ink:#111111;--ink3:#4A4540;--gray:#7D766F;--signal:#FF4F00;--music:#AF52DE;--culture:#007AFF;--out:#1E8A45;--food:#B85A00}
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:630px;overflow:hidden;background:#fff}
+body{position:relative;font-family:'Inter Tight',Helvetica,Arial,sans-serif;color:var(--ink)}
+.bar{position:absolute;inset:0 0 auto 0;height:12px;background:linear-gradient(90deg,#FF9500,#FF4F00,#FF2D55,#AF52DE,#292F71)}
+.aura{position:absolute;right:-220px;top:-180px;width:760px;height:760px;border-radius:50%;
+  background:radial-gradient(closest-side,#FBE3EE 0%,#F1E9FF 45%,rgba(255,255,255,0) 100%)}
+.aura2{position:absolute;left:-260px;bottom:-320px;width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(closest-side,#FFEBDD 0%,rgba(255,255,255,0) 100%)}
+.wrap{position:absolute;inset:12px 0 0 0;padding:52px 72px 56px;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between}
+.top img{height:86px;width:auto}
+.mono{font-family:'IBM Plex Mono',Menlo,monospace;text-transform:uppercase;letter-spacing:.06em;font-size:20px}
+.where{color:var(--ink3);display:flex;align-items:center;gap:12px}
+.where i{width:10px;height:10px;border-radius:50%;background:var(--signal);display:block}
+h1{margin-top:40px;font-size:86px;line-height:.94;font-weight:900;letter-spacing:-.035em;max-width:980px}
+h1 em{font-style:normal;color:var(--signal)}
+.chips{display:flex;gap:12px;margin-top:38px}
+.chip{display:flex;align-items:center;gap:10px;padding:11px 20px;border-radius:999px;font-size:22px;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.chip svg{width:24px;height:24px}
+.foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between}
+.foot .mono{color:var(--ink);font-size:24px;font-weight:500;letter-spacing:.04em;text-transform:none}
+.foot .sub{font-family:'Inter Tight';font-size:24px;color:var(--ink3);font-weight:500;text-transform:none;letter-spacing:0;margin-left:18px}
+.btn{background:var(--signal);color:#fff;font-weight:700;font-size:26px;padding:18px 34px;border-radius:999px}
+</style></head>
+<body>
+<div class="aura"></div><div class="aura2"></div><div class="bar"></div>
+<div class="wrap">
+  <div class="top">
+    <img src="../assets/img/haps-logo.svg" alt="">
+    <div class="mono where"><i></i>Hand-picked · Every Tuesday</div>
+  </div>
+  <h1>What’s <em>happening</em> in<br>Los Angeles this week.</h1>
+  <div class="chips">
+    <div class="chip" style="--c:var(--music)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>Music</div>
+    <div class="chip" style="--c:var(--culture)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10m4 11V10m6 11V10m4 11V10M2 10l10-6 10 6z"/></svg>Culture</div>
+    <div class="chip" style="--c:var(--food)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v8a2 2 0 0 0 4 0V3M9 11v10M17 3c-2 0-3 2-3 6s1 4 3 4v8"/></svg>Food</div>
+    <div class="chip" style="--c:var(--out)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l6-10 4 6 3-4 5 8z"/><circle cx="17" cy="6" r="2"/></svg>Outdoors</div>
+  </div>
+  <div class="foot">
+    <div><span class="mono">haps.club</span><span class="mono sub">One free email a week</span></div>
+    <div class="btn">Subscribe free →</div>
+  </div>
+</div>
+</body></html>

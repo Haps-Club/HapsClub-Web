@@ -56,7 +56,7 @@ def md5_8(path):
 def pages():
     out = []
     for d, dirs, files in os.walk(ROOT):
-        dirs[:] = [x for x in dirs if not x.startswith(".")]
+        dirs[:] = [x for x in dirs if not x.startswith(".") and not (d == ROOT and x == "scripts")]
         out += [os.path.relpath(os.path.join(d, f), ROOT) for f in files if f.endswith(".html")]
     return sorted(out)
 

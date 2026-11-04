@@ -21,6 +21,7 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 | Newsletter issue into `/archive/` | Automatic: `archive-issues.yml` runs `scripts/issues_from_mailerlite.py` (sent MailerLite campaigns named "Haps Weekly …") | By hand: `python3 scripts/issues_from_mailerlite.py --html email.html --sent YYYY-MM-DD > issues.json`, then `python3 scripts/publish_issue.py issues.json` and `python3 scripts/build_home.py`. Never hand-build archive pages or edit the `archive` array. (`issues_from_kit.py` is for the old Kit issues.) |
 | Guides (`guides/`) | `scripts/build_guides.py` or `build_guides_fall.py` (don't rerun `build_guides.py` blindly — some guides were hand-fixed) | `python3 scripts/build_pages.py` fills the live event blocks + schema |
 | Ask Haps page (`/ask/`) | `scripts/build_ask.py`; worker source in `workers/ask-haps.js` (deployed to Cloudflare separately) | `python3 scripts/build_ask.py` |
+| Link-preview card (the image WhatsApp/iMessage/social show for haps.club links) | `scripts/og_card.html` | `python3 scripts/make_og_card.py` writes `assets/og-card.png` (+@2x); every page points at that file |
 | Interior pages (about, subscribe, privacy, partners, sitemap) | the `.html` file directly | reuse shared classes; no inline `<style>` |
 
 ## events.json
