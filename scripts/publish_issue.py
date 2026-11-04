@@ -187,7 +187,9 @@ def main(path):
     open(idx_path,'w',encoding='utf-8').write(idx)
     open('sitemap.xml','w',encoding='utf-8').write(sm)
     open('llms.txt','w',encoding='utf-8').write(lms)
-    json.dump(ev, open('data/events.json','w',encoding='utf-8'), indent=1, ensure_ascii=False)
+    with open('data/events.json', 'w', encoding='utf-8') as f:  # same format as build_home.py
+        json.dump(ev, f, ensure_ascii=False, indent=2)
+        f.write('\n')
     print('published:', [i['date']+'-'+i['slug'] for i in issues])
     print('homepage teaser now:', [a['title'] for a in ev['archive']])
 

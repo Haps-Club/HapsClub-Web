@@ -18,7 +18,7 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 | Homepage layout or copy | `scripts/build_home.py`, `assets/home-f.css`, `assets/home-f.js` | `python3 scripts/build_home.py`. Never hand-edit `index.html` — it's generated and gets overwritten. |
 | Nav or footer (every page) | `scripts/site_chrome.py` (markup), `assets/chrome.css` (looks) | `python3 scripts/normalize_chrome.py`, then `python3 scripts/build_home.py` (both refresh the `?v=` hashes) |
 | Interior page look | `assets/site.css` | `python3 scripts/normalize_chrome.py` to refresh `?v=` on every page |
-| Newsletter issue into `/archive/` | `issues.json` (from `scripts/issues_from_kit.py`) | `python3 scripts/publish_issue.py issues.json`. Never hand-build archive pages or edit the `archive` array. |
+| Newsletter issue into `/archive/` | Automatic: `archive-issues.yml` runs `scripts/issues_from_mailerlite.py` (sent MailerLite campaigns named "Haps Weekly …") | By hand: `python3 scripts/issues_from_mailerlite.py --html email.html --sent YYYY-MM-DD > issues.json`, then `python3 scripts/publish_issue.py issues.json` and `python3 scripts/build_home.py`. Never hand-build archive pages or edit the `archive` array. (`issues_from_kit.py` is for the old Kit issues.) |
 | Guides (`guides/`) | `scripts/build_guides.py` or `build_guides_fall.py` (don't rerun `build_guides.py` blindly — some guides were hand-fixed) | `python3 scripts/build_pages.py` fills the live event blocks + schema |
 | Ask Haps page (`/ask/`) | `scripts/build_ask.py`; worker source in `workers/ask-haps.js` (deployed to Cloudflare separately) | `python3 scripts/build_ask.py` |
 | Interior pages (about, subscribe, privacy, partners, sitemap) | the `.html` file directly | reuse shared classes; no inline `<style>` |
@@ -53,6 +53,7 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 
 ## Automation (GitHub Actions)
 - `build-home.yml` — rebuilds `index.html` on push to events.json/home assets and daily 7:05am PT.
+- `archive-issues.yml` — Tuesdays ~11am PT + daily: archives new "Haps Weekly" MailerLite sends and refreshes the homepage's Recent issues. Needs the `MAILERLITE_API_KEY` repo secret; skips with a warning without it. Name weekly campaigns "Haps Weekly YYYY-MM-DD: …" so it picks them up (tests and one-offs are ignored).
 - `deploy-from-issue.yml` — old fallback: an issue titled `deploy: <path>` with a base64 body writes that file. Not needed now that git push works.
 - The May 2026 daily inbox report (`daily-report.yml` / `process-approval.yml`) was retired: its scripts were removed 2026-05-11 and the workflows on 2026-11-02. Don't restore them unless Michael asks.
 

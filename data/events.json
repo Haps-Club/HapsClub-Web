@@ -19,13 +19,13 @@
       "title": "Haps Club Jazz Age Party",
       "pill": "Tickets · Sat 11/21",
       "tagline": "A live jazz trio, Prohibition-era cocktails, and a historic home turning 100.",
-      "meta": "Sat Nov 21 · 7:30–11:30 PM · $45 · 10% off with HAPSCLUBPLUS",
+      "meta": "Sat Nov 21 · 7:30–11:30 PM · $45, or $80 for two · 10% off with HAPSCLUBPLUS",
       "cta": "Get your ticket",
       "link": "https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS",
       "tags": "music date",
       "area": "citywide",
       "where": "Historic home, Los Angeles",
-      "price": "$45",
+      "price": "$45 · $80 for two",
       "starts": "20261121T193000",
       "ends": "20261121T233000",
       "lead": true,
@@ -434,7 +434,7 @@
       "tags": "music date",
       "area": "citywide",
       "where": "Historic home, Los Angeles",
-      "price": "$45",
+      "price": "$45 · $80 for two",
       "link": "https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS",
       "tagline": "A live jazz trio, Prohibition-era cocktails, and a historic home turning 100.",
       "starts": "20261121T193000",
@@ -1043,6 +1043,11 @@
   ],
   "archive": [
     {
+      "date": "Nov 3, 2026",
+      "title": "Party like it’s 1926",
+      "url": "https://haps.club/archive/2026-11-03-party-like-its-1926/"
+    },
+    {
       "date": "Oct 27, 2026",
       "title": "Costumes, candlelight, and one last seat",
       "url": "https://haps.club/archive/2026-10-27-costumes-and-candlelight/"
@@ -1066,11 +1071,6 @@
       "date": "Oct 6, 2026",
       "title": "Open Streets, Late Art",
       "url": "https://haps.club/archive/2026-10-06-open-streets-late-art/"
-    },
-    {
-      "date": "Sep 29, 2026",
-      "title": "Back for Seconds",
-      "url": "https://haps.club/archive/2026-09-29-back-for-seconds/"
     }
   ],
   "sponsor": {
