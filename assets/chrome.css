@@ -54,6 +54,11 @@ body::before{content:"";display:block;height:6px;background:var(--f-sunset);back
 .nav .brand:hover img.logo{transform:rotate(-6deg) scale(1.05)}
 .nav nav{gap:22px}
 .nav nav a{font-family:var(--f-mono);font-size:12px;font-weight:400;letter-spacing:.3px;text-transform:uppercase;color:var(--f-ink);position:relative;padding:4px 0}
+/* scroll-progress line: sunset gradient fills along the bottom of the sticky nav as you scroll */
+@supports (animation-timeline: scroll()){
+.nav::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;background:var(--f-sunset);transform:scaleX(0);transform-origin:0 50%;animation:f-progress linear both;animation-timeline:scroll(root block);pointer-events:none}
+@keyframes f-progress{to{transform:scaleX(1)}}
+}
 .nav nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--f-signal);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--f-ease)}
 .nav nav a:hover{color:var(--f-ink)}
 .nav nav a:hover::after,.nav nav a.on::after{transform:scaleX(1)}
