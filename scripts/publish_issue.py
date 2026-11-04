@@ -21,6 +21,7 @@ Touches, in one pass:
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import site_chrome as sc
+import issue_layout
 import json, re, sys, html, os
 
 ROOT = os.getcwd()
@@ -63,32 +64,10 @@ PAGE = """<!DOCTYPE html>
 </head>
 <body>
 {header}
-<main class="wrap">
-  <article>
-    <div class="eyebrow"><span class="pin">&#9679;</span> {pretty}</div>
-    <h1>{title}</h1>
-    <div class="dek">{dek}</div>
-    <div class="intro">{intro}</div>
-{sections}
-  </article>
-  <div class="cta">
-    <h3>Get the next one</h3>
-    <p>One email, every Tuesday morning. Free, unsubscribe anytime.</p>
-    <a href="/subscribe">Subscribe free <svg class="ic" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  </div>
-  <p class="morelinks">More: <a href="/">this week in LA</a> &middot; <a href="{cal}">the calendar</a> &middot; <a href="/archive/">every issue</a></p>
-</main>
+{main}
 {footer}
 </body>
 </html>
-"""
-
-SEC = """    <section class="sec"><div class="lbl">{lbl}</div>
-<h2>{h2}</h2>
-<div class="body"><p><em>{tagline}</em></p>
-<p>{meta}</p>
-{body}</div>
-</section>
 """
 
 def esc(s):
@@ -102,16 +81,10 @@ def build(iss):
                      "publisher":{"@type":"Organization","name":"Haps Club","url":"https://haps.club/"},
                      "mainEntityOfPage":"https://haps.club/archive/%s-%s/"%(iss['date'],iss['slug']),
                      "description":re.sub(r'<[^>]+>','',iss['dek'])}, ensure_ascii=False)
-    secs = "".join(SEC.format(lbl=s['lbl'], h2=s['h2'], tagline=s['tagline'],
-                              meta=s['meta'] or '&nbsp;',
-                              body="".join("<p>%s</p>\n"%p for p in s['body']))
-                   for s in iss['sections'])
-    secs = secs.replace('<p><em></em></p>\n', '')
+    intro = "".join("<p>%s</p>\n" % p for p in iss['intro'])
     return PAGE.format(chrome_css=sc.chrome_css(), page_css=sc.page_css(), header=sc.header(active="/archive/"), footer=sc.footer(), title=iss['title'], title_attr=esc(iss['title']),
-                       dek=iss['dek'], dek_attr=esc(iss['dek']),
-                       date=iss['date'], slug=iss['slug'], pretty=iss['pretty'],
-                       intro="".join("<p>%s</p>\n"%p for p in iss['intro']),
-                       sections=secs, ld=ld, cal=CAL)
+                       dek_attr=esc(iss['dek']), date=iss['date'], slug=iss['slug'],
+                       main=issue_layout.main_html(iss, intro, CAL), ld=ld)
 
 def main(path):
     issues = json.load(open(path, encoding='utf-8'))

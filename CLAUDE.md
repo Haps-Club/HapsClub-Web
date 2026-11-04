@@ -42,6 +42,7 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 - CSS/JS links carry `?v=<first 8 of md5>` for cache-busting. Edit an asset → update its `?v=` on every page that links it (the build scripts do this for pages they generate; `check_site.py` flags stale ones).
 - Never bring back Instrument Serif or cream #FAF7F0. No light/dark toggle. Top-left logo always links home.
 - Signup form is MailerLite (`assets/ml-subscribe.js`, form action in build_home.py) — Kit is no longer the site form.
+- Archive issue pages (from Nov 3, 2026 on) use the callout + compact-row layout from `scripts/issue_layout.py` (`.ix-*` in site.css): every label group but the last becomes a callout, the last becomes typed rows with category icons. Categories come from keywords in `KEYWORDS` there. Older issues keep the `.sec` layout; don't regenerate them.
 - Standalone pages (own inline `<style>`, no GA, noindex): `planner/`, `planner-svetlana/`, `partners/*/`, `partnership/macallan/`, `events/*/` and their `ops/` pages. Leave them unless asked.
 - Keep byte-identical: Google Analytics `G-RKY63MK7ND`, canonical/OG meta.
 
