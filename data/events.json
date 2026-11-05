@@ -3,19 +3,6 @@
   "weekLabel": "Week of Nov 2",
   "featured": [
     {
-      "title": "Fleurs de Villes: The Gilded Age",
-      "pill": "$28–$36 · Through Wed 11/4",
-      "tagline": "Fresh-flower mannequins recreate HBO costumes across the mansion gardens — last chance this week.",
-      "meta": "Through Wed Nov 4 · Greystone Mansion, Beverly Hills · $28–$36",
-      "cta": "Get tickets",
-      "link": "https://www.fleursdevilles.com/event-page/beverly-hills-gilded-age-2026",
-      "tags": "culture date",
-      "area": "westside",
-      "where": "Greystone Mansion, Beverly Hills",
-      "price": "$28–$36",
-      "ends": "20261104T170000"
-    },
-    {
       "title": "Haps Club Jazz Age Party",
       "pill": "Tickets · Sat 11/21",
       "tagline": "A live jazz trio, Prohibition-era cocktails, and a historic home turning 100.",
@@ -36,21 +23,6 @@
   ],
   "events": [
     {
-      "title": "Fleurs de Villes: The Gilded Age",
-      "month": "NOV",
-      "day": "2",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "westside",
-      "where": "Greystone Mansion, Beverly Hills",
-      "price": "$28–$36",
-      "link": "https://www.fleursdevilles.com/event-page/beverly-hills-gilded-age-2026",
-      "tagline": "Fresh-flower mannequins recreate the HBO costumes across the mansion gardens. Free shuttle from Crescent Dr garage.",
-      "starts": "20261102T100000",
-      "ends": "20261104T170000",
-      "addr": "905 Loma Vista Dr"
-    },
-    {
       "title": "The Who's Tommy",
       "month": "NOV",
       "day": "2",
@@ -64,35 +36,6 @@
       "starts": "20261102T190000",
       "ends": "20261115T230000",
       "addr": "6233 Hollywood Blvd"
-    },
-    {
-      "title": "Yawanawá Concert and Market at The KINN",
-      "month": "NOV",
-      "day": "4",
-      "cat": "Music",
-      "tags": "music culture",
-      "area": "westside",
-      "where": "The KINN, Venice",
-      "price": "Donation",
-      "link": "https://luma.com/YawanawaNov4",
-      "tagline": "Yawanawá music, a hapé circle, and a market fundraiser in Venice's favorite living room.",
-      "starts": "20261104T183000",
-      "ends": "20261104T204500"
-    },
-    {
-      "title": "The Black Angels at The Fonda",
-      "month": "NOV",
-      "day": "4",
-      "cat": "Music",
-      "tags": "music",
-      "area": "hollywood",
-      "where": "The Fonda Theatre",
-      "price": "Tickets",
-      "link": "https://theblackangels.com/",
-      "tagline": "Austin psych rock, loud and hazy, in the Fonda's perfect-sized room.",
-      "starts": "20261104T200000",
-      "ends": "20261104T233000",
-      "addr": "6126 Hollywood Blvd"
     },
     {
       "title": "Re-Enacting the Lie at the Schindler House",
