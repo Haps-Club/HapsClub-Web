@@ -89,6 +89,7 @@ span.nw{white-space:nowrap;display:inline!important;color:inherit!important;font
 .f input:focus,.f select:focus,.f textarea:focus{border-color:var(--orange)}
 .f select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 14px) 55%,calc(100% - 9px) 55%;background-size:5px 5px;background-repeat:no-repeat}
 .f select option{background:#17171a;color:var(--ink)}
+.req{color:var(--orange)}
 .f .opt{color:var(--muted);text-transform:none;letter-spacing:0}
 .consent{display:flex;gap:12px;align-items:flex-start;margin-top:30px;font-size:15px;font-weight:300;color:var(--ink);cursor:pointer}
 .consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--orange);flex:none}
@@ -214,11 +215,11 @@ footer{padding:44px 0 56px;border-top:1px solid var(--line)}
       </div>
       <form id="form" novalidate action="https://assets.mailerlite.com/jsonp/2758867/forms/203345795078948644/subscribe" method="post">
         <div class="fields">
-          <div class="f"><label for="fn">First name</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
-          <div class="f"><label for="ln">Last name</label><input id="ln" name="last_name" type="text" autocomplete="family-name" required></div>
-          <div class="f full"><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
-          <div class="f"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
-          <div class="f"><label for="ig">Instagram handle</label><input id="ig" name="instagram" type="text" placeholder="@yourhandle" autocapitalize="none" required></div>
+          <div class="f"><label for="fn">First name <span class="req" aria-hidden="true">*</span></label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
+          <div class="f"><label for="ln">Last name <span class="req" aria-hidden="true">*</span></label><input id="ln" name="last_name" type="text" autocomplete="family-name" required></div>
+          <div class="f full"><label for="em">Email <span class="req" aria-hidden="true">*</span></label><input id="em" name="email" type="email" autocomplete="email" required></div>
+          <div class="f"><label for="ph">Phone <span class="req" aria-hidden="true">*</span></label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="f"><label for="ig">Instagram handle <span class="req" aria-hidden="true">*</span></label><input id="ig" name="instagram" type="text" placeholder="@yourhandle" autocapitalize="none" required></div>
           <div class="f"><label for="nb">Neighborhood</label><input id="nb" name="neighborhood" type="text"></div>
           <div class="f">
             <label for="rd">Do you read Haps Weekly?</label>
@@ -231,10 +232,10 @@ footer{padding:44px 0 56px;border-top:1px solid var(--line)}
           <div class="f"><label for="rf">Who referred you? <span class="opt">(optional)</span></label><input id="rf" name="referred_by" type="text"></div>
           <div class="f full"><label for="fav">A restaurant you would send a friend to</label><textarea id="fav" name="favorite" rows="2"></textarea></div>
         </div>
-        <label class="consent"><input type="checkbox" name="consent" required><span>Yes, send me invites to Haps Club dinners and news.</span></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Yes, send me invites to Haps Club dinners and news. <span class="req" aria-hidden="true">*</span></span></label>
         <div class="foot-form">
           <button class="btn" type="submit">Request a seat <span class="arr">&rarr;</span></button>
-          <p class="fine">We read every request. If there is a seat, you will hear from us by email.</p>
+          <p class="fine"><span class="req">*</span> Required. We read every request. If there is a seat, you will hear from us by email.</p>
         </div>
       </form>
       <div class="thanks" role="status"><h3>Request received.</h3><p>Check your inbox and confirm your email so we can reach you. If there is a seat at an upcoming dinner, we will be in touch.</p></div>
@@ -263,6 +264,7 @@ document.getElementById('form').addEventListener('submit',function(ev){
   ev.preventDefault();var f=ev.target;
   var bad=null;
   if(!f.first_name.value.trim())bad=f.first_name;
+  else if(!f.last_name.value.trim())bad=f.last_name;
   else if(f.email.value.indexOf('@')<1)bad=f.email;
   else if(!f.phone.value.trim())bad=f.phone;
   else if(!f.instagram.value.trim())bad=f.instagram;
