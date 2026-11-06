@@ -92,6 +92,7 @@ NAV_ITEMS = [
     ("Calendar",  CAL,         True),
     ("Guides",    "/guides/",  False),
     ("Archive",   "/archive/", False),
+    ("Dinners",   "/dinners/", False),
     ("About",     "/about",    False),
 ]
 
@@ -102,6 +103,7 @@ FOOTER_COLS = [
               ("Archive", "/archive/", False),
               ("Sitemap", "/sitemap", False)]),
     ("Join", [("Subscribe", "/subscribe", False),
+              ("Dinners", "/dinners/", False),
               ("Instagram", IG, True),
               ("Submit a tip", "/about#tip", False)]),
     ("More", [("About", "/about", False),

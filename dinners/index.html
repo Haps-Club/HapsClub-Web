@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Haps Club Dinners &mdash; By invitation</title>
+<meta name="description" content="Small, private dinners in Los Angeles from Haps Club. Request an invitation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Standalone page: own inline style, no GA, noindex. Inverted Haps palette. */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b0b0c;
+  --bg-2:#131315;
+  --ink:#f4f2ef;          /* stone, inverted */
+  --muted:#9a968f;
+  --line:#2a2a2d;
+  --orange:#FF4F00;       /* signal orange */
+  --sans:'Inter Tight',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6;letter-spacing:-.005em}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.mono.or{color:var(--orange)}
+span.nw{white-space:nowrap;display:inline!important;color:inherit!important;font:inherit!important;letter-spacing:inherit!important;margin:0!important}
+
+/* header */
+.hd{position:sticky;top:0;z-index:100;height:64px;background:rgba(11,11,12,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd-in{max-width:1240px;height:100%;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.hd-cta{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);padding:10px 18px;border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+.hd-cta:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--orange);color:#fff;text-decoration:none;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:19px 34px;border:0;border-radius:999px;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:#ff6a26;transform:translateY(-1px)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+/* hero */
+.hero{padding:clamp(64px,10vw,140px) 0 clamp(52px,6vw,88px);text-align:center}
+.hero .mono{margin-bottom:36px}
+.hero h1{font-weight:300;font-size:clamp(54px,10.5vw,152px);line-height:.95;letter-spacing:-.05em}
+.hero h1 b{font-weight:600;color:var(--orange)}
+.hero-sub{max-width:760px;margin:40px auto 0;font-size:clamp(20px,2.4vw,30px);color:var(--ink);line-height:1.4;font-weight:600;letter-spacing:-.01em}
+.hero-cta{margin-top:46px;display:flex;flex-direction:column;align-items:center;gap:18px}
+
+
+/* partners */
+.partners{padding:clamp(60px,7vw,100px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.partners h2{font-weight:300;font-size:clamp(28px,3.6vw,46px);letter-spacing:-.035em;line-height:1.1;margin-top:14px}
+.logos{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(36px,5vw,60px);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.logo-cell{height:clamp(96px,11vw,132px);display:flex;align-items:center;justify-content:center;padding:0 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);font-weight:500;font-size:clamp(18px,2.2vw,28px);letter-spacing:.14em;text-transform:uppercase;color:#e9e6e0}
+.logo-cell img{height:auto;filter:brightness(0) invert(1);opacity:.92}
+.logo-cell.ghost{font-family:var(--mono);font-weight:400;font-size:10px;letter-spacing:.26em;color:#5c5a55}
+.pnote{margin-top:22px;font-size:12px;color:var(--muted)}
+
+/* sections */
+.sec{padding:clamp(76px,9vw,132px) 0}
+.sec.alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{text-align:center;max-width:660px;margin:0 auto clamp(46px,6vw,78px)}
+.head h2{font-weight:300;font-size:clamp(36px,5.2vw,70px);line-height:1.02;letter-spacing:-.045em;margin-top:16px}
+.head h2 b{font-weight:600;color:var(--orange)}
+.head p{margin-top:20px;color:#bdb9b2;font-size:17px;font-weight:300}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,64px)}
+.pillar{border-top:1px solid var(--ink);padding-top:22px}
+.pillar .n{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--orange)}
+.pillar h3{font-weight:500;font-size:clamp(24px,2.5vw,32px);line-height:1.1;letter-spacing:-.03em;margin-top:16px}
+.pillar .sub{display:block;margin-top:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.pillar p{margin-top:16px;color:#bdb9b2;font-size:16px;font-weight:300}
+.steps{max-width:880px;margin:0 auto;border-top:1px solid var(--line)}
+.step{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.step .n{font-family:var(--mono);font-size:14px;letter-spacing:.18em;color:var(--orange)}
+.step h3{font-weight:500;font-size:clamp(24px,3vw,34px);letter-spacing:-.035em;line-height:1.1}
+.step p{margin-top:10px;color:#bdb9b2;font-size:16px;font-weight:300;max-width:560px}
+
+/* form */
+.card{max-width:720px;margin:0 auto;border:1px solid #3a3a3e;padding:clamp(28px,5vw,60px);border-radius:4px}
+.card .head{margin-bottom:34px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:26px 28px}
+.f{display:flex;flex-direction:column;gap:8px}.f.full{grid-column:1/-1}
+.f label{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.f input,.f select,.f textarea{width:100%;font-family:var(--sans);font-size:17px;font-weight:300;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #4a4a4f;padding:8px 0 10px;border-radius:0;outline:none;transition:border-color .2s;-webkit-appearance:none;appearance:none}
+.f textarea{resize:vertical;min-height:74px}
+.f input:focus,.f select:focus,.f textarea:focus{border-color:var(--orange)}
+.f select{background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 14px) 55%,calc(100% - 9px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.f select option{background:#17171a;color:var(--ink)}
+.f .opt{color:var(--muted);text-transform:none;letter-spacing:0}
+.consent{display:flex;gap:12px;align-items:flex-start;margin-top:30px;font-size:15px;font-weight:300;color:var(--ink);cursor:pointer}
+.consent input{margin-top:3px;width:18px;height:18px;accent-color:var(--orange);flex:none}
+.foot-form{margin-top:38px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center}
+.fine{font-size:12.5px;color:var(--muted);max-width:420px}
+.thanks{display:none;text-align:center;padding:24px 0 8px}
+.thanks h3{font-weight:300;font-size:clamp(32px,4vw,48px);letter-spacing:-.04em}
+.thanks p{margin-top:12px;color:#bdb9b2}
+.card.sent form{display:none}.card.sent .thanks{display:block}
+
+/* footer */
+footer{padding:44px 0 56px;border-top:1px solid var(--line)}
+.ft{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.ft a{text-decoration:none}.ft a:hover{color:var(--orange)}
+.ft-links{display:flex;gap:26px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media(max-width:860px){.three{grid-template-columns:1fr}.logos{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .wrap,.hd-in{padding:0 20px}
+  .fields{grid-template-columns:1fr}
+  .step{grid-template-columns:48px 1fr;gap:12px}
+  .ft{flex-direction:column;align-items:flex-start}
+}
+</style></head>
+<body>
+
+<header class="hd">
+  <div class="hd-in">
+    <a class="hd-cta" href="#request">Request access</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="mono rv">Haps Club Dinners &nbsp;&middot;&nbsp; Los Angeles &nbsp;&middot;&nbsp; By invitation</p>
+    <h1 class="rv">Request a seat at<br><b>our next table.</b></h1>
+    <p class="hero-sub rv">Small, private dinners from Haps Club. One long table, a chef worth the trip, and a room full of people you will be glad you met.</p>
+    <div class="hero-cta rv">
+      <a class="btn" href="#request">Request a seat <span class="arr">&rarr;</span></a>
+      <span class="mono">Next dinner &middot; Date shared with the list</span>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="wrap">
+    <p class="mono rv">Where we eat</p>
+    <h2 class="rv">Where we have hosted in Los Angeles.</h2>
+    <div class="logos rv">
+      <div class="logo-cell"><img src="venues/viceroy.svg" alt="Viceroy Santa Monica" style="width:min(62%,150px)"></div>
+      <div class="logo-cell"><img src="venues/proper.png" alt="Proper Hotel" style="width:min(62%,170px)"></div>
+      <div class="logo-cell">Hermanito</div>
+      <div class="logo-cell"><img src="venues/gin-rummy.png" alt="Gin Rummy" style="width:min(50%,120px)"></div>
+      <div class="logo-cell">Crustacean</div>
+      <div class="logo-cell"><img src="venues/negroni.svg" alt="Negroni" style="width:min(62%,170px)"></div>
+      <div class="logo-cell">Wabi</div>
+      <div class="logo-cell">Fig Tree</div>
+    </div>
+    <p class="pnote">Venues from past Haps Club events. Logos to come.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="mono or">The evening</p>
+      <h2>A dinner worth <b>remembering.</b></h2>
+      <p>The kind of night you tell people about, with the people you met there.</p>
+    </div>
+    <div class="three">
+      <article class="pillar rv">
+        <span class="n">01</span>
+        <h3>A short guest list</h3>
+        <span class="sub">Small by design</span>
+        <p>Every dinner is capped so one conversation can run the whole table. You will talk to everyone.</p>
+      </article>
+      <article class="pillar rv">
+        <span class="n">02</span>
+        <h3>Curious people</h3>
+        <span class="sub">Hand-picked</span>
+        <p>Readers, makers and regulars who like a good night out and are glad to meet someone new.</p>
+      </article>
+      <article class="pillar rv">
+        <span class="n">03</span>
+        <h3>The right room</h3>
+        <span class="sub">Chosen by Haps</span>
+        <p>Every restaurant is one we would send our own friends to. You show up, we handle the rest.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="mono or">Access</p>
+      <h2>How you get a <b>seat.</b></h2>
+      <p>Seats are limited, so we review every request personally.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><span class="n">01</span><div><h3>Request an invitation</h3><p>Tell us who you are and where you live in Los Angeles. It takes about a minute.</p></div></div>
+      <div class="step rv"><span class="n">02</span><div><h3>We review it</h3><p>We read every request and mix each table so the conversation works.</p></div></div>
+      <div class="step rv"><span class="n">03</span><div><h3>You get the details</h3><p>If there is a seat, we send the date, the restaurant and the address privately.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="request">
+  <div class="wrap">
+    <div class="card rv" id="card">
+      <div class="head">
+        <p class="mono or">Request access</p>
+        <h2>Request your <b>seat.</b></h2>
+        <p>Open to Haps Weekly readers first.</p>
+      </div>
+      <form id="form" novalidate action="https://assets.mailerlite.com/jsonp/2758867/forms/203345795078948644/subscribe" method="post">
+        <div class="fields">
+          <div class="f"><label for="fn">First name</label><input id="fn" name="first_name" type="text" autocomplete="given-name" required></div>
+          <div class="f"><label for="ln">Last name</label><input id="ln" name="last_name" type="text" autocomplete="family-name" required></div>
+          <div class="f full"><label for="em">Email</label><input id="em" name="email" type="email" autocomplete="email" required></div>
+          <div class="f"><label for="ph">Phone</label><input id="ph" name="phone" type="tel" autocomplete="tel" required></div>
+          <div class="f"><label for="ig">Instagram handle</label><input id="ig" name="instagram" type="text" placeholder="@yourhandle" autocapitalize="none" required></div>
+          <div class="f"><label for="nb">Neighborhood</label><input id="nb" name="neighborhood" type="text"></div>
+          <div class="f">
+            <label for="rd">Do you read Haps Weekly?</label>
+            <select id="rd" name="reader"><option value="">Select one</option><option>Yes, every week</option><option>Sometimes</option><option>Not yet</option></select>
+          </div>
+          <div class="f">
+            <label for="hh">How did you hear about us?</label>
+            <select id="hh" name="how_heard"><option value="">Select one</option><option>Haps Weekly newsletter</option><option>Instagram</option><option>A friend</option><option>A past dinner</option><option>Partiful</option><option>Other</option></select>
+          </div>
+          <div class="f"><label for="rf">Who referred you? <span class="opt">(optional)</span></label><input id="rf" name="referred_by" type="text"></div>
+          <div class="f full"><label for="fav">A restaurant you would send a friend to</label><textarea id="fav" name="favorite" rows="2"></textarea></div>
+        </div>
+        <label class="consent"><input type="checkbox" name="consent" required><span>Yes, send me invites to Haps Club dinners and news.</span></label>
+        <div class="foot-form">
+          <button class="btn" type="submit">Request a seat <span class="arr">&rarr;</span></button>
+          <p class="fine">We read every request. If there is a seat, you will hear from us by email.</p>
+        </div>
+      </form>
+      <div class="thanks" role="status"><h3>Request received.</h3><p>Check your inbox and confirm your email so we can reach you. If there is a seat at an upcoming dinner, we will be in touch.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span>&copy; Haps Club &middot; Los Angeles</span>
+    <div class="ft-links"><a href="/">Home</a><a href="/subscribe.html">Subscribe</a><a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+/* submit to MailerLite (Dinner Requests group) */
+document.getElementById('form').addEventListener('submit',function(ev){
+  ev.preventDefault();var f=ev.target;
+  var bad=null;
+  if(!f.first_name.value.trim())bad=f.first_name;
+  else if(f.email.value.indexOf('@')<1)bad=f.email;
+  else if(!f.phone.value.trim())bad=f.phone;
+  else if(!f.instagram.value.trim())bad=f.instagram;
+  else if(!f.consent.checked)bad=f.consent;
+  if(bad){bad.focus();return}
+  var btn=f.querySelector('button[type=submit]'),label=btn.innerHTML;
+  btn.disabled=true;btn.textContent='Sending\u2026';
+  var d=new FormData();
+  d.append('fields[email]',f.email.value.trim());
+  d.append('fields[name]',f.first_name.value.trim());
+  d.append('fields[last_name]',f.last_name.value.trim());
+  d.append('fields[phone]',f.phone.value.trim());
+  d.append('fields[instagram]',f.instagram.value.trim().replace(/^@?/,'@'));
+  d.append('fields[neighborhood]',f.neighborhood.value.trim());
+  d.append('fields[reads_haps_weekly]',f.reader.value);
+  d.append('fields[how_heard]',f.how_heard.value);
+  d.append('fields[referred_by]',f.referred_by.value.trim());
+  d.append('fields[favorite_restaurant]',f.favorite.value.trim());
+  d.append('ml-submit','1');d.append('anticsrf','true');
+  fetch(f.action,{method:'POST',body:d,mode:'no-cors'}).then(function(){
+    document.getElementById('card').classList.add('sent');
+    if(window.gtag)gtag('event','dinner_request');
+  }).catch(function(){btn.disabled=false;btn.innerHTML=label;alert('Something went wrong. Please try again.')});
+});
+/* no-widows pass */
+(function(){
+  document.querySelectorAll('h2,h3,p').forEach(function(el){
+    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),last=null,n;
+    while(n=w.nextNode()){if(n.nodeValue.trim())last=n}
+    if(!last)return;
+    var t=last.nodeValue,m=t.match(/(\S+)\s+(\S+\s*)$/);
+    if(!m)return;
+    var cut=t.length-m[0].length,span=document.createElement('span');
+    span.className='nw';span.textContent=m[0];
+    last.nodeValue=t.slice(0,cut);
+    last.parentNode.insertBefore(span,last.nextSibling);
+  });
+})();
+</script>
+</body></html>
