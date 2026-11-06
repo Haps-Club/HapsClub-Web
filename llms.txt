@@ -17,9 +17,7 @@ Haps Club is independent and editorial: a real person reading the city, not an a
 Hand-picked, dated events for the next 14 days, generated from the site's data and refreshed daily. Full list: https://haps.club/ and https://haps.club/llms-full.txt.
 
 - [The Who's Tommy](https://www.broadwayinhollywood.com/): Mon Nov 2 · Hollywood Pantages Theatre · Hollywood · From $35 lottery
-- [Re-Enacting the Lie at the Schindler House](https://www.makcenter.org/): Thu Nov 5 · MAK Center, West Hollywood · Hollywood · With admission, RSVP
 - [Alanis Morissette at YouTube Theater](https://www.youtubetheater.com/events/detail/alanis-morissette): Thu Nov 5 · YouTube Theater, Inglewood · Citywide · Tickets
-- [Kate Bollinger at 2220 Arts + Archives](https://dice.fm/event/oe9eq5-kate-bollinger-5th-nov-2220-arts-archives-los-angeles-tickets): Thu Nov 5 · 2220 Arts + Archives, Historic Filipinotown · Downtown · Tickets
 - [NOW Festival at REDCAT](https://www.redcat.org/now26): Thu Nov 5 · REDCAT, Downtown · Downtown · From $20
 - [Keiko Matsui at Catalina Jazz Club](https://www.catalinajazzclub.com/): Fri Nov 6 · Catalina Jazz Club, 6725 W Sunset Blvd · Hollywood · From $62
 - [LA NDN Flea at The Broad](https://www.thebroad.org/events/la-ndn-flea-native-market): Sat Nov 7 · The Broad, Downtown · Downtown · Free
@@ -37,6 +35,7 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Hootenanny at The Huntington](https://huntington.org/events): Fri Nov 13 · The Huntington, San Marino · Citywide · Free, reserve
 - [Opening Night at Craft Contemporary](https://www.craftcontemporary.org/): Sat Nov 14 · Craft Contemporary, Miracle Mile · Mid-City · $12
 - [Paul R. Williams: Architect for Living at LACMA](https://www.lacma.org/art/exhibition/paul-r-williams-architect-living): Sun Nov 15 · LACMA, Miracle Mile · Mid-City · With admission
+- [Holiday Tree Lighting at Regent Santa Monica](https://santamonica.regenthotels.com/experience/bookable-experiences/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5): Thu Nov 19 · Regent Santa Monica Beach · Westside · Free
 <!-- /AUTO:WEEK -->
 
 ## Guides

@@ -80,6 +80,15 @@ def ensure_fonts(src):
     return src[:first.start()] + first.group(1) + sc.fonts_html().replace("\n", "\n" + first.group(1)) + "\n" + src[first.start():]
 
 
+ICON_RE = re.compile(r'[ \t]*<link rel="(?:icon|shortcut icon|apple-touch-icon)"[^>]*>\n?')
+
+
+def ensure_icons(src):
+    """Exactly one favicon block, right before </head> (idempotent)."""
+    src = ICON_RE.sub("", src)
+    return src.replace("</head>", sc.icons_html() + "\n</head>", 1)
+
+
 def refresh_asset_hashes(src):
     """Re-stamp ?v=<md5[:8]> on every local css/js link so Cloudflare never serves a stale one."""
     def stamp(m):
@@ -110,6 +119,7 @@ def main(check=False):
             continue                      # bespoke page, not ours
         new = ensure_chrome_link(src)
         new = ensure_fonts(new)
+        new = ensure_icons(new)
         new = refresh_asset_hashes(new)
         new = HEADER_RE.sub(lambda m: sc.header(active=active_for(rel)),
                             new, count=1)

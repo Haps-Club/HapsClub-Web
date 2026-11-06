@@ -332,7 +332,7 @@ def build(prune=True):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{SITE}/assets/og-card.png">
 <meta name="theme-color" content="#FF4F00">
-<link rel="icon" href="{LOGO}">
+{sc.icons_html()}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap">
 {sc.chrome_css()}

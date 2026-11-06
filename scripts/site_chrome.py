@@ -64,6 +64,13 @@ def fonts_html():
             f'<link rel="stylesheet" href="{FONTS_HREF}">')
 
 
+def icons_html():
+    """Favicon set: SVG for modern browsers, .ico fallback, iOS home-screen icon. Files made by make_favicon.py."""
+    return ('<link rel="icon" href="/favicon.ico" sizes="32x32">\n'
+            '<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">\n'
+            '<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">')
+
+
 def chrome_css():
     return css_link("chrome.css")
 

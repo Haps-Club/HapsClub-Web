@@ -4,7 +4,7 @@
 
 Haps Club is independent and editorial: a real person reading the city, not an algorithmic listings feed. Every pick names its LA neighborhood and links straight to the source. Coverage spans the Eastside, Westside, Hollywood, West Hollywood, Mid-City, Downtown, and beyond. Founded and written by Michael Abraham.
 
-Updated 2026-11-04. Generated from https://haps.club/ data; times are America/Los_Angeles.
+Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Los_Angeles.
 
 ## Dated picks (Week of Nov 2 onward)
 
@@ -16,14 +16,6 @@ Updated 2026-11-04. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.broadwayinhollywood.com/
 - About: The rock opera, anthems turned all the way up. Through Nov 15, with a $35 digital lottery.
 
-### Re-Enacting the Lie at the Schindler House
-- When: Thursday, November 5, 6:00 PM
-- Where: MAK Center, West Hollywood, 835 N Kings Rd (Hollywood)
-- Price: With admission, RSVP
-- Category: Culture
-- Details: https://www.makcenter.org/
-- About: LA Poverty Department brings Skid Row residents' stories to Schindler's house. Small room, RSVP.
-
 ### Alanis Morissette at YouTube Theater
 - When: Thursday, November 5 to Nov 6, 8:00 PM
 - Where: YouTube Theater, Inglewood, 1011 Stadium Dr (Citywide)
@@ -31,14 +23,6 @@ Updated 2026-11-04. Generated from https://haps.club/ data; times are America/Lo
 - Category: Music
 - Details: https://www.youtubetheater.com/events/detail/alanis-morissette
 - About: Two nights of sing-every-word Alanis.
-
-### Kate Bollinger at 2220 Arts + Archives
-- When: Thursday, November 5, 8:00 PM
-- Where: 2220 Arts + Archives, Historic Filipinotown, 2220 Beverly Blvd (Downtown)
-- Price: Tickets
-- Category: Music
-- Details: https://dice.fm/event/oe9eq5-kate-bollinger-5th-nov-2220-arts-archives-los-angeles-tickets
-- About: Soft, strange indie pop in one of LA's best small rooms.
 
 ### NOW Festival at REDCAT
 - When: Thursday, November 5 to Nov 21, 8:30 PM
