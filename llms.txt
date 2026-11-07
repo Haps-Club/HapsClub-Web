@@ -17,7 +17,6 @@ Haps Club is independent and editorial: a real person reading the city, not an a
 Hand-picked, dated events for the next 14 days, generated from the site's data and refreshed daily. Full list: https://haps.club/ and https://haps.club/llms-full.txt.
 
 - [The Who's Tommy](https://www.broadwayinhollywood.com/): Mon Nov 2 · Hollywood Pantages Theatre · Hollywood · From $35 lottery
-- [Alanis Morissette at YouTube Theater](https://www.youtubetheater.com/events/detail/alanis-morissette): Thu Nov 5 · YouTube Theater, Inglewood · Citywide · Tickets
 - [NOW Festival at REDCAT](https://www.redcat.org/now26): Thu Nov 5 · REDCAT, Downtown · Downtown · From $20
 - [Keiko Matsui at Catalina Jazz Club](https://www.catalinajazzclub.com/): Fri Nov 6 · Catalina Jazz Club, 6725 W Sunset Blvd · Hollywood · From $62
 - [LA NDN Flea at The Broad](https://www.thebroad.org/events/la-ndn-flea-native-market): Sat Nov 7 · The Broad, Downtown · Downtown · Free
