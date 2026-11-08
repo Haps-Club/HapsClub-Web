@@ -53,20 +53,6 @@
       "addr": "631 W 2nd St"
     },
     {
-      "title": "Keiko Matsui at Catalina Jazz Club",
-      "month": "NOV",
-      "day": "6",
-      "cat": "Music",
-      "tags": "music date",
-      "area": "hollywood",
-      "where": "Catalina Jazz Club, 6725 W Sunset Blvd",
-      "price": "From $62",
-      "link": "https://www.catalinajazzclub.com/",
-      "tagline": "Two nights with the Japanese jazz pianist. Doors 7, show 8:30.",
-      "starts": "20261106T203000",
-      "ends": "20261107T223000"
-    },
-    {
       "title": "LA NDN Flea at The Broad",
       "month": "NOV",
       "day": "7",
@@ -80,51 +66,6 @@
       "starts": "20261107T110000",
       "ends": "20261108T170000",
       "addr": "221 S Grand Ave"
-    },
-    {
-      "title": "Competing Cosmologies opens at the Wende",
-      "month": "NOV",
-      "day": "7",
-      "cat": "Culture",
-      "tags": "culture free",
-      "area": "westside",
-      "where": "Wende Museum, Culver City",
-      "price": "Free",
-      "link": "https://www.eventbrite.com/e/exhibition-opening-competing-cosmologies-interpreting-the-sky-tickets-2002925086852",
-      "tagline": "Artists reimagine the sky, with a full-scale Sputnik. Curator tour at noon, reception at 3.",
-      "starts": "20261107T120000",
-      "ends": "20261107T160000",
-      "addr": "10808 Culver Blvd",
-      "hood": "culver-city"
-    },
-    {
-      "title": "Salsa Night at Re/creation Cafe",
-      "month": "NOV",
-      "day": "7",
-      "cat": "Music",
-      "tags": "music free date",
-      "area": "midcity",
-      "where": "Re/creation Cafe, Mid-City",
-      "price": "Free",
-      "link": "https://www.recreation.cafe/",
-      "tagline": "Los Calicubanos play a free Saturday salsa set. Bring someone.",
-      "starts": "20261107T193000",
-      "ends": "20261107T213000"
-    },
-    {
-      "title": "Tinashe at the Hollywood Palladium",
-      "month": "NOV",
-      "day": "7",
-      "cat": "Music",
-      "tags": "music",
-      "area": "hollywood",
-      "where": "Hollywood Palladium",
-      "price": "Tickets",
-      "link": "https://www.ticketmaster.com/tinashe-one-night-with-a-popstar-hollywood-california-11-07-2026/event/090064F499E14E53",
-      "tagline": "One night, one pop star, and a very good excuse to dance.",
-      "starts": "20261107T200000",
-      "ends": "20261107T233000",
-      "addr": "6215 Sunset Blvd"
     },
     {
       "title": "Paint + Sound - Venice Beach",
