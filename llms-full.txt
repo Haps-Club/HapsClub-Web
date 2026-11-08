@@ -24,14 +24,6 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.redcat.org/now26
 - About: Nine brand-new LA works across dance, theater, and performance over three weekends.
 
-### Keiko Matsui at Catalina Jazz Club
-- When: Friday, November 6 to Nov 7, 8:30 PM
-- Where: Catalina Jazz Club, 6725 W Sunset Blvd (Hollywood)
-- Price: From $62
-- Category: Music
-- Details: https://www.catalinajazzclub.com/
-- About: Two nights with the Japanese jazz pianist. Doors 7, show 8:30.
-
 ### LA NDN Flea at The Broad
 - When: Saturday, November 7 to Nov 8, 11:00 AM
 - Where: The Broad, Downtown, 221 S Grand Ave (Downtown)
@@ -39,30 +31,6 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Category: Culture
 - Details: https://www.thebroad.org/events/la-ndn-flea-native-market
 - About: A Native-made market on the Broad plaza: jewelry, art, vintage.
-
-### Competing Cosmologies opens at the Wende
-- When: Saturday, November 7, 12:00 PM
-- Where: Wende Museum, Culver City, 10808 Culver Blvd (Westside)
-- Price: Free
-- Category: Culture
-- Details: https://www.eventbrite.com/e/exhibition-opening-competing-cosmologies-interpreting-the-sky-tickets-2002925086852
-- About: Artists reimagine the sky, with a full-scale Sputnik. Curator tour at noon, reception at 3.
-
-### Salsa Night at Re/creation Cafe
-- When: Saturday, November 7, 7:30 PM
-- Where: Re/creation Cafe, Mid-City (Mid-City)
-- Price: Free
-- Category: Music
-- Details: https://www.recreation.cafe/
-- About: Los Calicubanos play a free Saturday salsa set. Bring someone.
-
-### Tinashe at the Hollywood Palladium
-- When: Saturday, November 7, 8:00 PM
-- Where: Hollywood Palladium, 6215 Sunset Blvd (Hollywood)
-- Price: Tickets
-- Category: Music
-- Details: https://www.ticketmaster.com/tinashe-one-night-with-a-popstar-hollywood-california-11-07-2026/event/090064F499E14E53
-- About: One night, one pop star, and a very good excuse to dance.
 
 ### Paint + Sound - Venice Beach
 - When: Sunday, November 8, 2:00 PM

@@ -31,17 +31,6 @@ DESCRIPTION:Nine brand-new LA works across dance\, theater\, and performan
 URL:https://www.redcat.org/now26
 END:VEVENT
 BEGIN:VEVENT
-UID:1e14ec5904b5aede3242@haps.club
-DTSTAMP:20261106T000000Z
-DTSTART:20261107T043000Z
-DTEND:20261108T063000Z
-SUMMARY:Keiko Matsui at Catalina Jazz Club
-LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
-DESCRIPTION:Two nights with the Japanese jazz pianist. Doors 7\, show 8:30
- . Price: From $62.\nhttps://www.catalinajazzclub.com/
-URL:https://www.catalinajazzclub.com/
-END:VEVENT
-BEGIN:VEVENT
 UID:73f44ae709c5e62cbe70@haps.club
 DTSTAMP:20261106T000000Z
 DTSTART:20261107T190000Z
@@ -52,44 +41,6 @@ DESCRIPTION:A Native-made market on the Broad plaza: jewelry\, art\, vinta
  ge. Price: Free.\nhttps://www.thebroad.org/events/la-ndn-flea-native-mark
  et
 URL:https://www.thebroad.org/events/la-ndn-flea-native-market
-END:VEVENT
-BEGIN:VEVENT
-UID:a5d9700d7c2e6413e056@haps.club
-DTSTAMP:20261106T000000Z
-DTSTART:20261107T200000Z
-DTEND:20261108T000000Z
-SUMMARY:Competing Cosmologies opens at the Wende
-LOCATION:Wende Museum\, Culver City\, 10808 Culver Blvd
-DESCRIPTION:Artists reimagine the sky\, with a full-scale Sputnik. Curator
-  tour at noon\, reception at 3. Price: Free.\nhttps://www.eventbrite.com/
- e/exhibition-opening-competing-cosmologies-interpreting-the-sky-tickets-2
- 002925086852
-URL:https://www.eventbrite.com/e/exhibition-opening-competing-cosmologies-
- interpreting-the-sky-tickets-2002925086852
-END:VEVENT
-BEGIN:VEVENT
-UID:3635a01f1a95853eadc4@haps.club
-DTSTAMP:20261106T000000Z
-DTSTART:20261108T033000Z
-DTEND:20261108T053000Z
-SUMMARY:Salsa Night at Re/creation Cafe
-LOCATION:Re/creation Cafe\, Mid-City
-DESCRIPTION:Los Calicubanos play a free Saturday salsa set. Bring someone.
-  Price: Free.\nhttps://www.recreation.cafe/
-URL:https://www.recreation.cafe/
-END:VEVENT
-BEGIN:VEVENT
-UID:bc4f9013ca8dca7792b4@haps.club
-DTSTAMP:20261106T000000Z
-DTSTART:20261108T040000Z
-DTEND:20261108T073000Z
-SUMMARY:Tinashe at the Hollywood Palladium
-LOCATION:Hollywood Palladium\, 6215 Sunset Blvd
-DESCRIPTION:One night\, one pop star\, and a very good excuse to dance. Pr
- ice: Tickets.\nhttps://www.ticketmaster.com/tinashe-one-night-with-a-pops
- tar-hollywood-california-11-07-2026/event/090064F499E14E53
-URL:https://www.ticketmaster.com/tinashe-one-night-with-a-popstar-hollywoo
- d-california-11-07-2026/event/090064F499E14E53
 END:VEVENT
 BEGIN:VEVENT
 UID:6fecacebefe38789dde5@haps.club
