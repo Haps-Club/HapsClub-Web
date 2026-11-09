@@ -545,3 +545,8 @@ a.ix-row:hover .ix-go span{transform:translateX(4px)}
   .g2 .sec{margin-top:44px}
   .g2 .intro p{font-size:18px;line-height:29px}
 }
+.faq{margin:56px 0 0}
+.faq h2{margin:8px 0 8px}
+.faq-i{padding:18px 0;border-top:1px solid var(--line)}
+.faq-i h3{font-size:18px;line-height:26px;font-weight:700;letter-spacing:-.01em;margin:0 0 6px;color:var(--ink)}
+.faq-i p{font-size:16px;line-height:26px;color:var(--ink2);margin:0}

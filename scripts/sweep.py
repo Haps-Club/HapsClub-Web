@@ -80,7 +80,7 @@ def main():
     out.append("homepage: " + text.replace("\n", " | "))
     if open(EVENTS, "rb").read() != before and load().get("updated") != TODAY.isoformat():
         d = load(); d["updated"] = TODAY.isoformat(); save(d)      # build_home pruned expired items
-    steps = [("guides", ["scripts/build_pages.py"]), ("layout", ["scripts/guide_layout.py"]),
+    steps = [("guides", ["scripts/build_pages.py"]), ("layout", ["scripts/guide_layout.py"]), ("faq", ["scripts/add_guide_faq.py"]),
              ("chrome", ["scripts/normalize_chrome.py"]),
              ("feeds", ["scripts/build_feeds.py"])]
     for name, cmd in steps:

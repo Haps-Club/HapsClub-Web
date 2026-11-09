@@ -4,9 +4,9 @@
 
 Haps Club is independent and editorial: a real person reading the city, not an algorithmic listings feed. Every pick names its LA neighborhood and links straight to the source. Coverage spans the Eastside, Westside, Hollywood, West Hollywood, Mid-City, Downtown, and beyond. Founded and written by Michael Abraham.
 
-Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Los_Angeles.
+Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Los_Angeles.
 
-## Dated picks (Week of Nov 2 onward)
+## Dated picks (Week of Nov 9 onward)
 
 ### The Who's Tommy
 - When: Monday, November 2 to Nov 15, 7:00 PM
@@ -23,22 +23,6 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Category: Culture
 - Details: https://www.redcat.org/now26
 - About: Nine brand-new LA works across dance, theater, and performance over three weekends.
-
-### Bats, Birds, and Agave at Mírate
-- When: Sunday, November 8, 5:00 PM
-- Where: Mírate, Los Feliz, 1712 N Vermont Ave (Eastside)
-- Price: Tickets
-- Category: Food
-- Details: https://nhm.org/calendar/bats-birds-and-agave
-- About: NHM's LA Culture in a Cup: agave's story over mezcal and a panel.
-
-### Sage-Based Drag Night at REDCAT
-- When: Sunday, November 8, 6:00 PM
-- Where: REDCAT, Downtown, 631 W 2nd St (Downtown)
-- Price: Tickets
-- Category: Culture
-- Details: https://www.redcat.org/events/sage-based-drag-night
-- About: Indigenous comics and drag artists hand out unsolicited advice. Big energy.
 
 ### Big bands at Vibrato
 - When: Tuesday, November 10 to Nov 11, 7:00 PM
