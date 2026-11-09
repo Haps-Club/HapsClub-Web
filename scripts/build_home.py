@@ -221,7 +221,7 @@ def jsonld(lead, items):
          "description": "A hand-picked guide to the best things happening in Los Angeles every week."},
         {"@type": "Organization", "@id": SITE + "/#org", "name": "Haps Club", "url": SITE + "/",
          "logo": LOGO.split("?")[0], "sameAs": [IG],
-         "founder": {"@type": "Person", "name": "Michael Abraham", "url": SITE + "/about.html"}},
+         "founder": {"@type": "Person", "name": "Michael Abraham", "url": SITE + "/about"}},
     ]
     evs = []
     for x in ([lead] if lead else []) + items:
