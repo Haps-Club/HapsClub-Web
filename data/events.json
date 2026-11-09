@@ -1,7 +1,19 @@
 {
-  "updated": "2026-11-06",
-  "weekLabel": "Week of Nov 2",
+  "updated": "2026-11-09",
+  "weekLabel": "Week of Nov 9",
   "featured": [
+    {
+      "title": "Tree lighting at Union Station",
+      "pill": "Free · Thu 11/19",
+      "tagline": "A 10-piece jazz band in the historic ticket concourse.",
+      "meta": "Thu Nov 19 · 6–8 PM · Free with registration",
+      "cta": "Register free",
+      "link": "https://unionstationla.com/happenings",
+      "tags": "music free",
+      "area": "dtla",
+      "starts": "20261119T180000",
+      "ends": "20261119T200000"
+    },
     {
       "title": "Haps Club Jazz Age Party",
       "pill": "Tickets · Sat 11/21",
@@ -19,18 +31,6 @@
       "dress": "Jazz Age, required",
       "going": "30+ going",
       "long": "A historic home turns 100, and we’re throwing it a 1926 party. Live jazz trio, open bar of Prohibition-era cocktails, candlelight all night."
-    },
-    {
-      "title": "Tree lighting at Union Station",
-      "pill": "Free · Thu 11/19",
-      "tagline": "A 10-piece jazz band in the historic ticket concourse.",
-      "meta": "Thu Nov 19 · 6–8 PM · Free with registration",
-      "cta": "Register free",
-      "link": "https://unionstationla.com/happenings",
-      "tags": "music free",
-      "area": "dtla",
-      "starts": "20261119T180000",
-      "ends": "20261119T200000"
     },
     {
       "title": "The Hot Sardines: Holiday Stomp",
@@ -74,37 +74,6 @@
       "tagline": "Nine brand-new LA works across dance, theater, and performance over three weekends.",
       "starts": "20261105T203000",
       "ends": "20261121T220000",
-      "addr": "631 W 2nd St"
-    },
-    {
-      "title": "Bats, Birds, and Agave at Mírate",
-      "month": "NOV",
-      "day": "8",
-      "cat": "Food",
-      "tags": "food culture",
-      "area": "eastside",
-      "where": "Mírate, Los Feliz",
-      "price": "Tickets",
-      "link": "https://nhm.org/calendar/bats-birds-and-agave",
-      "tagline": "NHM's LA Culture in a Cup: agave's story over mezcal and a panel.",
-      "starts": "20261108T170000",
-      "ends": "20261108T200000",
-      "addr": "1712 N Vermont Ave",
-      "hood": "los-feliz"
-    },
-    {
-      "title": "Sage-Based Drag Night at REDCAT",
-      "month": "NOV",
-      "day": "8",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "dtla",
-      "where": "REDCAT, Downtown",
-      "price": "Tickets",
-      "link": "https://www.redcat.org/events/sage-based-drag-night",
-      "tagline": "Indigenous comics and drag artists hand out unsolicited advice. Big energy.",
-      "starts": "20261108T180000",
-      "ends": "20261108T210000",
       "addr": "631 W 2nd St"
     },
     {
@@ -375,6 +344,19 @@
       "addr": "5905 Wilshire Blvd"
     },
     {
+      "title": "Apple picking in Oak Glen",
+      "month": "Now",
+      "day": "•",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "citywide",
+      "where": "Oak Glen, San Bernardino foothills",
+      "price": "Varies",
+      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
+      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
+      "ends": "20261126T235900"
+    },
+    {
       "title": "LA Kings Holiday Ice Festival at L.A. LIVE",
       "month": "NOV",
       "day": "27",
@@ -518,19 +500,6 @@
       "tagline": "Latin jazz to close the year. Early show 8:30, late show 11pm.",
       "starts": "20261231T203000",
       "ends": "20261231T235900"
-    },
-    {
-      "title": "Apple picking in Oak Glen",
-      "month": "Now",
-      "day": "•",
-      "cat": "Outdoors",
-      "tags": "outdoors date",
-      "area": "citywide",
-      "where": "Oak Glen, San Bernardino foothills",
-      "price": "Varies",
-      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
-      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
-      "ends": "20261126T235900"
     },
     {
       "title": "Matilda's",
