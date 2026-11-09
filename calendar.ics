@@ -31,31 +31,6 @@ DESCRIPTION:Nine brand-new LA works across dance\, theater\, and performan
 URL:https://www.redcat.org/now26
 END:VEVENT
 BEGIN:VEVENT
-UID:73f44ae709c5e62cbe70@haps.club
-DTSTAMP:20261106T000000Z
-DTSTART:20261107T190000Z
-DTEND:20261109T010000Z
-SUMMARY:LA NDN Flea at The Broad
-LOCATION:The Broad\, Downtown\, 221 S Grand Ave
-DESCRIPTION:A Native-made market on the Broad plaza: jewelry\, art\, vinta
- ge. Price: Free.\nhttps://www.thebroad.org/events/la-ndn-flea-native-mark
- et
-URL:https://www.thebroad.org/events/la-ndn-flea-native-market
-END:VEVENT
-BEGIN:VEVENT
-UID:6fecacebefe38789dde5@haps.club
-DTSTAMP:20261106T000000Z
-DTSTART:20261108T220000Z
-DTEND:20261109T010000Z
-SUMMARY:Paint + Sound - Venice Beach
-LOCATION:2100 Ocean Front Walk\, Venice
-DESCRIPTION:Acrylic painting workshop\, then a sound bath by the sand. Pri
- ce: Ticketed.\nhttps://www.eventbrite.com/e/paint-sound-venice-beach-tick
- ets-1994474997407
-URL:https://www.eventbrite.com/e/paint-sound-venice-beach-tickets-19944749
- 97407
-END:VEVENT
-BEGIN:VEVENT
 UID:9a3ce4c25756f3bd53af@haps.club
 DTSTAMP:20261106T000000Z
 DTSTART:20261109T010000Z
@@ -77,6 +52,22 @@ DESCRIPTION:Indigenous comics and drag artists hand out unsolicited advice
  . Big energy. Price: Tickets.\nhttps://www.redcat.org/events/sage-based-d
  rag-night
 URL:https://www.redcat.org/events/sage-based-drag-night
+END:VEVENT
+BEGIN:VEVENT
+UID:c8afca735ac24b2c91b7@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261111T030000Z
+DTEND:20261112T070000Z
+SUMMARY:Big bands at Vibrato
+LOCATION:Vibrato Grill Jazz\, Bel Air
+DESCRIPTION:Billy Vera's big band with Tamela D'Amico on Tuesday\, then Be
+ rnie Dresel's BBB on Wednesday\, at Herb Alpert's supper club. Price: Din
+ ner + show.\nhttps://resy.com/cities/los-angeles-ca/venues/herb-alperts-v
+ ibrato-grill-and-jazz/events/billy-vera-big-band-featuring-special-guest-
+ tamela-d-amico-2026-11-10-6
+URL:https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-gri
+ ll-and-jazz/events/billy-vera-big-band-featuring-special-guest-tamela-d-a
+ mico-2026-11-10-6
 END:VEVENT
 BEGIN:VEVENT
 UID:c20e690e50f68101ab3c@haps.club
@@ -129,6 +120,18 @@ DESCRIPTION:Glowing nature installations and projections after dark\, sele
 URL:https://nhm.org/calendar/nighttales-museum-experience
 END:VEVENT
 BEGIN:VEVENT
+UID:6c51d84688422d29eb88@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261113T033000Z
+DTEND:20261113T053000Z
+SUMMARY:Orpheus at BroadStage
+LOCATION:BroadStage\, Santa Monica
+DESCRIPTION:The conductorless chamber orchestra plays Mozart\, Handel\, an
+ d Haydn with pianist Isata Kanneh-Mason. Price: Tickets.\nhttps://www.bro
+ adstage.org
+URL:https://www.broadstage.org
+END:VEVENT
+BEGIN:VEVENT
 UID:31b8e48972f433f93c73@haps.club
 DTSTAMP:20261106T000000Z
 DTSTART:20261113T040000Z
@@ -174,6 +177,28 @@ DESCRIPTION:The drawings and photos behind the architect who shaped LA. Op
 URL:https://www.lacma.org/art/exhibition/paul-r-williams-architect-living
 END:VEVENT
 BEGIN:VEVENT
+UID:5a15c3ba3cb799b7e8aa@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261115T210000Z
+DTEND:20261116T010000Z
+SUMMARY:Fall wine tasting at Stanley's
+LOCATION:Stanley's Wet Goods\, Culver City
+DESCRIPTION:Twenty wines\, 1 to 5 PM. No ticket needed in advance. Price: 
+ $40 at the door.\nhttps://www.stanleys.la
+URL:https://www.stanleys.la
+END:VEVENT
+BEGIN:VEVENT
+UID:8738e91a158b7c518c63@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261118T010000Z
+DTEND:20261118T070000Z
+SUMMARY:Tree lighting at Bacari Silver Lake
+LOCATION:Bacari Silver Lake
+DESCRIPTION:Holiday cocktails\, a live jazz trio\, and the tree goes up at
+  7. Price: Free.\nhttps://www.bacari.us/
+URL:https://www.bacari.us/
+END:VEVENT
+BEGIN:VEVENT
 UID:a2fa660c9e009d33fa8b@haps.club
 DTSTAMP:20261106T000000Z
 DTSTART:20261120T003000Z
@@ -185,6 +210,29 @@ DESCRIPTION:A towering tree\, festive treats\, and Santa by the sea. Price
  nces/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
 URL:https://santamonica.regenthotels.com/experience/bookable-experiences/?
  experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
+END:VEVENT
+BEGIN:VEVENT
+UID:856c094711f95f3a01e6@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261120T020000Z
+DTEND:20261120T040000Z
+SUMMARY:Tree lighting at Union Station
+DESCRIPTION:A 10-piece jazz band in the historic ticket concourse.\nhttps:
+ //unionstationla.com/happenings
+URL:https://unionstationla.com/happenings
+END:VEVENT
+BEGIN:VEVENT
+UID:136372226f98a25df3f8@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261121T190000Z
+DTEND:20270405T000000Z
+SUMMARY:Has the Myth Been Shattered at The Broad
+LOCATION:The Broad\, Downtown\, 221 S Grand Ave
+DESCRIPTION:A free new show of six decades of art that uses the media as m
+ aterial. Through Apr 4. Price: Free\, reserve.\nhttps://www.thebroad.org/
+ art/collection-exhibitions/has-myth-been-shattered
+URL:https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shat
+ tered
 END:VEVENT
 BEGIN:VEVENT
 UID:a3033d9aa1d33a84894d@haps.club
@@ -293,6 +341,19 @@ DESCRIPTION:Two nights of New Orleans brass and piano\, with Andy Garcia s
 URL:https://www.catalinajazzclub.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:dfc9138b271a7556fc58@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261212T050000Z
+DTEND:20261212T075900Z
+SUMMARY:Notte Italiana at Eataly
+LOCATION:Eataly\, Century City
+DESCRIPTION:The club is going together to the after-hours\, all-you-can-ea
+ t Italian holiday party. Price: Tickets.\nhttps://www.eventbrite.com/e/no
+ tte-italiana-holidays-at-eataly-tickets-2003690997712
+URL:https://www.eventbrite.com/e/notte-italiana-holidays-at-eataly-tickets
+ -2003690997712
+END:VEVENT
+BEGIN:VEVENT
 UID:5e7c5a3e040ef1ef8343@haps.club
 DTSTAMP:20261106T000000Z
 DTSTART:20261219T043000Z
@@ -302,6 +363,18 @@ LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
 DESCRIPTION:A powerhouse jazz vocalist for two nights in Hollywood. Price:
   Tickets.\nhttps://www.catalinajazzclub.com/
 URL:https://www.catalinajazzclub.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:289671de0e54b5bfab8f@haps.club
+DTSTAMP:20261106T000000Z
+DTSTART:20261220T033000Z
+DTEND:20261220T051000Z
+SUMMARY:The Hot Sardines: Holiday Stomp
+DESCRIPTION:Hot jazz\, swing\, and tap for the holidays at BroadStage.\nht
+ tps://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-holiday-
+ stomp/
+URL:https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-hol
+ iday-stomp/
 END:VEVENT
 BEGIN:VEVENT
 UID:b708ec2db5953a162615@haps.club

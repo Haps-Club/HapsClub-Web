@@ -24,22 +24,6 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.redcat.org/now26
 - About: Nine brand-new LA works across dance, theater, and performance over three weekends.
 
-### LA NDN Flea at The Broad
-- When: Saturday, November 7 to Nov 8, 11:00 AM
-- Where: The Broad, Downtown, 221 S Grand Ave (Downtown)
-- Price: Free
-- Category: Culture
-- Details: https://www.thebroad.org/events/la-ndn-flea-native-market
-- About: A Native-made market on the Broad plaza: jewelry, art, vintage.
-
-### Paint + Sound - Venice Beach
-- When: Sunday, November 8, 2:00 PM
-- Where: 2100 Ocean Front Walk, Venice (Westside)
-- Price: Ticketed
-- Category: Culture
-- Details: https://www.eventbrite.com/e/paint-sound-venice-beach-tickets-1994474997407
-- About: Acrylic painting workshop, then a sound bath by the sand.
-
 ### Bats, Birds, and Agave at Mírate
 - When: Sunday, November 8, 5:00 PM
 - Where: Mírate, Los Feliz, 1712 N Vermont Ave (Eastside)
@@ -55,6 +39,14 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Category: Culture
 - Details: https://www.redcat.org/events/sage-based-drag-night
 - About: Indigenous comics and drag artists hand out unsolicited advice. Big energy.
+
+### Big bands at Vibrato
+- When: Tuesday, November 10 to Nov 11, 7:00 PM
+- Where: Vibrato Grill Jazz, Bel Air (Westside)
+- Price: Dinner + show
+- Category: Music
+- Details: https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/billy-vera-big-band-featuring-special-guest-tamela-d-amico-2026-11-10-6
+- About: Billy Vera's big band with Tamela D'Amico on Tuesday, then Bernie Dresel's BBB on Wednesday, at Herb Alpert's supper club.
 
 ### The Last Waltz 50th at Zebulon
 - When: Tuesday, November 10, 8:00 PM
@@ -88,6 +80,14 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://nhm.org/calendar/nighttales-museum-experience
 - About: Glowing nature installations and projections after dark, select nights through January.
 
+### Orpheus at BroadStage
+- When: Thursday, November 12, 7:30 PM
+- Where: BroadStage, Santa Monica (Westside)
+- Price: Tickets
+- Category: Music
+- Details: https://www.broadstage.org
+- About: The conductorless chamber orchestra plays Mozart, Handel, and Haydn with pianist Isata Kanneh-Mason.
+
 ### The Smashing Pumpkins at the Kia Forum
 - When: Thursday, November 12, 8:00 PM
 - Where: Kia Forum, Inglewood, 3900 W Manchester Blvd (Citywide)
@@ -120,6 +120,22 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.lacma.org/art/exhibition/paul-r-williams-architect-living
 - About: The drawings and photos behind the architect who shaped LA. Opens Nov 15.
 
+### Fall wine tasting at Stanley's
+- When: Sunday, November 15, 1:00 PM
+- Where: Stanley's Wet Goods, Culver City (Westside)
+- Price: $40 at the door
+- Category: Food
+- Details: https://www.stanleys.la
+- About: Twenty wines, 1 to 5 PM. No ticket needed in advance.
+
+### Tree lighting at Bacari Silver Lake
+- When: Tuesday, November 17, 5:00 PM
+- Where: Bacari Silver Lake (Eastside)
+- Price: Free
+- Category: Music
+- Details: https://www.bacari.us/
+- About: Holiday cocktails, a live jazz trio, and the tree goes up at 7.
+
 ### Holiday Tree Lighting at Regent Santa Monica
 - When: Thursday, November 19, 4:30 PM
 - Where: Regent Santa Monica Beach, 1700 Ocean Ave (Westside)
@@ -127,6 +143,22 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Category: Culture
 - Details: https://santamonica.regenthotels.com/experience/bookable-experiences/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
 - About: A towering tree, festive treats, and Santa by the sea.
+
+### Tree lighting at Union Station
+- When: Thursday, November 19, 6:00 PM
+- Where:  (Downtown)
+- Price: see link
+- Category: 
+- Details: https://unionstationla.com/happenings
+- About: A 10-piece jazz band in the historic ticket concourse.
+
+### Has the Myth Been Shattered at The Broad
+- When: Saturday, November 21 to Apr 4, 11:00 AM
+- Where: The Broad, Downtown, 221 S Grand Ave (Downtown)
+- Price: Free, reserve
+- Category: Culture
+- Details: https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered
+- About: A free new show of six decades of art that uses the media as material. Through Apr 4.
 
 ### Visualizing the Cosmos with Kip Thorne
 - When: Saturday, November 21, 2:00 PM
@@ -200,6 +232,14 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.catalinajazzclub.com/
 - About: Two nights of New Orleans brass and piano, with Andy Garcia sitting in.
 
+### Notte Italiana at Eataly
+- When: Friday, December 11, 9:00 PM
+- Where: Eataly, Century City (Westside)
+- Price: Tickets
+- Category: Food
+- Details: https://www.eventbrite.com/e/notte-italiana-holidays-at-eataly-tickets-2003690997712
+- About: The club is going together to the after-hours, all-you-can-eat Italian holiday party.
+
 ### Veronica Swift at Catalina Jazz Club
 - When: Friday, December 18 to Dec 19, 8:30 PM
 - Where: Catalina Jazz Club, 6725 W Sunset Blvd (Hollywood)
@@ -207,6 +247,14 @@ Updated 2026-11-06. Generated from https://haps.club/ data; times are America/Lo
 - Category: Music
 - Details: https://www.catalinajazzclub.com/
 - About: A powerhouse jazz vocalist for two nights in Hollywood.
+
+### The Hot Sardines: Holiday Stomp
+- When: Saturday, December 19, 7:30 PM
+- Where:  (Westside)
+- Price: see link
+- Category: 
+- Details: https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-holiday-stomp/
+- About: Hot jazz, swing, and tap for the holidays at BroadStage.
 
 ### Poncho Sanchez New Year's Eve
 - When: Thursday, December 31, 8:30 PM

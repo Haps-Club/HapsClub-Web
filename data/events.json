@@ -19,6 +19,30 @@
       "dress": "Jazz Age, required",
       "going": "30+ going",
       "long": "A historic home turns 100, and we’re throwing it a 1926 party. Live jazz trio, open bar of Prohibition-era cocktails, candlelight all night."
+    },
+    {
+      "title": "Tree lighting at Union Station",
+      "pill": "Free · Thu 11/19",
+      "tagline": "A 10-piece jazz band in the historic ticket concourse.",
+      "meta": "Thu Nov 19 · 6–8 PM · Free with registration",
+      "cta": "Register free",
+      "link": "https://unionstationla.com/happenings",
+      "tags": "music free",
+      "area": "dtla",
+      "starts": "20261119T180000",
+      "ends": "20261119T200000"
+    },
+    {
+      "title": "The Hot Sardines: Holiday Stomp",
+      "pill": "Tickets · Sat 12/19",
+      "tagline": "Hot jazz, swing, and tap for the holidays at BroadStage.",
+      "meta": "Sat Dec 19 · 7:30 PM · BroadStage, Santa Monica",
+      "cta": "Get tickets",
+      "link": "https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-holiday-stomp/",
+      "tags": "music date",
+      "area": "westside",
+      "starts": "20261219T193000",
+      "ends": "20261219T211000"
     }
   ],
   "events": [
@@ -53,35 +77,6 @@
       "addr": "631 W 2nd St"
     },
     {
-      "title": "LA NDN Flea at The Broad",
-      "month": "NOV",
-      "day": "7",
-      "cat": "Culture",
-      "tags": "culture free",
-      "area": "dtla",
-      "where": "The Broad, Downtown",
-      "price": "Free",
-      "link": "https://www.thebroad.org/events/la-ndn-flea-native-market",
-      "tagline": "A Native-made market on the Broad plaza: jewelry, art, vintage.",
-      "starts": "20261107T110000",
-      "ends": "20261108T170000",
-      "addr": "221 S Grand Ave"
-    },
-    {
-      "title": "Paint + Sound - Venice Beach",
-      "month": "NOV",
-      "day": "8",
-      "cat": "Culture",
-      "tags": "culture outdoors",
-      "area": "westside",
-      "where": "2100 Ocean Front Walk, Venice",
-      "price": "Ticketed",
-      "link": "https://www.eventbrite.com/e/paint-sound-venice-beach-tickets-1994474997407",
-      "tagline": "Acrylic painting workshop, then a sound bath by the sand.",
-      "starts": "20261108T140000",
-      "ends": "20261108T170000"
-    },
-    {
       "title": "Bats, Birds, and Agave at Mírate",
       "month": "NOV",
       "day": "8",
@@ -111,6 +106,20 @@
       "starts": "20261108T180000",
       "ends": "20261108T210000",
       "addr": "631 W 2nd St"
+    },
+    {
+      "title": "Big bands at Vibrato",
+      "month": "NOV",
+      "day": "10",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "westside",
+      "where": "Vibrato Grill Jazz, Bel Air",
+      "price": "Dinner + show",
+      "link": "https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/billy-vera-big-band-featuring-special-guest-tamela-d-amico-2026-11-10-6",
+      "tagline": "Billy Vera's big band with Tamela D'Amico on Tuesday, then Bernie Dresel's BBB on Wednesday, at Herb Alpert's supper club.",
+      "starts": "20261110T190000",
+      "ends": "20261111T230000"
     },
     {
       "title": "The Last Waltz 50th at Zebulon",
@@ -173,6 +182,20 @@
       "addr": "900 Exposition Blvd"
     },
     {
+      "title": "Orpheus at BroadStage",
+      "month": "NOV",
+      "day": "12",
+      "cat": "Music",
+      "tags": "music culture",
+      "area": "westside",
+      "where": "BroadStage, Santa Monica",
+      "price": "Tickets",
+      "link": "https://www.broadstage.org",
+      "tagline": "The conductorless chamber orchestra plays Mozart, Handel, and Haydn with pianist Isata Kanneh-Mason.",
+      "starts": "20261112T193000",
+      "ends": "20261112T213000"
+    },
+    {
       "title": "The Smashing Pumpkins at the Kia Forum",
       "month": "NOV",
       "day": "12",
@@ -233,6 +256,34 @@
       "addr": "5905 Wilshire Blvd"
     },
     {
+      "title": "Fall wine tasting at Stanley's",
+      "month": "NOV",
+      "day": "15",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Stanley's Wet Goods, Culver City",
+      "price": "$40 at the door",
+      "link": "https://www.stanleys.la",
+      "tagline": "Twenty wines, 1 to 5 PM. No ticket needed in advance.",
+      "starts": "20261115T130000",
+      "ends": "20261115T170000"
+    },
+    {
+      "title": "Tree lighting at Bacari Silver Lake",
+      "month": "NOV",
+      "day": "17",
+      "cat": "Music",
+      "tags": "music free date",
+      "area": "eastside",
+      "where": "Bacari Silver Lake",
+      "price": "Free",
+      "link": "https://www.bacari.us/",
+      "tagline": "Holiday cocktails, a live jazz trio, and the tree goes up at 7.",
+      "starts": "20261117T170000",
+      "ends": "20261117T230000"
+    },
+    {
       "title": "Holiday Tree Lighting at Regent Santa Monica",
       "month": "NOV",
       "day": "19",
@@ -247,6 +298,36 @@
       "ends": "20261119T190000",
       "addr": "1700 Ocean Ave",
       "hood": "santa-monica"
+    },
+    {
+      "title": "Tree lighting at Union Station",
+      "month": "NOV",
+      "day": "19",
+      "cat": "Music",
+      "tags": "music free",
+      "area": "dtla",
+      "where": "Union Station, Downtown",
+      "price": "Free, register",
+      "link": "https://unionstationla.com/happenings",
+      "tagline": "Lizzy & the Triggermen, a 10-piece jazz band, play the historic ticket concourse after Mariachi Ausente.",
+      "starts": "20261119T180000",
+      "ends": "20261119T200000",
+      "addr": "800 N Alameda St"
+    },
+    {
+      "title": "Has the Myth Been Shattered at The Broad",
+      "month": "NOV",
+      "day": "21",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "dtla",
+      "where": "The Broad, Downtown",
+      "price": "Free, reserve",
+      "link": "https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered",
+      "tagline": "A free new show of six decades of art that uses the media as material. Through Apr 4.",
+      "starts": "20261121T110000",
+      "ends": "20270404T170000",
+      "addr": "221 S Grand Ave"
     },
     {
       "title": "Visualizing the Cosmos with Kip Thorne",
@@ -292,19 +373,6 @@
       "starts": "20261123T193000",
       "ends": "20261123T210000",
       "addr": "5905 Wilshire Blvd"
-    },
-    {
-      "title": "Apple picking in Oak Glen",
-      "month": "Now",
-      "day": "•",
-      "cat": "Outdoors",
-      "tags": "outdoors date",
-      "area": "citywide",
-      "where": "Oak Glen, San Bernardino foothills",
-      "price": "Varies",
-      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
-      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
-      "ends": "20261126T235900"
     },
     {
       "title": "LA Kings Holiday Ice Festival at L.A. LIVE",
@@ -396,6 +464,20 @@
       "ends": "20261212T223000"
     },
     {
+      "title": "Notte Italiana at Eataly",
+      "month": "DEC",
+      "day": "11",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Eataly, Century City",
+      "price": "Tickets",
+      "link": "https://www.eventbrite.com/e/notte-italiana-holidays-at-eataly-tickets-2003690997712",
+      "tagline": "The club is going together to the after-hours, all-you-can-eat Italian holiday party.",
+      "starts": "20261211T210000",
+      "ends": "20261211T235900"
+    },
+    {
       "title": "Veronica Swift at Catalina Jazz Club",
       "month": "DEC",
       "day": "18",
@@ -410,6 +492,20 @@
       "ends": "20261219T223000"
     },
     {
+      "title": "The Hot Sardines: Holiday Stomp",
+      "month": "DEC",
+      "day": "19",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "westside",
+      "where": "BroadStage, Santa Monica",
+      "price": "Tickets",
+      "link": "https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-holiday-stomp/",
+      "tagline": "Hot jazz, swing, and tap for the holidays.",
+      "starts": "20261219T193000",
+      "ends": "20261219T211000"
+    },
+    {
       "title": "Poncho Sanchez New Year's Eve",
       "month": "DEC",
       "day": "31",
@@ -422,6 +518,19 @@
       "tagline": "Latin jazz to close the year. Early show 8:30, late show 11pm.",
       "starts": "20261231T203000",
       "ends": "20261231T235900"
+    },
+    {
+      "title": "Apple picking in Oak Glen",
+      "month": "Now",
+      "day": "•",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "citywide",
+      "where": "Oak Glen, San Bernardino foothills",
+      "price": "Varies",
+      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
+      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
+      "ends": "20261126T235900"
     },
     {
       "title": "Matilda's",

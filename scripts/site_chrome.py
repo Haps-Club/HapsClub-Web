@@ -98,7 +98,7 @@ NAV_ITEMS = [
     ("Ask Haps",  "/ask/",     False),
     ("Calendar",  CAL,         True),
     ("Guides",    "/guides/",  False),
-    ("Archive",   "/archive/", False),
+    ("Newsletters", "/archive/", False),
     ("Dinners",   "/dinners/", False),
     ("About",     "/about",    False),
 ]
@@ -107,7 +107,7 @@ FOOTER_COLS = [
     ("Read", [("This week", "/#list", False),
               ("Calendar", CAL, True),
               ("Guides", "/guides/", False),
-              ("Archive", "/archive/", False),
+              ("Newsletters", "/archive/", False),
               ("Sitemap", "/sitemap", False)]),
     ("Join", [("Subscribe", "/subscribe", False),
               ("Dinners", "/dinners/", False),

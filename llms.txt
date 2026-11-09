@@ -18,19 +18,23 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 
 - [The Who's Tommy](https://www.broadwayinhollywood.com/): Mon Nov 2 · Hollywood Pantages Theatre · Hollywood · From $35 lottery
 - [NOW Festival at REDCAT](https://www.redcat.org/now26): Thu Nov 5 · REDCAT, Downtown · Downtown · From $20
-- [LA NDN Flea at The Broad](https://www.thebroad.org/events/la-ndn-flea-native-market): Sat Nov 7 · The Broad, Downtown · Downtown · Free
-- [Paint + Sound - Venice Beach](https://www.eventbrite.com/e/paint-sound-venice-beach-tickets-1994474997407): Sun Nov 8 · 2100 Ocean Front Walk, Venice · Westside · Ticketed
 - [Bats, Birds, and Agave at Mírate](https://nhm.org/calendar/bats-birds-and-agave): Sun Nov 8 · Mírate, Los Feliz · Eastside · Tickets
 - [Sage-Based Drag Night at REDCAT](https://www.redcat.org/events/sage-based-drag-night): Sun Nov 8 · REDCAT, Downtown · Downtown · Tickets
+- [Big bands at Vibrato](https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/billy-vera-big-band-featuring-special-guest-tamela-d-amico-2026-11-10-6): Tue Nov 10 · Vibrato Grill Jazz, Bel Air · Westside · Dinner + show
 - [The Last Waltz 50th at Zebulon](https://dice.fm/event/yox5dr-the-last-waltz-50th-anniversary-tour-ft-chest-fever-the-official-revival-of-the-band-10th-nov-zebulon-los-angeles-tickets): Tue Nov 10 · Zebulon, Frogtown · Eastside · Tickets
 - [Bonobo at The Wiltern](https://www.ticketmaster.com/): Wed Nov 11 · The Wiltern, Koreatown · Mid-City · Tickets
 - [George Takei in Korematsu v. The United States](https://www.janm.org/events): Thu Nov 12 · Japanese American National Museum, Little Tokyo · Downtown · $20
 - [NightTales at the Natural History Museum](https://nhm.org/calendar/nighttales-museum-experience): Thu Nov 12 · Natural History Museum, Exposition Park · Downtown · Tickets
+- [Orpheus at BroadStage](https://www.broadstage.org): Thu Nov 12 · BroadStage, Santa Monica · Westside · Tickets
 - [The Smashing Pumpkins at the Kia Forum](https://thekiaforum.com/event/the-smashing-pumpkins/): Thu Nov 12 · Kia Forum, Inglewood · Citywide · Tickets
 - [Hootenanny at The Huntington](https://huntington.org/events): Fri Nov 13 · The Huntington, San Marino · Citywide · Free, reserve
 - [Opening Night at Craft Contemporary](https://www.craftcontemporary.org/): Sat Nov 14 · Craft Contemporary, Miracle Mile · Mid-City · $12
 - [Paul R. Williams: Architect for Living at LACMA](https://www.lacma.org/art/exhibition/paul-r-williams-architect-living): Sun Nov 15 · LACMA, Miracle Mile · Mid-City · With admission
+- [Fall wine tasting at Stanley's](https://www.stanleys.la): Sun Nov 15 · Stanley's Wet Goods, Culver City · Westside · $40 at the door
+- [Tree lighting at Bacari Silver Lake](https://www.bacari.us/): Tue Nov 17 · Bacari Silver Lake · Eastside · Free
 - [Holiday Tree Lighting at Regent Santa Monica](https://santamonica.regenthotels.com/experience/bookable-experiences/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5): Thu Nov 19 · Regent Santa Monica Beach · Westside · Free
+- [Tree lighting at Union Station](https://unionstationla.com/happenings): Thu Nov 19 · Downtown
+- [Has the Myth Been Shattered at The Broad](https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered): Sat Nov 21 · The Broad, Downtown · Downtown · Free, reserve
 - [Visualizing the Cosmos with Kip Thorne](https://www.eventbrite.com/e/visualizing-the-cosmos-science-art-history-tickets-2002925098888): Sat Nov 21 · Wende Museum, Culver City · Westside · Free, RSVP
 - [Haps Club Jazz Age Party](https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS): Sat Nov 21 · Historic home, Los Angeles · Citywide · $45 · $80 for two
 <!-- /AUTO:WEEK -->
