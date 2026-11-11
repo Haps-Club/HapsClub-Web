@@ -32,14 +32,6 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://resy.com/cities/los-angeles-ca/venues/herb-alperts-vibrato-grill-and-jazz/events/billy-vera-big-band-featuring-special-guest-tamela-d-amico-2026-11-10-6
 - About: Billy Vera's big band with Tamela D'Amico on Tuesday, then Bernie Dresel's BBB on Wednesday, at Herb Alpert's supper club.
 
-### The Last Waltz 50th at Zebulon
-- When: Tuesday, November 10, 8:00 PM
-- Where: Zebulon, Frogtown, 2478 Fletcher Dr (Eastside)
-- Price: Tickets
-- Category: Music
-- Details: https://dice.fm/event/yox5dr-the-last-waltz-50th-anniversary-tour-ft-chest-fever-the-official-revival-of-the-band-10th-nov-zebulon-los-angeles-tickets
-- About: Chest Fever, the official revival of The Band, plays the legendary farewell concert.
-
 ### Bonobo at The Wiltern
 - When: Wednesday, November 11 to Nov 12, 8:00 PM
 - Where: The Wiltern, Koreatown, 3790 Wilshire Blvd (Mid-City)
@@ -303,6 +295,7 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 
 ## Newsletter archive
 
+- [Jazz, all week](https://haps.club/archive/2026-11-10-jazz-all-week/) (2026-11-10): Big bands in Bel Air, two jazzy tree lightings, holiday swing at BroadStage, and our 1926 party.
 - [Party like it’s 1926](https://haps.club/archive/2026-11-03-party-like-its-1926/) (2026-11-03): A 1926 party, an all-you-can-eat Italian holiday night, a salsa night, and more.
 - [Costumes, candlelight, and one last seat](https://haps.club/archive/2026-10-27-costumes-and-candlelight/) (2026-10-27): Halloween in WeHo, a jazz costume party, Noche de los Muertos, a new pasta bar on Main Street, and the last call for our supper club.
 - [Close out the year with an intimate dinner and a Jazz Age party](https://haps.club/archive/2026-10-19-close-out-the-year-with-an-intimate-dinner-and-a-jazz-age-party/) (2026-10-19): A candlelit dinner, a 1926 jazz club, and 10% off with HAPSCLUBPLUS.
