@@ -18,11 +18,7 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 
 - [The Who's Tommy](https://www.broadwayinhollywood.com/): Mon Nov 2 · Hollywood Pantages Theatre · Hollywood · From $35 lottery
 - [NOW Festival at REDCAT](https://www.redcat.org/now26): Thu Nov 5 · REDCAT, Downtown · Downtown · From $20
-- [Bonobo at The Wiltern](https://www.ticketmaster.com/): Wed Nov 11 · The Wiltern, Koreatown · Mid-City · Tickets
-- [George Takei in Korematsu v. The United States](https://www.janm.org/events): Thu Nov 12 · Japanese American National Museum, Little Tokyo · Downtown · $20
 - [NightTales at the Natural History Museum](https://nhm.org/calendar/nighttales-museum-experience): Thu Nov 12 · Natural History Museum, Exposition Park · Downtown · Tickets
-- [Orpheus at BroadStage](https://www.broadstage.org): Thu Nov 12 · BroadStage, Santa Monica · Westside · Tickets
-- [The Smashing Pumpkins at the Kia Forum](https://thekiaforum.com/event/the-smashing-pumpkins/): Thu Nov 12 · Kia Forum, Inglewood · Citywide · Tickets
 - [Hootenanny at The Huntington](https://huntington.org/events): Fri Nov 13 · The Huntington, San Marino · Citywide · Free, reserve
 - [Opening Night at Craft Contemporary](https://www.craftcontemporary.org/): Sat Nov 14 · Craft Contemporary, Miracle Mile · Mid-City · $12
 - [Paul R. Williams: Architect for Living at LACMA](https://www.lacma.org/art/exhibition/paul-r-williams-architect-living): Sun Nov 15 · LACMA, Miracle Mile · Mid-City · With admission
@@ -34,6 +30,7 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Visualizing the Cosmos with Kip Thorne](https://www.eventbrite.com/e/visualizing-the-cosmos-science-art-history-tickets-2002925098888): Sat Nov 21 · Wende Museum, Culver City · Westside · Free, RSVP
 - [Haps Club Jazz Age Party](https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS): Sat Nov 21 · Historic home, Los Angeles · Citywide · $45 · $80 for two
 - [Addams Family Values at LACMA](https://www.lacma.org/event-calendar-by-day): Mon Nov 23 · LACMA, Keck Plaza · Mid-City · $10
+- [LA Kings Holiday Ice Festival at L.A. LIVE](https://link.bucketlisters.com/Tw8k): Fri Nov 27 · L.A. LIVE, Downtown · Downtown · From $25
 <!-- /AUTO:WEEK -->
 
 ## Guides

@@ -24,22 +24,6 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.redcat.org/now26
 - About: Nine brand-new LA works across dance, theater, and performance over three weekends.
 
-### Bonobo at The Wiltern
-- When: Wednesday, November 11 to Nov 12, 8:00 PM
-- Where: The Wiltern, Koreatown, 3790 Wilshire Blvd (Mid-City)
-- Price: Tickets
-- Category: Music
-- Details: https://www.ticketmaster.com/
-- About: Two nights of Bonobo's live band with Sofia Kourtesis opening.
-
-### George Takei in Korematsu v. The United States
-- When: Thursday, November 12, 6:00 PM
-- Where: Japanese American National Museum, Little Tokyo, 100 N Central Ave (Downtown)
-- Price: $20
-- Category: Culture
-- Details: https://www.janm.org/events
-- About: A staged reading with George Takei as Fred Korematsu, then a panel.
-
 ### NightTales at the Natural History Museum
 - When: Thursday, November 12 to Jan 10, 6:00 PM
 - Where: Natural History Museum, Exposition Park, 900 Exposition Blvd (Downtown)
@@ -47,22 +31,6 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - Category: Culture
 - Details: https://nhm.org/calendar/nighttales-museum-experience
 - About: Glowing nature installations and projections after dark, select nights through January.
-
-### Orpheus at BroadStage
-- When: Thursday, November 12, 7:30 PM
-- Where: BroadStage, Santa Monica (Westside)
-- Price: Tickets
-- Category: Music
-- Details: https://www.broadstage.org
-- About: The conductorless chamber orchestra plays Mozart, Handel, and Haydn with pianist Isata Kanneh-Mason.
-
-### The Smashing Pumpkins at the Kia Forum
-- When: Thursday, November 12, 8:00 PM
-- Where: Kia Forum, Inglewood, 3900 W Manchester Blvd (Citywide)
-- Price: Tickets
-- Category: Music
-- Details: https://thekiaforum.com/event/the-smashing-pumpkins/
-- About: Two sets, including Mellon Collie's 30th anniversary.
 
 ### Hootenanny at The Huntington
 - When: Friday, November 13, 5:30 PM

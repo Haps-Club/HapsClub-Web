@@ -31,29 +31,6 @@ DESCRIPTION:Nine brand-new LA works across dance\, theater\, and performan
 URL:https://www.redcat.org/now26
 END:VEVENT
 BEGIN:VEVENT
-UID:fd7253600ba93c2f99ec@haps.club
-DTSTAMP:20261109T000000Z
-DTSTART:20261112T040000Z
-DTEND:20261113T073000Z
-SUMMARY:Bonobo at The Wiltern
-LOCATION:The Wiltern\, Koreatown\, 3790 Wilshire Blvd
-DESCRIPTION:Two nights of Bonobo's live band with Sofia Kourtesis opening.
-  Price: Tickets.\nhttps://www.ticketmaster.com/
-URL:https://www.ticketmaster.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:ca60b76141ec72ba7da2@haps.club
-DTSTAMP:20261109T000000Z
-DTSTART:20261113T020000Z
-DTEND:20261113T050000Z
-SUMMARY:George Takei in Korematsu v. The United States
-LOCATION:Japanese American National Museum\, Little Tokyo\, 100 N Central 
- Ave
-DESCRIPTION:A staged reading with George Takei as Fred Korematsu\, then a 
- panel. Price: $20.\nhttps://www.janm.org/events
-URL:https://www.janm.org/events
-END:VEVENT
-BEGIN:VEVENT
 UID:036fa3c856c0916ac82f@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261113T020000Z
@@ -64,29 +41,6 @@ DESCRIPTION:Glowing nature installations and projections after dark\, sele
  ct nights through January. Price: Tickets.\nhttps://nhm.org/calendar/nigh
  ttales-museum-experience
 URL:https://nhm.org/calendar/nighttales-museum-experience
-END:VEVENT
-BEGIN:VEVENT
-UID:6c51d84688422d29eb88@haps.club
-DTSTAMP:20261109T000000Z
-DTSTART:20261113T033000Z
-DTEND:20261113T053000Z
-SUMMARY:Orpheus at BroadStage
-LOCATION:BroadStage\, Santa Monica
-DESCRIPTION:The conductorless chamber orchestra plays Mozart\, Handel\, an
- d Haydn with pianist Isata Kanneh-Mason. Price: Tickets.\nhttps://www.bro
- adstage.org
-URL:https://www.broadstage.org
-END:VEVENT
-BEGIN:VEVENT
-UID:31b8e48972f433f93c73@haps.club
-DTSTAMP:20261109T000000Z
-DTSTART:20261113T040000Z
-DTEND:20261113T073000Z
-SUMMARY:The Smashing Pumpkins at the Kia Forum
-LOCATION:Kia Forum\, Inglewood\, 3900 W Manchester Blvd
-DESCRIPTION:Two sets\, including Mellon Collie's 30th anniversary. Price: 
- Tickets.\nhttps://thekiaforum.com/event/the-smashing-pumpkins/
-URL:https://thekiaforum.com/event/the-smashing-pumpkins/
 END:VEVENT
 BEGIN:VEVENT
 UID:305b0e497e0e04cf95d0@haps.club
