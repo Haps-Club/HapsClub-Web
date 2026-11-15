@@ -59,17 +59,6 @@ DESCRIPTION:Runs Nov 13 - Jan 3. An evening light trail through the garden
 URL:https://tinkerbellsneverland.com/los-angeles/
 END:VEVENT
 BEGIN:VEVENT
-UID:8be5ef8f47ef48eec3b3@haps.club
-DTSTAMP:20261109T000000Z
-DTSTART:20261115T030000Z
-DTEND:20261115T050000Z
-SUMMARY:Opening Night at Craft Contemporary
-LOCATION:Craft Contemporary\, Miracle Mile\, 5814 Wilshire Blvd
-DESCRIPTION:Three new shows on fire and regeneration\, with the artists in
-  the courtyard. Price: $12.\nhttps://www.craftcontemporary.org/
-URL:https://www.craftcontemporary.org/
-END:VEVENT
-BEGIN:VEVENT
 UID:fe9fe70ef44586dedc1b@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261115T170000Z
