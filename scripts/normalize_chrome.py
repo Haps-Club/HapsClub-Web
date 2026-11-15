@@ -99,6 +99,15 @@ def refresh_asset_hashes(src):
     return ASSET_RE.sub(stamp, src)
 
 
+CHROME_JS_RE = re.compile(r'[ \t]*<script[^>]+assets/chrome\.js[^>]*></script>\n?')
+
+
+def ensure_chrome_js(src):
+    """Exactly one chrome.js tag, right before </body> (idempotent)."""
+    src = CHROME_JS_RE.sub("", src)
+    return src.replace("</body>", sc.chrome_js() + "\n</body>", 1)
+
+
 def pages():
     for dirpath, dirnames, filenames in os.walk(ROOT):
         dirnames[:] = [d for d in dirnames
@@ -120,6 +129,7 @@ def main(check=False):
         new = ensure_chrome_link(src)
         new = ensure_fonts(new)
         new = ensure_icons(new)
+        new = ensure_chrome_js(new)
         new = refresh_asset_hashes(new)
         new = HEADER_RE.sub(lambda m: sc.header(active=active_for(rel)),
                             new, count=1)

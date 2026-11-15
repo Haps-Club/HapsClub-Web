@@ -407,6 +407,7 @@ def build(prune=True):
 
 <script>window.HAPS_ROT={json.dumps(rot, ensure_ascii=False)};</script>
 <script src="/assets/home-f.js?v={_hash(os.path.join(REPO, "assets", "home-f.js"))}" defer></script>
+{sc.chrome_js()}
 </body>
 </html>
 '''

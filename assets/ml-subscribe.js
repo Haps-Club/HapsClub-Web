@@ -1,7 +1,7 @@
 /* Shared MailerLite signup for every interior page. Forms post to the
    MailerLite embedded form (double opt-in) without leaving the page. */
 (function () {
-  var forms = document.querySelectorAll('form[action*="mailerlite.com"]');
+  var forms = document.querySelectorAll('form[action*="mailerlite.com"]:not(.fsub-form):not(.pop-form)');
   [].forEach.call(forms, function (form) {
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();

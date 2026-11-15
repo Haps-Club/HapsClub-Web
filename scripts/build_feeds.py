@@ -85,6 +85,23 @@ def fold(line):
     return "\r\n".join(out)
 
 
+def ics_window(s, end):
+    """Multi-day runs go on the calendar once, on the start day, at the start time.
+    Returns (calendar end, "Runs Nov 12 - Jan 10." or "") - the run dates live in the description."""
+    default = s + datetime.timedelta(hours=CFG["default_event_hours"])
+    if not end or end <= s:
+        return default, ""
+    spill = end.date() == s.date() + datetime.timedelta(days=1) and end.hour < 6   # a late night, not a run
+    if end.date() == s.date() or spill:
+        return end, ""
+    last = end.date() - datetime.timedelta(days=1) if end.hour < 6 else end.date()
+    fmt = lambda d: d.strftime("%b ") + str(d.day)
+    run = "Runs " + fmt(s.date()) + " - " + fmt(last) + "."
+    day_end = datetime.datetime.combine(s.date(), end.timetz()) if end.hour >= 6 else \
+        datetime.datetime.combine(s.date() + datetime.timedelta(days=1), end.timetz())
+    return (day_end if day_end > s else default), run
+
+
 def build_ics():
     dated, _ = picks()
     stamp_utc = datetime.datetime.strptime(DATA["updated"], "%Y-%m-%d").replace(tzinfo=UTC)
@@ -93,9 +110,11 @@ def build_ics():
          "REFRESH-INTERVAL;VALUE=DURATION:PT12H", "X-PUBLISHED-TTL:PT12H"]
     for x in dated:
         s = x["_start"]
-        e = x["_end"] if x["_end"] and x["_end"] > s else s + datetime.timedelta(hours=CFG["default_event_hours"])
+        e, run = ics_window(s, x["_end"])
         uid = hashlib.sha1((x["title"] + x["starts"]).encode()).hexdigest()[:20] + "@" + SITE.split("//")[1]
         desc = clean(x.get("tagline") or x.get("meta") or "")
+        if run:
+            desc = run + (" " + desc if desc else "")
         if x.get("price"):
             desc += (" " if desc else "") + "Price: " + clean(x["price"]) + "."
         if x.get("link"):

@@ -3,18 +3,6 @@
   "weekLabel": "Week of Nov 9",
   "featured": [
     {
-      "title": "Tree lighting at Union Station",
-      "pill": "Free · Thu 11/19",
-      "tagline": "A 10-piece jazz band in the historic ticket concourse.",
-      "meta": "Thu Nov 19 · 6–8 PM · Free with registration",
-      "cta": "Register free",
-      "link": "https://unionstationla.com/happenings",
-      "tags": "music free",
-      "area": "dtla",
-      "starts": "20261119T180000",
-      "ends": "20261119T200000"
-    },
-    {
       "title": "Haps Club Jazz Age Party",
       "pill": "Tickets · Sat 11/21",
       "tagline": "A live jazz trio, Prohibition-era cocktails, and a historic home turning 100.",
@@ -33,16 +21,28 @@
       "long": "A historic home turns 100, and we’re throwing it a 1926 party. Live jazz trio, open bar of Prohibition-era cocktails, candlelight all night."
     },
     {
-      "title": "The Hot Sardines: Holiday Stomp",
-      "pill": "Tickets · Sat 12/19",
-      "tagline": "Hot jazz, swing, and tap for the holidays at BroadStage.",
-      "meta": "Sat Dec 19 · 7:30 PM · BroadStage, Santa Monica",
-      "cta": "Get tickets",
-      "link": "https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-holiday-stomp/",
-      "tags": "music date",
+      "title": "Christmas at The Grove",
+      "pill": "Free · Mon 11/16",
+      "tagline": "Lance Bass hosts the 25th tree lighting, with a drone show, fireworks and snow.",
+      "meta": "Mon Nov 16 · 6 PM · Free, space limited",
+      "cta": "Get details",
+      "link": "https://thegrovela.com/events/25th-annual-christmas-at-the-grove/",
+      "tags": "outdoors free",
+      "area": "midcity",
+      "starts": "20261116T180000",
+      "ends": "20261116T210000"
+    },
+    {
+      "title": "Swiss Winter Village",
+      "pill": "From $18.90 · opens Wed 11/18",
+      "tagline": "Sixty chalets and an oceanfront ice rink on the Santa Monica Pier, through Jan 3.",
+      "meta": "Opens Wed Nov 18 · 5 PM · From $18.90",
+      "cta": "See details",
+      "link": "https://swisswintervillage.com/santa-monica/",
+      "tags": "outdoors date",
       "area": "westside",
-      "starts": "20261219T193000",
-      "ends": "20261219T211000"
+      "starts": "20261118T170000",
+      "ends": "20270103T220000"
     }
   ],
   "events": [
@@ -92,6 +92,21 @@
       "addr": "900 Exposition Blvd"
     },
     {
+      "title": "Tinker Bell's Neverland: An Illuminated Adventure at South Coast Botanic Garden",
+      "month": "NOV",
+      "day": "13",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "citywide",
+      "where": "South Coast Botanic Garden, Palos Verdes Estates",
+      "price": "Tickets",
+      "link": "https://tinkerbellsneverland.com/los-angeles/",
+      "tagline": "An evening light trail through the garden with scenes from Peter Pan, about 60 to 90 minutes. Closed Thanksgiving and Christmas Day.",
+      "starts": "20261113T173000",
+      "ends": "20270103T203000",
+      "addr": "26300 Crenshaw Blvd, Palos Verdes Estates, CA 90274"
+    },
+    {
       "title": "Opening Night at Craft Contemporary",
       "month": "NOV",
       "day": "14",
@@ -105,6 +120,21 @@
       "starts": "20261114T190000",
       "ends": "20261114T210000",
       "addr": "5814 Wilshire Blvd"
+    },
+    {
+      "title": "CicLAvia Pasadena",
+      "month": "NOV",
+      "day": "15",
+      "cat": "Outdoors",
+      "tags": "outdoors free",
+      "area": "citywide",
+      "where": "Memorial Park Hub, Pasadena",
+      "price": "Free",
+      "link": "https://ciclavia.org/events/pasadena-2026-11/",
+      "tagline": "Pasadena closes its streets to cars and opens them to bikes, walkers and skaters for about 3 miles, Sunday 9 AM to 3 PM.",
+      "starts": "20261115T090000",
+      "ends": "20261115T150000",
+      "addr": "145 N Raymond Ave, Pasadena, CA 91103"
     },
     {
       "title": "Paul R. Williams: Architect for Living at LACMA",
@@ -122,6 +152,21 @@
       "addr": "5905 Wilshire Blvd"
     },
     {
+      "title": "Julian Charrière: Deep End and Cecilia Vicuña: The Dream of Water at MOCA",
+      "month": "NOV",
+      "day": "15",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "dtla",
+      "where": "MOCA Grand Avenue, Downtown Los Angeles",
+      "price": "Free",
+      "link": "https://www.moca.org/exhibitions/julian-charriere",
+      "tagline": "Two new water-themed shows open at MOCA, with a free Vicuña poetry reading at 1 PM and conversation at 3 PM (RSVP).",
+      "starts": "20261115T110000",
+      "ends": "20270606T180000",
+      "addr": "250 S Grand Ave, Los Angeles, CA 90012"
+    },
+    {
       "title": "Fall wine tasting at Stanley's",
       "month": "NOV",
       "day": "15",
@@ -136,6 +181,36 @@
       "ends": "20261115T170000"
     },
     {
+      "title": "Sparkle DTLA at The Bloc",
+      "month": "NOV",
+      "day": "15",
+      "cat": "Outdoors",
+      "tags": "free outdoors date",
+      "area": "dtla",
+      "where": "The Bloc, Downtown",
+      "price": "Free",
+      "link": "https://www.theblocla.com/event/44603-sparkle-dtla-nightly-light-show",
+      "tagline": "Free light show synced to music at the top of every hour from 5 to 9 PM. Runs through December 31.",
+      "starts": "20261115T170000",
+      "ends": "20261231T213000",
+      "addr": "700 Flower St, Los Angeles, CA 90017"
+    },
+    {
+      "title": "Christmas at The Grove",
+      "month": "NOV",
+      "day": "16",
+      "cat": "Culture",
+      "tags": "free date",
+      "area": "midcity",
+      "where": "The Grove, Fairfax",
+      "price": "Free",
+      "link": "https://thegrovela.com/events/25th-annual-christmas-at-the-grove/",
+      "tagline": "Tree lighting hosted by Lance Bass with a drone show, fireworks and Santa's arrival. Free, but space is limited.",
+      "starts": "20261116T180000",
+      "ends": "20261116T210000",
+      "addr": "189 The Grove Dr, Los Angeles, CA 90036"
+    },
+    {
       "title": "Tree lighting at Bacari Silver Lake",
       "month": "NOV",
       "day": "17",
@@ -148,6 +223,51 @@
       "tagline": "Holiday cocktails, a live jazz trio, and the tree goes up at 7.",
       "starts": "20261117T170000",
       "ends": "20261117T230000"
+    },
+    {
+      "title": "Swiss Winter Village",
+      "month": "NOV",
+      "day": "18",
+      "cat": "Outdoors",
+      "tags": "food date outdoors",
+      "area": "westside",
+      "where": "Event Deck, Santa Monica Pier",
+      "price": "From $18.90",
+      "link": "https://swisswintervillage.com/santa-monica/",
+      "tagline": "A Swiss-style holiday market with 60+ chalets and an oceanfront ice rink. Opening night is Nov 18 at 5 PM.",
+      "starts": "20261118T170000",
+      "ends": "20270103T220000",
+      "addr": "200 Santa Monica Pier, Santa Monica, CA 90401"
+    },
+    {
+      "title": "Paul R. Williams and the Idea of Home at LACMA",
+      "month": "NOV",
+      "day": "18",
+      "cat": "Culture",
+      "tags": "culture free date",
+      "area": "midcity",
+      "where": "East West Bank Commons, LACMA, Miracle Mile",
+      "price": "Free, RSVP",
+      "link": "https://www.lacma.org/event/paul-williams-nov-18",
+      "tagline": "A panel on architect Paul R. Williams with Valery Augustin, Brigette Romanek and Adrian Fine. Free with an RSVP.",
+      "starts": "20261118T190000",
+      "ends": "20261118T200000",
+      "addr": "5905 Wilshire Blvd, Los Angeles, CA 90036"
+    },
+    {
+      "title": "The Win~Dow West Adams",
+      "month": "NOV",
+      "day": "19",
+      "cat": "Food",
+      "tags": "food",
+      "area": "midcity",
+      "where": "Jefferson Blvd, West Adams",
+      "price": "Cheeseburgers from $4.50",
+      "link": "https://www.thewin-dow.la/west-adams",
+      "tagline": "The smash burger spot opens its biggest location yet, with a patio and a full bar.",
+      "starts": "20261119T110000",
+      "ends": "20261119T210000",
+      "addr": "3701 W Jefferson Blvd, Los Angeles, CA 90016"
     },
     {
       "title": "Holiday Tree Lighting at Regent Santa Monica",
@@ -166,6 +286,21 @@
       "hood": "santa-monica"
     },
     {
+      "title": "Pershing Square Holiday Ice Rink Opening Celebration and Tree Lighting",
+      "month": "NOV",
+      "day": "19",
+      "cat": "Outdoors",
+      "tags": "date outdoors",
+      "area": "dtla",
+      "where": "Pershing Square, Downtown Los Angeles",
+      "price": "From $23.32",
+      "link": "https://holidayicerinkdowntownla.com/los-angeles-events/",
+      "tagline": "Downtown's tree lighting and rink opening night, with skaters, carolers and Buddy the Elf from Elf the Musical. Skate afterward.",
+      "starts": "20261119T170000",
+      "ends": "20261119T190000",
+      "addr": "532 S Olive St, Los Angeles, CA 90013"
+    },
+    {
       "title": "Tree lighting at Union Station",
       "month": "NOV",
       "day": "19",
@@ -179,6 +314,81 @@
       "starts": "20261119T180000",
       "ends": "20261119T200000",
       "addr": "800 N Alameda St"
+    },
+    {
+      "title": "Spotlight: aja monet at the GRAMMY Museum",
+      "month": "NOV",
+      "day": "19",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "dtla",
+      "where": "GRAMMY Museum, L.A. Live",
+      "price": "Tickets",
+      "link": "https://grammymuseum.org/event/spotlight-aja-monet/",
+      "tagline": "The poet and musician talks about her second album, the color of rain, in conversation at the GRAMMY Museum.",
+      "starts": "20261119T193000",
+      "ends": "20261119T210000",
+      "addr": "800 W Olympic Blvd, Los Angeles, CA 90015"
+    },
+    {
+      "title": "Los Angeles Auto Show",
+      "month": "NOV",
+      "day": "20",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "dtla",
+      "where": "Los Angeles Convention Center, Downtown Los Angeles",
+      "price": "From $25",
+      "link": "https://laautoshow.com/",
+      "tagline": "2027 models, test drives, The Underground and hot rods at the Convention Center, with long weekend hours.",
+      "starts": "20261120T090000",
+      "ends": "20261129T180000",
+      "addr": "1201 S Figueroa St, Los Angeles, CA 90015"
+    },
+    {
+      "title": "Harbor Glow at West Harbor",
+      "month": "NOV",
+      "day": "20",
+      "cat": "Outdoors",
+      "tags": "date outdoors",
+      "area": "citywide",
+      "where": "West Harbor, San Pedro",
+      "price": "Tickets",
+      "link": "https://harborglownights.com/",
+      "tagline": "A walk-through holiday light show on the San Pedro waterfront with 15+ scenes. Timed-entry tickets.",
+      "starts": "20261120T170000",
+      "ends": "20270103T223000",
+      "addr": "1332 S Harbor Blvd, San Pedro, CA 90731"
+    },
+    {
+      "title": "LA Zoo Lights",
+      "month": "NOV",
+      "day": "20",
+      "cat": "Outdoors",
+      "tags": "date outdoors",
+      "area": "citywide",
+      "where": "Los Angeles Zoo, Griffith Park",
+      "price": "From $19",
+      "link": "https://lazoo.org/plan-your-visit/special-experiences/zoolights/",
+      "tagline": "The zoo grounds after dark with light displays, running select nights from Nov 20 to Jan 10. Check the closed dates before you go.",
+      "starts": "20261120T180000",
+      "ends": "20270110T220000",
+      "addr": "5333 Zoo Dr, Los Angeles, CA 90027"
+    },
+    {
+      "title": "Music/Words LA: Breaking Screens at the Wende Museum",
+      "month": "NOV",
+      "day": "20",
+      "cat": "Music",
+      "tags": "music date free",
+      "area": "westside",
+      "where": "The Wende Museum Community Center, Culver City",
+      "price": "Free, RSVP",
+      "link": "https://wendemuseum.org/event/music-words-la-curated-by-inna-faliks/",
+      "tagline": "Pianist Inna Faliks, cellist Ani Aznavoorian, composer Gabriel Prokofiev and poet Molly Bendall in a night of music and poetry.",
+      "starts": "20261120T190000",
+      "ends": "20261120T210000",
+      "addr": "10858 Culver Blvd, Culver City, CA 90230"
     },
     {
       "title": "Has the Myth Been Shattered at The Broad",
@@ -196,6 +406,36 @@
       "addr": "221 S Grand Ave"
     },
     {
+      "title": "Applefest at Benny Boy Brewing",
+      "month": "NOV",
+      "day": "21",
+      "cat": "Food",
+      "tags": "food free date",
+      "area": "eastside",
+      "where": "Benny Boy Brewing, Lincoln Heights",
+      "price": "Free",
+      "link": "https://bennyboybrewing.com/applefest",
+      "tagline": "Weekend 2 of the cider brewery's fall festival: help press apples from 12 to 5, live music in the garden 2 to 6. 21+.",
+      "starts": "20261121T120000",
+      "ends": "20261122T180000",
+      "addr": "1821 Daly St, Los Angeles, CA 90031"
+    },
+    {
+      "title": "Friendsgiving Garden Asado with The Gauchos at Twentieth Street Garden",
+      "month": "NOV",
+      "day": "21",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "midcity",
+      "where": "Twentieth Street Garden, West Adams",
+      "price": "$85",
+      "link": "https://www.twentiethstreetgarden.com/upcomingevents/p/friendsgiving-asado-nov-21",
+      "tagline": "A six-course buffet asado cooked over open fire by The Gauchos, served over a long afternoon in the garden.",
+      "starts": "20261121T130000",
+      "ends": "20261121T160000",
+      "addr": "2267 W 20th St, Los Angeles, CA 90018"
+    },
+    {
       "title": "Visualizing the Cosmos with Kip Thorne",
       "month": "NOV",
       "day": "21",
@@ -210,6 +450,36 @@
       "ends": "20261121T160000",
       "addr": "10808 Culver Blvd",
       "hood": "culver-city"
+    },
+    {
+      "title": "Burbank Winter Wine Walk",
+      "month": "NOV",
+      "day": "21",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "citywide",
+      "where": "N San Fernando Blvd, Downtown Burbank",
+      "price": "Free fair; tasting from $65",
+      "link": "https://www.burbankwinterwinewalk.com/",
+      "tagline": "A free holiday street fair all day, with 21+ wine tasting from 4 to 7 PM. You need a tasting ticket for the wine.",
+      "starts": "20261121T160000",
+      "ends": "20261121T190000",
+      "addr": "N San Fernando Blvd between E Magnolia Blvd and E Angeleno Ave, Burbank, CA"
+    },
+    {
+      "title": "Catherine Opie Book Signing and Discussion at Arcana: Books on the Arts",
+      "month": "NOV",
+      "day": "21",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "westside",
+      "where": "Arcana: Books on the Arts, Helms Design District, Culver City",
+      "price": "Tickets",
+      "link": "https://www.arcanabooks.com/blog/2026/Sep/17/upcoming-events-260917/",
+      "tagline": "Catherine Opie signs and discusses On Identity and Collectivity from Aperture's Photography Workshop Series.",
+      "starts": "20261121T160000",
+      "ends": "20261121T180000",
+      "addr": "8675 Washington Blvd, Culver City, CA 90232"
     },
     {
       "title": "Haps Club Jazz Age Party",
@@ -241,17 +511,34 @@
       "addr": "5905 Wilshire Blvd"
     },
     {
-      "title": "Apple picking in Oak Glen",
-      "month": "Now",
-      "day": "•",
+      "title": "Dub Club presents Kabaka Pyramid at The Echoplex",
+      "month": "NOV",
+      "day": "25",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "eastside",
+      "where": "The Echoplex, Echo Park",
+      "price": "Tickets",
+      "link": "https://www.theecho.com/shows",
+      "tagline": "Dub Club's reggae night with Kabaka Pyramid the night before Thanksgiving. 21+.",
+      "starts": "20261125T210000",
+      "ends": "20261126T000000",
+      "addr": "1154 Glendale Blvd, Los Angeles, CA 90026"
+    },
+    {
+      "title": "Turkey Trot Los Angeles",
+      "month": "NOV",
+      "day": "26",
       "cat": "Outdoors",
-      "tags": "outdoors date",
-      "area": "citywide",
-      "where": "Oak Glen, San Bernardino foothills",
-      "price": "Varies",
-      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
-      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
-      "ends": "20261126T235900"
+      "tags": "outdoors",
+      "area": "dtla",
+      "where": "Los Angeles City Hall to Grand Park, Downtown",
+      "price": "From $54.90",
+      "link": "https://www.turkeytrot.la",
+      "tagline": "Thanksgiving morning 5K and 10K from City Hall, with a festival at Grand Park after. Register ahead; the 8 AM 5K is sold out.",
+      "starts": "20261126T073000",
+      "ends": "20261126T110000",
+      "addr": "200 N Spring St, Los Angeles, CA 90012"
     },
     {
       "title": "LA Kings Holiday Ice Festival at L.A. LIVE",
@@ -269,6 +556,51 @@
       "addr": "800 W Olympic Blvd"
     },
     {
+      "title": "Time Warp Los Angeles at ACE Mission",
+      "month": "NOV",
+      "day": "27",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "eastside",
+      "where": "ACE*Mission, Boyle Heights",
+      "price": "Tickets",
+      "link": "https://www.time-warp.de/usa/la/",
+      "tagline": "Two days of house and techno across three floors, with Helena Hauff b2b Juliana Huxtable, Richie Hawtin and Ben Klock. 21+.",
+      "starts": "20261127T140000",
+      "ends": "20261129T020000",
+      "addr": "516 S Mission Rd, Los Angeles, CA 90033"
+    },
+    {
+      "title": "The Holiday in Concert at Dolby Theatre",
+      "month": "NOV",
+      "day": "27",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "hollywood",
+      "where": "Dolby Theatre, Hollywood",
+      "price": "From $49.50",
+      "link": "https://www.dolbytheatre.com/events/details/the_holiday_in_concert",
+      "tagline": "The 2006 movie plays on a big screen while an orchestra performs the score live. One night only.",
+      "starts": "20261127T200000",
+      "ends": "20261127T223000",
+      "addr": "6801 Hollywood Blvd, Los Angeles, CA 90028"
+    },
+    {
+      "title": "Home Alone in Concert at Walt Disney Concert Hall",
+      "month": "NOV",
+      "day": "27",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "dtla",
+      "where": "Walt Disney Concert Hall, Downtown",
+      "price": "From $90",
+      "link": "https://www.laphil.com/events/instances/1py8126p/2026-11-27/home-alone-in-concert-2026",
+      "tagline": "The Hollywood Bowl Orchestra plays John Williams' score live while Home Alone screens. Friday 8 PM and Saturday 2 PM.",
+      "starts": "20261127T200000",
+      "ends": "20261128T163000",
+      "addr": "111 S Grand Ave, Los Angeles, CA 90012"
+    },
+    {
       "title": "A Charlie Brown Christmas at Catalina Jazz Club",
       "month": "NOV",
       "day": "27",
@@ -281,6 +613,36 @@
       "tagline": "David Benoit plays Vince Guaraldi with a children's choir. Two nights.",
       "starts": "20261127T203000",
       "ends": "20261128T223000"
+    },
+    {
+      "title": "Bob Baker's Nutcracker at Sierra Madre Playhouse",
+      "month": "NOV",
+      "day": "28",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "citywide",
+      "where": "Sierra Madre Playhouse, Sierra Madre",
+      "price": "From $25",
+      "link": "https://www.sierramadreplayhouse.org/2027/theatre-family-bob-bakers-nutcracker",
+      "tagline": "Bob Baker marionettes dance through the Nutcracker to Tchaikovsky's score. 65 minutes, no intermission.",
+      "starts": "20261128T103000",
+      "ends": "20270103T143500",
+      "addr": "87 W Sierra Madre Blvd, Sierra Madre, CA 91024"
+    },
+    {
+      "title": "LA County Tree Lighting at The Music Center",
+      "month": "NOV",
+      "day": "30",
+      "cat": "Culture",
+      "tags": "free culture date",
+      "area": "dtla",
+      "where": "Jerry Moss Plaza, The Music Center, Downtown",
+      "price": "Free",
+      "link": "https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-holiday-tree-lighting/",
+      "tagline": "Live music from the Master Chorale, art-making, snow flurries, hot chocolate and a holiday market before the county lights the tree.",
+      "starts": "20261130T170000",
+      "ends": "20261130T190000",
+      "addr": "135 N Grand Ave, Los Angeles, CA 90012"
     },
     {
       "title": "4211KM at Théâtre Raymond Kabbaz",
@@ -298,6 +660,21 @@
       "addr": "10361 W Pico Blvd"
     },
     {
+      "title": "3rd Annual Grand Illuminations Opening Night Celebration",
+      "month": "DEC",
+      "day": "3",
+      "cat": "Culture",
+      "tags": "free culture date",
+      "area": "dtla",
+      "where": "The Yard at Cal Plaza, Downtown",
+      "price": "Free",
+      "link": "https://downtownla.com/do/3rd-annual-grand-illuminations-opening-night-celebration",
+      "tagline": "Holiday market from noon, stage show at 5 and the tree lighting at 5:30 PM, with a live band after. Free with RSVP.",
+      "starts": "20261203T120000",
+      "ends": "20261203T210000",
+      "addr": "350 S Grand Ave, Los Angeles, CA 90071"
+    },
+    {
       "title": "Makers Market at Craft Contemporary",
       "month": "DEC",
       "day": "4",
@@ -311,6 +688,21 @@
       "starts": "20261204T110000",
       "ends": "20261206T170000",
       "addr": "5814 Wilshire Blvd"
+    },
+    {
+      "title": "CalArts Winter Dance Festival at REDCAT",
+      "month": "DEC",
+      "day": "4",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "dtla",
+      "where": "REDCAT, Walt Disney Concert Hall complex, Downtown",
+      "price": "From $20",
+      "link": "https://www.redcat.org/events/calarts-winter-dance-festival",
+      "tagline": "CalArts dance students perform new works by four commissioned choreographers. About 90 minutes with one intermission.",
+      "starts": "20261204T200000",
+      "ends": "20261205T213000",
+      "addr": "631 W 2nd St, Los Angeles, CA 90012"
     },
     {
       "title": "Nutcracker Brunch at ORLA",
@@ -327,6 +719,36 @@
       "ends": "20261205T143000",
       "addr": "1700 Ocean Ave",
       "hood": "santa-monica"
+    },
+    {
+      "title": "Winterfest Arts & Crafts Festival and Tree Lighting at Christmas Tree Lane",
+      "month": "DEC",
+      "day": "5",
+      "cat": "Culture",
+      "tags": "free culture outdoors date",
+      "area": "citywide",
+      "where": "Christmas Tree Lane, Altadena",
+      "price": "Free",
+      "link": "https://christmastreelane.net/events",
+      "tagline": "Arts and crafts booths from 3 to 9 PM, then the tree lighting at 6 PM on Santa Rosa Avenue. Free.",
+      "starts": "20261205T150000",
+      "ends": "20261205T210000",
+      "addr": "Santa Rosa Ave & Mariposa St, Altadena, CA 91001"
+    },
+    {
+      "title": "Hanukkah Festival at the Skirball",
+      "month": "DEC",
+      "day": "6",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "westside",
+      "where": "Skirball Cultural Center, Sepulveda Pass",
+      "price": "$23 adults",
+      "link": "https://www.skirball.org/programs/hanukkah-festival",
+      "tagline": "The Skirball's annual Hanukkah festival runs noon to 5 PM on a Sunday. Parking on site is free.",
+      "starts": "20261206T120000",
+      "ends": "20261206T170000",
+      "addr": "2701 N Sepulveda Blvd, Los Angeles, CA 90049"
     },
     {
       "title": "New Orleans Legends with Andy Garcia",
@@ -357,6 +779,36 @@
       "ends": "20261211T235900"
     },
     {
+      "title": "Gilmore Girls Holidays at Warner Bros. Studio Tour Hollywood",
+      "month": "DEC",
+      "day": "12",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "citywide",
+      "where": "Warner Bros. Studio Tour Hollywood, Burbank",
+      "price": "From $79",
+      "link": "https://www.wbstudiotour.com/tour/gilmore-girls-holidays/",
+      "tagline": "Walk through the Stars Hollow sets dressed for the holidays, with themed food, shopping and a nightly tree lighting.",
+      "starts": "20261212T100000",
+      "ends": "20270103T200000",
+      "addr": "3400 Warner Blvd, Burbank, CA 91505"
+    },
+    {
+      "title": "A Christmas Carol Goes Wrong at Ahmanson Theatre",
+      "month": "DEC",
+      "day": "12",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "dtla",
+      "where": "Ahmanson Theatre, Music Center, Downtown",
+      "price": "From $37.95",
+      "link": "https://www.centertheatregroup.org/shows-tickets/ahmanson/2026-27/christmas-carol-goes-wrong/",
+      "tagline": "A community theater troupe tries to stage A Christmas Carol and everything breaks. The North American premiere runs through January 10.",
+      "starts": "20261212T200000",
+      "ends": "20270110T211000",
+      "addr": "135 N Grand Ave, Los Angeles, CA 90012"
+    },
+    {
       "title": "Veronica Swift at Catalina Jazz Club",
       "month": "DEC",
       "day": "18",
@@ -385,6 +837,21 @@
       "ends": "20261219T211000"
     },
     {
+      "title": "67th Annual LA County Holiday Celebration at Dorothy Chandler Pavilion",
+      "month": "DEC",
+      "day": "20",
+      "cat": "Music",
+      "tags": "free music culture date",
+      "area": "dtla",
+      "where": "Dorothy Chandler Pavilion, The Music Center, Downtown",
+      "price": "Free with reservation",
+      "link": "https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-holiday-celebration/",
+      "tagline": "Twelve local choirs, ensembles and dance companies in a free holiday show, with two performances at 11 AM and 3 PM.",
+      "starts": "20261220T110000",
+      "ends": "20261220T163000",
+      "addr": "135 N Grand Ave, Los Angeles, CA 90012"
+    },
+    {
       "title": "Poncho Sanchez New Year's Eve",
       "month": "DEC",
       "day": "31",
@@ -397,6 +864,19 @@
       "tagline": "Latin jazz to close the year. Early show 8:30, late show 11pm.",
       "starts": "20261231T203000",
       "ends": "20261231T235900"
+    },
+    {
+      "title": "Apple picking in Oak Glen",
+      "month": "Now",
+      "day": "•",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "citywide",
+      "where": "Oak Glen, San Bernardino foothills",
+      "price": "Varies",
+      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
+      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
+      "ends": "20261126T235900"
     },
     {
       "title": "Matilda's",
@@ -864,6 +1344,86 @@
       "link": "https://lamag.com/food/bar-fortuna-california-italian-wine-bar-opens-main-street-santa-monica/",
       "tagline": "Crudo e Nudo's new Italian bar: house-made pasta, five Negronis, espresso window.",
       "added": "2026-11-04"
+    },
+    {
+      "title": "Spacca Tutto",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Palisades Village, Pacific Palisades",
+      "price": "Reservations",
+      "link": "https://www.spaccatutto.com/",
+      "tagline": "Nancy Silverton's Italian-American steakhouse in Palisades Village. Book dinner ahead; lunch is easier.",
+      "addr": "15255 Palisades Village Ln, Pacific Palisades, CA 90272"
+    },
+    {
+      "title": "Alphabet Bar & Grill",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Palisades Village, Pacific Palisades",
+      "price": "Reservations",
+      "link": "https://www.alphabetpalisades.com/",
+      "tagline": "Chef Timothy Hollingsworth's neighborhood grill from h.wood group, open daily for lunch and dinner.",
+      "addr": "1033 N Swarthmore Ave, Pacific Palisades, CA 90272"
+    },
+    {
+      "title": "KYU",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Century Plaza Promenade, Century City",
+      "price": "Reservations",
+      "link": "https://kyurestaurants.com/la-opening",
+      "tagline": "Wood-fired Asian-inspired dinner from the Miami original, now open in Century City.",
+      "addr": "10200 Constellation Blvd, Suite 225, Los Angeles, CA 90067"
+    },
+    {
+      "title": "Little Luck",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "hollywood",
+      "where": "Sunset Strip, West Hollywood",
+      "price": "Reservations",
+      "link": "https://www.littleluckla.com/",
+      "tagline": "Japanese izakaya from h.wood group on the Strip, with karaoke built into two private dining rooms.",
+      "addr": "9229 W Sunset Blvd, West Hollywood, CA 90069"
+    },
+    {
+      "title": "Gilbert Perez Bar",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "citywide",
+      "where": "Ventura Blvd, Sherman Oaks",
+      "price": "Reservations required",
+      "link": "https://www.gilbertperezbar.com/",
+      "tagline": "Small Mexican-spirits cocktail bar above Daisy, with a no-photos rule inside. Thursday to Saturday nights.",
+      "addr": "14633 Ventura Blvd, Sherman Oaks, CA 91403"
+    },
+    {
+      "title": "Birdie G's",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Fairmont Century Plaza, Century City",
+      "price": "Reservations",
+      "link": "https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/dining/birdie-gs-la.restaurant.html",
+      "tagline": "Jeremy Fox's American brasserie, now inside the Fairmont, serving breakfast, lunch and dinner.",
+      "addr": "2025 Avenue of the Stars, Los Angeles, CA 90067"
+    },
+    {
+      "title": "Holly Jolly Christmas Bar at 3rd Base",
+      "month": "NOV",
+      "day": "12",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "hollywood",
+      "where": "3rd Base, Hollywood",
+      "price": "Tickets from $20.35",
+      "link": "https://3rdbasehollywood.com/",
+      "tagline": "Christmas pop-up bar at 3rd Base on Cahuenga, 21 and over, through December 27.",
+      "ends": "20261227T235900",
+      "addr": "1562 N Cahuenga Blvd, Hollywood, CA 90028"
     }
   ],
   "archive": [
@@ -906,18 +1466,6 @@
   },
   "plan": [
     {
-      "title": "Camp Flog Gnaw",
-      "when": "Nov 14–15",
-      "accent": "red",
-      "tagline": "Tyler's carnival, back at the stadium.",
-      "meta": "Dodger Stadium · two-day GA from $415 · general admission sold out, waitlist open",
-      "cta": "Join the waitlist",
-      "link": "https://www.campfloggnaw.com/",
-      "tags": "music",
-      "area": "dtla",
-      "ends": "20261115T235900"
-    },
-    {
       "title": "NightTales at the Natural History Museum",
       "when": "Nov 12 – Jan 10",
       "accent": "purple",
@@ -940,6 +1488,18 @@
       "tags": "outdoors date",
       "area": "dtla",
       "ends": "20270103T220000"
+    },
+    {
+      "title": "LA Zoo Lights",
+      "when": "Nov 20 – Jan 10",
+      "accent": "green",
+      "tagline": "Light displays across the zoo grounds after dark, select nights.",
+      "meta": "Los Angeles Zoo · 6–10 PM · from $19",
+      "cta": "Get tickets",
+      "link": "https://lazoo.org/plan-your-visit/special-experiences/zoolights/",
+      "tags": "outdoors date",
+      "area": "citywide",
+      "ends": "20270110T220000"
     }
   ],
   "announcement": {

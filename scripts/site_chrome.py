@@ -56,6 +56,19 @@ def css_link(name):
     return f'<link rel="stylesheet" href="/assets/{name}?v={h}">'
 
 
+ML_ACTION = "https://assets.mailerlite.com/jsonp/2758867/forms/202915208754103515/subscribe"
+
+
+def chrome_js():
+    """The <script> for assets/chrome.js (footer + pop-up signup), content-hashed like the CSS."""
+    path = os.path.join(REPO, "assets", "chrome.js")
+    try:
+        h = hashlib.md5(open(path, "rb").read()).hexdigest()[:8]
+    except OSError:
+        h = "0"
+    return f'<script src="/assets/chrome.js?v={h}" defer></script>'
+
+
 def fonts_html():
     """Preconnect + ONE stylesheet link for the site fonts, placed in <head> before the CSS.
     (An @import inside a stylesheet makes the browser fetch fonts only after the CSS arrives.)"""
@@ -199,6 +212,15 @@ def footer(absolute=True):
         '      <div class="fcol-brand">\n'
         '        <div class="fbrand">Haps Club</div>\n'
         f'        <p class="fabout">{TAGLINE}</p>\n'
+        '        <form class="fsub-form" action="' + ML_ACTION + '" method="post">\n'
+        '          <label class="fsub-lab" for="fsub-em">Get the Tuesday edit</label>\n'
+        '          <div class="fsub-row">\n'
+        '            <input id="fsub-em" type="email" name="fields[email]" placeholder="you@email.com" required autocomplete="email" inputmode="email">\n'
+        '            <input type="hidden" name="ml-submit" value="1"><input type="hidden" name="anticsrf" value="true">\n'
+        '            <button type="submit">Join</button>\n'
+        '          </div>\n'
+        '          <p class="fsub-note">Free. Every Tuesday. Leave any time.</p>\n'
+        '        </form>\n'
         '      </div>'
         f'{cols}\n'
         '    </div>\n'

@@ -11,36 +11,52 @@ BEGIN:VEVENT
 UID:e413fe51a4be43f2069c@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261103T030000Z
-DTEND:20261116T070000Z
+DTEND:20261103T070000Z
 SUMMARY:The Who's Tommy
 LOCATION:Hollywood Pantages Theatre\, 6233 Hollywood Blvd
-DESCRIPTION:The rock opera\, anthems turned all the way up. Through Nov 15
- \, with a $35 digital lottery. Price: From $35 lottery.\nhttps://www.broa
- dwayinhollywood.com/
+DESCRIPTION:Runs Nov 2 - Nov 15. The rock opera\, anthems turned all the w
+ ay up. Through Nov 15\, with a $35 digital lottery. Price: From $35 lotte
+ ry.\nhttps://www.broadwayinhollywood.com/
 URL:https://www.broadwayinhollywood.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:0b94fdde99a9e5a427de@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261106T043000Z
-DTEND:20261122T060000Z
+DTEND:20261106T060000Z
 SUMMARY:NOW Festival at REDCAT
 LOCATION:REDCAT\, Downtown\, 631 W 2nd St
-DESCRIPTION:Nine brand-new LA works across dance\, theater\, and performan
- ce over three weekends. Price: From $20.\nhttps://www.redcat.org/now26
+DESCRIPTION:Runs Nov 5 - Nov 21. Nine brand-new LA works across dance\, th
+ eater\, and performance over three weekends. Price: From $20.\nhttps://ww
+ w.redcat.org/now26
 URL:https://www.redcat.org/now26
 END:VEVENT
 BEGIN:VEVENT
 UID:036fa3c856c0916ac82f@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261113T020000Z
-DTEND:20270111T060000Z
+DTEND:20261113T060000Z
 SUMMARY:NightTales at the Natural History Museum
 LOCATION:Natural History Museum\, Exposition Park\, 900 Exposition Blvd
-DESCRIPTION:Glowing nature installations and projections after dark\, sele
- ct nights through January. Price: Tickets.\nhttps://nhm.org/calendar/nigh
- ttales-museum-experience
+DESCRIPTION:Runs Nov 12 - Jan 10. Glowing nature installations and project
+ ions after dark\, select nights through January. Price: Tickets.\nhttps:/
+ /nhm.org/calendar/nighttales-museum-experience
 URL:https://nhm.org/calendar/nighttales-museum-experience
+END:VEVENT
+BEGIN:VEVENT
+UID:c6e182cf56dca4b0f2f2@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261114T013000Z
+DTEND:20261114T043000Z
+SUMMARY:Tinker Bell's Neverland: An Illuminated Adventure at South Coast B
+ otanic Garden
+LOCATION:South Coast Botanic Garden\, Palos Verdes Estates\, 26300 Crensha
+ w Blvd\, Palos Verdes Estates\, CA 90274
+DESCRIPTION:Runs Nov 13 - Jan 3. An evening light trail through the garden
+  with scenes from Peter Pan\, about 60 to 90 minutes. Closed Thanksgiving
+  and Christmas Day. Price: Tickets.\nhttps://tinkerbellsneverland.com/los
+ -angeles/
+URL:https://tinkerbellsneverland.com/los-angeles/
 END:VEVENT
 BEGIN:VEVENT
 UID:8be5ef8f47ef48eec3b3@haps.club
@@ -54,16 +70,43 @@ DESCRIPTION:Three new shows on fire and regeneration\, with the artists in
 URL:https://www.craftcontemporary.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:fe9fe70ef44586dedc1b@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261115T170000Z
+DTEND:20261115T230000Z
+SUMMARY:CicLAvia Pasadena
+LOCATION:Memorial Park Hub\, Pasadena\, 145 N Raymond Ave\, Pasadena\, CA 
+ 91103
+DESCRIPTION:Pasadena closes its streets to cars and opens them to bikes\, 
+ walkers and skaters for about 3 miles\, Sunday 9 AM to 3 PM. Price: Free.
+ \nhttps://ciclavia.org/events/pasadena-2026-11/
+URL:https://ciclavia.org/events/pasadena-2026-11/
+END:VEVENT
+BEGIN:VEVENT
 UID:e727232608027da9687b@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261115T190000Z
-DTEND:20270601T010000Z
+DTEND:20261116T020000Z
 SUMMARY:Paul R. Williams: Architect for Living at LACMA
 LOCATION:LACMA\, Miracle Mile\, 5905 Wilshire Blvd
-DESCRIPTION:The drawings and photos behind the architect who shaped LA. Op
- ens Nov 15. Price: With admission.\nhttps://www.lacma.org/art/exhibition/
- paul-r-williams-architect-living
+DESCRIPTION:Runs Nov 15 - May 31. The drawings and photos behind the archi
+ tect who shaped LA. Opens Nov 15. Price: With admission.\nhttps://www.lac
+ ma.org/art/exhibition/paul-r-williams-architect-living
 URL:https://www.lacma.org/art/exhibition/paul-r-williams-architect-living
+END:VEVENT
+BEGIN:VEVENT
+UID:a286eb8b1599dda6ec19@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261115T190000Z
+DTEND:20261116T020000Z
+SUMMARY:Julian Charrière: Deep End and Cecilia Vicuña: The Dream of Wate
+ r at MOCA
+LOCATION:MOCA Grand Avenue\, Downtown Los Angeles\, 250 S Grand Ave\, Los 
+ Angeles\, CA 90012
+DESCRIPTION:Runs Nov 15 - Jun 6. Two new water-themed shows open at MOCA\,
+  with a free Vicuña poetry reading at 1 PM and conversation at 3 PM (RSV
+ P). Price: Free.\nhttps://www.moca.org/exhibitions/julian-charriere
+URL:https://www.moca.org/exhibitions/julian-charriere
 END:VEVENT
 BEGIN:VEVENT
 UID:5a15c3ba3cb799b7e8aa@haps.club
@@ -77,6 +120,29 @@ DESCRIPTION:Twenty wines\, 1 to 5 PM. No ticket needed in advance. Price:
 URL:https://www.stanleys.la
 END:VEVENT
 BEGIN:VEVENT
+UID:677d49b934d950532308@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261116T010000Z
+DTEND:20261116T053000Z
+SUMMARY:Sparkle DTLA at The Bloc
+LOCATION:The Bloc\, Downtown\, 700 Flower St\, Los Angeles\, CA 90017
+DESCRIPTION:Runs Nov 15 - Dec 31. Free light show synced to music at the t
+ op of every hour from 5 to 9 PM. Runs through December 31. Price: Free.\n
+ https://www.theblocla.com/event/44603-sparkle-dtla-nightly-light-show
+URL:https://www.theblocla.com/event/44603-sparkle-dtla-nightly-light-show
+END:VEVENT
+BEGIN:VEVENT
+UID:e66618db09c70f3112bf@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261117T020000Z
+DTEND:20261117T050000Z
+SUMMARY:Christmas at The Grove
+DESCRIPTION:Lance Bass hosts the 25th tree lighting\, with a drone show\, 
+ fireworks and snow.\nhttps://thegrovela.com/events/25th-annual-christmas-
+ at-the-grove/
+URL:https://thegrovela.com/events/25th-annual-christmas-at-the-grove/
+END:VEVENT
+BEGIN:VEVENT
 UID:8738e91a158b7c518c63@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261118T010000Z
@@ -86,6 +152,43 @@ LOCATION:Bacari Silver Lake
 DESCRIPTION:Holiday cocktails\, a live jazz trio\, and the tree goes up at
   7. Price: Free.\nhttps://www.bacari.us/
 URL:https://www.bacari.us/
+END:VEVENT
+BEGIN:VEVENT
+UID:19269c66f7f4ee4a6342@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261119T010000Z
+DTEND:20261119T060000Z
+SUMMARY:Swiss Winter Village
+DESCRIPTION:Runs Nov 18 - Jan 3. Sixty chalets and an oceanfront ice rink 
+ on the Santa Monica Pier\, through Jan 3.\nhttps://swisswintervillage.com
+ /santa-monica/
+URL:https://swisswintervillage.com/santa-monica/
+END:VEVENT
+BEGIN:VEVENT
+UID:f91c60c65098fdd0ab6c@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261119T030000Z
+DTEND:20261119T040000Z
+SUMMARY:Paul R. Williams and the Idea of Home at LACMA
+LOCATION:East West Bank Commons\, LACMA\, Miracle Mile\, 5905 Wilshire Blv
+ d\, Los Angeles\, CA 90036
+DESCRIPTION:A panel on architect Paul R. Williams with Valery Augustin\, B
+ rigette Romanek and Adrian Fine. Free with an RSVP. Price: Free\, RSVP.\n
+ https://www.lacma.org/event/paul-williams-nov-18
+URL:https://www.lacma.org/event/paul-williams-nov-18
+END:VEVENT
+BEGIN:VEVENT
+UID:ffafd58c42a377a94360@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261119T190000Z
+DTEND:20261120T050000Z
+SUMMARY:The Win~Dow West Adams
+LOCATION:Jefferson Blvd\, West Adams\, 3701 W Jefferson Blvd\, Los Angeles
+ \, CA 90016
+DESCRIPTION:The smash burger spot opens its biggest location yet\, with a 
+ patio and a full bar. Price: Cheeseburgers from $4.50.\nhttps://www.thewi
+ n-dow.la/west-adams
+URL:https://www.thewin-dow.la/west-adams
 END:VEVENT
 BEGIN:VEVENT
 UID:a2fa660c9e009d33fa8b@haps.club
@@ -101,27 +204,138 @@ URL:https://santamonica.regenthotels.com/experience/bookable-experiences/?
  experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
 END:VEVENT
 BEGIN:VEVENT
+UID:7f128fba91e3a6e7cbf0@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261120T010000Z
+DTEND:20261120T030000Z
+SUMMARY:Pershing Square Holiday Ice Rink Opening Celebration and Tree Ligh
+ ting
+LOCATION:Pershing Square\, Downtown Los Angeles\, 532 S Olive St\, Los Ang
+ eles\, CA 90013
+DESCRIPTION:Downtown's tree lighting and rink opening night\, with skaters
+ \, carolers and Buddy the Elf from Elf the Musical. Skate afterward. Pric
+ e: From $23.32.\nhttps://holidayicerinkdowntownla.com/los-angeles-events/
+URL:https://holidayicerinkdowntownla.com/los-angeles-events/
+END:VEVENT
+BEGIN:VEVENT
 UID:856c094711f95f3a01e6@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261120T020000Z
 DTEND:20261120T040000Z
 SUMMARY:Tree lighting at Union Station
-DESCRIPTION:A 10-piece jazz band in the historic ticket concourse.\nhttps:
- //unionstationla.com/happenings
+LOCATION:Union Station\, Downtown\, 800 N Alameda St
+DESCRIPTION:Lizzy & the Triggermen\, a 10-piece jazz band\, play the histo
+ ric ticket concourse after Mariachi Ausente. Price: Free\, register.\nhtt
+ ps://unionstationla.com/happenings
 URL:https://unionstationla.com/happenings
+END:VEVENT
+BEGIN:VEVENT
+UID:3944f18f595684812456@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261120T033000Z
+DTEND:20261120T050000Z
+SUMMARY:Spotlight: aja monet at the GRAMMY Museum
+LOCATION:GRAMMY Museum\, L.A. Live\, 800 W Olympic Blvd\, Los Angeles\, CA
+  90015
+DESCRIPTION:The poet and musician talks about her second album\, the color
+  of rain\, in conversation at the GRAMMY Museum. Price: Tickets.\nhttps:/
+ /grammymuseum.org/event/spotlight-aja-monet/
+URL:https://grammymuseum.org/event/spotlight-aja-monet/
+END:VEVENT
+BEGIN:VEVENT
+UID:5b6d5a8a4cd0bb0905a0@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261120T170000Z
+DTEND:20261121T020000Z
+SUMMARY:Los Angeles Auto Show
+LOCATION:Los Angeles Convention Center\, Downtown Los Angeles\, 1201 S Fig
+ ueroa St\, Los Angeles\, CA 90015
+DESCRIPTION:Runs Nov 20 - Nov 29. 2027 models\, test drives\, The Undergro
+ und and hot rods at the Convention Center\, with long weekend hours. Pric
+ e: From $25.\nhttps://laautoshow.com/
+URL:https://laautoshow.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:c23838602720b69b1139@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261121T010000Z
+DTEND:20261121T063000Z
+SUMMARY:Harbor Glow at West Harbor
+LOCATION:West Harbor\, San Pedro\, 1332 S Harbor Blvd\, San Pedro\, CA 907
+ 31
+DESCRIPTION:Runs Nov 20 - Jan 3. A walk-through holiday light show on the 
+ San Pedro waterfront with 15+ scenes. Timed-entry tickets. Price: Tickets
+ .\nhttps://harborglownights.com/
+URL:https://harborglownights.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:d34524b594d9b7538caf@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261121T020000Z
+DTEND:20261121T060000Z
+SUMMARY:LA Zoo Lights
+LOCATION:Los Angeles Zoo\, Griffith Park\, 5333 Zoo Dr\, Los Angeles\, CA 
+ 90027
+DESCRIPTION:Runs Nov 20 - Jan 10. The zoo grounds after dark with light di
+ splays\, running select nights from Nov 20 to Jan 10. Check the closed da
+ tes before you go. Price: From $19.\nhttps://lazoo.org/plan-your-visit/sp
+ ecial-experiences/zoolights/
+URL:https://lazoo.org/plan-your-visit/special-experiences/zoolights/
+END:VEVENT
+BEGIN:VEVENT
+UID:7dd764038d99ac844f11@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261121T030000Z
+DTEND:20261121T050000Z
+SUMMARY:Music/Words LA: Breaking Screens at the Wende Museum
+LOCATION:The Wende Museum Community Center\, Culver City\, 10858 Culver Bl
+ vd\, Culver City\, CA 90230
+DESCRIPTION:Pianist Inna Faliks\, cellist Ani Aznavoorian\, composer Gabri
+ el Prokofiev and poet Molly Bendall in a night of music and poetry. Price
+ : Free\, RSVP.\nhttps://wendemuseum.org/event/music-words-la-curated-by-i
+ nna-faliks/
+URL:https://wendemuseum.org/event/music-words-la-curated-by-inna-faliks/
 END:VEVENT
 BEGIN:VEVENT
 UID:136372226f98a25df3f8@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261121T190000Z
-DTEND:20270405T000000Z
+DTEND:20261122T010000Z
 SUMMARY:Has the Myth Been Shattered at The Broad
 LOCATION:The Broad\, Downtown\, 221 S Grand Ave
-DESCRIPTION:A free new show of six decades of art that uses the media as m
- aterial. Through Apr 4. Price: Free\, reserve.\nhttps://www.thebroad.org/
- art/collection-exhibitions/has-myth-been-shattered
+DESCRIPTION:Runs Nov 21 - Apr 4. A free new show of six decades of art tha
+ t uses the media as material. Through Apr 4. Price: Free\, reserve.\nhttp
+ s://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered
 URL:https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shat
  tered
+END:VEVENT
+BEGIN:VEVENT
+UID:56cc003e92f2895a5084@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261121T200000Z
+DTEND:20261122T020000Z
+SUMMARY:Applefest at Benny Boy Brewing
+LOCATION:Benny Boy Brewing\, Lincoln Heights\, 1821 Daly St\, Los Angeles\
+ , CA 90031
+DESCRIPTION:Runs Nov 21 - Nov 22. Weekend 2 of the cider brewery's fall fe
+ stival: help press apples from 12 to 5\, live music in the garden 2 to 6.
+  21+. Price: Free.\nhttps://bennyboybrewing.com/applefest
+URL:https://bennyboybrewing.com/applefest
+END:VEVENT
+BEGIN:VEVENT
+UID:d4e40396f249d64e6cce@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261121T210000Z
+DTEND:20261122T000000Z
+SUMMARY:Friendsgiving Garden Asado with The Gauchos at Twentieth Street Ga
+ rden
+LOCATION:Twentieth Street Garden\, West Adams\, 2267 W 20th St\, Los Angel
+ es\, CA 90018
+DESCRIPTION:A six-course buffet asado cooked over open fire by The Gauchos
+ \, served over a long afternoon in the garden. Price: $85.\nhttps://www.t
+ wentiethstreetgarden.com/upcomingevents/p/friendsgiving-asado-nov-21
+URL:https://www.twentiethstreetgarden.com/upcomingevents/p/friendsgiving-a
+ sado-nov-21
 END:VEVENT
 BEGIN:VEVENT
 UID:a3033d9aa1d33a84894d@haps.club
@@ -135,6 +349,33 @@ DESCRIPTION:A Nobel laureate and artists on where science meets the sky. P
  cience-art-history-tickets-2002925098888
 URL:https://www.eventbrite.com/e/visualizing-the-cosmos-science-art-histor
  y-tickets-2002925098888
+END:VEVENT
+BEGIN:VEVENT
+UID:a8b4a6316ca3940de5fa@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261122T000000Z
+DTEND:20261122T030000Z
+SUMMARY:Burbank Winter Wine Walk
+LOCATION:N San Fernando Blvd\, Downtown Burbank\, N San Fernando Blvd betw
+ een E Magnolia Blvd and E Angeleno Ave\, Burbank\, CA
+DESCRIPTION:A free holiday street fair all day\, with 21+ wine tasting fro
+ m 4 to 7 PM. You need a tasting ticket for the wine. Price: Free fair\; t
+ asting from $65.\nhttps://www.burbankwinterwinewalk.com/
+URL:https://www.burbankwinterwinewalk.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:da7e9237d5e674d6d36f@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261122T000000Z
+DTEND:20261122T020000Z
+SUMMARY:Catherine Opie Book Signing and Discussion at Arcana: Books on the
+  Arts
+LOCATION:Arcana: Books on the Arts\, Helms Design District\, Culver City\,
+  8675 Washington Blvd\, Culver City\, CA 90232
+DESCRIPTION:Catherine Opie signs and discusses On Identity and Collectivit
+ y from Aperture's Photography Workshop Series. Price: Tickets.\nhttps://w
+ ww.arcanabooks.com/blog/2026/Sep/17/upcoming-events-260917/
+URL:https://www.arcanabooks.com/blog/2026/Sep/17/upcoming-events-260917/
 END:VEVENT
 BEGIN:VEVENT
 UID:97c337250a912c985717@haps.club
@@ -160,27 +401,124 @@ DESCRIPTION:A darkly funny pre-Thanksgiving movie night under the stars. P
 URL:https://www.lacma.org/event-calendar-by-day
 END:VEVENT
 BEGIN:VEVENT
+UID:cf9c7a379175f5810a64@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261126T050000Z
+DTEND:20261126T080000Z
+SUMMARY:Dub Club presents Kabaka Pyramid at The Echoplex
+LOCATION:The Echoplex\, Echo Park\, 1154 Glendale Blvd\, Los Angeles\, CA 
+ 90026
+DESCRIPTION:Dub Club's reggae night with Kabaka Pyramid the night before T
+ hanksgiving. 21+. Price: Tickets.\nhttps://www.theecho.com/shows
+URL:https://www.theecho.com/shows
+END:VEVENT
+BEGIN:VEVENT
+UID:2f6c31e5d7670b329a6b@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261126T153000Z
+DTEND:20261126T190000Z
+SUMMARY:Turkey Trot Los Angeles
+LOCATION:Los Angeles City Hall to Grand Park\, Downtown\, 200 N Spring St\
+ , Los Angeles\, CA 90012
+DESCRIPTION:Thanksgiving morning 5K and 10K from City Hall\, with a festiv
+ al at Grand Park after. Register ahead\; the 8 AM 5K is sold out. Price: 
+ From $54.90.\nhttps://www.turkeytrot.la
+URL:https://www.turkeytrot.la
+END:VEVENT
+BEGIN:VEVENT
 UID:d859413a0c08dfc6c6ee@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261127T200000Z
-DTEND:20270104T060000Z
+DTEND:20261128T060000Z
 SUMMARY:LA Kings Holiday Ice Festival at L.A. LIVE
 LOCATION:L.A. LIVE\, Downtown\, 800 W Olympic Blvd
-DESCRIPTION:Skate under the lights\, browse the holiday village\, see the 
- giant tree. Daily through Jan 3. Price: From $25.\nhttps://link.bucketlis
- ters.com/Tw8k
+DESCRIPTION:Runs Nov 27 - Jan 3. Skate under the lights\, browse the holid
+ ay village\, see the giant tree. Daily through Jan 3. Price: From $25.\nh
+ ttps://link.bucketlisters.com/Tw8k
 URL:https://link.bucketlisters.com/Tw8k
+END:VEVENT
+BEGIN:VEVENT
+UID:0f3a711a259b6981cc33@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261127T220000Z
+DTEND:20261128T100000Z
+SUMMARY:Time Warp Los Angeles at ACE Mission
+LOCATION:ACE*Mission\, Boyle Heights\, 516 S Mission Rd\, Los Angeles\, CA
+  90033
+DESCRIPTION:Runs Nov 27 - Nov 28. Two days of house and techno across thre
+ e floors\, with Helena Hauff b2b Juliana Huxtable\, Richie Hawtin and Ben
+  Klock. 21+. Price: Tickets.\nhttps://www.time-warp.de/usa/la/
+URL:https://www.time-warp.de/usa/la/
+END:VEVENT
+BEGIN:VEVENT
+UID:fd66981b44bf1f319711@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261128T040000Z
+DTEND:20261128T063000Z
+SUMMARY:The Holiday in Concert at Dolby Theatre
+LOCATION:Dolby Theatre\, Hollywood\, 6801 Hollywood Blvd\, Los Angeles\, C
+ A 90028
+DESCRIPTION:The 2006 movie plays on a big screen while an orchestra perfor
+ ms the score live. One night only. Price: From $49.50.\nhttps://www.dolby
+ theatre.com/events/details/the_holiday_in_concert
+URL:https://www.dolbytheatre.com/events/details/the_holiday_in_concert
+END:VEVENT
+BEGIN:VEVENT
+UID:b2a7b0704d18f84a274e@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261128T040000Z
+DTEND:20261128T060000Z
+SUMMARY:Home Alone in Concert at Walt Disney Concert Hall
+LOCATION:Walt Disney Concert Hall\, Downtown\, 111 S Grand Ave\, Los Angel
+ es\, CA 90012
+DESCRIPTION:Runs Nov 27 - Nov 28. The Hollywood Bowl Orchestra plays John 
+ Williams' score live while Home Alone screens. Friday 8 PM and Saturday 2
+  PM. Price: From $90.\nhttps://www.laphil.com/events/instances/1py8126p/2
+ 026-11-27/home-alone-in-concert-2026
+URL:https://www.laphil.com/events/instances/1py8126p/2026-11-27/home-alone
+ -in-concert-2026
 END:VEVENT
 BEGIN:VEVENT
 UID:39b292f737ea6d838158@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261128T043000Z
-DTEND:20261129T063000Z
+DTEND:20261128T063000Z
 SUMMARY:A Charlie Brown Christmas at Catalina Jazz Club
 LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
-DESCRIPTION:David Benoit plays Vince Guaraldi with a children's choir. Two
-  nights. Price: Tickets.\nhttps://www.catalinajazzclub.com/
+DESCRIPTION:Runs Nov 27 - Nov 28. David Benoit plays Vince Guaraldi with a
+  children's choir. Two nights. Price: Tickets.\nhttps://www.catalinajazzc
+ lub.com/
 URL:https://www.catalinajazzclub.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:9fdd763ba2e1121d351f@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261128T183000Z
+DTEND:20261128T223500Z
+SUMMARY:Bob Baker's Nutcracker at Sierra Madre Playhouse
+LOCATION:Sierra Madre Playhouse\, Sierra Madre\, 87 W Sierra Madre Blvd\, 
+ Sierra Madre\, CA 91024
+DESCRIPTION:Runs Nov 28 - Jan 3. Bob Baker marionettes dance through the N
+ utcracker to Tchaikovsky's score. 65 minutes\, no intermission. Price: Fr
+ om $25.\nhttps://www.sierramadreplayhouse.org/2027/theatre-family-bob-bak
+ ers-nutcracker
+URL:https://www.sierramadreplayhouse.org/2027/theatre-family-bob-bakers-nu
+ tcracker
+END:VEVENT
+BEGIN:VEVENT
+UID:bb649301e59c983b92f9@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261201T010000Z
+DTEND:20261201T030000Z
+SUMMARY:LA County Tree Lighting at The Music Center
+LOCATION:Jerry Moss Plaza\, The Music Center\, Downtown\, 135 N Grand Ave\
+ , Los Angeles\, CA 90012
+DESCRIPTION:Live music from the Master Chorale\, art-making\, snow flurrie
+ s\, hot chocolate and a holiday market before the county lights the tree.
+  Price: Free.\nhttps://www.musiccenter.org/tickets-free-events/tmc-arts/l
+ -a-county-holiday-tree-lighting/
+URL:https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-ho
+ liday-tree-lighting/
 END:VEVENT
 BEGIN:VEVENT
 UID:22834dea09d9acc3ab5b@haps.club
@@ -194,16 +532,45 @@ DESCRIPTION:A family story stretched between Paris and Tehran. Price: Tick
 URL:https://www.theatreraymondkabbaz.com/4211km
 END:VEVENT
 BEGIN:VEVENT
+UID:d966b56408e9404a50e4@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261203T200000Z
+DTEND:20261204T050000Z
+SUMMARY:3rd Annual Grand Illuminations Opening Night Celebration
+LOCATION:The Yard at Cal Plaza\, Downtown\, 350 S Grand Ave\, Los Angeles\
+ , CA 90071
+DESCRIPTION:Holiday market from noon\, stage show at 5 and the tree lighti
+ ng at 5:30 PM\, with a live band after. Free with RSVP. Price: Free.\nhtt
+ ps://downtownla.com/do/3rd-annual-grand-illuminations-opening-night-celeb
+ ration
+URL:https://downtownla.com/do/3rd-annual-grand-illuminations-opening-night
+ -celebration
+END:VEVENT
+BEGIN:VEVENT
 UID:bb8ffd68f80eac9c8e0d@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261204T190000Z
-DTEND:20261207T010000Z
+DTEND:20261205T010000Z
 SUMMARY:Makers Market at Craft Contemporary
 LOCATION:Craft Contemporary\, Miracle Mile\, 5814 Wilshire Blvd
-DESCRIPTION:LA makers in the courtyard: ceramics\, jewelry\, textiles. Pre
- view Friday\, shopping Sat–Sun. Price: $12\, Sun pay-what-you-wish.\nht
- tps://www.craftcontemporary.org/
+DESCRIPTION:Runs Dec 4 - Dec 6. LA makers in the courtyard: ceramics\, jew
+ elry\, textiles. Preview Friday\, shopping Sat–Sun. Price: $12\, Sun pa
+ y-what-you-wish.\nhttps://www.craftcontemporary.org/
 URL:https://www.craftcontemporary.org/
+END:VEVENT
+BEGIN:VEVENT
+UID:0ae3bf6853af537cf81d@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261205T040000Z
+DTEND:20261205T053000Z
+SUMMARY:CalArts Winter Dance Festival at REDCAT
+LOCATION:REDCAT\, Walt Disney Concert Hall complex\, Downtown\, 631 W 2nd 
+ St\, Los Angeles\, CA 90012
+DESCRIPTION:Runs Dec 4 - Dec 5. CalArts dance students perform new works b
+ y four commissioned choreographers. About 90 minutes with one intermissio
+ n. Price: From $20.\nhttps://www.redcat.org/events/calarts-winter-dance-f
+ estival
+URL:https://www.redcat.org/events/calarts-winter-dance-festival
 END:VEVENT
 BEGIN:VEVENT
 UID:007f71e7adae311b208c@haps.club
@@ -219,14 +586,42 @@ URL:https://www.sevenrooms.com/experiences/orlabymichaelmina/nutcracker-br
  unch-at-orla-santa-monica-5591308148523008
 END:VEVENT
 BEGIN:VEVENT
+UID:518c25411c3cf19a9fb6@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261205T230000Z
+DTEND:20261206T050000Z
+SUMMARY:Winterfest Arts & Crafts Festival and Tree Lighting at Christmas T
+ ree Lane
+LOCATION:Christmas Tree Lane\, Altadena\, Santa Rosa Ave & Mariposa St\, A
+ ltadena\, CA 91001
+DESCRIPTION:Arts and crafts booths from 3 to 9 PM\, then the tree lighting
+  at 6 PM on Santa Rosa Avenue. Free. Price: Free.\nhttps://christmastreel
+ ane.net/events
+URL:https://christmastreelane.net/events
+END:VEVENT
+BEGIN:VEVENT
+UID:f420dc6937134ad9a614@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261206T200000Z
+DTEND:20261207T010000Z
+SUMMARY:Hanukkah Festival at the Skirball
+LOCATION:Skirball Cultural Center\, Sepulveda Pass\, 2701 N Sepulveda Blvd
+ \, Los Angeles\, CA 90049
+DESCRIPTION:The Skirball's annual Hanukkah festival runs noon to 5 PM on a
+  Sunday. Parking on site is free. Price: $23 adults.\nhttps://www.skirbal
+ l.org/programs/hanukkah-festival
+URL:https://www.skirball.org/programs/hanukkah-festival
+END:VEVENT
+BEGIN:VEVENT
 UID:1c5644faa5630cb776db@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261212T043000Z
-DTEND:20261213T063000Z
+DTEND:20261212T063000Z
 SUMMARY:New Orleans Legends with Andy Garcia
 LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
-DESCRIPTION:Two nights of New Orleans brass and piano\, with Andy Garcia s
- itting in. Price: From $83.\nhttps://www.catalinajazzclub.com/
+DESCRIPTION:Runs Dec 11 - Dec 12. Two nights of New Orleans brass and pian
+ o\, with Andy Garcia sitting in. Price: From $83.\nhttps://www.catalinaja
+ zzclub.com/
 URL:https://www.catalinajazzclub.com/
 END:VEVENT
 BEGIN:VEVENT
@@ -243,14 +638,43 @@ URL:https://www.eventbrite.com/e/notte-italiana-holidays-at-eataly-tickets
  -2003690997712
 END:VEVENT
 BEGIN:VEVENT
+UID:590f3d82d499d1aa927a@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261212T180000Z
+DTEND:20261213T040000Z
+SUMMARY:Gilmore Girls Holidays at Warner Bros. Studio Tour Hollywood
+LOCATION:Warner Bros. Studio Tour Hollywood\, Burbank\, 3400 Warner Blvd\,
+  Burbank\, CA 91505
+DESCRIPTION:Runs Dec 12 - Jan 3. Walk through the Stars Hollow sets dresse
+ d for the holidays\, with themed food\, shopping and a nightly tree light
+ ing. Price: From $79.\nhttps://www.wbstudiotour.com/tour/gilmore-girls-ho
+ lidays/
+URL:https://www.wbstudiotour.com/tour/gilmore-girls-holidays/
+END:VEVENT
+BEGIN:VEVENT
+UID:3309da7072fee29c04d1@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261213T040000Z
+DTEND:20261213T051000Z
+SUMMARY:A Christmas Carol Goes Wrong at Ahmanson Theatre
+LOCATION:Ahmanson Theatre\, Music Center\, Downtown\, 135 N Grand Ave\, Lo
+ s Angeles\, CA 90012
+DESCRIPTION:Runs Dec 12 - Jan 10. A community theater troupe tries to stag
+ e A Christmas Carol and everything breaks. The North American premiere ru
+ ns through January 10. Price: From $37.95.\nhttps://www.centertheatregrou
+ p.org/shows-tickets/ahmanson/2026-27/christmas-carol-goes-wrong/
+URL:https://www.centertheatregroup.org/shows-tickets/ahmanson/2026-27/chri
+ stmas-carol-goes-wrong/
+END:VEVENT
+BEGIN:VEVENT
 UID:5e7c5a3e040ef1ef8343@haps.club
 DTSTAMP:20261109T000000Z
 DTSTART:20261219T043000Z
-DTEND:20261220T063000Z
+DTEND:20261219T063000Z
 SUMMARY:Veronica Swift at Catalina Jazz Club
 LOCATION:Catalina Jazz Club\, 6725 W Sunset Blvd
-DESCRIPTION:A powerhouse jazz vocalist for two nights in Hollywood. Price:
-  Tickets.\nhttps://www.catalinajazzclub.com/
+DESCRIPTION:Runs Dec 18 - Dec 19. A powerhouse jazz vocalist for two night
+ s in Hollywood. Price: Tickets.\nhttps://www.catalinajazzclub.com/
 URL:https://www.catalinajazzclub.com/
 END:VEVENT
 BEGIN:VEVENT
@@ -259,11 +683,28 @@ DTSTAMP:20261109T000000Z
 DTSTART:20261220T033000Z
 DTEND:20261220T051000Z
 SUMMARY:The Hot Sardines: Holiday Stomp
-DESCRIPTION:Hot jazz\, swing\, and tap for the holidays at BroadStage.\nht
- tps://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-holiday-
- stomp/
+LOCATION:BroadStage\, Santa Monica
+DESCRIPTION:Hot jazz\, swing\, and tap for the holidays. Price: Tickets.\n
+ https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-holida
+ y-stomp/
 URL:https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-hol
  iday-stomp/
+END:VEVENT
+BEGIN:VEVENT
+UID:d6b3cec9f468618a6486@haps.club
+DTSTAMP:20261109T000000Z
+DTSTART:20261220T190000Z
+DTEND:20261221T003000Z
+SUMMARY:67th Annual LA County Holiday Celebration at Dorothy Chandler Pavi
+ lion
+LOCATION:Dorothy Chandler Pavilion\, The Music Center\, Downtown\, 135 N G
+ rand Ave\, Los Angeles\, CA 90012
+DESCRIPTION:Twelve local choirs\, ensembles and dance companies in a free 
+ holiday show\, with two performances at 11 AM and 3 PM. Price: Free with 
+ reservation.\nhttps://www.musiccenter.org/tickets-free-events/tmc-arts/l-
+ a-county-holiday-celebration/
+URL:https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-ho
+ liday-celebration/
 END:VEVENT
 BEGIN:VEVENT
 UID:b708ec2db5953a162615@haps.club
