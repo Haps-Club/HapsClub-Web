@@ -4,17 +4,9 @@
 
 Haps Club is independent and editorial: a real person reading the city, not an algorithmic listings feed. Every pick names its LA neighborhood and links straight to the source. Coverage spans the Eastside, Westside, Hollywood, West Hollywood, Mid-City, Downtown, and beyond. Founded and written by Michael Abraham.
 
-Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Los_Angeles.
+Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Los_Angeles.
 
-## Dated picks (Week of Nov 9 onward)
-
-### The Who's Tommy
-- When: Monday, November 2 to Nov 15, 7:00 PM
-- Where: Hollywood Pantages Theatre, 6233 Hollywood Blvd (Hollywood)
-- Price: From $35 lottery
-- Category: Culture
-- Details: https://www.broadwayinhollywood.com/
-- About: The rock opera, anthems turned all the way up. Through Nov 15, with a $35 digital lottery.
+## Dated picks (Week of Nov 16 onward)
 
 ### NOW Festival at REDCAT
 - When: Thursday, November 5 to Nov 21, 8:30 PM
@@ -40,14 +32,6 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://tinkerbellsneverland.com/los-angeles/
 - About: An evening light trail through the garden with scenes from Peter Pan, about 60 to 90 minutes. Closed Thanksgiving and Christmas Day.
 
-### CicLAvia Pasadena
-- When: Sunday, November 15, 9:00 AM
-- Where: Memorial Park Hub, Pasadena, 145 N Raymond Ave, Pasadena, CA 91103 (Citywide)
-- Price: Free
-- Category: Outdoors
-- Details: https://ciclavia.org/events/pasadena-2026-11/
-- About: Pasadena closes its streets to cars and opens them to bikes, walkers and skaters for about 3 miles, Sunday 9 AM to 3 PM.
-
 ### Paul R. Williams: Architect for Living at LACMA
 - When: Sunday, November 15 to May 31, 11:00 AM
 - Where: LACMA, Miracle Mile, 5905 Wilshire Blvd (Mid-City)
@@ -64,14 +48,6 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.moca.org/exhibitions/julian-charriere
 - About: Two new water-themed shows open at MOCA, with a free Vicuña poetry reading at 1 PM and conversation at 3 PM (RSVP).
 
-### Fall wine tasting at Stanley's
-- When: Sunday, November 15, 1:00 PM
-- Where: Stanley's Wet Goods, Culver City (Westside)
-- Price: $40 at the door
-- Category: Food
-- Details: https://www.stanleys.la
-- About: Twenty wines, 1 to 5 PM. No ticket needed in advance.
-
 ### Sparkle DTLA at The Bloc
 - When: Sunday, November 15 to Dec 31, 5:00 PM
 - Where: The Bloc, Downtown, 700 Flower St, Los Angeles, CA 90017 (Downtown)
@@ -82,11 +58,11 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 
 ### Christmas at The Grove
 - When: Monday, November 16, 6:00 PM
-- Where:  (Mid-City)
-- Price: see link
-- Category: 
+- Where: The Grove, Fairfax, 189 The Grove Dr, Los Angeles, CA 90036 (Mid-City)
+- Price: Free
+- Category: Culture
 - Details: https://thegrovela.com/events/25th-annual-christmas-at-the-grove/
-- About: Lance Bass hosts the 25th tree lighting, with a drone show, fireworks and snow.
+- About: Tree lighting hosted by Lance Bass with a drone show, fireworks and Santa's arrival. Free, but space is limited.
 
 ### Tree lighting at Bacari Silver Lake
 - When: Tuesday, November 17, 5:00 PM
@@ -98,11 +74,11 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 
 ### Swiss Winter Village
 - When: Wednesday, November 18 to Jan 3, 5:00 PM
-- Where:  (Westside)
-- Price: see link
-- Category: 
+- Where: Event Deck, Santa Monica Pier, 200 Santa Monica Pier, Santa Monica, CA 90401 (Westside)
+- Price: From $18.90
+- Category: Outdoors
 - Details: https://swisswintervillage.com/santa-monica/
-- About: Sixty chalets and an oceanfront ice rink on the Santa Monica Pier, through Jan 3.
+- About: A Swiss-style holiday market with 60+ chalets and an oceanfront ice rink. Opening night is Nov 18 at 5 PM.
 
 ### Paul R. Williams and the Idea of Home at LACMA
 - When: Wednesday, November 18, 7:00 PM
@@ -135,6 +111,14 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - Category: Outdoors
 - Details: https://holidayicerinkdowntownla.com/los-angeles-events/
 - About: Downtown's tree lighting and rink opening night, with skaters, carolers and Buddy the Elf from Elf the Musical. Skate afterward.
+
+### Haps Club Happy Hour at Hermanito Broadway
+- When: Thursday, November 19, 6:00 PM
+- Where: Hermanito Broadway, 802 Broadway, Santa Monica (Westside)
+- Price: Free to RSVP
+- Category: 
+- Details: https://luma.com/dhxdmoe9
+- About: Drinks, bites, and new faces before the holidays get crazy. Join 50+ people.
 
 ### Tree lighting at Union Station
 - When: Thursday, November 19, 6:00 PM
@@ -376,6 +360,14 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.skirball.org/programs/hanukkah-festival
 - About: The Skirball's annual Hanukkah festival runs noon to 5 PM on a Sunday. Parking on site is free.
 
+### Haps Club Dinner at Hermanito Broadway
+- When: Thursday, December 10, 6:00 PM
+- Where: Hermanito Broadway, 802 Broadway, Santa Monica (Westside)
+- Price: From $79
+- Category: 
+- Details: https://luma.com/9yu9t2or
+- About: A family-style dinner with one drink included. Everyone who’s been is a fan.
+
 ### New Orleans Legends with Andy Garcia
 - When: Friday, December 11 to Dec 12, 8:30 PM
 - Where: Catalina Jazz Club, 6725 W Sunset Blvd (Hollywood)
@@ -450,6 +442,7 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - [Evergreen at Sabbatikal](https://sabbatikal.com): Sabbatikal, 1224 25th St, Santa Monica · Westside · new
 
 ### Food
+- [Holly Jolly Christmas Bar at 3rd Base](https://3rdbasehollywood.com/): 3rd Base, Hollywood, 1562 N Cahuenga Blvd, Hollywood, CA 90028 · Hollywood
 - [Matilda's](https://matildasbakery.com/): 3200 Airport Ave, Santa Monica · Westside · new
 - [Ueki at Blue Ribbon Sushi](https://palisadesvillageca.com/dining/ueki-at-blue-ribbon-sushi/): Palisades Village, Pacific Palisades · Westside · new
 - [The Hart and the Hunter](https://hoodline.com/2026/09/the-hart-and-the-hunter-returns-to-west-hollywood-after-five-year-absence/): Palihotel Melrose, West Hollywood · Hollywood · new
@@ -479,7 +472,6 @@ Updated 2026-11-09. Generated from https://haps.club/ data; times are America/Lo
 - [Little Luck](https://www.littleluckla.com/): Sunset Strip, West Hollywood, 9229 W Sunset Blvd, West Hollywood, CA 90069 · Hollywood
 - [Gilbert Perez Bar](https://www.gilbertperezbar.com/): Ventura Blvd, Sherman Oaks, 14633 Ventura Blvd, Sherman Oaks, CA 91403 · Citywide
 - [Birdie G's](https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/dining/birdie-gs-la.restaurant.html): Fairmont Century Plaza, Century City, 2025 Avenue of the Stars, Los Angeles, CA 90067 · Westside
-- [Holly Jolly Christmas Bar at 3rd Base](https://3rdbasehollywood.com/): 3rd Base, Hollywood, 1562 N Cahuenga Blvd, Hollywood, CA 90028 · Hollywood
 
 ### More
 - [LA Kings Holiday Ice Festival](https://link.bucketlisters.com/Tw8k):  · Downtown
