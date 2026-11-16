@@ -3,34 +3,10 @@
   "weekLabel": "Week of Nov 16",
   "featured": [
     {
-      "title": "Christmas at The Grove",
-      "pill": "Free · Mon 11/16",
-      "tagline": "Lance Bass hosts the 25th tree lighting, with a drone show, fireworks and snow.",
-      "meta": "Mon Nov 16 · 6 PM · Free, space limited",
-      "cta": "Get details",
-      "link": "https://thegrovela.com/events/25th-annual-christmas-at-the-grove/",
-      "tags": "outdoors free",
-      "area": "midcity",
-      "starts": "20261116T180000",
-      "ends": "20261116T210000"
-    },
-    {
-      "title": "Swiss Winter Village",
-      "pill": "From $18.90 · opens Wed 11/18",
-      "tagline": "Sixty chalets and an oceanfront ice rink on the Santa Monica Pier, through Jan 3.",
-      "meta": "Opens Wed Nov 18 · 5 PM · From $18.90",
-      "cta": "See details",
-      "link": "https://swisswintervillage.com/santa-monica/",
-      "tags": "outdoors date",
-      "area": "westside",
-      "starts": "20261118T170000",
-      "ends": "20270103T220000"
-    },
-    {
       "title": "Haps Club Jazz Age Party",
       "pill": "Tickets · Sat 11/21",
       "tagline": "A live jazz trio, Prohibition-era cocktails, and a historic home turning 100.",
-      "meta": "Sat Nov 21 · 7:30–11:30 PM · $45, or $80 for two · 10% off with HAPSCLUBPLUS",
+      "meta": "Sat Nov 21 · 7:30–11 PM · $45, or $80 for two · 10% off with HAPSCLUBPLUS",
       "cta": "Get your ticket",
       "link": "https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS",
       "tags": "music date",
@@ -38,11 +14,39 @@
       "where": "Historic home, Los Angeles",
       "price": "$45 · $80 for two",
       "starts": "20261121T193000",
-      "ends": "20261121T233000",
+      "ends": "20261121T230000",
       "lead": true,
       "dress": "Jazz Age, required",
-      "going": "30+ going",
+      "going": "40+ going",
       "long": "A historic home turns 100, and we’re throwing it a 1926 party. Live jazz trio, open bar of Prohibition-era cocktails, candlelight all night."
+    },
+    {
+      "title": "Haps Club Happy Hour at Hermanito Broadway",
+      "pill": "Free · Thu 11/19",
+      "tagline": "Drinks, bites, and new faces before the holidays get crazy. Join 50+ people.",
+      "meta": "Thu Nov 19 · 6–8 PM · Free to RSVP",
+      "cta": "RSVP",
+      "link": "https://luma.com/dhxdmoe9",
+      "tags": "food date free",
+      "area": "westside",
+      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
+      "price": "Free to RSVP",
+      "starts": "20261119T180000",
+      "ends": "20261119T200000"
+    },
+    {
+      "title": "Haps Club Dinner at Hermanito Broadway",
+      "pill": "From $79 · Thu 12/10",
+      "tagline": "A family-style dinner with one drink included. Everyone who’s been is a fan.",
+      "meta": "Thu Dec 10 · 6–9 PM · From $79",
+      "cta": "Get tickets",
+      "link": "https://luma.com/9yu9t2or",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
+      "price": "From $79",
+      "starts": "20261210T180000",
+      "ends": "20261210T210000"
     }
   ],
   "events": [
@@ -257,6 +261,20 @@
       "addr": "800 N Alameda St"
     },
     {
+      "title": "Haps Club Happy Hour at Hermanito Broadway",
+      "tags": "food date free",
+      "area": "westside",
+      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
+      "price": "Free to RSVP",
+      "link": "https://luma.com/dhxdmoe9",
+      "tagline": "Drinks, bites, and new faces before the holidays get crazy. Join 50+ people.",
+      "starts": "20261119T180000",
+      "ends": "20261119T200000",
+      "month": "NOV",
+      "day": "19",
+      "cat": "Food"
+    },
+    {
       "title": "Spotlight: aja monet at the GRAMMY Museum",
       "month": "NOV",
       "day": "19",
@@ -434,7 +452,7 @@
       "link": "https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS",
       "tagline": "A live jazz trio, Prohibition-era cocktails, and a historic home turning 100.",
       "starts": "20261121T193000",
-      "ends": "20261121T233000"
+      "ends": "20261121T230000"
     },
     {
       "title": "Addams Family Values at LACMA",
@@ -480,19 +498,6 @@
       "starts": "20261126T073000",
       "ends": "20261126T110000",
       "addr": "200 N Spring St, Los Angeles, CA 90012"
-    },
-    {
-      "title": "Apple picking in Oak Glen",
-      "month": "Now",
-      "day": "•",
-      "cat": "Outdoors",
-      "tags": "outdoors date",
-      "area": "citywide",
-      "where": "Oak Glen, San Bernardino foothills",
-      "price": "Varies",
-      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
-      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
-      "ends": "20261126T235900"
     },
     {
       "title": "LA Kings Holiday Ice Festival at L.A. LIVE",
@@ -705,6 +710,20 @@
       "addr": "2701 N Sepulveda Blvd, Los Angeles, CA 90049"
     },
     {
+      "title": "Haps Club Dinner at Hermanito Broadway",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
+      "price": "From $79",
+      "link": "https://luma.com/9yu9t2or",
+      "tagline": "A family-style dinner with one drink included. Everyone who’s been is a fan.",
+      "starts": "20261210T180000",
+      "ends": "20261210T210000",
+      "month": "DEC",
+      "day": "10",
+      "cat": "Food"
+    },
+    {
       "title": "New Orleans Legends with Andy Garcia",
       "month": "DEC",
       "day": "11",
@@ -806,20 +825,6 @@
       "addr": "135 N Grand Ave, Los Angeles, CA 90012"
     },
     {
-      "title": "Holly Jolly Christmas Bar at 3rd Base",
-      "month": "DEC",
-      "day": "27",
-      "cat": "Food",
-      "tags": "food date",
-      "area": "hollywood",
-      "where": "3rd Base, Hollywood",
-      "price": "Tickets from $20.35",
-      "link": "https://3rdbasehollywood.com/",
-      "tagline": "Christmas pop-up bar at 3rd Base on Cahuenga, 21 and over, through December 27.",
-      "ends": "20261227T235900",
-      "addr": "1562 N Cahuenga Blvd, Hollywood, CA 90028"
-    },
-    {
       "title": "Poncho Sanchez New Year's Eve",
       "month": "DEC",
       "day": "31",
@@ -832,6 +837,33 @@
       "tagline": "Latin jazz to close the year. Early show 8:30, late show 11pm.",
       "starts": "20261231T203000",
       "ends": "20261231T235900"
+    },
+    {
+      "title": "Apple picking in Oak Glen",
+      "month": "Now",
+      "day": "•",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "citywide",
+      "where": "Oak Glen, San Bernardino foothills",
+      "price": "Varies",
+      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
+      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
+      "ends": "20261126T235900"
+    },
+    {
+      "title": "Holly Jolly Christmas Bar at 3rd Base",
+      "month": "DEC",
+      "day": "27",
+      "cat": "Food",
+      "tags": "food date",
+      "area": "hollywood",
+      "where": "3rd Base, Hollywood",
+      "price": "Tickets from $20.35",
+      "link": "https://3rdbasehollywood.com/",
+      "tagline": "Christmas pop-up bar at 3rd Base on Cahuenga, 21 and over, through December 27.",
+      "ends": "20261227T235900",
+      "addr": "1562 N Cahuenga Blvd, Hollywood, CA 90028"
     },
     {
       "title": "Matilda's",
@@ -1444,8 +1476,8 @@
     }
   ],
   "announcement": {
-    "text": "New this week: tickets are up for the Haps Club Jazz Age Party — Sat Nov 21.",
-    "link": "https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS",
-    "ends": "20261121T233000"
+    "text": "This week: Happy Hour Thu Nov 19 and the Jazz Age Party Sat Nov 21. Dinner Dec 10.",
+    "link": "https://luma.com/TheHapsClub",
+    "ends": "20261121T230000"
   }
 }
