@@ -22,7 +22,6 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Paul R. Williams: Architect for Living at LACMA](https://www.lacma.org/art/exhibition/paul-r-williams-architect-living): Sun Nov 15 · LACMA, Miracle Mile · Mid-City · With admission
 - [Julian Charrière: Deep End and Cecilia Vicuña: The Dream of Water at MOCA](https://www.moca.org/exhibitions/julian-charriere): Sun Nov 15 · MOCA Grand Avenue, Downtown Los Angeles · Downtown · Free
 - [Sparkle DTLA at The Bloc](https://www.theblocla.com/event/44603-sparkle-dtla-nightly-light-show): Sun Nov 15 · The Bloc, Downtown · Downtown · Free
-- [Christmas at The Grove](https://thegrovela.com/events/25th-annual-christmas-at-the-grove/): Mon Nov 16 · The Grove, Fairfax · Mid-City · Free
 - [Tree lighting at Bacari Silver Lake](https://www.bacari.us/): Tue Nov 17 · Bacari Silver Lake · Eastside · Free
 - [Swiss Winter Village](https://swisswintervillage.com/santa-monica/): Wed Nov 18 · Event Deck, Santa Monica Pier · Westside · From $18.90
 - [Paul R. Williams and the Idea of Home at LACMA](https://www.lacma.org/event/paul-williams-nov-18): Wed Nov 18 · East West Bank Commons, LACMA, Miracle Mile · Mid-City · Free, RSVP
@@ -52,6 +51,7 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Home Alone in Concert at Walt Disney Concert Hall](https://www.laphil.com/events/instances/1py8126p/2026-11-27/home-alone-in-concert-2026): Fri Nov 27 · Walt Disney Concert Hall, Downtown · Downtown · From $90
 - [A Charlie Brown Christmas at Catalina Jazz Club](https://www.catalinajazzclub.com/): Fri Nov 27 · Catalina Jazz Club, 6725 W Sunset Blvd · Hollywood · Tickets
 - [Bob Baker's Nutcracker at Sierra Madre Playhouse](https://www.sierramadreplayhouse.org/2027/theatre-family-bob-bakers-nutcracker): Sat Nov 28 · Sierra Madre Playhouse, Sierra Madre · Citywide · From $25
+- [LA County Tree Lighting at The Music Center](https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-holiday-tree-lighting/): Mon Nov 30 · Jerry Moss Plaza, The Music Center, Downtown · Downtown · Free
 <!-- /AUTO:WEEK -->
 
 ## Guides
