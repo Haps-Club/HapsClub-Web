@@ -56,14 +56,6 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.theblocla.com/event/44603-sparkle-dtla-nightly-light-show
 - About: Free light show synced to music at the top of every hour from 5 to 9 PM. Runs through December 31.
 
-### Tree lighting at Bacari Silver Lake
-- When: Tuesday, November 17, 5:00 PM
-- Where: Bacari Silver Lake (Eastside)
-- Price: Free
-- Category: Music
-- Details: https://www.bacari.us/
-- About: Holiday cocktails, a live jazz trio, and the tree goes up at 7.
-
 ### Swiss Winter Village
 - When: Wednesday, November 18 to Jan 3, 5:00 PM
 - Where: Event Deck, Santa Monica Pier, 200 Santa Monica Pier, Santa Monica, CA 90401 (Westside)
@@ -485,6 +477,7 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 
 ## Newsletter archive
 
+- [Three nights of good times](https://haps.club/archive/2026-11-17-three-nights-of-good-times/) (2026-11-17): Happy hour Thursday, the Jazz Age Party Saturday, and dinner in December.
 - [Jazz, all week](https://haps.club/archive/2026-11-10-jazz-all-week/) (2026-11-10): Big bands in Bel Air, two jazzy tree lightings, holiday swing at BroadStage, and our 1926 party.
 - [Party like it’s 1926](https://haps.club/archive/2026-11-03-party-like-its-1926/) (2026-11-03): A 1926 party, an all-you-can-eat Italian holiday night, a salsa night, and more.
 - [Costumes, candlelight, and one last seat](https://haps.club/archive/2026-10-27-costumes-and-candlelight/) (2026-10-27): Halloween in WeHo, a jazz costume party, Noche de los Muertos, a new pasta bar on Main Street, and the last call for our supper club.

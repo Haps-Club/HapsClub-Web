@@ -5,8 +5,15 @@
 <link>https://haps.club/archive/</link>
 <description>Hand-picked things to do in Los Angeles, one free email every Tuesday.</description>
 <language>en-us</language>
-<lastBuildDate>Tue, 10 Nov 2026 16:00:00 +0000</lastBuildDate>
+<lastBuildDate>Tue, 17 Nov 2026 16:00:00 +0000</lastBuildDate>
 <atom:link href="https://haps.club/feed.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Three nights of good times</title>
+<link>https://haps.club/archive/2026-11-17-three-nights-of-good-times/</link>
+<guid isPermaLink="true">https://haps.club/archive/2026-11-17-three-nights-of-good-times/</guid>
+<pubDate>Tue, 17 Nov 2026 16:00:00 +0000</pubDate>
+<description>Happy hour Thursday, the Jazz Age Party Saturday, and dinner in December.</description>
+</item>
 <item>
 <title>Jazz, all week</title>
 <link>https://haps.club/archive/2026-11-10-jazz-all-week/</link>
@@ -209,13 +216,6 @@
 <guid isPermaLink="true">https://haps.club/archive/2026-05-19-the-long-weekend/</guid>
 <pubDate>Tue, 19 May 2026 15:00:00 +0000</pubDate>
 <description>Sunset salsa, jazz on the lawn, and the MDW shortlist.</description>
-</item>
-<item>
-<title>Date Night LA</title>
-<link>https://haps.club/archive/2026-05-12-date-night-la/</link>
-<guid isPermaLink="true">https://haps.club/archive/2026-05-12-date-night-la/</guid>
-<pubDate>Tue, 12 May 2026 15:00:00 +0000</pubDate>
-<description>The week&#x27;s best places to meet, eat, and linger.</description>
 </item>
 </channel>
 </rss>
