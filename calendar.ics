@@ -98,19 +98,6 @@ DESCRIPTION:Runs Nov 18 - Jan 3. A Swiss-style holiday market with 60+ cha
 URL:https://swisswintervillage.com/santa-monica/
 END:VEVENT
 BEGIN:VEVENT
-UID:f91c60c65098fdd0ab6c@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261119T030000Z
-DTEND:20261119T040000Z
-SUMMARY:Paul R. Williams and the Idea of Home at LACMA
-LOCATION:East West Bank Commons\, LACMA\, Miracle Mile\, 5905 Wilshire Blv
- d\, Los Angeles\, CA 90036
-DESCRIPTION:A panel on architect Paul R. Williams with Valery Augustin\, B
- rigette Romanek and Adrian Fine. Free with an RSVP. Price: Free\, RSVP.\n
- https://www.lacma.org/event/paul-williams-nov-18
-URL:https://www.lacma.org/event/paul-williams-nov-18
-END:VEVENT
-BEGIN:VEVENT
 UID:ffafd58c42a377a94360@haps.club
 DTSTAMP:20261116T000000Z
 DTSTART:20261119T190000Z
