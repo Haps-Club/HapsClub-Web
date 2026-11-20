@@ -73,11 +73,11 @@ Sponsored by @blackbird, the dining rewards app that gives you points back every
 Who are you bringing?
 
 ## IG: dinner-1-taco
-Back at Hermanito on Dec 10 for a family-style dinner.
+Back at Hermanito on Dec 17 for a family-style dinner.
 
 Tacos, small plates, and dessert, with one drink included. Everyone who's been is a fan.
 
-Thu Dec 10 · 6–9 PM · Hermanito Broadway, Santa Monica
+Thu Dec 17 · 6–9 PM · Hermanito Broadway, Santa Monica
 From $79
 
 Tickets: link in bio
@@ -90,7 +90,7 @@ What's your go-to taco order?
 First comment: https://luma.com/9yu9t2or
 
 ## Threads: dinner-1-taco
-Dinner at Hermanito on Thursday, Dec 10, 6 to 9 PM. A family-style dinner with one drink included, from $79.
+Dinner at Hermanito on Thursday, Dec 17, 6 to 9 PM. A family-style dinner with one drink included, from $79.
 
 https://luma.com/9yu9t2or
 
@@ -152,11 +152,11 @@ Sponsored by @blackbird, the dining rewards app that gives you points back every
 Who's your plus one?
 
 ## IG: dinner-2-menu
-What's on the table at the Hermanito dinner on Dec 10.
+What's on the table at the Hermanito dinner on Dec 17.
 
 Guacamole, chips and salsa. Caesar salad and papas flautas. Sticky ribs and a variety of tacos. Dessert, and one drink included.
 
-Thu Dec 10 · 6–9 PM · Hermanito Broadway, Santa Monica
+Thu Dec 17 · 6–9 PM · Hermanito Broadway, Santa Monica
 From $79
 
 Tickets: link in bio
@@ -169,7 +169,7 @@ What are you eating first?
 First comment: https://luma.com/9yu9t2or
 
 ## Threads: dinner-2-menu
-What's on the table at the Hermanito dinner on Dec 10: guacamole, chips and salsa, Caesar salad, papas flautas, sticky ribs, tacos, dessert, and one drink included. From $79.
+What's on the table at the Hermanito dinner on Dec 17: guacamole, chips and salsa, Caesar salad, papas flautas, sticky ribs, tacos, dessert, and one drink included. From $79.
 
 https://luma.com/9yu9t2or
 
