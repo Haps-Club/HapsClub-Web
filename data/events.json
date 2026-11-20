@@ -21,32 +21,18 @@
       "long": "A historic home turns 100, and we’re throwing it a 1926 party. Live jazz trio, open bar of Prohibition-era cocktails, candlelight all night."
     },
     {
-      "title": "Haps Club Happy Hour at Hermanito Broadway",
-      "pill": "Free · Thu 11/19",
-      "tagline": "Drinks, bites, and new faces before the holidays get crazy. Join 50+ people.",
-      "meta": "Thu Nov 19 · 6–8 PM · Free to RSVP",
-      "cta": "RSVP",
-      "link": "https://luma.com/dhxdmoe9",
-      "tags": "food date free",
-      "area": "westside",
-      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
-      "price": "Free to RSVP",
-      "starts": "20261119T180000",
-      "ends": "20261119T200000"
-    },
-    {
       "title": "Haps Club Dinner at Hermanito Broadway",
-      "pill": "From $79 · Thu 12/10",
+      "pill": "From $79 · Thu 12/17",
       "tagline": "A family-style dinner with one drink included. Everyone who’s been is a fan.",
-      "meta": "Thu Dec 10 · 6–9 PM · From $79",
+      "meta": "Thu Dec 17 · 6–9 PM · From $79",
       "cta": "Get tickets",
       "link": "https://luma.com/9yu9t2or",
       "tags": "food date",
       "area": "westside",
       "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
       "price": "From $79",
-      "starts": "20261210T180000",
-      "ends": "20261210T210000"
+      "starts": "20261217T180000",
+      "ends": "20261217T210000"
     }
   ],
   "events": [
@@ -154,96 +140,6 @@
       "starts": "20261118T170000",
       "ends": "20270103T220000",
       "addr": "200 Santa Monica Pier, Santa Monica, CA 90401"
-    },
-    {
-      "title": "The Win~Dow West Adams",
-      "month": "NOV",
-      "day": "19",
-      "cat": "Food",
-      "tags": "food",
-      "area": "midcity",
-      "where": "Jefferson Blvd, West Adams",
-      "price": "Cheeseburgers from $4.50",
-      "link": "https://www.thewin-dow.la/west-adams",
-      "tagline": "The smash burger spot opens its biggest location yet, with a patio and a full bar.",
-      "starts": "20261119T110000",
-      "ends": "20261119T210000",
-      "addr": "3701 W Jefferson Blvd, Los Angeles, CA 90016"
-    },
-    {
-      "title": "Holiday Tree Lighting at Regent Santa Monica",
-      "month": "NOV",
-      "day": "19",
-      "cat": "Culture",
-      "tags": "culture food date free",
-      "area": "westside",
-      "where": "Regent Santa Monica Beach",
-      "price": "Free",
-      "link": "https://santamonica.regenthotels.com/experience/bookable-experiences/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5",
-      "tagline": "A towering tree, festive treats, and Santa by the sea.",
-      "starts": "20261119T163000",
-      "ends": "20261119T190000",
-      "addr": "1700 Ocean Ave",
-      "hood": "santa-monica"
-    },
-    {
-      "title": "Pershing Square Holiday Ice Rink Opening Celebration and Tree Lighting",
-      "month": "NOV",
-      "day": "19",
-      "cat": "Outdoors",
-      "tags": "date outdoors",
-      "area": "dtla",
-      "where": "Pershing Square, Downtown Los Angeles",
-      "price": "From $23.32",
-      "link": "https://holidayicerinkdowntownla.com/los-angeles-events/",
-      "tagline": "Downtown's tree lighting and rink opening night, with skaters, carolers and Buddy the Elf from Elf the Musical. Skate afterward.",
-      "starts": "20261119T170000",
-      "ends": "20261119T190000",
-      "addr": "532 S Olive St, Los Angeles, CA 90013"
-    },
-    {
-      "title": "Tree lighting at Union Station",
-      "month": "NOV",
-      "day": "19",
-      "cat": "Music",
-      "tags": "music free",
-      "area": "dtla",
-      "where": "Union Station, Downtown",
-      "price": "Free, register",
-      "link": "https://unionstationla.com/happenings",
-      "tagline": "Lizzy & the Triggermen, a 10-piece jazz band, play the historic ticket concourse after Mariachi Ausente.",
-      "starts": "20261119T180000",
-      "ends": "20261119T200000",
-      "addr": "800 N Alameda St"
-    },
-    {
-      "title": "Haps Club Happy Hour at Hermanito Broadway",
-      "tags": "food date free",
-      "area": "westside",
-      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
-      "price": "Free to RSVP",
-      "link": "https://luma.com/dhxdmoe9",
-      "tagline": "Drinks, bites, and new faces before the holidays get crazy. Join 50+ people.",
-      "starts": "20261119T180000",
-      "ends": "20261119T200000",
-      "month": "NOV",
-      "day": "19",
-      "cat": "Food"
-    },
-    {
-      "title": "Spotlight: aja monet at the GRAMMY Museum",
-      "month": "NOV",
-      "day": "19",
-      "cat": "Music",
-      "tags": "music date",
-      "area": "dtla",
-      "where": "GRAMMY Museum, L.A. Live",
-      "price": "Tickets",
-      "link": "https://grammymuseum.org/event/spotlight-aja-monet/",
-      "tagline": "The poet and musician talks about her second album, the color of rain, in conversation at the GRAMMY Museum.",
-      "starts": "20261119T193000",
-      "ends": "20261119T210000",
-      "addr": "800 W Olympic Blvd, Los Angeles, CA 90015"
     },
     {
       "title": "Los Angeles Auto Show",
@@ -673,10 +569,10 @@
       "price": "From $79",
       "link": "https://luma.com/9yu9t2or",
       "tagline": "A family-style dinner with one drink included. Everyone who’s been is a fan.",
-      "starts": "20261210T180000",
-      "ends": "20261210T210000",
+      "starts": "20261217T180000",
+      "ends": "20261217T210000",
       "month": "DEC",
-      "day": "10",
+      "day": "17",
       "cat": "Food"
     },
     {
@@ -1432,7 +1328,7 @@
     }
   ],
   "announcement": {
-    "text": "This week: Happy Hour Thu Nov 19 and the Jazz Age Party Sat Nov 21. Dinner Dec 10.",
+    "text": "This week: Happy Hour Thu Nov 19 and the Jazz Age Party Sat Nov 21. Dinner Dec 17.",
     "link": "https://luma.com/TheHapsClub",
     "ends": "20261121T230000"
   }
