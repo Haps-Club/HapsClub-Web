@@ -64,54 +64,6 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://swisswintervillage.com/santa-monica/
 - About: A Swiss-style holiday market with 60+ chalets and an oceanfront ice rink. Opening night is Nov 18 at 5 PM.
 
-### The Win~Dow West Adams
-- When: Thursday, November 19, 11:00 AM
-- Where: Jefferson Blvd, West Adams, 3701 W Jefferson Blvd, Los Angeles, CA 90016 (Mid-City)
-- Price: Cheeseburgers from $4.50
-- Category: Food
-- Details: https://www.thewin-dow.la/west-adams
-- About: The smash burger spot opens its biggest location yet, with a patio and a full bar.
-
-### Holiday Tree Lighting at Regent Santa Monica
-- When: Thursday, November 19, 4:30 PM
-- Where: Regent Santa Monica Beach, 1700 Ocean Ave (Westside)
-- Price: Free
-- Category: Culture
-- Details: https://santamonica.regenthotels.com/experience/bookable-experiences/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
-- About: A towering tree, festive treats, and Santa by the sea.
-
-### Pershing Square Holiday Ice Rink Opening Celebration and Tree Lighting
-- When: Thursday, November 19, 5:00 PM
-- Where: Pershing Square, Downtown Los Angeles, 532 S Olive St, Los Angeles, CA 90013 (Downtown)
-- Price: From $23.32
-- Category: Outdoors
-- Details: https://holidayicerinkdowntownla.com/los-angeles-events/
-- About: Downtown's tree lighting and rink opening night, with skaters, carolers and Buddy the Elf from Elf the Musical. Skate afterward.
-
-### Haps Club Happy Hour at Hermanito Broadway
-- When: Thursday, November 19, 6:00 PM
-- Where: Hermanito Broadway, 802 Broadway, Santa Monica (Westside)
-- Price: Free to RSVP
-- Category: 
-- Details: https://luma.com/dhxdmoe9
-- About: Drinks, bites, and new faces before the holidays get crazy. Join 50+ people.
-
-### Tree lighting at Union Station
-- When: Thursday, November 19, 6:00 PM
-- Where: Union Station, Downtown, 800 N Alameda St (Downtown)
-- Price: Free, register
-- Category: Music
-- Details: https://unionstationla.com/happenings
-- About: Lizzy & the Triggermen, a 10-piece jazz band, play the historic ticket concourse after Mariachi Ausente.
-
-### Spotlight: aja monet at the GRAMMY Museum
-- When: Thursday, November 19, 7:30 PM
-- Where: GRAMMY Museum, L.A. Live, 800 W Olympic Blvd, Los Angeles, CA 90015 (Downtown)
-- Price: Tickets
-- Category: Music
-- Details: https://grammymuseum.org/event/spotlight-aja-monet/
-- About: The poet and musician talks about her second album, the color of rain, in conversation at the GRAMMY Museum.
-
 ### Los Angeles Auto Show
 - When: Friday, November 20 to Nov 29, 9:00 AM
 - Where: Los Angeles Convention Center, Downtown Los Angeles, 1201 S Figueroa St, Los Angeles, CA 90015 (Downtown)
@@ -336,14 +288,6 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.skirball.org/programs/hanukkah-festival
 - About: The Skirball's annual Hanukkah festival runs noon to 5 PM on a Sunday. Parking on site is free.
 
-### Haps Club Dinner at Hermanito Broadway
-- When: Thursday, December 10, 6:00 PM
-- Where: Hermanito Broadway, 802 Broadway, Santa Monica (Westside)
-- Price: From $79
-- Category: 
-- Details: https://luma.com/9yu9t2or
-- About: A family-style dinner with one drink included. Everyone who’s been is a fan.
-
 ### New Orleans Legends with Andy Garcia
 - When: Friday, December 11 to Dec 12, 8:30 PM
 - Where: Catalina Jazz Club, 6725 W Sunset Blvd (Hollywood)
@@ -375,6 +319,14 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Category: Culture
 - Details: https://www.centertheatregroup.org/shows-tickets/ahmanson/2026-27/christmas-carol-goes-wrong/
 - About: A community theater troupe tries to stage A Christmas Carol and everything breaks. The North American premiere runs through January 10.
+
+### Haps Club Dinner at Hermanito Broadway
+- When: Thursday, December 17, 6:00 PM
+- Where: Hermanito Broadway, 802 Broadway, Santa Monica (Westside)
+- Price: From $79
+- Category: 
+- Details: https://luma.com/9yu9t2or
+- About: A family-style dinner with one drink included. Everyone who’s been is a fan.
 
 ### Veronica Swift at Catalina Jazz Club
 - When: Friday, December 18 to Dec 19, 8:30 PM

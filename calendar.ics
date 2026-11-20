@@ -98,82 +98,6 @@ DESCRIPTION:Runs Nov 18 - Jan 3. A Swiss-style holiday market with 60+ cha
 URL:https://swisswintervillage.com/santa-monica/
 END:VEVENT
 BEGIN:VEVENT
-UID:ffafd58c42a377a94360@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261119T190000Z
-DTEND:20261120T050000Z
-SUMMARY:The Win~Dow West Adams
-LOCATION:Jefferson Blvd\, West Adams\, 3701 W Jefferson Blvd\, Los Angeles
- \, CA 90016
-DESCRIPTION:The smash burger spot opens its biggest location yet\, with a 
- patio and a full bar. Price: Cheeseburgers from $4.50.\nhttps://www.thewi
- n-dow.la/west-adams
-URL:https://www.thewin-dow.la/west-adams
-END:VEVENT
-BEGIN:VEVENT
-UID:a2fa660c9e009d33fa8b@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261120T003000Z
-DTEND:20261120T030000Z
-SUMMARY:Holiday Tree Lighting at Regent Santa Monica
-LOCATION:Regent Santa Monica Beach\, 1700 Ocean Ave
-DESCRIPTION:A towering tree\, festive treats\, and Santa by the sea. Price
- : Free.\nhttps://santamonica.regenthotels.com/experience/bookable-experie
- nces/?experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
-URL:https://santamonica.regenthotels.com/experience/bookable-experiences/?
- experienceId=regent-holiday-tree-lighting-celebration-7d94dad5
-END:VEVENT
-BEGIN:VEVENT
-UID:7f128fba91e3a6e7cbf0@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261120T010000Z
-DTEND:20261120T030000Z
-SUMMARY:Pershing Square Holiday Ice Rink Opening Celebration and Tree Ligh
- ting
-LOCATION:Pershing Square\, Downtown Los Angeles\, 532 S Olive St\, Los Ang
- eles\, CA 90013
-DESCRIPTION:Downtown's tree lighting and rink opening night\, with skaters
- \, carolers and Buddy the Elf from Elf the Musical. Skate afterward. Pric
- e: From $23.32.\nhttps://holidayicerinkdowntownla.com/los-angeles-events/
-URL:https://holidayicerinkdowntownla.com/los-angeles-events/
-END:VEVENT
-BEGIN:VEVENT
-UID:92712290f1621a2c307d@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261120T020000Z
-DTEND:20261120T040000Z
-SUMMARY:Haps Club Happy Hour at Hermanito Broadway
-LOCATION:Hermanito Broadway\, 802 Broadway\, Santa Monica
-DESCRIPTION:Drinks\, bites\, and new faces before the holidays get crazy. 
- Join 50+ people. Price: Free to RSVP.\nhttps://luma.com/dhxdmoe9
-URL:https://luma.com/dhxdmoe9
-END:VEVENT
-BEGIN:VEVENT
-UID:856c094711f95f3a01e6@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261120T020000Z
-DTEND:20261120T040000Z
-SUMMARY:Tree lighting at Union Station
-LOCATION:Union Station\, Downtown\, 800 N Alameda St
-DESCRIPTION:Lizzy & the Triggermen\, a 10-piece jazz band\, play the histo
- ric ticket concourse after Mariachi Ausente. Price: Free\, register.\nhtt
- ps://unionstationla.com/happenings
-URL:https://unionstationla.com/happenings
-END:VEVENT
-BEGIN:VEVENT
-UID:3944f18f595684812456@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261120T033000Z
-DTEND:20261120T050000Z
-SUMMARY:Spotlight: aja monet at the GRAMMY Museum
-LOCATION:GRAMMY Museum\, L.A. Live\, 800 W Olympic Blvd\, Los Angeles\, CA
-  90015
-DESCRIPTION:The poet and musician talks about her second album\, the color
-  of rain\, in conversation at the GRAMMY Museum. Price: Tickets.\nhttps:/
- /grammymuseum.org/event/spotlight-aja-monet/
-URL:https://grammymuseum.org/event/spotlight-aja-monet/
-END:VEVENT
-BEGIN:VEVENT
 UID:5b6d5a8a4cd0bb0905a0@haps.club
 DTSTAMP:20261116T000000Z
 DTSTART:20261120T170000Z
@@ -544,17 +468,6 @@ DESCRIPTION:The Skirball's annual Hanukkah festival runs noon to 5 PM on a
 URL:https://www.skirball.org/programs/hanukkah-festival
 END:VEVENT
 BEGIN:VEVENT
-UID:e60441aaef3d7c7d1862@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261211T020000Z
-DTEND:20261211T050000Z
-SUMMARY:Haps Club Dinner at Hermanito Broadway
-LOCATION:Hermanito Broadway\, 802 Broadway\, Santa Monica
-DESCRIPTION:A family-style dinner with one drink included. Everyone who’
- s been is a fan. Price: From $79.\nhttps://luma.com/9yu9t2or
-URL:https://luma.com/9yu9t2or
-END:VEVENT
-BEGIN:VEVENT
 UID:1c5644faa5630cb776db@haps.club
 DTSTAMP:20261116T000000Z
 DTSTART:20261212T043000Z
@@ -607,6 +520,17 @@ DESCRIPTION:Runs Dec 12 - Jan 10. A community theater troupe tries to stag
  p.org/shows-tickets/ahmanson/2026-27/christmas-carol-goes-wrong/
 URL:https://www.centertheatregroup.org/shows-tickets/ahmanson/2026-27/chri
  stmas-carol-goes-wrong/
+END:VEVENT
+BEGIN:VEVENT
+UID:1e59e2a3378f9075b618@haps.club
+DTSTAMP:20261116T000000Z
+DTSTART:20261218T020000Z
+DTEND:20261218T050000Z
+SUMMARY:Haps Club Dinner at Hermanito Broadway
+LOCATION:Hermanito Broadway\, 802 Broadway\, Santa Monica
+DESCRIPTION:A family-style dinner with one drink included. Everyone who’
+ s been is a fan. Price: From $79.\nhttps://luma.com/9yu9t2or
+URL:https://luma.com/9yu9t2or
 END:VEVENT
 BEGIN:VEVENT
 UID:5e7c5a3e040ef1ef8343@haps.club
