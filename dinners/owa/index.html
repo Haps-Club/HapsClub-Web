@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Haps Club Dinner at &#332;wa &mdash; Venice</title>
+<meta name="description" content="A Haps Club dinner at &#332;wa on Abbot Kinney in Venice. 36 seats, a shared Japanese dinner and one drink.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Standalone page: own inline style, no GA, noindex. Inverted Haps palette (matches /dinners/). */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b0b0c;
+  --bg-2:#131315;
+  --ink:#f4f2ef;
+  --muted:#9a968f;
+  --soft:#bdb9b2;
+  --line:#2a2a2d;
+  --orange:#FF4F00;
+  --sans:'Inter Tight',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6;letter-spacing:-.005em}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:400}
+.mono.or{color:var(--orange)}
+span.nw{white-space:nowrap;display:inline!important;color:inherit!important;font:inherit!important;letter-spacing:inherit!important;margin:0!important}
+
+/* header */
+.hd{position:sticky;top:0;z-index:100;height:64px;background:rgba(11,11,12,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hd-in{max-width:1240px;height:100%;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo img{height:56px;margin:-6px 0;width:auto;filter:brightness(0) invert(1)}
+.hd-cta{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--ink);padding:10px 18px;border-radius:999px;transition:background .2s,color .2s,border-color .2s}
+.hd-cta:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--orange);color:#fff;text-decoration:none;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:19px 34px;border:0;border-radius:999px;cursor:pointer;transition:background .2s,transform .2s}
+.btn:hover{background:#ff6a26;transform:translateY(-1px)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+/* hero */
+.hero{padding:clamp(64px,10vw,140px) 0 clamp(52px,6vw,88px);text-align:center}
+.hero .mono{margin-bottom:36px}
+.hero h1{white-space:nowrap;font-weight:300;font-size:clamp(40px,10.5vw,152px);line-height:.95;letter-spacing:-.05em}
+.hero h1 b{font-weight:600;color:var(--orange)}
+.hero-sub{max-width:980px;text-wrap:balance;margin:40px auto 0;font-size:clamp(20px,2.4vw,30px);color:var(--ink);line-height:1.4;font-weight:600;letter-spacing:-.01em}
+.hero-cta{margin-top:46px;display:flex;flex-direction:column;align-items:center;gap:18px}
+
+/* photo */
+.photo{padding:0 0 clamp(52px,6vw,88px)}
+.photo figure{overflow:hidden;border-radius:4px;border:1px solid var(--line)}
+.photo img.shot{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;object-position:50% 58%}
+.photo .mono{margin-top:16px;text-align:center}
+.owa-mark{width:min(46%,180px);height:auto;margin:0 auto 26px}
+
+.pillar .ph{overflow:hidden;border-radius:4px;border:1px solid var(--line);margin-bottom:26px}
+.ph img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.pillar.has-ph{border-top:0;padding-top:0}
+.duo{max-width:880px;margin:0 auto clamp(40px,5vw,60px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.duo .ph{overflow:hidden;border-radius:4px;border:1px solid var(--line)}
+
+/* facts strip */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:clamp(28px,3.6vw,46px) 20px;text-align:center;border-right:1px solid var(--line)}
+.fact:last-child{border-right:0}
+.fact .v{display:block;margin-top:12px;font-weight:300;font-size:clamp(26px,3.2vw,42px);letter-spacing:-.04em;line-height:1.05}
+.fact .v b{font-weight:600;color:var(--orange)}
+.fact .s{display:block;margin-top:10px;font-size:14px;font-weight:300;color:var(--soft)}
+
+/* sections */
+.sec{padding:clamp(76px,9vw,132px) 0}
+.sec.alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head{text-align:center;max-width:660px;margin:0 auto clamp(46px,6vw,78px)}
+.head h2{font-weight:300;font-size:clamp(36px,5.2vw,70px);line-height:1.02;letter-spacing:-.045em;margin-top:16px}
+.head h2 b{font-weight:600;color:var(--orange)}
+.head p{margin-top:20px;color:var(--soft);font-size:17px;font-weight:300}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,4vw,64px)}
+.pillar{border-top:1px solid var(--ink);padding-top:22px}
+.pillar .n{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--orange)}
+.pillar h3{font-weight:500;font-size:clamp(24px,2.5vw,32px);line-height:1.1;letter-spacing:-.03em;margin-top:16px}
+.pillar .sub{display:block;margin-top:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.pillar p{margin-top:16px;color:var(--soft);font-size:16px;font-weight:300}
+
+/* menu */
+.menu{max-width:880px;margin:0 auto;border-top:1px solid var(--line)}
+.course{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:34px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.course .c{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange)}
+.dish+.dish{margin-top:22px}
+.dish h3{font-weight:500;font-size:clamp(21px,2.4vw,27px);letter-spacing:-.03em;line-height:1.15}
+.dish p{margin-top:6px;color:var(--soft);font-size:15.5px;font-weight:300;max-width:560px}
+.mnote{max-width:880px;margin:26px auto 0;text-align:center;font-size:13px;color:var(--muted)}
+
+/* closing card */
+.card{max-width:720px;margin:0 auto;border:1px solid #3a3a3e;padding:clamp(34px,5vw,64px);border-radius:4px;text-align:center}
+.card .head{margin-bottom:34px}
+.fine{margin:18px auto 0;font-size:12.5px;color:var(--muted);max-width:440px}
+
+/* gate */
+body.locked{overflow:hidden}
+#gate{position:fixed;inset:0;z-index:200;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px}
+.gate-card{width:100%;max-width:400px;text-align:center;border:1px solid #3a3a3e;border-radius:4px;padding:44px 34px}
+.gate-card img{width:150px;height:auto;margin:0 auto 26px}
+.gate-card h2{font-weight:300;font-size:30px;letter-spacing:-.04em;line-height:1.1;margin-top:14px}
+.gate-card input{width:100%;margin-top:28px;font-family:var(--sans);font-size:17px;font-weight:300;color:var(--ink);background:transparent;border:0;border-bottom:1px solid #4a4a4f;padding:8px 0 10px;border-radius:0;outline:none;text-align:center}
+.gate-card input:focus{border-color:var(--orange)}
+.gate-card .btn{margin-top:26px;width:100%;justify-content:center}
+.gate-err{margin-top:14px;min-height:18px;font-size:13px;color:var(--orange)}
+
+/* footer */
+footer{padding:44px 0 56px;border-top:1px solid var(--line)}
+.ft{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.ft a{text-decoration:none}.ft a:hover{color:var(--orange)}
+.ft-links{display:flex;gap:26px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media(max-width:860px){
+  .three{grid-template-columns:1fr}
+  .facts-in{grid-template-columns:repeat(2,1fr)}
+  .fact:nth-child(2){border-right:0}
+  .fact:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media(max-width:640px){
+  .wrap,.hd-in{padding:0 20px}
+  .course{grid-template-columns:1fr;gap:14px}
+  .duo{grid-template-columns:1fr}
+  .ft{flex-direction:column;align-items:flex-start}
+}
+</style></head>
+<body class="locked">
+
+<div id="gate">
+  <div class="gate-card">
+    <img src="img/owa-logo.png" alt="&#332;wa" width="400" height="97">
+    <p class="mono">Haps Club Dinners</p>
+    <h2>Enter the password</h2>
+    <input type="password" id="gatePw" placeholder="Password" autocomplete="off" autocapitalize="characters" aria-label="Password" autofocus>
+    <button class="btn" id="gateBtn" type="button">Unlock</button>
+    <div class="gate-err" id="gateErr" role="alert"></div>
+  </div>
+</div>
+
+<header class="hd">
+  <div class="hd-in">
+    <a class="logo" href="/" aria-label="Haps Club home"><img src="../../assets/img/haps-logo-240.png" alt="Haps Club" width="42" height="42"></a>
+    <a class="hd-cta" href="/dinners/#request">Request a seat</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="mono rv">Haps Club Dinners &nbsp;&middot;&nbsp; Venice &nbsp;&middot;&nbsp; By invitation</p>
+    <h1 class="rv">Dinner at <b>&#332;wa.</b></h1>
+    <p class="hero-sub rv">One night on Abbot Kinney. A shared Japanese dinner, a drink in your hand, and 36 people you will be glad you met.</p>
+    <div class="hero-cta rv">
+      <a class="btn" href="/dinners/#request">Request a seat <span class="arr">&rarr;</span></a>
+      <span class="mono">Date shared with the list</span>
+    </div>
+  </div>
+</section>
+
+<section class="photo">
+  <div class="wrap">
+    <figure class="rv"><img class="shot" src="img/owa-room.jpg" alt="The dining room at &#332;wa in Venice at night" width="1536" height="1152"></figure>
+    <p class="mono rv">&#332;wa &nbsp;&middot;&nbsp; 1635 Abbot Kinney Blvd, Venice</p>
+  </div>
+</section>
+
+<section class="facts">
+  <div class="wrap facts-in">
+    <div class="fact rv">
+      <span class="mono">Where</span>
+      <span class="v">&#332;wa</span>
+      <span class="s">Abbot Kinney Blvd, Venice</span>
+    </div>
+    <div class="fact rv">
+      <span class="mono">The room</span>
+      <span class="v">The Atrium</span>
+      <span class="s">Open-air patio with a fireplace</span>
+    </div>
+    <div class="fact rv">
+      <span class="mono">Seats</span>
+      <span class="v"><b>36</b></span>
+      <span class="s">Then the list closes</span>
+    </div>
+    <div class="fact rv">
+      <span class="mono">Ticket</span>
+      <span class="v">$110</span>
+      <span class="s">Dinner and one drink</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="mono or">The evening</p>
+      <h2>How the night <b>runs.</b></h2>
+      <p>Three parts, one room, no rush.</p>
+    </div>
+    <div class="three">
+      <article class="pillar has-ph rv">
+        <div class="ph"><img src="img/owa-cocktail.jpg" alt="A cocktail on the bar at &#332;wa" width="1536" height="1152" loading="lazy"></div>
+        <span class="n">01</span>
+        <h3>Meet and mingle</h3>
+        <span class="sub">First drink is included</span>
+        <p>Arrive, get your drink, and meet the group before anyone sits down.</p>
+      </article>
+      <article class="pillar has-ph rv">
+        <div class="ph"><img src="img/owa-table.jpg" alt="A table of shared plates at &#332;wa" width="1536" height="1152" loading="lazy"></div>
+        <span class="n">02</span>
+        <h3>Shared dinner</h3>
+        <span class="sub">Full menu below</span>
+        <p>Crudo, crispy rice, nigiri, rolls and two hot plates, passed around the table.</p>
+      </article>
+      <article class="pillar has-ph rv">
+        <div class="ph"><img src="img/owa-dessert.jpg" alt="Dessert at the bar at &#332;wa" width="1536" height="1152" loading="lazy"></div>
+        <span class="n">03</span>
+        <h3>Dessert and connection</h3>
+        <span class="sub">Stay as long as you like</span>
+        <p>Warm beignets, more conversation, and an easy close to the evening.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt">
+  <div class="wrap">
+    <div class="head rv">
+      <img class="owa-mark" src="img/owa-logo.png" alt="&#332;wa" width="400" height="97">
+      <p class="mono or">The menu</p>
+      <h2>What we are <b>eating.</b></h2>
+      <p>&#332;wa is a Japanese restaurant and craft cocktail bar on Abbot Kinney.</p>
+    </div>
+    <div class="duo rv">
+      <div class="ph"><img src="img/owa-sushi-bar.jpg" alt="Chefs at the sushi bar at &#332;wa" width="1536" height="1152" loading="lazy"></div>
+      <div class="ph"><img src="img/owa-sashimi.jpg" alt="Sashimi served on spoons at &#332;wa" width="1536" height="1152" loading="lazy"></div>
+    </div>
+    <div class="menu">
+      <div class="course rv">
+        <span class="c">Appetizers</span>
+        <div>
+          <div class="dish"><h3>&#332;wa Salad</h3><p>Farmers market greens, wafu vinaigrette, avocado, heirloom cherry tomatoes.</p></div>
+          <div class="dish"><h3>Edamame</h3><p>Sea salt, or spicy with shiso and garlic.</p></div>
+          <div class="dish"><h3>Kampachi Crudo</h3><p>Amberjack sashimi, true ponzu, daikon radish sprouts, grape.</p></div>
+          <div class="dish"><h3>Spicy Tuna Crispy Rice</h3><p>Avocado, micro cilantro, serrano, eel sauce.</p></div>
+        </div>
+      </div>
+      <div class="course rv">
+        <span class="c">Nigiri and rolls</span>
+        <div>
+          <div class="dish"><h3>Hamachi</h3><p>Yellowtail, ponzu, serrano, micro cilantro.</p></div>
+          <div class="dish"><h3>Sake</h3><p>Salmon, lemon zest.</p></div>
+          <div class="dish"><h3>Kinney Roll</h3><p>Yellowtail, salmon, spicy tuna, serrano chili, avocado, tobiko.</p></div>
+          <div class="dish"><h3>Shrimp Tempura Roll</h3><p>Spicy mayo, avocado, asparagus, masago.</p></div>
+        </div>
+      </div>
+      <div class="course rv">
+        <span class="c">Hot plates</span>
+        <div>
+          <div class="dish"><h3>Chicken Karaage</h3><p>Fried chicken, cole slaw, spicy mayo.</p></div>
+          <div class="dish"><h3>Teriyaki Salmon</h3><p>Seared salmon, heirloom cherry tomatoes, grilled asparagus.</p></div>
+        </div>
+      </div>
+      <div class="course rv">
+        <span class="c">Dessert</span>
+        <div>
+          <div class="dish"><h3>Beignets</h3><p>Served warm with cr&egrave;me de cassis and whipped cream.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="mnote">A vegetarian menu is available. Tell us about dietary needs when you request your seat.</p>
+  </div>
+</section>
+
+<section class="sec" id="request">
+  <div class="wrap">
+    <div class="card rv">
+      <div class="head">
+        <p class="mono or">36 seats</p>
+        <h2>Request your <b>seat.</b></h2>
+        <p>Open to Haps Weekly readers first. We read every request.</p>
+      </div>
+      <a class="btn" href="/dinners/#request">Request a seat <span class="arr">&rarr;</span></a>
+      <p class="fine">$110 per guest covers dinner and one drink. If there is a seat, we send the date and details by email.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span>&copy; Haps Club &middot; Los Angeles</span>
+    <div class="ft-links"><a href="/">Home</a><a href="/dinners/">Dinners</a><a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+/* password gate (soft gate: hash check, remembered for the browser session) */
+(function(){
+  var HASH='e9738fa1e68b6f9ae82e8724e7b49f1f5a4d45c9562317845567fb18251608ea',KEY='haps_gate_owa';
+  function unlock(){document.getElementById('gate').style.display='none';document.body.classList.remove('locked')}
+  try{if(sessionStorage.getItem(KEY)==='1'){unlock();return}}catch(e){}
+  function sha(s){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)).then(function(b){return Array.prototype.map.call(new Uint8Array(b),function(x){return ('0'+x.toString(16)).slice(-2)}).join('')})}
+  function attempt(){
+    var i=document.getElementById('gatePw');
+    sha(i.value.trim().toUpperCase()).then(function(h){
+      if(h===HASH){try{sessionStorage.setItem(KEY,'1')}catch(e){}unlock()}
+      else{document.getElementById('gateErr').textContent='Wrong password. Try again.';i.value='';i.focus()}
+    });
+  }
+  document.getElementById('gateBtn').addEventListener('click',attempt);
+  document.getElementById('gatePw').addEventListener('keydown',function(e){if(e.key==='Enter')attempt()});
+})();
+/* no-widows pass */
+(function(){
+  document.querySelectorAll('h2,h3,p,.s').forEach(function(el){
+    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),last=null,n;
+    while(n=w.nextNode()){if(n.nodeValue.trim())last=n}
+    if(!last)return;
+    var t=last.nodeValue,m=t.match(/(\S+)\s+(\S+\s*)$/);
+    if(!m)return;
+    var cut=t.length-m[0].length,span=document.createElement('span');
+    span.className='nw';span.textContent=m[0];
+    last.nodeValue=t.slice(0,cut);
+    last.parentNode.insertBefore(span,last.nextSibling);
+  });
+})();
+</script>
+</body></html>
