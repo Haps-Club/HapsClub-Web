@@ -26,7 +26,6 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Los Angeles Auto Show](https://laautoshow.com/): Fri Nov 20 · Los Angeles Convention Center, Downtown Los Angeles · Downtown · From $25
 - [Harbor Glow at West Harbor](https://harborglownights.com/): Fri Nov 20 · West Harbor, San Pedro · Citywide · Tickets
 - [LA Zoo Lights](https://lazoo.org/plan-your-visit/special-experiences/zoolights/): Fri Nov 20 · Los Angeles Zoo, Griffith Park · Citywide · From $19
-- [Music/Words LA: Breaking Screens at the Wende Museum](https://wendemuseum.org/event/music-words-la-curated-by-inna-faliks/): Fri Nov 20 · The Wende Museum Community Center, Culver City · Westside · Free, RSVP
 - [Has the Myth Been Shattered at The Broad](https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered): Sat Nov 21 · The Broad, Downtown · Downtown · Free, reserve
 - [Applefest at Benny Boy Brewing](https://bennyboybrewing.com/applefest): Sat Nov 21 · Benny Boy Brewing, Lincoln Heights · Eastside · Free
 - [Friendsgiving Garden Asado with The Gauchos at Twentieth Street Garden](https://www.twentiethstreetgarden.com/upcomingevents/p/friendsgiving-asado-nov-21): Sat Nov 21 · Twentieth Street Garden, West Adams · Mid-City · $85
@@ -47,6 +46,8 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [4211KM at Théâtre Raymond Kabbaz](https://www.theatreraymondkabbaz.com/4211km): Tue Dec 1 · Théâtre Raymond Kabbaz, Cheviot Hills · Westside · Tickets
 - [3rd Annual Grand Illuminations Opening Night Celebration](https://downtownla.com/do/3rd-annual-grand-illuminations-opening-night-celebration): Thu Dec 3 · The Yard at Cal Plaza, Downtown · Downtown · Free
 - [Makers Market at Craft Contemporary](https://www.craftcontemporary.org/): Fri Dec 4 · Craft Contemporary, Miracle Mile · Mid-City · $12, Sun pay-what-you-wish
+- [CalArts Winter Dance Festival at REDCAT](https://www.redcat.org/events/calarts-winter-dance-festival): Fri Dec 4 · REDCAT, Walt Disney Concert Hall complex, Downtown · Downtown · From $20
+- [Nutcracker Brunch at ORLA](https://www.sevenrooms.com/experiences/orlabymichaelmina/nutcracker-brunch-at-orla-santa-monica-5591308148523008): Sat Dec 5 · ORLA, Regent Santa Monica Beach · Westside · Tickets
 <!-- /AUTO:WEEK -->
 
 ## Guides
