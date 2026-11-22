@@ -111,3 +111,8 @@ footer .fsub-note{font-size:12px;color:var(--f-mute);margin:8px 0 0;line-height:
 .pop .pop-note{font-size:12px;color:var(--f-mute);margin-top:8px}
 @media(max-width:560px){.pop{right:16px;left:16px;bottom:16px;width:auto}}
 @media(prefers-reduced-motion:reduce){.pop{transition:none}}
+/* Instagram icon in header (left of Subscribe, visible on mobile too) */
+.nav .navig{display:inline-flex;align-items:center;justify-content:center;flex:none;width:40px;height:40px;margin-left:12px;border-radius:999px;color:var(--f-ink);text-decoration:none;transition:color .2s ease,background .2s ease}
+.nav .navig:hover{color:var(--f-signal);background:rgba(0,0,0,.05)}
+.nav .navig+.navcta{margin-left:-16px}
+@media(max-width:860px){.nav .navig{margin-left:auto;width:38px;height:38px}.nav .navig+.navcta{margin-left:-6px}}
