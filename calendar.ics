@@ -8,18 +8,6 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
-UID:0b94fdde99a9e5a427de@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261106T043000Z
-DTEND:20261106T060000Z
-SUMMARY:NOW Festival at REDCAT
-LOCATION:REDCAT\, Downtown\, 631 W 2nd St
-DESCRIPTION:Runs Nov 5 - Nov 21. Nine brand-new LA works across dance\, th
- eater\, and performance over three weekends. Price: From $20.\nhttps://ww
- w.redcat.org/now26
-URL:https://www.redcat.org/now26
-END:VEVENT
-BEGIN:VEVENT
 UID:036fa3c856c0916ac82f@haps.club
 DTSTAMP:20261116T000000Z
 DTSTART:20261113T020000Z
@@ -162,73 +150,6 @@ DESCRIPTION:Runs Nov 21 - Nov 22. Weekend 2 of the cider brewery's fall fe
  stival: help press apples from 12 to 5\, live music in the garden 2 to 6.
   21+. Price: Free.\nhttps://bennyboybrewing.com/applefest
 URL:https://bennyboybrewing.com/applefest
-END:VEVENT
-BEGIN:VEVENT
-UID:d4e40396f249d64e6cce@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261121T210000Z
-DTEND:20261122T000000Z
-SUMMARY:Friendsgiving Garden Asado with The Gauchos at Twentieth Street Ga
- rden
-LOCATION:Twentieth Street Garden\, West Adams\, 2267 W 20th St\, Los Angel
- es\, CA 90018
-DESCRIPTION:A six-course buffet asado cooked over open fire by The Gauchos
- \, served over a long afternoon in the garden. Price: $85.\nhttps://www.t
- wentiethstreetgarden.com/upcomingevents/p/friendsgiving-asado-nov-21
-URL:https://www.twentiethstreetgarden.com/upcomingevents/p/friendsgiving-a
- sado-nov-21
-END:VEVENT
-BEGIN:VEVENT
-UID:a3033d9aa1d33a84894d@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261121T220000Z
-DTEND:20261122T000000Z
-SUMMARY:Visualizing the Cosmos with Kip Thorne
-LOCATION:Wende Museum\, Culver City\, 10808 Culver Blvd
-DESCRIPTION:A Nobel laureate and artists on where science meets the sky. P
- rice: Free\, RSVP.\nhttps://www.eventbrite.com/e/visualizing-the-cosmos-s
- cience-art-history-tickets-2002925098888
-URL:https://www.eventbrite.com/e/visualizing-the-cosmos-science-art-histor
- y-tickets-2002925098888
-END:VEVENT
-BEGIN:VEVENT
-UID:a8b4a6316ca3940de5fa@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261122T000000Z
-DTEND:20261122T030000Z
-SUMMARY:Burbank Winter Wine Walk
-LOCATION:N San Fernando Blvd\, Downtown Burbank\, N San Fernando Blvd betw
- een E Magnolia Blvd and E Angeleno Ave\, Burbank\, CA
-DESCRIPTION:A free holiday street fair all day\, with 21+ wine tasting fro
- m 4 to 7 PM. You need a tasting ticket for the wine. Price: Free fair\; t
- asting from $65.\nhttps://www.burbankwinterwinewalk.com/
-URL:https://www.burbankwinterwinewalk.com/
-END:VEVENT
-BEGIN:VEVENT
-UID:da7e9237d5e674d6d36f@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261122T000000Z
-DTEND:20261122T020000Z
-SUMMARY:Catherine Opie Book Signing and Discussion at Arcana: Books on the
-  Arts
-LOCATION:Arcana: Books on the Arts\, Helms Design District\, Culver City\,
-  8675 Washington Blvd\, Culver City\, CA 90232
-DESCRIPTION:Catherine Opie signs and discusses On Identity and Collectivit
- y from Aperture's Photography Workshop Series. Price: Tickets.\nhttps://w
- ww.arcanabooks.com/blog/2026/Sep/17/upcoming-events-260917/
-URL:https://www.arcanabooks.com/blog/2026/Sep/17/upcoming-events-260917/
-END:VEVENT
-BEGIN:VEVENT
-UID:97c337250a912c985717@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261122T033000Z
-DTEND:20261122T070000Z
-SUMMARY:Haps Club Jazz Age Party
-LOCATION:Historic home\, Los Angeles
-DESCRIPTION:A live jazz trio\, Prohibition-era cocktails\, and a historic 
- home turning 100. Price: $45 · $80 for two.\nhttps://luma.com/hapsclub-e
- 193?coupon=HAPSCLUBPLUS
-URL:https://luma.com/hapsclub-e193?coupon=HAPSCLUBPLUS
 END:VEVENT
 BEGIN:VEVENT
 UID:ba1418ba1241b8be4c81@haps.club
