@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-22",
-  "weekLabel": "Week of Nov 16",
+  "updated": "2026-11-23",
+  "weekLabel": "Week of Nov 23",
   "featured": [
+    {
+      "title": "Felipe Baeza: Anima at the Hammer",
+      "pill": "Free · Now open",
+      "tagline": "Over 40 works in the artist's first Los Angeles museum survey.",
+      "meta": "Tue–Sun 11 AM–6 PM · Westwood · Free",
+      "cta": "Details",
+      "link": "https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima",
+      "tags": "culture free",
+      "area": "westside",
+      "where": "Hammer Museum, Westwood",
+      "price": "Free",
+      "starts": "20261121T110000",
+      "ends": "20270404T180000"
+    },
     {
       "title": "Haps Club Dinner at Hermanito Broadway",
       "pill": "From $79 · Thu 12/17",
@@ -29,20 +43,6 @@
       "where": "Descanso Gardens, La Cañada Flintridge",
       "price": "From $29",
       "ends": "20270109T235900"
-    },
-    {
-      "title": "Felipe Baeza: Anima at the Hammer",
-      "pill": "Free · Now open",
-      "tagline": "Over 40 works in the artist's first Los Angeles museum survey.",
-      "meta": "Tue–Sun 11 AM–6 PM · Westwood · Free",
-      "cta": "Details",
-      "link": "https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima",
-      "tags": "culture free",
-      "area": "westside",
-      "where": "Hammer Museum, Westwood",
-      "price": "Free",
-      "starts": "20261121T110000",
-      "ends": "20270404T180000"
     }
   ],
   "events": [
@@ -270,6 +270,19 @@
       "starts": "20261126T073000",
       "ends": "20261126T110000",
       "addr": "200 N Spring St, Los Angeles, CA 90012"
+    },
+    {
+      "title": "Apple picking in Oak Glen",
+      "month": "Now",
+      "day": "•",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "citywide",
+      "where": "Oak Glen, San Bernardino foothills",
+      "price": "Varies",
+      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
+      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
+      "ends": "20261126T235900"
     },
     {
       "title": "LA Kings Holiday Ice Festival at L.A. LIVE",
@@ -673,31 +686,18 @@
       "addr": "135 N Grand Ave, Los Angeles, CA 90012"
     },
     {
-      "title": "Poncho Sanchez New Year's Eve",
+      "title": "Purpose at Geffen Playhouse",
       "month": "DEC",
-      "day": "31",
-      "cat": "Music",
-      "tags": "music date",
-      "area": "hollywood",
-      "where": "Catalina Jazz Club, 6725 W Sunset Blvd",
-      "price": "From $78",
-      "link": "https://www.catalinajazzclub.com/",
-      "tagline": "Latin jazz to close the year. Early show 8:30, late show 11pm.",
-      "starts": "20261231T203000",
-      "ends": "20261231T235900"
-    },
-    {
-      "title": "Apple picking in Oak Glen",
-      "month": "Now",
-      "day": "•",
-      "cat": "Outdoors",
-      "tags": "outdoors date",
-      "area": "citywide",
-      "where": "Oak Glen, San Bernardino foothills",
-      "price": "Varies",
-      "link": "https://www.timeout.com/los-angeles/things-to-do/where-to-go-apple-picking-around-los-angeles",
-      "tagline": "U-pick apples, cider, and a corn maze, one to two hours from most of LA.",
-      "ends": "20261126T235900"
+      "day": "20",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "westside",
+      "where": "Geffen Playhouse, Westwood",
+      "price": "Tickets",
+      "link": "https://www.geffenplayhouse.org/shows/purpose/",
+      "tagline": "The original Broadway cast in Branden Jacobs-Jenkins' Pulitzer and Tony winner. Los Angeles premiere, through Dec 20.",
+      "ends": "20261220T235900",
+      "addr": "10886 Le Conte Ave, Los Angeles, CA 90024"
     },
     {
       "title": "Holly Jolly Christmas Bar at 3rd Base",
@@ -712,6 +712,34 @@
       "tagline": "Christmas pop-up bar at 3rd Base on Cahuenga, 21 and over, through December 27.",
       "ends": "20261227T235900",
       "addr": "1562 N Cahuenga Blvd, Hollywood, CA 90028"
+    },
+    {
+      "title": "Poncho Sanchez New Year's Eve",
+      "month": "DEC",
+      "day": "31",
+      "cat": "Music",
+      "tags": "music date",
+      "area": "hollywood",
+      "where": "Catalina Jazz Club, 6725 W Sunset Blvd",
+      "price": "From $78",
+      "link": "https://www.catalinajazzclub.com/",
+      "tagline": "Latin jazz to close the year. Early show 8:30, late show 11pm.",
+      "starts": "20261231T203000",
+      "ends": "20261231T235900"
+    },
+    {
+      "title": "Enchanted: Forest of Light at Descanso Gardens",
+      "month": "JAN",
+      "day": "9",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "eastside",
+      "where": "Descanso Gardens, La Cañada Flintridge",
+      "price": "From $29",
+      "link": "https://www.descansogardens.org/enchanted/",
+      "tagline": "The night light walk turns 10: the Ancient Forest, a new laser show with a snowfall finale, and giant koi. Through Jan 9.",
+      "ends": "20270109T235900",
+      "addr": "1418 Descanso Dr, La Cañada Flintridge, CA 91011"
     },
     {
       "title": "Matilda's",
@@ -1245,34 +1273,6 @@
       "link": "https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/dining/birdie-gs-la.restaurant.html",
       "tagline": "Jeremy Fox's American brasserie, now inside the Fairmont, serving breakfast, lunch and dinner.",
       "addr": "2025 Avenue of the Stars, Los Angeles, CA 90067"
-    },
-    {
-      "title": "Enchanted: Forest of Light at Descanso Gardens",
-      "month": "NOV",
-      "day": "22",
-      "cat": "Outdoors",
-      "tags": "outdoors date",
-      "area": "eastside",
-      "where": "Descanso Gardens, La Cañada Flintridge",
-      "price": "From $29",
-      "link": "https://www.descansogardens.org/enchanted/",
-      "tagline": "The night light walk turns 10: the Ancient Forest, a new laser show with a snowfall finale, and giant koi. Through Jan 9.",
-      "ends": "20270109T235900",
-      "addr": "1418 Descanso Dr, La Cañada Flintridge, CA 91011"
-    },
-    {
-      "title": "Purpose at Geffen Playhouse",
-      "month": "NOV",
-      "day": "11",
-      "cat": "Culture",
-      "tags": "culture date",
-      "area": "westside",
-      "where": "Geffen Playhouse, Westwood",
-      "price": "Tickets",
-      "link": "https://www.geffenplayhouse.org/shows/purpose/",
-      "tagline": "The original Broadway cast in Branden Jacobs-Jenkins' Pulitzer and Tony winner. Los Angeles premiere, through Dec 20.",
-      "ends": "20261220T235900",
-      "addr": "10886 Le Conte Ave, Los Angeles, CA 90024"
     }
   ],
   "archive": [
@@ -1350,10 +1350,5 @@
       "area": "citywide",
       "ends": "20270110T220000"
     }
-  ],
-  "announcement": {
-    "text": "This week: Happy Hour Thu Nov 19 and the Jazz Age Party Sat Nov 21. Dinner Dec 17.",
-    "link": "https://luma.com/TheHapsClub",
-    "ends": "20261121T230000"
-  }
+  ]
 }
