@@ -1,0 +1,159 @@
+{
+ "posts": [
+  {
+   "slug": "wasson",
+   "title": "Sam Wasson on Frank Capra at Chevalier's Books",
+   "headline": "Sam Wasson on Frank Capra",
+   "sub": "The Hollywood biographer on his new life of the director.",
+   "layout": "C",
+   "statement": "A Monday night with a Hollywood biographer.",
+   "hook": "Monday night on Larchmont: Sam Wasson talks about Frank Capra.",
+   "body": "Wasson is at Chevalier's Books with his new biography, Frank Capra: A Life. RSVP required.",
+   "question": "Which Capra film would you watch first?",
+   "hashtags": "#LosAngeles #Larchmont #bookstore #FrankCapra #authortalk",
+   "linkword": "RSVP",
+   "post_at": "2026-11-23T12:30",
+   "photo": "src/wasson.jpg",
+   "details": "Mon Nov 23 · 7 PM–8:30 PM · Chevalier's Books, Larchmont",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:Chevalier%27s_Books_Signage_(2026).jpg",
+   "credit": "Chevalier's Books on Larchmont Boulevard. Sterling Dee, CC BY 4.0, via Wikimedia Commons"
+  },
+  {
+   "slug": "lastwaltz",
+   "title": "The Last Waltz at Vidiots",
+   "headline": "The Last Waltz at Vidiots",
+   "sub": "The Band's farewell concert film, on the big screen in Eagle Rock.",
+   "layout": "A",
+   "hook": "The Last Waltz is at Vidiots on Tuesday night.",
+   "body": "The Band's farewell concert film, on the big screen in Eagle Rock at 7:30. Some Vidiots shows are walk-up only, so check the listing before you go.",
+   "question": "Best concert film ever made, or is there a better one?",
+   "hashtags": "#LosAngeles #EagleRock #Vidiots #TheLastWaltz #repertorycinema",
+   "linkword": "Tickets",
+   "post_at": "2026-11-23T19:30",
+   "photo": "src/lastwaltz.jpg",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:228A9134.jpg",
+   "credit": "the Vidiots marquee on Eagle Rock Boulevard. APickleForTheKnowingOnes, CC BY 4.0, via Wikimedia Commons"
+  },
+  {
+   "slug": "yuletide",
+   "title": "Yuletide Cinemaland at Heritage Square",
+   "headline": "Yuletide Cinemaland",
+   "sub": "Outdoor holiday movies at Heritage Square, select nights through Dec 19.",
+   "layout": "B",
+   "hook": "Holiday movies outside at Heritage Square, on select nights through Dec 19.",
+   "body": "Yuletide Cinemaland starts Saturday with The Grinch and Rudolph, then Home Alone on Dec 5, The Muppet Christmas Carol on Dec 12, Rent on Dec 18 and The Nightmare Before Christmas on Dec 19.",
+   "question": "Which night are you picking?",
+   "hashtags": "#LosAngeles #outdoormovies #HeritageSquare #holidaymovies #StreetFoodCinema",
+   "linkword": "Tickets",
+   "post_at": "2026-11-26T12:30",
+   "photo": "src/yuletide.jpg",
+   "photo_source": "venue page",
+   "credit": "a Street Food Cinema screening. Street Food Cinema"
+  },
+  {
+   "slug": "elf",
+   "title": "Elf in Concert at Walt Disney Concert Hall",
+   "headline": "Elf in Concert",
+   "sub": "The Hollywood Bowl Orchestra plays the score live to the film at Disney Hall.",
+   "layout": "A",
+   "meta": [
+    [
+     "Nov 28 &ndash; 29",
+     "Disney Hall"
+    ],
+    [
+     "Downtown",
+     "From $90"
+    ]
+   ],
+   "details": "Sat Nov 28 – Sun Nov 29 · Walt Disney Concert Hall, Downtown\nFrom $90",
+   "hook": "Elf on the big screen, with the Hollywood Bowl Orchestra playing John Debney's score live.",
+   "body": "Two days at Walt Disney Concert Hall this weekend. Come early for the Winter Wonderland in BP Hall and the Bob Baker marionettes before the show.",
+   "question": "Who are you bringing?",
+   "hashtags": "#LosAngeles #Elf #DisneyHall #holidayconcert #DTLA",
+   "linkword": "Tickets",
+   "post_at": "2026-11-27T09:00",
+   "photo": "src/elf.jpg",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:Image-Disney_Concert_Hall_by_Carol_Highsmith_edit.jpg",
+   "credit": "Walt Disney Concert Hall, Downtown. Carol M. Highsmith, public domain"
+  },
+  {
+   "slug": "parade",
+   "title": "Hollywood Christmas Parade",
+   "headline": "Hollywood Christmas Parade",
+   "sub": "Sunday on Hollywood Boulevard. Curbside viewing is free.",
+   "layout": "B",
+   "meta": [
+    [
+     "Sun Nov 29",
+     "Hollywood Blvd"
+    ],
+    [
+     "Curbside",
+     "Free"
+    ]
+   ],
+   "details": "Sun Nov 29 · Hollywood Boulevard\nFree curbside viewing. Grandstand seats are ticketed.",
+   "hook": "The Hollywood Christmas Parade is Sunday.",
+   "body": "You can watch from the curb for free along most of the route on Hollywood Boulevard, or buy a grandstand seat. The start time isn't posted yet, so check the parade site before you head out.",
+   "question": "Curb or grandstand?",
+   "hashtags": "#LosAngeles #Hollywood #HollywoodChristmasParade #holidaysinLA #free",
+   "linkword": "Details",
+   "post_at": "2026-11-28T19:30",
+   "photo": "src/parade.jpg",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:Hollywood_Christmas_parade_(3987526).jpeg",
+   "credit": "the TCL Chinese Theatre on Hollywood Boulevard during a past parade. U.S. Space Force / Van Ha, public domain"
+  },
+  {
+   "slug": "obsession",
+   "title": "Celebrating the Music of Obsession at the GRAMMY Museum",
+   "headline": "The Music of Obsession",
+   "sub": "Composer Rock Burwell on scoring the film, with clips.",
+   "layout": "C",
+   "statement": "The score, explained by its composer.",
+   "hook": "Monday night at the GRAMMY Museum: how the score for Obsession was made.",
+   "body": "Composer Rock Burwell talks through his music for Curry Barker's film Obsession, with clips, in the Clive Davis Theater. Doors at 7, talk at 7:30.",
+   "question": "Which film score do you still hum?",
+   "hashtags": "#LosAngeles #GRAMMYMuseum #filmscore #DTLA #filmmusic",
+   "linkword": "Tickets",
+   "post_at": "2026-11-30T12:30",
+   "photo": "src/obsession.jpg",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:Grammy_Museum,_July_2022.JPG",
+   "credit": "the GRAMMY Museum entrance at L.A. Live. Benoît Prieur, CC0"
+  },
+  {
+   "slug": "brass",
+   "title": "Holiday Brass at Walt Disney Concert Hall",
+   "headline": "Holiday Brass",
+   "sub": "LA Phil brass play the season at Disney Hall, with a wine reception first.",
+   "layout": "A",
+   "hook": "LA Phil brass, Tuesday night at Disney Hall.",
+   "body": "Holiday arrangements, a narrated Twas the Night Before Christmas and a Hanukkah medley. There's a free wine reception in BP Hall at 6:30, and the concert starts at 8.",
+   "question": "Brass or strings for the holidays?",
+   "hashtags": "#LosAngeles #LAPhil #DisneyHall #holidayconcert #DTLA",
+   "linkword": "Tickets",
+   "post_at": "2026-11-30T17:00",
+   "photo": "src/brass.jpg",
+   "photo_source": "https://commons.wikimedia.org/wiki/File:Walt_Disney_Concert_Hall_Partial_View_sw_2013.jpg",
+   "credit": "Walt Disney Concert Hall, Downtown. Tuxyso, CC BY-SA 3.0, via Wikimedia Commons"
+  },
+  {
+   "slug": "windowwa",
+   "title": "The Win~Dow, West Adams",
+   "headline": "The Win~Dow, West Adams",
+   "sub": "The smashburger counter's new West Adams location, open daily.",
+   "layout": "B",
+   "hook": "The Win~Dow is open in West Adams.",
+   "body": "Smashburgers on West Jefferson, open every day: 11 to 9 on weekdays, 9 to 9 on weekends.",
+   "question": "Single or double?",
+   "hashtags": "#LosAngeles #WestAdams #smashburger #LAeats #newrestaurant",
+   "linkword": "Details",
+   "post_at": "2026-12-02T12:30",
+   "photo": "src/windowwa.jpg",
+   "photo_source": "https://www.thewin-dow.la/ (venue site)",
+   "credit": "The Win~Dow. The Win~Dow"
+  }
+ ],
+ "carousels": [],
+ "cut": []
+}
