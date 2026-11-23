@@ -28,7 +28,9 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Felipe Baeza: Anima at the Hammer](https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima): Sat Nov 21 · Hammer Museum, Westwood · Westside · Free
 - [Has the Myth Been Shattered at The Broad](https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered): Sat Nov 21 · The Broad, Downtown · Downtown · Free, reserve
 - [California Collectives: Asian American Moderns at the Vincent Price Art Museum](https://www.lacma.org/art/exhibition/california-collectives-asian-american-moderns-1924-1965-vincent-price-gallery): Sat Nov 21 · Vincent Price Art Museum, Monterey Park · Eastside · Varies
+- [Sam Wasson on Frank Capra at Chevalier's Books](https://www.chevaliersbooks.com/events): Mon Nov 23 · Chevalier's Books, Larchmont · Mid-City · RSVP
 - [Addams Family Values at LACMA](https://www.lacma.org/event-calendar-by-day): Mon Nov 23 · LACMA, Keck Plaza · Mid-City · $10
+- [The Last Waltz at Vidiots](https://vidiotsfoundation.org/coming-soon/): Tue Nov 24 · Vidiots, Eagle Rock · Eastside · Tickets
 - [Dub Club presents Kabaka Pyramid at The Echoplex](https://www.theecho.com/shows): Wed Nov 25 · The Echoplex, Echo Park · Eastside · Tickets
 - [Turkey Trot Los Angeles](https://www.turkeytrot.la): Thu Nov 26 · Los Angeles City Hall to Grand Park, Downtown · Downtown · From $54.90
 - [LA Kings Holiday Ice Festival at L.A. LIVE](https://link.bucketlisters.com/Tw8k): Fri Nov 27 · L.A. LIVE, Downtown · Downtown · From $25
@@ -37,8 +39,11 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Home Alone in Concert at Walt Disney Concert Hall](https://www.laphil.com/events/instances/1py8126p/2026-11-27/home-alone-in-concert-2026): Fri Nov 27 · Walt Disney Concert Hall, Downtown · Downtown · From $90
 - [A Charlie Brown Christmas at Catalina Jazz Club](https://www.catalinajazzclub.com/): Fri Nov 27 · Catalina Jazz Club, 6725 W Sunset Blvd · Hollywood · Tickets
 - [Bob Baker's Nutcracker at Sierra Madre Playhouse](https://www.sierramadreplayhouse.org/2027/theatre-family-bob-bakers-nutcracker): Sat Nov 28 · Sierra Madre Playhouse, Sierra Madre · Citywide · From $25
+- [Yuletide Cinemaland at Heritage Square](https://www.streetfoodcinema.com): Sat Nov 28 · Heritage Square Museum, Montecito Heights · Eastside · Tickets
 - [LA County Tree Lighting at The Music Center](https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-holiday-tree-lighting/): Mon Nov 30 · Jerry Moss Plaza, The Music Center, Downtown · Downtown · Free
+- [Celebrating the Music of Obsession at the GRAMMY Museum](https://www.grammymuseum.org/event/celebrating-the-music-of-obsession): Mon Nov 30 · GRAMMY Museum, L.A. Live · Downtown · Tickets
 - [4211KM at Théâtre Raymond Kabbaz](https://www.theatreraymondkabbaz.com/4211km): Tue Dec 1 · Théâtre Raymond Kabbaz, Cheviot Hills · Westside · Tickets
+- [Holiday Brass at Walt Disney Concert Hall](https://www.laphil.com/events/holiday-brass-chamber-music): Tue Dec 1 · Walt Disney Concert Hall, Downtown · Downtown · From $29
 - [3rd Annual Grand Illuminations Opening Night Celebration](https://downtownla.com/do/3rd-annual-grand-illuminations-opening-night-celebration): Thu Dec 3 · The Yard at Cal Plaza, Downtown · Downtown · Free
 - [Makers Market at Craft Contemporary](https://www.craftcontemporary.org/): Fri Dec 4 · Craft Contemporary, Miracle Mile · Mid-City · $12, Sun pay-what-you-wish
 - [CalArts Winter Dance Festival at REDCAT](https://www.redcat.org/events/calarts-winter-dance-festival): Fri Dec 4 · REDCAT, Walt Disney Concert Hall complex, Downtown · Downtown · From $20

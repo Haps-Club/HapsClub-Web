@@ -168,6 +168,19 @@ URL:https://www.lacma.org/art/exhibition/california-collectives-asian-amer
  ican-moderns-1924-1965-vincent-price-gallery
 END:VEVENT
 BEGIN:VEVENT
+UID:cbb306346ad3ecd61ea6@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261124T030000Z
+DTEND:20261124T043000Z
+SUMMARY:Sam Wasson on Frank Capra at Chevalier's Books
+LOCATION:Chevalier's Books\, Larchmont\, 133 N Larchmont Blvd\, Los Angele
+ s\, CA 90004
+DESCRIPTION:Sam Wasson talks about Frank Capra: A Life\, his biography of 
+ the director. RSVP required. Price: RSVP.\nhttps://www.chevaliersbooks.co
+ m/events
+URL:https://www.chevaliersbooks.com/events
+END:VEVENT
+BEGIN:VEVENT
 UID:ba1418ba1241b8be4c81@haps.club
 DTSTAMP:20261122T000000Z
 DTSTART:20261124T033000Z
@@ -177,6 +190,19 @@ LOCATION:LACMA\, Keck Plaza\, 5905 Wilshire Blvd
 DESCRIPTION:A darkly funny pre-Thanksgiving movie night under the stars. P
  rice: $10.\nhttps://www.lacma.org/event-calendar-by-day
 URL:https://www.lacma.org/event-calendar-by-day
+END:VEVENT
+BEGIN:VEVENT
+UID:43dcefad5839d20df6ee@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261125T033000Z
+DTEND:20261125T063000Z
+SUMMARY:The Last Waltz at Vidiots
+LOCATION:Vidiots\, Eagle Rock\, 4884 Eagle Rock Blvd\, Los Angeles\, CA 90
+ 041
+DESCRIPTION:The Band's farewell concert film on the screen at Vidiots\, Tu
+ esday at 7:30. Some shows are walk-up only. Price: Tickets.\nhttps://vidi
+ otsfoundation.org/coming-soon/
+URL:https://vidiotsfoundation.org/coming-soon/
 END:VEVENT
 BEGIN:VEVENT
 UID:cf9c7a379175f5810a64@haps.club
@@ -284,6 +310,19 @@ URL:https://www.sierramadreplayhouse.org/2027/theatre-family-bob-bakers-nu
  tcracker
 END:VEVENT
 BEGIN:VEVENT
+UID:bc7e30f2bb9c1d198fb0@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261129T013000Z
+DTEND:20261129T075900Z
+SUMMARY:Yuletide Cinemaland at Heritage Square
+LOCATION:Heritage Square Museum\, Montecito Heights\, 3800 Homer St\, Los 
+ Angeles\, CA 90031
+DESCRIPTION:Runs Nov 28 - Dec 19. Outdoor holiday movies on select nights\
+ , starting with The Grinch on Nov 28. Gates 5:30\, check each date. Price
+ : Tickets.\nhttps://www.streetfoodcinema.com
+URL:https://www.streetfoodcinema.com
+END:VEVENT
+BEGIN:VEVENT
 UID:bb649301e59c983b92f9@haps.club
 DTSTAMP:20261122T000000Z
 DTSTART:20261201T010000Z
@@ -299,6 +338,19 @@ URL:https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-ho
  liday-tree-lighting/
 END:VEVENT
 BEGIN:VEVENT
+UID:a47590ba5587cb0c57db@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261201T033000Z
+DTEND:20261201T050000Z
+SUMMARY:Celebrating the Music of Obsession at the GRAMMY Museum
+LOCATION:GRAMMY Museum\, L.A. Live\, 800 W Olympic Blvd\, Los Angeles\, CA
+  90015
+DESCRIPTION:Composer Rock Burwell talks through his score for the film Obs
+ ession\, with clips. Doors 7\, talk 7:30. Price: Tickets.\nhttps://www.gr
+ ammymuseum.org/event/celebrating-the-music-of-obsession
+URL:https://www.grammymuseum.org/event/celebrating-the-music-of-obsession
+END:VEVENT
+BEGIN:VEVENT
 UID:22834dea09d9acc3ab5b@haps.club
 DTSTAMP:20261122T000000Z
 DTSTART:20261202T033000Z
@@ -308,6 +360,19 @@ LOCATION:Théâtre Raymond Kabbaz\, Cheviot Hills\, 10361 W Pico Blvd
 DESCRIPTION:A family story stretched between Paris and Tehran. Price: Tick
  ets.\nhttps://www.theatreraymondkabbaz.com/4211km
 URL:https://www.theatreraymondkabbaz.com/4211km
+END:VEVENT
+BEGIN:VEVENT
+UID:60564b2cc5d391f4249c@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261202T040000Z
+DTEND:20261202T063000Z
+SUMMARY:Holiday Brass at Walt Disney Concert Hall
+LOCATION:Walt Disney Concert Hall\, Downtown\, 111 S Grand Ave\, Los Angel
+ es\, CA 90012
+DESCRIPTION:LA Phil brass play holiday arrangements\, a narrated Twas the 
+ Night Before Christmas and a Hanukkah medley. Wine reception at 6:30. Pri
+ ce: From $29.\nhttps://www.laphil.com/events/holiday-brass-chamber-music
+URL:https://www.laphil.com/events/holiday-brass-chamber-music
 END:VEVENT
 BEGIN:VEVENT
 UID:d966b56408e9404a50e4@haps.club

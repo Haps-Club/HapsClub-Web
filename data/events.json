@@ -227,6 +227,21 @@
       "addr": "1301 Avenida Cesar Chavez, Monterey Park, CA 91754"
     },
     {
+      "title": "Sam Wasson on Frank Capra at Chevalier's Books",
+      "month": "NOV",
+      "day": "23",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "midcity",
+      "where": "Chevalier's Books, Larchmont",
+      "price": "RSVP",
+      "link": "https://www.chevaliersbooks.com/events",
+      "tagline": "Sam Wasson talks about Frank Capra: A Life, his biography of the director. RSVP required.",
+      "starts": "20261123T190000",
+      "ends": "20261123T203000",
+      "addr": "133 N Larchmont Blvd, Los Angeles, CA 90004"
+    },
+    {
       "title": "Addams Family Values at LACMA",
       "month": "NOV",
       "day": "23",
@@ -240,6 +255,21 @@
       "starts": "20261123T193000",
       "ends": "20261123T210000",
       "addr": "5905 Wilshire Blvd"
+    },
+    {
+      "title": "The Last Waltz at Vidiots",
+      "month": "NOV",
+      "day": "24",
+      "cat": "Culture",
+      "tags": "culture music",
+      "area": "eastside",
+      "where": "Vidiots, Eagle Rock",
+      "price": "Tickets",
+      "link": "https://vidiotsfoundation.org/coming-soon/",
+      "tagline": "The Band's farewell concert film on the screen at Vidiots, Tuesday at 7:30. Some shows are walk-up only.",
+      "starts": "20261124T193000",
+      "ends": "20261124T223000",
+      "addr": "4884 Eagle Rock Blvd, Los Angeles, CA 90041"
     },
     {
       "title": "Dub Club presents Kabaka Pyramid at The Echoplex",
@@ -374,6 +404,21 @@
       "addr": "87 W Sierra Madre Blvd, Sierra Madre, CA 91024"
     },
     {
+      "title": "Yuletide Cinemaland at Heritage Square",
+      "month": "NOV",
+      "day": "28",
+      "cat": "Outdoors",
+      "tags": "outdoors culture",
+      "area": "eastside",
+      "where": "Heritage Square Museum, Montecito Heights",
+      "price": "Tickets",
+      "link": "https://www.streetfoodcinema.com",
+      "tagline": "Outdoor holiday movies on select nights, starting with The Grinch on Nov 28. Gates 5:30, check each date.",
+      "starts": "20261128T173000",
+      "ends": "20261219T235900",
+      "addr": "3800 Homer St, Los Angeles, CA 90031"
+    },
+    {
       "title": "LA County Tree Lighting at The Music Center",
       "month": "NOV",
       "day": "30",
@@ -389,6 +434,21 @@
       "addr": "135 N Grand Ave, Los Angeles, CA 90012"
     },
     {
+      "title": "Celebrating the Music of Obsession at the GRAMMY Museum",
+      "month": "NOV",
+      "day": "30",
+      "cat": "Culture",
+      "tags": "culture music",
+      "area": "dtla",
+      "where": "GRAMMY Museum, L.A. Live",
+      "price": "Tickets",
+      "link": "https://www.grammymuseum.org/event/celebrating-the-music-of-obsession",
+      "tagline": "Composer Rock Burwell talks through his score for the film Obsession, with clips. Doors 7, talk 7:30.",
+      "starts": "20261130T193000",
+      "ends": "20261130T210000",
+      "addr": "800 W Olympic Blvd, Los Angeles, CA 90015"
+    },
+    {
       "title": "4211KM at Théâtre Raymond Kabbaz",
       "month": "DEC",
       "day": "1",
@@ -402,6 +462,21 @@
       "starts": "20261201T193000",
       "ends": "20261201T213000",
       "addr": "10361 W Pico Blvd"
+    },
+    {
+      "title": "Holiday Brass at Walt Disney Concert Hall",
+      "month": "DEC",
+      "day": "1",
+      "cat": "Music",
+      "tags": "music culture",
+      "area": "dtla",
+      "where": "Walt Disney Concert Hall, Downtown",
+      "price": "From $29",
+      "link": "https://www.laphil.com/events/holiday-brass-chamber-music",
+      "tagline": "LA Phil brass play holiday arrangements, a narrated Twas the Night Before Christmas and a Hanukkah medley. Wine reception at 6:30.",
+      "starts": "20261201T200000",
+      "ends": "20261201T223000",
+      "addr": "111 S Grand Ave, Los Angeles, CA 90012"
     },
     {
       "title": "3rd Annual Grand Illuminations Opening Night Celebration",
@@ -1273,6 +1348,78 @@
       "link": "https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/dining/birdie-gs-la.restaurant.html",
       "tagline": "Jeremy Fox's American brasserie, now inside the Fairmont, serving breakfast, lunch and dinner.",
       "addr": "2025 Avenue of the Stars, Los Angeles, CA 90067"
+<<<<<<< Updated upstream
+=======
+    },
+    {
+      "title": "Enchanted: Forest of Light at Descanso Gardens",
+      "month": "NOV",
+      "day": "22",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "eastside",
+      "where": "Descanso Gardens, La Cañada Flintridge",
+      "price": "From $29",
+      "link": "https://www.descansogardens.org/enchanted/",
+      "tagline": "The night light walk turns 10: the Ancient Forest, a new laser show with a snowfall finale, and giant koi. Through Jan 9.",
+      "ends": "20270109T235900",
+      "addr": "1418 Descanso Dr, La Cañada Flintridge, CA 91011"
+    },
+    {
+      "title": "Purpose at Geffen Playhouse",
+      "month": "NOV",
+      "day": "11",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "westside",
+      "where": "Geffen Playhouse, Westwood",
+      "price": "Tickets",
+      "link": "https://www.geffenplayhouse.org/shows/purpose/",
+      "tagline": "The original Broadway cast in Branden Jacobs-Jenkins' Pulitzer and Tony winner. Los Angeles premiere, through Dec 20.",
+      "ends": "20261220T235900",
+      "addr": "10886 Le Conte Ave, Los Angeles, CA 90024"
+    },
+    {
+      "title": "Elf in Concert at Walt Disney Concert Hall",
+      "month": "NOV",
+      "day": "28",
+      "cat": "Music",
+      "tags": "music culture",
+      "area": "dtla",
+      "where": "Walt Disney Concert Hall, Downtown",
+      "price": "From $90",
+      "link": "https://www.laphil.com/events/elf-in-concert",
+      "tagline": "The Hollywood Bowl Orchestra plays John Debney's score live to the film. Two days, Nov 28 and 29.",
+      "ends": "20261129T235900",
+      "addr": "111 S Grand Ave, Los Angeles, CA 90012"
+    },
+    {
+      "title": "Hollywood Christmas Parade",
+      "month": "NOV",
+      "day": "29",
+      "cat": "Culture",
+      "tags": "free culture",
+      "area": "hollywood",
+      "where": "Hollywood Boulevard, Hollywood",
+      "price": "Free",
+      "link": "https://thehollywoodchristmasparade.org/",
+      "tagline": "Sunday evening on Hollywood Boulevard. Curbside viewing is free along most of the route; grandstand seats are ticketed.",
+      "ends": "20261129T235900"
+    },
+    {
+      "title": "The Win~Dow, West Adams",
+      "month": "New",
+      "day": "★",
+      "cat": "Food",
+      "tags": "food",
+      "area": "midcity",
+      "where": "3701 W Jefferson Blvd, West Adams",
+      "price": "$",
+      "link": "https://www.thewin-dow.la/location/west-adams/",
+      "tagline": "The smashburger counter's West Adams location. Open daily, 11 to 9 on weekdays, 9 to 9 on weekends.",
+      "addr": "3701 W Jefferson Blvd, Los Angeles, CA 90016",
+      "added": "2026-11-22"
+>>>>>>> Stashed changes
     }
   ],
   "archive": [
