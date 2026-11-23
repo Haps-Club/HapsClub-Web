@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-22",
   "weekLabel": "Week of Nov 16",
   "featured": [
     {
@@ -14,7 +14,35 @@
       "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
       "price": "From $79",
       "starts": "20261217T180000",
-      "ends": "20261217T210000"
+      "ends": "20261217T210000",
+      "lead": true
+    },
+    {
+      "title": "Enchanted: Forest of Light at Descanso Gardens",
+      "pill": "From $29 · Through Jan 9",
+      "tagline": "The light walk turns 10, with a new laser show that ends in snowfall.",
+      "meta": "Nightly through Jan 9 · La Cañada Flintridge · From $29",
+      "cta": "Get tickets",
+      "link": "https://www.descansogardens.org/enchanted/",
+      "tags": "outdoors date",
+      "area": "eastside",
+      "where": "Descanso Gardens, La Cañada Flintridge",
+      "price": "From $29",
+      "ends": "20270109T235900"
+    },
+    {
+      "title": "Felipe Baeza: Anima at the Hammer",
+      "pill": "Free · Now open",
+      "tagline": "Over 40 works in the artist's first Los Angeles museum survey.",
+      "meta": "Tue–Sun 11 AM–6 PM · Westwood · Free",
+      "cta": "Details",
+      "link": "https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima",
+      "tags": "culture free",
+      "area": "westside",
+      "where": "Hammer Museum, Westwood",
+      "price": "Free",
+      "starts": "20261121T110000",
+      "ends": "20270404T180000"
     }
   ],
   "events": [
@@ -169,19 +197,34 @@
       "addr": "221 S Grand Ave"
     },
     {
-      "title": "Applefest at Benny Boy Brewing",
+      "title": "Felipe Baeza: Anima at the Hammer",
       "month": "NOV",
       "day": "21",
-      "cat": "Food",
-      "tags": "food free date",
-      "area": "eastside",
-      "where": "Benny Boy Brewing, Lincoln Heights",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "westside",
+      "where": "Hammer Museum, Westwood",
       "price": "Free",
-      "link": "https://bennyboybrewing.com/applefest",
-      "tagline": "Weekend 2 of the cider brewery's fall festival: help press apples from 12 to 5, live music in the garden 2 to 6. 21+.",
-      "starts": "20261121T120000",
-      "ends": "20261122T180000",
-      "addr": "1821 Daly St, Los Angeles, CA 90031"
+      "link": "https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima",
+      "tagline": "Over 40 works in Baeza's first museum survey in Los Angeles, rooted in printmaking. Free, Tuesday to Sunday.",
+      "starts": "20261121T110000",
+      "ends": "20270404T180000",
+      "addr": "10899 Wilshire Blvd, Los Angeles, CA 90024"
+    },
+    {
+      "title": "California Collectives: Asian American Moderns at the Vincent Price Art Museum",
+      "month": "NOV",
+      "day": "21",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "eastside",
+      "where": "Vincent Price Art Museum, Monterey Park",
+      "price": "Varies",
+      "link": "https://www.lacma.org/art/exhibition/california-collectives-asian-american-moderns-1924-1965-vincent-price-gallery",
+      "tagline": "LACMA's collection on the Asian American artist circles that thrived in California from 1924 to 1965. At East Los Angeles College.",
+      "starts": "20261121T110000",
+      "ends": "20270306T170000",
+      "addr": "1301 Avenida Cesar Chavez, Monterey Park, CA 91754"
     },
     {
       "title": "Addams Family Values at LACMA",
@@ -439,18 +482,49 @@
       "addr": "2701 N Sepulveda Blvd, Los Angeles, CA 90049"
     },
     {
-      "title": "Haps Club Dinner at Hermanito Broadway",
-      "tags": "food date",
-      "area": "westside",
-      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
-      "price": "From $79",
-      "link": "https://luma.com/9yu9t2or",
-      "tagline": "A family-style dinner with one drink included. Everyone who’s been is a fan.",
-      "starts": "20261217T180000",
-      "ends": "20261217T210000",
+      "title": "Joseph Wright of Derby: Painter and Draftsman at the Getty",
       "month": "DEC",
-      "day": "17",
-      "cat": "Food"
+      "day": "6",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "westside",
+      "where": "Getty Center, Brentwood",
+      "price": "Free, reserve",
+      "link": "https://www.getty.edu/calendar/derby-painter-draftsman/",
+      "tagline": "A Sunday talk on the painter of candlelit scenes. Free, but book a ticket; it doubles as your Getty entry.",
+      "starts": "20261206T160000",
+      "ends": "20261206T173000",
+      "addr": "1200 Getty Center Dr, Los Angeles, CA 90049"
+    },
+    {
+      "title": "Figuring Space at The Geffen Contemporary at MOCA",
+      "month": "DEC",
+      "day": "11",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "dtla",
+      "where": "The Geffen Contemporary at MOCA, Little Tokyo",
+      "price": "$12",
+      "link": "https://www.moca.org/events/figuring-space",
+      "tagline": "Four Los Angeles artists make new dance and performance for MOCA's warehouse. Fri and Sat at 6:30.",
+      "starts": "20261211T183000",
+      "ends": "20261212T203000",
+      "addr": "152 N Central Ave, Los Angeles, CA 90012"
+    },
+    {
+      "title": "Mindy Seu: A Recital of Citations at REDCAT",
+      "month": "DEC",
+      "day": "11",
+      "cat": "Culture",
+      "tags": "culture",
+      "area": "dtla",
+      "where": "REDCAT, Downtown",
+      "price": "$25",
+      "link": "https://www.redcat.org/events/recital-citations",
+      "tagline": "A lecture the audience reads aloud together from their phones, drawn from her Cyberfeminism Index. Fri and Sat at 8.",
+      "starts": "20261211T200000",
+      "ends": "20261212T211500",
+      "addr": "631 W 2nd St, Los Angeles, CA 90012"
     },
     {
       "title": "New Orleans Legends with Andy Garcia",
@@ -496,6 +570,21 @@
       "addr": "3400 Warner Blvd, Burbank, CA 91505"
     },
     {
+      "title": "Gala Porras-Kim: Non-Consenting Collaborators at the Getty",
+      "month": "DEC",
+      "day": "12",
+      "cat": "Culture",
+      "tags": "culture free",
+      "area": "westside",
+      "where": "Getty Center, Brentwood",
+      "price": "Free, reserve",
+      "link": "https://www.getty.edu/calendar/non-consenting-collaborators-gala-porras-kim/",
+      "tagline": "The Los Angeles artist talks through her recent work. Saturday at 3; the Getty stays open until 9.",
+      "starts": "20261212T150000",
+      "ends": "20261212T163000",
+      "addr": "1200 Getty Center Dr, Los Angeles, CA 90049"
+    },
+    {
       "title": "A Christmas Carol Goes Wrong at Ahmanson Theatre",
       "month": "DEC",
       "day": "12",
@@ -509,6 +598,36 @@
       "starts": "20261212T200000",
       "ends": "20270110T211000",
       "addr": "135 N Grand Ave, Los Angeles, CA 90012"
+    },
+    {
+      "title": "Celebración de las Artes at The Music Center",
+      "month": "DEC",
+      "day": "13",
+      "cat": "Music",
+      "tags": "music culture free",
+      "area": "dtla",
+      "where": "Jerry Moss Plaza, The Music Center, Downtown",
+      "price": "Free",
+      "link": "https://www.laopera.org/community-learning/performances-events-for-all-ages/celebracion-de-las-artes/",
+      "tagline": "LA Opera's free plaza party: live music, a holiday mercado of local vendors, and food and drinks to buy.",
+      "starts": "20261213T163000",
+      "ends": "20261213T183000",
+      "addr": "135 N Grand Ave, Los Angeles, CA 90012"
+    },
+    {
+      "title": "Haps Club Dinner at Hermanito Broadway",
+      "tags": "food date",
+      "area": "westside",
+      "where": "Hermanito Broadway, 802 Broadway, Santa Monica",
+      "price": "From $79",
+      "link": "https://luma.com/9yu9t2or",
+      "tagline": "A family-style dinner with one drink included. Everyone who’s been is a fan.",
+      "starts": "20261217T180000",
+      "ends": "20261217T210000",
+      "month": "DEC",
+      "day": "17",
+      "cat": "Food",
+      "lead": true
     },
     {
       "title": "Veronica Swift at Catalina Jazz Club",
@@ -1126,6 +1245,34 @@
       "link": "https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/dining/birdie-gs-la.restaurant.html",
       "tagline": "Jeremy Fox's American brasserie, now inside the Fairmont, serving breakfast, lunch and dinner.",
       "addr": "2025 Avenue of the Stars, Los Angeles, CA 90067"
+    },
+    {
+      "title": "Enchanted: Forest of Light at Descanso Gardens",
+      "month": "NOV",
+      "day": "22",
+      "cat": "Outdoors",
+      "tags": "outdoors date",
+      "area": "eastside",
+      "where": "Descanso Gardens, La Cañada Flintridge",
+      "price": "From $29",
+      "link": "https://www.descansogardens.org/enchanted/",
+      "tagline": "The night light walk turns 10: the Ancient Forest, a new laser show with a snowfall finale, and giant koi. Through Jan 9.",
+      "ends": "20270109T235900",
+      "addr": "1418 Descanso Dr, La Cañada Flintridge, CA 91011"
+    },
+    {
+      "title": "Purpose at Geffen Playhouse",
+      "month": "NOV",
+      "day": "11",
+      "cat": "Culture",
+      "tags": "culture date",
+      "area": "westside",
+      "where": "Geffen Playhouse, Westwood",
+      "price": "Tickets",
+      "link": "https://www.geffenplayhouse.org/shows/purpose/",
+      "tagline": "The original Broadway cast in Branden Jacobs-Jenkins' Pulitzer and Tony winner. Los Angeles premiere, through Dec 20.",
+      "ends": "20261220T235900",
+      "addr": "10886 Le Conte Ave, Los Angeles, CA 90024"
     }
   ],
   "archive": [

@@ -30,7 +30,7 @@ GA = "G-RKY63MK7ND"
 SITE = "https://haps.club"
 AREAS = {"westside", "midcity", "dtla", "hollywood", "eastside", "citywide"}
 # Pages that are allowed their own <style> block (see CLAUDE.md).
-STYLE_OK = ("planner/", "planner-svetlana/", "partners/", "partnership/", "events/", "dinners/")
+STYLE_OK = ("planner/", "planner-svetlana/", "partners/", "partnership/", "events/", "dinners/", "jazz-age-recap/")
 BANNED_WARN = ["curated", "hidden gem", "must-visit", "hot spot", "iconic", "elevated",
                "don't miss", "journey", "unleash", "leverage", "ecosystem"]
 COPY_FIELDS = ("title", "tagline", "meta", "pill", "when", "cta", "text")

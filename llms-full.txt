@@ -4,7 +4,7 @@
 
 Haps Club is independent and editorial: a real person reading the city, not an algorithmic listings feed. Every pick names its LA neighborhood and links straight to the source. Coverage spans the Eastside, Westside, Hollywood, West Hollywood, Mid-City, Downtown, and beyond. Founded and written by Michael Abraham.
 
-Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Los_Angeles.
+Updated 2026-11-22. Generated from https://haps.club/ data; times are America/Los_Angeles.
 
 ## Dated picks (Week of Nov 16 onward)
 
@@ -80,6 +80,14 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://lazoo.org/plan-your-visit/special-experiences/zoolights/
 - About: The zoo grounds after dark with light displays, running select nights from Nov 20 to Jan 10. Check the closed dates before you go.
 
+### Felipe Baeza: Anima at the Hammer
+- When: Saturday, November 21 to Apr 4, 11:00 AM
+- Where: Hammer Museum, Westwood (Westside)
+- Price: Free
+- Category: 
+- Details: https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima
+- About: Over 40 works in the artist's first Los Angeles museum survey.
+
 ### Has the Myth Been Shattered at The Broad
 - When: Saturday, November 21 to Apr 4, 11:00 AM
 - Where: The Broad, Downtown, 221 S Grand Ave (Downtown)
@@ -88,13 +96,13 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered
 - About: A free new show of six decades of art that uses the media as material. Through Apr 4.
 
-### Applefest at Benny Boy Brewing
-- When: Saturday, November 21 to Nov 22, 12:00 PM
-- Where: Benny Boy Brewing, Lincoln Heights, 1821 Daly St, Los Angeles, CA 90031 (Eastside)
-- Price: Free
-- Category: Food
-- Details: https://bennyboybrewing.com/applefest
-- About: Weekend 2 of the cider brewery's fall festival: help press apples from 12 to 5, live music in the garden 2 to 6. 21+.
+### California Collectives: Asian American Moderns at the Vincent Price Art Museum
+- When: Saturday, November 21 to Mar 6, 11:00 AM
+- Where: Vincent Price Art Museum, Monterey Park, 1301 Avenida Cesar Chavez, Monterey Park, CA 91754 (Eastside)
+- Price: Varies
+- Category: Culture
+- Details: https://www.lacma.org/art/exhibition/california-collectives-asian-american-moderns-1924-1965-vincent-price-gallery
+- About: LACMA's collection on the Asian American artist circles that thrived in California from 1924 to 1965. At East Los Angeles College.
 
 ### Addams Family Values at LACMA
 - When: Monday, November 23, 7:30 PM
@@ -232,6 +240,30 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.skirball.org/programs/hanukkah-festival
 - About: The Skirball's annual Hanukkah festival runs noon to 5 PM on a Sunday. Parking on site is free.
 
+### Joseph Wright of Derby: Painter and Draftsman at the Getty
+- When: Sunday, December 6, 4:00 PM
+- Where: Getty Center, Brentwood, 1200 Getty Center Dr, Los Angeles, CA 90049 (Westside)
+- Price: Free, reserve
+- Category: Culture
+- Details: https://www.getty.edu/calendar/derby-painter-draftsman/
+- About: A Sunday talk on the painter of candlelit scenes. Free, but book a ticket; it doubles as your Getty entry.
+
+### Figuring Space at The Geffen Contemporary at MOCA
+- When: Friday, December 11 to Dec 12, 6:30 PM
+- Where: The Geffen Contemporary at MOCA, Little Tokyo, 152 N Central Ave, Los Angeles, CA 90012 (Downtown)
+- Price: $12
+- Category: Culture
+- Details: https://www.moca.org/events/figuring-space
+- About: Four Los Angeles artists make new dance and performance for MOCA's warehouse. Fri and Sat at 6:30.
+
+### Mindy Seu: A Recital of Citations at REDCAT
+- When: Friday, December 11 to Dec 12, 8:00 PM
+- Where: REDCAT, Downtown, 631 W 2nd St, Los Angeles, CA 90012 (Downtown)
+- Price: $25
+- Category: Culture
+- Details: https://www.redcat.org/events/recital-citations
+- About: A lecture the audience reads aloud together from their phones, drawn from her Cyberfeminism Index. Fri and Sat at 8.
+
 ### New Orleans Legends with Andy Garcia
 - When: Friday, December 11 to Dec 12, 8:30 PM
 - Where: Catalina Jazz Club, 6725 W Sunset Blvd (Hollywood)
@@ -256,6 +288,14 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Details: https://www.wbstudiotour.com/tour/gilmore-girls-holidays/
 - About: Walk through the Stars Hollow sets dressed for the holidays, with themed food, shopping and a nightly tree lighting.
 
+### Gala Porras-Kim: Non-Consenting Collaborators at the Getty
+- When: Saturday, December 12, 3:00 PM
+- Where: Getty Center, Brentwood, 1200 Getty Center Dr, Los Angeles, CA 90049 (Westside)
+- Price: Free, reserve
+- Category: Culture
+- Details: https://www.getty.edu/calendar/non-consenting-collaborators-gala-porras-kim/
+- About: The Los Angeles artist talks through her recent work. Saturday at 3; the Getty stays open until 9.
+
 ### A Christmas Carol Goes Wrong at Ahmanson Theatre
 - When: Saturday, December 12 to Jan 10, 8:00 PM
 - Where: Ahmanson Theatre, Music Center, Downtown, 135 N Grand Ave, Los Angeles, CA 90012 (Downtown)
@@ -263,6 +303,14 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - Category: Culture
 - Details: https://www.centertheatregroup.org/shows-tickets/ahmanson/2026-27/christmas-carol-goes-wrong/
 - About: A community theater troupe tries to stage A Christmas Carol and everything breaks. The North American premiere runs through January 10.
+
+### Celebración de las Artes at The Music Center
+- When: Sunday, December 13, 4:30 PM
+- Where: Jerry Moss Plaza, The Music Center, Downtown, 135 N Grand Ave, Los Angeles, CA 90012 (Downtown)
+- Price: Free
+- Category: Music
+- Details: https://www.laopera.org/community-learning/performances-events-for-all-ages/celebracion-de-las-artes/
+- About: LA Opera's free plaza party: live music, a holiday mercado of local vendors, and food and drinks to buy.
 
 ### Haps Club Dinner at Hermanito Broadway
 - When: Thursday, December 17, 6:00 PM
@@ -312,6 +360,7 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - [Cookie Queens](https://www.ticketingcookiequeens.com/): In theaters · Citywide · new
 - [Skylight Books](https://www.skylightbooks.com/): Los Feliz · Eastside
 - [Evergreen at Sabbatikal](https://sabbatikal.com): Sabbatikal, 1224 25th St, Santa Monica · Westside · new
+- [Purpose at Geffen Playhouse](https://www.geffenplayhouse.org/shows/purpose/): Geffen Playhouse, Westwood, 10886 Le Conte Ave, Los Angeles, CA 90024 · Westside
 
 ### Food
 - [Holly Jolly Christmas Bar at 3rd Base](https://3rdbasehollywood.com/): 3rd Base, Hollywood, 1562 N Cahuenga Blvd, Hollywood, CA 90028 · Hollywood
@@ -346,6 +395,7 @@ Updated 2026-11-16. Generated from https://haps.club/ data; times are America/Lo
 - [Birdie G's](https://www.fairmont.com/en/hotels/los-angeles/fairmont-century-plaza/dining/birdie-gs-la.restaurant.html): Fairmont Century Plaza, Century City, 2025 Avenue of the Stars, Los Angeles, CA 90067 · Westside
 
 ### More
+- [Enchanted: Forest of Light at Descanso Gardens](https://www.descansogardens.org/enchanted/): Descanso Gardens, La Cañada Flintridge · Eastside
 - [LA Kings Holiday Ice Festival](https://link.bucketlisters.com/Tw8k):  · Downtown
 
 ### Music

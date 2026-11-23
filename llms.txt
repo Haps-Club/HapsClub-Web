@@ -25,8 +25,9 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Los Angeles Auto Show](https://laautoshow.com/): Fri Nov 20 · Los Angeles Convention Center, Downtown Los Angeles · Downtown · From $25
 - [Harbor Glow at West Harbor](https://harborglownights.com/): Fri Nov 20 · West Harbor, San Pedro · Citywide · Tickets
 - [LA Zoo Lights](https://lazoo.org/plan-your-visit/special-experiences/zoolights/): Fri Nov 20 · Los Angeles Zoo, Griffith Park · Citywide · From $19
+- [Felipe Baeza: Anima at the Hammer](https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima): Sat Nov 21 · Hammer Museum, Westwood · Westside · Free
 - [Has the Myth Been Shattered at The Broad](https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shattered): Sat Nov 21 · The Broad, Downtown · Downtown · Free, reserve
-- [Applefest at Benny Boy Brewing](https://bennyboybrewing.com/applefest): Sat Nov 21 · Benny Boy Brewing, Lincoln Heights · Eastside · Free
+- [California Collectives: Asian American Moderns at the Vincent Price Art Museum](https://www.lacma.org/art/exhibition/california-collectives-asian-american-moderns-1924-1965-vincent-price-gallery): Sat Nov 21 · Vincent Price Art Museum, Monterey Park · Eastside · Varies
 - [Addams Family Values at LACMA](https://www.lacma.org/event-calendar-by-day): Mon Nov 23 · LACMA, Keck Plaza · Mid-City · $10
 - [Dub Club presents Kabaka Pyramid at The Echoplex](https://www.theecho.com/shows): Wed Nov 25 · The Echoplex, Echo Park · Eastside · Tickets
 - [Turkey Trot Los Angeles](https://www.turkeytrot.la): Thu Nov 26 · Los Angeles City Hall to Grand Park, Downtown · Downtown · From $54.90
@@ -44,6 +45,7 @@ Hand-picked, dated events for the next 14 days, generated from the site's data a
 - [Nutcracker Brunch at ORLA](https://www.sevenrooms.com/experiences/orlabymichaelmina/nutcracker-brunch-at-orla-santa-monica-5591308148523008): Sat Dec 5 · ORLA, Regent Santa Monica Beach · Westside · Tickets
 - [Winterfest Arts & Crafts Festival and Tree Lighting at Christmas Tree Lane](https://christmastreelane.net/events): Sat Dec 5 · Christmas Tree Lane, Altadena · Citywide · Free
 - [Hanukkah Festival at the Skirball](https://www.skirball.org/programs/hanukkah-festival): Sun Dec 6 · Skirball Cultural Center, Sepulveda Pass · Westside · $23 adults
+- [Joseph Wright of Derby: Painter and Draftsman at the Getty](https://www.getty.edu/calendar/derby-painter-draftsman/): Sun Dec 6 · Getty Center, Brentwood · Westside · Free, reserve
 <!-- /AUTO:WEEK -->
 
 ## Guides

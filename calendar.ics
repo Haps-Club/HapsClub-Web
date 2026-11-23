@@ -9,7 +9,7 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:036fa3c856c0916ac82f@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261113T020000Z
 DTEND:20261113T060000Z
 SUMMARY:NightTales at the Natural History Museum
@@ -21,7 +21,7 @@ URL:https://nhm.org/calendar/nighttales-museum-experience
 END:VEVENT
 BEGIN:VEVENT
 UID:c6e182cf56dca4b0f2f2@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261114T013000Z
 DTEND:20261114T043000Z
 SUMMARY:Tinker Bell's Neverland: An Illuminated Adventure at South Coast B
@@ -36,7 +36,7 @@ URL:https://tinkerbellsneverland.com/los-angeles/
 END:VEVENT
 BEGIN:VEVENT
 UID:e727232608027da9687b@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261115T190000Z
 DTEND:20261116T020000Z
 SUMMARY:Paul R. Williams: Architect for Living at LACMA
@@ -48,7 +48,7 @@ URL:https://www.lacma.org/art/exhibition/paul-r-williams-architect-living
 END:VEVENT
 BEGIN:VEVENT
 UID:a286eb8b1599dda6ec19@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261115T190000Z
 DTEND:20261116T020000Z
 SUMMARY:Julian Charrière: Deep End and Cecilia Vicuña: The Dream of Wate
@@ -62,7 +62,7 @@ URL:https://www.moca.org/exhibitions/julian-charriere
 END:VEVENT
 BEGIN:VEVENT
 UID:677d49b934d950532308@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261116T010000Z
 DTEND:20261116T053000Z
 SUMMARY:Sparkle DTLA at The Bloc
@@ -74,7 +74,7 @@ URL:https://www.theblocla.com/event/44603-sparkle-dtla-nightly-light-show
 END:VEVENT
 BEGIN:VEVENT
 UID:19269c66f7f4ee4a6342@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261119T010000Z
 DTEND:20261119T060000Z
 SUMMARY:Swiss Winter Village
@@ -87,7 +87,7 @@ URL:https://swisswintervillage.com/santa-monica/
 END:VEVENT
 BEGIN:VEVENT
 UID:5b6d5a8a4cd0bb0905a0@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261120T170000Z
 DTEND:20261121T020000Z
 SUMMARY:Los Angeles Auto Show
@@ -100,7 +100,7 @@ URL:https://laautoshow.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:c23838602720b69b1139@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261121T010000Z
 DTEND:20261121T063000Z
 SUMMARY:Harbor Glow at West Harbor
@@ -113,7 +113,7 @@ URL:https://harborglownights.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:d34524b594d9b7538caf@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261121T020000Z
 DTEND:20261121T060000Z
 SUMMARY:LA Zoo Lights
@@ -126,8 +126,20 @@ DESCRIPTION:Runs Nov 20 - Jan 10. The zoo grounds after dark with light di
 URL:https://lazoo.org/plan-your-visit/special-experiences/zoolights/
 END:VEVENT
 BEGIN:VEVENT
+UID:4275912b311c571b773a@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261121T190000Z
+DTEND:20261122T020000Z
+SUMMARY:Felipe Baeza: Anima at the Hammer
+LOCATION:Hammer Museum\, Westwood
+DESCRIPTION:Runs Nov 21 - Apr 4. Over 40 works in the artist's first Los A
+ ngeles museum survey. Price: Free.\nhttps://hammer.ucla.edu/exhibitions/2
+ 026/felipe-baeza-anima
+URL:https://hammer.ucla.edu/exhibitions/2026/felipe-baeza-anima
+END:VEVENT
+BEGIN:VEVENT
 UID:136372226f98a25df3f8@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261121T190000Z
 DTEND:20261122T010000Z
 SUMMARY:Has the Myth Been Shattered at The Broad
@@ -139,21 +151,25 @@ URL:https://www.thebroad.org/art/collection-exhibitions/has-myth-been-shat
  tered
 END:VEVENT
 BEGIN:VEVENT
-UID:56cc003e92f2895a5084@haps.club
-DTSTAMP:20261116T000000Z
-DTSTART:20261121T200000Z
-DTEND:20261122T020000Z
-SUMMARY:Applefest at Benny Boy Brewing
-LOCATION:Benny Boy Brewing\, Lincoln Heights\, 1821 Daly St\, Los Angeles\
- , CA 90031
-DESCRIPTION:Runs Nov 21 - Nov 22. Weekend 2 of the cider brewery's fall fe
- stival: help press apples from 12 to 5\, live music in the garden 2 to 6.
-  21+. Price: Free.\nhttps://bennyboybrewing.com/applefest
-URL:https://bennyboybrewing.com/applefest
+UID:2fad240df75591bc1e3b@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261121T190000Z
+DTEND:20261122T010000Z
+SUMMARY:California Collectives: Asian American Moderns at the Vincent Pric
+ e Art Museum
+LOCATION:Vincent Price Art Museum\, Monterey Park\, 1301 Avenida Cesar Cha
+ vez\, Monterey Park\, CA 91754
+DESCRIPTION:Runs Nov 21 - Mar 6. LACMA's collection on the Asian American 
+ artist circles that thrived in California from 1924 to 1965. At East Los 
+ Angeles College. Price: Varies.\nhttps://www.lacma.org/art/exhibition/cal
+ ifornia-collectives-asian-american-moderns-1924-1965-vincent-price-galler
+ y
+URL:https://www.lacma.org/art/exhibition/california-collectives-asian-amer
+ ican-moderns-1924-1965-vincent-price-gallery
 END:VEVENT
 BEGIN:VEVENT
 UID:ba1418ba1241b8be4c81@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261124T033000Z
 DTEND:20261124T050000Z
 SUMMARY:Addams Family Values at LACMA
@@ -164,7 +180,7 @@ URL:https://www.lacma.org/event-calendar-by-day
 END:VEVENT
 BEGIN:VEVENT
 UID:cf9c7a379175f5810a64@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261126T050000Z
 DTEND:20261126T080000Z
 SUMMARY:Dub Club presents Kabaka Pyramid at The Echoplex
@@ -176,7 +192,7 @@ URL:https://www.theecho.com/shows
 END:VEVENT
 BEGIN:VEVENT
 UID:2f6c31e5d7670b329a6b@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261126T153000Z
 DTEND:20261126T190000Z
 SUMMARY:Turkey Trot Los Angeles
@@ -189,7 +205,7 @@ URL:https://www.turkeytrot.la
 END:VEVENT
 BEGIN:VEVENT
 UID:d859413a0c08dfc6c6ee@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261127T200000Z
 DTEND:20261128T060000Z
 SUMMARY:LA Kings Holiday Ice Festival at L.A. LIVE
@@ -201,7 +217,7 @@ URL:https://link.bucketlisters.com/Tw8k
 END:VEVENT
 BEGIN:VEVENT
 UID:0f3a711a259b6981cc33@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261127T220000Z
 DTEND:20261128T100000Z
 SUMMARY:Time Warp Los Angeles at ACE Mission
@@ -214,7 +230,7 @@ URL:https://www.time-warp.de/usa/la/
 END:VEVENT
 BEGIN:VEVENT
 UID:fd66981b44bf1f319711@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261128T040000Z
 DTEND:20261128T063000Z
 SUMMARY:The Holiday in Concert at Dolby Theatre
@@ -227,7 +243,7 @@ URL:https://www.dolbytheatre.com/events/details/the_holiday_in_concert
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a7b0704d18f84a274e@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261128T040000Z
 DTEND:20261128T060000Z
 SUMMARY:Home Alone in Concert at Walt Disney Concert Hall
@@ -242,7 +258,7 @@ URL:https://www.laphil.com/events/instances/1py8126p/2026-11-27/home-alone
 END:VEVENT
 BEGIN:VEVENT
 UID:39b292f737ea6d838158@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261128T043000Z
 DTEND:20261128T063000Z
 SUMMARY:A Charlie Brown Christmas at Catalina Jazz Club
@@ -254,7 +270,7 @@ URL:https://www.catalinajazzclub.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:9fdd763ba2e1121d351f@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261128T183000Z
 DTEND:20261128T223500Z
 SUMMARY:Bob Baker's Nutcracker at Sierra Madre Playhouse
@@ -269,7 +285,7 @@ URL:https://www.sierramadreplayhouse.org/2027/theatre-family-bob-bakers-nu
 END:VEVENT
 BEGIN:VEVENT
 UID:bb649301e59c983b92f9@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261201T010000Z
 DTEND:20261201T030000Z
 SUMMARY:LA County Tree Lighting at The Music Center
@@ -284,7 +300,7 @@ URL:https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-ho
 END:VEVENT
 BEGIN:VEVENT
 UID:22834dea09d9acc3ab5b@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261202T033000Z
 DTEND:20261202T053000Z
 SUMMARY:4211KM at Théâtre Raymond Kabbaz
@@ -295,7 +311,7 @@ URL:https://www.theatreraymondkabbaz.com/4211km
 END:VEVENT
 BEGIN:VEVENT
 UID:d966b56408e9404a50e4@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261203T200000Z
 DTEND:20261204T050000Z
 SUMMARY:3rd Annual Grand Illuminations Opening Night Celebration
@@ -310,7 +326,7 @@ URL:https://downtownla.com/do/3rd-annual-grand-illuminations-opening-night
 END:VEVENT
 BEGIN:VEVENT
 UID:bb8ffd68f80eac9c8e0d@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261204T190000Z
 DTEND:20261205T010000Z
 SUMMARY:Makers Market at Craft Contemporary
@@ -322,7 +338,7 @@ URL:https://www.craftcontemporary.org/
 END:VEVENT
 BEGIN:VEVENT
 UID:0ae3bf6853af537cf81d@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261205T040000Z
 DTEND:20261205T053000Z
 SUMMARY:CalArts Winter Dance Festival at REDCAT
@@ -336,7 +352,7 @@ URL:https://www.redcat.org/events/calarts-winter-dance-festival
 END:VEVENT
 BEGIN:VEVENT
 UID:007f71e7adae311b208c@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261205T193000Z
 DTEND:20261205T223000Z
 SUMMARY:Nutcracker Brunch at ORLA
@@ -349,7 +365,7 @@ URL:https://www.sevenrooms.com/experiences/orlabymichaelmina/nutcracker-br
 END:VEVENT
 BEGIN:VEVENT
 UID:518c25411c3cf19a9fb6@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261205T230000Z
 DTEND:20261206T050000Z
 SUMMARY:Winterfest Arts & Crafts Festival and Tree Lighting at Christmas T
@@ -363,7 +379,7 @@ URL:https://christmastreelane.net/events
 END:VEVENT
 BEGIN:VEVENT
 UID:f420dc6937134ad9a614@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261206T200000Z
 DTEND:20261207T010000Z
 SUMMARY:Hanukkah Festival at the Skirball
@@ -375,8 +391,46 @@ DESCRIPTION:The Skirball's annual Hanukkah festival runs noon to 5 PM on a
 URL:https://www.skirball.org/programs/hanukkah-festival
 END:VEVENT
 BEGIN:VEVENT
+UID:306eb7670bd475469096@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261207T000000Z
+DTEND:20261207T013000Z
+SUMMARY:Joseph Wright of Derby: Painter and Draftsman at the Getty
+LOCATION:Getty Center\, Brentwood\, 1200 Getty Center Dr\, Los Angeles\, C
+ A 90049
+DESCRIPTION:A Sunday talk on the painter of candlelit scenes. Free\, but b
+ ook a ticket\; it doubles as your Getty entry. Price: Free\, reserve.\nht
+ tps://www.getty.edu/calendar/derby-painter-draftsman/
+URL:https://www.getty.edu/calendar/derby-painter-draftsman/
+END:VEVENT
+BEGIN:VEVENT
+UID:c7cf95292f47bd4a3031@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261212T023000Z
+DTEND:20261212T043000Z
+SUMMARY:Figuring Space at The Geffen Contemporary at MOCA
+LOCATION:The Geffen Contemporary at MOCA\, Little Tokyo\, 152 N Central Av
+ e\, Los Angeles\, CA 90012
+DESCRIPTION:Runs Dec 11 - Dec 12. Four Los Angeles artists make new dance 
+ and performance for MOCA's warehouse. Fri and Sat at 6:30. Price: $12.\nh
+ ttps://www.moca.org/events/figuring-space
+URL:https://www.moca.org/events/figuring-space
+END:VEVENT
+BEGIN:VEVENT
+UID:6c92e7046d1f9e50bb53@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261212T040000Z
+DTEND:20261212T051500Z
+SUMMARY:Mindy Seu: A Recital of Citations at REDCAT
+LOCATION:REDCAT\, Downtown\, 631 W 2nd St\, Los Angeles\, CA 90012
+DESCRIPTION:Runs Dec 11 - Dec 12. A lecture the audience reads aloud toget
+ her from their phones\, drawn from her Cyberfeminism Index. Fri and Sat a
+ t 8. Price: $25.\nhttps://www.redcat.org/events/recital-citations
+URL:https://www.redcat.org/events/recital-citations
+END:VEVENT
+BEGIN:VEVENT
 UID:1c5644faa5630cb776db@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261212T043000Z
 DTEND:20261212T063000Z
 SUMMARY:New Orleans Legends with Andy Garcia
@@ -388,7 +442,7 @@ URL:https://www.catalinajazzclub.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:dfc9138b271a7556fc58@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261212T050000Z
 DTEND:20261212T075900Z
 SUMMARY:Notte Italiana at Eataly
@@ -401,7 +455,7 @@ URL:https://www.eventbrite.com/e/notte-italiana-holidays-at-eataly-tickets
 END:VEVENT
 BEGIN:VEVENT
 UID:590f3d82d499d1aa927a@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261212T180000Z
 DTEND:20261213T040000Z
 SUMMARY:Gilmore Girls Holidays at Warner Bros. Studio Tour Hollywood
@@ -414,8 +468,22 @@ DESCRIPTION:Runs Dec 12 - Jan 3. Walk through the Stars Hollow sets dresse
 URL:https://www.wbstudiotour.com/tour/gilmore-girls-holidays/
 END:VEVENT
 BEGIN:VEVENT
+UID:33fbac2229940a426930@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261212T230000Z
+DTEND:20261213T003000Z
+SUMMARY:Gala Porras-Kim: Non-Consenting Collaborators at the Getty
+LOCATION:Getty Center\, Brentwood\, 1200 Getty Center Dr\, Los Angeles\, C
+ A 90049
+DESCRIPTION:The Los Angeles artist talks through her recent work. Saturday
+  at 3\; the Getty stays open until 9. Price: Free\, reserve.\nhttps://www
+ .getty.edu/calendar/non-consenting-collaborators-gala-porras-kim/
+URL:https://www.getty.edu/calendar/non-consenting-collaborators-gala-porra
+ s-kim/
+END:VEVENT
+BEGIN:VEVENT
 UID:3309da7072fee29c04d1@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261213T040000Z
 DTEND:20261213T051000Z
 SUMMARY:A Christmas Carol Goes Wrong at Ahmanson Theatre
@@ -429,8 +497,23 @@ URL:https://www.centertheatregroup.org/shows-tickets/ahmanson/2026-27/chri
  stmas-carol-goes-wrong/
 END:VEVENT
 BEGIN:VEVENT
+UID:90f9b7f70f74a943baed@haps.club
+DTSTAMP:20261122T000000Z
+DTSTART:20261214T003000Z
+DTEND:20261214T023000Z
+SUMMARY:Celebración de las Artes at The Music Center
+LOCATION:Jerry Moss Plaza\, The Music Center\, Downtown\, 135 N Grand Ave\
+ , Los Angeles\, CA 90012
+DESCRIPTION:LA Opera's free plaza party: live music\, a holiday mercado of
+  local vendors\, and food and drinks to buy. Price: Free.\nhttps://www.la
+ opera.org/community-learning/performances-events-for-all-ages/celebracion
+ -de-las-artes/
+URL:https://www.laopera.org/community-learning/performances-events-for-all
+ -ages/celebracion-de-las-artes/
+END:VEVENT
+BEGIN:VEVENT
 UID:1e59e2a3378f9075b618@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261218T020000Z
 DTEND:20261218T050000Z
 SUMMARY:Haps Club Dinner at Hermanito Broadway
@@ -441,7 +524,7 @@ URL:https://luma.com/9yu9t2or
 END:VEVENT
 BEGIN:VEVENT
 UID:5e7c5a3e040ef1ef8343@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261219T043000Z
 DTEND:20261219T063000Z
 SUMMARY:Veronica Swift at Catalina Jazz Club
@@ -452,7 +535,7 @@ URL:https://www.catalinajazzclub.com/
 END:VEVENT
 BEGIN:VEVENT
 UID:289671de0e54b5bfab8f@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261220T033000Z
 DTEND:20261220T051000Z
 SUMMARY:The Hot Sardines: Holiday Stomp
@@ -465,7 +548,7 @@ URL:https://www.broadstage.org/tickets-shows/calendar/the-hot-sardines-hol
 END:VEVENT
 BEGIN:VEVENT
 UID:d6b3cec9f468618a6486@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20261220T190000Z
 DTEND:20261221T003000Z
 SUMMARY:67th Annual LA County Holiday Celebration at Dorothy Chandler Pavi
@@ -481,7 +564,7 @@ URL:https://www.musiccenter.org/tickets-free-events/tmc-arts/l-a-county-ho
 END:VEVENT
 BEGIN:VEVENT
 UID:b708ec2db5953a162615@haps.club
-DTSTAMP:20261116T000000Z
+DTSTAMP:20261122T000000Z
 DTSTART:20270101T043000Z
 DTEND:20270101T075900Z
 SUMMARY:Poncho Sanchez New Year's Eve
