@@ -48,8 +48,8 @@ Read @PROJECT.md for what Haps Club is, who it's for, voice and editorial rules.
 - Signup form is MailerLite (`assets/ml-subscribe.js`, form action in build_home.py) — Kit is no longer the site form.
 - Archive issue pages (from Nov 3, 2026 on) use the callout + compact-row layout from `scripts/issue_layout.py` (`.ix-*` in site.css): every label group but the last becomes a callout, the last becomes typed rows with category icons. Categories come from keywords in `KEYWORDS` there. Older issues keep the `.sec` layout; don't regenerate them.
 - Guides use the box-free layout from `scripts/guide_layout.py` (`.g2` in site.css): headline on the page with no card, content left-aligned with the logo, a 680px reading column and a right-hand rail (facts + "On this page"), hairline rows instead of boxes. `build_guides.w()` and the sweep apply it, so any guide comes out in this layout. Keep color to one accent per page (the dark "If you only do one thing" block and the subscribe block). The rainbow bar at the top of every page and the nav scroll-progress line were removed on purpose; don't bring them back.
-- The old `planner/` calculator moved to dashboard.haps.club/planner/ (Nov 2026); don't rebuild it here.
-- Standalone pages (own inline `<style>`, no GA, noindex): `planner-svetlana/`, `partners/*/`, `partnership/macallan/`, `events/*/` and their `ops/` pages. Leave them unless asked.
+- The old `planner/` and `planner-svetlana/` calculators moved to dashboard.haps.club/planner/ (Nov 2026); don't rebuild them here.
+- Standalone pages (own inline `<style>`, no GA, noindex): `partners/*/`, `partnership/macallan/`, `events/*/` and their `ops/` pages. Leave them unless asked.
 - Keep byte-identical: Google Analytics `G-RKY63MK7ND`, canonical/OG meta.
 
 ## Haps Club rules
