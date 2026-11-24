@@ -12,7 +12,7 @@ Haps Club is independent and editorial: a real person reading the city, not an a
 - [Sitemap](https://haps.club/sitemap): A full, human-readable index of pages.
 
 <!-- AUTO:WEEK -->
-## This week (Week of Nov 16)
+## This week (Week of Nov 23)
 
 Hand-picked, dated events for the next 14 days, generated from the site's data and refreshed daily. Full list: https://haps.club/ and https://haps.club/llms-full.txt.
 

@@ -4,9 +4,9 @@
 
 Haps Club is independent and editorial: a real person reading the city, not an algorithmic listings feed. Every pick names its LA neighborhood and links straight to the source. Coverage spans the Eastside, Westside, Hollywood, West Hollywood, Mid-City, Downtown, and beyond. Founded and written by Michael Abraham.
 
-Updated 2026-11-22. Generated from https://haps.club/ data; times are America/Los_Angeles.
+Updated 2026-11-23. Generated from https://haps.club/ data; times are America/Los_Angeles.
 
-## Dated picks (Week of Nov 16 onward)
+## Dated picks (Week of Nov 23 onward)
 
 ### NightTales at the Natural History Museum
 - When: Thursday, November 12 to Jan 10, 6:00 PM
