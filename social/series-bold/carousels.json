@@ -1,0 +1,115 @@
+{
+ "carousels": [
+  {
+   "slug": "friends",
+   "title": "How to actually make friends in Los Angeles",
+   "sub": "Even if everyone you meet is &ldquo;so slammed right now.&rdquo;",
+   "slides": [
+    {
+     "h": "Go to the same thing twice",
+     "box": "Regulars become friends. Strangers stay strangers.",
+     "body": "Pick one run club, one film series or one bar trivia night and show up for a month."
+    },
+    {
+     "h": "Pick plans with something to do",
+     "box": "Small talk is easier with a task.",
+     "body": "A class, a screening, a dinner with a long table. You don&rsquo;t have to carry the conversation alone."
+    },
+    {
+     "h": "Stay close on weeknights",
+     "box": "Distance is the real friendship killer here.",
+     "body": "Make Tuesday plans in your own neighborhood. Save the cross-town trips for the weekend."
+    },
+    {
+     "h": "Say yes to the 5:30 invite",
+     "box": "Early plans actually happen.",
+     "body": "Happy hour beats &ldquo;let&rsquo;s get dinner sometime&rdquo; every time."
+    },
+    {
+     "h": "Host something small",
+     "box": "Four people and a pot of pasta counts.",
+     "body": "Invite two people you like who don&rsquo;t know each other yet. Watch what happens."
+    }
+   ],
+   "end": {
+    "h": "Start this week",
+    "box": "Picks for every night at haps.club",
+    "body": "Send this to the friend you keep saying you&rsquo;ll see."
+   }
+  },
+  {
+   "slug": "sunday",
+   "title": "How to do a Sunday in Los Angeles right",
+   "sub": "Without spending it on the freeway.",
+   "slides": [
+    {
+     "h": "Farmers market before 10",
+     "box": "The good peaches are gone by 11.",
+     "body": "Get coffee, walk the stalls, buy flowers you don&rsquo;t need."
+    },
+    {
+     "h": "Pick one neighborhood",
+     "box": "Then stay in it.",
+     "body": "Park once. Walk everywhere. Lunch, a bookstore and a long way back to the car."
+    },
+    {
+     "h": "Find something free",
+     "box": "A museum, a garden, a matinee in the park.",
+     "body": "Plenty of the city&rsquo;s best afternoons cost nothing but the parking."
+    },
+    {
+     "h": "Catch the light at 4:30",
+     "box": "Golden hour is the main event.",
+     "body": "Griffith Park, the beach or any rooftop with a view west."
+    },
+    {
+     "h": "Early dinner, early night",
+     "box": "Monday you will thank you.",
+     "body": "Book a 6 PM table. Nobody is ever mad about a 6 PM table."
+    }
+   ],
+   "end": {
+    "h": "Plan your next Sunday",
+    "box": "This weekend&rsquo;s picks at haps.club",
+    "body": "Send this to your Sunday person."
+   }
+  },
+  {
+   "slug": "holidays",
+   "title": "How to do the holidays in Los Angeles",
+   "sub": "Even if your family is 3,000 miles away.",
+   "slides": [
+    {
+     "h": "Host a holiday potluck",
+     "box": "Everyone brings one dish. No one brings a fruit tray.",
+     "body": "Ask who&rsquo;s staying in town. You&rsquo;ll be surprised how many people say yes."
+    },
+    {
+     "h": "Walk through the lights",
+     "box": "The city goes all in on light shows.",
+     "body": "Descanso, the Zoo and a dozen tree lightings. Pick one and bring a thermos."
+    },
+    {
+     "h": "Book one fancy dinner",
+     "box": "A holiday menu with your favorite person.",
+     "body": "Make the reservation now. December tables go fast."
+    },
+    {
+     "h": "Go to a live show",
+     "box": "Concerts, ballet, a movie with a live orchestra.",
+     "body": "Nothing feels more like the season than a full room singing along."
+    },
+    {
+     "h": "Make a new tradition",
+     "box": "Beach walk on Christmas morning. Why not.",
+     "body": "Seventy degrees in December is a gift. Use it."
+    }
+   ],
+   "end": {
+    "h": "Your holiday plans, sorted",
+    "box": "Every light show and dinner at haps.club",
+    "body": "Tag the friend you&rsquo;re spending the holidays with."
+   }
+  }
+ ]
+}
