@@ -513,6 +513,131 @@ background:linear-gradient(180deg,#ff9a5a 0%,#ff6a88 35%,#7a5cc7 70%,#2b2f6e 100
     return page(GOLD, NAVY, body, css)
 
 
+# ---------- batch 5: new concepts ----------
+def tag_yourself():
+    cells = [("Silver Lake", "Has a natural wine opinion"), ("Santa Monica", "Already went on a run"), ("Echo Park", "Technically in a band"),
+             ("West Hollywood", "Brunch is a personality"), ("Venice", "Owns a skateboard, rides a bike"), ("Highland Park", "Was here before it was cool"),
+             ("The Valley", "Has a pool. Will mention it."), ("Downtown", "Lives for a rooftop"), ("Pasadena", "Has a favorite library")]
+    grid = "".join(f'<div class="c"><b>{nob(n)}</b><span>{nob(t)}</span></div>' for n, t in cells)
+    css = """.t{position:absolute;top:240px;width:100%;text-align:center;font-weight:900;font-size:76px;letter-spacing:-2px;line-height:1}.t span{color:#FF4F00}
+.g{position:absolute;top:350px;left:90px;width:900px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.c{height:232px;background:#fff;border-radius:22px;padding:22px;display:flex;flex-direction:column;justify-content:center;text-align:center;box-shadow:0 6px 0 #1a1f4d}
+.c b{font-size:34px;font-weight:900;letter-spacing:-.5px;color:#FF4F00;line-height:1.05;text-wrap:balance}
+.c span{margin-top:12px;font-size:27px;font-weight:700;line-height:1.15;color:#1a1f4d;text-wrap:balance}"""
+    body = f'<div class="kicker">Los&nbsp;Angeles<br>edition</div><div class="t">Tag <span>yourself</span></div><div class="g">{grid}</div>'
+    return page(PINK, NAVY, body, css)
+
+
+def alignment():
+    cells = ["Leaves 40 minutes early", "Signals on the 405", "Saves six spots in the brunch line",
+             "Shares their secret parking spot", "&ldquo;It&rsquo;s only 20 minutes&rdquo;", "Won&rsquo;t say where the tacos are",
+             "Drives you to LAX", "Parks at the meter and runs", "Takes the 405 at 5 PM on purpose"]
+    rows = ["LAWFUL", "NEUTRAL", "CHAOTIC"]; cols = ["GOOD", "NEUTRAL", "EVIL"]
+    grid = '<div></div>' + "".join(f'<div class="ch">{c}</div>' for c in cols)
+    for r in range(3):
+        grid += f'<div class="rh">{rows[r]}</div>' + "".join(f'<div class="c">{nob(cells[r * 3 + k])}</div>' for k in range(3))
+    css = """.t{position:absolute;top:240px;width:100%;text-align:center;font-weight:900;font-size:64px;letter-spacing:-1.5px;line-height:1;color:#fff}
+.g{position:absolute;top:340px;left:60px;width:960px;display:grid;grid-template-columns:62px repeat(3,minmax(0,1fr));grid-template-rows:40px repeat(3,232px);gap:12px}
+.ch{font-family:'IBM Plex Mono',monospace;font-size:20px;letter-spacing:3px;color:#FF9500;text-align:center;align-self:end}
+.rh{font-family:'IBM Plex Mono',monospace;font-size:20px;letter-spacing:3px;color:#FF9500;writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;align-self:center}
+.c{background:#fff;border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;font-weight:800;font-size:30px;line-height:1.12;color:#1a1f4d;text-wrap:balance}"""
+    body = f'<div class="kicker">Which one<br>are you</div><div class="t">Los&nbsp;Angeles alignment chart</div><div class="g">{grid}</div>'
+    return page(NAVY, "#fff", body, css, dark=True)
+
+
+def review_405():
+    star = lambda on: f'<span style="color:{"#f4b400" if on else "#d6d6d6"}">&#9733;</span>'
+    css = """.card{position:absolute;left:100px;top:240px;width:880px;height:890px;background:#fff;border-radius:40px;padding:48px 54px;box-shadow:0 30px 60px rgba(0,0,0,.18);font-family:-apple-system,'Inter Tight',sans-serif;color:#202124}
+.nm{font-size:58px;font-weight:800;letter-spacing:-1px}.rt{font-size:30px;margin-top:8px;color:#5f6368}.rt b{color:#202124}.st{font-size:32px;letter-spacing:2px}
+.cat{font-size:26px;color:#5f6368;margin-top:6px}.chips{display:flex;gap:12px;margin:26px 0 30px}.chips span{border:2px solid #dadce0;border-radius:30px;padding:10px 22px;font-size:22px;color:#1a73e8;font-weight:600}
+.rv{border-top:2px solid #eee;padding-top:26px;margin-top:6px}.who{display:flex;align-items:center;gap:16px}.av{width:58px;height:58px;border-radius:50%;background:#FF4F00;color:#fff;font-weight:800;font-size:26px;display:flex;align-items:center;justify-content:center}
+.who b{font-size:24px}.who small{display:block;font-size:19px;color:#5f6368}.rs{font-size:22px;color:#5f6368;margin-top:12px}.rx{font-size:31px;line-height:1.3;margin-top:8px;text-wrap:pretty}"""
+    body = ('<div class="kicker">Reviews<br>are in</div><div class="card"><div class="nm">The 405</div>'
+            f'<div class="rt"><b>1.2</b> <span class="st">{star(1)}{star(0)}{star(0)}{star(0)}{star(0)}</span> (48,019)</div><div class="cat">Freeway &middot; Los&nbsp;Angeles &middot; Open 24 hours, technically</div>'
+            '<div class="chips"><span>Directions</span><span>Save</span><span>Leave earlier</span></div>'
+            f'<div class="rv"><div class="who"><div class="av">J</div><div><b>Jordan</b><small>Local Guide &middot; 212 reviews</small></div></div><div class="rs">{star(1)}{star(0)}{star(0)}{star(0)}{star(0)} &nbsp;a week ago</div>'
+            f'<div class="rx">{nob("Spent my twenties here. Saw the Getty from it once. Never actually got there. Would not drive again.")}</div></div>'
+            f'<div class="rv" style="margin-top:26px"><div class="who"><div class="av" style="background:#0a84ff">P</div><div><b>Priya</b><small>3 reviews</small></div></div><div class="rs">{star(1)}{star(1)}{star(0)}{star(0)}{star(0)} &nbsp;2 days ago</div>'
+            f'<div class="rx">{nob("Two stars because the sunset over the hills was nice. I had time to watch all of it.")}</div></div></div>')
+    return page(GOLD, NAVY, body, css)
+
+
+def weather_app():
+    hours = [("Now", "64&deg;"), ("1PM", "65&deg;"), ("2PM", "66&deg;"), ("3PM", "65&deg;"), ("4PM", "63&deg;"), ("5PM", "61&deg;")]
+    hr = "".join(f'<div><small>{h}</small><i>&#9728;&#65039;</i><b>{t}</b></div>' for h, t in hours)
+    css = """.ph{position:absolute;left:50%;transform:translateX(-50%);top:228px;width:610px;height:912px;border-radius:84px;padding:11px;background:linear-gradient(145deg,#5b5b60,#2c2c2f 40%,#4a4a4e);box-shadow:0 40px 80px rgba(0,0,0,.28)}
+.scr{width:100%;height:100%;border-radius:74px;overflow:hidden;position:relative;border:9px solid #000;background:linear-gradient(180deg,#3d7bd9 0%,#5fa0ea 55%,#8cbcf0 100%);color:#fff;font-family:-apple-system,'Inter Tight',sans-serif;text-align:center}
+.isl{position:absolute;left:50%;transform:translateX(-50%);top:12px;width:150px;height:42px;background:#000;border-radius:24px}
+.loc{margin-top:96px;font-size:40px;font-weight:500}.tmp{font-size:150px;font-weight:200;line-height:1;margin-left:30px}.cond{font-size:26px;font-weight:600}.hl{font-size:24px;font-weight:600;opacity:.9}
+.bx{margin:28px 26px 0;background:rgba(255,255,255,.18);border-radius:26px;padding:20px 22px;text-align:left}.bx small{font-size:16px;letter-spacing:1px;opacity:.8;font-weight:600}
+.bx b{display:block;font-size:52px;font-weight:300;margin-top:4px}.bx p{font-size:22px;margin-top:6px;line-height:1.25;text-wrap:balance}
+.hrs{display:flex;justify-content:space-between;margin-top:16px}.hrs div{display:flex;flex-direction:column;gap:6px;font-size:19px}.hrs i{font-style:normal;font-size:24px}.hrs b{font-size:21px;font-weight:600}"""
+    body = ('<div class="kicker">Today&rsquo;s<br>forecast</div><div class="ph"><div class="scr"><div class="isl"></div>'
+            '<div class="loc">Los&nbsp;Angeles</div><div class="tmp">64&deg;</div><div class="cond">Mostly Sunny</div><div class="hl">H:66&deg; L:52&deg;</div>'
+            '<div class="bx"><small>&#127777;&#65039; FEELS LIKE</small><b>Freezing</b><p>According to everyone you know. Puffer jackets advised.</p></div>'
+            f'<div class="bx"><small>&#128336; HOURLY FORECAST</small><div class="hrs">{hr}</div></div></div></div>')
+    return page(PINK, NAVY, body, css)
+
+
+def dating_prompt():
+    css = """.cd{position:absolute;left:120px;width:840px;background:#fff;border-radius:30px;padding:40px 46px 46px;box-shadow:0 20px 50px rgba(0,0,0,.14)}
+.cd small{font-size:26px;font-weight:700;color:#1a1f4d}.cd p{font-family:'DM Serif Display',serif;font-size:50px;line-height:1.12;margin-top:16px;color:#111;text-wrap:balance}
+.hrt{position:absolute;right:-26px;bottom:-26px;width:84px;height:84px;border-radius:50%;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;font-size:40px;color:#FF4F00}"""
+    prompts = [("My most irrational fear", "Parallel parking on Abbot Kinney on a Saturday."), ("We&rsquo;ll get along if", "You know which day is street cleaning."),
+               ("Green flag", "Offers to drive to my side of the 405.")]
+    cards = "".join(f'<div class="cd" style="top:{240 + i * 300}px"><small>{a}</small><p>{nob(b)}</p><div class="hrt">&#9829;</div></div>' for i, (a, b) in enumerate(prompts))
+    body = f'<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet"><div class="kicker">Dating profile,<br>Los&nbsp;Angeles</div>{cards}'
+    return page("#ffe9d6", NAVY, body, css)
+
+
+def ticket():
+    css = """.tk{position:absolute;left:50%;top:250px;transform:translateX(-50%) rotate(1.5deg);width:640px;background:#fffbe6;border:3px solid #c8102e;padding:34px 40px;font-family:'IBM Plex Mono',monospace;color:#222;box-shadow:0 30px 60px rgba(0,0,0,.2)}
+.tk h4{background:#c8102e;color:#fff;text-align:center;font-size:26px;letter-spacing:3px;padding:12px;margin:-34px -40px 8px}.tk .p{text-align:center;font-size:16px;color:#c8102e;letter-spacing:2px;margin-bottom:18px}
+.f{border-bottom:2px solid #ddd;padding:12px 0}.f small{display:block;font-size:15px;color:#888;letter-spacing:1.5px}.f b{font-size:28px;line-height:1.25;text-wrap:balance}
+.fine{margin-top:22px}.fine span{display:block;font-size:15px;color:#888;letter-spacing:1.5px}.fine b{display:block;font-size:46px;color:#c8102e;line-height:1.1}
+.st{position:absolute;right:70px;top:1000px;font-size:62px;color:#FF4F00;transform:rotate(-8deg)}"""
+    fields = [("VIOLATION", "Believed the sign"), ("LOCATION", "The only open spot in Los&nbsp;Feliz"), ("VEHICLE", "Yours, unfortunately"),
+              ("TIME", "4 minutes after you left"), ("NOTES", "There were five signs. You read four.")]
+    fs = "".join(f'<div class="f"><small>{a}</small><b>{nob(b)}</b></div>' for a, b in fields)
+    body = (f'<div class="kicker">Saturday<br>parking</div><div class="tk"><h4>PARKING CITATION</h4><div class="p">A PARODY &middot; NOT A REAL TICKET</div>{fs}'
+            '<div class="fine"><span>FINE</span><b>Your whole Saturday</b></div></div><div class="st hand">every&nbsp;time</div>')
+    return page(CREAM, NAVY, body, css)
+
+
+def payments():
+    rows = [("S", "#FF4F00", "Sam", "Alex", "Tacos and parking, split 3 ways", "$36.00"), ("P", "#0a84ff", "Priya", "Jordan", "Valet (why was it $25)", "$12.50"),
+            ("T", "#AF52DE", "Taylor", "Nico", "Gas to the Valley and back", "$20.00"), ("A", "#34C759", "Ava", "Sam", "Brunch line holding fee", "$5.00"),
+            ("J", "#FF9500", "Jordan", "Priya", "Parking ticket, my fault, sorry", "$73.00"), ("N", "#c8102e", "Nico", "Taylor", "Bowl tickets, parking was extra", "$58.00")]
+    feed = "".join(f'<div class="r"><div class="av" style="background:{c}">{i}</div><div class="tx"><b>{a}</b> paid <b>{b}</b><p>{nob(n)}</p></div><div class="amt">{m}</div></div>' for i, c, a, b, n, m in rows)
+    css = """.app{position:absolute;left:100px;top:236px;width:880px;height:880px;background:#fff;border-radius:40px;padding:36px 44px;box-shadow:0 30px 60px rgba(0,0,0,.18);font-family:-apple-system,'Inter Tight',sans-serif}
+.app h3{font-size:40px;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}.app h6{font-size:20px;color:#888;font-weight:600;margin-bottom:12px}
+.r{display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-bottom:1.5px solid #f0f0f0}.av{flex:none;width:62px;height:62px;border-radius:50%;color:#fff;font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center}
+.tx{flex:1;font-size:25px;color:#111}.tx p{font-size:27px;margin-top:4px;color:#333;text-wrap:balance}.amt{font-size:26px;font-weight:700;color:#1a1f4d}"""
+    body = f'<div class="kicker">The group<br>chat ledger</div><div class="app"><h3>Friends</h3><h6>THIS WEEK IN LOS&nbsp;ANGELES</h6>{feed}</div>'
+    return page(GOLD, NAVY, body, css)
+
+
+def this_or_that():
+    pairs = [("Eastside", "Westside"), ("Al pastor", "Carne asada"), ("Beach day", "Mountain hike"), ("The Getty", "LACMA"), ("The 10", "The 405"), ("Dodger dog", "Stadium nachos")]
+    rows = "".join(f'<div class="r"><span>{a}</span><i>or</i><span>{b}</span></div>' for a, b in pairs)
+    css = """.t{position:absolute;top:240px;width:100%;text-align:center;font-weight:900;font-size:76px;letter-spacing:-2px;line-height:1;color:#fff}.t span{color:#FF9500}
+.l{position:absolute;top:350px;left:110px;width:860px}.r{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+.r span{flex:1;background:#fff;color:#1a1f4d;border-radius:20px;padding:24px 10px;text-align:center;font-weight:800;font-size:38px}
+.r i{font-family:'Caveat',cursive;font-style:normal;font-weight:700;font-size:44px;color:#FF9500}
+.cap{position:absolute;top:1080px;width:100%;text-align:center;color:#fff;font-size:48px}"""
+    body = f'<div class="kicker">Los&nbsp;Angeles<br>edition</div><div class="t">This <span>or</span> that</div><div class="l">{rows}</div><div class="cap hand">Comment your&nbsp;answers.</div>'
+    return page("#0f4c5c", "#fff", body, css, dark=True)
+
+
+def fill_blank():
+    css = """.q{position:absolute;left:90px;right:90px;top:300px;font-weight:900;font-size:96px;letter-spacing:-3px;line-height:1.02;text-wrap:balance}
+.q span{color:#FF4F00}.ln{position:absolute;left:90px;right:90px;height:6px;background:#1a1f4d;border-radius:3px}
+.cap{position:absolute;left:90px;top:1040px;font-size:56px;color:#FF4F00}"""
+    body = ('<div class="kicker">Finish<br>the sentence</div><div class="q">You know you&rsquo;ve lived in Los&nbsp;Angeles too long&nbsp;when<span>&hellip;</span></div>'
+            '<div class="ln" style="top:820px"></div><div class="ln" style="top:920px"></div><div class="cap hand">Best answers get their own&nbsp;post.</div>')
+    return page(CREAM, NAVY, body, css)
+
+
 MEMES = {"texts-parking": texts_parking, "texts-quake": texts_quake, "texts-rain": texts_rain, "texts-plans": texts_plans,
          "texts-outside": texts_outside, "bingo": bingo, "maps": maps, "dictionary": dictionary,
          "freeway": freeway, "parking": parking, "forecast": forecast, "chart": chart,
@@ -521,7 +646,9 @@ MEMES = {"texts-parking": texts_parking, "texts-quake": texts_quake, "texts-rain
          "bingo-date": bingo_date, "maps-friday": maps_friday, "freeway-eta": freeway_eta, "ipad-resolutions": ipad_resolutions,
          "ios-lax": ios_lax, "ios-coffee": ios_coffee, "ios-housewarming": ios_housewarming, "ios-snow": ios_snow, "ios-gym": ios_gym,
          "bingo-lax": bingo_lax, "maps-lax": maps_lax, "freeway-101": freeway_101, "dictionary-weather": dictionary_weather, "ipad-calendar": ipad_calendar,
-         "receipt": receipt, "wrapped": wrapped, "lockscreen": lockscreen}
+         "receipt": receipt, "wrapped": wrapped, "lockscreen": lockscreen,
+         "tag-yourself": tag_yourself, "alignment": alignment, "review-405": review_405, "weather-app": weather_app, "dating-prompt": dating_prompt,
+         "ticket": ticket, "payments": payments, "this-or-that": this_or_that, "fill-blank": fill_blank}
 
 
 def main():
