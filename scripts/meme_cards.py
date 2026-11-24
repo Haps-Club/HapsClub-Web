@@ -392,9 +392,9 @@ def ios_snow():
 
 
 def ios_gym():
-    return iphone("January in<br>Los&nbsp;Angeles", "Gym buddy", [
-        ("ts", "<b>Monday</b> 6:01 AM"), ("them", "every class is booked until march"), ("me", "it&rsquo;s january"),
-        ("them", "even the 5 am one"), ("me", "see you in february"), ("them", "see you in february")], bg=ORANGE, ink="#fff", dark=True, receipt=None)
+    return iphone("December in<br>Los&nbsp;Angeles", "Gym buddy", [
+        ("ts", "<b>Monday</b> 6:01 AM"), ("them", "every spin class is booked until january"), ("me", "it&rsquo;s december"),
+        ("them", "holiday party photos"), ("me", "see you in january"), ("them", "see you in january")], bg=ORANGE, ink="#fff", dark=True, receipt=None)
 
 
 def bingo_lax():
@@ -439,19 +439,19 @@ CAL_CSS = IPAD_CSS + """.cal{position:absolute;left:28px;right:28px;top:66px;bot
 def ipad_calendar():
     start, end, H = 7, 22, 600
     def y(h): return (h - start) / (end - start) * H
-    days = [("MON", "11", [("drive", 17.5, 19, "Drive to dinner", "5:30 PM"), ("plan", 19, 20, "Dinner", "7 PM"), ("drive", 20, 21.7, "Drive home", "8 PM")]),
-            ("TUE", "12", [("drive", 8.0, 9.2, "Find parking", "8 AM"), ("plan", 9.25, 10.25, "Coffee", "9:15 AM")]),
-            ("WED", "13", [("plan", 7.1, 8.2, "Gym", "7 AM"), ("drive", 12, 14, "Cross the 405", "Noon"), ("plan", 14, 15, "Lunch", "2 PM")]),
-            ("THU", "14", [("drive", 13, 16.5, "Leave for LAX", "1 PM"), ("plan", 16.5, 17.5, "Flight", "4:30 PM")]),
-            ("FRI", "15", [("drive", 15.5, 18, "Santa Monica to Silver Lake", "3:30 PM"), ("plan", 18, 19.5, "Happy hour", "6 PM")])]
+    days = [("MON", "7", [("drive", 17.5, 19, "Drive to dinner", "5:30 PM"), ("plan", 19, 20, "Dinner", "7 PM"), ("drive", 20, 21.7, "Drive home", "8 PM")]),
+            ("TUE", "8", [("drive", 8.0, 9.2, "Find parking", "8 AM"), ("plan", 9.25, 10.25, "Coffee", "9:15 AM")]),
+            ("WED", "9", [("plan", 7.1, 8.2, "Gym", "7 AM"), ("drive", 12, 14, "Cross the 405", "Noon"), ("plan", 14, 15, "Lunch", "2 PM")]),
+            ("THU", "10", [("drive", 13, 16.5, "Leave for LAX", "1 PM"), ("plan", 16.5, 17.5, "Flight", "4:30 PM")]),
+            ("FRI", "11", [("drive", 15.5, 18, "Santa Monica to Silver Lake", "3:30 PM"), ("plan", 18, 19.5, "Happy hour", "6 PM")])]
     hours = "".join(f'<div class="hr" style="top:{y(h):.0f}px"></div><div class="hl" style="top:{y(h):.0f}px">{(h - 1) % 12 + 1} {"AM" if h < 12 else "PM"}</div>' for h in range(8, 22, 2))
     cols = ""
     for _, _, evs in days:
         cols += '<div class="col">' + "".join(f'<div class="ev {k}" style="top:{y(a):.0f}px;height:{y(b) - y(a) - 3:.0f}px">{t}<small>{tm}</small></div>' for k, a, b, t, tm in evs) + "</div>"
     head = '<div class="ch"><div></div>' + "".join(f'<div>{d}<b>{n}</b></div>' for d, n, _ in days) + "</div>"
     body = ('<div class="kicker">A normal week<br>in Los&nbsp;Angeles</div><div class="ipad"><div class="scr">'
-            '<div class="sb"><span>9:41 AM&nbsp; Mon Jan 11</span><span>100%</span></div>'
-            '<div class="cal"><div class="mon">January 2027</div>' + head + f'<div class="grid">{hours}<div></div>{cols}</div></div></div></div>')
+            '<div class="sb"><span>9:41 AM&nbsp; Mon Dec 7</span><span>100%</span></div>'
+            '<div class="cal"><div class="mon">December 2026</div>' + head + f'<div class="grid">{hours}<div></div>{cols}</div></div></div></div>')
     return page(CREAM, NAVY, body, CAL_CSS)
 
 
@@ -509,7 +509,7 @@ background:linear-gradient(180deg,#ff9a5a 0%,#ff6a88 35%,#7a5cc7 70%,#2b2f6e 100
 .tx b{display:block;font-size:20px;margin-top:2px;text-wrap:balance}.tx p{font-size:19px;line-height:1.2;margin-top:2px;text-wrap:balance}
 .hm{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;width:190px;height:7px;border-radius:4px;background:#fff}"""
     body = ('<div class="kicker">Every evening<br>in Los&nbsp;Angeles</div><div class="ph"><div class="scr"><div class="isl"></div>'
-            f'<div class="dt">Friday, January 8</div><div class="tm">5:41</div><div class="ns">{cards}</div><div class="hm"></div></div></div>')
+            f'<div class="dt">Friday, December 4</div><div class="tm">5:41</div><div class="ns">{cards}</div><div class="hm"></div></div></div>')
     return page(GOLD, NAVY, body, css)
 
 
