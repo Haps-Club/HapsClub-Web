@@ -1,0 +1,148 @@
+{
+ "quotes": [
+  {
+   "slug": "conan-sidewalk",
+   "quote": "In Los Angeles, if you walk on the sidewalk, people think that you're off your medication.",
+   "who": "Conan O'Brien",
+   "where": "To reporters, 2009",
+   "send": "your walking friend",
+   "theme": "cream",
+   "font": "shrikhand"
+  },
+  {
+   "slug": "mayer-friend",
+   "quote": "L.A. reminds me of that friend who just breaks into your house without knocking and eats all your food.",
+   "who": "John Mayer",
+   "where": "Rolling Stone, 2002",
+   "send": "your food thief",
+   "theme": "orange",
+   "font": "pacifico"
+  },
+  {
+   "slug": "issa",
+   "quote": "I've always had a love affair with the city of L.A.",
+   "who": "Issa Rae",
+   "where": "USC Annenberg, 2017",
+   "send": "your LA love",
+   "theme": "pink",
+   "font": "greatvibes"
+  },
+  {
+   "slug": "conan-car",
+   "quote": "If you're not in a car, something's very wrong with you.",
+   "who": "Conan O'Brien",
+   "where": "To reporters, 2009",
+   "send": "whoever drives",
+   "theme": "navy",
+   "font": "marker"
+  },
+  {
+   "slug": "mayer-color",
+   "quote": "L.A.'s got a heightened sense of color and joy, so much so that it becomes annoying.",
+   "who": "John Mayer",
+   "where": "Rolling Stone, 2002",
+   "send": "your sunny friend",
+   "theme": "cream",
+   "font": "caveat"
+  },
+  {
+   "slug": "waters",
+   "quote": "Breathe in that smog and feel lucky that only in L.A. will you glimpse a green sun or a brown moon.",
+   "who": "John Waters",
+   "where": "Crackpot, 2007",
+   "send": "your sunset friend",
+   "theme": "orange",
+   "font": "dmserif"
+  },
+  {
+   "slug": "simon",
+   "quote": "Everybody in Los Angeles wants to be a movie director.",
+   "who": "Neil Simon",
+   "where": "Playboy, 1979",
+   "send": "your screenwriter friend",
+   "theme": "orange",
+   "font": "shrikhand"
+  },
+  {
+   "slug": "delaney",
+   "quote": "If you hate on LA, you're an idiot.",
+   "who": "Rob Delaney",
+   "where": "The Guardian, 2013",
+   "send": "your LA skeptic",
+   "theme": "navy",
+   "font": "marker"
+  },
+  {
+   "slug": "wiig-drove",
+   "quote": "I drove to Los Angeles and didn't tell my parents.",
+   "who": "Kristen Wiig",
+   "where": "NPR Fresh Air, 2024",
+   "send": "your road-trip friend",
+   "theme": "pink",
+   "font": "pacifico"
+  },
+  {
+   "slug": "gold-short",
+   "quote": "So much of Los Angeles to me is the ecstasy of movement",
+   "who": "Jonathan Gold",
+   "where": "InsideHook, 2016",
+   "send": "your taco-run friend",
+   "theme": "cream",
+   "font": "greatvibes"
+  },
+  {
+   "slug": "ruscha-flavor",
+   "quote": "Los Angeles seemed better suited, and also it had a flavor.",
+   "who": "Ed Ruscha",
+   "where": "Getty Art + Ideas, 2022",
+   "send": "your art friend",
+   "theme": "orange",
+   "font": "lobster"
+  },
+  {
+   "slug": "gold-car",
+   "quote": "It's about the beauty we see from our car windows. Sometimes driving down a street for 40 miles is actually the way to experience things.",
+   "who": "Jonathan Gold",
+   "where": "InsideHook, 2016",
+   "send": "whoever drives",
+   "theme": "navy",
+   "font": "dmserif"
+  },
+  {
+   "slug": "ruscha-palms",
+   "quote": "And believe it or not, the vegetation here—palm trees and that sorta thing—you know, creates this mythical position you take in your life.",
+   "who": "Ed Ruscha",
+   "where": "Getty Art + Ideas, 2022",
+   "send": "your palm tree person",
+   "theme": "pink",
+   "font": "caveat"
+  },
+  {
+   "slug": "ruscha-oz",
+   "quote": "And it was such a strange but vital place that we felt like this was the land of Oz or something.",
+   "who": "Ed Ruscha",
+   "where": "On arriving in 1956, Getty, 2022",
+   "send": "your new-in-town friend",
+   "theme": "cream",
+   "font": "yellowtail"
+  },
+  {
+   "slug": "wiig-rochester",
+   "quote": "And I found an apartment. I got a roommate. It was on, like, Rochester Ave., which I thought was a sign. Because that's where I'm from, and I was like, I'm supposed to live here.",
+   "who": "Kristen Wiig",
+   "where": "NPR Fresh Air, 2024",
+   "send": "your first roommate",
+   "theme": "orange",
+   "font": "caveat"
+  },
+  {
+   "slug": "jackson",
+   "quote": "I realized quickly, reading the script, that it was a love letter to Los Angeles. I loved all the qualities about it. It was zany, it was satirical, it was magical, and it was romantic.",
+   "who": "Mick Jackson",
+   "where": "Director of L.A. Story, Los Angeles Magazine",
+   "send": "your rom-com friend",
+   "theme": "navy",
+   "font": "dmserif"
+  }
+ ]
+}
