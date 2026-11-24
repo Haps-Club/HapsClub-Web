@@ -14,8 +14,17 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 
 def nob(t):
+    """Keep the last two words together, unless that would glue three words ("Los Angeles right") into one chunk."""
     i = t.rfind(" ")
-    return t[:i] + "&nbsp;" + t[i + 1:] if i > 0 and t.count(" ") >= 2 else t
+    if i <= 0 or t.count(" ") < 2 or t[:i].endswith("Angeles"):
+        return t
+    return t[:i] + "&nbsp;" + t[i + 1:]
+
+
+# Shrinks the headline until it fits inside the text column (nothing may touch the right edge).
+FIT = ("<script>document.fonts.ready.then(function(){var h=document.querySelector('h1'),w=document.querySelector('.wrap');"
+       "var s=parseFloat(getComputedStyle(h).fontSize);"
+       "while((h.scrollWidth>w.clientWidth+1||h.getBoundingClientRect().right>990)&&s>40){s-=4;h.style.fontSize=s+'px';}});</script>")
 
 
 def la(t):
@@ -30,7 +39,7 @@ body{width:1080px;height:1350px;overflow:hidden;background:#e9e6e1;color:#221d1a
 .count{position:absolute;right:70px;top:100px;font-family:'IBM Plex Mono',monospace;font-size:26px;letter-spacing:4px;opacity:.6}
 .wrap{position:absolute;left:84px;right:90px;top:260px;bottom:270px;display:flex;flex-direction:column;justify-content:center}
 .num{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;font-size:150px;line-height:.85;color:#FF4F00;margin-bottom:18px}
-h1{font-family:'Archivo',sans-serif;font-stretch:72%;font-weight:900;letter-spacing:-2px;line-height:.92;text-wrap:balance}
+h1{max-width:100%;font-family:'Archivo',sans-serif;font-stretch:72%;font-weight:900;letter-spacing:-2px;line-height:.92;text-wrap:balance}
 .box{display:inline-block;align-self:flex-start;margin-top:34px;background:#E2B23A;padding:16px 26px 18px;max-width:880px;
 font-family:'Source Serif 4',serif;font-style:italic;font-weight:600;line-height:1.15;text-wrap:balance}
 .body{margin-top:30px;font-size:36px;line-height:1.3;max-width:860px;text-wrap:pretty;font-weight:500}
@@ -53,7 +62,7 @@ def slide(i, n, h, box="", body="", num=None, hsize=150, bsize=40):
     return (f'<!doctype html><html><head><meta charset="utf-8">{FONTS}<style>{CSS}</style></head><body>{PAPER}<div class="bar"></div>'
             f'<img class="logo" src="file://{ROOT}/assets/img/haps-logo.svg"><div class="count">{i:02d} / {n:02d}</div>'
             f'<div class="wrap">{numhtml}<h1 style="font-size:{hsize}px">{nob(la(h))}</h1>{boxhtml}{bodyhtml}</div>'
-            f'<div class="foot"><span>Haps Club &middot; Los&nbsp;Angeles</span>{arrow}</div></body></html>')
+            f'<div class="foot"><span>Haps Club &middot; Los&nbsp;Angeles</span>{arrow}</div>' + FIT + '</body></html>')
 
 
 def build(c):
