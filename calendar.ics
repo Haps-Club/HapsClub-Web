@@ -168,30 +168,6 @@ URL:https://www.lacma.org/art/exhibition/california-collectives-asian-amer
  ican-moderns-1924-1965-vincent-price-gallery
 END:VEVENT
 BEGIN:VEVENT
-UID:cbb306346ad3ecd61ea6@haps.club
-DTSTAMP:20261123T000000Z
-DTSTART:20261124T030000Z
-DTEND:20261124T043000Z
-SUMMARY:Sam Wasson on Frank Capra at Chevalier's Books
-LOCATION:Chevalier's Books\, Larchmont\, 133 N Larchmont Blvd\, Los Angele
- s\, CA 90004
-DESCRIPTION:Sam Wasson talks about Frank Capra: A Life\, his biography of 
- the director. RSVP required. Price: RSVP.\nhttps://www.chevaliersbooks.co
- m/events
-URL:https://www.chevaliersbooks.com/events
-END:VEVENT
-BEGIN:VEVENT
-UID:ba1418ba1241b8be4c81@haps.club
-DTSTAMP:20261123T000000Z
-DTSTART:20261124T033000Z
-DTEND:20261124T050000Z
-SUMMARY:Addams Family Values at LACMA
-LOCATION:LACMA\, Keck Plaza\, 5905 Wilshire Blvd
-DESCRIPTION:A darkly funny pre-Thanksgiving movie night under the stars. P
- rice: $10.\nhttps://www.lacma.org/event-calendar-by-day
-URL:https://www.lacma.org/event-calendar-by-day
-END:VEVENT
-BEGIN:VEVENT
 UID:43dcefad5839d20df6ee@haps.club
 DTSTAMP:20261123T000000Z
 DTSTART:20261125T033000Z
