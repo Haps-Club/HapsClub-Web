@@ -87,7 +87,7 @@ def texts_outside():
 
 
 # ---------- other formats ----------
-def freeway():
+def freeway(kicker="Today&rsquo;s commute", num="405", big="405 North", small="Leave now. Arrive emotionally&nbsp;different.", cap="Send it to whoever&rsquo;s driving.", bg=CREAM):
     css = """.sign{position:absolute;left:90px;top:270px;width:900px;height:560px;background:#0B6B3A;border:10px solid #fff;border-radius:28px;
 box-shadow:0 0 0 6px #0B6B3A,0 30px 60px rgba(0,0,0,.25);color:#fff;font-family:'Overpass',sans-serif;padding:60px 70px}
 .shield{position:absolute;right:70px;top:56px;width:170px}
@@ -98,11 +98,11 @@ box-shadow:0 0 0 6px #0B6B3A,0 30px 60px rgba(0,0,0,.25);color:#fff;font-family:
 .cap{position:absolute;top:1040px;left:0;width:100%;text-align:center;font-size:58px;color:#1a1f4d}"""
     shield = """<svg class="shield" viewBox="0 0 100 110"><path d="M5 18 Q50 -2 95 18 L95 40 Q95 85 50 108 Q5 85 5 40 Z" fill="#fff"/>
 <path d="M11 22 Q50 6 89 22 L89 32 L11 32 Z" fill="#c8102e"/><path d="M11 32 L89 32 L89 42 Q88 80 50 100 Q12 80 11 42 Z" fill="#003da5"/>
-<text x="50" y="76" font-family="Overpass" font-weight="900" font-size="34" fill="#fff" text-anchor="middle">405</text></svg>"""
-    body = (f'<div class="kicker">Today&rsquo;s commute</div><div class="post l"></div><div class="post r"></div>'
-            f'<div class="sign">{shield}<div class="big">405 North</div><div class="small">Leave now. Arrive emotionally&nbsp;different.</div>'
-            f'<div class="arrow">&#8599;</div></div><div class="cap hand">Send it to whoever&rsquo;s driving.</div>')
-    return page(CREAM, NAVY, body, css)
+<text x="50" y="76" font-family="Overpass" font-weight="900" font-size="34" fill="#fff" text-anchor="middle">{num}</text></svg>""".replace("{num}", num)
+    body = (f'<div class="kicker">{kicker}</div><div class="post l"></div><div class="post r"></div>'
+            f'<div class="sign">{shield}<div class="big">{big}</div><div class="small">{small}</div>'
+            f'<div class="arrow">&#8599;</div></div><div class="cap hand">{cap}</div>')
+    return page(bg, NAVY, body, css)
 
 
 def parking():
@@ -156,8 +156,8 @@ svg.c{position:absolute;left:90px;top:400px}"""
     return page(CREAM, NAVY, '<div class="t">Distance in Los&nbsp;Angeles</div><div class="sub">(a scientific study)</div>' + svg, css)
 
 
-def bingo():
-    cells = ["&ldquo;It&rsquo;s only 20 minutes&rdquo;", "Someone is &ldquo;writing something&rdquo;", "&ldquo;We should hike&rdquo;",
+def bingo(kicker="Dinner party", title="Los&nbsp;Angeles <span>bingo</span>", cells=None, cap="Screenshot it. Mark your squares. Tag your&nbsp;table.", bg=NAVY):
+    cells = cells or ["&ldquo;It&rsquo;s only 20 minutes&rdquo;", "Someone is &ldquo;writing something&rdquo;", "&ldquo;We should hike&rdquo;",
              "A parking story", "FREE SPACE<br>the weather", "&ldquo;Was that an earthquake?&rdquo;",
              "&ldquo;Which freeway did you take?&rdquo;", "A taco truck ranking", "&ldquo;I could never live in New York&rdquo;"]
     grid = "".join(f'<div class="c{" free" if "FREE" in c else ""}">{nob(c)}</div>' for c in cells)
@@ -168,12 +168,12 @@ def bingo():
 padding:20px;font-weight:800;font-size:36px;line-height:1.12;color:#1a1f4d}
 .c.free{background:#FF4F00;color:#fff}
 .cap{position:absolute;top:1090px;width:100%;text-align:center;color:#fff;font-size:44px}"""
-    body = (f'<div class="kicker">Dinner party</div><div class="t">Los&nbsp;Angeles <span>bingo</span></div><div class="g">{grid}</div>'
-            '<div class="cap hand">Screenshot it. Mark your squares. Tag your&nbsp;table.</div>')
-    return page(NAVY, "#fff", body, css, dark=True)
+    body = (f'<div class="kicker">{kicker}</div><div class="t">{title}</div><div class="g">{grid}</div>'
+            f'<div class="cap hand">{cap}</div>')
+    return page(bg, "#fff", body, css, dark=True)
 
 
-def maps():
+def maps(kicker="Going 3 miles<br>on a Thursday", mins="51 min", dist="3.2 mi", via="Fastest route, somehow", cap="should&rsquo;ve walked", bg=PINK):
     streets = "".join(f'<line x1="0" y1="{y}" x2="760" y2="{y - 60}" stroke="#e3ded6" stroke-width="10"/>' for y in range(40, 560, 70))
     streets += "".join(f'<line x1="{x}" y1="0" x2="{x + 40}" y2="520" stroke="#e3ded6" stroke-width="10"/>' for x in range(30, 760, 90))
     svg = f"""<svg viewBox="0 0 760 520" width="760" height="520">{streets}
@@ -187,10 +187,10 @@ def maps():
 .sheet{padding:34px 48px}.big{font-weight:900;font-size:76px;letter-spacing:-2px;color:#c8102e}.big span{color:#111;font-weight:700;font-size:44px;margin-left:16px}
 .via{font-size:30px;color:#666;margin-top:6px}.btn{display:inline-block;margin-top:22px;background:#e9e9eb;color:#111;font-weight:800;font-size:30px;padding:16px 36px;border-radius:40px}
 .cap{position:absolute;right:120px;top:1000px;font-size:56px;color:#FF4F00;transform:rotate(-5deg)}"""
-    body = (f'<div class="kicker">Going 3 miles<br>on a Thursday</div><div class="card"><div class="map">{svg}</div>'
-            '<div class="sheet"><div class="big">51 min<span>3.2 mi</span></div><div class="via">Fastest route, somehow</div>'
-            '<div class="btn">Start</div></div></div><div class="cap hand">should&rsquo;ve walked</div>')
-    return page(PINK, NAVY, body, css)
+    body = (f'<div class="kicker">{kicker}</div><div class="card"><div class="map">{svg}</div>'
+            f'<div class="sheet"><div class="big">{mins}<span>{dist}</span></div><div class="via">{via}</div>'
+            f'<div class="btn">Start</div></div></div><div class="cap hand">{cap}</div>')
+    return page(bg, NAVY, body, css)
 
 
 def dictionary():
@@ -298,10 +298,80 @@ def ios_valley():
         ("me", "that&rsquo;s a see you in spring"), ("them", "valid")], bg=ORANGE, ink="#fff", dark=True, receipt=None)
 
 
+# ---------- batch 3 ----------
+def ios_dinner():
+    return iphone("Getting a table<br>in Los&nbsp;Angeles", "Priya", [
+        ("ts", "<b>Monday</b> 11:02 AM"), ("them", "can you book us for saturday at 7"), ("me", "the only times are 5:15 or 10:45"),
+        ("them", "5:15"), ("me", "we&rsquo;re early bird people now"), ("them", "always have been")], bg=PINK, receipt=None)
+
+
+def ios_hike():
+    return iphone("Weekend plans<br>in Los&nbsp;Angeles", "Jordan", [
+        ("ts", "<b>Friday</b> 8:30 PM"), ("them", "hike tomorrow?"), ("me", "which one"), ("them", "runyon"),
+        ("me", "so a photoshoot"), ("them", "fine. griffith at 7"), ("me", "parking at 7 or never")], bg=CREAM)
+
+
+def ios_moving():
+    return iphone("Moving across<br>Los&nbsp;Angeles", "Sam", [
+        ("ts", "<b>Today</b> 6:14 PM"), ("me", "thinking about moving to silver lake"), ("them", "you&rsquo;ll never see your westside friends"),
+        ("me", "i don&rsquo;t see them now"), ("them", "then sign the lease")], bg=GOLD, receipt=None)
+
+
+def ios_celeb():
+    return iphone("Grocery run<br>in Los&nbsp;Angeles", "Taylor", [
+        ("ts", "<b>Sunday</b> 4:47 PM"), ("me", "just saw someone famous in the cereal aisle"), ("them", "who"),
+        ("me", "no idea but everyone stared"), ("them", "classic"), ("me", "bought the same cereal just in case")], bg="#B9BEE6")
+
+
+def bingo_date():
+    return bingo(kicker="First date", title="Los&nbsp;Angeles date <span>bingo</span>", cells=[
+        "They have a project &ldquo;in development&rdquo;", "Took three tries to schedule", "Valet or street parking debate",
+        "They asked your sign", "FREE SPACE<br>They&rsquo;re late", "Ten minutes on traffic",
+        "Mentions their podcast", "A very specific oat milk order", "&ldquo;I&rsquo;m mostly on the Eastside now&rdquo;"],
+        cap="How many did you get? Be&nbsp;honest.", bg="#3a1f4d")
+
+
+def maps_friday():
+    return maps(kicker="Friday at 5,<br>any direction", mins="74 min", dist="2.1 mi", via="Every route is the slow route",
+                cap="faster on&nbsp;foot", bg=GOLD)
+
+
+def freeway_eta():
+    return freeway(kicker="Heading to the beach", num="10", big="10 West", small="Santa Monica 14 mi.<br>See you in&nbsp;spring.",
+                   cap="Tag your beach friend.", bg=PINK)
+
+
+IPAD_CSS = """.ipad{position:absolute;left:50%;transform:translateX(-50%);top:232px;width:900px;height:900px;border-radius:52px;background:#1c1c1e;padding:22px;
+box-shadow:0 40px 80px rgba(0,0,0,.25)}
+.scr{width:100%;height:100%;background:#fff;border-radius:32px;overflow:hidden;position:relative;font-family:-apple-system,'SF Pro Text','Inter Tight',sans-serif;color:#000}
+.sb{display:flex;justify-content:space-between;padding:16px 30px 0;font-size:19px;font-weight:600}
+.tb{display:flex;justify-content:space-between;align-items:center;padding:14px 30px;color:#e0a100;font-size:24px}
+.nt{padding:6px 54px}.nt h3{font-size:58px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px;text-wrap:balance}
+.nt .d{color:#8e8e93;font-size:19px;margin-bottom:22px}
+.li{display:flex;align-items:flex-start;gap:22px;font-size:37px;line-height:1.22;margin-bottom:26px;text-wrap:balance}
+.ck{flex:none;width:38px;height:38px;border-radius:50%;border:2.5px solid #c7c7cc;margin-top:3px}
+.ck.on{background:#e0a100;border-color:#e0a100;position:relative}.ck.on:after{content:'';position:absolute;left:10px;top:4px;width:9px;height:17px;border:solid #fff;border-width:0 3.5px 3.5px 0;transform:rotate(45deg)}
+.li.done span{color:#8e8e93;text-decoration:line-through}"""
+
+
+def ipad_resolutions():
+    items = [(False, "Go east of La Brea at least once"), (False, "Finally learn our street cleaning day"),
+             (False, "Actually go to the Getty"), (False, "Hike something that isn&rsquo;t Runyon"),
+             (False, "Leave 40 minutes early for everything"), (False, "Find parking on the first try"), (True, "Complain about traffic")]
+    lis = "".join(f'<div class="li{" done" if d else ""}"><div class="ck{" on" if d else ""}"></div><span>{nob(t)}</span></div>' for d, t in items)
+    body = ('<div class="kicker">New year,<br>same Los&nbsp;Angeles</div><div class="ipad"><div class="scr">'
+            '<div class="sb"><span>9:41 AM&nbsp; Thu Jan 1</span><span>100%</span></div>'
+            '<div class="tb"><span>&#8249; Notes</span><span>Done</span></div>'
+            f'<div class="nt"><h3>2027 resolutions</h3><div class="d">January 1, 2027 at 9:41 AM</div>{lis}</div></div></div>')
+    return page(CREAM, NAVY, body, IPAD_CSS)
+
+
 MEMES = {"texts-parking": texts_parking, "texts-quake": texts_quake, "texts-rain": texts_rain, "texts-plans": texts_plans,
          "texts-outside": texts_outside, "bingo": bingo, "maps": maps, "dictionary": dictionary,
          "freeway": freeway, "parking": parking, "forecast": forecast, "chart": chart,
-         "ios-brunch": ios_brunch, "ios-bowl": ios_bowl, "ios-towed": ios_towed, "ios-santaana": ios_santaana, "ios-valley": ios_valley}
+         "ios-brunch": ios_brunch, "ios-bowl": ios_bowl, "ios-towed": ios_towed, "ios-santaana": ios_santaana, "ios-valley": ios_valley,
+         "ios-dinner": ios_dinner, "ios-hike": ios_hike, "ios-moving": ios_moving, "ios-celeb": ios_celeb,
+         "bingo-date": bingo_date, "maps-friday": maps_friday, "freeway-eta": freeway_eta, "ipad-resolutions": ipad_resolutions}
 
 
 def main():
