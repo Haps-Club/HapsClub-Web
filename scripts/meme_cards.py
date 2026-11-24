@@ -456,10 +456,11 @@ def ipad_calendar():
 
 
 # ---------- new formats: receipt, wrapped, lock screen ----------
-def receipt():
-    items = [("Valet", "25.00"), ("Two cocktails", "44.00"), ("&ldquo;Small plates&rdquo; x 6", "96.00"), ("Rideshare surge", "48.00"),
+def receipt(kicker="One night out<br>in Los&nbsp;Angeles", sub="Saturday &middot; 7:00 PM &ndash; 1:14 AM", items=None, total="$295.00",
+            ty="THANK YOU. SEE YOU SATURDAY.", stamp="worth&nbsp;it", bg=PINK):
+    items = items or [("Valet", "25.00"), ("Two cocktails", "44.00"), ("&ldquo;Small plates&rdquo; x 6", "96.00"), ("Rideshare surge", "48.00"),
              ("Parking ticket (the valet was full)", "73.00"), ("Late-night tacos", "9.00")]
-    rows = "".join(f'<div class="ln"><span>{nob(a)}</span><span>${b}</span></div>' for a, b in items)
+    rows = "".join(f'<div class="ln"><span>{nob(a)}</span><span>{"$" if b[0].isdigit() else ""}{b}</span></div>' for a, b in items)
     css = """.rc{position:absolute;left:50%;top:228px;transform:translateX(-50%) rotate(-1.5deg);width:640px;background:#fffdf7;padding:46px 50px 40px;
 font-family:'IBM Plex Mono',monospace;color:#222;box-shadow:0 30px 60px rgba(0,0,0,.18);
 -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 18px) no-repeat,radial-gradient(circle 12px at 12px 100%,#0000 98%,#000) bottom/24px 18px repeat-x}
@@ -468,10 +469,10 @@ font-family:'IBM Plex Mono',monospace;color:#222;box-shadow:0 30px 60px rgba(0,0
 .tot{display:flex;justify-content:space-between;font-size:34px;font-weight:700}.ty{text-align:center;font-size:22px;margin-top:20px;color:#555}
 .bar{} .bc{height:56px;margin:22px auto 0;width:420px;background:repeating-linear-gradient(90deg,#222 0 3px,#fff 3px 6px,#222 6px 7px,#fff 7px 11px)}
 .stamp{position:absolute;right:120px;top:880px;font-size:64px;color:#FF4F00;transform:rotate(-8deg)}"""
-    body = ('<div class="kicker">One night out<br>in Los&nbsp;Angeles</div><div class="rc"><h4>LOS ANGELES</h4><div class="sub">Saturday &middot; 7:00 PM &ndash; 1:14 AM</div>'
-            f'<div class="dash"></div>{rows}<div class="dash"></div><div class="tot"><span>TOTAL</span><span>$295.00</span></div>'
-            '<div class="ty">THANK YOU. SEE YOU SATURDAY.</div><div class="bc"></div></div><div class="stamp hand">worth&nbsp;it</div>')
-    return page(PINK, NAVY, body, css)
+    body = (f'<div class="kicker">{kicker}</div><div class="rc"><h4>LOS ANGELES</h4><div class="sub">{sub}</div>'
+            f'<div class="dash"></div>{rows}<div class="dash"></div><div class="tot"><span>TOTAL</span><span>{total}</span></div>'
+            f'<div class="ty">{ty}</div><div class="bc"></div></div><div class="stamp hand">{stamp}</div>')
+    return page(bg, NAVY, body, css)
 
 
 def wrapped():
@@ -638,6 +639,102 @@ def fill_blank():
     return page(CREAM, NAVY, body, css)
 
 
+# ---------- batch 6: dating in Los Angeles ----------
+def ios_date_plans():
+    return iphone("Planning a first date<br>in Los&nbsp;Angeles", "Alex", [
+        ("ts", "<b>Monday</b> 7:12 PM"), ("them", "drinks this week?"), ("me", "slammed. next week?"), ("them", "out of town. the 14th?"),
+        ("me", "of december?"), ("them", "january"), ("me", "see you in 2027")], bg=PINK, receipt="Read 7:31 PM")
+
+
+def ios_date_middle():
+    return iphone("Meeting<br>in the middle", "Jamie", [
+        ("ts", "<b>Thursday</b> 6:02 PM"), ("them", "let&rsquo;s meet in the middle"), ("me", "i&rsquo;m in silver lake"),
+        ("them", "i&rsquo;m in santa monica"), ("me", "so&hellip; culver city"), ("them", "that&rsquo;s still 40 minutes"),
+        ("me", "for both of us. that&rsquo;s love")], bg=CREAM, receipt=None)
+
+
+def maps_date():
+    return maps(kicker="Matched with someone<br>in Santa Monica", mins="1 hr 22 min", dist="19 mi",
+                via="From Silver Lake, Friday at 6", cap="long distance, basically", bg="#B9BEE6")
+
+
+def dictionary_dating():
+    return dictionary(title="Dating <span>&rarr;</span> English", hdr=("WHAT THEY TEXT", "WHAT THEY MEAN"), rows=[
+        ("&ldquo;I&rsquo;m slammed right now&rdquo;", "You live across the 405."),
+        ("&ldquo;Let&rsquo;s grab coffee first&rdquo;", "This is round one of interviews."),
+        ("&ldquo;I&rsquo;m pretty close to you&rdquo;", "Forty minutes with no traffic."),
+        ("&ldquo;I&rsquo;m working on a few projects&rdquo;", "Please don&rsquo;t ask about the projects."),
+        ("&ldquo;Let&rsquo;s play it by ear&rdquo;", "I&rsquo;ll cancel at 6:15.")], bg=PINK)
+
+
+def receipt_date():
+    return receipt(kicker="First date<br>in Los&nbsp;Angeles", sub="Thursday &middot; 7:30 PM &ndash; 10:05 PM", items=[
+        ("Valet", "25.00"), ("Two mezcal cocktails", "44.00"), ("Bread (not free)", "9.00"), ("&ldquo;Shareable&rdquo; plates x 4", "72.00"),
+        ("Rideshare home, surge pricing", "38.00"), ("Second date", "TBD")], total="$188.00",
+        ty="THANK YOU. TEXT WHEN YOU GET HOME.", stamp="worth&nbsp;it?", bg=CREAM)
+
+
+def match():
+    css = """.cd{position:absolute;left:100px;top:240px;width:880px;height:880px;border-radius:44px;padding:70px 60px;text-align:center;color:#fff;
+background:linear-gradient(160deg,#FF9500 0%,#FF4F00 45%,#AF52DE 100%);box-shadow:0 30px 60px rgba(0,0,0,.22)}
+.its{font-family:'Caveat',cursive;font-weight:700;font-size:118px;line-height:1;transform:rotate(-4deg)}
+.pp{display:flex;justify-content:center;margin:46px 0 34px}.pp div{width:190px;height:190px;border-radius:50%;border:8px solid #fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:76px}
+.pp .a{background:#1a1f4d;font-size:54px;position:relative;z-index:2}.pp .b{background:#0f4c5c;margin-left:-30px}
+.sub{font-size:38px;font-weight:700}.loc{display:inline-block;margin-top:22px;background:rgba(0,0,0,.22);border-radius:30px;padding:12px 28px;font-size:28px;font-weight:600}
+.btns{display:flex;flex-direction:column;gap:18px;margin:44px auto 0;width:560px}.btns div{border-radius:44px;padding:22px;font-size:32px;font-weight:800}
+.p1{background:#fff;color:#FF4F00}.p2{border:3px solid #fff}"""
+    body = ('<div class="kicker">Dating apps<br>in Los&nbsp;Angeles</div><div class="cd"><div class="its">It&rsquo;s a match!</div>'
+            '<div class="pp"><div class="a">You</div><div class="b">A</div></div><div class="sub">You and Alex liked each&nbsp;other.</div>'
+            '<div class="loc">&#128205; 23 miles away &middot; 70 min on a Friday</div>'
+            '<div class="btns"><div class="p1">Send a message</div><div class="p2">Check traffic first</div></div></div>')
+    return page(CREAM, NAVY, body, css)
+
+
+def search():
+    sugg = ["lives across the 405", "wants to meet at 5 PM on a Friday", "doesn&rsquo;t validate parking",
+            "says they&rsquo;re &ldquo;like 20 min away&rdquo;", "still hasn&rsquo;t seen the ocean", "picks the brunch spot with the line"]
+    mag = '<svg width="30" height="30" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7" fill="none" stroke="#9aa0a6" stroke-width="2.4"/><path d="M15 15l6 6" stroke="#9aa0a6" stroke-width="2.4" stroke-linecap="round"/></svg>'
+    rows = "".join(f'<div class="s">{mag}<span>is it a red flag if my date <b>{s}</b></span></div>' for s in sugg)
+    css = """.box{position:absolute;left:90px;top:250px;width:900px;background:#fff;border-radius:40px;box-shadow:0 24px 60px rgba(0,0,0,.18);font-family:-apple-system,'Inter Tight',sans-serif;color:#202124;overflow:hidden}
+.q{display:flex;align-items:center;gap:20px;padding:30px 36px;font-size:34px;border-bottom:2px solid #eee}.q i{display:inline-block;width:3px;height:40px;background:#1a73e8;margin-left:2px;vertical-align:middle}
+.s{display:flex;align-items:center;gap:22px;padding:24px 36px;font-size:29px;line-height:1.25;color:#444}.s svg{flex:none}.s b{color:#111;font-weight:700}
+.cap{position:absolute;left:0;width:100%;text-align:center;top:930px;font-size:58px;color:#FF4F00}"""
+    body = (f'<div class="kicker">Searching at 1 AM<br>in Los&nbsp;Angeles</div><div class="box"><div class="q">{mag}<span>is it a red flag if my date<i></i></span></div>{rows}</div>'
+            '<div class="cap hand">asking for a&nbsp;friend</div>')
+    return page("#B9BEE6", NAVY, body, css)
+
+
+def flags():
+    flag = lambda c: f'<svg width="40" height="46" viewBox="0 0 40 46"><rect x="3" y="2" width="5" height="44" rx="2" fill="#1a1f4d"/><path d="M8 4 H36 L29 14 L36 24 H8 Z" fill="{c}"/></svg>'
+    green = ["Offers to drive to your side of town", "Knows a spot with free parking", "Texts &ldquo;leaving now&rdquo; and means it", "Booked the table already"]
+    red = ["Suggests the 405 at 5 PM", "&ldquo;5 minutes away&rdquo; from the Valley", "Wants to split the valet", "Sunday brunch, no reservation"]
+    col = lambda items, c: "".join(f'<div class="it">{flag(c)}<span>{nob(t)}</span></div>' for t in items)
+    css = """.t{position:absolute;top:240px;width:100%;text-align:center;font-weight:900;font-size:70px;letter-spacing:-2px;line-height:1}
+.cols{position:absolute;top:350px;left:70px;width:940px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.h{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:26px;letter-spacing:4px;margin-bottom:14px;text-align:center}
+.it{display:flex;gap:16px;align-items:center;background:#fff;border-radius:22px;padding:22px 22px;margin-bottom:16px;min-height:160px;font-weight:800;font-size:31px;line-height:1.15;box-shadow:0 6px 0 rgba(26,31,77,.9)}
+.it svg{flex:none}.it span{text-wrap:balance}"""
+    body = ('<div class="kicker">Los&nbsp;Angeles<br>edition</div><div class="t">Dating <span style="color:#1f9d55">green</span> and <span style="color:#c8102e">red</span> flags</div>'
+            f'<div class="cols"><div><div class="h" style="color:#1f9d55">GREEN FLAGS</div>{col(green, "#1f9d55")}</div>'
+            f'<div><div class="h" style="color:#c8102e">RED FLAGS</div>{col(red, "#c8102e")}</div></div>')
+    return page(CREAM, NAVY, body, css)
+
+
+def venn():
+    css = """.t{position:absolute;top:250px;width:100%;text-align:center;font-weight:900;font-size:68px;letter-spacing:-2px;line-height:1.02}
+.v{position:absolute;left:90px;top:400px}.lb{position:absolute;width:250px;text-align:center;font-weight:800;font-size:34px;line-height:1.12;color:#fff;text-wrap:balance}
+.mid{position:absolute;left:390px;top:640px;width:300px;text-align:center;font-family:'Caveat',cursive;font-weight:700;font-size:76px;color:#1a1f4d;line-height:1;transform:rotate(-6deg)}
+.cap{position:absolute;left:0;width:100%;text-align:center;top:1070px;font-size:50px;color:#FF4F00}"""
+    svg = ('<svg class="v" width="900" height="620" viewBox="0 0 900 620"><circle cx="300" cy="310" r="290" fill="#FF4F00" fill-opacity=".85"/>'
+           '<circle cx="600" cy="310" r="290" fill="#AF52DE" fill-opacity=".8"/>'
+           '<path d="M450 59 A290 290 0 0 1 450 561 A290 290 0 0 1 450 59 Z" fill="#FF9500"/></svg>')
+    body = (f'<div class="kicker">Dating in<br>Los&nbsp;Angeles</div><div class="t">Who you&rsquo;ll actually date</div>{svg}'
+            '<div class="lb" style="left:125px;top:625px">People who swiped&nbsp;right</div>'
+            '<div class="lb" style="left:705px;top:625px">People on your side of the&nbsp;405</div>'
+            '<div class="mid">your ex</div><div class="cap hand">it&rsquo;s always the&nbsp;ex</div>')
+    return page(PINK, NAVY, body, css)
+
+
 MEMES = {"texts-parking": texts_parking, "texts-quake": texts_quake, "texts-rain": texts_rain, "texts-plans": texts_plans,
          "texts-outside": texts_outside, "bingo": bingo, "maps": maps, "dictionary": dictionary,
          "freeway": freeway, "parking": parking, "forecast": forecast, "chart": chart,
@@ -648,7 +745,9 @@ MEMES = {"texts-parking": texts_parking, "texts-quake": texts_quake, "texts-rain
          "bingo-lax": bingo_lax, "maps-lax": maps_lax, "freeway-101": freeway_101, "dictionary-weather": dictionary_weather, "ipad-calendar": ipad_calendar,
          "receipt": receipt, "wrapped": wrapped, "lockscreen": lockscreen,
          "tag-yourself": tag_yourself, "alignment": alignment, "review-405": review_405, "weather-app": weather_app, "dating-prompt": dating_prompt,
-         "ticket": ticket, "payments": payments, "this-or-that": this_or_that, "fill-blank": fill_blank}
+         "ticket": ticket, "payments": payments, "this-or-that": this_or_that, "fill-blank": fill_blank,
+         "ios-date-plans": ios_date_plans, "ios-date-middle": ios_date_middle, "maps-date": maps_date, "dictionary-dating": dictionary_dating,
+         "receipt-date": receipt_date, "match": match, "search": search, "flags": flags, "venn": venn}
 
 
 def main():
