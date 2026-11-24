@@ -1,8 +1,8 @@
 {
  "carousels": [
   {
-   "slug": "friends",
-   "title": "How to actually make friends in Los Angeles",
+   "slug": "friends-v2",
+   "title": "The Los Angeles friendship playbook",
    "sub": "Even if everyone you meet is &ldquo;so slammed right now.&rdquo;",
    "slides": [
     {
@@ -75,8 +75,8 @@
    }
   },
   {
-   "slug": "holidays",
-   "title": "How to do the holidays in Los Angeles",
+   "slug": "holidays-v2",
+   "title": "The holidays in Los Angeles, done right",
    "sub": "Even if your family is 3,000 miles away.",
    "slides": [
     {
