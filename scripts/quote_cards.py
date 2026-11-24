@@ -87,6 +87,53 @@ body{{width:1080px;height:1350px;background:{bg};overflow:hidden;font-family:'In
 </div></body></html>"""
 
 
+def portrait_card(q, folder):
+    """Text left, the speaker on the right as a duotone ("duotone") or line drawing ("line")."""
+    bg, ink, acc, small = THEMES[q.get("theme", "cream")]
+    fam, css, scale, lh = FONTS[q.get("font", "yellowtail")]
+    n = len(q["quote"])
+    size = int((104 if n < 40 else 86 if n < 80 else 72 if n < 120 else 60) * scale)
+    photo = "file://" + os.path.join(folder, q["photo"])
+    pos = q.get("pos", "center top")
+    logo_filter = "" if q.get("theme", "cream") in ("cream", "pink") else "filter:brightness(0) invert(1);"
+    if q.get("style") == "line":
+        art = (f'<svg class="art" viewBox="0 0 500 1350" preserveAspectRatio="xMidYMid slice"><defs><filter id="ln" x="0" y="0" width="100%" height="100%">'
+               '<feColorMatrix type="saturate" values="0"/><feGaussianBlur stdDeviation="2.2"/>'
+               '<feConvolveMatrix order="3" kernelMatrix="-1 -1 -1 -1 8 -1 -1 -1 -1" preserveAlpha="true"/>'
+               '<feComponentTransfer><feFuncR type="linear" slope="-14" intercept="1.25"/><feFuncG type="linear" slope="-14" intercept="1.25"/>'
+               '<feFuncB type="linear" slope="-14" intercept="1.25"/></feComponentTransfer>'
+               f'<feColorMatrix type="matrix" values="0 0 0 0 {int(ink[1:3],16)/255:.3f} 0 0 0 0 {int(ink[3:5],16)/255:.3f} 0 0 0 0 {int(ink[5:7],16)/255:.3f} -1 0 0 0 1"/>'
+               f'</filter></defs><image href="{photo}" width="500" height="1350" preserveAspectRatio="xMidYMin slice" filter="url(#ln)"/></svg>')
+    else:
+        art = (f'<div class="art duo" style="background:{q.get("dark", "#1a1f4d")}"><img src="{photo}" style="object-position:{pos}">'
+               f'<div class="tint" style="background:{q.get("light", acc)}"></div></div>')
+    return f"""<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family={fam}&family=Inter+Tight:wght@500;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{width:1080px;height:1350px;background:{bg};overflow:hidden;font-family:'Inter Tight',sans-serif}}
+.bar{{position:absolute;left:0;top:0;width:100%;height:14px;z-index:3;background:linear-gradient(90deg,#FF9500 0%,#FF4F00 40%,#AF52DE 75%,#292F71 100%)}}
+.art{{position:absolute;right:0;top:0;width:500px;height:1350px}}
+.duo img{{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.25) brightness(1.05);mix-blend-mode:screen;display:block}}
+.duo .tint{{position:absolute;inset:0;mix-blend-mode:multiply}}
+.txt{{position:absolute;left:80px;top:0;width:470px;height:1350px;display:flex;flex-direction:column;justify-content:center}}
+.logo{{position:absolute;left:80px;top:70px;height:100px;{logo_filter}}}
+.mark{{font-family:{css};font-size:180px;line-height:.5;color:{acc};height:70px}}
+.quote{{font-family:{css};font-size:{size}px;line-height:{lh};color:{ink};text-wrap:pretty}}
+.who{{margin-top:44px;font-weight:800;font-size:30px;color:{ink};text-transform:uppercase;letter-spacing:1px}}
+.where{{margin-top:8px;font-family:'IBM Plex Mono',monospace;font-size:20px;color:{small}}}
+.foot{{position:absolute;left:80px;bottom:64px;font-family:'IBM Plex Mono',monospace;font-size:20px;letter-spacing:3px;color:{small};text-transform:uppercase}}
+.foot b{{color:{ink}}}
+.credit{{position:absolute;right:18px;bottom:14px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:{'#6b6862' if q.get('style')=='line' else '#fff'};opacity:.85;z-index:3}}
+</style></head><body><div class="bar"></div>{art}
+<img class="logo" src="file://{ROOT}/assets/img/haps-logo.svg">
+<div class="txt"><div class="mark">&ldquo;</div><div class="quote">{keep_together(q["quote"])}</div>
+<div class="who">{html.escape(q["who"])}</div><div class="where">{html.escape(q.get("where", ""))}</div></div>
+<div class="foot">Send it to <b>{html.escape(q.get("send", "someone who gets it"))}</b></div>
+<div class="credit">Photo: {html.escape(q.get("credit", ""))}</div>
+</body></html>"""
+
+
 def main():
     folder = os.path.abspath(sys.argv[1])
     data = json.load(open(os.path.join(folder, "quotes.json"), encoding="utf-8"))
@@ -94,7 +141,7 @@ def main():
     made = []
     for i, q in enumerate(data["quotes"], 1):
         h = os.path.join(tmp, f"{i}.html")
-        open(h, "w", encoding="utf-8").write(card(q))
+        open(h, "w", encoding="utf-8").write(portrait_card(q, folder) if q.get("photo") else card(q))
         png = os.path.join(tmp, f"{i}.png")
         subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--virtual-time-budget=5000",
                         "--allow-file-access-from-files", "--window-size=1080,1350", f"--screenshot={png}", "file://" + h],
