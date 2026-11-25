@@ -168,19 +168,6 @@ URL:https://www.lacma.org/art/exhibition/california-collectives-asian-amer
  ican-moderns-1924-1965-vincent-price-gallery
 END:VEVENT
 BEGIN:VEVENT
-UID:43dcefad5839d20df6ee@haps.club
-DTSTAMP:20261123T000000Z
-DTSTART:20261125T033000Z
-DTEND:20261125T063000Z
-SUMMARY:The Last Waltz at Vidiots
-LOCATION:Vidiots\, Eagle Rock\, 4884 Eagle Rock Blvd\, Los Angeles\, CA 90
- 041
-DESCRIPTION:The Band's farewell concert film on the screen at Vidiots\, Tu
- esday at 7:30. Some shows are walk-up only. Price: Tickets.\nhttps://vidi
- otsfoundation.org/coming-soon/
-URL:https://vidiotsfoundation.org/coming-soon/
-END:VEVENT
-BEGIN:VEVENT
 UID:cf9c7a379175f5810a64@haps.club
 DTSTAMP:20261123T000000Z
 DTSTART:20261126T050000Z

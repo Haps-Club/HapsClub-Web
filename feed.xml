@@ -5,8 +5,15 @@
 <link>https://haps.club/archive/</link>
 <description>Hand-picked things to do in Los Angeles, one free email every Tuesday.</description>
 <language>en-us</language>
-<lastBuildDate>Tue, 17 Nov 2026 16:00:00 +0000</lastBuildDate>
+<lastBuildDate>Tue, 24 Nov 2026 16:00:00 +0000</lastBuildDate>
 <atom:link href="https://haps.club/feed.xml" rel="self" type="application/rss+xml"/>
+<item>
+<title>Thank you</title>
+<link>https://haps.club/archive/2026-11-24-thank-you/</link>
+<guid isPermaLink="true">https://haps.club/archive/2026-11-24-thank-you/</guid>
+<pubDate>Tue, 24 Nov 2026 16:00:00 +0000</pubDate>
+<description>25+ events, 1,500+ of you, and we’re just getting started. Plus a December dinner and your Thanksgiving week.</description>
+</item>
 <item>
 <title>Three nights of good times</title>
 <link>https://haps.club/archive/2026-11-17-three-nights-of-good-times/</link>
@@ -209,13 +216,6 @@
 <guid isPermaLink="true">https://haps.club/archive/2026-05-24-the-back-nine/</guid>
 <pubDate>Sun, 24 May 2026 15:00:00 +0000</pubDate>
 <description>A special edition for the back half of the long weekend.</description>
-</item>
-<item>
-<title>The Long Weekend</title>
-<link>https://haps.club/archive/2026-05-19-the-long-weekend/</link>
-<guid isPermaLink="true">https://haps.club/archive/2026-05-19-the-long-weekend/</guid>
-<pubDate>Tue, 19 May 2026 15:00:00 +0000</pubDate>
-<description>Sunset salsa, jazz on the lawn, and the MDW shortlist.</description>
 </item>
 </channel>
 </rss>
