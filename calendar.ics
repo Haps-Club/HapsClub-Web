@@ -168,31 +168,6 @@ URL:https://www.lacma.org/art/exhibition/california-collectives-asian-amer
  ican-moderns-1924-1965-vincent-price-gallery
 END:VEVENT
 BEGIN:VEVENT
-UID:cf9c7a379175f5810a64@haps.club
-DTSTAMP:20261123T000000Z
-DTSTART:20261126T050000Z
-DTEND:20261126T080000Z
-SUMMARY:Dub Club presents Kabaka Pyramid at The Echoplex
-LOCATION:The Echoplex\, Echo Park\, 1154 Glendale Blvd\, Los Angeles\, CA 
- 90026
-DESCRIPTION:Dub Club's reggae night with Kabaka Pyramid the night before T
- hanksgiving. 21+. Price: Tickets.\nhttps://www.theecho.com/shows
-URL:https://www.theecho.com/shows
-END:VEVENT
-BEGIN:VEVENT
-UID:2f6c31e5d7670b329a6b@haps.club
-DTSTAMP:20261123T000000Z
-DTSTART:20261126T153000Z
-DTEND:20261126T190000Z
-SUMMARY:Turkey Trot Los Angeles
-LOCATION:Los Angeles City Hall to Grand Park\, Downtown\, 200 N Spring St\
- , Los Angeles\, CA 90012
-DESCRIPTION:Thanksgiving morning 5K and 10K from City Hall\, with a festiv
- al at Grand Park after. Register ahead\; the 8 AM 5K is sold out. Price: 
- From $54.90.\nhttps://www.turkeytrot.la
-URL:https://www.turkeytrot.la
-END:VEVENT
-BEGIN:VEVENT
 UID:d859413a0c08dfc6c6ee@haps.club
 DTSTAMP:20261123T000000Z
 DTSTART:20261127T200000Z
